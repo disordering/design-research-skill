@@ -36,3 +36,7 @@ AI 可执行、人可协同的 **Skill**，并进一步封装为可调用的 **A
 ## 相关链接
 
 - Figma 演示文件：https://www.figma.com/design/dAWQ1dG8pOh5RBHa3CFZ7t/skill
+
+演示文档共 13 页（封面 → 任务解读 → 评估框架 → 方法池地图 → 6 个候选方向 → 对比矩阵 → 推荐路线 → 行动清单）：
+
+![选题提案演示文档总览](docs/assets/figma-deck-overview.png)

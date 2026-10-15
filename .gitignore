@@ -1,0 +1,11 @@
+# 本地文本提取结果（由 materials/ 中的 PDF 生成，可随时重建）
+extracted/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 本地临时文件
+*.log
+_tmp_*

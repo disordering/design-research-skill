@@ -10,11 +10,13 @@
 
 ```
 .
-├── docs/                  # 选题提案、设计文档、测试报告
-├── materials/             # 课程资料（大纲、讲义、方法池附件）
-├── extracted/             # 课程 PDF 的文本提取结果（本地用，不入库）
-└── README.md
+├── README.md
+├── materials/             # 课程资料（大纲、八章讲义、方法池与技术资源附件）
+└── reference/
+    └── skills/            # 4 个同类开源 skill 的本地副本（上游地址见「相关链接」）
 ```
+
+本地专用、不入库：`extracted/`（课程 PDF 文本提取结果）；`docs/`、`scripts/` 目前为空。
 
 ## 当前进度
 
@@ -98,3 +100,16 @@
 
 ## 相关链接
 
+**同类开源 Skill**（本地副本见 `reference/skills/`）
+
+- [refactoring-ui-plugin](https://github.com/gnurio/refactoring-ui-plugin) — 把《Refactoring UI》拆成 10 个原子技能 + 1 个 meta 技能
+- [material-design-3-ui-skill](https://github.com/skydashnet/material-design-3-ui-skill) — 以 M3 官方规范为 source of truth，要求先核对官方指南再断言
+- [design_skill](https://github.com/grapeot/design_skill) — "确定性工具给事实，模型给判断"
+- [ai-friendly-web-design-skill](https://github.com/ianho7/ai-friendly-web-design-skill) — 输出带严重度分级
+- [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) — Anthropic 官方 Design Plugin，可作参照
+
+**同类产品**
+
+- [UX Audit AI](https://uxaudit.tech)
+- [Heustrics](https://heustrics.com)
+- [Attention Insight](https://attentioninsight.com)

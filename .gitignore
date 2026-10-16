@@ -10,8 +10,9 @@ __pycache__/
 *.log
 _tmp_*
 
-# 第三方参考资料（市面同类产品截图与下载的开源 skill，不随仓库交付）
-reference/
+# 第三方参考资料：仅 4 个开源 skill 案例入库，其余（产品截图 / 渲染图 / 浏览器缓存）不入库
+reference/*
+!reference/skills/
 
 # 课程平台页面存档（本地参考用）
 中期进展报告.html

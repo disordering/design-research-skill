@@ -1,6 +1,6 @@
-"""Offline regression checks for the four defects identified by D.
+"""针对 D 发现的四项程序缺陷进行离线回归检查。
 
-All model responses are fixed test doubles; no network models are called.
+所有模型回复均使用固定的模拟结果，不调用联网模型。
 """
 from __future__ import annotations
 
@@ -59,7 +59,7 @@ def png_bytes():
 
 
 def huge_header_png():
-    """Small encoded input advertising excessive dimensions; no large allocation."""
+    """用小文件声明超大图片尺寸，不分配对应的大块内存。"""
     def chunk(kind, value):
         return struct.pack(">I", len(value)) + kind + value + struct.pack(">I", zlib.crc32(kind + value) & 0xffffffff)
     return (b"\x89PNG\r\n\x1a\n"

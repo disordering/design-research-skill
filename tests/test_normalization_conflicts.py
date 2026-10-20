@@ -1,4 +1,4 @@
-"""One candidate owns each rule; preserve independent evidence on other rules."""
+"""每条判据只保留一个候选问题，其余判据保留各自独立的证据。"""
 
 from pathlib import Path
 

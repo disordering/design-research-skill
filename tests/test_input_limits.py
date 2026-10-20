@@ -1,4 +1,4 @@
-"""Input boundaries checked without external models or large image allocations."""
+"""检查输入边界，不调用外部模型，也不分配超大图片内存。"""
 
 import io
 from pathlib import Path
@@ -42,7 +42,7 @@ def _small_png():
 
 
 def _png_header(width, height):
-    """A valid container header only; never build the advertised pixel buffer."""
+    """只构造合法的图片文件头，不创建其声明尺寸对应的像素缓冲区。"""
     def chunk(kind, data):
         return (
             struct.pack(">I", len(data)) + kind + data
@@ -96,7 +96,7 @@ def test_multipart_whitespace_is_trimmed_before_length_validation(client, field,
 
 
 def test_image_between_pillow_warning_and_error_thresholds_returns_413(client):
-    # Pillow normally only warns here; the engine's actual limit is 50 Mpx.
+    # Pillow 在这个尺寸通常只发出警告；本引擎的实际限制为 5000 万像素。
     response = client.post(
         "/api/review-audit",
         files={"image": ("header.png", _png_header(10001, 5000), "image/png")},

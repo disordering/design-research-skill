@@ -1,4 +1,4 @@
-"""Output validation must repair malformed fields without a network model."""
+"""用模拟模型检查：输出字段不合法时，校验流程能否请求修复。"""
 
 import asyncio
 import json
@@ -49,7 +49,7 @@ def test_valid_json_with_invalid_field_is_repaired():
 def test_evidence_validator_exception_context_is_serializable_and_repaired():
     invalid = {"x": 0.9, "y": 0, "width": 0.3, "height": 0.1, "description": "visible region"}
     valid = {**invalid, "x": 0.1}
-    # Confirm this fixture exercises Pydantic's exception-valued error context.
+    # 确认此测试样本会触发 Pydantic 错误上下文中包含异常对象的情况。
     with pytest.raises(ValidationError) as error:
         EvidenceAnchor.model_validate(invalid)
     assert isinstance(error.value.errors()[0]["ctx"]["error"], ValueError)
@@ -76,5 +76,5 @@ def test_two_invalid_structures_return_model_contract_failed():
     assert error.value.status_code == 502
     assert error.value.retryable is True
     assert "Evidence box must stay inside" in error.value.details["validation_error"]
-    # The final structured error must also remain safe to send as JSON.
+    # 最终返回的结构化错误也必须能转换为 JSON。
     json.dumps(error.value.details)

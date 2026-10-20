@@ -1,4 +1,4 @@
-"""FastAPI entry points consumed by the interaction layer."""
+"""供交互层调用的 FastAPI 接口入口。"""
 
 from __future__ import annotations
 
@@ -136,8 +136,8 @@ def create_app(
                 target_user=target_user,
             )
         except ValidationError as exc:
-            # Reuse the context contract so whitespace normalization and length
-            # limits match the JSON endpoint, then expose request-level errors.
+            # 复用上下文校验，保持与 JSON 入口一致的空白处理和长度限制，
+            # 并将字段校验失败作为请求错误返回。
             errors = [
                 {**error, "loc": ("body", *error["loc"])}
                 for error in exc.errors()

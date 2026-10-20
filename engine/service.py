@@ -1,4 +1,4 @@
-"""Core review pipeline and deterministic normalization."""
+"""核心评审流程，以及按固定规则整理评审结果的逻辑。"""
 
 from __future__ import annotations
 
@@ -53,7 +53,7 @@ class ReviewModel(Protocol):
 
 
 class ReviewEngine:
-    """Screenshot -> visual understanding -> 24 criteria -> normalized findings."""
+    """截图 → 视觉理解 → 24 条判据评审 → 整理后的问题清单。"""
 
     def __init__(
         self,
@@ -226,9 +226,9 @@ class ReviewEngine:
 
         claimed_rules: set[str] = set()
         normalized_findings: list[Finding] = []
-        # Stable sorting keeps the first candidate on a confidence tie. Each rule
-        # belongs to its highest-confidence finding; other rules retain their
-        # own evidence instead of being merged into an unrelated candidate.
+        # 按置信度稳定排序，相同置信度保留先出现的候选。
+        # 每条判据归给置信度最高的问题；其余独有判据保留各自的证据，
+        # 避免把证据合并到不相关的候选中。
         for raw_finding in sorted(raw.findings, key=lambda item: -item.confidence):
             valid_rules: list[str] = []
             for rule_id in raw_finding.rule_ids:

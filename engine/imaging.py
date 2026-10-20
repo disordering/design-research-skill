@@ -1,4 +1,4 @@
-"""Safe screenshot normalization for multimodal model input."""
+"""检查并规范截图，供多模态模型安全读取。"""
 
 from __future__ import annotations
 
@@ -123,8 +123,8 @@ def prepare_image(raw: bytes, *, filename: str = "screenshot") -> PreparedImage:
 
 
 def _check_pixel_limit(image: Image.Image) -> None:
-    # Pillow's own exception starts at twice MAX_IMAGE_PIXELS; enforce our
-    # advertised limit explicitly before verification or pixel decoding.
+    # Pillow 超过 MAX_IMAGE_PIXELS 的两倍才抛出像素超限异常；
+    # 因此在图片验证或像素解码前，主动检查本项目规定的上限。
     if image.width * image.height > MAX_SOURCE_PIXELS:
         raise EngineError(
             "image_pixel_limit",

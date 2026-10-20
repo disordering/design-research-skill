@@ -1,0 +1,309 @@
+{
+  "scene_summary": "A mobile game character trial interface featuring a central character illustration, left-side navigation tabs, top resource bars, right-side reward preview, and a prominent 'Start Trial' button. The design uses high-saturation 'dopamine' colors with comic-style elements.",
+  "rankings": [
+    {
+      "rule_id": "R01",
+      "visual": 1.0,
+      "text": 0.8,
+      "attribute": 1.0,
+      "prior": 0.9,
+      "final": 0.94,
+      "reasons": [
+        "Left navigation tabs (E06-E08) are clearly visible with distinct selected/unselected states (yellow vs black).",
+        "Design goal emphasizes visual hierarchy and clear functional zones.",
+        "Critical for orienting the user within the 'Trial', 'Skill', 'Story' sections."
+      ]
+    },
+    {
+      "rule_id": "R02",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "This is a single-page feature entry, not a multi-step wizard or form process.",
+        "No step indicators (e.g., 1/3) are present or expected."
+      ]
+    },
+    {
+      "rule_id": "R03",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "Screenshot shows a static idle state, no loading spinners or processing overlays visible.",
+        "Cannot evaluate waiting state feedback from this image."
+      ]
+    },
+    {
+      "rule_id": "R04",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No success/completion modal or toast message is visible.",
+        "User has not yet performed the 'Start Trial' action."
+      ]
+    },
+    {
+      "rule_id": "R05",
+      "visual": 0.6,
+      "text": 0.7,
+      "attribute": 0.8,
+      "prior": 0.5,
+      "final": 0.655,
+      "reasons": [
+        "OCR detects 'ERROR' text near the title and on the character's belt, which might be confusing if interpreted as a system message rather than style.",
+        "Game-specific terms like 'Filin' (currency) are standard for the genre but technically internal jargon.",
+        "Target users are casual gamers who might not know specific currency names immediately."
+      ]
+    },
+    {
+      "rule_id": "R06",
+      "visual": 1.0,
+      "text": 1.0,
+      "attribute": 1.0,
+      "prior": 1.0,
+      "final": 1.0,
+      "reasons": [
+        "Primary button 'Start Trial' (E19) is large, high-contrast, and explicitly labeled.",
+        "Design goal G02 mandates this button be a primary visual focus.",
+        "Action outcome is unambiguous."
+      ]
+    },
+    {
+      "rule_id": "R07",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No input fields or forms are present on this screen.",
+        "It is a display/action page, not a data entry page."
+      ]
+    },
+    {
+      "rule_id": "R08",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No modal or popup dialog is currently open.",
+        "The main interface is fully visible."
+      ]
+    },
+    {
+      "rule_id": "R09",
+      "visual": 0.8,
+      "text": 0.6,
+      "attribute": 0.9,
+      "prior": 0.7,
+      "final": 0.76,
+      "reasons": [
+        "Back button (E01) is clearly visible in the top-left corner.",
+        "Allows exit from the trial page back to the main menu.",
+        "Standard navigation pattern for game sub-pages."
+      ]
+    },
+    {
+      "rule_id": "R10",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No high-risk confirmation dialog (e.g., delete, spend premium currency) is visible.",
+        "The 'Start Trial' action is generally low-risk/reversible in this context."
+      ]
+    },
+    {
+      "rule_id": "R11",
+      "visual": 0.5,
+      "text": 0.6,
+      "attribute": 0.7,
+      "prior": 0.4,
+      "final": 0.555,
+      "reasons": [
+        "Navigation labels are consistent (Icon + Text).",
+        "No obvious conflicting labels for the same action detected.",
+        "'Trial' appears in nav and button, reinforcing consistency."
+      ]
+    },
+    {
+      "rule_id": "R12",
+      "visual": 0.9,
+      "text": 0.5,
+      "attribute": 1.0,
+      "prior": 0.8,
+      "final": 0.81,
+      "reasons": [
+        "Left nav tabs (E06-E08) share identical shape and layout, differing only by state color.",
+        "Reward cards (E13-E15) are visually consistent in size and style.",
+        "Design goal G05/G06 emphasizes consistent control styling."
+      ]
+    },
+    {
+      "rule_id": "R13",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No form fields to mark as required.",
+        "Not applicable to this view."
+      ]
+    },
+    {
+      "rule_id": "R14",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No input fields requiring format hints.",
+        "Not applicable."
+      ]
+    },
+    {
+      "rule_id": "R15",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No confirmation dialog for high-consequence actions is visible.",
+        "Not applicable."
+      ]
+    },
+    {
+      "rule_id": "R16",
+      "visual": 0.9,
+      "text": 0.8,
+      "attribute": 0.9,
+      "prior": 0.7,
+      "final": 0.855,
+      "reasons": [
+        "Top-right home icon (E05) and top-left back arrow (E01) are standard but small.",
+        "Resource icons (E02-E04) rely on recognition but have numbers.",
+        "Nav tabs combine icons with clear text labels, ensuring recognizability."
+      ]
+    },
+    {
+      "rule_id": "R17",
+      "visual": 0.2,
+      "text": 0.2,
+      "attribute": 0.3,
+      "prior": 0.2,
+      "final": 0.22,
+      "reasons": [
+        "R01 covers the page-level nav selection state more directly.",
+        "No other intra-page filters or radio buttons visible to check.",
+        "Low relevance compared to R01."
+      ]
+    },
+    {
+      "rule_id": "R18",
+      "visual": 0.8,
+      "text": 0.6,
+      "attribute": 0.9,
+      "prior": 0.7,
+      "final": 0.76,
+      "reasons": [
+        "Reward items (E13-E15) are grouped within a distinct panel (E12).",
+        "Character info (Name, Stars, Tags) is clustered in the bottom-left.",
+        "Visual grouping supports quick scanning of related info."
+      ]
+    },
+    {
+      "rule_id": "R19",
+      "visual": 1.0,
+      "text": 1.0,
+      "attribute": 1.0,
+      "prior": 1.0,
+      "final": 1.0,
+      "reasons": [
+        "'Start Trial' button (E19) is the largest interactive element, high saturation, bottom-right (primary action zone).",
+        "Design goal G02 explicitly prioritizes this button as a focal point.",
+        "Extremely easy to locate."
+      ]
+    },
+    {
+      "rule_id": "R20",
+      "visual": 0.9,
+      "text": 0.7,
+      "attribute": 0.8,
+      "prior": 0.9,
+      "final": 0.835,
+      "reasons": [
+        "Background is busy with comic-style effects ('ERROR' text, splashes), potentially competing with content.",
+        "Design goal G07 warns against meaningless texture stacking.",
+        "However, character and button still dominate visual weight (focus proxy ranks 1 & 2).",
+        "Need to assess if background noise hinders readability."
+      ]
+    },
+    {
+      "rule_id": "R21",
+      "visual": 0.5,
+      "text": 0.8,
+      "attribute": 0.6,
+      "prior": 0.5,
+      "final": 0.595,
+      "reasons": [
+        "OCR detects 'ERROR' text in two places (near title, on belt).",
+        "If this is a rendering bug or placeholder text leaking into production, it's a critical error state issue.",
+        "If it's intentional style, it's confusing (violates R05/R23).",
+        "High priority to verify if this is a genuine error indicator."
+      ]
+    },
+    {
+      "rule_id": "R22",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No actionable error message with recovery instructions is visible.",
+        "The 'ERROR' text lacks context or solution."
+      ]
+    },
+    {
+      "rule_id": "R23",
+      "visual": 0.5,
+      "text": 0.9,
+      "attribute": 0.6,
+      "prior": 0.5,
+      "final": 0.62,
+      "reasons": [
+        "The word 'ERROR' appearing in the UI is technical/developer language.",
+        "If unintended, it violates the principle of user-friendly language.",
+        "If intended as style, it's poor UX for a commercial game."
+      ]
+    },
+    {
+      "rule_id": "R24",
+      "visual": 0.3,
+      "text": 0.4,
+      "attribute": 0.5,
+      "prior": 0.3,
+      "final": 0.365,
+      "reasons": [
+        "Game mechanics (Trial, Rewards) are generally self-explanatory to target audience.",
+        "No complex fields requiring tooltips.",
+        "Low priority for help documentation on this specific screen."
+      ]
+    }
+  ]
+}

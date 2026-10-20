@@ -1,0 +1,205 @@
+{
+  "page_type": "角色试用页",
+  "summary": "这是一个商业手游的角色试用界面，展示了名为“锋芒崭露”的试用活动。页面中央为一名银发、穿着街头风格服饰并踩着轮滑鞋的女性角色立绘。右侧包含活动标题、倒计时（21天1小时）、奖励预览区域以及主要的“开始试用”按钮。左侧有导航返回按钮及三个灰色的功能入口占位符。",
+  "elements": [
+    {
+      "id": "E01",
+      "label": "返回",
+      "role": "nav",
+      "bbox": {
+        "x": 0.03,
+        "y": 0.02,
+        "width": 0.08,
+        "height": 0.09
+      },
+      "interactable": true,
+      "visual_importance": 0.6,
+      "state": "default",
+      "confidence": 0.95
+    },
+    {
+      "id": "E02",
+      "label": "侧边栏菜单项1",
+      "role": "button",
+      "bbox": {
+        "x": 0.03,
+        "y": 0.17,
+        "width": 0.14,
+        "height": 0.13
+      },
+      "interactable": true,
+      "visual_importance": 0.4,
+      "state": "placeholder",
+      "confidence": 0.9
+    },
+    {
+      "id": "E03",
+      "label": "侧边栏菜单项2",
+      "role": "button",
+      "bbox": {
+        "x": 0.03,
+        "y": 0.33,
+        "width": 0.14,
+        "height": 0.13
+      },
+      "interactable": true,
+      "visual_importance": 0.4,
+      "state": "placeholder",
+      "confidence": 0.9
+    },
+    {
+      "id": "E04",
+      "label": "侧边栏菜单项3",
+      "role": "button",
+      "bbox": {
+        "x": 0.03,
+        "y": 0.5,
+        "width": 0.14,
+        "height": 0.13
+      },
+      "interactable": true,
+      "visual_importance": 0.4,
+      "state": "placeholder",
+      "confidence": 0.9
+    },
+    {
+      "id": "E05",
+      "label": "角色名字标签",
+      "role": "text",
+      "bbox": {
+        "x": 0.15,
+        "y": 0.66,
+        "width": 0.21,
+        "height": 0.14
+      },
+      "interactable": false,
+      "visual_importance": 0.7,
+      "state": "placeholder",
+      "confidence": 0.95
+    },
+    {
+      "id": "E06",
+      "label": "角色立绘",
+      "role": "character",
+      "bbox": {
+        "x": 0.32,
+        "y": 0.05,
+        "width": 0.4,
+        "height": 0.95
+      },
+      "interactable": false,
+      "visual_importance": 1.0,
+      "state": "default",
+      "confidence": 0.99
+    },
+    {
+      "id": "E07",
+      "label": "活动标题：角色试用 锋芒崭露",
+      "role": "title",
+      "bbox": {
+        "x": 0.81,
+        "y": 0.15,
+        "width": 0.15,
+        "height": 0.15
+      },
+      "interactable": false,
+      "visual_importance": 0.8,
+      "state": "default",
+      "confidence": 0.98
+    },
+    {
+      "id": "E08",
+      "label": "剩余时间：21天1小时",
+      "role": "resource",
+      "bbox": {
+        "x": 0.81,
+        "y": 0.29,
+        "width": 0.11,
+        "height": 0.05
+      },
+      "interactable": false,
+      "visual_importance": 0.6,
+      "state": "default",
+      "confidence": 0.95
+    },
+    {
+      "id": "E09",
+      "label": "奖励预览面板",
+      "role": "panel",
+      "bbox": {
+        "x": 0.69,
+        "y": 0.62,
+        "width": 0.23,
+        "height": 0.19
+      },
+      "interactable": false,
+      "visual_importance": 0.7,
+      "state": "placeholder",
+      "confidence": 0.9
+    },
+    {
+      "id": "E10",
+      "label": "奖励物品槽位1",
+      "role": "reward_card",
+      "bbox": {
+        "x": 0.7,
+        "y": 0.69,
+        "width": 0.05,
+        "height": 0.08
+      },
+      "interactable": true,
+      "visual_importance": 0.5,
+      "state": "placeholder",
+      "confidence": 0.85
+    },
+    {
+      "id": "E11",
+      "label": "奖励物品槽位2",
+      "role": "reward_card",
+      "bbox": {
+        "x": 0.75,
+        "y": 0.69,
+        "width": 0.05,
+        "height": 0.08
+      },
+      "interactable": true,
+      "visual_importance": 0.5,
+      "state": "placeholder",
+      "confidence": 0.85
+    },
+    {
+      "id": "E12",
+      "label": "奖励物品槽位3",
+      "role": "reward_card",
+      "bbox": {
+        "x": 0.8,
+        "y": 0.69,
+        "width": 0.05,
+        "height": 0.08
+      },
+      "interactable": true,
+      "visual_importance": 0.5,
+      "state": "placeholder",
+      "confidence": 0.85
+    },
+    {
+      "id": "E13",
+      "label": "开始试用",
+      "role": "primary_button",
+      "bbox": {
+        "x": 0.69,
+        "y": 0.85,
+        "width": 0.23,
+        "height": 0.09
+      },
+      "interactable": true,
+      "visual_importance": 0.9,
+      "state": "default",
+      "confidence": 0.98
+    }
+  ],
+  "uncertainties": [
+    "左侧三个灰色矩形块的具体功能未知，推测为二级菜单或切换选项卡。",
+    "角色名字标签中的圆形图标可能是头像框或性别标识，具体含义不明。"
+  ]
+}

@@ -1,0 +1,1222 @@
+{
+  "metric_version": "cv-metrics-v1",
+  "image": {
+    "width": 1912,
+    "height": 1080,
+    "megapixels": 2.065
+  },
+  "global": {
+    "mean_luminance": 0.6606,
+    "luminance_p05": 0.1176,
+    "luminance_p50": 0.7098,
+    "luminance_p95": 0.9412,
+    "luminance_contrast": 0.2553,
+    "bright_pixel_fraction": 0.1245,
+    "dark_pixel_fraction": 0.0413,
+    "mean_saturation": 0.3152,
+    "high_saturation_fraction": 0.0768,
+    "edge_density": 0.2252,
+    "high_frequency_mean": 0.0563,
+    "palette_entropy_bits": 4.4555,
+    "negative_space_proxy": 0.7748
+  },
+  "focus": {
+    "metric_type": "visual_focus_proxy",
+    "notice": "This is a deterministic saliency proxy, not measured human attention.",
+    "elements": [
+      {
+        "element_id": "E09",
+        "label": "角色立绘 (安比)",
+        "role": "character",
+        "bbox": [
+          0.32,
+          0.0,
+          0.4,
+          0.95
+        ],
+        "area_ratio": 0.38,
+        "center_distance": 0.0453,
+        "model_visual_importance": 1.0,
+        "region": {
+          "luminance_p10": 0.3216,
+          "luminance_p90": 0.9255,
+          "luminance_contrast": 0.6039,
+          "mean_saturation": 0.3191,
+          "edge_density": 0.3052,
+          "bright_fraction": 0.1211
+        },
+        "focus_proxy_raw": 0.9251,
+        "focus_share": 0.0789,
+        "rank": 1
+      },
+      {
+        "element_id": "E19",
+        "label": "开始试用按钮",
+        "role": "primary_button",
+        "bbox": [
+          0.68,
+          0.68,
+          0.28,
+          0.22
+        ],
+        "area_ratio": 0.0616,
+        "center_distance": 0.6107,
+        "model_visual_importance": 0.9,
+        "region": {
+          "luminance_p10": 0.1569,
+          "luminance_p90": 0.8824,
+          "luminance_contrast": 0.7255,
+          "mean_saturation": 0.5107,
+          "edge_density": 0.2299,
+          "bright_fraction": 0.0207
+        },
+        "focus_proxy_raw": 0.7497,
+        "focus_share": 0.0639,
+        "rank": 2
+      },
+      {
+        "element_id": "E12",
+        "label": "奖励预览面板",
+        "role": "panel",
+        "bbox": [
+          0.7,
+          0.42,
+          0.27,
+          0.25
+        ],
+        "area_ratio": 0.0675,
+        "center_distance": 0.478,
+        "model_visual_importance": 0.7,
+        "region": {
+          "luminance_p10": 0.3373,
+          "luminance_p90": 0.8078,
+          "luminance_contrast": 0.4706,
+          "mean_saturation": 0.4895,
+          "edge_density": 0.2146,
+          "bright_fraction": 0.0161
+        },
+        "focus_proxy_raw": 0.722,
+        "focus_share": 0.0616,
+        "rank": 3
+      },
+      {
+        "element_id": "E10",
+        "label": "活动标题 (角色试用 锋芒崭露)",
+        "role": "title",
+        "bbox": [
+          0.73,
+          0.13,
+          0.22,
+          0.15
+        ],
+        "area_ratio": 0.033,
+        "center_distance": 0.6366,
+        "model_visual_importance": 0.8,
+        "region": {
+          "luminance_p10": 0.0118,
+          "luminance_p90": 0.9922,
+          "luminance_contrast": 0.9804,
+          "mean_saturation": 0.2943,
+          "edge_density": 0.2625,
+          "bright_fraction": 0.2063
+        },
+        "focus_proxy_raw": 0.6737,
+        "focus_share": 0.0574,
+        "rank": 4
+      },
+      {
+        "element_id": "E16",
+        "label": "角色名称与星级 (锋芒崭露)",
+        "role": "text",
+        "bbox": [
+          0.02,
+          0.67,
+          0.25,
+          0.12
+        ],
+        "area_ratio": 0.03,
+        "center_distance": 0.5982,
+        "model_visual_importance": 0.8,
+        "region": {
+          "luminance_p10": 0.2196,
+          "luminance_p90": 0.9608,
+          "luminance_contrast": 0.7412,
+          "mean_saturation": 0.1865,
+          "edge_density": 0.3137,
+          "bright_fraction": 0.1603
+        },
+        "focus_proxy_raw": 0.6654,
+        "focus_share": 0.0567,
+        "rank": 5
+      },
+      {
+        "element_id": "E13",
+        "label": "奖励物品：菲林 x300",
+        "role": "reward_card",
+        "bbox": [
+          0.71,
+          0.5,
+          0.07,
+          0.15
+        ],
+        "area_ratio": 0.0105,
+        "center_distance": 0.3624,
+        "model_visual_importance": 0.6,
+        "region": {
+          "luminance_p10": 0.3333,
+          "luminance_p90": 0.7804,
+          "luminance_contrast": 0.4471,
+          "mean_saturation": 0.5226,
+          "edge_density": 0.1542,
+          "bright_fraction": 0.0284
+        },
+        "focus_proxy_raw": 0.636,
+        "focus_share": 0.0542,
+        "rank": 6
+      },
+      {
+        "element_id": "E14",
+        "label": "奖励物品：电池 x10",
+        "role": "reward_card",
+        "bbox": [
+          0.79,
+          0.5,
+          0.07,
+          0.15
+        ],
+        "area_ratio": 0.0105,
+        "center_distance": 0.4717,
+        "model_visual_importance": 0.6,
+        "region": {
+          "luminance_p10": 0.251,
+          "luminance_p90": 0.7216,
+          "luminance_contrast": 0.4706,
+          "mean_saturation": 0.547,
+          "edge_density": 0.1701,
+          "bright_fraction": 0.0051
+        },
+        "focus_proxy_raw": 0.6356,
+        "focus_share": 0.0542,
+        "rank": 7
+      },
+      {
+        "element_id": "E06",
+        "label": "角色试用标签",
+        "role": "nav",
+        "bbox": [
+          0.02,
+          0.13,
+          0.18,
+          0.09
+        ],
+        "area_ratio": 0.0162,
+        "center_distance": 0.718,
+        "model_visual_importance": 0.7,
+        "region": {
+          "luminance_p10": 0.1216,
+          "luminance_p90": 0.9176,
+          "luminance_contrast": 0.7961,
+          "mean_saturation": 0.4771,
+          "edge_density": 0.1744,
+          "bright_fraction": 0.0915
+        },
+        "focus_proxy_raw": 0.6295,
+        "focus_share": 0.0537,
+        "rank": 8
+      },
+      {
+        "element_id": "E15",
+        "label": "奖励物品：经验卡 x5",
+        "role": "reward_card",
+        "bbox": [
+          0.87,
+          0.5,
+          0.07,
+          0.15
+        ],
+        "area_ratio": 0.0105,
+        "center_distance": 0.5825,
+        "model_visual_importance": 0.6,
+        "region": {
+          "luminance_p10": 0.2549,
+          "luminance_p90": 0.8431,
+          "luminance_contrast": 0.5882,
+          "mean_saturation": 0.4789,
+          "edge_density": 0.1783,
+          "bright_fraction": 0.0055
+        },
+        "focus_proxy_raw": 0.6185,
+        "focus_share": 0.0527,
+        "rank": 9
+      },
+      {
+        "element_id": "E11",
+        "label": "倒计时 (21天1小时)",
+        "role": "text",
+        "bbox": [
+          0.73,
+          0.29,
+          0.15,
+          0.05
+        ],
+        "area_ratio": 0.0075,
+        "center_distance": 0.5045,
+        "model_visual_importance": 0.5,
+        "region": {
+          "luminance_p10": 0.2196,
+          "luminance_p90": 0.9843,
+          "luminance_contrast": 0.7647,
+          "mean_saturation": 0.4076,
+          "edge_density": 0.2589,
+          "bright_fraction": 0.135
+        },
+        "focus_proxy_raw": 0.5933,
+        "focus_share": 0.0506,
+        "rank": 10
+      },
+      {
+        "element_id": "E02",
+        "label": "体力资源 (120/120)",
+        "role": "resource",
+        "bbox": [
+          0.57,
+          0.02,
+          0.12,
+          0.05
+        ],
+        "area_ratio": 0.006,
+        "center_distance": 0.6692,
+        "model_visual_importance": 0.5,
+        "region": {
+          "luminance_p10": 0.0745,
+          "luminance_p90": 0.7059,
+          "luminance_contrast": 0.6314,
+          "mean_saturation": 0.6709,
+          "edge_density": 0.2412,
+          "bright_fraction": 0.0433
+        },
+        "focus_proxy_raw": 0.5914,
+        "focus_share": 0.0504,
+        "rank": 11
+      },
+      {
+        "element_id": "E08",
+        "label": "剧情故事标签",
+        "role": "nav",
+        "bbox": [
+          0.02,
+          0.37,
+          0.18,
+          0.09
+        ],
+        "area_ratio": 0.0162,
+        "center_distance": 0.5645,
+        "model_visual_importance": 0.6,
+        "region": {
+          "luminance_p10": 0.1137,
+          "luminance_p90": 0.9216,
+          "luminance_contrast": 0.8078,
+          "mean_saturation": 0.0216,
+          "edge_density": 0.2043,
+          "bright_fraction": 0.1571
+        },
+        "focus_proxy_raw": 0.5863,
+        "focus_share": 0.05,
+        "rank": 12
+      },
+      {
+        "element_id": "E03",
+        "label": "丁尼资源 (88000)",
+        "role": "resource",
+        "bbox": [
+          0.69,
+          0.02,
+          0.12,
+          0.05
+        ],
+        "area_ratio": 0.006,
+        "center_distance": 0.7342,
+        "model_visual_importance": 0.5,
+        "region": {
+          "luminance_p10": 0.0745,
+          "luminance_p90": 0.851,
+          "luminance_contrast": 0.7765,
+          "mean_saturation": 0.6686,
+          "edge_density": 0.2256,
+          "bright_fraction": 0.0661
+        },
+        "focus_proxy_raw": 0.5815,
+        "focus_share": 0.0496,
+        "rank": 13
+      },
+      {
+        "element_id": "E07",
+        "label": "技能预览标签",
+        "role": "nav",
+        "bbox": [
+          0.02,
+          0.25,
+          0.18,
+          0.09
+        ],
+        "area_ratio": 0.0162,
+        "center_distance": 0.6231,
+        "model_visual_importance": 0.6,
+        "region": {
+          "luminance_p10": 0.1137,
+          "luminance_p90": 0.9216,
+          "luminance_contrast": 0.8078,
+          "mean_saturation": 0.018,
+          "edge_density": 0.1925,
+          "bright_fraction": 0.147
+        },
+        "focus_proxy_raw": 0.5772,
+        "focus_share": 0.0492,
+        "rank": 14
+      },
+      {
+        "element_id": "E04",
+        "label": "菲林资源 (8800)",
+        "role": "resource",
+        "bbox": [
+          0.82,
+          0.02,
+          0.12,
+          0.05
+        ],
+        "area_ratio": 0.006,
+        "center_distance": 0.8384,
+        "model_visual_importance": 0.5,
+        "region": {
+          "luminance_p10": 0.0784,
+          "luminance_p90": 0.7882,
+          "luminance_contrast": 0.7098,
+          "mean_saturation": 0.5753,
+          "edge_density": 0.214,
+          "bright_fraction": 0.0444
+        },
+        "focus_proxy_raw": 0.5565,
+        "focus_share": 0.0475,
+        "rank": 15
+      },
+      {
+        "element_id": "E18",
+        "label": "定位标签 (强攻)",
+        "role": "other",
+        "bbox": [
+          0.17,
+          0.82,
+          0.1,
+          0.05
+        ],
+        "area_ratio": 0.005,
+        "center_distance": 0.6284,
+        "model_visual_importance": 0.4,
+        "region": {
+          "luminance_p10": 0.1961,
+          "luminance_p90": 0.9059,
+          "luminance_contrast": 0.7098,
+          "mean_saturation": 0.4595,
+          "edge_density": 0.234,
+          "bright_fraction": 0.0806
+        },
+        "focus_proxy_raw": 0.5488,
+        "focus_share": 0.0468,
+        "rank": 16
+      },
+      {
+        "element_id": "E17",
+        "label": "属性标签 (雷电)",
+        "role": "other",
+        "bbox": [
+          0.06,
+          0.82,
+          0.1,
+          0.05
+        ],
+        "area_ratio": 0.005,
+        "center_distance": 0.7364,
+        "model_visual_importance": 0.4,
+        "region": {
+          "luminance_p10": 0.051,
+          "luminance_p90": 0.9216,
+          "luminance_contrast": 0.8706,
+          "mean_saturation": 0.4128,
+          "edge_density": 0.2204,
+          "bright_fraction": 0.1025
+        },
+        "focus_proxy_raw": 0.528,
+        "focus_share": 0.045,
+        "rank": 17
+      },
+      {
+        "element_id": "E01",
+        "label": "返回按钮",
+        "role": "nav",
+        "bbox": [
+          0.02,
+          0.03,
+          0.08,
+          0.06
+        ],
+        "area_ratio": 0.0048,
+        "center_distance": 0.88,
+        "model_visual_importance": 0.4,
+        "region": {
+          "luminance_p10": 0.2784,
+          "luminance_p90": 0.9294,
+          "luminance_contrast": 0.651,
+          "mean_saturation": 0.0871,
+          "edge_density": 0.1864,
+          "bright_fraction": 0.5501
+        },
+        "focus_proxy_raw": 0.4733,
+        "focus_share": 0.0404,
+        "rank": 18
+      },
+      {
+        "element_id": "E05",
+        "label": "主页按钮",
+        "role": "nav",
+        "bbox": [
+          0.95,
+          0.02,
+          0.04,
+          0.06
+        ],
+        "area_ratio": 0.0024,
+        "center_distance": 0.9202,
+        "model_visual_importance": 0.4,
+        "region": {
+          "luminance_p10": 0.5922,
+          "luminance_p90": 0.9922,
+          "luminance_contrast": 0.4,
+          "mean_saturation": 0.3845,
+          "edge_density": 0.1376,
+          "bright_fraction": 0.2275
+        },
+        "focus_proxy_raw": 0.4362,
+        "focus_share": 0.0372,
+        "rank": 19
+      }
+    ]
+  },
+  "readability": {
+    "text_block_count": 30,
+    "low_contrast_count": 0,
+    "small_text_candidate_count": 10,
+    "estimated_height_p10": 15.0,
+    "estimated_height_p50": 28.0,
+    "local_contrast_p10": 0.4667,
+    "blocks": [
+      {
+        "block": 1,
+        "text": "返回",
+        "bbox": [
+          0.048,
+          0.035,
+          0.037,
+          0.042
+        ],
+        "estimated_height_px": 36.0,
+        "local_luminance_contrast": 0.6667,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 2,
+        "text": "BACK",
+        "bbox": [
+          0.091,
+          0.047,
+          0.019,
+          0.017
+        ],
+        "estimated_height_px": 15.0,
+        "local_luminance_contrast": 0.3961,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 3,
+        "text": "角色试用",
+        "bbox": [
+          0.078,
+          0.147,
+          0.078,
+          0.042
+        ],
+        "estimated_height_px": 36.0,
+        "local_luminance_contrast": 0.7294,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 4,
+        "text": "TRIAL",
+        "bbox": [
+          0.078,
+          0.191,
+          0.037,
+          0.017
+        ],
+        "estimated_height_px": 15.0,
+        "local_luminance_contrast": 0.6549,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 5,
+        "text": "技能预览",
+        "bbox": [
+          0.074,
+          0.265,
+          0.078,
+          0.042
+        ],
+        "estimated_height_px": 36.0,
+        "local_luminance_contrast": 0.8863,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 6,
+        "text": "SKILL PREVIEW",
+        "bbox": [
+          0.074,
+          0.309,
+          0.078,
+          0.017
+        ],
+        "estimated_height_px": 15.0,
+        "local_luminance_contrast": 0.4784,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 7,
+        "text": "剧情故事",
+        "bbox": [
+          0.074,
+          0.382,
+          0.078,
+          0.042
+        ],
+        "estimated_height_px": 36.0,
+        "local_luminance_contrast": 0.8863,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 8,
+        "text": "STORY",
+        "bbox": [
+          0.074,
+          0.426,
+          0.037,
+          0.017
+        ],
+        "estimated_height_px": 15.0,
+        "local_luminance_contrast": 0.4824,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 9,
+        "text": "120/120",
+        "bbox": [
+          0.604,
+          0.032,
+          0.052,
+          0.032
+        ],
+        "estimated_height_px": 28.0,
+        "local_luminance_contrast": 0.8784,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 10,
+        "text": "+",
+        "bbox": [
+          0.661,
+          0.032,
+          0.013,
+          0.032
+        ],
+        "estimated_height_px": 28.0,
+        "local_luminance_contrast": 0.5373,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 11,
+        "text": "88000",
+        "bbox": [
+          0.737,
+          0.032,
+          0.047,
+          0.032
+        ],
+        "estimated_height_px": 28.0,
+        "local_luminance_contrast": 0.8941,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 12,
+        "text": "+",
+        "bbox": [
+          0.788,
+          0.032,
+          0.013,
+          0.032
+        ],
+        "estimated_height_px": 28.0,
+        "local_luminance_contrast": 0.8588,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 13,
+        "text": "8800",
+        "bbox": [
+          0.866,
+          0.032,
+          0.037,
+          0.032
+        ],
+        "estimated_height_px": 28.0,
+        "local_luminance_contrast": 0.898,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 14,
+        "text": "+",
+        "bbox": [
+          0.907,
+          0.032,
+          0.013,
+          0.032
+        ],
+        "estimated_height_px": 28.0,
+        "local_luminance_contrast": 0.851,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 15,
+        "text": "角色试用",
+        "bbox": [
+          0.844,
+          0.139,
+          0.111,
+          0.042
+        ],
+        "estimated_height_px": 36.0,
+        "local_luminance_contrast": 0.9647,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 16,
+        "text": "锋芒崭露",
+        "bbox": [
+          0.737,
+          0.191,
+          0.204,
+          0.083
+        ],
+        "estimated_height_px": 72.0,
+        "local_luminance_contrast": 0.9922,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 17,
+        "text": "ERROR",
+        "bbox": [
+          0.917,
+          0.198,
+          0.074,
+          0.032
+        ],
+        "estimated_height_px": 28.0,
+        "local_luminance_contrast": 0.4706,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 18,
+        "text": "21天1小时",
+        "bbox": [
+          0.769,
+          0.295,
+          0.093,
+          0.032
+        ],
+        "estimated_height_px": 28.0,
+        "local_luminance_contrast": 0.7569,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 19,
+        "text": "奖励预览",
+        "bbox": [
+          0.721,
+          0.444,
+          0.074,
+          0.032
+        ],
+        "estimated_height_px": 28.0,
+        "local_luminance_contrast": 0.3922,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 20,
+        "text": "REWARD PREVIEW",
+        "bbox": [
+          0.721,
+          0.472,
+          0.083,
+          0.014
+        ],
+        "estimated_height_px": 12.0,
+        "local_luminance_contrast": 0.2863,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 21,
+        "text": "×300",
+        "bbox": [
+          0.756,
+          0.587,
+          0.028,
+          0.017
+        ],
+        "estimated_height_px": 15.0,
+        "local_luminance_contrast": 0.5804,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 22,
+        "text": "×10",
+        "bbox": [
+          0.829,
+          0.587,
+          0.023,
+          0.017
+        ],
+        "estimated_height_px": 15.0,
+        "local_luminance_contrast": 0.549,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 23,
+        "text": "×5",
+        "bbox": [
+          0.902,
+          0.587,
+          0.019,
+          0.017
+        ],
+        "estimated_height_px": 15.0,
+        "local_luminance_contrast": 0.5451,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 24,
+        "text": "新!",
+        "bbox": [
+          0.269,
+          0.656,
+          0.028,
+          0.032
+        ],
+        "estimated_height_px": 28.0,
+        "local_luminance_contrast": 0.4667,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 25,
+        "text": "锋芒崭露",
+        "bbox": [
+          0.093,
+          0.688,
+          0.148,
+          0.062
+        ],
+        "estimated_height_px": 54.0,
+        "local_luminance_contrast": 0.7686,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 26,
+        "text": "属性: 雷电",
+        "bbox": [
+          0.098,
+          0.826,
+          0.065,
+          0.028
+        ],
+        "estimated_height_px": 24.0,
+        "local_luminance_contrast": 0.8824,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 27,
+        "text": "定位: 强攻",
+        "bbox": [
+          0.204,
+          0.826,
+          0.065,
+          0.028
+        ],
+        "estimated_height_px": 24.0,
+        "local_luminance_contrast": 0.7255,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 28,
+        "text": "开始试用",
+        "bbox": [
+          0.737,
+          0.757,
+          0.111,
+          0.056
+        ],
+        "estimated_height_px": 48.0,
+        "local_luminance_contrast": 0.7216,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 29,
+        "text": "START",
+        "bbox": [
+          0.769,
+          0.826,
+          0.047,
+          0.017
+        ],
+        "estimated_height_px": 15.0,
+        "local_luminance_contrast": 0.6588,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 30,
+        "text": "ATHOPOG",
+        "bbox": [
+          0.528,
+          0.486,
+          0.056,
+          0.014
+        ],
+        "estimated_height_px": 12.0,
+        "local_luminance_contrast": 0.8824,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.9
+      }
+    ]
+  },
+  "density": {
+    "element_count": 19,
+    "interactive_element_count": 6,
+    "ocr_text_block_count": 30,
+    "elements_per_megapixel": 9.2,
+    "interactive_coverage": 0.1174,
+    "text_coverage": 0.0731,
+    "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+  },
+  "style": {
+    "control_count": 6,
+    "control_saturation_dispersion": 0.2108,
+    "control_contrast_dispersion": 0.155,
+    "control_mean_saturation": 0.2487,
+    "control_mean_contrast": 0.6732,
+    "note": "Dispersion measures same-role visual consistency only when roles are correctly labeled."
+  },
+  "prototype_alignment": {
+    "available": true,
+    "matches": [
+      {
+        "role": "nav",
+        "result_bbox": {
+          "x": 0.02,
+          "y": 0.03,
+          "width": 0.08,
+          "height": 0.06
+        },
+        "reference_bbox": {
+          "x": 0.03,
+          "y": 0.02,
+          "width": 0.08,
+          "height": 0.09
+        },
+        "iou": 0.5385,
+        "center_offset": 0.0158,
+        "size_ratio_change": 0.6667
+      },
+      {
+        "role": "resource",
+        "result_bbox": {
+          "x": 0.57,
+          "y": 0.02,
+          "width": 0.12,
+          "height": 0.05
+        },
+        "reference_bbox": {
+          "x": 0.81,
+          "y": 0.29,
+          "width": 0.11,
+          "height": 0.05
+        },
+        "iou": 0.0,
+        "center_offset": 0.5062,
+        "size_ratio_change": 1.0909
+      },
+      {
+        "role": "nav",
+        "result_bbox": {
+          "x": 0.95,
+          "y": 0.02,
+          "width": 0.04,
+          "height": 0.06
+        },
+        "reference_bbox": {
+          "x": 0.03,
+          "y": 0.17,
+          "width": 0.14,
+          "height": 0.13
+        },
+        "iou": 0.0,
+        "center_offset": 1.0,
+        "size_ratio_change": 0.1319
+      },
+      {
+        "role": "nav",
+        "result_bbox": {
+          "x": 0.02,
+          "y": 0.13,
+          "width": 0.18,
+          "height": 0.09
+        },
+        "reference_bbox": {
+          "x": 0.15,
+          "y": 0.66,
+          "width": 0.21,
+          "height": 0.14
+        },
+        "iou": 0.0,
+        "center_offset": 0.8112,
+        "size_ratio_change": 0.551
+      },
+      {
+        "role": "nav",
+        "result_bbox": {
+          "x": 0.02,
+          "y": 0.25,
+          "width": 0.18,
+          "height": 0.09
+        },
+        "reference_bbox": {
+          "x": 0.03,
+          "y": 0.33,
+          "width": 0.14,
+          "height": 0.13
+        },
+        "iou": 0.0424,
+        "center_offset": 0.1421,
+        "size_ratio_change": 0.8901
+      },
+      {
+        "role": "nav",
+        "result_bbox": {
+          "x": 0.02,
+          "y": 0.37,
+          "width": 0.18,
+          "height": 0.09
+        },
+        "reference_bbox": {
+          "x": 0.03,
+          "y": 0.5,
+          "width": 0.14,
+          "height": 0.13
+        },
+        "iou": 0.0,
+        "center_offset": 0.2126,
+        "size_ratio_change": 0.8901
+      },
+      {
+        "role": "character",
+        "result_bbox": {
+          "x": 0.32,
+          "y": 0.0,
+          "width": 0.4,
+          "height": 0.95
+        },
+        "reference_bbox": {
+          "x": 0.32,
+          "y": 0.05,
+          "width": 0.4,
+          "height": 0.95
+        },
+        "iou": 0.9,
+        "center_offset": 0.0707,
+        "size_ratio_change": 1.0
+      },
+      {
+        "role": "title",
+        "result_bbox": {
+          "x": 0.73,
+          "y": 0.13,
+          "width": 0.22,
+          "height": 0.15
+        },
+        "reference_bbox": {
+          "x": 0.81,
+          "y": 0.15,
+          "width": 0.15,
+          "height": 0.15
+        },
+        "iou": 0.4879,
+        "center_offset": 0.0696,
+        "size_ratio_change": 1.4667
+      },
+      {
+        "role": "panel",
+        "result_bbox": {
+          "x": 0.7,
+          "y": 0.42,
+          "width": 0.27,
+          "height": 0.25
+        },
+        "reference_bbox": {
+          "x": 0.69,
+          "y": 0.62,
+          "width": 0.23,
+          "height": 0.19
+        },
+        "iou": 0.1098,
+        "center_offset": 0.2441,
+        "size_ratio_change": 1.5446
+      },
+      {
+        "role": "reward_card",
+        "result_bbox": {
+          "x": 0.71,
+          "y": 0.5,
+          "width": 0.07,
+          "height": 0.15
+        },
+        "reference_bbox": {
+          "x": 0.7,
+          "y": 0.69,
+          "width": 0.05,
+          "height": 0.08
+        },
+        "iou": 0.0,
+        "center_offset": 0.221,
+        "size_ratio_change": 2.625
+      },
+      {
+        "role": "reward_card",
+        "result_bbox": {
+          "x": 0.79,
+          "y": 0.5,
+          "width": 0.07,
+          "height": 0.15
+        },
+        "reference_bbox": {
+          "x": 0.8,
+          "y": 0.69,
+          "width": 0.05,
+          "height": 0.08
+        },
+        "iou": 0.0,
+        "center_offset": 0.2192,
+        "size_ratio_change": 2.625
+      },
+      {
+        "role": "reward_card",
+        "result_bbox": {
+          "x": 0.87,
+          "y": 0.5,
+          "width": 0.07,
+          "height": 0.15
+        },
+        "reference_bbox": {
+          "x": 0.75,
+          "y": 0.69,
+          "width": 0.05,
+          "height": 0.08
+        },
+        "iou": 0.0,
+        "center_offset": 0.2861,
+        "size_ratio_change": 2.625
+      },
+      {
+        "role": "primary_button",
+        "result_bbox": {
+          "x": 0.68,
+          "y": 0.68,
+          "width": 0.28,
+          "height": 0.22
+        },
+        "reference_bbox": {
+          "x": 0.69,
+          "y": 0.85,
+          "width": 0.23,
+          "height": 0.09
+        },
+        "iou": 0.1624,
+        "center_offset": 0.15,
+        "size_ratio_change": 2.9758
+      }
+    ],
+    "mean_iou": 0.1724,
+    "mean_center_offset": 0.3037
+  }
+}

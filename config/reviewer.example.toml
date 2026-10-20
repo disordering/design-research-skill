@@ -1,0 +1,102 @@
+# Interaction Review Engine configuration
+# Copy this file to config/reviewer.toml and fill api_key locally.
+# Never commit config/reviewer.toml.
+
+[app]
+criteria_path = "判据库_v1.json"
+debug_artifacts = true
+artifact_dir = "out/debug"
+request_timeout_seconds = 180
+
+[review]
+# The primary path is an ensemble, not a single VLM prompt.
+profile = "quality"
+top_k_criteria = 8
+require_evidence_box = true
+repeat_consistency_checks = 2
+
+[providers.qwen]
+enabled = true
+# Copy the key from the Qianwen AI Platform and paste it only into the
+# git-ignored config/reviewer.toml file.
+api_key = ""
+chat_base_url = "https://maas.qianwenaiapi.com/compatible-mode/v1"
+rerank_base_url = "https://maas.qianwenaiapi.com/compatible-api/v1"
+
+# Pin snapshots where available for reproducible evaluations.
+reasoning_model = "qwen3.8-max-0902"
+# Structured screen parsing and OCR use Flash because both returned reliable JSON.
+ui_perception_model = "qwen3.8-flash"
+ocr_model = "qwen3.8-flash"
+# GUI-Plus remains available for action/affordance experiments.
+gui_action_model = "gui-plus-2026-02-26"
+text_embedding_model = "qwen3.7-text-embedding"
+text_rerank_model = "qwen3.7-text-rerank"
+vlm_embedding_model = "qwen3-vl-embedding"
+vlm_rerank_model = "qwen3-vl-rerank"
+
+[providers.deepseek]
+enabled = false
+api_key = ""
+base_url = "https://api.deepseek.com"
+reasoning_model = "deepseek-v4-pro"
+vision_model = "deepseek-flash"
+
+[perception]
+ui_parser = "qwen_gui_plus"
+ocr = "qwen_ocr"
+saliency = "opencv_spectral_residual"
+use_prototype_alignment = true
+
+[retrieval]
+# Scores are combined from visual retrieval, text retrieval, rule attributes,
+# and context priors. We calibrate these weights against expert labels.
+visual_weight = 0.45
+text_weight = 0.25
+attribute_weight = 0.20
+context_prior_weight = 0.10
+candidate_k = 24
+
+[metrics]
+analyze_focus_distribution = true
+analyze_contrast = true
+analyze_text_size = true
+analyze_edge_density = true
+analyze_color_saturation = true
+analyze_control_consistency = true
+analyze_prototype_layout = true
+analyze_reference_ssim = false
+
+[models.local_holo15]
+# Optional open-source localization benchmark on the 5070 Ti machine.
+enabled = false
+model_id = "Hcompany/Holo1.5-7B"
+device = "cuda"
+dtype = "auto"
+load_in_4bit = true
+max_new_tokens = 4096
+min_pixels = 200704
+max_pixels = 2000000
+trust_remote_code = true
+
+[models.local_ui_tars]
+enabled = false
+model_id = "ByteDance-Seed/UI-TARS-1.5-7B"
+device = "cuda"
+dtype = "auto"
+load_in_4bit = true
+max_new_tokens = 4096
+min_pixels = 200704
+max_pixels = 2000000
+trust_remote_code = true
+
+[machines.local_5070ti]
+description = "RTX 5070 Ti, 16 GB VRAM"
+cloud_fallback = true
+preferred_local_perception = "local_holo"
+preferred_reasoning_provider = "qwen"
+
+[logging]
+log_stage_timings = true
+log_token_usage = true
+log_raw_model_output = false

@@ -1,0 +1,339 @@
+{
+  "blocks": [
+    {
+      "text": "返回",
+      "bbox": {
+        "x": 0.048,
+        "y": 0.035,
+        "width": 0.037,
+        "height": 0.042
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 36.0
+    },
+    {
+      "text": "BACK",
+      "bbox": {
+        "x": 0.091,
+        "y": 0.047,
+        "width": 0.019,
+        "height": 0.017
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 15.0
+    },
+    {
+      "text": "角色试用",
+      "bbox": {
+        "x": 0.078,
+        "y": 0.147,
+        "width": 0.078,
+        "height": 0.042
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 36.0
+    },
+    {
+      "text": "TRIAL",
+      "bbox": {
+        "x": 0.078,
+        "y": 0.191,
+        "width": 0.037,
+        "height": 0.017
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 15.0
+    },
+    {
+      "text": "技能预览",
+      "bbox": {
+        "x": 0.074,
+        "y": 0.265,
+        "width": 0.078,
+        "height": 0.042
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 36.0
+    },
+    {
+      "text": "SKILL PREVIEW",
+      "bbox": {
+        "x": 0.074,
+        "y": 0.309,
+        "width": 0.078,
+        "height": 0.017
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 15.0
+    },
+    {
+      "text": "剧情故事",
+      "bbox": {
+        "x": 0.074,
+        "y": 0.382,
+        "width": 0.078,
+        "height": 0.042
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 36.0
+    },
+    {
+      "text": "STORY",
+      "bbox": {
+        "x": 0.074,
+        "y": 0.426,
+        "width": 0.037,
+        "height": 0.017
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 15.0
+    },
+    {
+      "text": "120/120",
+      "bbox": {
+        "x": 0.604,
+        "y": 0.032,
+        "width": 0.052,
+        "height": 0.032
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 28.0
+    },
+    {
+      "text": "+",
+      "bbox": {
+        "x": 0.661,
+        "y": 0.032,
+        "width": 0.013,
+        "height": 0.032
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 28.0
+    },
+    {
+      "text": "88000",
+      "bbox": {
+        "x": 0.737,
+        "y": 0.032,
+        "width": 0.047,
+        "height": 0.032
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 28.0
+    },
+    {
+      "text": "+",
+      "bbox": {
+        "x": 0.788,
+        "y": 0.032,
+        "width": 0.013,
+        "height": 0.032
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 28.0
+    },
+    {
+      "text": "8800",
+      "bbox": {
+        "x": 0.866,
+        "y": 0.032,
+        "width": 0.037,
+        "height": 0.032
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 28.0
+    },
+    {
+      "text": "+",
+      "bbox": {
+        "x": 0.907,
+        "y": 0.032,
+        "width": 0.013,
+        "height": 0.032
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 28.0
+    },
+    {
+      "text": "角色试用",
+      "bbox": {
+        "x": 0.844,
+        "y": 0.139,
+        "width": 0.111,
+        "height": 0.042
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 36.0
+    },
+    {
+      "text": "锋芒崭露",
+      "bbox": {
+        "x": 0.737,
+        "y": 0.191,
+        "width": 0.204,
+        "height": 0.083
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 72.0
+    },
+    {
+      "text": "ERROR",
+      "bbox": {
+        "x": 0.917,
+        "y": 0.198,
+        "width": 0.074,
+        "height": 0.032
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 28.0
+    },
+    {
+      "text": "21天1小时",
+      "bbox": {
+        "x": 0.769,
+        "y": 0.295,
+        "width": 0.093,
+        "height": 0.032
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 28.0
+    },
+    {
+      "text": "奖励预览",
+      "bbox": {
+        "x": 0.721,
+        "y": 0.444,
+        "width": 0.074,
+        "height": 0.032
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 28.0
+    },
+    {
+      "text": "REWARD PREVIEW",
+      "bbox": {
+        "x": 0.721,
+        "y": 0.472,
+        "width": 0.083,
+        "height": 0.014
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 12.0
+    },
+    {
+      "text": "×300",
+      "bbox": {
+        "x": 0.756,
+        "y": 0.587,
+        "width": 0.028,
+        "height": 0.017
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 15.0
+    },
+    {
+      "text": "×10",
+      "bbox": {
+        "x": 0.829,
+        "y": 0.587,
+        "width": 0.023,
+        "height": 0.017
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 15.0
+    },
+    {
+      "text": "×5",
+      "bbox": {
+        "x": 0.902,
+        "y": 0.587,
+        "width": 0.019,
+        "height": 0.017
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 15.0
+    },
+    {
+      "text": "新!",
+      "bbox": {
+        "x": 0.269,
+        "y": 0.656,
+        "width": 0.028,
+        "height": 0.032
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 28.0
+    },
+    {
+      "text": "锋芒崭露",
+      "bbox": {
+        "x": 0.093,
+        "y": 0.688,
+        "width": 0.148,
+        "height": 0.062
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 54.0
+    },
+    {
+      "text": "属性: 雷电",
+      "bbox": {
+        "x": 0.098,
+        "y": 0.826,
+        "width": 0.065,
+        "height": 0.028
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 24.0
+    },
+    {
+      "text": "定位: 强攻",
+      "bbox": {
+        "x": 0.204,
+        "y": 0.826,
+        "width": 0.065,
+        "height": 0.028
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 24.0
+    },
+    {
+      "text": "开始试用",
+      "bbox": {
+        "x": 0.737,
+        "y": 0.757,
+        "width": 0.111,
+        "height": 0.056
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 48.0
+    },
+    {
+      "text": "START",
+      "bbox": {
+        "x": 0.769,
+        "y": 0.826,
+        "width": 0.047,
+        "height": 0.017
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 15.0
+    },
+    {
+      "text": "ATHOPOG",
+      "bbox": {
+        "x": 0.528,
+        "y": 0.486,
+        "width": 0.056,
+        "height": 0.014
+      },
+      "confidence": 0.9,
+      "estimated_height_px": 12.0
+    }
+  ],
+  "notes": [
+    "The text 'ERROR' appears twice as a decorative background element.",
+    "The character's shorts have the text 'ATHOPOG', which is included as it is legible.",
+    "There are small icons (battery, coin, diamond) next to the resource numbers at the top right."
+  ]
+}

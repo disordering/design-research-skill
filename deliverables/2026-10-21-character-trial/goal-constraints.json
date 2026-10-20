@@ -1,0 +1,95 @@
+{
+  "page_summary": "手游角色试用界面，包含角色展示、功能导航、奖励预览及核心操作入口，采用多巴胺配色风格。",
+  "constraints": [
+    {
+      "id": "G01",
+      "text": "界面布局需严格遵循原型设计的功能分区：左侧为导航菜单，中间为角色展示，右侧为活动信息与奖励，右下为核心操作按钮。",
+      "category": "layout",
+      "metric_hint": "区域位置与原型图重合度 > 90%",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "G02",
+      "text": "视觉层级需明确，“角色展示”区域与“开始试用”按钮必须作为第一视觉焦点，通过大小、色彩或动效优先吸引注意力。",
+      "category": "hierarchy",
+      "metric_hint": "核心元素视觉权重评分最高",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "G03",
+      "text": "控制界面信息密度，模块间需保留合理留白，避免元素过度拥挤导致视觉疲劳。",
+      "category": "density",
+      "metric_hint": "模块间距 >= 最小安全边距",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "G04",
+      "text": "所有数值（如货币、倒计时、奖励数量）与文字信息必须清晰易读，确保在复杂背景下仍具有高对比度。",
+      "category": "readability",
+      "metric_hint": "文字与背景对比度 >= 4.5:1",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "G05",
+      "text": "按钮及交互控件需采用明快、热烈的多巴胺配色（高饱和度），以强化点击欲望。",
+      "category": "style",
+      "metric_hint": "交互控件使用高饱和度色值",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "G06",
+      "text": "底板与框架设计需保持克制干净，使用低饱和度或中性色，避免喧宾夺主干扰核心内容。",
+      "category": "style",
+      "metric_hint": "背景/框架饱和度 < 交互控件饱和度",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "G07",
+      "text": "杜绝无意义的纹理堆叠，禁止使用过多的发光特效与重描边，保持界面清爽。",
+      "category": "anti_pattern",
+      "metric_hint": "装饰性纹理层数 <= 2，无多重外发光",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "G08",
+      "text": "界面交付需符合商业手游实机上线标准，结构明确，无视觉噪点。",
+      "category": "other",
+      "metric_hint": "通过UI走查清单",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 3
+    },
+    {
+      "id": "G09",
+      "text": "交互控件需提供明确的操作反馈，强化点击时的视觉或动效响应。",
+      "category": "interaction",
+      "metric_hint": "点击态响应时间 < 100ms",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 2
+    }
+  ]
+}

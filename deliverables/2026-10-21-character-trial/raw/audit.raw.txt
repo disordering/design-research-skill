@@ -1,0 +1,163 @@
+{
+  "screen_analysis": {
+    "page_type": "商业手游角色试用页（Zenless Zone Zero 风格）",
+    "visible_text": ["返回", "BACK", "角色试用", "TRIAL", "技能预览", "SKILL PREVIEW", "剧情故事", "STORY", "120/120", "+", "88000", "8800", "锋芒崭露", "ERROR", "21天1小时", "奖励预览", "REWARD PREVIEW", "×300", "×10", "×5", "新!", "锋芒斩露", "属性: 雷电", "定位: 强攻", "开始试用", "START", "ATHOPOG"],
+    "regions": ["左侧导航菜单（三个标签）", "顶部资源栏（体力/丁尼/菲林）", "中央角色立绘区", "右上活动标题与倒计时", "右中奖励预览面板", "右下核心操作按钮", "左下角色名称/星级/属性标签"],
+    "controls": ["返回按钮(返回/BACK)", "主页图标按钮", "导航标签: 角色试用/TRIAL(选中)", "导航标签: 技能预览/SKILL PREVIEW", "导航标签: 剧情故事/STORY", "资源+号按钮×3", "开始试用/START 主按钮"],
+    "observed_states": ["角色试用标签为黄色高亮选中态，其余两标签为黑底未选中态", "主按钮、导航、资源均为默认态（静态截图无点击反馈）", "角色名旁有'新!'角标"],
+    "task_clues": ["主任务为点击'开始试用/START'进入角色试用", "倒计时21天1小时提示活动时限", "奖励预览展示试用可得奖励"],
+    "uncertainties": ["左侧标签是页内切换还是跳页无法从静态图确认", "底部黑色横条疑似录屏/Home指示条而非游戏UI", "OCR将左下角色名读作'锋芒崭露'，但像素上第三字为'斩'，与右上标题'锋芒崭露'不一致"]
+  },
+  "rule_statuses": [
+    {
+      "rule_id": "R01",
+      "decision": "no_visible_issue",
+      "confidence": 0.92,
+      "reason": "左侧三个页面级导航项并列，当前项'角色试用/TRIAL'(E06)以黄色多巴胺底色与黑底未选中项(E07/E08)明确区分，选中状态清晰可见。"
+    },
+    {
+      "rule_id": "R06",
+      "decision": "no_visible_issue",
+      "confidence": 0.95,
+      "reason": "主按钮文字'开始试用/START'(E19)为动词+对象命名，结合页面角色试用主题，操作预期结果（进入试用）无歧义，非'确定/处理'类泛词。"
+    },
+    {
+      "rule_id": "R09",
+      "decision": "no_visible_issue",
+      "confidence": 0.93,
+      "reason": "左上角有明确的'返回/BACK'按钮(E01, 0.02,0.03)，且右上另有主页图标(E05)，提供可见的退出/回退路径。"
+    },
+    {
+      "rule_id": "R12",
+      "decision": "no_visible_issue",
+      "confidence": 0.88,
+      "reason": "同类控件视觉规则一致：三个导航标签(E06-E08)同形同尺寸仅以状态色区分；三张奖励卡(E13-E15)尺寸样式统一；三个资源条(E02-E04)同为黑底胶囊+图标+数值+加号。control_saturation_dispersion=0.2108 主要由选中态黄色造成，属状态差异而非不一致。"
+    },
+    {
+      "rule_id": "R16",
+      "decision": "no_visible_issue",
+      "confidence": 0.85,
+      "reason": "重要图标均带含义线索：返回箭头配'返回/BACK'文字，导航标签图标配中英文字，资源图标配数值(120/120、88000、8800)，主页图标为通用房屋造型，无需猜测。"
+    },
+    {
+      "rule_id": "R18",
+      "decision": "no_visible_issue",
+      "confidence": 0.87,
+      "reason": "相关项成组清晰：奖励三卡置于带组标题'奖励预览/REWARD PREVIEW'的粉色面板(E12)内；角色名、五星、'属性: 雷电''定位: 强攻'聚于左下同一信息簇；资源三件套集中于顶栏。"
+    },
+    {
+      "rule_id": "R19",
+      "decision": "no_visible_issue",
+      "confidence": 0.94,
+      "reason": "主操作'开始试用'(E19)位于右下主操作区，面积占比0.0616为最大交互元素，高饱和黄绿爆闪造型，焦点代理排名第二(focus_proxy_raw=0.7497)，层级远高于次要控件，极易定位。"
+    },
+    {
+      "rule_id": "R20",
+      "decision": "no_visible_issue",
+      "confidence": 0.8,
+      "reason": "背景漫画风装饰('ERROR'字样、星形爆闪)虽活跃，但焦点代理显示角色立绘(E09, rank1)与开始试用按钮(E19, rank2)仍占最高视觉权重；negative_space_proxy=0.7748，装饰未压过主任务内容，且该波普风格服务于多巴胺设计目标。"
+    }
+  ],
+  "findings": [],
+  "goal_checks": [
+    {
+      "constraint_id": "G01",
+      "status": "met",
+      "title": "功能分区与原型一致",
+      "severity": "low",
+      "confidence": 0.8,
+      "detection": "对照元素bbox与原型分区描述：左侧导航(E06-E08 x≈0.02)、中间角色展示(E09 x0.32-0.72)、右侧活动信息与奖励(E10-E15 x≥0.70)、右下核心按钮(E19 0.68,0.68)。",
+      "description": "截图四大分区（左导航/中角色/右活动奖励/右下主按钮）与目标分区描述完全吻合；character区IoU=0.9。prototype_alignment的mean_iou=0.17偏低源于参考框坐标疑似错位（如resource参考框y=0.29与顶栏实际y=0.02不符），与可见证据矛盾，故以可见布局为准。",
+      "suggestion": "无需修改；建议校对原型对齐脚本的参考框坐标。",
+      "evidence": {"x": 0.02, "y": 0.13, "width": 0.95, "height": 0.77, "description": "左导航、中立绘、右奖励与右下主按钮四分区", "visible_text": "角色试用 / 奖励预览 / 开始试用"}
+    },
+    {
+      "constraint_id": "G02",
+      "status": "met",
+      "title": "角色展示与开始试用为第一视觉焦点",
+      "severity": "low",
+      "confidence": 0.9,
+      "detection": "焦点代理排名：E09角色立绘 rank1 (focus_proxy_raw=0.9251)，E19开始试用按钮 rank2 (0.7497)，显著高于其余元素。",
+      "description": "角色立绘占画面38%面积且居中，主按钮以高饱和黄绿+爆闪外框突出，二者构成第一视觉焦点，层级明确。",
+      "suggestion": "保持现状。",
+      "evidence": {"x": 0.68, "y": 0.68, "width": 0.28, "height": 0.22, "description": "开始试用按钮高饱和爆闪造型", "visible_text": "开始试用 START"}
+    },
+    {
+      "constraint_id": "G03",
+      "status": "met",
+      "title": "信息密度与留白可控",
+      "severity": "low",
+      "confidence": 0.78,
+      "detection": "negative_space_proxy=0.7748；19个元素、6个交互控件，模块间（导航/立绘/奖励面板/主按钮）留有明显间隔。",
+      "description": "各功能模块边界清楚、间距充足，未出现元素互相挤压或遮挡文字的情况，密度符合中轻度玩家阅读负荷。",
+      "suggestion": "保持现状。",
+      "evidence": {"x": 0.7, "y": 0.42, "width": 0.27, "height": 0.25, "description": "奖励面板与标题、主按钮之间留白清晰", "visible_text": "奖励预览 REWARD PREVIEW"}
+    },
+    {
+      "constraint_id": "G04",
+      "status": "met",
+      "title": "数值与文字清晰易读",
+      "severity": "low",
+      "confidence": 0.85,
+      "detection": "readability.low_contrast_count=0；关键数值120/120、88000、8800、×300/×10/×5、21天1小时对比度0.54-0.90，均为深底白字或亮底黑字。",
+      "description": "所有货币、倒计时、奖励数量在复杂背景下仍保持高对比可读；最小文字(12px英文副标)为装饰性辅助文本，不影响关键数值阅读。",
+      "suggestion": "可将12px英文副标(如REWARD PREVIEW)略微增大以进一步提升可读性。",
+      "evidence": {"x": 0.57, "y": 0.02, "width": 0.37, "height": 0.05, "description": "顶栏资源数值黑底白字高对比", "visible_text": "120/120 88000 8800"}
+    },
+    {
+      "constraint_id": "G05",
+      "status": "met",
+      "title": "交互控件采用多巴胺高饱和配色",
+      "severity": "low",
+      "confidence": 0.88,
+      "detection": "E19按钮区域mean_saturation=0.5107（黄绿+粉），选中导航E06区域mean_saturation=0.4771（亮黄），奖励面板0.4895（粉）。",
+      "description": "主按钮、选中标签、奖励面板均使用明快高饱和配色，点击欲望强；符合多巴胺风格要求。",
+      "suggestion": "保持现状。",
+      "evidence": {"x": 0.68, "y": 0.68, "width": 0.28, "height": 0.22, "description": "高饱和黄绿主按钮", "visible_text": "开始试用 START"}
+    },
+    {
+      "constraint_id": "G06",
+      "status": "met",
+      "title": "底板与框架克制干净",
+      "severity": "low",
+      "confidence": 0.75,
+      "detection": "左侧导航底板为浅灰白低饱和底（E07/E08区域mean_saturation≈0.02），全局mean_saturation=0.3152低于控件饱和度(0.48-0.51)。",
+      "description": "框架与底板以中性浅色和黑色块承载，饱和度低于交互控件，未喧宾夺主；中央彩色背景属主题视觉而非框架。",
+      "suggestion": "保持现状。",
+      "evidence": {"x": 0.0, "y": 0.0, "width": 0.25, "height": 1.0, "description": "左侧低饱和浅色导航底板", "visible_text": "角色试用 技能预览 剧情故事"}
+    },
+    {
+      "constraint_id": "G07",
+      "status": "met",
+      "title": "无无意义纹理堆叠与过多发光重描边",
+      "severity": "low",
+      "confidence": 0.72,
+      "detection": "背景为单层波普漫画风拼贴（星形、色块、ERROR字样），未见多重外发光叠加；描边仅用于按钮与标题的单层卡通描边。",
+      "description": "装饰服务于多巴胺/波普风格定位，层数可控（底色+一层拼贴），不构成无意义纹理堆叠；界面整体清爽、结构明确。",
+      "suggestion": "保持现状，后续迭代避免在面板上叠加更多发光层。",
+      "evidence": {"x": 0.25, "y": 0.0, "width": 0.45, "height": 0.7, "description": "单层漫画风背景拼贴", "visible_text": "ERROR"}
+    },
+    {
+      "constraint_id": "G08",
+      "status": "observed_violation",
+      "title": "角色名与活动标题命名不一致（锋芒斩露 vs 锋芒崭露）",
+      "severity": "medium",
+      "confidence": 0.75,
+      "detection": "对比两处可见文字：右上活动标题第三字为'崭'（锋芒崭露），左下角色名牌第三字为'斩'（锋芒斩露），同一角色/活动名称在同一屏出现两种写法。",
+      "description": "商业手游上线标准要求文案一致；同屏名称矛盾（'锋芒崭露'与'锋芒斩露'）会造成品牌与文案认知混乱，属走查必改项。OCR将两处均读作'锋芒崭露'，但像素字形差异清晰可见（左下为车字旁'斩'）。",
+      "suggestion": "统一角色/活动名称写法，核对文案表后修正其中一处（建议统一为正式活动名'锋芒崭露'或角色名规范写法）。",
+      "evidence": {"x": 0.093, "y": 0.688, "width": 0.148, "height": 0.062, "description": "左下角色名牌文字与右上标题用字不一致", "visible_text": "锋芒斩露"}
+    },
+    {
+      "constraint_id": "G09",
+      "status": "insufficient_evidence",
+      "title": "操作反馈无法从静态图验证",
+      "severity": "low",
+      "confidence": 0.6,
+      "detection": "静态截图中所有控件state=default，无按下/悬停态可观察；点击态响应时间(<100ms)需实机或动效稿验证。",
+      "description": "截图仅能确认控件具备高对比、高饱和的可点击外观，无法证明点击反馈存在或缺失。",
+      "suggestion": "补充按下态/动效规范并在实机走查中验证响应时间。",
+      "evidence": {"x": 0.68, "y": 0.68, "width": 0.28, "height": 0.22, "description": "主按钮仅见默认态", "visible_text": "开始试用 START"}
+    }
+  ]
+}

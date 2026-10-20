@@ -1,0 +1,3054 @@
+{
+  "schema_version": "1.0",
+  "review_id": "20261021-030524-84e90f",
+  "status": "completed",
+  "model": {
+    "provider": "qwen",
+    "model": "qwen3.8-max-0902",
+    "analysis_mode": "ensemble",
+    "is_stub": false
+  },
+  "context": {
+    "design_goal": "设计目标：根据原型设计交互界面。\n1. 遵循原型布局与功能分区。\n2. 强化视觉动线与层级：以“角色展示”与“核心操作按钮”为第一视觉焦点；控制信息密度，合理留白，确保数值与文字信息清晰易读。\n3. 控件风格（活泼/多巴胺）：按钮及交互控件采用明快、热烈的多巴胺配色，强化点击欲望与操作反馈；底板与框架保持克制干净，避免喧宾夺主。\n4. 杜绝无意义的纹理堆叠、过多发光与重描边，按商业手游实机上线标准交付清晰、结构明确的界面。",
+    "scenario": "商业手游角色试用页",
+    "platform": "game",
+    "target_user": "中轻度手游玩家"
+  },
+  "image": {
+    "sha256": "f1201f54c66f3210ed14bd8785f0a3c532ee0e89cd6d3992cfaeb9970b7db1ed",
+    "mime_type": "image/png",
+    "width": 1912,
+    "height": 1080,
+    "original_width": 1912,
+    "original_height": 1080,
+    "resized": false
+  },
+  "screen_analysis": {
+    "page_type": "角色试用页",
+    "visible_text": [
+      "返回",
+      "BACK",
+      "角色试用",
+      "TRIAL",
+      "技能预览",
+      "SKILL PREVIEW",
+      "剧情故事",
+      "STORY",
+      "120/120",
+      "+",
+      "88000",
+      "+",
+      "8800",
+      "+",
+      "角色试用",
+      "锋芒崭露",
+      "ERROR",
+      "21天1小时",
+      "奖励预览",
+      "REWARD PREVIEW",
+      "×300",
+      "×10",
+      "×5",
+      "新!",
+      "锋芒崭露",
+      "属性: 雷电",
+      "定位: 强攻",
+      "开始试用",
+      "START",
+      "ATHOPOG"
+    ],
+    "regions": [
+      "nav: 返回按钮",
+      "resource: 体力资源 (120/120)",
+      "resource: 丁尼资源 (88000)",
+      "resource: 菲林资源 (8800)",
+      "nav: 主页按钮",
+      "nav: 角色试用标签",
+      "nav: 技能预览标签",
+      "nav: 剧情故事标签",
+      "character: 角色立绘 (安比)",
+      "title: 活动标题 (角色试用 锋芒崭露)",
+      "text: 倒计时 (21天1小时)",
+      "panel: 奖励预览面板",
+      "reward_card: 奖励物品：菲林 x300",
+      "reward_card: 奖励物品：电池 x10",
+      "reward_card: 奖励物品：经验卡 x5",
+      "text: 角色名称与星级 (锋芒崭露)",
+      "other: 属性标签 (雷电)",
+      "other: 定位标签 (强攻)",
+      "primary_button: 开始试用按钮"
+    ],
+    "controls": [
+      "nav: 返回按钮",
+      "nav: 主页按钮",
+      "nav: 角色试用标签",
+      "nav: 技能预览标签",
+      "nav: 剧情故事标签",
+      "primary_button: 开始试用按钮"
+    ],
+    "observed_states": [
+      "default",
+      "default",
+      "default",
+      "default",
+      "default",
+      "selected",
+      "default",
+      "default",
+      "default",
+      "default",
+      "default",
+      "default",
+      "default",
+      "default",
+      "default",
+      "default",
+      "default",
+      "default",
+      "default"
+    ],
+    "task_clues": [
+      "手游角色试用界面，包含角色展示、功能导航、奖励预览及核心操作入口，采用多巴胺配色风格。"
+    ],
+    "uncertainties": [
+      "左侧三个导航栏的具体交互逻辑（是切换视图还是跳转新页面）无法从静态图完全确定，暂定为导航。",
+      "奖励预览中的具体道具图标含义基于通用游戏知识推断（如绿色瓶子可能是某种消耗品）。"
+    ]
+  },
+  "criteria_version": "0.1-draft",
+  "criteria_source": {
+    "name": "Jakob Nielsen's 10 Usability Heuristics for User Interface Design",
+    "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+    "relationship": "以下条目由小组据宽泛原则操作化，并非源文逐条摘录或正式规范符合性声明"
+  },
+  "summary": {
+    "rules_total": 24,
+    "candidate_issues": 1,
+    "no_visible_issue": 8,
+    "insufficient_evidence": 16,
+    "not_applicable": 0,
+    "critical_count": 0,
+    "high_count": 0,
+    "medium_count": 1,
+    "low_count": 0
+  },
+  "findings": [
+    {
+      "id": "F001",
+      "decision": "candidate_issue",
+      "rule_ids": [
+        "G08"
+      ],
+      "heuristics": [
+        "设计目标一致性"
+      ],
+      "title": "角色名与活动标题命名不一致（锋芒斩露 vs 锋芒崭露）",
+      "severity": "medium",
+      "confidence": 0.75,
+      "principle": "G08 界面交付需符合商业手游实机上线标准，结构明确，无视觉噪点。",
+      "detection": "对比两处可见文字：右上活动标题第三字为'崭'（锋芒崭露），左下角色名牌第三字为'斩'（锋芒斩露），同一角色/活动名称在同一屏出现两种写法。",
+      "description": "商业手游上线标准要求文案一致；同屏名称矛盾（'锋芒崭露'与'锋芒斩露'）会造成品牌与文案认知混乱，属走查必改项。OCR将两处均读作'锋芒崭露'，但像素字形差异清晰可见（左下为车字旁'斩'）。",
+      "suggestion": "统一角色/活动名称写法，核对文案表后修正其中一处（建议统一为正式活动名'锋芒崭露'或角色名规范写法）。",
+      "evidence": {
+        "x": 0.093,
+        "y": 0.688,
+        "width": 0.148,
+        "height": 0.062,
+        "description": "左下角色名牌文字与右上标题用字不一致",
+        "visible_text": "锋芒斩露"
+      },
+      "sources": [
+        {
+          "name": "Jakob Nielsen's 10 Usability Heuristics for User Interface Design",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "relationship": "以下条目由小组据宽泛原则操作化，并非源文逐条摘录或正式规范符合性声明"
+        }
+      ],
+      "review_status": "unreviewed"
+    }
+  ],
+  "rule_results": [
+    {
+      "rule_id": "R01",
+      "title": "当前导航位置可见",
+      "heuristic": "H01 系统状态的可见性",
+      "decision": "no_visible_issue",
+      "confidence": 0.92,
+      "reason": "左侧三个页面级导航项并列，当前项'角色试用/TRIAL'(E06)以黄色多巴胺底色与黑底未选中项(E07/E08)明确区分，选中状态清晰可见。"
+    },
+    {
+      "rule_id": "R02",
+      "title": "多步骤任务显示当前步骤",
+      "heuristic": "H01 系统状态的可见性",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R03",
+      "title": "等待状态说明系统正在做什么",
+      "heuristic": "H01 系统状态的可见性",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R04",
+      "title": "完成状态说清结果",
+      "heuristic": "H01 系统状态的可见性",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R05",
+      "title": "关键文案避免未解释的内部术语",
+      "heuristic": "H02 系统与现实世界的匹配",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R06",
+      "title": "操作名称说明预期结果",
+      "heuristic": "H02 系统与现实世界的匹配",
+      "decision": "no_visible_issue",
+      "confidence": 0.95,
+      "reason": "主按钮文字'开始试用/START'(E19)为动词+对象命名，结合页面角色试用主题，操作预期结果（进入试用）无歧义，非'确定/处理'类泛词。"
+    },
+    {
+      "rule_id": "R07",
+      "title": "输入项名称说明所需信息",
+      "heuristic": "H02 系统与现实世界的匹配",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R08",
+      "title": "弹窗具有可见退出方式",
+      "heuristic": "H03 用户控制与自由",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R09",
+      "title": "多步骤页面具有可见返回方式",
+      "heuristic": "H03 用户控制与自由",
+      "decision": "no_visible_issue",
+      "confidence": 0.93,
+      "reason": "左上角有明确的'返回/BACK'按钮(E01, 0.02,0.03)，且右上另有主页图标(E05)，提供可见的退出/回退路径。"
+    },
+    {
+      "rule_id": "R10",
+      "title": "确认页允许取消高风险操作",
+      "heuristic": "H03 用户控制与自由",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R11",
+      "title": "同一动作使用一致名称",
+      "heuristic": "H04 一致性与标准",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R12",
+      "title": "同类控件呈现一致的视觉规则",
+      "heuristic": "H04 一致性与标准",
+      "decision": "no_visible_issue",
+      "confidence": 0.88,
+      "reason": "同类控件视觉规则一致：三个导航标签(E06-E08)同形同尺寸仅以状态色区分；三张奖励卡(E13-E15)尺寸样式统一；三个资源条(E02-E04)同为黑底胶囊+图标+数值+加号。control_saturation_dispersion=0.2108 主要由选中态黄色造成，属状态差异而非不一致。"
+    },
+    {
+      "rule_id": "R13",
+      "title": "必填项在填写前可识别",
+      "heuristic": "H05 错误预防",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R14",
+      "title": "受格式限制的字段提供输入提示",
+      "heuristic": "H05 错误预防",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R15",
+      "title": "高后果操作确认页说明对象和动作",
+      "heuristic": "H05 错误预防",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R16",
+      "title": "重要图标操作具有可见含义线索",
+      "heuristic": "H06 识别而非回忆",
+      "decision": "no_visible_issue",
+      "confidence": 0.85,
+      "reason": "重要图标均带含义线索：返回箭头配'返回/BACK'文字，导航标签图标配中英文字，资源图标配数值(120/120、88000、8800)，主页图标为通用房屋造型，无需猜测。"
+    },
+    {
+      "rule_id": "R17",
+      "title": "当前选择状态可见",
+      "heuristic": "H06 识别而非回忆",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R18",
+      "title": "相关输入和选项形成可识别的组",
+      "heuristic": "H06 识别而非回忆",
+      "decision": "no_visible_issue",
+      "confidence": 0.87,
+      "reason": "相关项成组清晰：奖励三卡置于带组标题'奖励预览/REWARD PREVIEW'的粉色面板(E12)内；角色名、五星、'属性: 雷电''定位: 强攻'聚于左下同一信息簇；资源三件套集中于顶栏。"
+    },
+    {
+      "rule_id": "R19",
+      "title": "主要任务操作易于定位",
+      "heuristic": "H08 美学与极简设计",
+      "decision": "no_visible_issue",
+      "confidence": 0.94,
+      "reason": "主操作'开始试用'(E19)位于右下主操作区，面积占比0.0616为最大交互元素，高饱和黄绿爆闪造型，焦点代理排名第二(focus_proxy_raw=0.7497)，层级远高于次要控件，极易定位。"
+    },
+    {
+      "rule_id": "R20",
+      "title": "无关信息不压过主要任务",
+      "heuristic": "H08 美学与极简设计",
+      "decision": "no_visible_issue",
+      "confidence": 0.8,
+      "reason": "背景漫画风装饰('ERROR'字样、星形爆闪)虽活跃，但焦点代理显示角色立绘(E09, rank1)与开始试用按钮(E19, rank2)仍占最高视觉权重；negative_space_proxy=0.7748，装饰未压过主任务内容，且该波普风格服务于多巴胺设计目标。"
+    },
+    {
+      "rule_id": "R21",
+      "title": "错误状态指明问题位置",
+      "heuristic": "H09 帮助用户识别、诊断和恢复错误",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R22",
+      "title": "错误提示给出修正办法",
+      "heuristic": "H09 帮助用户识别、诊断和恢复错误",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R23",
+      "title": "错误提示使用用户可理解的语言",
+      "heuristic": "H09 帮助用户识别、诊断和恢复错误",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    },
+    {
+      "rule_id": "R24",
+      "title": "复杂任务提供就近帮助入口",
+      "heuristic": "H10 帮助与文档",
+      "decision": "insufficient_evidence",
+      "confidence": 0.0,
+      "reason": "未进入相关性 Top-K，未执行深度检查。"
+    }
+  ],
+  "warnings": [],
+  "timings_ms": {
+    "prepare": 0,
+    "ocr": 30734,
+    "ui": 25595,
+    "reference_ui": 16198,
+    "goal": 16782,
+    "metrics": 955,
+    "relevance": 50183,
+    "audit": 86708,
+    "report": 0
+  },
+  "diagnostics": {
+    "metric_version": "cv-metrics-v1",
+    "image": {
+      "width": 1912,
+      "height": 1080,
+      "megapixels": 2.065
+    },
+    "global": {
+      "mean_luminance": 0.6606,
+      "luminance_p05": 0.1176,
+      "luminance_p50": 0.7098,
+      "luminance_p95": 0.9412,
+      "luminance_contrast": 0.2553,
+      "bright_pixel_fraction": 0.1245,
+      "dark_pixel_fraction": 0.0413,
+      "mean_saturation": 0.3152,
+      "high_saturation_fraction": 0.0768,
+      "edge_density": 0.2252,
+      "high_frequency_mean": 0.0563,
+      "palette_entropy_bits": 4.4555,
+      "negative_space_proxy": 0.7748
+    },
+    "focus": {
+      "metric_type": "visual_focus_proxy",
+      "notice": "This is a deterministic saliency proxy, not measured human attention.",
+      "elements": [
+        {
+          "element_id": "E09",
+          "label": "角色立绘 (安比)",
+          "role": "character",
+          "bbox": [
+            0.32,
+            0.0,
+            0.4,
+            0.95
+          ],
+          "area_ratio": 0.38,
+          "center_distance": 0.0453,
+          "model_visual_importance": 1.0,
+          "region": {
+            "luminance_p10": 0.3216,
+            "luminance_p90": 0.9255,
+            "luminance_contrast": 0.6039,
+            "mean_saturation": 0.3191,
+            "edge_density": 0.3052,
+            "bright_fraction": 0.1211
+          },
+          "focus_proxy_raw": 0.9251,
+          "focus_share": 0.0789,
+          "rank": 1
+        },
+        {
+          "element_id": "E19",
+          "label": "开始试用按钮",
+          "role": "primary_button",
+          "bbox": [
+            0.68,
+            0.68,
+            0.28,
+            0.22
+          ],
+          "area_ratio": 0.0616,
+          "center_distance": 0.6107,
+          "model_visual_importance": 0.9,
+          "region": {
+            "luminance_p10": 0.1569,
+            "luminance_p90": 0.8824,
+            "luminance_contrast": 0.7255,
+            "mean_saturation": 0.5107,
+            "edge_density": 0.2299,
+            "bright_fraction": 0.0207
+          },
+          "focus_proxy_raw": 0.7497,
+          "focus_share": 0.0639,
+          "rank": 2
+        },
+        {
+          "element_id": "E12",
+          "label": "奖励预览面板",
+          "role": "panel",
+          "bbox": [
+            0.7,
+            0.42,
+            0.27,
+            0.25
+          ],
+          "area_ratio": 0.0675,
+          "center_distance": 0.478,
+          "model_visual_importance": 0.7,
+          "region": {
+            "luminance_p10": 0.3373,
+            "luminance_p90": 0.8078,
+            "luminance_contrast": 0.4706,
+            "mean_saturation": 0.4895,
+            "edge_density": 0.2146,
+            "bright_fraction": 0.0161
+          },
+          "focus_proxy_raw": 0.722,
+          "focus_share": 0.0616,
+          "rank": 3
+        },
+        {
+          "element_id": "E10",
+          "label": "活动标题 (角色试用 锋芒崭露)",
+          "role": "title",
+          "bbox": [
+            0.73,
+            0.13,
+            0.22,
+            0.15
+          ],
+          "area_ratio": 0.033,
+          "center_distance": 0.6366,
+          "model_visual_importance": 0.8,
+          "region": {
+            "luminance_p10": 0.0118,
+            "luminance_p90": 0.9922,
+            "luminance_contrast": 0.9804,
+            "mean_saturation": 0.2943,
+            "edge_density": 0.2625,
+            "bright_fraction": 0.2063
+          },
+          "focus_proxy_raw": 0.6737,
+          "focus_share": 0.0574,
+          "rank": 4
+        },
+        {
+          "element_id": "E16",
+          "label": "角色名称与星级 (锋芒崭露)",
+          "role": "text",
+          "bbox": [
+            0.02,
+            0.67,
+            0.25,
+            0.12
+          ],
+          "area_ratio": 0.03,
+          "center_distance": 0.5982,
+          "model_visual_importance": 0.8,
+          "region": {
+            "luminance_p10": 0.2196,
+            "luminance_p90": 0.9608,
+            "luminance_contrast": 0.7412,
+            "mean_saturation": 0.1865,
+            "edge_density": 0.3137,
+            "bright_fraction": 0.1603
+          },
+          "focus_proxy_raw": 0.6654,
+          "focus_share": 0.0567,
+          "rank": 5
+        },
+        {
+          "element_id": "E13",
+          "label": "奖励物品：菲林 x300",
+          "role": "reward_card",
+          "bbox": [
+            0.71,
+            0.5,
+            0.07,
+            0.15
+          ],
+          "area_ratio": 0.0105,
+          "center_distance": 0.3624,
+          "model_visual_importance": 0.6,
+          "region": {
+            "luminance_p10": 0.3333,
+            "luminance_p90": 0.7804,
+            "luminance_contrast": 0.4471,
+            "mean_saturation": 0.5226,
+            "edge_density": 0.1542,
+            "bright_fraction": 0.0284
+          },
+          "focus_proxy_raw": 0.636,
+          "focus_share": 0.0542,
+          "rank": 6
+        },
+        {
+          "element_id": "E14",
+          "label": "奖励物品：电池 x10",
+          "role": "reward_card",
+          "bbox": [
+            0.79,
+            0.5,
+            0.07,
+            0.15
+          ],
+          "area_ratio": 0.0105,
+          "center_distance": 0.4717,
+          "model_visual_importance": 0.6,
+          "region": {
+            "luminance_p10": 0.251,
+            "luminance_p90": 0.7216,
+            "luminance_contrast": 0.4706,
+            "mean_saturation": 0.547,
+            "edge_density": 0.1701,
+            "bright_fraction": 0.0051
+          },
+          "focus_proxy_raw": 0.6356,
+          "focus_share": 0.0542,
+          "rank": 7
+        },
+        {
+          "element_id": "E06",
+          "label": "角色试用标签",
+          "role": "nav",
+          "bbox": [
+            0.02,
+            0.13,
+            0.18,
+            0.09
+          ],
+          "area_ratio": 0.0162,
+          "center_distance": 0.718,
+          "model_visual_importance": 0.7,
+          "region": {
+            "luminance_p10": 0.1216,
+            "luminance_p90": 0.9176,
+            "luminance_contrast": 0.7961,
+            "mean_saturation": 0.4771,
+            "edge_density": 0.1744,
+            "bright_fraction": 0.0915
+          },
+          "focus_proxy_raw": 0.6295,
+          "focus_share": 0.0537,
+          "rank": 8
+        },
+        {
+          "element_id": "E15",
+          "label": "奖励物品：经验卡 x5",
+          "role": "reward_card",
+          "bbox": [
+            0.87,
+            0.5,
+            0.07,
+            0.15
+          ],
+          "area_ratio": 0.0105,
+          "center_distance": 0.5825,
+          "model_visual_importance": 0.6,
+          "region": {
+            "luminance_p10": 0.2549,
+            "luminance_p90": 0.8431,
+            "luminance_contrast": 0.5882,
+            "mean_saturation": 0.4789,
+            "edge_density": 0.1783,
+            "bright_fraction": 0.0055
+          },
+          "focus_proxy_raw": 0.6185,
+          "focus_share": 0.0527,
+          "rank": 9
+        },
+        {
+          "element_id": "E11",
+          "label": "倒计时 (21天1小时)",
+          "role": "text",
+          "bbox": [
+            0.73,
+            0.29,
+            0.15,
+            0.05
+          ],
+          "area_ratio": 0.0075,
+          "center_distance": 0.5045,
+          "model_visual_importance": 0.5,
+          "region": {
+            "luminance_p10": 0.2196,
+            "luminance_p90": 0.9843,
+            "luminance_contrast": 0.7647,
+            "mean_saturation": 0.4076,
+            "edge_density": 0.2589,
+            "bright_fraction": 0.135
+          },
+          "focus_proxy_raw": 0.5933,
+          "focus_share": 0.0506,
+          "rank": 10
+        },
+        {
+          "element_id": "E02",
+          "label": "体力资源 (120/120)",
+          "role": "resource",
+          "bbox": [
+            0.57,
+            0.02,
+            0.12,
+            0.05
+          ],
+          "area_ratio": 0.006,
+          "center_distance": 0.6692,
+          "model_visual_importance": 0.5,
+          "region": {
+            "luminance_p10": 0.0745,
+            "luminance_p90": 0.7059,
+            "luminance_contrast": 0.6314,
+            "mean_saturation": 0.6709,
+            "edge_density": 0.2412,
+            "bright_fraction": 0.0433
+          },
+          "focus_proxy_raw": 0.5914,
+          "focus_share": 0.0504,
+          "rank": 11
+        },
+        {
+          "element_id": "E08",
+          "label": "剧情故事标签",
+          "role": "nav",
+          "bbox": [
+            0.02,
+            0.37,
+            0.18,
+            0.09
+          ],
+          "area_ratio": 0.0162,
+          "center_distance": 0.5645,
+          "model_visual_importance": 0.6,
+          "region": {
+            "luminance_p10": 0.1137,
+            "luminance_p90": 0.9216,
+            "luminance_contrast": 0.8078,
+            "mean_saturation": 0.0216,
+            "edge_density": 0.2043,
+            "bright_fraction": 0.1571
+          },
+          "focus_proxy_raw": 0.5863,
+          "focus_share": 0.05,
+          "rank": 12
+        },
+        {
+          "element_id": "E03",
+          "label": "丁尼资源 (88000)",
+          "role": "resource",
+          "bbox": [
+            0.69,
+            0.02,
+            0.12,
+            0.05
+          ],
+          "area_ratio": 0.006,
+          "center_distance": 0.7342,
+          "model_visual_importance": 0.5,
+          "region": {
+            "luminance_p10": 0.0745,
+            "luminance_p90": 0.851,
+            "luminance_contrast": 0.7765,
+            "mean_saturation": 0.6686,
+            "edge_density": 0.2256,
+            "bright_fraction": 0.0661
+          },
+          "focus_proxy_raw": 0.5815,
+          "focus_share": 0.0496,
+          "rank": 13
+        },
+        {
+          "element_id": "E07",
+          "label": "技能预览标签",
+          "role": "nav",
+          "bbox": [
+            0.02,
+            0.25,
+            0.18,
+            0.09
+          ],
+          "area_ratio": 0.0162,
+          "center_distance": 0.6231,
+          "model_visual_importance": 0.6,
+          "region": {
+            "luminance_p10": 0.1137,
+            "luminance_p90": 0.9216,
+            "luminance_contrast": 0.8078,
+            "mean_saturation": 0.018,
+            "edge_density": 0.1925,
+            "bright_fraction": 0.147
+          },
+          "focus_proxy_raw": 0.5772,
+          "focus_share": 0.0492,
+          "rank": 14
+        },
+        {
+          "element_id": "E04",
+          "label": "菲林资源 (8800)",
+          "role": "resource",
+          "bbox": [
+            0.82,
+            0.02,
+            0.12,
+            0.05
+          ],
+          "area_ratio": 0.006,
+          "center_distance": 0.8384,
+          "model_visual_importance": 0.5,
+          "region": {
+            "luminance_p10": 0.0784,
+            "luminance_p90": 0.7882,
+            "luminance_contrast": 0.7098,
+            "mean_saturation": 0.5753,
+            "edge_density": 0.214,
+            "bright_fraction": 0.0444
+          },
+          "focus_proxy_raw": 0.5565,
+          "focus_share": 0.0475,
+          "rank": 15
+        },
+        {
+          "element_id": "E18",
+          "label": "定位标签 (强攻)",
+          "role": "other",
+          "bbox": [
+            0.17,
+            0.82,
+            0.1,
+            0.05
+          ],
+          "area_ratio": 0.005,
+          "center_distance": 0.6284,
+          "model_visual_importance": 0.4,
+          "region": {
+            "luminance_p10": 0.1961,
+            "luminance_p90": 0.9059,
+            "luminance_contrast": 0.7098,
+            "mean_saturation": 0.4595,
+            "edge_density": 0.234,
+            "bright_fraction": 0.0806
+          },
+          "focus_proxy_raw": 0.5488,
+          "focus_share": 0.0468,
+          "rank": 16
+        },
+        {
+          "element_id": "E17",
+          "label": "属性标签 (雷电)",
+          "role": "other",
+          "bbox": [
+            0.06,
+            0.82,
+            0.1,
+            0.05
+          ],
+          "area_ratio": 0.005,
+          "center_distance": 0.7364,
+          "model_visual_importance": 0.4,
+          "region": {
+            "luminance_p10": 0.051,
+            "luminance_p90": 0.9216,
+            "luminance_contrast": 0.8706,
+            "mean_saturation": 0.4128,
+            "edge_density": 0.2204,
+            "bright_fraction": 0.1025
+          },
+          "focus_proxy_raw": 0.528,
+          "focus_share": 0.045,
+          "rank": 17
+        },
+        {
+          "element_id": "E01",
+          "label": "返回按钮",
+          "role": "nav",
+          "bbox": [
+            0.02,
+            0.03,
+            0.08,
+            0.06
+          ],
+          "area_ratio": 0.0048,
+          "center_distance": 0.88,
+          "model_visual_importance": 0.4,
+          "region": {
+            "luminance_p10": 0.2784,
+            "luminance_p90": 0.9294,
+            "luminance_contrast": 0.651,
+            "mean_saturation": 0.0871,
+            "edge_density": 0.1864,
+            "bright_fraction": 0.5501
+          },
+          "focus_proxy_raw": 0.4733,
+          "focus_share": 0.0404,
+          "rank": 18
+        },
+        {
+          "element_id": "E05",
+          "label": "主页按钮",
+          "role": "nav",
+          "bbox": [
+            0.95,
+            0.02,
+            0.04,
+            0.06
+          ],
+          "area_ratio": 0.0024,
+          "center_distance": 0.9202,
+          "model_visual_importance": 0.4,
+          "region": {
+            "luminance_p10": 0.5922,
+            "luminance_p90": 0.9922,
+            "luminance_contrast": 0.4,
+            "mean_saturation": 0.3845,
+            "edge_density": 0.1376,
+            "bright_fraction": 0.2275
+          },
+          "focus_proxy_raw": 0.4362,
+          "focus_share": 0.0372,
+          "rank": 19
+        }
+      ]
+    },
+    "readability": {
+      "text_block_count": 30,
+      "low_contrast_count": 0,
+      "small_text_candidate_count": 10,
+      "estimated_height_p10": 15.0,
+      "estimated_height_p50": 28.0,
+      "local_contrast_p10": 0.4667,
+      "blocks": [
+        {
+          "block": 1,
+          "text": "返回",
+          "bbox": [
+            0.048,
+            0.035,
+            0.037,
+            0.042
+          ],
+          "estimated_height_px": 36.0,
+          "local_luminance_contrast": 0.6667,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 2,
+          "text": "BACK",
+          "bbox": [
+            0.091,
+            0.047,
+            0.019,
+            0.017
+          ],
+          "estimated_height_px": 15.0,
+          "local_luminance_contrast": 0.3961,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 3,
+          "text": "角色试用",
+          "bbox": [
+            0.078,
+            0.147,
+            0.078,
+            0.042
+          ],
+          "estimated_height_px": 36.0,
+          "local_luminance_contrast": 0.7294,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 4,
+          "text": "TRIAL",
+          "bbox": [
+            0.078,
+            0.191,
+            0.037,
+            0.017
+          ],
+          "estimated_height_px": 15.0,
+          "local_luminance_contrast": 0.6549,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 5,
+          "text": "技能预览",
+          "bbox": [
+            0.074,
+            0.265,
+            0.078,
+            0.042
+          ],
+          "estimated_height_px": 36.0,
+          "local_luminance_contrast": 0.8863,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 6,
+          "text": "SKILL PREVIEW",
+          "bbox": [
+            0.074,
+            0.309,
+            0.078,
+            0.017
+          ],
+          "estimated_height_px": 15.0,
+          "local_luminance_contrast": 0.4784,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 7,
+          "text": "剧情故事",
+          "bbox": [
+            0.074,
+            0.382,
+            0.078,
+            0.042
+          ],
+          "estimated_height_px": 36.0,
+          "local_luminance_contrast": 0.8863,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 8,
+          "text": "STORY",
+          "bbox": [
+            0.074,
+            0.426,
+            0.037,
+            0.017
+          ],
+          "estimated_height_px": 15.0,
+          "local_luminance_contrast": 0.4824,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 9,
+          "text": "120/120",
+          "bbox": [
+            0.604,
+            0.032,
+            0.052,
+            0.032
+          ],
+          "estimated_height_px": 28.0,
+          "local_luminance_contrast": 0.8784,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 10,
+          "text": "+",
+          "bbox": [
+            0.661,
+            0.032,
+            0.013,
+            0.032
+          ],
+          "estimated_height_px": 28.0,
+          "local_luminance_contrast": 0.5373,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 11,
+          "text": "88000",
+          "bbox": [
+            0.737,
+            0.032,
+            0.047,
+            0.032
+          ],
+          "estimated_height_px": 28.0,
+          "local_luminance_contrast": 0.8941,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 12,
+          "text": "+",
+          "bbox": [
+            0.788,
+            0.032,
+            0.013,
+            0.032
+          ],
+          "estimated_height_px": 28.0,
+          "local_luminance_contrast": 0.8588,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 13,
+          "text": "8800",
+          "bbox": [
+            0.866,
+            0.032,
+            0.037,
+            0.032
+          ],
+          "estimated_height_px": 28.0,
+          "local_luminance_contrast": 0.898,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 14,
+          "text": "+",
+          "bbox": [
+            0.907,
+            0.032,
+            0.013,
+            0.032
+          ],
+          "estimated_height_px": 28.0,
+          "local_luminance_contrast": 0.851,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 15,
+          "text": "角色试用",
+          "bbox": [
+            0.844,
+            0.139,
+            0.111,
+            0.042
+          ],
+          "estimated_height_px": 36.0,
+          "local_luminance_contrast": 0.9647,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 16,
+          "text": "锋芒崭露",
+          "bbox": [
+            0.737,
+            0.191,
+            0.204,
+            0.083
+          ],
+          "estimated_height_px": 72.0,
+          "local_luminance_contrast": 0.9922,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 17,
+          "text": "ERROR",
+          "bbox": [
+            0.917,
+            0.198,
+            0.074,
+            0.032
+          ],
+          "estimated_height_px": 28.0,
+          "local_luminance_contrast": 0.4706,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 18,
+          "text": "21天1小时",
+          "bbox": [
+            0.769,
+            0.295,
+            0.093,
+            0.032
+          ],
+          "estimated_height_px": 28.0,
+          "local_luminance_contrast": 0.7569,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 19,
+          "text": "奖励预览",
+          "bbox": [
+            0.721,
+            0.444,
+            0.074,
+            0.032
+          ],
+          "estimated_height_px": 28.0,
+          "local_luminance_contrast": 0.3922,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 20,
+          "text": "REWARD PREVIEW",
+          "bbox": [
+            0.721,
+            0.472,
+            0.083,
+            0.014
+          ],
+          "estimated_height_px": 12.0,
+          "local_luminance_contrast": 0.2863,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 21,
+          "text": "×300",
+          "bbox": [
+            0.756,
+            0.587,
+            0.028,
+            0.017
+          ],
+          "estimated_height_px": 15.0,
+          "local_luminance_contrast": 0.5804,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 22,
+          "text": "×10",
+          "bbox": [
+            0.829,
+            0.587,
+            0.023,
+            0.017
+          ],
+          "estimated_height_px": 15.0,
+          "local_luminance_contrast": 0.549,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 23,
+          "text": "×5",
+          "bbox": [
+            0.902,
+            0.587,
+            0.019,
+            0.017
+          ],
+          "estimated_height_px": 15.0,
+          "local_luminance_contrast": 0.5451,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 24,
+          "text": "新!",
+          "bbox": [
+            0.269,
+            0.656,
+            0.028,
+            0.032
+          ],
+          "estimated_height_px": 28.0,
+          "local_luminance_contrast": 0.4667,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 25,
+          "text": "锋芒崭露",
+          "bbox": [
+            0.093,
+            0.688,
+            0.148,
+            0.062
+          ],
+          "estimated_height_px": 54.0,
+          "local_luminance_contrast": 0.7686,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 26,
+          "text": "属性: 雷电",
+          "bbox": [
+            0.098,
+            0.826,
+            0.065,
+            0.028
+          ],
+          "estimated_height_px": 24.0,
+          "local_luminance_contrast": 0.8824,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 27,
+          "text": "定位: 强攻",
+          "bbox": [
+            0.204,
+            0.826,
+            0.065,
+            0.028
+          ],
+          "estimated_height_px": 24.0,
+          "local_luminance_contrast": 0.7255,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 28,
+          "text": "开始试用",
+          "bbox": [
+            0.737,
+            0.757,
+            0.111,
+            0.056
+          ],
+          "estimated_height_px": 48.0,
+          "local_luminance_contrast": 0.7216,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 29,
+          "text": "START",
+          "bbox": [
+            0.769,
+            0.826,
+            0.047,
+            0.017
+          ],
+          "estimated_height_px": 15.0,
+          "local_luminance_contrast": 0.6588,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 30,
+          "text": "ATHOPOG",
+          "bbox": [
+            0.528,
+            0.486,
+            0.056,
+            0.014
+          ],
+          "estimated_height_px": 12.0,
+          "local_luminance_contrast": 0.8824,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.9
+        }
+      ]
+    },
+    "density": {
+      "element_count": 19,
+      "interactive_element_count": 6,
+      "ocr_text_block_count": 30,
+      "elements_per_megapixel": 9.2,
+      "interactive_coverage": 0.1174,
+      "text_coverage": 0.0731,
+      "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+    },
+    "style": {
+      "control_count": 6,
+      "control_saturation_dispersion": 0.2108,
+      "control_contrast_dispersion": 0.155,
+      "control_mean_saturation": 0.2487,
+      "control_mean_contrast": 0.6732,
+      "note": "Dispersion measures same-role visual consistency only when roles are correctly labeled."
+    },
+    "prototype_alignment": {
+      "available": true,
+      "matches": [
+        {
+          "role": "nav",
+          "result_bbox": {
+            "x": 0.02,
+            "y": 0.03,
+            "width": 0.08,
+            "height": 0.06
+          },
+          "reference_bbox": {
+            "x": 0.03,
+            "y": 0.02,
+            "width": 0.08,
+            "height": 0.09
+          },
+          "iou": 0.5385,
+          "center_offset": 0.0158,
+          "size_ratio_change": 0.6667
+        },
+        {
+          "role": "resource",
+          "result_bbox": {
+            "x": 0.57,
+            "y": 0.02,
+            "width": 0.12,
+            "height": 0.05
+          },
+          "reference_bbox": {
+            "x": 0.81,
+            "y": 0.29,
+            "width": 0.11,
+            "height": 0.05
+          },
+          "iou": 0.0,
+          "center_offset": 0.5062,
+          "size_ratio_change": 1.0909
+        },
+        {
+          "role": "nav",
+          "result_bbox": {
+            "x": 0.95,
+            "y": 0.02,
+            "width": 0.04,
+            "height": 0.06
+          },
+          "reference_bbox": {
+            "x": 0.03,
+            "y": 0.17,
+            "width": 0.14,
+            "height": 0.13
+          },
+          "iou": 0.0,
+          "center_offset": 1.0,
+          "size_ratio_change": 0.1319
+        },
+        {
+          "role": "nav",
+          "result_bbox": {
+            "x": 0.02,
+            "y": 0.13,
+            "width": 0.18,
+            "height": 0.09
+          },
+          "reference_bbox": {
+            "x": 0.15,
+            "y": 0.66,
+            "width": 0.21,
+            "height": 0.14
+          },
+          "iou": 0.0,
+          "center_offset": 0.8112,
+          "size_ratio_change": 0.551
+        },
+        {
+          "role": "nav",
+          "result_bbox": {
+            "x": 0.02,
+            "y": 0.25,
+            "width": 0.18,
+            "height": 0.09
+          },
+          "reference_bbox": {
+            "x": 0.03,
+            "y": 0.33,
+            "width": 0.14,
+            "height": 0.13
+          },
+          "iou": 0.0424,
+          "center_offset": 0.1421,
+          "size_ratio_change": 0.8901
+        },
+        {
+          "role": "nav",
+          "result_bbox": {
+            "x": 0.02,
+            "y": 0.37,
+            "width": 0.18,
+            "height": 0.09
+          },
+          "reference_bbox": {
+            "x": 0.03,
+            "y": 0.5,
+            "width": 0.14,
+            "height": 0.13
+          },
+          "iou": 0.0,
+          "center_offset": 0.2126,
+          "size_ratio_change": 0.8901
+        },
+        {
+          "role": "character",
+          "result_bbox": {
+            "x": 0.32,
+            "y": 0.0,
+            "width": 0.4,
+            "height": 0.95
+          },
+          "reference_bbox": {
+            "x": 0.32,
+            "y": 0.05,
+            "width": 0.4,
+            "height": 0.95
+          },
+          "iou": 0.9,
+          "center_offset": 0.0707,
+          "size_ratio_change": 1.0
+        },
+        {
+          "role": "title",
+          "result_bbox": {
+            "x": 0.73,
+            "y": 0.13,
+            "width": 0.22,
+            "height": 0.15
+          },
+          "reference_bbox": {
+            "x": 0.81,
+            "y": 0.15,
+            "width": 0.15,
+            "height": 0.15
+          },
+          "iou": 0.4879,
+          "center_offset": 0.0696,
+          "size_ratio_change": 1.4667
+        },
+        {
+          "role": "panel",
+          "result_bbox": {
+            "x": 0.7,
+            "y": 0.42,
+            "width": 0.27,
+            "height": 0.25
+          },
+          "reference_bbox": {
+            "x": 0.69,
+            "y": 0.62,
+            "width": 0.23,
+            "height": 0.19
+          },
+          "iou": 0.1098,
+          "center_offset": 0.2441,
+          "size_ratio_change": 1.5446
+        },
+        {
+          "role": "reward_card",
+          "result_bbox": {
+            "x": 0.71,
+            "y": 0.5,
+            "width": 0.07,
+            "height": 0.15
+          },
+          "reference_bbox": {
+            "x": 0.7,
+            "y": 0.69,
+            "width": 0.05,
+            "height": 0.08
+          },
+          "iou": 0.0,
+          "center_offset": 0.221,
+          "size_ratio_change": 2.625
+        },
+        {
+          "role": "reward_card",
+          "result_bbox": {
+            "x": 0.79,
+            "y": 0.5,
+            "width": 0.07,
+            "height": 0.15
+          },
+          "reference_bbox": {
+            "x": 0.8,
+            "y": 0.69,
+            "width": 0.05,
+            "height": 0.08
+          },
+          "iou": 0.0,
+          "center_offset": 0.2192,
+          "size_ratio_change": 2.625
+        },
+        {
+          "role": "reward_card",
+          "result_bbox": {
+            "x": 0.87,
+            "y": 0.5,
+            "width": 0.07,
+            "height": 0.15
+          },
+          "reference_bbox": {
+            "x": 0.75,
+            "y": 0.69,
+            "width": 0.05,
+            "height": 0.08
+          },
+          "iou": 0.0,
+          "center_offset": 0.2861,
+          "size_ratio_change": 2.625
+        },
+        {
+          "role": "primary_button",
+          "result_bbox": {
+            "x": 0.68,
+            "y": 0.68,
+            "width": 0.28,
+            "height": 0.22
+          },
+          "reference_bbox": {
+            "x": 0.69,
+            "y": 0.85,
+            "width": 0.23,
+            "height": 0.09
+          },
+          "iou": 0.1624,
+          "center_offset": 0.15,
+          "size_ratio_change": 2.9758
+        }
+      ],
+      "mean_iou": 0.1724,
+      "mean_center_offset": 0.3037
+    }
+  },
+  "perception": {
+    "ocr": {
+      "blocks": [
+        {
+          "text": "返回",
+          "bbox": {
+            "x": 0.048,
+            "y": 0.035,
+            "width": 0.037,
+            "height": 0.042
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 36.0
+        },
+        {
+          "text": "BACK",
+          "bbox": {
+            "x": 0.091,
+            "y": 0.047,
+            "width": 0.019,
+            "height": 0.017
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 15.0
+        },
+        {
+          "text": "角色试用",
+          "bbox": {
+            "x": 0.078,
+            "y": 0.147,
+            "width": 0.078,
+            "height": 0.042
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 36.0
+        },
+        {
+          "text": "TRIAL",
+          "bbox": {
+            "x": 0.078,
+            "y": 0.191,
+            "width": 0.037,
+            "height": 0.017
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 15.0
+        },
+        {
+          "text": "技能预览",
+          "bbox": {
+            "x": 0.074,
+            "y": 0.265,
+            "width": 0.078,
+            "height": 0.042
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 36.0
+        },
+        {
+          "text": "SKILL PREVIEW",
+          "bbox": {
+            "x": 0.074,
+            "y": 0.309,
+            "width": 0.078,
+            "height": 0.017
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 15.0
+        },
+        {
+          "text": "剧情故事",
+          "bbox": {
+            "x": 0.074,
+            "y": 0.382,
+            "width": 0.078,
+            "height": 0.042
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 36.0
+        },
+        {
+          "text": "STORY",
+          "bbox": {
+            "x": 0.074,
+            "y": 0.426,
+            "width": 0.037,
+            "height": 0.017
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 15.0
+        },
+        {
+          "text": "120/120",
+          "bbox": {
+            "x": 0.604,
+            "y": 0.032,
+            "width": 0.052,
+            "height": 0.032
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 28.0
+        },
+        {
+          "text": "+",
+          "bbox": {
+            "x": 0.661,
+            "y": 0.032,
+            "width": 0.013,
+            "height": 0.032
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 28.0
+        },
+        {
+          "text": "88000",
+          "bbox": {
+            "x": 0.737,
+            "y": 0.032,
+            "width": 0.047,
+            "height": 0.032
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 28.0
+        },
+        {
+          "text": "+",
+          "bbox": {
+            "x": 0.788,
+            "y": 0.032,
+            "width": 0.013,
+            "height": 0.032
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 28.0
+        },
+        {
+          "text": "8800",
+          "bbox": {
+            "x": 0.866,
+            "y": 0.032,
+            "width": 0.037,
+            "height": 0.032
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 28.0
+        },
+        {
+          "text": "+",
+          "bbox": {
+            "x": 0.907,
+            "y": 0.032,
+            "width": 0.013,
+            "height": 0.032
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 28.0
+        },
+        {
+          "text": "角色试用",
+          "bbox": {
+            "x": 0.844,
+            "y": 0.139,
+            "width": 0.111,
+            "height": 0.042
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 36.0
+        },
+        {
+          "text": "锋芒崭露",
+          "bbox": {
+            "x": 0.737,
+            "y": 0.191,
+            "width": 0.204,
+            "height": 0.083
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 72.0
+        },
+        {
+          "text": "ERROR",
+          "bbox": {
+            "x": 0.917,
+            "y": 0.198,
+            "width": 0.074,
+            "height": 0.032
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 28.0
+        },
+        {
+          "text": "21天1小时",
+          "bbox": {
+            "x": 0.769,
+            "y": 0.295,
+            "width": 0.093,
+            "height": 0.032
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 28.0
+        },
+        {
+          "text": "奖励预览",
+          "bbox": {
+            "x": 0.721,
+            "y": 0.444,
+            "width": 0.074,
+            "height": 0.032
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 28.0
+        },
+        {
+          "text": "REWARD PREVIEW",
+          "bbox": {
+            "x": 0.721,
+            "y": 0.472,
+            "width": 0.083,
+            "height": 0.014
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 12.0
+        },
+        {
+          "text": "×300",
+          "bbox": {
+            "x": 0.756,
+            "y": 0.587,
+            "width": 0.028,
+            "height": 0.017
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 15.0
+        },
+        {
+          "text": "×10",
+          "bbox": {
+            "x": 0.829,
+            "y": 0.587,
+            "width": 0.023,
+            "height": 0.017
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 15.0
+        },
+        {
+          "text": "×5",
+          "bbox": {
+            "x": 0.902,
+            "y": 0.587,
+            "width": 0.019,
+            "height": 0.017
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 15.0
+        },
+        {
+          "text": "新!",
+          "bbox": {
+            "x": 0.269,
+            "y": 0.656,
+            "width": 0.028,
+            "height": 0.032
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 28.0
+        },
+        {
+          "text": "锋芒崭露",
+          "bbox": {
+            "x": 0.093,
+            "y": 0.688,
+            "width": 0.148,
+            "height": 0.062
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 54.0
+        },
+        {
+          "text": "属性: 雷电",
+          "bbox": {
+            "x": 0.098,
+            "y": 0.826,
+            "width": 0.065,
+            "height": 0.028
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 24.0
+        },
+        {
+          "text": "定位: 强攻",
+          "bbox": {
+            "x": 0.204,
+            "y": 0.826,
+            "width": 0.065,
+            "height": 0.028
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 24.0
+        },
+        {
+          "text": "开始试用",
+          "bbox": {
+            "x": 0.737,
+            "y": 0.757,
+            "width": 0.111,
+            "height": 0.056
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 48.0
+        },
+        {
+          "text": "START",
+          "bbox": {
+            "x": 0.769,
+            "y": 0.826,
+            "width": 0.047,
+            "height": 0.017
+          },
+          "confidence": 0.99,
+          "estimated_height_px": 15.0
+        },
+        {
+          "text": "ATHOPOG",
+          "bbox": {
+            "x": 0.528,
+            "y": 0.486,
+            "width": 0.056,
+            "height": 0.014
+          },
+          "confidence": 0.9,
+          "estimated_height_px": 12.0
+        }
+      ],
+      "notes": [
+        "The text 'ERROR' appears twice as a decorative background element.",
+        "The character's shorts have the text 'ATHOPOG', which is included as it is legible.",
+        "There are small icons (battery, coin, diamond) next to the resource numbers at the top right."
+      ]
+    },
+    "elements": {
+      "page_type": "角色试用页",
+      "summary": "该页面为商业手游《绝区零》的角色试用界面，展示了可试用的角色“锋芒崭露”（安比·德玛拉），包含角色立绘、属性信息、技能预览入口、剧情故事入口以及试用奖励预览。用户可以在此页面查看角色详情并点击开始试用。",
+      "elements": [
+        {
+          "id": "E01",
+          "label": "返回按钮",
+          "role": "nav",
+          "bbox": {
+            "x": 0.02,
+            "y": 0.03,
+            "width": 0.08,
+            "height": 0.06
+          },
+          "interactable": true,
+          "visual_importance": 0.4,
+          "state": "default",
+          "confidence": 0.95
+        },
+        {
+          "id": "E02",
+          "label": "体力资源 (120/120)",
+          "role": "resource",
+          "bbox": {
+            "x": 0.57,
+            "y": 0.02,
+            "width": 0.12,
+            "height": 0.05
+          },
+          "interactable": false,
+          "visual_importance": 0.5,
+          "state": "default",
+          "confidence": 0.98
+        },
+        {
+          "id": "E03",
+          "label": "丁尼资源 (88000)",
+          "role": "resource",
+          "bbox": {
+            "x": 0.69,
+            "y": 0.02,
+            "width": 0.12,
+            "height": 0.05
+          },
+          "interactable": false,
+          "visual_importance": 0.5,
+          "state": "default",
+          "confidence": 0.98
+        },
+        {
+          "id": "E04",
+          "label": "菲林资源 (8800)",
+          "role": "resource",
+          "bbox": {
+            "x": 0.82,
+            "y": 0.02,
+            "width": 0.12,
+            "height": 0.05
+          },
+          "interactable": false,
+          "visual_importance": 0.5,
+          "state": "default",
+          "confidence": 0.98
+        },
+        {
+          "id": "E05",
+          "label": "主页按钮",
+          "role": "nav",
+          "bbox": {
+            "x": 0.95,
+            "y": 0.02,
+            "width": 0.04,
+            "height": 0.06
+          },
+          "interactable": true,
+          "visual_importance": 0.4,
+          "state": "default",
+          "confidence": 0.95
+        },
+        {
+          "id": "E06",
+          "label": "角色试用标签",
+          "role": "nav",
+          "bbox": {
+            "x": 0.02,
+            "y": 0.13,
+            "width": 0.18,
+            "height": 0.09
+          },
+          "interactable": true,
+          "visual_importance": 0.7,
+          "state": "selected",
+          "confidence": 0.95
+        },
+        {
+          "id": "E07",
+          "label": "技能预览标签",
+          "role": "nav",
+          "bbox": {
+            "x": 0.02,
+            "y": 0.25,
+            "width": 0.18,
+            "height": 0.09
+          },
+          "interactable": true,
+          "visual_importance": 0.6,
+          "state": "default",
+          "confidence": 0.95
+        },
+        {
+          "id": "E08",
+          "label": "剧情故事标签",
+          "role": "nav",
+          "bbox": {
+            "x": 0.02,
+            "y": 0.37,
+            "width": 0.18,
+            "height": 0.09
+          },
+          "interactable": true,
+          "visual_importance": 0.6,
+          "state": "default",
+          "confidence": 0.95
+        },
+        {
+          "id": "E09",
+          "label": "角色立绘 (安比)",
+          "role": "character",
+          "bbox": {
+            "x": 0.32,
+            "y": 0.0,
+            "width": 0.4,
+            "height": 0.95
+          },
+          "interactable": false,
+          "visual_importance": 1.0,
+          "state": "default",
+          "confidence": 0.99
+        },
+        {
+          "id": "E10",
+          "label": "活动标题 (角色试用 锋芒崭露)",
+          "role": "title",
+          "bbox": {
+            "x": 0.73,
+            "y": 0.13,
+            "width": 0.22,
+            "height": 0.15
+          },
+          "interactable": false,
+          "visual_importance": 0.8,
+          "state": "default",
+          "confidence": 0.95
+        },
+        {
+          "id": "E11",
+          "label": "倒计时 (21天1小时)",
+          "role": "text",
+          "bbox": {
+            "x": 0.73,
+            "y": 0.29,
+            "width": 0.15,
+            "height": 0.05
+          },
+          "interactable": false,
+          "visual_importance": 0.5,
+          "state": "default",
+          "confidence": 0.95
+        },
+        {
+          "id": "E12",
+          "label": "奖励预览面板",
+          "role": "panel",
+          "bbox": {
+            "x": 0.7,
+            "y": 0.42,
+            "width": 0.27,
+            "height": 0.25
+          },
+          "interactable": false,
+          "visual_importance": 0.7,
+          "state": "default",
+          "confidence": 0.95
+        },
+        {
+          "id": "E13",
+          "label": "奖励物品：菲林 x300",
+          "role": "reward_card",
+          "bbox": {
+            "x": 0.71,
+            "y": 0.5,
+            "width": 0.07,
+            "height": 0.15
+          },
+          "interactable": false,
+          "visual_importance": 0.6,
+          "state": "default",
+          "confidence": 0.9
+        },
+        {
+          "id": "E14",
+          "label": "奖励物品：电池 x10",
+          "role": "reward_card",
+          "bbox": {
+            "x": 0.79,
+            "y": 0.5,
+            "width": 0.07,
+            "height": 0.15
+          },
+          "interactable": false,
+          "visual_importance": 0.6,
+          "state": "default",
+          "confidence": 0.9
+        },
+        {
+          "id": "E15",
+          "label": "奖励物品：经验卡 x5",
+          "role": "reward_card",
+          "bbox": {
+            "x": 0.87,
+            "y": 0.5,
+            "width": 0.07,
+            "height": 0.15
+          },
+          "interactable": false,
+          "visual_importance": 0.6,
+          "state": "default",
+          "confidence": 0.9
+        },
+        {
+          "id": "E16",
+          "label": "角色名称与星级 (锋芒崭露)",
+          "role": "text",
+          "bbox": {
+            "x": 0.02,
+            "y": 0.67,
+            "width": 0.25,
+            "height": 0.12
+          },
+          "interactable": false,
+          "visual_importance": 0.8,
+          "state": "default",
+          "confidence": 0.95
+        },
+        {
+          "id": "E17",
+          "label": "属性标签 (雷电)",
+          "role": "other",
+          "bbox": {
+            "x": 0.06,
+            "y": 0.82,
+            "width": 0.1,
+            "height": 0.05
+          },
+          "interactable": false,
+          "visual_importance": 0.4,
+          "state": "default",
+          "confidence": 0.9
+        },
+        {
+          "id": "E18",
+          "label": "定位标签 (强攻)",
+          "role": "other",
+          "bbox": {
+            "x": 0.17,
+            "y": 0.82,
+            "width": 0.1,
+            "height": 0.05
+          },
+          "interactable": false,
+          "visual_importance": 0.4,
+          "state": "default",
+          "confidence": 0.9
+        },
+        {
+          "id": "E19",
+          "label": "开始试用按钮",
+          "role": "primary_button",
+          "bbox": {
+            "x": 0.68,
+            "y": 0.68,
+            "width": 0.28,
+            "height": 0.22
+          },
+          "interactable": true,
+          "visual_importance": 0.9,
+          "state": "default",
+          "confidence": 0.98
+        }
+      ],
+      "uncertainties": [
+        "左侧三个导航栏的具体交互逻辑（是切换视图还是跳转新页面）无法从静态图完全确定，暂定为导航。",
+        "奖励预览中的具体道具图标含义基于通用游戏知识推断（如绿色瓶子可能是某种消耗品）。"
+      ]
+    },
+    "reference_elements": {
+      "page_type": "角色试用页",
+      "summary": "这是一个商业手游的角色试用界面，展示了名为“锋芒崭露”的试用活动。页面中央为一名银发、穿着街头风格服饰并踩着轮滑鞋的女性角色立绘。右侧包含活动标题、倒计时（21天1小时）、奖励预览区域以及主要的“开始试用”按钮。左侧有导航返回按钮及三个灰色的功能入口占位符。",
+      "elements": [
+        {
+          "id": "E01",
+          "label": "返回",
+          "role": "nav",
+          "bbox": {
+            "x": 0.03,
+            "y": 0.02,
+            "width": 0.08,
+            "height": 0.09
+          },
+          "interactable": true,
+          "visual_importance": 0.6,
+          "state": "default",
+          "confidence": 0.95
+        },
+        {
+          "id": "E02",
+          "label": "侧边栏菜单项1",
+          "role": "button",
+          "bbox": {
+            "x": 0.03,
+            "y": 0.17,
+            "width": 0.14,
+            "height": 0.13
+          },
+          "interactable": true,
+          "visual_importance": 0.4,
+          "state": "placeholder",
+          "confidence": 0.9
+        },
+        {
+          "id": "E03",
+          "label": "侧边栏菜单项2",
+          "role": "button",
+          "bbox": {
+            "x": 0.03,
+            "y": 0.33,
+            "width": 0.14,
+            "height": 0.13
+          },
+          "interactable": true,
+          "visual_importance": 0.4,
+          "state": "placeholder",
+          "confidence": 0.9
+        },
+        {
+          "id": "E04",
+          "label": "侧边栏菜单项3",
+          "role": "button",
+          "bbox": {
+            "x": 0.03,
+            "y": 0.5,
+            "width": 0.14,
+            "height": 0.13
+          },
+          "interactable": true,
+          "visual_importance": 0.4,
+          "state": "placeholder",
+          "confidence": 0.9
+        },
+        {
+          "id": "E05",
+          "label": "角色名字标签",
+          "role": "text",
+          "bbox": {
+            "x": 0.15,
+            "y": 0.66,
+            "width": 0.21,
+            "height": 0.14
+          },
+          "interactable": false,
+          "visual_importance": 0.7,
+          "state": "placeholder",
+          "confidence": 0.95
+        },
+        {
+          "id": "E06",
+          "label": "角色立绘",
+          "role": "character",
+          "bbox": {
+            "x": 0.32,
+            "y": 0.05,
+            "width": 0.4,
+            "height": 0.95
+          },
+          "interactable": false,
+          "visual_importance": 1.0,
+          "state": "default",
+          "confidence": 0.99
+        },
+        {
+          "id": "E07",
+          "label": "活动标题：角色试用 锋芒崭露",
+          "role": "title",
+          "bbox": {
+            "x": 0.81,
+            "y": 0.15,
+            "width": 0.15,
+            "height": 0.15
+          },
+          "interactable": false,
+          "visual_importance": 0.8,
+          "state": "default",
+          "confidence": 0.98
+        },
+        {
+          "id": "E08",
+          "label": "剩余时间：21天1小时",
+          "role": "resource",
+          "bbox": {
+            "x": 0.81,
+            "y": 0.29,
+            "width": 0.11,
+            "height": 0.05
+          },
+          "interactable": false,
+          "visual_importance": 0.6,
+          "state": "default",
+          "confidence": 0.95
+        },
+        {
+          "id": "E09",
+          "label": "奖励预览面板",
+          "role": "panel",
+          "bbox": {
+            "x": 0.69,
+            "y": 0.62,
+            "width": 0.23,
+            "height": 0.19
+          },
+          "interactable": false,
+          "visual_importance": 0.7,
+          "state": "placeholder",
+          "confidence": 0.9
+        },
+        {
+          "id": "E10",
+          "label": "奖励物品槽位1",
+          "role": "reward_card",
+          "bbox": {
+            "x": 0.7,
+            "y": 0.69,
+            "width": 0.05,
+            "height": 0.08
+          },
+          "interactable": true,
+          "visual_importance": 0.5,
+          "state": "placeholder",
+          "confidence": 0.85
+        },
+        {
+          "id": "E11",
+          "label": "奖励物品槽位2",
+          "role": "reward_card",
+          "bbox": {
+            "x": 0.75,
+            "y": 0.69,
+            "width": 0.05,
+            "height": 0.08
+          },
+          "interactable": true,
+          "visual_importance": 0.5,
+          "state": "placeholder",
+          "confidence": 0.85
+        },
+        {
+          "id": "E12",
+          "label": "奖励物品槽位3",
+          "role": "reward_card",
+          "bbox": {
+            "x": 0.8,
+            "y": 0.69,
+            "width": 0.05,
+            "height": 0.08
+          },
+          "interactable": true,
+          "visual_importance": 0.5,
+          "state": "placeholder",
+          "confidence": 0.85
+        },
+        {
+          "id": "E13",
+          "label": "开始试用",
+          "role": "primary_button",
+          "bbox": {
+            "x": 0.69,
+            "y": 0.85,
+            "width": 0.23,
+            "height": 0.09
+          },
+          "interactable": true,
+          "visual_importance": 0.9,
+          "state": "default",
+          "confidence": 0.98
+        }
+      ],
+      "uncertainties": [
+        "左侧三个灰色矩形块的具体功能未知，推测为二级菜单或切换选项卡。",
+        "角色名字标签中的圆形图标可能是头像框或性别标识，具体含义不明。"
+      ]
+    }
+  },
+  "criteria_relevance": [
+    {
+      "rule_id": "R01",
+      "title": "当前导航位置可见",
+      "visual": 1.0,
+      "text": 0.8,
+      "attribute": 1.0,
+      "prior": 0.9,
+      "final": 0.94,
+      "reasons": [
+        "Left navigation tabs (E06-E08) are clearly visible with distinct selected/unselected states (yellow vs black).",
+        "Design goal emphasizes visual hierarchy and clear functional zones.",
+        "Critical for orienting the user within the 'Trial', 'Skill', 'Story' sections."
+      ],
+      "selected": true
+    },
+    {
+      "rule_id": "R02",
+      "title": "多步骤任务显示当前步骤",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "This is a single-page feature entry, not a multi-step wizard or form process.",
+        "No step indicators (e.g., 1/3) are present or expected."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R03",
+      "title": "等待状态说明系统正在做什么",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "Screenshot shows a static idle state, no loading spinners or processing overlays visible.",
+        "Cannot evaluate waiting state feedback from this image."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R04",
+      "title": "完成状态说清结果",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No success/completion modal or toast message is visible.",
+        "User has not yet performed the 'Start Trial' action."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R05",
+      "title": "关键文案避免未解释的内部术语",
+      "visual": 0.6,
+      "text": 0.7,
+      "attribute": 0.8,
+      "prior": 0.5,
+      "final": 0.655,
+      "reasons": [
+        "OCR detects 'ERROR' text near the title and on the character's belt, which might be confusing if interpreted as a system message rather than style.",
+        "Game-specific terms like 'Filin' (currency) are standard for the genre but technically internal jargon.",
+        "Target users are casual gamers who might not know specific currency names immediately."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R06",
+      "title": "操作名称说明预期结果",
+      "visual": 1.0,
+      "text": 1.0,
+      "attribute": 1.0,
+      "prior": 1.0,
+      "final": 1.0,
+      "reasons": [
+        "Primary button 'Start Trial' (E19) is large, high-contrast, and explicitly labeled.",
+        "Design goal G02 mandates this button be a primary visual focus.",
+        "Action outcome is unambiguous."
+      ],
+      "selected": true
+    },
+    {
+      "rule_id": "R07",
+      "title": "输入项名称说明所需信息",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No input fields or forms are present on this screen.",
+        "It is a display/action page, not a data entry page."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R08",
+      "title": "弹窗具有可见退出方式",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No modal or popup dialog is currently open.",
+        "The main interface is fully visible."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R09",
+      "title": "多步骤页面具有可见返回方式",
+      "visual": 0.8,
+      "text": 0.6,
+      "attribute": 0.9,
+      "prior": 0.7,
+      "final": 0.76,
+      "reasons": [
+        "Back button (E01) is clearly visible in the top-left corner.",
+        "Allows exit from the trial page back to the main menu.",
+        "Standard navigation pattern for game sub-pages."
+      ],
+      "selected": true
+    },
+    {
+      "rule_id": "R10",
+      "title": "确认页允许取消高风险操作",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No high-risk confirmation dialog (e.g., delete, spend premium currency) is visible.",
+        "The 'Start Trial' action is generally low-risk/reversible in this context."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R11",
+      "title": "同一动作使用一致名称",
+      "visual": 0.5,
+      "text": 0.6,
+      "attribute": 0.7,
+      "prior": 0.4,
+      "final": 0.555,
+      "reasons": [
+        "Navigation labels are consistent (Icon + Text).",
+        "No obvious conflicting labels for the same action detected.",
+        "'Trial' appears in nav and button, reinforcing consistency."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R12",
+      "title": "同类控件呈现一致的视觉规则",
+      "visual": 0.9,
+      "text": 0.5,
+      "attribute": 1.0,
+      "prior": 0.8,
+      "final": 0.81,
+      "reasons": [
+        "Left nav tabs (E06-E08) share identical shape and layout, differing only by state color.",
+        "Reward cards (E13-E15) are visually consistent in size and style.",
+        "Design goal G05/G06 emphasizes consistent control styling."
+      ],
+      "selected": true
+    },
+    {
+      "rule_id": "R13",
+      "title": "必填项在填写前可识别",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No form fields to mark as required.",
+        "Not applicable to this view."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R14",
+      "title": "受格式限制的字段提供输入提示",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No input fields requiring format hints.",
+        "Not applicable."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R15",
+      "title": "高后果操作确认页说明对象和动作",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No confirmation dialog for high-consequence actions is visible.",
+        "Not applicable."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R16",
+      "title": "重要图标操作具有可见含义线索",
+      "visual": 0.9,
+      "text": 0.8,
+      "attribute": 0.9,
+      "prior": 0.7,
+      "final": 0.855,
+      "reasons": [
+        "Top-right home icon (E05) and top-left back arrow (E01) are standard but small.",
+        "Resource icons (E02-E04) rely on recognition but have numbers.",
+        "Nav tabs combine icons with clear text labels, ensuring recognizability."
+      ],
+      "selected": true
+    },
+    {
+      "rule_id": "R17",
+      "title": "当前选择状态可见",
+      "visual": 0.2,
+      "text": 0.2,
+      "attribute": 0.3,
+      "prior": 0.2,
+      "final": 0.22,
+      "reasons": [
+        "R01 covers the page-level nav selection state more directly.",
+        "No other intra-page filters or radio buttons visible to check.",
+        "Low relevance compared to R01."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R18",
+      "title": "相关输入和选项形成可识别的组",
+      "visual": 0.8,
+      "text": 0.6,
+      "attribute": 0.9,
+      "prior": 0.7,
+      "final": 0.76,
+      "reasons": [
+        "Reward items (E13-E15) are grouped within a distinct panel (E12).",
+        "Character info (Name, Stars, Tags) is clustered in the bottom-left.",
+        "Visual grouping supports quick scanning of related info."
+      ],
+      "selected": true
+    },
+    {
+      "rule_id": "R19",
+      "title": "主要任务操作易于定位",
+      "visual": 1.0,
+      "text": 1.0,
+      "attribute": 1.0,
+      "prior": 1.0,
+      "final": 1.0,
+      "reasons": [
+        "'Start Trial' button (E19) is the largest interactive element, high saturation, bottom-right (primary action zone).",
+        "Design goal G02 explicitly prioritizes this button as a focal point.",
+        "Extremely easy to locate."
+      ],
+      "selected": true
+    },
+    {
+      "rule_id": "R20",
+      "title": "无关信息不压过主要任务",
+      "visual": 0.9,
+      "text": 0.7,
+      "attribute": 0.8,
+      "prior": 0.9,
+      "final": 0.83,
+      "reasons": [
+        "Background is busy with comic-style effects ('ERROR' text, splashes), potentially competing with content.",
+        "Design goal G07 warns against meaningless texture stacking.",
+        "However, character and button still dominate visual weight (focus proxy ranks 1 & 2).",
+        "Need to assess if background noise hinders readability."
+      ],
+      "selected": true
+    },
+    {
+      "rule_id": "R21",
+      "title": "错误状态指明问题位置",
+      "visual": 0.5,
+      "text": 0.8,
+      "attribute": 0.6,
+      "prior": 0.5,
+      "final": 0.595,
+      "reasons": [
+        "OCR detects 'ERROR' text in two places (near title, on belt).",
+        "If this is a rendering bug or placeholder text leaking into production, it's a critical error state issue.",
+        "If it's intentional style, it's confusing (violates R05/R23).",
+        "High priority to verify if this is a genuine error indicator."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R22",
+      "title": "错误提示给出修正办法",
+      "visual": 0.0,
+      "text": 0.0,
+      "attribute": 0.0,
+      "prior": 0.0,
+      "final": 0.0,
+      "reasons": [
+        "No actionable error message with recovery instructions is visible.",
+        "The 'ERROR' text lacks context or solution."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R23",
+      "title": "错误提示使用用户可理解的语言",
+      "visual": 0.5,
+      "text": 0.9,
+      "attribute": 0.6,
+      "prior": 0.5,
+      "final": 0.62,
+      "reasons": [
+        "The word 'ERROR' appearing in the UI is technical/developer language.",
+        "If unintended, it violates the principle of user-friendly language.",
+        "If intended as style, it's poor UX for a commercial game."
+      ],
+      "selected": false
+    },
+    {
+      "rule_id": "R24",
+      "title": "复杂任务提供就近帮助入口",
+      "visual": 0.3,
+      "text": 0.4,
+      "attribute": 0.5,
+      "prior": 0.3,
+      "final": 0.365,
+      "reasons": [
+        "Game mechanics (Trial, Rewards) are generally self-explanatory to target audience.",
+        "No complex fields requiring tooltips.",
+        "Low priority for help documentation on this specific screen."
+      ],
+      "selected": false
+    }
+  ],
+  "goal_constraints": [
+    {
+      "id": "G01",
+      "text": "界面布局需严格遵循原型设计的功能分区：左侧为导航菜单，中间为角色展示，右侧为活动信息与奖励，右下为核心操作按钮。",
+      "category": "layout",
+      "metric_hint": "区域位置与原型图重合度 > 90%",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "G02",
+      "text": "视觉层级需明确，“角色展示”区域与“开始试用”按钮必须作为第一视觉焦点，通过大小、色彩或动效优先吸引注意力。",
+      "category": "hierarchy",
+      "metric_hint": "核心元素视觉权重评分最高",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "G03",
+      "text": "控制界面信息密度，模块间需保留合理留白，避免元素过度拥挤导致视觉疲劳。",
+      "category": "density",
+      "metric_hint": "模块间距 >= 最小安全边距",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "G04",
+      "text": "所有数值（如货币、倒计时、奖励数量）与文字信息必须清晰易读，确保在复杂背景下仍具有高对比度。",
+      "category": "readability",
+      "metric_hint": "文字与背景对比度 >= 4.5:1",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "G05",
+      "text": "按钮及交互控件需采用明快、热烈的多巴胺配色（高饱和度），以强化点击欲望。",
+      "category": "style",
+      "metric_hint": "交互控件使用高饱和度色值",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "G06",
+      "text": "底板与框架设计需保持克制干净，使用低饱和度或中性色，避免喧宾夺主干扰核心内容。",
+      "category": "style",
+      "metric_hint": "背景/框架饱和度 < 交互控件饱和度",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "G07",
+      "text": "杜绝无意义的纹理堆叠，禁止使用过多的发光特效与重描边，保持界面清爽。",
+      "category": "anti_pattern",
+      "metric_hint": "装饰性纹理层数 <= 2，无多重外发光",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "G08",
+      "text": "界面交付需符合商业手游实机上线标准，结构明确，无视觉噪点。",
+      "category": "other",
+      "metric_hint": "通过UI走查清单",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 3
+    },
+    {
+      "id": "G09",
+      "text": "交互控件需提供明确的操作反馈，强化点击时的视觉或动效响应。",
+      "category": "interaction",
+      "metric_hint": "点击态响应时间 < 100ms",
+      "target_roles": [
+        "中轻度手游玩家"
+      ],
+      "priority": 2
+    }
+  ],
+  "goal_checks": [
+    {
+      "constraint_id": "G01",
+      "status": "met",
+      "title": "功能分区与原型一致",
+      "severity": "low",
+      "confidence": 0.8,
+      "detection": "对照元素bbox与原型分区描述：左侧导航(E06-E08 x≈0.02)、中间角色展示(E09 x0.32-0.72)、右侧活动信息与奖励(E10-E15 x≥0.70)、右下核心按钮(E19 0.68,0.68)。",
+      "description": "截图四大分区（左导航/中角色/右活动奖励/右下主按钮）与目标分区描述完全吻合；character区IoU=0.9。prototype_alignment的mean_iou=0.17偏低源于参考框坐标疑似错位（如resource参考框y=0.29与顶栏实际y=0.02不符），与可见证据矛盾，故以可见布局为准。",
+      "suggestion": "无需修改；建议校对原型对齐脚本的参考框坐标。",
+      "evidence": {
+        "x": 0.02,
+        "y": 0.13,
+        "width": 0.95,
+        "height": 0.77,
+        "description": "左导航、中立绘、右奖励与右下主按钮四分区",
+        "visible_text": "角色试用 / 奖励预览 / 开始试用"
+      }
+    },
+    {
+      "constraint_id": "G02",
+      "status": "met",
+      "title": "角色展示与开始试用为第一视觉焦点",
+      "severity": "low",
+      "confidence": 0.9,
+      "detection": "焦点代理排名：E09角色立绘 rank1 (focus_proxy_raw=0.9251)，E19开始试用按钮 rank2 (0.7497)，显著高于其余元素。",
+      "description": "角色立绘占画面38%面积且居中，主按钮以高饱和黄绿+爆闪外框突出，二者构成第一视觉焦点，层级明确。",
+      "suggestion": "保持现状。",
+      "evidence": {
+        "x": 0.68,
+        "y": 0.68,
+        "width": 0.28,
+        "height": 0.22,
+        "description": "开始试用按钮高饱和爆闪造型",
+        "visible_text": "开始试用 START"
+      }
+    },
+    {
+      "constraint_id": "G03",
+      "status": "met",
+      "title": "信息密度与留白可控",
+      "severity": "low",
+      "confidence": 0.78,
+      "detection": "negative_space_proxy=0.7748；19个元素、6个交互控件，模块间（导航/立绘/奖励面板/主按钮）留有明显间隔。",
+      "description": "各功能模块边界清楚、间距充足，未出现元素互相挤压或遮挡文字的情况，密度符合中轻度玩家阅读负荷。",
+      "suggestion": "保持现状。",
+      "evidence": {
+        "x": 0.7,
+        "y": 0.42,
+        "width": 0.27,
+        "height": 0.25,
+        "description": "奖励面板与标题、主按钮之间留白清晰",
+        "visible_text": "奖励预览 REWARD PREVIEW"
+      }
+    },
+    {
+      "constraint_id": "G04",
+      "status": "met",
+      "title": "数值与文字清晰易读",
+      "severity": "low",
+      "confidence": 0.85,
+      "detection": "readability.low_contrast_count=0；关键数值120/120、88000、8800、×300/×10/×5、21天1小时对比度0.54-0.90，均为深底白字或亮底黑字。",
+      "description": "所有货币、倒计时、奖励数量在复杂背景下仍保持高对比可读；最小文字(12px英文副标)为装饰性辅助文本，不影响关键数值阅读。",
+      "suggestion": "可将12px英文副标(如REWARD PREVIEW)略微增大以进一步提升可读性。",
+      "evidence": {
+        "x": 0.57,
+        "y": 0.02,
+        "width": 0.37,
+        "height": 0.05,
+        "description": "顶栏资源数值黑底白字高对比",
+        "visible_text": "120/120 88000 8800"
+      }
+    },
+    {
+      "constraint_id": "G05",
+      "status": "met",
+      "title": "交互控件采用多巴胺高饱和配色",
+      "severity": "low",
+      "confidence": 0.88,
+      "detection": "E19按钮区域mean_saturation=0.5107（黄绿+粉），选中导航E06区域mean_saturation=0.4771（亮黄），奖励面板0.4895（粉）。",
+      "description": "主按钮、选中标签、奖励面板均使用明快高饱和配色，点击欲望强；符合多巴胺风格要求。",
+      "suggestion": "保持现状。",
+      "evidence": {
+        "x": 0.68,
+        "y": 0.68,
+        "width": 0.28,
+        "height": 0.22,
+        "description": "高饱和黄绿主按钮",
+        "visible_text": "开始试用 START"
+      }
+    },
+    {
+      "constraint_id": "G06",
+      "status": "met",
+      "title": "底板与框架克制干净",
+      "severity": "low",
+      "confidence": 0.75,
+      "detection": "左侧导航底板为浅灰白低饱和底（E07/E08区域mean_saturation≈0.02），全局mean_saturation=0.3152低于控件饱和度(0.48-0.51)。",
+      "description": "框架与底板以中性浅色和黑色块承载，饱和度低于交互控件，未喧宾夺主；中央彩色背景属主题视觉而非框架。",
+      "suggestion": "保持现状。",
+      "evidence": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.25,
+        "height": 1.0,
+        "description": "左侧低饱和浅色导航底板",
+        "visible_text": "角色试用 技能预览 剧情故事"
+      }
+    },
+    {
+      "constraint_id": "G07",
+      "status": "met",
+      "title": "无无意义纹理堆叠与过多发光重描边",
+      "severity": "low",
+      "confidence": 0.72,
+      "detection": "背景为单层波普漫画风拼贴（星形、色块、ERROR字样），未见多重外发光叠加；描边仅用于按钮与标题的单层卡通描边。",
+      "description": "装饰服务于多巴胺/波普风格定位，层数可控（底色+一层拼贴），不构成无意义纹理堆叠；界面整体清爽、结构明确。",
+      "suggestion": "保持现状，后续迭代避免在面板上叠加更多发光层。",
+      "evidence": {
+        "x": 0.25,
+        "y": 0.0,
+        "width": 0.45,
+        "height": 0.7,
+        "description": "单层漫画风背景拼贴",
+        "visible_text": "ERROR"
+      }
+    },
+    {
+      "constraint_id": "G08",
+      "status": "observed_violation",
+      "title": "角色名与活动标题命名不一致（锋芒斩露 vs 锋芒崭露）",
+      "severity": "medium",
+      "confidence": 0.75,
+      "detection": "对比两处可见文字：右上活动标题第三字为'崭'（锋芒崭露），左下角色名牌第三字为'斩'（锋芒斩露），同一角色/活动名称在同一屏出现两种写法。",
+      "description": "商业手游上线标准要求文案一致；同屏名称矛盾（'锋芒崭露'与'锋芒斩露'）会造成品牌与文案认知混乱，属走查必改项。OCR将两处均读作'锋芒崭露'，但像素字形差异清晰可见（左下为车字旁'斩'）。",
+      "suggestion": "统一角色/活动名称写法，核对文案表后修正其中一处（建议统一为正式活动名'锋芒崭露'或角色名规范写法）。",
+      "evidence": {
+        "x": 0.093,
+        "y": 0.688,
+        "width": 0.148,
+        "height": 0.062,
+        "description": "左下角色名牌文字与右上标题用字不一致",
+        "visible_text": "锋芒斩露"
+      }
+    },
+    {
+      "constraint_id": "G09",
+      "status": "insufficient_evidence",
+      "title": "操作反馈无法从静态图验证",
+      "severity": "low",
+      "confidence": 0.6,
+      "detection": "静态截图中所有控件state=default，无按下/悬停态可观察；点击态响应时间(<100ms)需实机或动效稿验证。",
+      "description": "截图仅能确认控件具备高对比、高饱和的可点击外观，无法证明点击反馈存在或缺失。",
+      "suggestion": "补充按下态/动效规范并在实机走查中验证响应时间。",
+      "evidence": {
+        "x": 0.68,
+        "y": 0.68,
+        "width": 0.28,
+        "height": 0.22,
+        "description": "主按钮仅见默认态",
+        "visible_text": "开始试用 START"
+      }
+    }
+  ],
+  "artifacts": {
+    "overlay_elements": "visual-ui-elements.png",
+    "overlay_focus": "visual-focus-proxy.png",
+    "criteria_relevance_csv": "criteria-relevance.csv"
+  }
+}

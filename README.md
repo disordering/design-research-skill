@@ -2,7 +2,114 @@
 
 **核心命题**：交互方案评审skill
 
-## 交付物与时间线
+## 当前可提交成果
+
+- **最新单样本审查报告**：
+  [商业手游角色试用页综合报告](deliverables/2026-10-21-character-trial/report-showcase.md)
+- **案例交接页**：
+  [2026-10-21-character-trial](deliverables/2026-10-21-character-trial/README.md)
+- **机器可读结果**：
+  [report.json](deliverables/2026-10-21-character-trial/report.json)
+- **过程与耗时**：
+  [manifest.json](deliverables/2026-10-21-character-trial/manifest.json)
+
+该报告包含成果截图、原型参考、过程叠加图、各阶段输入输出、指标解释、判据相关性、目标检查和源数据文件索引。此单样本结果用于 MVP 效果展示，不代表统计意义上的召回率或误报率。
+
+## 快速交接
+
+### 1. 环境
+
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+```
+
+开发与测试：
+
+```powershell
+python -m pip install -r requirements-dev.txt
+```
+
+可选本地模型路径需要 64 位 Python 3.11+ 和至少 16 GB 显存，依赖见
+[`requirements-perception.txt`](requirements-perception.txt)。
+
+### 2. 千问 AI 平台 API Key
+
+我用的是千问 AI 平台 API Key，如果有更好的平台可以换源，需要有以下能力的模型
+- 视觉理解：`qwen3.8-flash`
+- 综合推理：`qwen3.8-max-0902`
+- 判据相关性：文本向量、文本重排、多模态向量和多模态重排
+- GUI 操作辅助：`gui-plus-2026-02-26`
+
+平台入口：
+
+- [千问 AI 平台](https://www.qianwenai.com/)
+- [模型列表](https://www.qianwenai.com/models)
+- [API Key 文档](https://platform.qianwenai.com/docs/developer-guides/administration/api-keys)
+
+获取 Key 后创建本地配置：
+
+```powershell
+Copy-Item .\config\reviewer.example.toml .\config\reviewer.toml
+```
+
+在 `config/reviewer.toml` 的 `providers.qwen.api_key` 中填写 Key。配置文件包含密钥，请勿提交。完整说明见
+[`docs/config-setup.md`](docs/config-setup.md)。
+
+### 3. 启动前检查
+
+```powershell
+python -m engine validate-config
+python -m engine validate-criteria
+python -m pytest -q
+```
+
+### 4. 分阶段运行
+
+```powershell
+python -m engine stage-init .\screen.png `
+  --reference .\prototype.png `
+  --goal-file .\design-goal.txt `
+  --platform game
+
+python -m engine stage <run_dir> ocr
+python -m engine stage <run_dir> ui
+python -m engine stage <run_dir> reference_ui
+python -m engine stage <run_dir> goal
+python -m engine stage <run_dir> metrics
+python -m engine stage <run_dir> relevance
+python -m engine stage <run_dir> audit
+python -m engine stage <run_dir> report
+python -m engine stage <run_dir> narrative
+```
+
+每一步的状态、耗时、模型、token 使用量、原始响应和解析结果都会写入运行目录。完整说明见
+[`docs/staged-workflow.md`](docs/staged-workflow.md)。
+
+### 5. 归档验收成果
+
+- `deliverables/<日期>-<case-slug>/`：验收后计划提交的完整成果。
+- 已验收运行不得原地覆盖；重跑必须建立新的 `run-id`。
+- 命名和归档规则见 [`deliverables/README.md`](deliverables/README.md)。
+
+## B 引擎（交互评审 API）
+
+核心分析链和 C 的接入契约见 [`docs/b-engine.md`](docs/b-engine.md)。
+升级后的感知、判据相关性、可计算参数和评估方案见
+[`docs/b-engine-v2-plan.md`](docs/b-engine-v2-plan.md)，模型 Key 填写方式见
+[`docs/config-setup.md`](docs/config-setup.md)。
+分阶段运行、缓存和本地验收方式见
+[`docs/staged-workflow.md`](docs/staged-workflow.md)。
+
+```powershell
+python -m pip install -r requirements.txt
+python -m engine validate-config
+python -m engine validate-criteria
+python -m engine serve --port 8000
+```
+
+主要接口为 `POST /api/review-audit`，健康检查为 `GET /healthz`，接口文档位于 `http://127.0.0.1:8000/docs`。
 
 
 
@@ -11,16 +118,60 @@
 ```
 .
 ├── README.md
-├── materials/             # 课程资料（大纲、八章讲义、方法池与技术资源附件）
-└── reference/
-    └── skills/            # 4 个同类开源 skill 的本地副本（上游地址见「相关链接」）
+├── config/                # 模型配置模板与字段说明
+├── deliverables/          # 验收后计划提交的审查成果
+│   └── 2026-10-21-character-trial/
+├── docs/                  # 架构、配置、分阶段运行与 API 文档
+├── engine/                # B 引擎代码
+├── materials/             # 课程资料
+├── reference/
+│   └── skills/            # 4 个同类开源 skill
+├── tests/                 # 单元与接口测试
+├── 判据库_v1.json         # A 方法专家交付的 24 条判据
+├── requirements.txt
+├── requirements-dev.txt
+└── requirements-perception.txt
 ```
 
-本地专用、不入库：`extracted/`（课程 PDF 文本提取结果）；`docs/`、`scripts/` 目前为空。
+## 当前进度（按四人分工）
 
-## 当前进度
+### A · 方法专家
 
-- [x] **选题：交互评审助手**
+- [x] 判据库 v1：24 条通用交互判据，包含判据内容、出处、适用条件和建议
+- [x] 启发式评审方法的输入、过程、输出、决策点和痛点拆解
+- [x] 五维评估方案：准确性、一致性、可解释性、效率、体验
+- [ ] 将 A 的五要素、AI 能力映射和评估框架整理进最终报告文本
+
+### B · Vibe Coder（引擎）
+
+- [x] 单图核心链路：OCR → UI 元素解析 → 目标约束拆解 → 确定性指标 → 判据相关性 → 逐条审查
+- [x] 输入输出契约、证据坐标、模型 JSON 校验与合同修复
+- [x] 千问与 DeepSeek API 接入、认证检查和最小调用验证
+- [x] 5070 Ti 本地 Holo1.5-7B / UI-TARS-1.5-7B 适配代码与配置入口
+- [x] 单张角色试用页端到端审查、过程文件与可提交成果归档
+- [x] 15 项接口、配置、契约和模型适配测试
+- [ ] 多模型 UI 定位 A/B 对照
+- [ ] 输出置信度校准和多轮一致性优化
+- [ ] 报告 III.1、III.4、IV.1、IV.2 的定稿文本
+
+### C · Vibe Coder（交互集成）
+
+- [x] B 引擎提供可供界面调用的评审 API 和结构化响应
+- [ ] 上传截图到问题清单的完整前端流程
+- [ ] 确认设计目标、确认/驳回发现、严重度校准、复审闭环四个 HITL 节点
+- [ ] 用户修改回流并触发重算
+- [ ] 评审报告导出
+- [ ] 报告 III.2、IV.2 第三轮、IV.3 的定稿文本
+
+### D · 测试与文档
+
+- [x] 模型配置、分阶段运行、案例归档和复现说明已有初版（待 D 统稿）
+- [ ] 10 条界面样本与 20–30 条专家参考标注
+- [ ] 与资深设计师结果对照的召回率和误报率
+- [ ] 效率计时、瞬时识别实验和主观体验问卷
+- [ ] 多模型和消融实验结果表
+- [ ] 四人对话日志与关键提示词的统一归档
+- [ ] 报告 I.1、III.3、IV.3、V 和附录的定稿文本
 
 ## 中期汇报 · 四人分工
 

@@ -1,0 +1,18 @@
+{
+  "case_slug": "2026-10-21-character-trial",
+  "case_name": "商业手游角色试用页",
+  "review_date": "2026-10-21",
+  "run_id": "20261021-030524-84e90f",
+  "report": "report-showcase.md",
+  "machine_report": "report.json",
+  "manifest": "manifest.json",
+  "design_goal": "design-goal.txt",
+  "checksums": "SHA256SUMS.txt",
+  "model": "qwen/qwen3.8-max-0902",
+  "criteria": "判据库_v1.json",
+  "figma": {
+    "file_key": "dAWQ1dG8pOh5RBHa3CFZ7t",
+    "design_goal_node": "60:15",
+    "result_node": "60:16"
+  }
+}

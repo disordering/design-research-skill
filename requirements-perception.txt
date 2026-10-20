@@ -1,0 +1,10 @@
+-r requirements.txt
+
+# Optional local perception experiments. Use 64-bit Python 3.11+.
+# The current 32-bit Python installation cannot install PyTorch.
+torch>=2.7,<3
+torchvision>=0.22,<1
+transformers>=4.56,<6
+accelerate>=1.0,<2
+qwen-vl-utils>=0.0.8,<1
+bitsandbytes>=0.45,<1

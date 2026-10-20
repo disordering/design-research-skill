@@ -5,6 +5,7 @@ from __future__ import annotations
 import base64
 import hashlib
 import io
+import warnings
 from dataclasses import dataclass
 
 from PIL import Image, ImageOps, UnidentifiedImageError
@@ -43,9 +44,18 @@ def prepare_image(raw: bytes, *, filename: str = "screenshot") -> PreparedImage:
         )
 
     try:
-        with Image.open(io.BytesIO(raw)) as probe:
-            image_format = probe.format
-            probe.verify()
+        with warnings.catch_warnings():
+            warnings.simplefilter("error", Image.DecompressionBombWarning)
+            with Image.open(io.BytesIO(raw)) as probe:
+                _check_pixel_limit(probe)
+                image_format = probe.format
+                probe.verify()
+    except (Image.DecompressionBombError, Image.DecompressionBombWarning) as exc:
+        raise EngineError(
+            "image_pixel_limit",
+            "Image contains too many pixels to process safely.",
+            status_code=413,
+        ) from exc
     except (UnidentifiedImageError, OSError) as exc:
         raise EngineError(
             "unsupported_image",
@@ -62,6 +72,7 @@ def prepare_image(raw: bytes, *, filename: str = "screenshot") -> PreparedImage:
 
     try:
         with Image.open(io.BytesIO(raw)) as source:
+            _check_pixel_limit(source)
             source = ImageOps.exif_transpose(source)
             original_width, original_height = source.size
             if min(original_width, original_height) < MIN_IMAGE_DIMENSION:
@@ -109,3 +120,14 @@ def prepare_image(raw: bytes, *, filename: str = "screenshot") -> PreparedImage:
         sha256=hashlib.sha256(raw).hexdigest(),
         resized=resized,
     )
+
+
+def _check_pixel_limit(image: Image.Image) -> None:
+    # Pillow's own exception starts at twice MAX_IMAGE_PIXELS; enforce our
+    # advertised limit explicitly before verification or pixel decoding.
+    if image.width * image.height > MAX_SOURCE_PIXELS:
+        raise EngineError(
+            "image_pixel_limit",
+            "Image contains too many pixels to process safely.",
+            status_code=413,
+        )

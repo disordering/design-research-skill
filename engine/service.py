@@ -179,11 +179,12 @@ class ReviewEngine:
         try:
             return schema.model_validate(parse_json_object(raw_text)), warnings
         except (ValueError, ValidationError) as first_error:
+            validation_error = _format_validation_error(first_error)
             warnings.append(f"{label} 首次输出未通过结构校验，已发起一次 JSON 修复。")
 
         repair_messages = build_repair_messages(
             raw_text,
-            _format_validation_error(first_error),
+            validation_error,
             repair_contract,
         )
         repaired = await self.model.complete(
@@ -225,7 +226,10 @@ class ReviewEngine:
 
         claimed_rules: set[str] = set()
         normalized_findings: list[Finding] = []
-        for raw_finding in raw.findings:
+        # Stable sorting keeps the first candidate on a confidence tie. Each rule
+        # belongs to its highest-confidence finding; other rules retain their
+        # own evidence instead of being merged into an unrelated candidate.
+        for raw_finding in sorted(raw.findings, key=lambda item: -item.confidence):
             valid_rules: list[str] = []
             for rule_id in raw_finding.rule_ids:
                 normalized_id = rule_id.strip().upper()
@@ -240,7 +244,8 @@ class ReviewEngine:
                     continue
                 if normalized_id in claimed_rules:
                     warnings.append(
-                        f"判据 {normalized_id} 被多个问题重复引用，保留置信度更高的一条。"
+                        f"判据 {normalized_id} 被多个问题重复引用，优先保留置信度较高的候选；"
+                        "置信度相同时保留先出现的一条。"
                     )
                     continue
                 valid_rules.append(normalized_id)
@@ -269,41 +274,6 @@ class ReviewEngine:
                 evidence=raw_finding.evidence,
                 sources=[self.criteria.source],
             )
-
-            existing_index = next(
-                (
-                    index
-                    for index, existing in enumerate(normalized_findings)
-                    if set(existing.rule_ids) & set(valid_rules)
-                ),
-                None,
-            )
-            if existing_index is not None:
-                existing = normalized_findings[existing_index]
-                preferred = (
-                    provisional
-                    if provisional.confidence > existing.confidence
-                    else existing
-                )
-                merged_rules = list(dict.fromkeys([*existing.rule_ids, *provisional.rule_ids]))
-                merged_criteria = [
-                    self.criteria.by_id[rule_id] for rule_id in merged_rules
-                ]
-                normalized_findings[existing_index] = preferred.model_copy(
-                    update={
-                        "rule_ids": merged_rules,
-                        "heuristics": _unique(
-                            heuristic_label(criterion.heuristic)
-                            for criterion in merged_criteria
-                        ),
-                        "principle": "；".join(
-                            f"{criterion.id} {criterion.title}"
-                            for criterion in merged_criteria
-                        ),
-                    }
-                )
-                claimed_rules.update(merged_rules)
-                continue
 
             normalized_findings.append(provisional)
             claimed_rules.update(valid_rules)
@@ -408,7 +378,9 @@ def _image_info(image: PreparedImage) -> ImageInfo:
 
 def _format_validation_error(error: Exception) -> str:
     if isinstance(error, ValidationError):
-        return json.dumps(error.errors(include_url=False), ensure_ascii=False)
+        return json.dumps(
+            error.errors(include_url=False, include_context=False), ensure_ascii=False
+        )
     return str(error)
 
 

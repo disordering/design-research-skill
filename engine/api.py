@@ -9,8 +9,10 @@ from pathlib import Path
 from typing import Callable, Literal
 
 from fastapi import FastAPI, File, Form, UploadFile
+from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from pydantic import ValidationError
 
 from .contracts import Decision, JsonReviewRequest, ReviewContext, ReviewReport
 from .config import config_health, load_reviewer_config
@@ -126,13 +128,22 @@ def create_app(
         model: str | None = Form(default=None),
         analysis_mode: str = Form(default="two_pass"),
     ) -> ReviewReport:
+        try:
+            context = ReviewContext(
+                design_goal=design_goal,
+                scenario=scenario,
+                platform=platform,
+                target_user=target_user,
+            )
+        except ValidationError as exc:
+            # Reuse the context contract so whitespace normalization and length
+            # limits match the JSON endpoint, then expose request-level errors.
+            errors = [
+                {**error, "loc": ("body", *error["loc"])}
+                for error in exc.errors()
+            ]
+            raise RequestValidationError(errors) from exc
         raw = await image.read()
-        context = ReviewContext(
-            design_goal=design_goal,
-            scenario=scenario,
-            platform=platform,
-            target_user=target_user,
-        )
         engine = factory(provider, model)
         return await engine.review(
             raw,

@@ -18,6 +18,11 @@
   },
   "网页文件": [
     {
+      "path": "README.md",
+      "bytes": 10796,
+      "sha256": "4faddca69c39838b333d32398cb2f9356e3a8d6a7e8b71b58694eefd5e761d90"
+    },
+    {
       "path": "deliverables/2026-10-21-d-expansion-current.zip",
       "bytes": 10861731,
       "sha256": "24aaf54b037c15b153652858bb3a82f2d2a87ef8b4196d86eec8035986e7f456"
@@ -29,8 +34,8 @@
     },
     {
       "path": "deliverables/2026-10-21-d-independent-reviewers.zip",
-      "bytes": 3999862,
-      "sha256": "88d81278f8e6ee2fa3d2d51af16b856fb376ef67c43c9a8d476498e37b048dae"
+      "bytes": 4001177,
+      "sha256": "29974887c60d77a370640c04a6c536cf514b629dfcb6ea91dbf1f2c2224dfbe6"
     },
     {
       "path": "deliverables/2026-10-21-d-p01-recognition-host.zip",
@@ -74,8 +79,8 @@
     },
     {
       "path": "docs/D-发布索引.md",
-      "bytes": 141391,
-      "sha256": "860616402e7500ca18121dc7e8651dbd884cf60fd59411218f3aa5adc0083be7"
+      "bytes": 141593,
+      "sha256": "59357deb7b157ada55082322dafbf9bf7f32277c2b8970f36d3a8bceab6c4ad0"
     },
     {
       "path": "docs/D-本轮开发测试总览.md",
@@ -84,8 +89,13 @@
     },
     {
       "path": "docs/D-真人材料执行清单.md",
-      "bytes": 2029,
-      "sha256": "b6419af87a38890b3182ae6e0dbd187b23fc00cafd6d3f86f9bd890c0624a091"
+      "bytes": 2258,
+      "sha256": "cd40e907ace932182346f6abaabe27ebe08a0c068ba4bdf3a3f118e06f4e2c12"
+    },
+    {
+      "path": "docs/D-评审者说明.md",
+      "bytes": 1982,
+      "sha256": "13de26717f0f62e41f37b1b18e1a1806728cb8016dd181dae660ce3b23ad942b"
     },
     {
       "path": "docs/D-阶段性报告.md",
@@ -96,12 +106,17 @@
       "path": "docs/D-验证证据.json",
       "bytes": 202237,
       "sha256": "c6f4c87fe59985ce4e98f0b0f3ee7bf155bc28dbca8268d1cea1f9edb8d0966c"
-    },
-    {
-      "path": "README.md",
-      "bytes": 10796,
-      "sha256": "4faddca69c39838b333d32398cb2f9356e3a8d6a7e8b71b58694eefd5e761d90"
     }
   ],
-  "链接检查数量": 1019
+  "上一版网页链接检查数量": 1019,
+  "评审者说明更新": {
+    "基准提交": "9957fd97d12bc4f366a498cfdd94e416cb184e34",
+    "独立包文件数": 18,
+    "新增说明": "独立评审材料/00_评审说明.txt",
+    "原有17个文件保持原字节": true,
+    "完整归档文件数": 542,
+    "完整归档": "按上次发布版本保留；本次说明加入独立标注材料包。",
+    "本次说明网页链接检查数量": 574,
+    "本次说明网页链接全部通过": true
+  }
 }

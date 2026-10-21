@@ -13,7 +13,7 @@
 | [本轮材料](../deliverables/2026-10-21-d-expansion-current.zip) | 最新报告、9 次新增评审、作者候选对照、C 验收、真人工具与最新源码快照 | 280 | 10.86 MB |
 | [前期支撑](../deliverables/2026-10-21-d-expansion-history.zip) | 此前 5 次视觉评审、S03/S07 原始与修复回放、历史报告、开发样本与原版本代码 | 262 | 19.12 MB |
 
-单独分发：[两位评审者独立标注材料](../deliverables/2026-10-21-d-independent-reviewers.zip) · [P01 五秒识别主持人材料](../deliverables/2026-10-21-d-p01-recognition-host.zip)。这两份已包含在完整归档中，直接下载即可开展对应任务。
+单独分发：[两位评审者独立标注材料](../deliverables/2026-10-21-d-independent-reviewers.zip) · [P01 五秒识别主持人材料](../deliverables/2026-10-21-d-p01-recognition-host.zip)。P01 主持人材料与完整归档一致；独立标注材料在归档中的 17 个原始文件基础上，新增 `00_评审说明.txt`，共 18 个文件。发给评审者时下载此独立包，先读说明再填写模板。[在线阅读评审者说明](D-评审者说明.md)。
 
 ## GitHub 直接阅读
 

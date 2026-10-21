@@ -1,0 +1,209 @@
+{
+  "更新日期": "2026-10-21",
+  "仓库基线": "b2d4eda777a2734b112b9620720ccd6389f8de20",
+  "性质": "D 阶段材料汇编；本轮不重跑模型、软件测试或真人实验，重新核验了归档计数、引用、哈希及代码未变。",
+  "修复版本": [
+    "3abffa841b3bf104833ac3c521625d63ff4c7f79",
+    "02fb2fae82aa5f912e228d6fb6f5e2f94e8048bc"
+  ],
+  "软件测试": {
+    "原有": 15,
+    "首轮风险用例": 8,
+    "新增边界用例": 25,
+    "修复前风险用例通过": 3,
+    "修复前风险用例失败": 5,
+    "根因数": 4,
+    "修复后通过": 48,
+    "修复后失败": 0,
+    "跳过": 0,
+    "范围": "离线模拟及程序内接口",
+    "既有依赖弃用提示": 1
+  },
+  "合成上传": {
+    "通过": 10,
+    "总数": 10,
+    "is_stub": true,
+    "可用于准确性结论": false
+  },
+  "确定性指标复算": {
+    "轮数": 3,
+    "全部等于归档": true,
+    "真实模型重新运行": false
+  },
+  "案例本轮复核": {
+    "run_id": "20261021-030524-84e90f",
+    "目标状态": {
+      "met": 7,
+      "observed_violation": 1,
+      "insufficient_evidence": 1
+    },
+    "判据筛选数": 24,
+    "深审数": 8,
+    "未深审数": 16,
+    "阶段合计毫秒": 273372,
+    "时间戳跨度秒": 644.0,
+    "原始文件哈希匹配数": 27,
+    "原归档未修改": true,
+    "未修正的原始清单引用": [
+      {
+        "字段": "stages.ocr.outputs[1]",
+        "原值": "ocr.raw.txt",
+        "正确位置": "raw/ocr.raw.txt"
+      },
+      {
+        "字段": "stages.ocr.raw_output",
+        "原值": "ocr.raw.txt",
+        "正确位置": "raw/ocr.raw.txt"
+      },
+      {
+        "字段": "stages.audit.outputs[1]",
+        "原值": "audit.raw.txt",
+        "正确位置": "raw/audit.raw.txt"
+      },
+      {
+        "字段": "stages.audit.raw_output",
+        "原值": "audit.raw.txt",
+        "正确位置": "raw/audit.raw.txt"
+      },
+      {
+        "字段": "stages.narrative.outputs[2]",
+        "原值": "narrative.raw.txt",
+        "正确位置": "raw/narrative.raw.txt"
+      },
+      {
+        "字段": "stages.narrative.raw_output",
+        "原值": "narrative.raw.txt",
+        "正确位置": "raw/narrative.raw.txt"
+      }
+    ],
+    "候选问题人工状态": "unreviewed"
+  },
+  "本轮源码与原案例逐字节未变": {
+    "结果": true,
+    "文件数": 58
+  },
+  "待完成真实研究": {
+    "专家标注": "未完成",
+    "真实模型三轮对照": "未完成",
+    "真人识别与体验": "未完成",
+    "界面人工闭环验收": "未完成",
+    "召回率": null,
+    "误报占比": null,
+    "效率提升": null,
+    "体验得分": null
+  },
+  "原始证据文件": [
+    {
+      "包内路径": "evidence/first-run/execution_results.json",
+      "sha256": "03a827227ad7c72a17af61f4083c7624e989b2591d5115eef609791d00073f4a"
+    },
+    {
+      "包内路径": "evidence/first-run/logs/health_empty_key.log",
+      "sha256": "0e33862735c751a200d1a808ec6929d32fb97f8d89c48b44c437653db3ec5f28"
+    },
+    {
+      "包内路径": "evidence/first-run/logs/metrics_replay_1.json",
+      "sha256": "f23a2a036da6d1130006d69097ac98070c032d45fc4374c92f747aa29f53ae7a"
+    },
+    {
+      "包内路径": "evidence/first-run/logs/metrics_replay_2.json",
+      "sha256": "f23a2a036da6d1130006d69097ac98070c032d45fc4374c92f747aa29f53ae7a"
+    },
+    {
+      "包内路径": "evidence/first-run/logs/metrics_replay_3.json",
+      "sha256": "f23a2a036da6d1130006d69097ac98070c032d45fc4374c92f747aa29f53ae7a"
+    },
+    {
+      "包内路径": "evidence/first-run/logs/pip_freeze.log",
+      "sha256": "f3202123f62e022dcda50d1aa31fa22c05ad014c7a81dd9a30c9db87293e4799"
+    },
+    {
+      "包内路径": "evidence/first-run/logs/pytest_existing.xml",
+      "sha256": "4096f162fed875315dd8fd3337a8cc785cf30a8c74645dd0c5b7f7b9f8a7f5d0"
+    },
+    {
+      "包内路径": "evidence/first-run/logs/pytest_fresh_archive.log",
+      "sha256": "39b8e7c0d2286da3aeabd5259ea6ff282811881ff107b5f08c07edec1cd26890"
+    },
+    {
+      "包内路径": "evidence/first-run/logs/pytest_with_example_config.log",
+      "sha256": "ebce929b21748089dad8a2242c3def473b2e76351309625d86b76e66a57b5e3e"
+    },
+    {
+      "包内路径": "evidence/first-run/logs/sample_uploads.json",
+      "sha256": "1302a1b39aa673bdcec419065fd5a90d6b0c5be9ff8c66f113ff75d18902b8d1"
+    },
+    {
+      "包内路径": "evidence/first-run/logs/validate_config_empty_key.log",
+      "sha256": "5e723f3ea7620db16a28a88fc3990b16bbce99aaac799d4d91ee91f9e5f1a1a3"
+    },
+    {
+      "包内路径": "evidence/first-run/logs/validate_criteria.log",
+      "sha256": "18d8eea2d81f6ecbbff40d34f2db320fe989d0da53f0fa5755bd6466be4d446b"
+    },
+    {
+      "包内路径": "evidence/first-run/evidence/archive_audit.json",
+      "sha256": "21bf7c45382ce7dc7081940282b6cf548686c4f95861974838856323f6af3be6"
+    },
+    {
+      "包内路径": "evidence/first-run/evidence/d_runtime_edges_findings.json",
+      "sha256": "f3f3d1b1ed162d0a1d5128eb3168bb9d6580e16d1fdeea92fea0b9fd9b2af9ae"
+    },
+    {
+      "包内路径": "evidence/first-run/evidence/d_runtime_edges_harness_initial.json",
+      "sha256": "7c9e199f4a57ddf463171a7ae3a424a8c4f8ec9384d3e60b80d89d62a59d4c7f"
+    },
+    {
+      "包内路径": "evidence/first-run/evidence/d_runtime_edges_harness_initial.log",
+      "sha256": "eac441f531cc6c2b1f319d8ff49abad0ed741003fc7715a0e1d2dafacd11ac8b"
+    },
+    {
+      "包内路径": "evidence/first-run/evidence/d_runtime_edges_result.json",
+      "sha256": "12c3555b450c7ebc96754a292c4775af64a6aa964a2e0b79e9f155dcec9162f7"
+    },
+    {
+      "包内路径": "evidence/first-run/evidence/d_runtime_edges_result.log",
+      "sha256": "fb84cc66dd3c21cf5678ffcbd86064fc59e57443dc55baa20d281e8976385d94"
+    },
+    {
+      "包内路径": "evidence/first-run/evidence/visual_audit.json",
+      "sha256": "222eaf239e180f8f25f030cd6b9cf4f3aa32ac756d8f1f865eb8714a295d8378"
+    },
+    {
+      "包内路径": "evidence/first-run/reproduce/original_local_run_d_checks.py",
+      "sha256": "31a3c118c2d0a122a837731fd43ee8be125374d8f3113e3955dde2a1804f3f69"
+    },
+    {
+      "包内路径": "evidence/first-run/reproduce/test_d_runtime_edges.py",
+      "sha256": "23d8f9bd4d88e9ce47e9ae57cd2b52a3a4b01efc47f6cf5fab7257e38feed2c8"
+    },
+    {
+      "包内路径": "evidence/first-run/reproduce/复现说明.txt",
+      "sha256": "bb4265b63806d04752ba9f05a71f1769c13fdb0c639aebab95068c0d129c707b"
+    },
+    {
+      "包内路径": "evidence/fixes/verification_results.json",
+      "sha256": "99c1671269f2df70935fe764d2789a2972778b8579875c6bc1e0f42685f708a3"
+    },
+    {
+      "包内路径": "evidence/fixes/review_result.json",
+      "sha256": "8ac841dbc2aed69f63b4910c10b3bb1e0ae22fffb722dac2180adb43d9c09c5d"
+    },
+    {
+      "包内路径": "evidence/fixes/logs/all_tests.log",
+      "sha256": "edf82f5bbfa8936ebbd6ac3d1666c4720fb9b7e189f20031f6d86ba1aaad4517"
+    },
+    {
+      "包内路径": "evidence/fixes/logs/all_tests.xml",
+      "sha256": "de183906421984245b03d093e83925c22822985bb1cc2d8e88976e24787b6d55"
+    },
+    {
+      "包内路径": "evidence/fixes/logs/dependencies.txt",
+      "sha256": "f3202123f62e022dcda50d1aa31fa22c05ad014c7a81dd9a30c9db87293e4799"
+    },
+    {
+      "包内路径": "evidence/fixes/logs/patch_check.log",
+      "sha256": "d1810735143d66f0a86dcbdf2ad0ae26d69626ea544d4fae4f56cd351406e2b9"
+    }
+  ]
+}

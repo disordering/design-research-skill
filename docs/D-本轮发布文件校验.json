@@ -1,0 +1,107 @@
+{
+  "说明": "GitHub 阅读版及下载材料。完整包原始文件按字节保留；相对证据路径以解压后的共同根目录为基准。",
+  "基准提交": "9780c03eb9efffb1e26f1acab58685d90a8df05f",
+  "完整归档文件数": 542,
+  "归档": {
+    "1": {
+      "file": "deliverables/2026-10-21-d-expansion-current.zip",
+      "files": 280,
+      "bytes": 10861731,
+      "sha256": "24aaf54b037c15b153652858bb3a82f2d2a87ef8b4196d86eec8035986e7f456"
+    },
+    "2": {
+      "file": "deliverables/2026-10-21-d-expansion-history.zip",
+      "files": 262,
+      "bytes": 19115775,
+      "sha256": "37b49a1a1ba7a330ea56df27747a6eed36e39c1358448094c61b6de57c470143"
+    }
+  },
+  "网页文件": [
+    {
+      "path": "deliverables/2026-10-21-d-expansion-current.zip",
+      "bytes": 10861731,
+      "sha256": "24aaf54b037c15b153652858bb3a82f2d2a87ef8b4196d86eec8035986e7f456"
+    },
+    {
+      "path": "deliverables/2026-10-21-d-expansion-history.zip",
+      "bytes": 19115775,
+      "sha256": "37b49a1a1ba7a330ea56df27747a6eed36e39c1358448094c61b6de57c470143"
+    },
+    {
+      "path": "deliverables/2026-10-21-d-independent-reviewers.zip",
+      "bytes": 3999862,
+      "sha256": "88d81278f8e6ee2fa3d2d51af16b856fb376ef67c43c9a8d476498e37b048dae"
+    },
+    {
+      "path": "deliverables/2026-10-21-d-p01-recognition-host.zip",
+      "bytes": 2198625,
+      "sha256": "5994d62b44d6de6e883c769abd032431e1dcb0c81a8b00dd196d0b6e3a387be5"
+    },
+    {
+      "path": "docs/D-Codex证据索引.md",
+      "bytes": 106102,
+      "sha256": "884ce172f26d21ecb3d313fb56b79d9d7bf95ec4da9fe1f24d2a63f7c7c19461"
+    },
+    {
+      "path": "docs/D-C前端交付验收.md",
+      "bytes": 12272,
+      "sha256": "f67d6b08e4dd23ed40128b9d8d4ab68507092ce257f3c2d2563a15c9ed224360"
+    },
+    {
+      "path": "docs/D-C前端操作验收.png",
+      "bytes": 55044,
+      "sha256": "aa5b35e609622da4b8d0d234b69ecb0c69d12c1f001f6ea0021813fcfb7e8058"
+    },
+    {
+      "path": "docs/D-C浏览器操作验收.md",
+      "bytes": 2224,
+      "sha256": "0fafe80e633b7141c2267796a595b4e1861d9bbc1604c44eca4c791c06cd5054"
+    },
+    {
+      "path": "docs/D-P01主持人执行卡.md",
+      "bytes": 1706,
+      "sha256": "9544b598b7e3e4aca52edcecc6c09f9ede44e6441486630fb38578babe1e41af"
+    },
+    {
+      "path": "docs/D-交付进度.md",
+      "bytes": 3144,
+      "sha256": "6e63923efb854aa56b15a47c4acb1e47fbab2d3348eb644ed408e5861eb29bc5"
+    },
+    {
+      "path": "docs/D-作者候选开发对照.md",
+      "bytes": 14218,
+      "sha256": "9953e7d8ca5c2eeb792ea2d6f9e6be6fffd76326f66f6cfe51eed652ad83bf40"
+    },
+    {
+      "path": "docs/D-发布索引.md",
+      "bytes": 141391,
+      "sha256": "860616402e7500ca18121dc7e8651dbd884cf60fd59411218f3aa5adc0083be7"
+    },
+    {
+      "path": "docs/D-本轮开发测试总览.md",
+      "bytes": 5994,
+      "sha256": "54578d301e8757198743e57c260dcac536fc633af3be85fa7d2ebd95dc130ca1"
+    },
+    {
+      "path": "docs/D-真人材料执行清单.md",
+      "bytes": 2029,
+      "sha256": "b6419af87a38890b3182ae6e0dbd187b23fc00cafd6d3f86f9bd890c0624a091"
+    },
+    {
+      "path": "docs/D-阶段性报告.md",
+      "bytes": 25031,
+      "sha256": "a5682255db699c649a134d7e58e19687d9af5cabb48d8035aa36c24b59448391"
+    },
+    {
+      "path": "docs/D-验证证据.json",
+      "bytes": 202237,
+      "sha256": "c6f4c87fe59985ce4e98f0b0f3ee7bf155bc28dbca8268d1cea1f9edb8d0966c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 10796,
+      "sha256": "4faddca69c39838b333d32398cb2f9356e3a8d6a7e8b71b58694eefd5e761d90"
+    }
+  ],
+  "链接检查数量": 1019
+}

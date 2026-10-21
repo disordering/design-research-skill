@@ -1,3 +1,27 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';import {webcrypto} from 'node:crypto';import {createReviewService} from '../dist/review-service.js';
 test('feedback keeps stable IDs, audit snapshot and user changes without mutating prior version',async()=>{const api=createReviewService();const r=await api.createReview({image:'demo.svg',context:{goal:'注册'}});r.issues[0].reviewStatus='rejected';r.issues[0].note='不适用';r.issues[1].severity='low';const n=await api.reviseReview(r,'校准');assert.equal(n.version,2);assert.equal(r.version,1);assert.equal(n.issues[0].id,r.issues[0].id);assert.match(n.issues[0].engineDisposition,/排除/);assert.equal(n.logs.at(-1).feedback[1].severity,'low');assert.equal(n.issues[0].note,'不适用');});
 test('recheck retains original image and excludes rejected finding',async()=>{const api=createReviewService();const r=await api.createReview({image:'old',context:{goal:'注册'}});r.issues[0].reviewStatus='rejected';const n=await api.recheckReview(r,'new');assert.equal(n.image,'new');assert.equal(n.previousImage,'old');assert.equal(r.image,'old');assert.equal(n.issues[0].recheckStatus,'不纳入复审');assert.equal(n.mode,'mock');});
+test('修改目标后问题描述同步更新，并保留人工审核与旧版本',async()=>{
+ const api=createReviewService();
+ const oldGoal='查看主题与提醒状态，再调整个人设置。';
+ const newGoal='先辨认当前主题，再调整到期提醒，最后保存设置。';
+ const original=await api.createReview({image:'S07.png',context:{goal:oldGoal}});
+ original.issues[0].reviewStatus='rejected';original.issues[0].severity='low';original.issues[0].note='当前任务先辨认主题，不以主按钮为首要问题。';
+ original.issues[1].reviewStatus='confirmed';original.issues[1].severity='medium';original.issues[1].note='保留对字段名称的审核。';
+ original.issues[2].note='继续等待交互证据。';
+ const before=structuredClone(original);
+ const changed=structuredClone(original);changed.context.goal=newGoal;
+ const changedBefore=structuredClone(changed);
+ const next=await api.reviseReview(changed,'设计目标已更新，模拟重新评审');
+ assert.equal(next.context.goal,newGoal);
+ assert.ok(next.issues[0].description.includes(newGoal));
+ assert.ok(!next.issues[0].description.includes(oldGoal));
+ const audit=record=>record.issues.map(({id,reviewStatus,severity,note})=>({id,reviewStatus,severity,note}));
+ assert.deepEqual(audit(next),audit(original));
+ assert.deepEqual(next.logs.at(-1).feedback,audit(original));
+ assert.equal(next.logs.at(-1).context.goal,newGoal);
+ assert.equal(next.issues[1].description,original.issues[1].description);
+ assert.equal(next.issues[2].description,original.issues[2].description);
+ assert.deepEqual(original,before);assert.deepEqual(changed,changedBefore);
+ assert.equal(next.version,2);assert.equal(next.mode,'mock');
+});

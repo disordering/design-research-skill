@@ -43,6 +43,11 @@
       "sha256": "5994d62b44d6de6e883c769abd032431e1dcb0c81a8b00dd196d0b6e3a387be5"
     },
     {
+      "path": "deliverables/2026-10-22-d-human-review-followup.zip",
+      "bytes": 4061705,
+      "sha256": "9daab9a12fc574e7d6be70f2a81207d0e293247376ac64518ba89611ad2c9cef"
+    },
+    {
       "path": "docs/D-Codex证据索引.md",
       "bytes": 106102,
       "sha256": "884ce172f26d21ecb3d313fb56b79d9d7bf95ec4da9fe1f24d2a63f7c7c19461"
@@ -69,8 +74,8 @@
     },
     {
       "path": "docs/D-交付进度.md",
-      "bytes": 3144,
-      "sha256": "6e63923efb854aa56b15a47c4acb1e47fbab2d3348eb644ed408e5861eb29bc5"
+      "bytes": 3668,
+      "sha256": "31adbc7e69b7d71c1204e9c0f5c4b79460429d830f06a4beef634ca4f101082a"
     },
     {
       "path": "docs/D-作者候选开发对照.md",
@@ -78,9 +83,14 @@
       "sha256": "9953e7d8ca5c2eeb792ea2d6f9e6be6fffd76326f66f6cfe51eed652ad83bf40"
     },
     {
+      "path": "docs/D-双评审阶段补充.md",
+      "bytes": 5379,
+      "sha256": "3c4b5dc4ff3a6ba16899522b4e8b89736a410dd98f2e2071a0a2020021014844"
+    },
+    {
       "path": "docs/D-发布索引.md",
-      "bytes": 141593,
-      "sha256": "59357deb7b157ada55082322dafbf9bf7f32277c2b8970f36d3a8bceab6c4ad0"
+      "bytes": 142323,
+      "sha256": "e37be6d0aca81227b77095f774c04ad3c7baacf327f150ed33360aba578f06a2"
     },
     {
       "path": "docs/D-本轮开发测试总览.md",
@@ -89,8 +99,8 @@
     },
     {
       "path": "docs/D-真人材料执行清单.md",
-      "bytes": 2258,
-      "sha256": "cd40e907ace932182346f6abaabe27ebe08a0c068ba4bdf3a3f118e06f4e2c12"
+      "bytes": 2863,
+      "sha256": "3d0e93497c1238ed5f0cb7c67a5f856a3cab699b450f9a89e0063c3c804cdac2"
     },
     {
       "path": "docs/D-评审者说明.md",
@@ -99,8 +109,8 @@
     },
     {
       "path": "docs/D-阶段性报告.md",
-      "bytes": 25031,
-      "sha256": "a5682255db699c649a134d7e58e19687d9af5cabb48d8035aa36c24b59448391"
+      "bytes": 26137,
+      "sha256": "28ffef8b3d21d1ed22d5d051a99ce193fcaab9b624ca0eecac907d83cf72bfc0"
     },
     {
       "path": "docs/D-验证证据.json",
@@ -118,5 +128,20 @@
     "完整归档": "按上次发布版本保留；本次说明加入独立标注材料包。",
     "本次说明网页链接检查数量": 574,
     "本次说明网页链接全部通过": true
+  },
+  "双评审补充更新": {
+    "日期": "2026-10-22",
+    "基准提交": "5762336a9fc22ee2a08ea41550b7fb8cdc2f3441",
+    "阶段": "已收独立选择，继续补充依据与讨论",
+    "包文件数": 38,
+    "讨论包": "deliverables/2026-10-22-d-human-review-followup.zip",
+    "分歧条目": 33,
+    "候选条目并集": 11,
+    "唯一讨论条目": 42,
+    "材料检查通过": 12,
+    "独立核查通过": 28,
+    "网页链接检查数量": 672,
+    "网页链接全部通过": true,
+    "完整归档": "10月21日的542文件归档及既有模型输出按原版本保留。"
   }
 }

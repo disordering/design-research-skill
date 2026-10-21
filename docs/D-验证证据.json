@@ -2677,8 +2677,8 @@
       "path": "docs/b-engine.md",
       "source": "相应原始运行或修复文档",
       "source_sha256": "6fe9cc22ce4f2071d39fc31c1af2902c394d761007c309a01077c907062fd713",
-      "published_sha256": "6fe9cc22ce4f2071d39fc31c1af2902c394d761007c309a01077c907062fd713",
-      "package_document_sha256": "6fe9cc22ce4f2071d39fc31c1af2902c394d761007c309a01077c907062fd713",
+      "published_sha256": "000ee814da9f25844c6d79853a17cd459b5ea52b8cf1371982417e06b6256c2a",
+      "package_document_sha256": "000ee814da9f25844c6d79853a17cd459b5ea52b8cf1371982417e06b6256c2a",
       "changes": "仓库链接、证据入口及发布说明；原始文件保存在证据包"
     },
     {

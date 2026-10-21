@@ -152,7 +152,7 @@ REVIEW_API_KEY=<key>
 REVIEW_MODEL=<vision-model-name>
 ```
 
-不要在请求体或前端中传 API Key。服务端只从环境变量读取。
+API Key 由服务端读取，不放在请求体或前端。千问和 DeepSeek 支持环境变量及配置文件：实际模型调用先取千问的 `DASHSCOPE_API_KEY`（或 `QWENAI_API_KEY`）、DeepSeek 的 `DEEPSEEK_API_KEY`，未取到密钥时再读取 `config/reviewer.toml` 中的 `providers.qwen.api_key` 或 `providers.deepseek.api_key`；`REVIEW_CONFIG` 可指定其他配置文件。`generic` 使用 `REVIEW_API_KEY`。
 
 ## 离线 Stub
 
@@ -171,4 +171,4 @@ python -m engine review .\screen.png --provider stub
 4. 人工检查：问题是否都有截图中可见的证据、证据框是否指向正确区域、判据出处是否完整、建议是否可执行。
 5. 将同一截图交给 C 上传，确认接口、字段和 HITL 状态可被界面消费。
 
-当前阶段的状态：代码和离线契约测试先完成；真实视觉模型端到端验证等待可用 API Key。
+当前已完成 5 次 Codex 会话视觉评审、64 项离线程序回归，以及 S03/S07 共 28 项保存输出回放检查，结果见 [D 阶段性报告](D-阶段性报告.md)。仓库另保留[角色试用页的千问分阶段 API 运行归档](../deliverables/2026-10-21-character-trial/README.md)。Codex 会话评审与具体提供商 API 链路分别记录；各部署配置按上述步骤完成 API 调用与界面联调验收。

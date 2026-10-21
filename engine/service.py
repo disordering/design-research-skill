@@ -16,6 +16,7 @@ from .contracts import (
     ImageInfo,
     ModelInfo,
     RawAuditResult,
+    RawFinding,
     ReviewContext,
     ReviewReport,
     ReviewSummary,
@@ -224,11 +225,10 @@ class ReviewEngine:
                 warnings.append(f"模型漏报判据 {rule_id}，已保守记为证据不足。")
                 statuses[rule_id] = _fallback_status(rule_id)
 
-        claimed_rules: set[str] = set()
-        normalized_findings: list[Finding] = []
-        # 按置信度稳定排序，相同置信度保留先出现的候选。
-        # 每条判据归给置信度最高的问题；其余独有判据保留各自的证据，
-        # 避免把证据合并到不相关的候选中。
+        grouped_findings: list[tuple[RawFinding, list[str]]] = []
+        finding_indexes: dict[tuple[object, ...], int] = {}
+        # 按具体问题去重；同一判据可以关联不同位置或不同修改动作。
+        # 真正重复时采用置信度最高的一整条内容，同分保留输入首条。
         for raw_finding in sorted(raw.findings, key=lambda item: -item.confidence):
             valid_rules: list[str] = []
             for rule_id in raw_finding.rule_ids:
@@ -242,17 +242,29 @@ class ReviewEngine:
                         f"问题引用了非 candidate_issue 判据 {normalized_id}，已移除。"
                     )
                     continue
-                if normalized_id in claimed_rules:
-                    warnings.append(
-                        f"判据 {normalized_id} 被多个问题重复引用，优先保留置信度较高的候选；"
-                        "置信度相同时保留先出现的一条。"
-                    )
-                    continue
                 valid_rules.append(normalized_id)
 
             if not valid_rules:
                 continue
 
+            key = _finding_key(raw_finding)
+            existing_index = finding_indexes.get(key)
+            if existing_index is not None:
+                representative, existing_rules = grouped_findings[existing_index]
+                grouped_findings[existing_index] = (
+                    representative, _unique([*existing_rules, *valid_rules])
+                )
+                warnings.append(
+                    f"同一具体问题“{representative.title}”被重复返回，已合并有效判据；"
+                    "保留置信度最高的完整证据与建议，置信度相同时保留先出现的一条。"
+                )
+                continue
+            finding_indexes[key] = len(grouped_findings)
+            grouped_findings.append((raw_finding, valid_rules))
+
+        claimed_rules: set[str] = set()
+        normalized_findings: list[Finding] = []
+        for raw_finding, valid_rules in grouped_findings:
             criteria = [self.criteria.by_id[rule_id] for rule_id in valid_rules]
             severity = raw_finding.severity
             confidence = raw_finding.confidence
@@ -320,6 +332,20 @@ class ReviewEngine:
                 )
             )
         return final_findings, rule_results, warnings
+
+
+def _finding_key(finding: RawFinding) -> tuple[object, ...]:
+    """精确匹配位置、可见表现和修改动作，保留无法确认相同的候选。"""
+    evidence = finding.evidence
+    # 统一空白字符；不按标题、框重叠或相同判据猜测语义相似。
+    text_fields = (
+        evidence.description, evidence.visible_text,
+        finding.detection, finding.suggestion,
+    )
+    return (
+        evidence.x, evidence.y, evidence.width, evidence.height,
+        *(" ".join(value.split()) for value in text_fields),
+    )
 
 
 def _fallback_status(rule_id: str, *, reason: str | None = None) -> RuleStatus:

@@ -1,0 +1,81 @@
+{
+  "说明": "本次体验数据、AI模拟操作、目标文案同步修复与D报告发布清单；校验清单自身不计入其内。",
+  "基线提交": "7336f099f779b82ac5a19912b32035566075c1ad",
+  "文件数": 11,
+  "相对链接检查": 663,
+  "相对链接全部可定位": true,
+  "验证": {
+    "前端": "10/10",
+    "汇总程序": "86/86",
+    "实际导入": "8/8",
+    "导出内容": "12/12"
+  },
+  "文件": [
+    {
+      "path": "README.md",
+      "bytes": 12107,
+      "sha256": "7c9f72e59ae73fd9e22e5517ef7866be604dc75e4375e2538f8e828402dbb75e",
+      "修改方式": "更新"
+    },
+    {
+      "path": "deliverables/2026-10-22-d-experience-and-simulation.zip",
+      "bytes": 1120607,
+      "sha256": "070dd5abf27706e9dcd5bc5ee0bb384e79b4fd133ba7f07fe17d355548d94248",
+      "修改方式": "新增"
+    },
+    {
+      "path": "deliverables/2026-10-22-mingjian-local-trial.zip",
+      "bytes": 40103,
+      "sha256": "26be491ff80f2b2f4896fed27288cff48f9ee816afd89bbdffada57bba6da242",
+      "修改方式": "新增"
+    },
+    {
+      "path": "deliverables/2026-10-22-participant-tool.zip",
+      "bytes": 2209201,
+      "sha256": "02c601f44c9f7cfd75e5090aa3083d98e9b0f5c6e5dad8bf91b5ba4102764563",
+      "修改方式": "新增"
+    },
+    {
+      "path": "docs/D-交付进度.md",
+      "bytes": 5143,
+      "sha256": "e0c669e369b8b2d5375289b98f89637195a6b477419879f01f831262953f31b4",
+      "修改方式": "更新"
+    },
+    {
+      "path": "docs/D-体验数据与模拟测试.md",
+      "bytes": 8745,
+      "sha256": "4eb052db6973f6a7cb1256fea5a8e79e31e97c732c12b19ee5b29f78e85d5198",
+      "修改方式": "新增"
+    },
+    {
+      "path": "docs/D-发布索引.md",
+      "bytes": 146941,
+      "sha256": "967aa82e4eaa1d3e9d70c64c2aa699aa987c4fd8032d2a25ca9a19b4fdb53051",
+      "修改方式": "更新"
+    },
+    {
+      "path": "docs/D-真人材料执行清单.md",
+      "bytes": 4475,
+      "sha256": "0e2f0bed07ac2e4e8548e61cf0e6d4315b5aa8365338fbfa01fde4442d79c465",
+      "修改方式": "更新"
+    },
+    {
+      "path": "docs/D-阶段性报告.md",
+      "bytes": 44535,
+      "sha256": "7e62e7517a12dbe7a61977036805418b6f4c1494820bf4f61c8b8d709b9525f0",
+      "修改方式": "更新"
+    },
+    {
+      "path": "frontend/dist/review-service.js",
+      "bytes": 3398,
+      "sha256": "9ecd1f0071c1f8365bd53a7c17267c2c9b5ade32e8ae11d37766ea06d197c7e6",
+      "修改方式": "更新"
+    },
+    {
+      "path": "frontend/tests/service.test.mjs",
+      "bytes": 2922,
+      "sha256": "c0cd1c5a9b332032a8e4375b80d8962c5d6109235121776d6b437da29d89f37a",
+      "修改方式": "更新"
+    }
+  ]
+}

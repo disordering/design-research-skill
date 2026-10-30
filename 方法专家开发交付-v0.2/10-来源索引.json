@@ -1,0 +1,38 @@
+[
+  {
+    "archive_relative_path": "README.md",
+    "packaged_path": "参考来源/README.md",
+    "sha256": "03d73ef3b1181eceb87f842e08031cb31723089b51c8616c9cfec68d047f901b",
+    "use": "原始材料，未改写历史结果；不作为独立测试答案输入模型"
+  },
+  {
+    "archive_relative_path": "判据库_v1.json",
+    "packaged_path": "参考来源/判据库_v1.json",
+    "sha256": "8be40cfe628bf5d914f970ef5b4d5367810eada5e77be432e81bec9937ce3688",
+    "use": "原始材料，未改写历史结果；不作为独立测试答案输入模型"
+  },
+  {
+    "archive_relative_path": "docs/D-测试判定说明-v1.1.md",
+    "packaged_path": "参考来源/D-测试判定说明-v1.1.md",
+    "sha256": "378799d1ae883cf33beafd392a402dcdf292b73011f132f562d07dd3a78fe6d7",
+    "use": "原始材料，未改写历史结果；不作为独立测试答案输入模型"
+  },
+  {
+    "archive_relative_path": "docs/D-单案例复核勘误.md",
+    "packaged_path": "参考来源/D-单案例复核勘误.md",
+    "sha256": "89217e2d931d9014c24e0c94cc8a2d3ad06a17f0451537013e72c7baa0c3616d",
+    "use": "原始材料，未改写历史结果；不作为独立测试答案输入模型"
+  },
+  {
+    "archive_relative_path": "docs/D-Codex三轮一致性对照.md",
+    "packaged_path": "参考来源/D-Codex三轮一致性对照.md",
+    "sha256": "94894016185026ce10c551901a58b8aa969a2d1d966ba0159af75a1f75a75efe",
+    "use": "原始材料，未改写历史结果；不作为独立测试答案输入模型"
+  },
+  {
+    "archive_relative_path": "docs/D-数据收尾结果.md",
+    "packaged_path": "参考来源/D-数据收尾结果.md",
+    "sha256": "49e6530b1e1960c8956359ee486869ca1a25d11b996935ecb42666c1b9a40e0e",
+    "use": "原始材料，未改写历史结果；不作为独立测试答案输入模型"
+  }
+]

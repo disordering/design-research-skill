@@ -1,0 +1,37 @@
+{
+  "purpose": "评审吴山石回收交互案是否逐屏覆盖策划案目的、明确规则和关键交互闭环；重点核对多界面路径、状态切换、操作反馈、异常与恢复，以及与其他职能材料一致或冲突之处。只评审已取得证据，不把静态方案当成已验证运行。",
+  "design_purpose": "为绑定吴山石提供可实际使用的回收渠道，使玩家能够通过分解获得积分并兑换所需吴山石，同时控制包裹压力、经济折损和不同等级/强化套装边界。",
+  "target_user": "",
+  "sources": [
+    {
+      "kind": "figma_board",
+      "reference": "https://www.figma.com/design/dAWQ1dG8pOh5RBHa3CFZ7t/skill?node-id=173-7593",
+      "title": "吴山石回收 · 策划案",
+      "version": "figma-snapshot-2026-11-02",
+      "role": "product_spec",
+      "declared_by": "策划案原作者",
+      "figma_snapshot_id": "wushanshi-20261102"
+    },
+    {
+      "kind": "figma_board",
+      "reference": "https://www.figma.com/design/dAWQ1dG8pOh5RBHa3CFZ7t/skill?node-id=173-7654",
+      "title": "吴山石回收 · 交互案",
+      "version": "figma-snapshot-2026-11-02",
+      "role": "design",
+      "declared_by": "交互案原作者",
+      "figma_snapshot_id": "wushanshi-20261102"
+    }
+  ],
+  "limits": {
+    "max_actions": 4,
+    "max_checks": 64,
+    "max_model_calls": 70,
+    "max_seconds": 2400,
+    "max_images_per_call": 12,
+    "max_material_chunks": 24
+  },
+  "allow_interaction": false,
+  "provider": "deepseek",
+  "model_name": null,
+  "auto_run": false
+}

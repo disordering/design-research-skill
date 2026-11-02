@@ -1,0 +1,23 @@
+{
+  "purpose": "评审 Flex 原型的 Dashboard、Wishlist、Add Item 和返回/取消路径。只进行无真实副作用的原型操作，不操作 Figma 外壳，不提交真实数据。点击需核对真实目标，不能误点 Save 来冒充取消成功。未实现或未验证的分支保留未知，原始业务目的不从评审委托推导。",
+  "design_purpose": "",
+  "target_user": "",
+  "sources": [
+    {
+      "kind": "figma_prototype",
+      "title": "Flex 公共原型，非生产系统",
+      "reference": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2312-5527&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed"
+    }
+  ],
+  "allow_interaction": true,
+  "auto_run": false,
+  "provider": "qwen",
+  "model_name": "qwen3.8-max-0902",
+  "limits": {
+    "max_actions": 12,
+    "max_checks": 32,
+    "max_model_calls": 24,
+    "max_images_per_call": 8,
+    "max_seconds": 600
+  }
+}

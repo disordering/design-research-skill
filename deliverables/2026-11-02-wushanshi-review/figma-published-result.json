@@ -1,0 +1,19 @@
+{
+  "file_key": "dAWQ1dG8pOh5RBHa3CFZ7t",
+  "page": "Page 2",
+  "source_session_id": "session-b111276e8fa64c9d8417b3c6e6487f69",
+  "report_style": "light_background_dark_text",
+  "duplicate_node_id": "199:1203",
+  "report_node_id": "221:1239",
+  "annotation_count": 7,
+  "note_overlap_count": 0,
+  "report_bounds": {
+    "x": 65688,
+    "y": 7797,
+    "width": 1080,
+    "height": 1002
+  },
+  "annotation_mode": "page_level_overlays_next_to_numbered_items",
+  "separate_annotation_frame": false,
+  "archive_run_id": "run-670ae0bc795f465ba57edec80e1711b0"
+}

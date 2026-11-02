@@ -110,7 +110,18 @@ def main() -> None:
     serve_parser.add_argument("--port", type=int, default=8000)
     serve_parser.add_argument("--reload", action="store_true")
 
+    from .session_cli import add_parsers
+    add_parsers(subparsers)
     args = parser.parse_args()
+    if args.command.startswith("session-") or args.command == "figma-login":
+        from .session_cli import execute
+        from .errors import EngineError
+        try:
+            asyncio.run(execute(args, ROOT))
+        except EngineError as exc:
+            print(json.dumps({"ok": False, "code": exc.code, "message": exc.message}, ensure_ascii=False))
+            raise SystemExit(1) from None
+        return
     if args.command == "validate-criteria":
         criteria = CriteriaLibrary.load(args.criteria)
         print(json.dumps({

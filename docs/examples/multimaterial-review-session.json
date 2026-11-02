@@ -1,0 +1,47 @@
+{
+  "purpose": "这是明确标注的合成联调材料，不是真实项目效果评测。请整理原设计目的、策划要求、专家意见与方案标注，检查取消处理是否符合要求，保留未确认意见和没有运行证据的限制。不要操控界面，不把专家建议自动升级为正式要求。",
+  "sources": [
+    {
+      "kind": "document",
+      "title": "合成设计说明",
+      "role": "design_brief",
+      "version": "synthetic-v1",
+      "content": "设计目的：让使用者清楚知道取消不会保存。\n目标用户：第一次使用器材管理工具的人。\n本材料是合成开发联调输入，不是实际项目成绩。"
+    },
+    {
+      "kind": "document",
+      "title": "合成策划案",
+      "role": "product_spec",
+      "declared_by": "synthetic-planner",
+      "version": "synthetic-v1",
+      "content": "策划要求：点击取消后不得保存草稿。"
+    },
+    {
+      "kind": "document",
+      "title": "合成专家意见",
+      "role": "expert_opinion",
+      "declared_by": "synthetic-expert",
+      "version": "synthetic-v1",
+      "content": "专家建议：取消时保留用户已填写的草稿。这是一条待讨论的建议，尚未确认作为正式要求。"
+    },
+    {
+      "kind": "document",
+      "title": "合成方案标注",
+      "role": "design",
+      "evidence_kind": "design",
+      "version": "synthetic-v1",
+      "content": "方案标注：取消按钮返回列表，草稿被保留。本材料只描述设计方案，没有实际运行或真实用户观察。"
+    }
+  ],
+  "provider": "qwen",
+  "model_name": "qwen3.8-max-0902",
+  "allow_interaction": false,
+  "auto_run": false,
+  "limits": {
+    "max_checks": 64,
+    "max_actions": 0,
+    "max_model_calls": 24,
+    "max_material_chunks": 24,
+    "max_seconds": 900
+  }
+}

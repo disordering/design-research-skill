@@ -24,12 +24,16 @@ def compute_pipeline_metrics(
     reference_elements: list[UIElement] | None = None,
 ) -> dict[str, Any]:
     rgb = image.convert("RGB")
+    # Connectors describe flow relationships, not visual UI controls. Keeping
+    # them out of density/focus/style statistics avoids a thin arrow inheriting
+    # the same weight as a button or panel.
+    metric_elements = [element for element in elements if element.role != "connector"]
     global_metrics = _global_metrics(rgb)
-    focus = _focus_metrics(rgb, elements)
+    focus = _focus_metrics(rgb, metric_elements)
     readability = _readability_metrics(rgb, ocr_blocks)
-    density = _density_metrics(rgb, elements, ocr_blocks)
-    style = _style_metrics(rgb, elements)
-    prototype = _prototype_alignment(elements, reference_elements or [])
+    density = _density_metrics(rgb, metric_elements, ocr_blocks)
+    style = _style_metrics(rgb, metric_elements)
+    prototype = _prototype_alignment(metric_elements, reference_elements or [])
     return {
         "metric_version": METRIC_VERSION,
         "image": {

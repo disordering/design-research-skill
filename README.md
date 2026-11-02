@@ -108,7 +108,7 @@ python -m pip install -r requirements-dev.txt
 - 视觉理解：`qwen3.8-flash`
 - 综合推理：`qwen3.8-max-0902`
 - 判据相关性：文本向量、文本重排、多模态向量和多模态重排
-- GUI 操作辅助：`gui-plus-2026-02-26`
+- GUI 操作辅助：`gui-plus`
 
 平台入口：
 
@@ -178,6 +178,26 @@ python -m engine serve --port 8000
 ```
 
 主要接口为 `POST /api/review-audit`，健康检查为 `GET /healthz`，接口文档位于 `http://127.0.0.1:8000/docs`。
+
+### 协同会话后端（B 开发版）
+
+已新增独立的 `/api/review-sessions` 接口、版本化方法加载、证据/状态/路径记录、问答事件、重查和报告存储；旧单图接口保留。原型执行支持画布截图、坐标映射、点击前目标核对、滚动和无效果判定；报告包含实际状态轨迹，评审委托与原始设计目的分开。C 界面尚未接入，新工具效果仍需 D 验收。三类入口的实际读取/操作和权限状态以运行证据为准，配置存在不等于接入已通过。
+
+2026-11-02 继续推进 B2/B3：增加 PDF/DOCX/文本/网页文档读取与原始文件留存；AI 分别提取原设计目的、正式要求、专家意见和材料冲突，再生成逐项适用性/取证计划。动作规划读取计划中的缺项；判断与报告关联要求原文和方案/表现证据。补充与明确业务决定会触发重新理解和重查，不把专家建议自动升级为要求，也不把业务取舍当作实现修复。联调输入见 [`docs/examples/multimaterial-review-session.json`](docs/examples/multimaterial-review-session.json)，是合成开发材料，不作工具准确率成绩。
+
+真实 Figma 多界面材料也已接入：策划案按正式要求读取，交互案按方案证据读取；长流程画板会保留全文索引并自动展开核心界面图。示例见 [`docs/examples/wushanshi-figma-review-session.json`](docs/examples/wushanshi-figma-review-session.json)，本次接入记录与边界见 [`docs/wushanshi-figma-integration.md`](docs/wushanshi-figma-integration.md)。千问权限恢复后完成 45 项判断，确认一条“排序布局与策划规则不一致”的候选发现；其余动态行为保留待验证，不作为产品验收成绩。
+
+当前会话引擎加载 A 的 `0.2-method-draft`：24 条 R、24 条执行补充、E01–E08，以及 T01–T10 技术路径。报告输出分为面向人的精准报告、逐步审计报告和机器可读 JSON：人审版突出结论、目标对应、关键发现与缺口；审计版保留全量检查输入输出、模型响应和原始附件。格式说明见 [`docs/report-format.md`](docs/report-format.md)。API 新增 `/structured-report` 和 `/package`，CLI 使用 `session-export ... --package --zip`。
+
+会话评审不是纯提示词：当前已接回确定性的视觉指标、Figma/DOM 结构、可读性、密度、风格和显著性代理，并保留原始分析 JSON 与叠加图。感知与语义分工见 [`docs/perception-and-semantic-chain.md`](docs/perception-and-semantic-chain.md)。
+
+```powershell
+python -m pip install -r requirements-session.txt
+python -m playwright install chromium
+python -m engine session-capabilities
+```
+
+模型 Key 只写入被忽略的 `config/reviewer.toml`。当前使用 Figma 桌面本地 MCP：在桌面端 `Ctrl+K` 搜索 `MCP`，启用服务后配置 `http://127.0.0.1:3845/mcp`；无需复制 Codex 凭据。远程服务的客户端准入限制单列说明。启动、API 契约、CLI、限制和准备材料见 [`docs/b-session-implementation.md`](docs/b-session-implementation.md)，可创建但不会自动调用模型的请求示例见 [`docs/examples/flex-review-session.json`](docs/examples/flex-review-session.json)。
 
 
 

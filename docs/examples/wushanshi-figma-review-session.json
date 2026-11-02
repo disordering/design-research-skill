@@ -1,0 +1,33 @@
+{
+  "purpose": "审查吴山石回收交互案是否覆盖策划案中的原设计目的、允许分解的等级与强化套装限制、筛选记忆、排序、积分商店、提示和获取途径。区分静态方案标注可证明的问题与仍需原型/开发环境验证的实际行为；不把隐藏节点或美术需求当成已实现功能。",
+  "sources": [
+    {
+      "kind": "figma_board",
+      "title": "吴山石回收 · 策划案",
+      "reference": "https://www.figma.com/design/dAWQ1dG8pOh5RBHa3CFZ7t/skill?node-id=173-7593",
+      "role": "product_spec",
+      "evidence_kind": "requirement",
+      "version": "figma-node-173-7593"
+    },
+    {
+      "kind": "figma_board",
+      "title": "吴山石回收 · 交互案",
+      "reference": "https://www.figma.com/design/dAWQ1dG8pOh5RBHa3CFZ7t/skill?node-id=173-7654",
+      "role": "design",
+      "evidence_kind": "design",
+      "version": "figma-node-173-7654"
+    }
+  ],
+  "provider": "qwen",
+  "model_name": "qwen3.8-max-0902",
+  "allow_interaction": false,
+  "auto_run": false,
+  "limits": {
+    "max_checks": 64,
+    "max_actions": 16,
+    "max_model_calls": 36,
+    "max_images_per_call": 8,
+    "max_material_chunks": 24,
+    "max_seconds": 1800
+  }
+}

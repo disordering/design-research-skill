@@ -33,6 +33,7 @@ def create_app(
     *,
     criteria_path: str | Path = DEFAULT_CRITERIA_PATH,
     engine_factory: EngineFactory | None = None,
+    session_service_factory: Callable | None = None,
 ) -> FastAPI:
     criteria = CriteriaLibrary.load(criteria_path)
     factory = engine_factory or _default_engine_factory(criteria)
@@ -176,6 +177,8 @@ def create_app(
             analysis_mode=payload.analysis_mode,
         )
 
+    from .session_api import install_session_routes
+    install_session_routes(app, session_service_factory)
     return app
 
 

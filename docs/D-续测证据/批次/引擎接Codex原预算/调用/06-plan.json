@@ -1,0 +1,13 @@
+{
+  "次序": 6,
+  "操作": "plan",
+  "输入文本字符": 31891,
+  "输入文本SHA256": "bb5cb2124e5aba45ce2c0df148c13760355f463c1062b5e599b343d120689709",
+  "图片指纹": [
+    "65d47d9ae63f26f6b5bbc4d9ab61ffc1a8ae68413c18675b16c7f90cb010755a"
+  ],
+  "开始": "2026-11-03T19:03:39.488646+00:00",
+  "Codex会话": "01a1a2cb-ad7a-7ee1-92d5-f6396566ed55",
+  "模型原答": "{\n  \"task_summary\": \"TASK01 核对“课程提醒”的“开启／关闭”和“作业到期”的“ON／OFF”，分别判断画面能否区分当前选择。TASK02 定位两行各自的调整选项及卡片右下角的“保存设置”按钮。\",\n  \"scope\": \"仅评审所附“个人设置”静态画面中的选项、选中标记和操作入口。选择后的变化、保存反馈及已保存值超出本次范围。\",\n  \"goals\": [],\n  \"requirements\": [],\n  \"assumptions\": [],\n  \"questions\": [],\n  \"action\": {\n    \"source_id\": \"src-da076a3af03d4740afa0d4552a1aef4a\",\n    \"kind\": \"observe\",\n    \"expected_state_id\": \"490a35029c5a2cd09ff58635\",\n    \"reason\": \"在同一张截图中对照“开启”的蓝底与“关闭”的白底，检查 ON 和 OFF 是否也有可区分的选中标记，并核对各组选项与行标签、保存入口的位置。\",\n    \"requires_explicit_authorization\": false,\n    \"evidence_ids\": [\"ev-6feecfb26247416bab7e0910276f6258\"]\n  },\n  \"ready_for_review\": true,\n  \"priority_refs\": [\"R17\", \"E03\", \"R18\", \"R19\", \"R06\", \"R12\"],\n  \"question_resolutions\": []\n}",
+  "实际耗时毫秒": 13969
+}

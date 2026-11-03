@@ -1,0 +1,8 @@
+{
+  "实验": "快照 A 的 images 子目录指向相邻快照 B",
+  "请求路径": "a/images/1-1.png",
+  "解析到": "b/images/1-1.png",
+  "结果": "verified_snapshot",
+  "文件身份匹配": true,
+  "取得图像字节": 75
+}

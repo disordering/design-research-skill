@@ -1,0 +1,11 @@
+{
+  "version": "D-WEB-1.0",
+  "reset": "每次使用全新浏览器上下文；同一标签页重做时打开入口并加 ?reset=1",
+  "common_files_for_C": ["public/index.html", "public/common.js", "public/style.css"],
+  "cases": [
+    {"id":"W01","url_path":"/w01/","purpose":"为 4 位同学预约南馆二号讨论室，首选 15 点，若无法预约则选择下一可用时段，核对最终预约。","requirements":"requirements/w01.md","entry_script":"public/w01/app.js"},
+    {"id":"W02","url_path":"/w02/","purpose":"将 13 页讲义双面打印 2 份，比较送往六号楼与到店自取的报价，最终选择自取并提交。","requirements":"requirements/w02.md","entry_script":"public/w02/app.js"},
+    {"id":"W03","url_path":"/w03/","purpose":"为 R-204 的投影仪报修，填写“接通电源后没有画面”。先存草稿，再继续提交，找到可以跟踪的工单。","requirements":"requirements/w03.md","entry_script":"public/w03/app.js"},
+    {"id":"W04","url_path":"/w04/","purpose":"先查看陶艺体验是否可以报名，必要时改报篆刻入门。查看自己的报名，取消前先返回核对，最后取消。","requirements":"requirements/w04.md","entry_script":"public/w04/app.js"}
+  ]
+}

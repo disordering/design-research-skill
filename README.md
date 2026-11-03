@@ -559,7 +559,7 @@ python -m engine session-evaluate <session_id> <labels.json>
 python -m engine session-batch-evaluate <manifest.json>
 ```
 
-当前全仓回归包含 224 项通过。测试证明契约和控制流，不证明模型准确率或真实用户体验。
+评分结果 1.1 版分别记录问题预测条数、命中参考数和命中预测数。一条有两处独立证据的发现可命中两个参考；无分母的比率返回 `null`。计数示例和本地回归结果见 [D 的三项修复复测](docs/D-三项修复复测.md)。
 评价指标、独立标注和验收方法见
 [`docs/interaction-review-engine-audit-2026-11-03.md`](docs/interaction-review-engine-audit-2026-11-03.md)。
 

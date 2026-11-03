@@ -523,7 +523,12 @@ def test_review_instruction_alone_cannot_become_a_formal_product_requirement(tmp
     asyncio.run(run())
 
 
-def test_planned_not_applicable_check_does_not_turn_missing_execution_into_failure(tmp_path):
+@pytest.mark.parametrize(("ref", "expected"), [
+    ("R21", "not_applicable"),
+    ("E07", "insufficient_evidence"),
+    ("E08", "needs_clarification"),
+])
+def test_planned_not_applicable_check_does_not_turn_missing_execution_into_failure(tmp_path, ref, expected):
     class InsufficientJudge(FixtureModel):
         async def complete(self, messages, **kwargs):
             data = json.loads(messages[1]["content"][0]["text"])
@@ -548,14 +553,15 @@ def test_planned_not_applicable_check_does_not_turn_missing_execution_into_failu
         service, model = create_service(tmp_path, model=InsufficientJudge())
         session = service.create(request(limits={"max_checks": 1}))
         await service._read_sources(session)
-        service._prepare_checks(session, ["R21"])
-        check = next(c for c in session.checks if c.ref == "R21")
+        service._prepare_checks(session, [ref])
+        check = next(c for c in session.checks if c.ref == ref)
         check.applicability = "not_applicable"
         check.plan_reason = "No error-state object exists in this material."
         check.evidence_ids = [session.evidence[0].evidence_id]
         await service._judge(session, model)
         assert check.execution_status == "executed"
-        assert check.decision == "not_applicable"
+        assert check.applicability == "not_applicable"
+        assert check.decision == expected
         assert not session.findings
     asyncio.run(run())
 

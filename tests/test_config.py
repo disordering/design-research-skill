@@ -1,14 +1,16 @@
-from engine.config import config_health, load_reviewer_config, validate_reviewer_config
+from engine.config import DEFAULT_EXAMPLE_CONFIG_PATH, config_health, load_reviewer_config, validate_reviewer_config
 from engine.errors import EngineError
 from engine.local_model import LocalModelSettings
 
 
-def test_local_config_is_valid_and_redacts_key():
-    config = load_reviewer_config(required=True)
+def test_example_config_is_valid_and_redacts_key(monkeypatch):
+    monkeypatch.setenv("DASHSCOPE_API_KEY", "仅测试脱敏")
+    config = load_reviewer_config(DEFAULT_EXAMPLE_CONFIG_PATH, required=True)
     assert config["providers"]["qwen"]["reasoning_model"] == "qwen3.8-max-0902"
     health = config_health(config)
     assert "api_key" not in health["providers"]["qwen"]
-    assert "api_key_configured" in health["providers"]["qwen"]
+    assert health["providers"]["qwen"]["api_key_configured"] is True
+    assert "仅测试脱敏" not in str(health)
 
 
 def test_placeholder_key_is_reported_without_blocking_syntax(tmp_path, monkeypatch):
@@ -61,7 +63,8 @@ max_new_tokens = 2048
     assert settings.max_new_tokens == 2048
 
 
-def test_local_provider_respects_disabled_flag():
+def test_local_provider_respects_disabled_flag(monkeypatch):
+    monkeypatch.setenv("REVIEW_CONFIG", str(DEFAULT_EXAMPLE_CONFIG_PATH))
     try:
         LocalModelSettings.from_provider("local_holo")
     except EngineError as exc:

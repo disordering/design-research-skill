@@ -2,16 +2,24 @@ import asyncio
 import json
 
 import httpx
+import pytest
 
+from engine.config import DEFAULT_EXAMPLE_CONFIG_PATH
 from engine.model import ModelSettings, OpenAICompatibleModel
 
 
-def test_qwen_preset_uses_openai_compatible_url(monkeypatch):
+@pytest.mark.parametrize(("use_example", "expected_model"), [
+    (True, "qwen3.8-max-0902"),
+    (False, "qwen3.8-flash"),
+])
+def test_qwen_preset_uses_openai_compatible_url(tmp_path, monkeypatch, use_example, expected_model):
+    config = DEFAULT_EXAMPLE_CONFIG_PATH if use_example else tmp_path / "absent.toml"
+    monkeypatch.setenv("REVIEW_CONFIG", str(config))
     monkeypatch.setenv("DASHSCOPE_API_KEY", "test-key")
     monkeypatch.delenv("REVIEW_BASE_URL", raising=False)
     monkeypatch.delenv("REVIEW_MODEL", raising=False)
     settings = ModelSettings.from_env("qwen", None)
-    assert settings.model == "qwen3.8-max-0902"
+    assert settings.model == expected_model
     assert settings.chat_completions_url == (
         "https://maas.qianwenaiapi.com/compatible-mode/v1/chat/completions"
     )

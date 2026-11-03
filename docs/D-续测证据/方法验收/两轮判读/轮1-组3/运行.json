@@ -1,0 +1,34 @@
+{
+  "exit": 0,
+  "seconds": 18.96,
+  "completed_item_types": [
+    "agent_message"
+  ],
+  "thread_id": "01a1a2c2-41b2-7f82-9220-2dc90ccbd037",
+  "usage": [
+    {
+      "input_tokens": 14756,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 522,
+      "reasoning_output_tokens": 0
+    }
+  ],
+  "input_sha256": "a68e5fb06a848ffdc9334049194b35f40455cfcc27c58a746e85b60341be327c",
+  "mapping": {
+    "K01": "QA02",
+    "K02": "QA24",
+    "K03": "QA29",
+    "K04": "QA19",
+    "K05": "QA23",
+    "K06": "QA12",
+    "K07": "QA06",
+    "K08": "QA21",
+    "K09": "QA28",
+    "K10": "QA22",
+    "K11": "QA03",
+    "K12": "QA18",
+    "K13": "C09",
+    "K14": "QA17"
+  }
+}

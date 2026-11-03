@@ -1,0 +1,18 @@
+✔ preserves report, multiple rules, critical severity and separate rule results (2.7033ms)
+✔ stub never presented as real analysis and new round never inherits confirmations (0.2024ms)
+✔ invalid bounds and unknown severity rejected (0.5376ms)
+✔ followup contains original finding and human feedback; oversized input fails before request (0.5307ms)
+✔ one result per old issue; rule overlap is only a candidate and disappearance never means resolved (0.7828ms)
+✔ confirmed solved state requires reason and visible evidence; preserves pending source (0.3093ms)
+✔ foreign new IDs rejected, human exclusion distinguished from solved (0.1368ms)
+✔ feedback keeps stable IDs, audit snapshot and user changes without mutating prior version (920.6206ms)
+✔ recheck retains original image and excludes rejected finding (918.2501ms)
+✔ 修改目标后问题描述同步更新，并保留人工审核与旧版本 (921.2575ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2782.3092

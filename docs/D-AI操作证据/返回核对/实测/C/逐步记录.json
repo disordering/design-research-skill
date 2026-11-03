@@ -1,0 +1,139 @@
+{
+  "run_type": "AI 模拟操作（非真人）",
+  "strategy": "返回后核对已选项，有误先修正，再次核对后提交",
+  "task": "C",
+  "task_material": "C-H05\\打开界面.html",
+  "target": "周五 14:00–14:30 二层服务台",
+  "browser": "Microsoft Edge 156.0.4314.58",
+  "viewport": [
+    1200,
+    900
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "stage": "初始选项",
+      "action": "从空白浏览器上下文首次打开",
+      "utc": "2026-11-03T18:43:05.224+00:00",
+      "image": "01-初始选项.png",
+      "visible_text": "禾页书屋\n服务登记 / 修书咨询登记\n第 1 步，共 3 步\n选择时段\n\n为手头的书选择合适的咨询时段。\n\n周五 09:00–09:30\n一层服务台\n周五 14:00–14:30\n二层服务台\n核对信息\n禾页书屋　|　修书咨询登记",
+      "accessibility_snapshot": "- text: 禾页书屋 服务登记 / 修书咨询登记\n- main:\n  - article:\n    - text: 第 1 步，共 3 步\n    - heading \"选择时段\" [level=1]\n    - paragraph: 为手头的书选择合适的咨询时段。\n    - radiogroup \"可选时段\":\n      - radio \"周五 09:00–09:30 一层服务台\" [checked]\n      - strong: 周五 09:00–09:30\n      - text: 一层服务台\n      - radio \"周五 14:00–14:30 二层服务台\"\n      - strong: 周五 14:00–14:30\n      - text: 二层服务台\n    - button \"核对信息\"\n- contentinfo: 禾页书屋 | 修书咨询登记",
+      "radio_options": [
+        "周五 09:00–09:30 一层服务台",
+        "周五 14:00–14:30 二层服务台"
+      ],
+      "checked_option": "周五 09:00–09:30 一层服务台",
+      "displayed_fields": {}
+    },
+    {
+      "step": 2,
+      "stage": "选择下午",
+      "action": "点选「周五 14:00–14:30 二层服务台」",
+      "utc": "2026-11-03T18:43:05.263+00:00",
+      "image": "02-选择下午.png",
+      "visible_text": "禾页书屋\n服务登记 / 修书咨询登记\n第 1 步，共 3 步\n选择时段\n\n为手头的书选择合适的咨询时段。\n\n周五 09:00–09:30\n一层服务台\n周五 14:00–14:30\n二层服务台\n核对信息\n禾页书屋　|　修书咨询登记",
+      "accessibility_snapshot": "- text: 禾页书屋 服务登记 / 修书咨询登记\n- main:\n  - article:\n    - text: 第 1 步，共 3 步\n    - heading \"选择时段\" [level=1]\n    - paragraph: 为手头的书选择合适的咨询时段。\n    - radiogroup \"可选时段\":\n      - radio \"周五 09:00–09:30 一层服务台\"\n      - strong: 周五 09:00–09:30\n      - text: 一层服务台\n      - radio \"周五 14:00–14:30 二层服务台\" [checked]\n      - strong: 周五 14:00–14:30\n      - text: 二层服务台\n    - button \"核对信息\"\n- contentinfo: 禾页书屋 | 修书咨询登记",
+      "radio_options": [
+        "周五 09:00–09:30 一层服务台",
+        "周五 14:00–14:30 二层服务台"
+      ],
+      "checked_option": "周五 14:00–14:30 二层服务台",
+      "displayed_fields": {}
+    },
+    {
+      "step": 3,
+      "stage": "首次核对",
+      "action": "点击「核对信息」",
+      "utc": "2026-11-03T18:43:05.299+00:00",
+      "image": "03-首次核对.png",
+      "visible_text": "禾页书屋\n服务登记 / 修书咨询登记\n第 2 步，共 3 步\n核对信息\n日期\n周五\n时段\n14:00–14:30\n服务台\n二层服务台\n返回选择\n提交登记\n禾页书屋　|　修书咨询登记",
+      "accessibility_snapshot": "- text: 禾页书屋 服务登记 / 修书咨询登记\n- main:\n  - article:\n    - text: 第 2 步，共 3 步\n    - heading \"核对信息\" [level=1]\n    - term: 日期\n    - definition: 周五\n    - term: 时段\n    - definition: 14:00–14:30\n    - term: 服务台\n    - definition: 二层服务台\n    - button \"返回选择\"\n    - button \"提交登记\"\n- contentinfo: 禾页书屋 | 修书咨询登记",
+      "radio_options": [],
+      "checked_option": null,
+      "displayed_fields": {
+        "日期": "周五",
+        "时段": "14:00–14:30",
+        "服务台": "二层服务台"
+      }
+    },
+    {
+      "step": 4,
+      "stage": "返回状态",
+      "action": "点击「返回选择」，先观察当前选中项",
+      "utc": "2026-11-03T18:43:05.330+00:00",
+      "image": "04-返回状态.png",
+      "visible_text": "禾页书屋\n服务登记 / 修书咨询登记\n第 1 步，共 3 步\n选择时段\n\n为手头的书选择合适的咨询时段。\n\n周五 09:00–09:30\n一层服务台\n周五 14:00–14:30\n二层服务台\n核对信息\n禾页书屋　|　修书咨询登记",
+      "accessibility_snapshot": "- text: 禾页书屋 服务登记 / 修书咨询登记\n- main:\n  - article:\n    - text: 第 1 步，共 3 步\n    - heading \"选择时段\" [level=1]\n    - paragraph: 为手头的书选择合适的咨询时段。\n    - radiogroup \"可选时段\":\n      - radio \"周五 09:00–09:30 一层服务台\"\n      - strong: 周五 09:00–09:30\n      - text: 一层服务台\n      - radio \"周五 14:00–14:30 二层服务台\" [checked]\n      - strong: 周五 14:00–14:30\n      - text: 二层服务台\n    - button \"核对信息\"\n- contentinfo: 禾页书屋 | 修书咨询登记",
+      "radio_options": [
+        "周五 09:00–09:30 一层服务台",
+        "周五 14:00–14:30 二层服务台"
+      ],
+      "checked_option": "周五 14:00–14:30 二层服务台",
+      "displayed_fields": {}
+    },
+    {
+      "step": 5,
+      "stage": "最终核对",
+      "action": "点击「核对信息」，核实目标后继续",
+      "utc": "2026-11-03T18:43:05.362+00:00",
+      "image": "05-最终核对.png",
+      "visible_text": "禾页书屋\n服务登记 / 修书咨询登记\n第 2 步，共 3 步\n核对信息\n日期\n周五\n时段\n14:00–14:30\n服务台\n二层服务台\n返回选择\n提交登记\n禾页书屋　|　修书咨询登记",
+      "accessibility_snapshot": "- text: 禾页书屋 服务登记 / 修书咨询登记\n- main:\n  - article:\n    - text: 第 2 步，共 3 步\n    - heading \"核对信息\" [level=1]\n    - term: 日期\n    - definition: 周五\n    - term: 时段\n    - definition: 14:00–14:30\n    - term: 服务台\n    - definition: 二层服务台\n    - button \"返回选择\"\n    - button \"提交登记\"\n- contentinfo: 禾页书屋 | 修书咨询登记",
+      "radio_options": [],
+      "checked_option": null,
+      "displayed_fields": {
+        "日期": "周五",
+        "时段": "14:00–14:30",
+        "服务台": "二层服务台"
+      }
+    },
+    {
+      "step": 6,
+      "stage": "完成结果",
+      "action": "点击「提交登记」",
+      "utc": "2026-11-03T18:43:05.394+00:00",
+      "image": "06-完成结果.png",
+      "visible_text": "禾页书屋\n服务登记 / 修书咨询登记\n第 3 步，共 3 步\n登记完成\n\n本次登记信息如下。\n\n日期\n周五\n时段\n09:00–09:30\n服务台\n一层服务台\n重新开始\n禾页书屋　|　修书咨询登记",
+      "accessibility_snapshot": "- text: 禾页书屋 服务登记 / 修书咨询登记\n- main:\n  - article:\n    - text: 第 3 步，共 3 步\n    - heading \"登记完成\" [level=1]\n    - paragraph: 本次登记信息如下。\n    - term: 日期\n    - definition: 周五\n    - term: 时段\n    - definition: 09:00–09:30\n    - term: 服务台\n    - definition: 一层服务台\n    - button \"重新开始\"\n- contentinfo: 禾页书屋 | 修书咨询登记",
+      "radio_options": [],
+      "checked_option": null,
+      "displayed_fields": {
+        "日期": "周五",
+        "时段": "09:00–09:30",
+        "服务台": "一层服务台"
+      }
+    }
+  ],
+  "clicks_after_open": 5,
+  "extra_reselection_clicks": 0,
+  "counting_rule": "规定路径有 5 次点击（选择下午、核对、返回、再次核对、提交）。只将返回后为恢复下午而重选的点击计为额外操作。",
+  "requirements": [
+    {
+      "id": 1,
+      "observed": "符合",
+      "images": [
+        "01-初始选项.png",
+        "02-选择下午.png"
+      ],
+      "detail": "可见选项：周五 09:00–09:30 一层服务台 / 周五 14:00–14:30 二层服务台。初始勾选「周五 09:00–09:30 一层服务台」，点选后勾选「周五 14:00–14:30 二层服务台」。"
+    },
+    {
+      "id": 2,
+      "observed": "符合",
+      "images": [
+        "03-首次核对.png",
+        "04-返回状态.png"
+      ],
+      "detail": "首次核对显示 ['周五', '14:00–14:30', '二层服务台']。点击返回后画面上勾选「周五 14:00–14:30 二层服务台」。"
+    },
+    {
+      "id": 3,
+      "observed": "不符合",
+      "images": [
+        "05-最终核对.png",
+        "06-完成结果.png"
+      ],
+      "detail": "最终核对显示 ['周五', '14:00–14:30', '二层服务台']。提交后的完成页正文为「禾页书屋\n服务登记 / 修书咨询登记\n第 3 步，共 3 步\n登记完成\n\n本次登记信息如下。\n\n日期\n周五\n时段\n09:00–09:30\n服务台\n一层服务台\n重新开始\n禾页书屋　|　修书咨询登记」。"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "图": "01-首页.jpg",
+    "操作": "打开仓库中的 Flex 原型",
+    "页面": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2312-5527&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed",
+    "时刻": "2026-11-03T18:22:35.077Z"
+  },
+  {
+    "图": "02-空清单.jpg",
+    "操作": "点首页底部 Wishlist",
+    "页面": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2289-2407&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed",
+    "时刻": "2026-11-03T18:22:42.117Z"
+  },
+  {
+    "图": "03-空表单.jpg",
+    "操作": "点空清单 Add Item",
+    "页面": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2289-2448&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed",
+    "时刻": "2026-11-03T18:22:52.172Z"
+  },
+  {
+    "图": "04-点取消后.jpg",
+    "操作": "点击底部 Cancel 可见区域（635,632），停留在 Add Item",
+    "页面": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2289-2448&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed",
+    "时刻": "2026-11-03T18:22:59.264Z"
+  },
+  {
+    "图": "05-取消完整可见.jpg",
+    "操作": "在表单内向下滚动，确认 Cancel 与 Save 分离",
+    "页面": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2289-2448&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed",
+    "时刻": "2026-11-03T18:23:02.670Z"
+  },
+  {
+    "图": "06-取消后仍是表单.jpg",
+    "操作": "准确点击完整 Cancel 中心（638,534）",
+    "页面": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2289-2448&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed",
+    "时刻": "2026-11-03T18:23:06.810Z"
+  },
+  {
+    "图": "07-点标题返回后.jpg",
+    "操作": "点击 Add Item 标题左侧应用内箭头（525,125），观察稳定页面",
+    "页面": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2289-2448&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed",
+    "时刻": "2026-11-03T18:23:10.849Z"
+  },
+  {
+    "图": "08-复位首页.jpg",
+    "操作": "重新打开同一仓库入口，复位至首页",
+    "页面": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2312-5527&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed",
+    "时刻": "2026-11-03T18:24:19.339Z"
+  },
+  {
+    "图": "09-再入清单.jpg",
+    "操作": "从复位首页再次进入 Wishlist",
+    "页面": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2289-2407&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed",
+    "时刻": "2026-11-03T18:24:24.571Z"
+  },
+  {
+    "图": "10-清单返回首页.jpg",
+    "操作": "点 My Wishlist 左上箭头（525,122）后返回 Dashboard",
+    "页面": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2312-5527&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed",
+    "时刻": "2026-11-03T18:24:27.950Z"
+  },
+  {
+    "图": "11-再入空表单.jpg",
+    "操作": "重新从清单点 Add Item，先检查返回，再检查取消",
+    "页面": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2289-2448&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed",
+    "时刻": "2026-11-03T18:24:38.795Z"
+  },
+  {
+    "图": "12-再次点表单返回.jpg",
+    "操作": "空表单顶部直接点返回（525,125），仍是 Add Item",
+    "页面": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2289-2448&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed",
+    "时刻": "2026-11-03T18:24:42.347Z"
+  },
+  {
+    "图": "13-再次点取消后.jpg",
+    "操作": "再次点完整 Cancel 中心（638,534），仍是 Add Item",
+    "页面": "https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2289-2448&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed",
+    "时刻": "2026-11-03T18:24:51.697Z"
+  }
+]

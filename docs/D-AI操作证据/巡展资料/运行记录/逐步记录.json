@@ -1,0 +1,218 @@
+{
+  "来源": "AI 在本机 Chromium 操作 D-HOLDOUT-1.1 演示页",
+  "浏览器版本": "156.0.8078.4",
+  "轮次": [
+    {
+      "轮次": "撤销边界",
+      "步骤": [
+        {
+          "操作": "新上下文，打开资料目录",
+          "页面可见文字": "随行资料\n\n资料目录\n\n按分类浏览，加入今天要带到现场的资料。\n\n分类\n全部资料\n展签\n导览\n查看清单（0）\n温度与釉色\n展签\n加入清单\n匠人手记\n导览\n加入清单\n灯下的刻纹\n展签\n加入清单",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"资料目录\" [level=1]\n  - paragraph: 按分类浏览，加入今天要带到现场的资料。\n  - navigation \"资料操作\":\n    - text: 分类\n    - combobox \"分类\":\n      - option \"全部资料\" [selected]\n      - option \"展签\"\n      - option \"导览\"\n    - button \"查看清单（0）\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"加入清单\"\n    - article:\n      - strong: 匠人手记\n      - text: 导览\n      - button \"加入清单\"\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"加入清单\"\n  - status",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "匠人手记",
+            "灯下的刻纹"
+          ]
+        },
+        {
+          "操作": "选择分类“展签”",
+          "页面可见文字": "随行资料\n\n资料目录\n\n按分类浏览，加入今天要带到现场的资料。\n\n分类\n全部资料\n展签\n导览\n查看清单（0）\n温度与釉色\n展签\n加入清单\n灯下的刻纹\n展签\n加入清单",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"资料目录\" [level=1]\n  - paragraph: 按分类浏览，加入今天要带到现场的资料。\n  - navigation \"资料操作\":\n    - text: 分类\n    - combobox \"分类\":\n      - option \"全部资料\"\n      - option \"展签\" [selected]\n      - option \"导览\"\n    - button \"查看清单（0）\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"加入清单\"\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"加入清单\"\n  - status",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ],
+          "截图": "截图/撤销边界/02-只看展签.png"
+        },
+        {
+          "操作": "加入《温度与釉色》",
+          "页面可见文字": "随行资料\n\n资料目录\n\n按分类浏览，加入今天要带到现场的资料。\n\n分类\n全部资料\n展签\n导览\n查看清单（1）\n温度与釉色\n展签\n已加入\n灯下的刻纹\n展签\n加入清单\n\n已加入《温度与釉色》。",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"资料目录\" [level=1]\n  - paragraph: 按分类浏览，加入今天要带到现场的资料。\n  - navigation \"资料操作\":\n    - text: 分类\n    - combobox \"分类\":\n      - option \"全部资料\"\n      - option \"展签\" [selected]\n      - option \"导览\"\n    - button \"查看清单（1）\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"已加入\" [disabled]\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"加入清单\"\n  - status: 已加入《温度与釉色》。",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ],
+          "截图": "截图/撤销边界/03-首份已加入.png"
+        },
+        {
+          "操作": "检查能否再次加入同一份资料：“已加入”按钮禁用",
+          "页面可见文字": "随行资料\n\n资料目录\n\n按分类浏览，加入今天要带到现场的资料。\n\n分类\n全部资料\n展签\n导览\n查看清单（1）\n温度与釉色\n展签\n已加入\n灯下的刻纹\n展签\n加入清单\n\n已加入《温度与釉色》。",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"资料目录\" [level=1]\n  - paragraph: 按分类浏览，加入今天要带到现场的资料。\n  - navigation \"资料操作\":\n    - text: 分类\n    - combobox \"分类\":\n      - option \"全部资料\"\n      - option \"展签\" [selected]\n      - option \"导览\"\n    - button \"查看清单（1）\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"已加入\" [disabled]\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"加入清单\"\n  - status: 已加入《温度与釉色》。",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ]
+        },
+        {
+          "操作": "加入《灯下的刻纹》",
+          "页面可见文字": "随行资料\n\n资料目录\n\n按分类浏览，加入今天要带到现场的资料。\n\n分类\n全部资料\n展签\n导览\n查看清单（2）\n温度与釉色\n展签\n已加入\n灯下的刻纹\n展签\n已加入\n\n已加入《灯下的刻纹》。",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"资料目录\" [level=1]\n  - paragraph: 按分类浏览，加入今天要带到现场的资料。\n  - navigation \"资料操作\":\n    - text: 分类\n    - combobox \"分类\":\n      - option \"全部资料\"\n      - option \"展签\" [selected]\n      - option \"导览\"\n    - button \"查看清单（2）\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"已加入\" [disabled]\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"已加入\" [disabled]\n  - status: 已加入《灯下的刻纹》。",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ]
+        },
+        {
+          "操作": "查看清单",
+          "页面可见文字": "随行资料\n\n随行清单\n\n共 2 份资料。\n\n返回目录\n温度与釉色\n展签\n移出\n灯下的刻纹\n展签\n移出",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"随行清单\" [level=1]\n  - paragraph: 共 2 份资料。\n  - navigation \"资料操作\":\n    - button \"返回目录\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"移出\"\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"移出\"\n  - status",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ],
+          "截图": "截图/撤销边界/06-移出前.png"
+        },
+        {
+          "操作": "移出《温度与釉色》",
+          "页面可见文字": "随行资料\n\n随行清单\n\n共 1 份资料。\n\n返回目录\n撤销刚才移除\n灯下的刻纹\n展签\n移出\n\n已移出《温度与釉色》。",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"随行清单\" [level=1]\n  - paragraph: 共 1 份资料。\n  - navigation \"资料操作\":\n    - button \"返回目录\"\n    - button \"撤销刚才移除\"\n  - region \"资料列表\":\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"移出\"\n  - status: 已移出《温度与釉色》。",
+          "清单或目录中的资料": [
+            "灯下的刻纹"
+          ],
+          "截图": "截图/撤销边界/07-移出后.png"
+        },
+        {
+          "操作": "点一次“撤销刚才移除”",
+          "页面可见文字": "随行资料\n\n随行清单\n\n共 2 份资料。\n\n返回目录\n温度与釉色\n展签\n移出\n灯下的刻纹\n展签\n移出\n\n已恢复资料。",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"随行清单\" [level=1]\n  - paragraph: 共 2 份资料。\n  - navigation \"资料操作\":\n    - button \"返回目录\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"移出\"\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"移出\"\n  - status: 已恢复资料。",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ],
+          "截图": "截图/撤销边界/08-首次撤销后.png"
+        },
+        {
+          "操作": "查看是否可以再次撤销；当前没有可用的撤销按钮",
+          "页面可见文字": "随行资料\n\n随行清单\n\n共 2 份资料。\n\n返回目录\n温度与釉色\n展签\n移出\n灯下的刻纹\n展签\n移出\n\n已恢复资料。",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"随行清单\" [level=1]\n  - paragraph: 共 2 份资料。\n  - navigation \"资料操作\":\n    - button \"返回目录\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"移出\"\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"移出\"\n  - status: 已恢复资料。",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ],
+          "截图": "截图/撤销边界/09-重复撤销边界.png"
+        },
+        {
+          "操作": "点“返回目录”，观察分类和列表",
+          "页面可见文字": "随行资料\n\n资料目录\n\n按分类浏览，加入今天要带到现场的资料。\n\n分类\n全部资料\n展签\n导览\n查看清单（2）\n温度与釉色\n展签\n已加入\n灯下的刻纹\n展签\n已加入",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"资料目录\" [level=1]\n  - paragraph: 按分类浏览，加入今天要带到现场的资料。\n  - navigation \"资料操作\":\n    - text: 分类\n    - combobox \"分类\":\n      - option \"全部资料\"\n      - option \"展签\" [selected]\n      - option \"导览\"\n    - button \"查看清单（2）\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"已加入\" [disabled]\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"已加入\" [disabled]\n  - status",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ],
+          "截图": "截图/撤销边界/10-返回目录.png"
+        }
+      ]
+    },
+    {
+      "轮次": "分类返回",
+      "步骤": [
+        {
+          "操作": "新上下文，打开资料目录",
+          "页面可见文字": "随行资料\n\n资料目录\n\n按分类浏览，加入今天要带到现场的资料。\n\n分类\n全部资料\n展签\n导览\n查看清单（0）\n温度与釉色\n展签\n加入清单\n匠人手记\n导览\n加入清单\n灯下的刻纹\n展签\n加入清单",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"资料目录\" [level=1]\n  - paragraph: 按分类浏览，加入今天要带到现场的资料。\n  - navigation \"资料操作\":\n    - text: 分类\n    - combobox \"分类\":\n      - option \"全部资料\" [selected]\n      - option \"展签\"\n      - option \"导览\"\n    - button \"查看清单（0）\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"加入清单\"\n    - article:\n      - strong: 匠人手记\n      - text: 导览\n      - button \"加入清单\"\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"加入清单\"\n  - status",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "匠人手记",
+            "灯下的刻纹"
+          ]
+        },
+        {
+          "操作": "选择分类“展签”",
+          "页面可见文字": "随行资料\n\n资料目录\n\n按分类浏览，加入今天要带到现场的资料。\n\n分类\n全部资料\n展签\n导览\n查看清单（0）\n温度与釉色\n展签\n加入清单\n灯下的刻纹\n展签\n加入清单",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"资料目录\" [level=1]\n  - paragraph: 按分类浏览，加入今天要带到现场的资料。\n  - navigation \"资料操作\":\n    - text: 分类\n    - combobox \"分类\":\n      - option \"全部资料\"\n      - option \"展签\" [selected]\n      - option \"导览\"\n    - button \"查看清单（0）\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"加入清单\"\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"加入清单\"\n  - status",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ],
+          "截图": "截图/分类返回/02-只看展签.png"
+        },
+        {
+          "操作": "加入《温度与釉色》",
+          "页面可见文字": "随行资料\n\n资料目录\n\n按分类浏览，加入今天要带到现场的资料。\n\n分类\n全部资料\n展签\n导览\n查看清单（1）\n温度与釉色\n展签\n已加入\n灯下的刻纹\n展签\n加入清单\n\n已加入《温度与釉色》。",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"资料目录\" [level=1]\n  - paragraph: 按分类浏览，加入今天要带到现场的资料。\n  - navigation \"资料操作\":\n    - text: 分类\n    - combobox \"分类\":\n      - option \"全部资料\"\n      - option \"展签\" [selected]\n      - option \"导览\"\n    - button \"查看清单（1）\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"已加入\" [disabled]\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"加入清单\"\n  - status: 已加入《温度与釉色》。",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ],
+          "截图": "截图/分类返回/03-首份已加入.png"
+        },
+        {
+          "操作": "加入《灯下的刻纹》",
+          "页面可见文字": "随行资料\n\n资料目录\n\n按分类浏览，加入今天要带到现场的资料。\n\n分类\n全部资料\n展签\n导览\n查看清单（2）\n温度与釉色\n展签\n已加入\n灯下的刻纹\n展签\n已加入\n\n已加入《灯下的刻纹》。",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"资料目录\" [level=1]\n  - paragraph: 按分类浏览，加入今天要带到现场的资料。\n  - navigation \"资料操作\":\n    - text: 分类\n    - combobox \"分类\":\n      - option \"全部资料\"\n      - option \"展签\" [selected]\n      - option \"导览\"\n    - button \"查看清单（2）\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"已加入\" [disabled]\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"已加入\" [disabled]\n  - status: 已加入《灯下的刻纹》。",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ]
+        },
+        {
+          "操作": "查看清单",
+          "页面可见文字": "随行资料\n\n随行清单\n\n共 2 份资料。\n\n返回目录\n温度与釉色\n展签\n移出\n灯下的刻纹\n展签\n移出",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"随行清单\" [level=1]\n  - paragraph: 共 2 份资料。\n  - navigation \"资料操作\":\n    - button \"返回目录\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"移出\"\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"移出\"\n  - status",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ],
+          "截图": "截图/分类返回/05-移出前.png"
+        },
+        {
+          "操作": "移出《灯下的刻纹》",
+          "页面可见文字": "随行资料\n\n随行清单\n\n共 1 份资料。\n\n返回目录\n撤销刚才移除\n温度与釉色\n展签\n移出\n\n已移出《灯下的刻纹》。",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"随行清单\" [level=1]\n  - paragraph: 共 1 份资料。\n  - navigation \"资料操作\":\n    - button \"返回目录\"\n    - button \"撤销刚才移除\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"移出\"\n  - status: 已移出《灯下的刻纹》。",
+          "清单或目录中的资料": [
+            "温度与釉色"
+          ],
+          "截图": "截图/分类返回/06-移出后.png"
+        },
+        {
+          "操作": "点一次“撤销刚才移除”",
+          "页面可见文字": "随行资料\n\n随行清单\n\n共 2 份资料。\n\n返回目录\n温度与釉色\n展签\n移出\n灯下的刻纹\n展签\n移出\n\n已恢复资料。",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"随行清单\" [level=1]\n  - paragraph: 共 2 份资料。\n  - navigation \"资料操作\":\n    - button \"返回目录\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"移出\"\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"移出\"\n  - status: 已恢复资料。",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ],
+          "截图": "截图/分类返回/07-首次撤销后.png"
+        },
+        {
+          "操作": "点“返回目录”，观察分类和列表",
+          "页面可见文字": "随行资料\n\n资料目录\n\n按分类浏览，加入今天要带到现场的资料。\n\n分类\n全部资料\n展签\n导览\n查看清单（2）\n温度与釉色\n展签\n已加入\n灯下的刻纹\n展签\n已加入",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"资料目录\" [level=1]\n  - paragraph: 按分类浏览，加入今天要带到现场的资料。\n  - navigation \"资料操作\":\n    - text: 分类\n    - combobox \"分类\":\n      - option \"全部资料\"\n      - option \"展签\" [selected]\n      - option \"导览\"\n    - button \"查看清单（2）\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"已加入\" [disabled]\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"已加入\" [disabled]\n  - status",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ],
+          "截图": "截图/分类返回/08-返回目录.png"
+        },
+        {
+          "操作": "补查另一分类，手动选择“导览”",
+          "页面可见文字": "随行资料\n\n资料目录\n\n按分类浏览，加入今天要带到现场的资料。\n\n分类\n全部资料\n展签\n导览\n查看清单（2）\n匠人手记\n导览\n加入清单",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"资料目录\" [level=1]\n  - paragraph: 按分类浏览，加入今天要带到现场的资料。\n  - navigation \"资料操作\":\n    - text: 分类\n    - combobox \"分类\":\n      - option \"全部资料\"\n      - option \"展签\"\n      - option \"导览\" [selected]\n    - button \"查看清单（2）\"\n  - region \"资料列表\":\n    - article:\n      - strong: 匠人手记\n      - text: 导览\n      - button \"加入清单\"\n  - status",
+          "清单或目录中的资料": [
+            "匠人手记"
+          ],
+          "截图": "截图/分类返回/09-改选导览.png"
+        },
+        {
+          "操作": "不操作清单内容，只打开清单",
+          "页面可见文字": "随行资料\n\n随行清单\n\n共 2 份资料。\n\n返回目录\n温度与釉色\n展签\n移出\n灯下的刻纹\n展签\n移出",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"随行清单\" [level=1]\n  - paragraph: 共 2 份资料。\n  - navigation \"资料操作\":\n    - button \"返回目录\"\n  - region \"资料列表\":\n    - article:\n      - strong: 温度与釉色\n      - text: 展签\n      - button \"移出\"\n    - article:\n      - strong: 灯下的刻纹\n      - text: 展签\n      - button \"移出\"\n  - status",
+          "清单或目录中的资料": [
+            "温度与釉色",
+            "灯下的刻纹"
+          ]
+        },
+        {
+          "操作": "从清单再次返回目录，观察是否保留“导览”",
+          "页面可见文字": "随行资料\n\n资料目录\n\n按分类浏览，加入今天要带到现场的资料。\n\n分类\n全部资料\n展签\n导览\n查看清单（2）\n匠人手记\n导览\n加入清单",
+          "当前可访问性树": "- main:\n  - paragraph: 随行资料\n  - heading \"资料目录\" [level=1]\n  - paragraph: 按分类浏览，加入今天要带到现场的资料。\n  - navigation \"资料操作\":\n    - text: 分类\n    - combobox \"分类\":\n      - option \"全部资料\"\n      - option \"展签\"\n      - option \"导览\" [selected]\n    - button \"查看清单（2）\"\n  - region \"资料列表\":\n    - article:\n      - strong: 匠人手记\n      - text: 导览\n      - button \"加入清单\"\n  - status",
+          "清单或目录中的资料": [
+            "匠人手记"
+          ],
+          "截图": "截图/分类返回/11-再次返回.png"
+        }
+      ]
+    }
+  ]
+}

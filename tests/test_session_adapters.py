@@ -2,6 +2,7 @@ import asyncio
 import base64
 import io
 import json
+import sys
 import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
@@ -91,6 +92,84 @@ def test_figma_snapshot_reads_metadata_and_each_child_screenshot_without_live_ta
     assert child.image
     assert child.locator["node_id"] == "1:3"
     assert child.locator["requested_node_id"] == "1:1"
+    assert child.raw_content is None
+    assert child.locator["metadata_status"] == "unavailable"
+
+
+@pytest.mark.parametrize("manifest,xml,expected_error", [
+    ({"file_key": "other", "nodes": {"1:1": {}}}, '<frame id="1:1"/>', "figma_snapshot_file_mismatch"),
+    ({"nodes": {"1:1": {}}}, '<frame id="1:1"/>', "figma_snapshot_invalid"),
+    ({"file_key": "abc", "nodes": {"1:2": {}}}, '<frame id="1:1"/>', "figma_snapshot_node_missing"),
+    ({"file_key": "abc", "nodes": {"1:1": {}}}, None, "figma_snapshot_evidence_missing"),
+    ({"file_key": "abc", "nodes": {"1:1": {}}}, '<frame id="1:2"/>', "figma_snapshot_invalid"),
+])
+def test_snapshot_rejects_mismatched_or_unbacked_node(tmp_path, manifest, xml, expected_error):
+    snapshot = tmp_path / "offline"
+    (snapshot / "metadata").mkdir(parents=True)
+    (snapshot / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+    if xml is not None:
+        (snapshot / "metadata" / "1-1.xml").write_text(xml, encoding="utf-8")
+    source = SourceRecord(input=SourceInput(
+        kind="figma_board", reference="https://www.figma.com/design/abc/Test?node-id=1-1",
+        figma_snapshot_id="offline",
+    ))
+    with pytest.raises(EngineError) as error:
+        asyncio.run(FigmaMCPAdapter(snapshot_root=tmp_path).read("session", source))
+    assert error.value.code == expected_error
+
+
+def test_snapshot_scope_follows_root_and_metadata_only_keeps_observed_ids(tmp_path):
+    snapshot = tmp_path / "offline"
+    (snapshot / "metadata").mkdir(parents=True)
+    nodes = {"1:1": {}, "1:2": {}, "2:1": {}}
+    (snapshot / "manifest.json").write_text(json.dumps({"file_key": "abc", "nodes": nodes}), encoding="utf-8")
+    for name, xml in [
+        ("1-1", "<frame id='1:1'><frame id='1:2'/></frame>"),
+        ("1-2", "<frame id='1:2'/>"),
+        ("2-1", "<frame id='2:1'/>"),
+    ]:
+        (snapshot / "metadata" / f"{name}.xml").write_text(xml, encoding="utf-8")
+    adapter = FigmaMCPAdapter(snapshot_root=tmp_path)
+    source = SourceRecord(input=SourceInput(
+        kind="figma_board", reference="https://www.figma.com/design/abc/Test?node-id=1-1",
+        figma_snapshot_id="offline",
+    ))
+    root = asyncio.run(adapter.read("session", source))
+    assert root.partial
+    assert root.locator["image_status"] == "unavailable"
+    assert root.locator["node_ids"] == ["1:1", "1:2"]
+    action = Action(source_id=source.source_id, kind="inspect_node", node_id="1:2",
+                    expected_state_id=root.state_id, reason="查看已观察到的子节点")
+    assert asyncio.run(adapter.act("session", source, action)).locator["node_id"] == "1:2"
+    source.input.reference = "https://www.figma.com/design/abc/Test?node-id=2-1"
+    with pytest.raises(EngineError) as error:
+        asyncio.run(adapter.act("session", source, action))
+    assert error.value.code == "figma_node_not_observed"
+    asyncio.run(adapter.read("session", source))
+    with pytest.raises(EngineError) as error:
+        asyncio.run(adapter.act("session", source, action))
+    assert error.value.code == "figma_node_not_observed"
+
+
+def test_snapshot_cannot_take_another_archives_images_through_a_directory_link(tmp_path):
+    expected = tmp_path / "expected"
+    expected.mkdir()
+    (expected / "manifest.json").write_text(json.dumps({"file_key": "abc", "nodes": {"1:1": {}}}), encoding="utf-8")
+    other_images = tmp_path / "other" / "images"
+    other_images.mkdir(parents=True)
+    Image.new("RGB", (8, 6), "red").save(other_images / "1-1.png")
+    if sys.platform == "win32":
+        import _winapi
+        _winapi.CreateJunction(str(other_images), str(expected / "images"))
+    else:
+        (expected / "images").symlink_to(other_images, target_is_directory=True)
+    source = SourceRecord(input=SourceInput(
+        kind="figma_board", reference="https://www.figma.com/design/abc/Test?node-id=1-1",
+        figma_snapshot_id="expected",
+    ))
+    with pytest.raises(EngineError) as error:
+        asyncio.run(FigmaMCPAdapter(snapshot_root=tmp_path).read("session", source))
+    assert error.value.code == "figma_snapshot_invalid"
 
 
 def test_browser_url_guard_rejects_private_network_and_file_protocol():

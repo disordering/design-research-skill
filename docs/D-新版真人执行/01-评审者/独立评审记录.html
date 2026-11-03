@@ -1,0 +1,58 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>独立评审记录</title><style>*{box-sizing:border-box}body{font:16px/1.65 system-ui,'Microsoft Yahei',sans-serif;color:#1c2639;background:#f4f6fa;margin:0}main{max-width:760px;margin:32px auto;background:white;padding:28px 36px;border-radius:14px}h1{font-size:27px;margin:0}h2{font-size:18px;margin:24px 0 8px;color:#224f93}p,fieldset{margin:10px 0}fieldset{padding:14px;border:1px solid #c9d2df;border-radius:6px}label{display:block;margin-top:10px;font-weight:550}input,select,textarea{display:block;width:100%;font:inherit;border:1px solid #8496ad;border-radius:5px;padding:5px 8px;color:inherit;background:white}textarea{min-height:64px}button{font:inherit;border:1px solid #9daec5;border-radius:6px;padding:6px 12px;background:white;cursor:pointer;margin:4px 4px 4px 0}button:disabled{opacity:.5;cursor:default}.primary{background:#2152ac;color:white;border-color:#2152ac}small{color:#4d5d72}output{color:#174f83;font-weight:600}.row{display:flex;flex-wrap:wrap;gap:10px}.row label{flex:1 1 150px}.foot{border-top:1px solid #ccd7e7;margin-top:22px;padding-top:18px}input[type=file]{max-width:380px}@media(max-width:600px){main{padding:18px;margin:0;border-radius:0}}</style><main><h1>独立评审记录</h1><p>每个任务单独导出一份。打开主持人发来的原始材料，先独立检查，再填结论。请用匿名编号。文件由你手动交回，填写内容保留在本页，关闭前请导出。</p><h2>任务登记</h2><div class="row"><label>匿名评审编号<select id="reviewer"></select></label><label>任务编号<input id="task" placeholder="主持人分配的编号" autocomplete="off"></label><label>材料版本<input id="version" placeholder="照抄主持人提供的版本" autocomplete="off"></label></div><label>已检查的页面、状态或步骤<textarea id="scope" placeholder="说明看过哪些材料，完成哪些动作"></textarea></label><label>本任务的结论<select id="verdict"></select></label><h2>逐条记录</h2><p>每条写一个独立问题。产品问题要能回到具体位置；需要额外材料的疑点写在下方。</p><div id="issues"></div><button type="button" onclick="addIssue()">＋ 添加独立问题</button><label>未决项及需要的材料<textarea id="unknown" placeholder="有疑点时写清需要哪一页、哪个状态或哪条要求"></textarea></label><label>独立填写声明<select id="independent"></select></label><div class="foot"><button type="button" onclick="exportNow('draft')">导出草稿</button><button type="button" class="primary" onclick="exportNow('final')">导出正式记录</button><details><summary>载入本人的草稿</summary><input type="file" accept=".json,application/json" id="load" onchange="loadDraft(this.files[0])"></details><output id="msg" aria-live="polite"></output></div></main><script>
+const el=id=>document.getElementById(id);
+const val=id=>el(id).value.trim();
+const now=()=>new Date().toISOString();
+function selected(id,options){
+  const select=el(id);select.add(new Option('请选择',''));for(const [v,l] of options)select.add(new Option(l,v));
+}
+function saveFile(packageKind,record,key){
+  const time=now();const doc={schema:'D-human-v2.1',role,packageKind,exportedAt:time,...record};
+  const file=new Blob([JSON.stringify(doc,null,2)],{type:'application/json;charset=utf-8'});
+  const url=URL.createObjectURL(file),a=document.createElement('a');
+  a.href=url;a.download=[key.replace(/[^a-zA-Z0-9_.-]/g,'_')||'draft',packageKind,time.replace(/[:.]/g,'-')].join('_')+'.json';
+  a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  el('msg').textContent=packageKind==='final'?'正式记录已导出。请将 JSON 交给主持人。':'草稿已导出。重新打开本页可载入草稿。';
+}
+function exportNow(kind){
+  try{const r=collect(kind==='final');saveFile(kind,r,r.reviewer? r.reviewer+'_'+r.task : r.participant+'_'+r.task);}
+  catch(err){el('msg').textContent='请检查填写：'+err.message;}
+}
+function ensure(condition,message){if(!condition)throw Error(message);}
+function fields(ids){return Object.fromEntries(ids.map(id=>[id,val(id)]));}
+function put(ids,r){for(const id of ids){if(r[id]!==undefined)el(id).value=String(r[id]);}}
+async function loadDraft(file){
+ if(!file)return;
+ try {
+   const d=JSON.parse(await file.text());ensure(d.schema==='D-human-v2.1'&&d.role===role&&d.packageKind==='draft','请选择本角色的草稿 JSON。');
+   if(!confirm('载入草稿会替换当前填写内容。继续载入？'))return;
+   restore(d);el('msg').textContent='草稿已载入。';
+ }catch(e){el('msg').textContent=e.message;}
+ el('load').value='';
+}
+
+const role='reviewer',ids=['reviewer','task','version','scope','verdict','unknown','independent']; 
+selected('reviewer',[['R1','R1'],['R2','R2']]);
+selected('verdict',[['observed','发现可定位的问题'],['clear','在已检查范围内未发现问题'],['insufficient','材料不足以完成判断']]);
+selected('independent',[['yes','我独立完成，提交前未看他人的答案及系统输出'],['no','我接触过相关答案，请主持人另行登记']]);
+function addIssue(item={}){
+const box=document.createElement('fieldset');box.innerHTML='<legend>一个独立问题</legend>';
+for(const [k,t] of [['object','页面、状态与对象'],['observation','观察到什么'],['expected','依据与预期'],['anchor','证据位置（图名、节点、区域或操作步骤）'],['impact','对任务的影响及分级理由']]){
+  const l=document.createElement('label');l.textContent=t;const i=document.createElement('textarea');i.dataset.k=k;i.value=item[k]||'';l.append(i);box.append(l);
+}
+const l=document.createElement('label');l.textContent='严重度';const s=document.createElement('select');s.dataset.k='severity';
+for(const [k,t] of [['','请选择'],['low','低 · 局部轻微'],['medium','中 · 增加明显理解或操作成本'],['high','高 · 关键任务明确受阻或严重错误结果'],['critical','严重 · 有依据的重大不可逆后果或全部关键路径受阻']])s.add(new Option(t,k));
+s.value=item.severity||'';l.append(s);box.append(l);
+const b=document.createElement('button');b.textContent='移除这一条';b.onclick=()=>{if(confirm('移除这条填写记录？'))box.remove()};box.append(b);el('issues').append(box);
+}
+function collect(final){
+ const d=fields(ids); d.issues=[...el('issues').children].map(x=>Object.fromEntries([...x.querySelectorAll('[data-k]')].map(y=>[y.dataset.k,y.value.trim()])));
+ if(final){
+ for(const k of ['reviewer','task','version','scope','verdict','independent'])ensure(d[k],'请填完任务登记、结论和独立填写声明。');
+ ensure(d.verdict==='observed'?d.issues.length>0:d.issues.length===0,'结论与问题条目不一致。');
+ ensure(d.verdict!=='insufficient'||d.unknown,'请写明需要补充的材料。');
+ for(const i of d.issues)ensure(Object.values(i).every(Boolean),'每个问题都需填写观察、依据、证据和严重度。');
+ }
+ return d;
+}
+function restore(r){put(ids,r);el('issues').replaceChildren();for(const issue of r.issues||[])addIssue(issue);}
+</script></html>

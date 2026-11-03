@@ -1,0 +1,1032 @@
+{
+  "修前适配器提交": "ec17fea",
+  "修前适配器SHA256": "af8383e56b9c718960d2af0b27239fed29c4f7011cb4e9b62a8005e929ee58b4",
+  "修后适配器SHA256": "50da52081c0686e1a3716e48e19a487987700847acecbd4eee313469b936baac",
+  "材料生成": "按 D 批次与组内画板文档登记的文件键、节点与 JPEG 构造临时离线快照。对 JPEG 解码后的 RGB 像素做无损 PNG 封装。清单以外不生成 XML。报告从会话磁盘存储重新读取图片对照原像素。",
+  "原文件键": "j9Z5Y839AREXf0OPysbbJ7",
+  "输入": [
+    {
+      "任务": "T07",
+      "节点": "2118:11671",
+      "归档": "docs/D-护法复核证据/EV04-黄色编号和设计说明.jpg",
+      "原图SHA256": "08f5b95a657c6054cb81270d91da1536508148d15b02649821d5fc27d6ba0f3c",
+      "清单PNG的SHA256": "7b3a9db1ce9dafa9e8b66f7a1b7fcb60f1a79b7174ef02b20367e1a55c255ce9",
+      "RGB像素SHA256": "f3ec0ec20a912635c497eed5990b44f186769ce505611c4fc8ecc0d7ff96f6c2",
+      "尺寸": [
+        1158,
+        501
+      ]
+    },
+    {
+      "任务": "T07",
+      "节点": "2118:11938",
+      "归档": "docs/D-护法复核证据/EV06-升星选择和执行.jpg",
+      "原图SHA256": "09c8d93ca1ddaad05f64e6c0476429d82ee072e5d01d5a9b475c87b3029d7b50",
+      "清单PNG的SHA256": "c083353d3bb14a9e6b2a9b8b7cc6ef2504f1e12065f4fbbb88590fbc0a030d8f",
+      "RGB像素SHA256": "60be4cd087f9434cd174445c4705c6b2fe7f6502100c019392ccfe34ae1ba1c5",
+      "尺寸": [
+        1134,
+        637
+      ]
+    },
+    {
+      "任务": "T07",
+      "节点": "2118:11712",
+      "归档": "docs/D-复核证据/D-HF-001-节点升级原画面.jpg",
+      "原图SHA256": "5a2101c1f98d717460401d743ec4652eeb678432b815e57f013ea5ea3aa0c185",
+      "清单PNG的SHA256": "7bbfb9140c1d2c07f3941dd3f3dec576c078bb9f93efff2a4a9b7c97567eba4d",
+      "RGB像素SHA256": "68afeeb05581f0b8089d81983c91c3baf27c0452609346d5324126399e51f3d7",
+      "尺寸": [
+        1134,
+        637
+      ]
+    },
+    {
+      "任务": "T07",
+      "节点": "2118:12533",
+      "归档": "docs/D-护法复核证据/EV09-织羽一键强化.jpg",
+      "原图SHA256": "289959b705c896512f0ae9136ffc0cda0913f83949dac3d1f966c6eb393b9511",
+      "清单PNG的SHA256": "dc3e7b1bea5bd90f50380b49bf07ce5b70a977b618b7698794111af2ed814125",
+      "RGB像素SHA256": "f7a0505035426267f8a641502ca3dec9576579d6188e387f429d56a758c1f69e",
+      "尺寸": [
+        1134,
+        637
+      ]
+    },
+    {
+      "任务": "T08",
+      "节点": "2120:13262",
+      "归档": "docs/D-复核证据/吴山石/EV03-包裹入口.jpg",
+      "原图SHA256": "e5f671cf818b957721a4750cd65bb054cb410da0d94d77b296bf92642e4ff541",
+      "清单PNG的SHA256": "57a6b5477e376f0b3780a5df131cf4eff325e43b3934278eecfc61d75971f054",
+      "RGB像素SHA256": "cd4a0d79c55de8a8f88cd2f123a639dd297f9530da39c3c5ffbac0fe86698ea5",
+      "尺寸": [
+        1194,
+        635
+      ]
+    },
+    {
+      "任务": "T08",
+      "节点": "2120:13268",
+      "归档": "docs/D-复核证据/吴山石/EV04-默认单选.jpg",
+      "原图SHA256": "cff33200b9dfb6e3e382b26f82ade8c4517a221b8c8e13055f08d38378a47e34",
+      "清单PNG的SHA256": "2efd3a0b730e01a5a5216ebffa32093258bc284e80421347cde99c8965552288",
+      "RGB像素SHA256": "ac41e4d7a0e8fb29522a2ed0197ef8f7e9d03f163e0d5c53202e6bf0cedb4d0a",
+      "尺寸": [
+        1130,
+        636
+      ]
+    },
+    {
+      "任务": "T08",
+      "节点": "2120:13270",
+      "归档": "docs/D-复核证据/吴山石/EV05-等级缩减.jpg",
+      "原图SHA256": "1d9c6a2405a0e2c58af1bdd531ac436958ed6ee2f8a4ab29cdea061372931e39",
+      "清单PNG的SHA256": "a11b2a3532df5649243fae10d6207b2307087418c5c96548d4b80b0891a6d659",
+      "RGB像素SHA256": "a5a05b38a19b884ff11f8ded1d8b8541aa442fd24ef8ae1359d615188ac62890",
+      "尺寸": [
+        1130,
+        636
+      ]
+    },
+    {
+      "任务": "T08",
+      "节点": "2120:13269",
+      "归档": "docs/D-复核证据/吴山石/EV06-部分等级.jpg",
+      "原图SHA256": "c04fe17ceee8164fcef9c1116b27dc1cf8c2d1eb4b4ab0a393f241af678dc59a",
+      "清单PNG的SHA256": "37d43c1af4e358aa1588a18380df229e5732d6725f54c3135a08499415e3c90b",
+      "RGB像素SHA256": "59d4332406c2a11f53260913f2f30343764019e30c7695cac6a83451ea5e277d",
+      "尺寸": [
+        1130,
+        636
+      ]
+    },
+    {
+      "任务": "T08",
+      "节点": "2120:13271",
+      "归档": "docs/D-复核证据/吴山石/EV07-全选.jpg",
+      "原图SHA256": "b88ad3077e847a930b9db87cd310efe0eacdf804cd5dd1c5fa1524c4b951bb0b",
+      "清单PNG的SHA256": "51c2f900ebdd49587c0ba3b3f7a9edc54fe8e9cdbc825100673d629c763e60f8",
+      "RGB像素SHA256": "22117cf8a18634b74ed5e867db901aa740b4ad1a43aff49673a4b42dcfd0115f",
+      "尺寸": [
+        1130,
+        636
+      ]
+    },
+    {
+      "任务": "T08",
+      "节点": "2120:13273",
+      "归档": "docs/D-复核证据/吴山石/EV08-仅绑定.jpg",
+      "原图SHA256": "23ea5f02553dff6f24a336844814175560eb217f2a5616a5319f0e1479f1ee0f",
+      "清单PNG的SHA256": "8e459365ca5af6385c141c55c43a8f40881078b25c803de9aeeb95cae8c926f7",
+      "RGB像素SHA256": "dfb9806bebe5d6e9f37f61453a96c37936a7b2502a76dbfa1e68ea5677b11d69",
+      "尺寸": [
+        1130,
+        636
+      ]
+    },
+    {
+      "任务": "T08",
+      "节点": "2120:13274",
+      "归档": "docs/D-复核证据/吴山石/EV11-积分商店.jpg",
+      "原图SHA256": "1d08b22603b9c2b51a2a9581412693764d544469e77de23f20968e124bfafb85",
+      "清单PNG的SHA256": "4c2690c694eb216bb62756da0a7081d839b459d52e540a8fea6a4c0bcf7ae8d8",
+      "RGB像素SHA256": "8434ab8ed0affc97f9ffd61b78ef275fe0a8f30153702442f38669ad5becfb87",
+      "尺寸": [
+        1130,
+        636
+      ]
+    }
+  ],
+  "修前": [
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2118:11671",
+      "会话": "session-c79d2508bc184b098fbd67636c2c4a41",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2118:11671",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "7b3a9db1ce9dafa9e8b66f7a1b7fcb60f1a79b7174ef02b20367e1a55c255ce9",
+          "RGB像素SHA256": "f3ec0ec20a912635c497eed5990b44f186769ce505611c4fc8ecc0d7ff96f6c2",
+          "尺寸": [
+            1158,
+            501
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2118:11938",
+      "会话": "session-2a22d8e8a08e4e879bcd930a539b1e0b",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2118:11938",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "c083353d3bb14a9e6b2a9b8b7cc6ef2504f1e12065f4fbbb88590fbc0a030d8f",
+          "RGB像素SHA256": "60be4cd087f9434cd174445c4705c6b2fe7f6502100c019392ccfe34ae1ba1c5",
+          "尺寸": [
+            1134,
+            637
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2118:11712",
+      "会话": "session-3399da41ecd24f79be3b52efbc3c96e8",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2118:11712",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "7bbfb9140c1d2c07f3941dd3f3dec576c078bb9f93efff2a4a9b7c97567eba4d",
+          "RGB像素SHA256": "68afeeb05581f0b8089d81983c91c3baf27c0452609346d5324126399e51f3d7",
+          "尺寸": [
+            1134,
+            637
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2118:12533",
+      "会话": "session-336d1abc56c34da1a4345e4b2d753dce",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2118:12533",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "dc3e7b1bea5bd90f50380b49bf07ce5b70a977b618b7698794111af2ed814125",
+          "RGB像素SHA256": "f7a0505035426267f8a641502ca3dec9576579d6188e387f429d56a758c1f69e",
+          "尺寸": [
+            1134,
+            637
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13262",
+      "会话": "session-91f1436830734f9484a517218688a845",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13262",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "57a6b5477e376f0b3780a5df131cf4eff325e43b3934278eecfc61d75971f054",
+          "RGB像素SHA256": "cd4a0d79c55de8a8f88cd2f123a639dd297f9530da39c3c5ffbac0fe86698ea5",
+          "尺寸": [
+            1194,
+            635
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13268",
+      "会话": "session-f3b77831577c4f6bb472a995df36113f",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13268",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "2efd3a0b730e01a5a5216ebffa32093258bc284e80421347cde99c8965552288",
+          "RGB像素SHA256": "ac41e4d7a0e8fb29522a2ed0197ef8f7e9d03f163e0d5c53202e6bf0cedb4d0a",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13270",
+      "会话": "session-0bc601a8ae764c09b7c415d10eab280c",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13270",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "a11b2a3532df5649243fae10d6207b2307087418c5c96548d4b80b0891a6d659",
+          "RGB像素SHA256": "a5a05b38a19b884ff11f8ded1d8b8541aa442fd24ef8ae1359d615188ac62890",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13269",
+      "会话": "session-272e42341be94003ab4c4139c2b75dd6",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13269",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "37d43c1af4e358aa1588a18380df229e5732d6725f54c3135a08499415e3c90b",
+          "RGB像素SHA256": "59d4332406c2a11f53260913f2f30343764019e30c7695cac6a83451ea5e277d",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13271",
+      "会话": "session-67c48acffff448379493c019843433f9",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13271",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "51c2f900ebdd49587c0ba3b3f7a9edc54fe8e9cdbc825100673d629c763e60f8",
+          "RGB像素SHA256": "22117cf8a18634b74ed5e867db901aa740b4ad1a43aff49673a4b42dcfd0115f",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13273",
+      "会话": "session-10bc7efca6cc459cbe9e55c919191ab9",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13273",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "8e459365ca5af6385c141c55c43a8f40881078b25c803de9aeeb95cae8c926f7",
+          "RGB像素SHA256": "dfb9806bebe5d6e9f37f61453a96c37936a7b2502a76dbfa1e68ea5677b11d69",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13274",
+      "会话": "session-81d12fd8a46748d8a7d50189c048c691",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13274",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "4c2690c694eb216bb62756da0a7081d839b459d52e540a8fea6a4c0bcf7ae8d8",
+          "RGB像素SHA256": "8434ab8ed0affc97f9ffd61b78ef275fe0a8f30153702442f38669ad5becfb87",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2118:11671",
+      "会话": "session-3463f8ef1d67403bbfa8ff2ffdcaf0eb",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "DWrongFileForTest",
+          "来源匹配": false,
+          "节点": "2118:11671",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "7b3a9db1ce9dafa9e8b66f7a1b7fcb60f1a79b7174ef02b20367e1a55c255ce9",
+          "RGB像素SHA256": "f3ec0ec20a912635c497eed5990b44f186769ce505611c4fc8ecc0d7ff96f6c2",
+          "尺寸": [
+            1158,
+            501
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2118:11938",
+      "会话": "session-47ba9def54504be5891122280b0b574f",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "DWrongFileForTest",
+          "来源匹配": false,
+          "节点": "2118:11938",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "c083353d3bb14a9e6b2a9b8b7cc6ef2504f1e12065f4fbbb88590fbc0a030d8f",
+          "RGB像素SHA256": "60be4cd087f9434cd174445c4705c6b2fe7f6502100c019392ccfe34ae1ba1c5",
+          "尺寸": [
+            1134,
+            637
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2118:11712",
+      "会话": "session-996332e5b6144dd881363621cbf9a026",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "DWrongFileForTest",
+          "来源匹配": false,
+          "节点": "2118:11712",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "7bbfb9140c1d2c07f3941dd3f3dec576c078bb9f93efff2a4a9b7c97567eba4d",
+          "RGB像素SHA256": "68afeeb05581f0b8089d81983c91c3baf27c0452609346d5324126399e51f3d7",
+          "尺寸": [
+            1134,
+            637
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2118:12533",
+      "会话": "session-b939ff788e5b4948bd3468a1ee9f863a",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "DWrongFileForTest",
+          "来源匹配": false,
+          "节点": "2118:12533",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "dc3e7b1bea5bd90f50380b49bf07ce5b70a977b618b7698794111af2ed814125",
+          "RGB像素SHA256": "f7a0505035426267f8a641502ca3dec9576579d6188e387f429d56a758c1f69e",
+          "尺寸": [
+            1134,
+            637
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13262",
+      "会话": "session-caeaf990094144009e6c7bcaab8cb663",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "DWrongFileForTest",
+          "来源匹配": false,
+          "节点": "2120:13262",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "57a6b5477e376f0b3780a5df131cf4eff325e43b3934278eecfc61d75971f054",
+          "RGB像素SHA256": "cd4a0d79c55de8a8f88cd2f123a639dd297f9530da39c3c5ffbac0fe86698ea5",
+          "尺寸": [
+            1194,
+            635
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13268",
+      "会话": "session-f7aa3a40d3854746b03dc0a2b52ad39b",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "DWrongFileForTest",
+          "来源匹配": false,
+          "节点": "2120:13268",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "2efd3a0b730e01a5a5216ebffa32093258bc284e80421347cde99c8965552288",
+          "RGB像素SHA256": "ac41e4d7a0e8fb29522a2ed0197ef8f7e9d03f163e0d5c53202e6bf0cedb4d0a",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13270",
+      "会话": "session-4d7de88ed73c496ea2ad55b5265e8195",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "DWrongFileForTest",
+          "来源匹配": false,
+          "节点": "2120:13270",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "a11b2a3532df5649243fae10d6207b2307087418c5c96548d4b80b0891a6d659",
+          "RGB像素SHA256": "a5a05b38a19b884ff11f8ded1d8b8541aa442fd24ef8ae1359d615188ac62890",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13269",
+      "会话": "session-8e338617b5e54dfc94418443ebbc4ea0",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "DWrongFileForTest",
+          "来源匹配": false,
+          "节点": "2120:13269",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "37d43c1af4e358aa1588a18380df229e5732d6725f54c3135a08499415e3c90b",
+          "RGB像素SHA256": "59d4332406c2a11f53260913f2f30343764019e30c7695cac6a83451ea5e277d",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13271",
+      "会话": "session-1a431d3c0ee14f2896e333951933f17e",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "DWrongFileForTest",
+          "来源匹配": false,
+          "节点": "2120:13271",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "51c2f900ebdd49587c0ba3b3f7a9edc54fe8e9cdbc825100673d629c763e60f8",
+          "RGB像素SHA256": "22117cf8a18634b74ed5e867db901aa740b4ad1a43aff49673a4b42dcfd0115f",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13273",
+      "会话": "session-2b5f58de978a45e485e6516f15c0c568",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "DWrongFileForTest",
+          "来源匹配": false,
+          "节点": "2120:13273",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "8e459365ca5af6385c141c55c43a8f40881078b25c803de9aeeb95cae8c926f7",
+          "RGB像素SHA256": "dfb9806bebe5d6e9f37f61453a96c37936a7b2502a76dbfa1e68ea5677b11d69",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13274",
+      "会话": "session-d0804383859e4bdeb523a3ebf4109d7d",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "DWrongFileForTest",
+          "来源匹配": false,
+          "节点": "2120:13274",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "4c2690c694eb216bb62756da0a7081d839b459d52e540a8fea6a4c0bcf7ae8d8",
+          "RGB像素SHA256": "8434ab8ed0affc97f9ffd61b78ef275fe0a8f30153702442f38669ad5becfb87",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "清单无节点",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "999999:999999",
+      "会话": "session-0e5dbf7fb27b4d06857e60f259bd42e7",
+      "状态": "partial",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "999999:999999",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": null,
+          "RGB像素SHA256": null,
+          "尺寸": null
+        }
+      ]
+    }
+  ],
+  "修后": [
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2118:11671",
+      "会话": "session-86b6e8f175844a94973220c8a586fe2d",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2118:11671",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "7b3a9db1ce9dafa9e8b66f7a1b7fcb60f1a79b7174ef02b20367e1a55c255ce9",
+          "RGB像素SHA256": "f3ec0ec20a912635c497eed5990b44f186769ce505611c4fc8ecc0d7ff96f6c2",
+          "尺寸": [
+            1158,
+            501
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2118:11938",
+      "会话": "session-5e0765eb76da4cf3aca0af47ac42818a",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2118:11938",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "c083353d3bb14a9e6b2a9b8b7cc6ef2504f1e12065f4fbbb88590fbc0a030d8f",
+          "RGB像素SHA256": "60be4cd087f9434cd174445c4705c6b2fe7f6502100c019392ccfe34ae1ba1c5",
+          "尺寸": [
+            1134,
+            637
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2118:11712",
+      "会话": "session-eaec006d291446d6a58c7d3a67b6a8e9",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2118:11712",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "7bbfb9140c1d2c07f3941dd3f3dec576c078bb9f93efff2a4a9b7c97567eba4d",
+          "RGB像素SHA256": "68afeeb05581f0b8089d81983c91c3baf27c0452609346d5324126399e51f3d7",
+          "尺寸": [
+            1134,
+            637
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2118:12533",
+      "会话": "session-dab204a721f6448090bef5a994b9ed24",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2118:12533",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "dc3e7b1bea5bd90f50380b49bf07ce5b70a977b618b7698794111af2ed814125",
+          "RGB像素SHA256": "f7a0505035426267f8a641502ca3dec9576579d6188e387f429d56a758c1f69e",
+          "尺寸": [
+            1134,
+            637
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13262",
+      "会话": "session-078beffe20ff4024a79f72e0c45cb582",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13262",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "57a6b5477e376f0b3780a5df131cf4eff325e43b3934278eecfc61d75971f054",
+          "RGB像素SHA256": "cd4a0d79c55de8a8f88cd2f123a639dd297f9530da39c3c5ffbac0fe86698ea5",
+          "尺寸": [
+            1194,
+            635
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13268",
+      "会话": "session-cbe1ab7389e84591bd4369e48f858c7f",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13268",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "2efd3a0b730e01a5a5216ebffa32093258bc284e80421347cde99c8965552288",
+          "RGB像素SHA256": "ac41e4d7a0e8fb29522a2ed0197ef8f7e9d03f163e0d5c53202e6bf0cedb4d0a",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13270",
+      "会话": "session-26de24350bf0402fabad1c5cf473924a",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13270",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "a11b2a3532df5649243fae10d6207b2307087418c5c96548d4b80b0891a6d659",
+          "RGB像素SHA256": "a5a05b38a19b884ff11f8ded1d8b8541aa442fd24ef8ae1359d615188ac62890",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13269",
+      "会话": "session-fc1cd9f1f2fb45a6a35cfcba4fe2a1ca",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13269",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "37d43c1af4e358aa1588a18380df229e5732d6725f54c3135a08499415e3c90b",
+          "RGB像素SHA256": "59d4332406c2a11f53260913f2f30343764019e30c7695cac6a83451ea5e277d",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13271",
+      "会话": "session-e2c0dc5f53a54ece8a225881041721dc",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13271",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "51c2f900ebdd49587c0ba3b3f7a9edc54fe8e9cdbc825100673d629c763e60f8",
+          "RGB像素SHA256": "22117cf8a18634b74ed5e867db901aa740b4ad1a43aff49673a4b42dcfd0115f",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13273",
+      "会话": "session-dde81f612d814afea4a30c4540882ffe",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13273",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "8e459365ca5af6385c141c55c43a8f40881078b25c803de9aeeb95cae8c926f7",
+          "RGB像素SHA256": "dfb9806bebe5d6e9f37f61453a96c37936a7b2502a76dbfa1e68ea5677b11d69",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "原文件",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "2120:13274",
+      "会话": "session-cc9fbfb1c4b24536af701f27a7a75c33",
+      "状态": "success",
+      "错误": "",
+      "证据": [
+        {
+          "证据类型": "design",
+          "来源键": "j9Z5Y839AREXf0OPysbbJ7",
+          "来源匹配": true,
+          "节点": "2120:13274",
+          "范围标记": "verified_snapshot",
+          "存储PNG的SHA256": "4c2690c694eb216bb62756da0a7081d839b459d52e540a8fea6a4c0bcf7ae8d8",
+          "RGB像素SHA256": "8434ab8ed0affc97f9ffd61b78ef275fe0a8f30153702442f38669ad5becfb87",
+          "尺寸": [
+            1130,
+            636
+          ]
+        }
+      ]
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2118:11671",
+      "会话": "session-ee309caaeee3461bb49ce06d54a033d4",
+      "状态": "failed",
+      "错误": "figma_snapshot_file_mismatch: 快照文件键与请求的 Figma 文件不符。",
+      "证据": []
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2118:11938",
+      "会话": "session-6b414b4f298748d7b994cb0fec45391d",
+      "状态": "failed",
+      "错误": "figma_snapshot_file_mismatch: 快照文件键与请求的 Figma 文件不符。",
+      "证据": []
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2118:11712",
+      "会话": "session-cc5da2086a1f4382ab8677c5469c32af",
+      "状态": "failed",
+      "错误": "figma_snapshot_file_mismatch: 快照文件键与请求的 Figma 文件不符。",
+      "证据": []
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2118:12533",
+      "会话": "session-f95020df9ca2453b8c86b79c5b60b69b",
+      "状态": "failed",
+      "错误": "figma_snapshot_file_mismatch: 快照文件键与请求的 Figma 文件不符。",
+      "证据": []
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13262",
+      "会话": "session-2a7df6e4463043ac89ed43124c6b72ee",
+      "状态": "failed",
+      "错误": "figma_snapshot_file_mismatch: 快照文件键与请求的 Figma 文件不符。",
+      "证据": []
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13268",
+      "会话": "session-5a0753feee514f13870298c798cc9e67",
+      "状态": "failed",
+      "错误": "figma_snapshot_file_mismatch: 快照文件键与请求的 Figma 文件不符。",
+      "证据": []
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13270",
+      "会话": "session-e89e5c409d194b50ad08bc1fcfd7fec1",
+      "状态": "failed",
+      "错误": "figma_snapshot_file_mismatch: 快照文件键与请求的 Figma 文件不符。",
+      "证据": []
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13269",
+      "会话": "session-c21e69c694e243038eb1218989aa5f08",
+      "状态": "failed",
+      "错误": "figma_snapshot_file_mismatch: 快照文件键与请求的 Figma 文件不符。",
+      "证据": []
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13271",
+      "会话": "session-3f29faf58dce4fa08f0daaea2f255d87",
+      "状态": "failed",
+      "错误": "figma_snapshot_file_mismatch: 快照文件键与请求的 Figma 文件不符。",
+      "证据": []
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13273",
+      "会话": "session-d7ef912181154f51a616f78d776817da",
+      "状态": "failed",
+      "错误": "figma_snapshot_file_mismatch: 快照文件键与请求的 Figma 文件不符。",
+      "证据": []
+    },
+    {
+      "场景": "错文件同节点",
+      "请求文件": "DWrongFileForTest",
+      "请求节点": "2120:13274",
+      "会话": "session-282ef889536543a8a124635e6e6dbc4e",
+      "状态": "failed",
+      "错误": "figma_snapshot_file_mismatch: 快照文件键与请求的 Figma 文件不符。",
+      "证据": []
+    },
+    {
+      "场景": "清单无节点",
+      "请求文件": "j9Z5Y839AREXf0OPysbbJ7",
+      "请求节点": "999999:999999",
+      "会话": "session-aa8c489b22fd4f5d8c4ce057e9df0b3f",
+      "状态": "failed",
+      "错误": "figma_snapshot_node_missing: 快照清单未登记节点 999999:999999。",
+      "证据": []
+    }
+  ]
+}

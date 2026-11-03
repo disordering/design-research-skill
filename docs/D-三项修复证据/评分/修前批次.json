@@ -1,0 +1,356 @@
+{
+  "冻结原件SHA256": "bb71163d6845183277663d19ee8c087a95a9fdf814944c075840d7158cfc275d",
+  "批次结果": {
+    "schema_version": "session-batch-evaluation-1.0",
+    "dataset": "D-七项联合对照",
+    "case_count": 7,
+    "aggregate": {
+      "expected": 9,
+      "actual": 6,
+      "matched": 5,
+      "missed": 4,
+      "extra": 1,
+      "precision": 0.8333,
+      "recall": 0.5556,
+      "f1": 0.6667,
+      "claim_support_rate": 1.0,
+      "derived_claim_rate": 0.0,
+      "coverage_rate": 0.0
+    },
+    "cases": [
+      {
+        "schema_version": "session-evaluation-1.0",
+        "dataset": "两条原子问题已分别写入同一预测",
+        "session_id": "session-d38b1a6d1fbf4f71838c2e01f0164d36",
+        "run_id": "run-2b597c648ac748afa7b70d4d45a313c2",
+        "report_version": 0,
+        "report_completeness": "partial",
+        "finding_metrics": {
+          "expected": 2,
+          "actual": 1,
+          "matched": 1,
+          "missed": 1,
+          "extra": 0,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667
+        },
+        "claim_metrics": {
+          "total": 2,
+          "supported": 2,
+          "derived": 0,
+          "support_rate": 1.0
+        },
+        "coverage_metrics": {
+          "required": 0,
+          "covered": 0,
+          "missing": 0,
+          "missing_by_class": {}
+        },
+        "verifier": {},
+        "matches": [
+          {
+            "label_id": "回执的时段",
+            "finding_id": "F01",
+            "object_id": "回执",
+            "claim_types": [
+              "requirement_match",
+              "requirement_match"
+            ]
+          }
+        ],
+        "missed": [
+          {
+            "label_id": "回执的地点",
+            "object_id": "回执",
+            "claim_types": [],
+            "title_contains": [
+              "地点错误"
+            ],
+            "title_similarity": 0.65
+          }
+        ],
+        "extra": []
+      },
+      {
+        "schema_version": "session-evaluation-1.0",
+        "dataset": "只有时段证据，不能顺带命中地点",
+        "session_id": "session-1be589d775d146fd9a0749aeb1e3b5bd",
+        "run_id": "run-fa31f8224fa84150b1c95b1753750f98",
+        "report_version": 0,
+        "report_completeness": "partial",
+        "finding_metrics": {
+          "expected": 2,
+          "actual": 1,
+          "matched": 1,
+          "missed": 1,
+          "extra": 0,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667
+        },
+        "claim_metrics": {
+          "total": 1,
+          "supported": 1,
+          "derived": 0,
+          "support_rate": 1.0
+        },
+        "coverage_metrics": {
+          "required": 0,
+          "covered": 0,
+          "missing": 0,
+          "missing_by_class": {}
+        },
+        "verifier": {},
+        "matches": [
+          {
+            "label_id": "回执的时段",
+            "finding_id": "F02",
+            "object_id": "回执",
+            "claim_types": [
+              "requirement_match"
+            ]
+          }
+        ],
+        "missed": [
+          {
+            "label_id": "回执的地点",
+            "object_id": "回执",
+            "claim_types": [],
+            "title_contains": [
+              "地点错误"
+            ],
+            "title_similarity": 0.65
+          }
+        ],
+        "extra": []
+      },
+      {
+        "schema_version": "session-evaluation-1.0",
+        "dataset": "检索漏掉判据，已有明确参考",
+        "session_id": "session-c03c33a69eed497f98dc413085ce5be9",
+        "run_id": "run-787131757df34a129213315f667f47c9",
+        "report_version": 0,
+        "report_completeness": "partial",
+        "finding_metrics": {
+          "expected": 1,
+          "actual": 0,
+          "matched": 0,
+          "missed": 1,
+          "extra": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "claim_metrics": {
+          "total": 0,
+          "supported": 0,
+          "derived": 0,
+          "support_rate": 0.0
+        },
+        "coverage_metrics": {
+          "required": 0,
+          "covered": 0,
+          "missing": 0,
+          "missing_by_class": {}
+        },
+        "verifier": {},
+        "matches": [],
+        "missed": [
+          {
+            "label_id": "回执的时段",
+            "object_id": "回执",
+            "claim_types": [],
+            "title_contains": [
+              "时段错误"
+            ],
+            "title_similarity": 0.65
+          }
+        ],
+        "extra": []
+      },
+      {
+        "schema_version": "session-evaluation-1.0",
+        "dataset": "没有参考也没有预测",
+        "session_id": "session-212d6492c5984cf6b85c27964b68661f",
+        "run_id": "run-70cc8dd8ec274dde8860c7823cdecaab",
+        "report_version": 0,
+        "report_completeness": "partial",
+        "finding_metrics": {
+          "expected": 0,
+          "actual": 0,
+          "matched": 0,
+          "missed": 0,
+          "extra": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "claim_metrics": {
+          "total": 0,
+          "supported": 0,
+          "derived": 0,
+          "support_rate": 0.0
+        },
+        "coverage_metrics": {
+          "required": 0,
+          "covered": 0,
+          "missing": 0,
+          "missing_by_class": {}
+        },
+        "verifier": {},
+        "matches": [],
+        "missed": [],
+        "extra": []
+      },
+      {
+        "schema_version": "session-evaluation-1.0",
+        "dataset": "单列设计建议",
+        "session_id": "session-152d1a28453247f4841c90ef8f29f17e",
+        "run_id": "run-93a894721e924deba10319893d0a6af7",
+        "report_version": 0,
+        "report_completeness": "partial",
+        "finding_metrics": {
+          "expected": 1,
+          "actual": 2,
+          "matched": 1,
+          "missed": 0,
+          "extra": 1,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667
+        },
+        "claim_metrics": {
+          "total": 2,
+          "supported": 2,
+          "derived": 0,
+          "support_rate": 1.0
+        },
+        "coverage_metrics": {
+          "required": 0,
+          "covered": 0,
+          "missing": 0,
+          "missing_by_class": {}
+        },
+        "verifier": {},
+        "matches": [
+          {
+            "label_id": "回执的时段",
+            "finding_id": "F02",
+            "object_id": "回执",
+            "claim_types": [
+              "requirement_match"
+            ]
+          }
+        ],
+        "missed": [],
+        "extra": [
+          {
+            "finding_id": "F03",
+            "title": "可加入分享按钮",
+            "object_id": "回执",
+            "claim_types": [
+              "requirement_match"
+            ]
+          }
+        ]
+      },
+      {
+        "schema_version": "session-evaluation-1.0",
+        "dataset": "旧版本不重复计数",
+        "session_id": "session-ec16448800dd439694fd2a7e76717e97",
+        "run_id": "run-0ae896e0e1c64f7582e6ec82e04d2493",
+        "report_version": 0,
+        "report_completeness": "partial",
+        "finding_metrics": {
+          "expected": 2,
+          "actual": 1,
+          "matched": 1,
+          "missed": 1,
+          "extra": 0,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667
+        },
+        "claim_metrics": {
+          "total": 1,
+          "supported": 1,
+          "derived": 0,
+          "support_rate": 1.0
+        },
+        "coverage_metrics": {
+          "required": 0,
+          "covered": 0,
+          "missing": 0,
+          "missing_by_class": {}
+        },
+        "verifier": {},
+        "matches": [
+          {
+            "label_id": "回执的时段",
+            "finding_id": "F02",
+            "object_id": "回执",
+            "claim_types": [
+              "requirement_match"
+            ]
+          }
+        ],
+        "missed": [
+          {
+            "label_id": "回执的地点",
+            "object_id": "回执",
+            "claim_types": [],
+            "title_contains": [
+              "地点错误"
+            ],
+            "title_similarity": 0.65
+          }
+        ],
+        "extra": []
+      },
+      {
+        "schema_version": "session-evaluation-1.0",
+        "dataset": "同一对象的不同问题：参考只给对象编号",
+        "session_id": "session-9f7c8cadf40b42c1a4563cdae422ef2b",
+        "run_id": "run-3dae22bd123c4be7bc992378aea5daf9",
+        "report_version": 0,
+        "report_completeness": "partial",
+        "finding_metrics": {
+          "expected": 1,
+          "actual": 1,
+          "matched": 1,
+          "missed": 0,
+          "extra": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "claim_metrics": {
+          "total": 1,
+          "supported": 1,
+          "derived": 0,
+          "support_rate": 1.0
+        },
+        "coverage_metrics": {
+          "required": 0,
+          "covered": 0,
+          "missing": 0,
+          "missing_by_class": {}
+        },
+        "verifier": {},
+        "matches": [
+          {
+            "label_id": "该页回执时段错误",
+            "finding_id": "F03",
+            "object_id": "回执",
+            "claim_types": [
+              "requirement_match"
+            ]
+          }
+        ],
+        "missed": [],
+        "extra": []
+      }
+    ]
+  }
+}

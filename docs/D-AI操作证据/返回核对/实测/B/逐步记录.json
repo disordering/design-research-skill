@@ -1,0 +1,154 @@
+{
+  "run_type": "AI 模拟操作（非真人）",
+  "strategy": "返回后核对已选项，有误先修正，再次核对后提交",
+  "task": "B",
+  "task_material": "B-H04\\打开界面.html",
+  "target": "周四 16:00–16:30 东侧工坊",
+  "browser": "Microsoft Edge 156.0.4314.58",
+  "viewport": [
+    1200,
+    900
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "stage": "初始选项",
+      "action": "从空白浏览器上下文首次打开",
+      "utc": "2026-11-03T18:43:04.853+00:00",
+      "image": "01-初始选项.png",
+      "visible_text": "山野工坊\n服务登记 / 织物工具借用\n第 1 步，共 3 步\n选择时段\n\n为要使用的织物工具选择领取时段。\n\n周四 10:00–10:30\n西侧工坊\n周四 16:00–16:30\n东侧工坊\n核对信息\n山野工坊　|　织物工具借用",
+      "accessibility_snapshot": "- text: 山野工坊 服务登记 / 织物工具借用\n- main:\n  - article:\n    - text: 第 1 步，共 3 步\n    - heading \"选择时段\" [level=1]\n    - paragraph: 为要使用的织物工具选择领取时段。\n    - radiogroup \"可选时段\":\n      - radio \"周四 10:00–10:30 西侧工坊\" [checked]\n      - strong: 周四 10:00–10:30\n      - text: 西侧工坊\n      - radio \"周四 16:00–16:30 东侧工坊\"\n      - strong: 周四 16:00–16:30\n      - text: 东侧工坊\n    - button \"核对信息\"\n- contentinfo: 山野工坊 | 织物工具借用",
+      "radio_options": [
+        "周四 10:00–10:30 西侧工坊",
+        "周四 16:00–16:30 东侧工坊"
+      ],
+      "checked_option": "周四 10:00–10:30 西侧工坊",
+      "displayed_fields": {}
+    },
+    {
+      "step": 2,
+      "stage": "选择下午",
+      "action": "点选「周四 16:00–16:30 东侧工坊」",
+      "utc": "2026-11-03T18:43:04.894+00:00",
+      "image": "02-选择下午.png",
+      "visible_text": "山野工坊\n服务登记 / 织物工具借用\n第 1 步，共 3 步\n选择时段\n\n为要使用的织物工具选择领取时段。\n\n周四 10:00–10:30\n西侧工坊\n周四 16:00–16:30\n东侧工坊\n核对信息\n山野工坊　|　织物工具借用",
+      "accessibility_snapshot": "- text: 山野工坊 服务登记 / 织物工具借用\n- main:\n  - article:\n    - text: 第 1 步，共 3 步\n    - heading \"选择时段\" [level=1]\n    - paragraph: 为要使用的织物工具选择领取时段。\n    - radiogroup \"可选时段\":\n      - radio \"周四 10:00–10:30 西侧工坊\"\n      - strong: 周四 10:00–10:30\n      - text: 西侧工坊\n      - radio \"周四 16:00–16:30 东侧工坊\" [checked]\n      - strong: 周四 16:00–16:30\n      - text: 东侧工坊\n    - button \"核对信息\"\n- contentinfo: 山野工坊 | 织物工具借用",
+      "radio_options": [
+        "周四 10:00–10:30 西侧工坊",
+        "周四 16:00–16:30 东侧工坊"
+      ],
+      "checked_option": "周四 16:00–16:30 东侧工坊",
+      "displayed_fields": {}
+    },
+    {
+      "step": 3,
+      "stage": "首次核对",
+      "action": "点击「核对信息」",
+      "utc": "2026-11-03T18:43:04.930+00:00",
+      "image": "03-首次核对.png",
+      "visible_text": "山野工坊\n服务登记 / 织物工具借用\n第 2 步，共 3 步\n核对信息\n日期\n周四\n时段\n16:00–16:30\n领取点\n东侧工坊\n返回选择\n提交登记\n山野工坊　|　织物工具借用",
+      "accessibility_snapshot": "- text: 山野工坊 服务登记 / 织物工具借用\n- main:\n  - article:\n    - text: 第 2 步，共 3 步\n    - heading \"核对信息\" [level=1]\n    - term: 日期\n    - definition: 周四\n    - term: 时段\n    - definition: 16:00–16:30\n    - term: 领取点\n    - definition: 东侧工坊\n    - button \"返回选择\"\n    - button \"提交登记\"\n- contentinfo: 山野工坊 | 织物工具借用",
+      "radio_options": [],
+      "checked_option": null,
+      "displayed_fields": {
+        "日期": "周四",
+        "时段": "16:00–16:30",
+        "领取点": "东侧工坊"
+      }
+    },
+    {
+      "step": 4,
+      "stage": "返回状态",
+      "action": "点击「返回选择」，先观察当前选中项",
+      "utc": "2026-11-03T18:43:04.963+00:00",
+      "image": "04-返回状态.png",
+      "visible_text": "山野工坊\n服务登记 / 织物工具借用\n第 1 步，共 3 步\n选择时段\n\n为要使用的织物工具选择领取时段。\n\n周四 10:00–10:30\n西侧工坊\n周四 16:00–16:30\n东侧工坊\n核对信息\n山野工坊　|　织物工具借用",
+      "accessibility_snapshot": "- text: 山野工坊 服务登记 / 织物工具借用\n- main:\n  - article:\n    - text: 第 1 步，共 3 步\n    - heading \"选择时段\" [level=1]\n    - paragraph: 为要使用的织物工具选择领取时段。\n    - radiogroup \"可选时段\":\n      - radio \"周四 10:00–10:30 西侧工坊\" [checked]\n      - strong: 周四 10:00–10:30\n      - text: 西侧工坊\n      - radio \"周四 16:00–16:30 东侧工坊\"\n      - strong: 周四 16:00–16:30\n      - text: 东侧工坊\n    - button \"核对信息\"\n- contentinfo: 山野工坊 | 织物工具借用",
+      "radio_options": [
+        "周四 10:00–10:30 西侧工坊",
+        "周四 16:00–16:30 东侧工坊"
+      ],
+      "checked_option": "周四 10:00–10:30 西侧工坊",
+      "displayed_fields": {}
+    },
+    {
+      "step": 5,
+      "stage": "修正选择",
+      "action": "重新点选「周四 16:00–16:30 东侧工坊」",
+      "utc": "2026-11-03T18:43:04.998+00:00",
+      "image": "05-修正选择.png",
+      "visible_text": "山野工坊\n服务登记 / 织物工具借用\n第 1 步，共 3 步\n选择时段\n\n为要使用的织物工具选择领取时段。\n\n周四 10:00–10:30\n西侧工坊\n周四 16:00–16:30\n东侧工坊\n核对信息\n山野工坊　|　织物工具借用",
+      "accessibility_snapshot": "- text: 山野工坊 服务登记 / 织物工具借用\n- main:\n  - article:\n    - text: 第 1 步，共 3 步\n    - heading \"选择时段\" [level=1]\n    - paragraph: 为要使用的织物工具选择领取时段。\n    - radiogroup \"可选时段\":\n      - radio \"周四 10:00–10:30 西侧工坊\"\n      - strong: 周四 10:00–10:30\n      - text: 西侧工坊\n      - radio \"周四 16:00–16:30 东侧工坊\" [checked]\n      - strong: 周四 16:00–16:30\n      - text: 东侧工坊\n    - button \"核对信息\"\n- contentinfo: 山野工坊 | 织物工具借用",
+      "radio_options": [
+        "周四 10:00–10:30 西侧工坊",
+        "周四 16:00–16:30 东侧工坊"
+      ],
+      "checked_option": "周四 16:00–16:30 东侧工坊",
+      "displayed_fields": {}
+    },
+    {
+      "step": 6,
+      "stage": "最终核对",
+      "action": "点击「核对信息」，核实目标后继续",
+      "utc": "2026-11-03T18:43:05.030+00:00",
+      "image": "06-最终核对.png",
+      "visible_text": "山野工坊\n服务登记 / 织物工具借用\n第 2 步，共 3 步\n核对信息\n日期\n周四\n时段\n16:00–16:30\n领取点\n东侧工坊\n返回选择\n提交登记\n山野工坊　|　织物工具借用",
+      "accessibility_snapshot": "- text: 山野工坊 服务登记 / 织物工具借用\n- main:\n  - article:\n    - text: 第 2 步，共 3 步\n    - heading \"核对信息\" [level=1]\n    - term: 日期\n    - definition: 周四\n    - term: 时段\n    - definition: 16:00–16:30\n    - term: 领取点\n    - definition: 东侧工坊\n    - button \"返回选择\"\n    - button \"提交登记\"\n- contentinfo: 山野工坊 | 织物工具借用",
+      "radio_options": [],
+      "checked_option": null,
+      "displayed_fields": {
+        "日期": "周四",
+        "时段": "16:00–16:30",
+        "领取点": "东侧工坊"
+      }
+    },
+    {
+      "step": 7,
+      "stage": "完成结果",
+      "action": "点击「提交登记」",
+      "utc": "2026-11-03T18:43:05.063+00:00",
+      "image": "07-完成结果.png",
+      "visible_text": "山野工坊\n服务登记 / 织物工具借用\n第 3 步，共 3 步\n登记完成\n\n本次登记信息如下。\n\n日期\n周四\n时段\n16:00–16:30\n领取点\n东侧工坊\n重新开始\n山野工坊　|　织物工具借用",
+      "accessibility_snapshot": "- text: 山野工坊 服务登记 / 织物工具借用\n- main:\n  - article:\n    - text: 第 3 步，共 3 步\n    - heading \"登记完成\" [level=1]\n    - paragraph: 本次登记信息如下。\n    - term: 日期\n    - definition: 周四\n    - term: 时段\n    - definition: 16:00–16:30\n    - term: 领取点\n    - definition: 东侧工坊\n    - button \"重新开始\"\n- contentinfo: 山野工坊 | 织物工具借用",
+      "radio_options": [],
+      "checked_option": null,
+      "displayed_fields": {
+        "日期": "周四",
+        "时段": "16:00–16:30",
+        "领取点": "东侧工坊"
+      }
+    }
+  ],
+  "clicks_after_open": 6,
+  "extra_reselection_clicks": 1,
+  "counting_rule": "规定路径有 5 次点击（选择下午、核对、返回、再次核对、提交）。只将返回后为恢复下午而重选的点击计为额外操作。",
+  "requirements": [
+    {
+      "id": 1,
+      "observed": "符合",
+      "images": [
+        "01-初始选项.png",
+        "02-选择下午.png"
+      ],
+      "detail": "可见选项：周四 10:00–10:30 西侧工坊 / 周四 16:00–16:30 东侧工坊。初始勾选「周四 10:00–10:30 西侧工坊」，点选后勾选「周四 16:00–16:30 东侧工坊」。"
+    },
+    {
+      "id": 2,
+      "observed": "不符合",
+      "images": [
+        "03-首次核对.png",
+        "04-返回状态.png"
+      ],
+      "detail": "首次核对显示 ['周四', '16:00–16:30', '东侧工坊']。点击返回后画面上勾选「周四 10:00–10:30 西侧工坊」。"
+    },
+    {
+      "id": 3,
+      "observed": "符合",
+      "images": [
+        "06-最终核对.png",
+        "07-完成结果.png"
+      ],
+      "detail": "最终核对显示 ['周四', '16:00–16:30', '东侧工坊']。提交后的完成页正文为「山野工坊\n服务登记 / 织物工具借用\n第 3 步，共 3 步\n登记完成\n\n本次登记信息如下。\n\n日期\n周四\n时段\n16:00–16:30\n领取点\n东侧工坊\n重新开始\n山野工坊　|　织物工具借用」。"
+    }
+  ]
+}

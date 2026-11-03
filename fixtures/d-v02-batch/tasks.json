@@ -1,0 +1,17 @@
+{
+  "version": "D-DEV-20261104-1",
+  "use": "已公开走查的开发回归",
+  "limits": {"max_actions": 16, "max_checks": 64, "max_model_calls": 60, "max_review_rounds": 3, "max_seconds": 900, "max_images_per_call": 12, "max_material_chunks": 24, "max_parallel_screens": 2},
+  "tasks": [
+    {"id":"T01","title":"角色试用入口","kind":"image","purpose":"从这张界面图判断用户怎样找到并开始角色试用，检查操作入口、文字和可见状态。","file":"T01.png"},
+    {"id":"T02","title":"通知设置","kind":"image","purpose":"从这张设置页判断如何查看与调整通知偏好，检查选项、操作和当前状态的表达。","file":"T02.png"},
+    {"id":"T03","kind":"website","seed":"W01"},
+    {"id":"T04","kind":"website","seed":"W02"},
+    {"id":"T05","kind":"website","seed":"W03"},
+    {"id":"T06","kind":"website","seed":"W04"},
+    {"id":"T07","title":"护法养成","kind":"figma_board","purpose":"对照所给护法原稿，检查玩家怎样辨认当前护法、选择养成方式并预判本次操作。","nodes":["2118-11671","2118-11938","2118-11712","2118-12533"]},
+    {"id":"T08","title":"吴山石回收与兑换","kind":"figma_board","purpose":"对照所给吴山石原稿，检查从包裹选择道具、设置分解范围和按需兑换的流程。","nodes":["2120-13262","2120-13268","2120-13270","2120-13269","2120-13271","2120-13273","2120-13274"]},
+    {"id":"T09","title":"Flex 物品清单","kind":"figma_prototype","purpose":"从仪表盘进入愿望清单，尝试添加物品，随后放弃这次添加并回到原清单。","url":"https://www.figma.com/proto/afbY0l8lwBqAKKQr84YKl4/Flex-Gym-Inventory-App?node-id=2312-5527&starting-point-node-id=1491%3A3094&scaling=scale-down&content-scaling=fixed"},
+    {"id":"T10","title":"CHOPS 商店","kind":"figma_prototype","purpose":"从欢迎页进入商店，查看可用的选择方式，再回到商店继续浏览。","url":"https://www.figma.com/proto/hQWs65RmaYJHP8BS2gGGLg/CHOPS-by-RCMM-Wireframes?embed_origin=cdn.embedly.com&kind=proto&node-id=1780-4186&page-id=1582%3A14633&scaling=scale-down&show-proto-sidebar=1&starting-point-node-id=1780%3A4177"}
+  ]
+}

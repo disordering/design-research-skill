@@ -644,6 +644,34 @@ class FigmaMCPAdapter:
         self._known_nodes: dict[tuple[str, str], set[str]] = {}
 
     @staticmethod
+    def _same_source(capture: Capture, source: SourceRecord) -> bool:
+        file_key, root_node = figma_target(source.input.reference)
+        locator = capture.locator
+        return (
+            locator.get("requested_file_key") == file_key
+            and locator.get("requested_node_id") == root_node
+            and locator.get("provided_version") == source.input.version
+            and locator.get("snapshot_id", "") == source.input.figma_snapshot_id
+        )
+
+    def _remember_capture(self, session_id: str, source: SourceRecord, capture: Capture) -> Capture:
+        cache_key = (session_id, source.source_id)
+        prior = self._states.get(cache_key)
+        if prior is None or not self._same_source(prior, source):
+            self._known_nodes[cache_key] = set()
+        self._known_nodes[cache_key].update(capture.locator["node_ids"])
+        self._states[cache_key] = capture
+        return capture
+
+    @staticmethod
+    def _snapshot_path(directory: Path, *parts: str) -> Path:
+        path = directory.joinpath(*parts)
+        # 快照内的节点、截图和清单都必须来自所指定的归档位置。
+        if path.resolve() != path:
+            raise EngineError("figma_snapshot_invalid", "快照路径重定向到了其他归档位置。", status_code=422)
+        return path
+
+    @staticmethod
     def _arguments(tool: Any, arguments: dict[str, Any]) -> dict[str, Any]:
         properties = tool.input_schema.get("properties")
         if properties is None:
@@ -808,32 +836,47 @@ class FigmaMCPAdapter:
         if not target or not re.fullmatch(r"\d+:\d+", target):
             raise EngineError("figma_node_invalid", "Figma 快照必须指定有效节点 ID。", status_code=422)
         snapshot_id = source.input.figma_snapshot_id
-        directory = (self.snapshot_root / snapshot_id).resolve()
+        directory = self._snapshot_path(self.snapshot_root.resolve(), snapshot_id)
         if directory.parent != self.snapshot_root.resolve():
             raise EngineError("figma_snapshot_invalid", "Figma 快照路径无效。", status_code=422)
         try:
-            manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
+            manifest = json.loads(self._snapshot_path(directory, "manifest.json").read_text(encoding="utf-8"))
         except (OSError, ValueError) as exc:
             raise EngineError(
                 "figma_snapshot_missing",
                 f"找不到 Figma 快照清单：{snapshot_id}。",
                 status_code=503,
             ) from exc
-        node_meta = (manifest.get("nodes") or {}).get(target, {})
-        metadata_path = directory / "metadata" / f"{target.replace(':', '-')}.xml"
-        image_path = directory / "images" / f"{target.replace(':', '-')}.png"
-        if metadata_path.exists():
+        if not isinstance(manifest, dict) or not manifest.get("file_key"):
+            raise EngineError("figma_snapshot_invalid", "快照清单缺少文件键，无法核对来源。", status_code=422)
+        if manifest["file_key"] != key:
+            raise EngineError("figma_snapshot_file_mismatch", "快照文件键与请求的 Figma 文件不符。", status_code=422)
+        nodes = manifest.get("nodes")
+        if not isinstance(nodes, dict):
+            raise EngineError("figma_snapshot_invalid", "快照清单缺少节点索引。", status_code=422)
+        if target not in nodes:
+            raise EngineError("figma_snapshot_node_missing", f"快照清单未登记节点 {target}。", status_code=422)
+        node_meta = nodes[target]
+        if not isinstance(node_meta, dict):
+            raise EngineError("figma_snapshot_invalid", f"节点 {target} 的清单记录无效。", status_code=422)
+        node_name = target.replace(":", "-")
+        metadata_path = self._snapshot_path(directory, "metadata", f"{node_name}.xml")
+        image_path = self._snapshot_path(directory, "images", f"{node_name}.png")
+        raw_text = None
+        tree = None
+        texts = []
+        visual_nodes = []
+        node_attributes = {"id": target}
+        node_attributes.update({field: node_meta[field] for field in ("name", "width", "height") if field in node_meta})
+        if metadata_path.is_file():
             raw_text = metadata_path.read_text(encoding="utf-8")
-        else:
-            raw_text = (
-                f'<frame id="{target}" name="{node_meta.get("name") or target}" '
-                f'x="0" y="0" width="{node_meta.get("width") or 1}" '
-                f'height="{node_meta.get("height") or 1}"/>'
-            )
-        image = image_path.read_bytes() if image_path.exists() else None
-        tree, texts, visual_nodes = self._structure_index(raw_text)
-        if tree is None:
-            raise EngineError("figma_snapshot_invalid", "Figma 快照元数据无法解析。", status_code=422)
+            tree, texts, visual_nodes = self._structure_index(raw_text)
+            if tree is None or tree.get("id") != target:
+                raise EngineError("figma_snapshot_invalid", f"快照元数据无法对应节点 {target}。", status_code=422)
+            node_attributes = tree.attrib
+        image = image_path.read_bytes() if image_path.is_file() else None
+        if tree is None and not image:
+            raise EngineError("figma_snapshot_evidence_missing", f"节点 {target} 缺少归档元数据和截图。", status_code=422)
         inspection_targets = [
             {
                 "node_id": node["node_id"], "name": node["name"], "type": node["type"],
@@ -849,14 +892,11 @@ class FigmaMCPAdapter:
         hidden_texts = [node for node in texts if node["hidden"]]
         content_data = {
             "file_scope": "verified_snapshot",
-            "scope_note": (
-                "该证据来自本轮预先读取的 Figma MCP 节点快照；元数据与截图均已固化，"
-                "用于确保完整会话可复算。文件身份以快照清单记录为准。"
-            ),
-            "node": tree.attrib,
+            "scope_note": "已核对快照文件键与节点。截图与元数据的读取状态分别记录。",
+            "node": node_attributes,
             "top_level_nodes": [
                 dict(node.attrib) for node in tree if node.tag in {"frame", "section", "canvas"}
-            ],
+            ] if tree is not None else [],
             "visible_text": visible_texts[:250],
             "hidden_text": hidden_texts[:80],
             "inspection_targets": inspection_targets,
@@ -870,9 +910,14 @@ class FigmaMCPAdapter:
         screenshot_width = screenshot_height = None
         if image:
             from PIL import Image
-            with Image.open(io.BytesIO(image)) as pixels:
-                screenshot_width, screenshot_height = pixels.size
-        state_id = hashlib.sha256(raw_text.encode() + (image or b"")).hexdigest()[:24]
+            try:
+                with Image.open(io.BytesIO(image)) as pixels:
+                    screenshot_width, screenshot_height = pixels.size
+                    pixels.verify()
+            except (OSError, ValueError, SyntaxError, Image.DecompressionBombError) as exc:
+                raise EngineError("figma_snapshot_invalid", f"节点 {target} 的归档截图无效。", status_code=422) from exc
+        state_text = raw_text if raw_text is not None else json.dumps(node_attributes, sort_keys=True)
+        state_id = hashlib.sha256(state_text.encode() + (image or b"")).hexdigest()[:24]
         capture = Capture(
             content=self._bounded_json(content_data),
             controls=[
@@ -889,12 +934,16 @@ class FigmaMCPAdapter:
                 for node in visual_nodes[:80]
             ],
             locator={
-                "file_key": key,
+                "file_key": manifest["file_key"],
                 "requested_file_key": key,
-                "file_identity_verified": manifest.get("file_key") == key,
+                "file_identity_verified": True,
                 "requested_node_id": original_node,
+                "provided_version": source.input.version,
                 "node_id": target,
-                "node_ids": list(dict.fromkeys(re.findall(r'id="(\d+:\d+)"', raw_text))),
+                "node_ids": list(dict.fromkeys(
+                    node.get("id") for node in tree.iter() if re.fullmatch(r"\d+:\d+", node.get("id", ""))
+                )) if tree is not None else [target],
+                "metadata_status": "captured" if tree is not None else "unavailable",
                 "visible_text_ids": [node["node_id"] for node in visible_texts[:250]],
                 "hidden_text_ids": [node["node_id"] for node in hidden_texts[:80]],
                 "inspection_targets": inspection_targets,
@@ -909,16 +958,10 @@ class FigmaMCPAdapter:
             },
             state_id=state_id,
             image=image,
-            partial=image is None,
+            partial=not image,
             raw_content=raw_text,
         )
-        cache_key = (session_id, source.source_id)
-        prior = self._states.get(cache_key)
-        if prior is None or prior.locator.get("snapshot_id") != snapshot_id:
-            self._known_nodes[cache_key] = set()
-        self._known_nodes[cache_key].update(capture.locator["node_ids"])
-        self._states[cache_key] = capture
-        return capture
+        return self._remember_capture(session_id, source, capture)
 
     async def read(self, session_id: str, source: SourceRecord, node_id: str | None = None) -> Capture:
         if source.input.figma_snapshot_id:
@@ -1071,14 +1114,7 @@ class FigmaMCPAdapter:
                             partial=bool((target and image is None) or omitted_texts or omitted_targets),
                             raw_content=text,
                         )
-                        cache_key = (session_id, source.source_id)
-                        prior = self._states.get(cache_key)
-                        origin_fields = ("requested_file_key", "requested_node_id", "provided_version")
-                        if prior is None or any(prior.locator.get(field) != capture.locator[field] for field in origin_fields):
-                            self._known_nodes[cache_key] = set()
-                        self._known_nodes[cache_key].update(capture.locator["node_ids"])
-                        self._states[(session_id, source.source_id)] = capture
-                        return capture
+                        return self._remember_capture(session_id, source, capture)
         except EngineError:
             raise
         except ImportError as exc:
@@ -1131,7 +1167,8 @@ class FigmaMCPAdapter:
             raise EngineError("figma_node_invalid", "节点 ID 无效。", status_code=422)
         prior = self._states.get((session_id, source.source_id))
         if action.kind == "inspect_node" and (
-            not prior or action.node_id not in self._known_nodes.get((session_id, source.source_id), set())
+            not prior or not self._same_source(prior, source)
+            or action.node_id not in self._known_nodes.get((session_id, source.source_id), set())
         ):
             raise EngineError("figma_node_not_observed", "节点不在已读取材料中，不能猜测节点 ID。", status_code=422)
         return await self.read(session_id, source, action.node_id or None)

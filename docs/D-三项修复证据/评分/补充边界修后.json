@@ -1,0 +1,490 @@
+[
+  {
+    "补充未匹配字号主张": false,
+    "交换编号": false,
+    "逆序输入": false,
+    "指标": {
+      "expected": 2,
+      "actual": 1,
+      "matched": 1,
+      "matched_predictions": 1,
+      "missed": 1,
+      "extra": 0,
+      "duplicates": 1,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 0,
+      "precision": 1.0,
+      "recall": 0.5,
+      "duplicate_rate": 0.5,
+      "f1": 0.6667
+    },
+    "映射": [
+      {
+        "label_id": "参考乙",
+        "finding_id": "P02",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-cf646f700e314d4482b43d015b49cbef",
+        "evidence_ids": [
+          "回执图"
+        ],
+        "equivalent_claims": [
+          {
+            "finding_id": "P01",
+            "claim_id": "claim-295392c222d645c9b29b010e8a4acd88",
+            "eligible_labels": [
+              "参考甲"
+            ]
+          },
+          {
+            "finding_id": "P02",
+            "claim_id": "claim-cf646f700e314d4482b43d015b49cbef",
+            "eligible_labels": [
+              "参考乙",
+              "参考甲"
+            ]
+          }
+        ]
+      }
+    ],
+    "重复": [
+      {
+        "finding_id": "P01",
+        "duplicate_of": "P02",
+        "covered_by": [
+          "P02"
+        ]
+      }
+    ],
+    "部分重合": []
+  },
+  {
+    "补充未匹配字号主张": false,
+    "交换编号": false,
+    "逆序输入": true,
+    "指标": {
+      "expected": 2,
+      "actual": 1,
+      "matched": 1,
+      "matched_predictions": 1,
+      "missed": 1,
+      "extra": 0,
+      "duplicates": 1,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 0,
+      "precision": 1.0,
+      "recall": 0.5,
+      "duplicate_rate": 0.5,
+      "f1": 0.6667
+    },
+    "映射": [
+      {
+        "label_id": "参考乙",
+        "finding_id": "P02",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-bb57129020fb43e688d3eaf637c4d2ff",
+        "evidence_ids": [
+          "回执图"
+        ],
+        "equivalent_claims": [
+          {
+            "finding_id": "P01",
+            "claim_id": "claim-ac69d5612ccb4e1099a40c721a185e5b",
+            "eligible_labels": [
+              "参考甲"
+            ]
+          },
+          {
+            "finding_id": "P02",
+            "claim_id": "claim-bb57129020fb43e688d3eaf637c4d2ff",
+            "eligible_labels": [
+              "参考乙",
+              "参考甲"
+            ]
+          }
+        ]
+      }
+    ],
+    "重复": [
+      {
+        "finding_id": "P01",
+        "duplicate_of": "P02",
+        "covered_by": [
+          "P02"
+        ]
+      }
+    ],
+    "部分重合": []
+  },
+  {
+    "补充未匹配字号主张": false,
+    "交换编号": true,
+    "逆序输入": false,
+    "指标": {
+      "expected": 2,
+      "actual": 1,
+      "matched": 1,
+      "matched_predictions": 1,
+      "missed": 1,
+      "extra": 0,
+      "duplicates": 1,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 0,
+      "precision": 1.0,
+      "recall": 0.5,
+      "duplicate_rate": 0.5,
+      "f1": 0.6667
+    },
+    "映射": [
+      {
+        "label_id": "参考乙",
+        "finding_id": "P01",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-be562b69d4c045a28fd4ae4e6ddda180",
+        "evidence_ids": [
+          "回执图"
+        ],
+        "equivalent_claims": [
+          {
+            "finding_id": "P02",
+            "claim_id": "claim-26a78b73ff324e169e5d71e15e93f72c",
+            "eligible_labels": [
+              "参考甲"
+            ]
+          },
+          {
+            "finding_id": "P01",
+            "claim_id": "claim-be562b69d4c045a28fd4ae4e6ddda180",
+            "eligible_labels": [
+              "参考乙",
+              "参考甲"
+            ]
+          }
+        ]
+      }
+    ],
+    "重复": [
+      {
+        "finding_id": "P02",
+        "duplicate_of": "P01",
+        "covered_by": [
+          "P01"
+        ]
+      }
+    ],
+    "部分重合": []
+  },
+  {
+    "补充未匹配字号主张": false,
+    "交换编号": true,
+    "逆序输入": true,
+    "指标": {
+      "expected": 2,
+      "actual": 1,
+      "matched": 1,
+      "matched_predictions": 1,
+      "missed": 1,
+      "extra": 0,
+      "duplicates": 1,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 0,
+      "precision": 1.0,
+      "recall": 0.5,
+      "duplicate_rate": 0.5,
+      "f1": 0.6667
+    },
+    "映射": [
+      {
+        "label_id": "参考乙",
+        "finding_id": "P01",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-109075e072ca44a4ab65a73881250c7a",
+        "evidence_ids": [
+          "回执图"
+        ],
+        "equivalent_claims": [
+          {
+            "finding_id": "P02",
+            "claim_id": "claim-c772e5258eea411d97f440a9845e8730",
+            "eligible_labels": [
+              "参考甲"
+            ]
+          },
+          {
+            "finding_id": "P01",
+            "claim_id": "claim-109075e072ca44a4ab65a73881250c7a",
+            "eligible_labels": [
+              "参考乙",
+              "参考甲"
+            ]
+          }
+        ]
+      }
+    ],
+    "重复": [
+      {
+        "finding_id": "P02",
+        "duplicate_of": "P01",
+        "covered_by": [
+          "P01"
+        ]
+      }
+    ],
+    "部分重合": []
+  },
+  {
+    "补充未匹配字号主张": true,
+    "交换编号": false,
+    "逆序输入": false,
+    "指标": {
+      "expected": 1,
+      "actual": 2,
+      "matched": 1,
+      "matched_predictions": 1,
+      "missed": 0,
+      "extra": 1,
+      "duplicates": 0,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "duplicate_rate": 0.0,
+      "f1": 0.6667
+    },
+    "映射": [
+      {
+        "label_id": "时段参考",
+        "finding_id": "P01",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-39efbab5d5be44e8a3d7c8b5c7add391",
+        "evidence_ids": [
+          "回执图"
+        ],
+        "equivalent_claims": [
+          {
+            "finding_id": "P01",
+            "claim_id": "claim-39efbab5d5be44e8a3d7c8b5c7add391",
+            "eligible_labels": [
+              "时段参考"
+            ]
+          },
+          {
+            "finding_id": "P02",
+            "claim_id": "claim-4d3537d4af2149e7803719aff5275102",
+            "eligible_labels": [
+              "时段参考"
+            ]
+          }
+        ]
+      }
+    ],
+    "重复": [],
+    "部分重合": [
+      {
+        "finding_id": "P02",
+        "overlapping_label_ids": [
+          "时段参考"
+        ]
+      }
+    ]
+  },
+  {
+    "补充未匹配字号主张": true,
+    "交换编号": false,
+    "逆序输入": true,
+    "指标": {
+      "expected": 1,
+      "actual": 2,
+      "matched": 1,
+      "matched_predictions": 1,
+      "missed": 0,
+      "extra": 1,
+      "duplicates": 0,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "duplicate_rate": 0.0,
+      "f1": 0.6667
+    },
+    "映射": [
+      {
+        "label_id": "时段参考",
+        "finding_id": "P01",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-973606cdb9824e1b81f8df16603e329f",
+        "evidence_ids": [
+          "回执图"
+        ],
+        "equivalent_claims": [
+          {
+            "finding_id": "P01",
+            "claim_id": "claim-973606cdb9824e1b81f8df16603e329f",
+            "eligible_labels": [
+              "时段参考"
+            ]
+          },
+          {
+            "finding_id": "P02",
+            "claim_id": "claim-56aed7c3d85e49bea1d07ef19a07c671",
+            "eligible_labels": [
+              "时段参考"
+            ]
+          }
+        ]
+      }
+    ],
+    "重复": [],
+    "部分重合": [
+      {
+        "finding_id": "P02",
+        "overlapping_label_ids": [
+          "时段参考"
+        ]
+      }
+    ]
+  },
+  {
+    "补充未匹配字号主张": true,
+    "交换编号": true,
+    "逆序输入": false,
+    "指标": {
+      "expected": 1,
+      "actual": 2,
+      "matched": 1,
+      "matched_predictions": 1,
+      "missed": 0,
+      "extra": 1,
+      "duplicates": 0,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "duplicate_rate": 0.0,
+      "f1": 0.6667
+    },
+    "映射": [
+      {
+        "label_id": "时段参考",
+        "finding_id": "P02",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-4a02514c180f4176b54e13c373083b7b",
+        "evidence_ids": [
+          "回执图"
+        ],
+        "equivalent_claims": [
+          {
+            "finding_id": "P02",
+            "claim_id": "claim-4a02514c180f4176b54e13c373083b7b",
+            "eligible_labels": [
+              "时段参考"
+            ]
+          },
+          {
+            "finding_id": "P01",
+            "claim_id": "claim-0301d8635ba8492a92b1c62e2fe32315",
+            "eligible_labels": [
+              "时段参考"
+            ]
+          }
+        ]
+      }
+    ],
+    "重复": [],
+    "部分重合": [
+      {
+        "finding_id": "P01",
+        "overlapping_label_ids": [
+          "时段参考"
+        ]
+      }
+    ]
+  },
+  {
+    "补充未匹配字号主张": true,
+    "交换编号": true,
+    "逆序输入": true,
+    "指标": {
+      "expected": 1,
+      "actual": 2,
+      "matched": 1,
+      "matched_predictions": 1,
+      "missed": 0,
+      "extra": 1,
+      "duplicates": 0,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "duplicate_rate": 0.0,
+      "f1": 0.6667
+    },
+    "映射": [
+      {
+        "label_id": "时段参考",
+        "finding_id": "P02",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-617b713ca7b140c89365f83c8e4cab62",
+        "evidence_ids": [
+          "回执图"
+        ],
+        "equivalent_claims": [
+          {
+            "finding_id": "P02",
+            "claim_id": "claim-617b713ca7b140c89365f83c8e4cab62",
+            "eligible_labels": [
+              "时段参考"
+            ]
+          },
+          {
+            "finding_id": "P01",
+            "claim_id": "claim-6cdd8f40611e445f984e1fb5fee5b7c2",
+            "eligible_labels": [
+              "时段参考"
+            ]
+          }
+        ]
+      }
+    ],
+    "重复": [],
+    "部分重合": [
+      {
+        "finding_id": "P01",
+        "overlapping_label_ids": [
+          "时段参考"
+        ]
+      }
+    ]
+  }
+]

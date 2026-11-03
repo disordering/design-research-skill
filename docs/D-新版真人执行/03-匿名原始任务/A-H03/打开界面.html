@@ -1,0 +1,32 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>灯塔声音工作室 · 试听间预约</title><style>:root{--brand:#275d62;--pale:#ebf4f3}*{box-sizing:border-box}body{margin:0;color:#1f2932;background:#f6f7f9;font:16px/1.65 system-ui,'Microsoft YaHei',sans-serif}.bar{background:white;border-bottom:1px solid #d8dce1}.container{max-width:720px;margin:0 auto;padding:15px 22px}.brand{color:var(--brand);font-weight:720;letter-spacing:.08em}.path{float:right;color:#4c5864}.panel{margin:25px auto;background:white;border-radius:14px;border:1px solid #d6dce0;padding:26px;box-shadow:0 2px 9px #34495e0b}h1{font-size:27px;line-height:1.35;margin:10px 0}h2{font-size:19px;margin:20px 0 10px}p{margin:8px 0 14px}.badge{color:var(--brand);background:var(--pale);border-radius:18px;padding:4px 12px;font-size:14px;display:inline-block}.opts{display:grid;gap:10px;margin:12px 0 18px}.option{border:1px solid #aab3bc;border-radius:8px;display:flex;align-items:center;gap:12px;padding:10px 14px;cursor:pointer}.option:has(:checked){box-shadow:inset 0 0 0 2px var(--brand);background:var(--pale)}input{width:18px;height:18px;accent-color:var(--brand)}.val{display:block;color:#42505d;font-size:15px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}button{cursor:pointer;font:inherit;border-radius:7px;padding:8px 18px;border:1px solid #65707c;background:white;color:#21303b}button.primary{background:var(--brand);color:white;border-color:var(--brand)}dl{display:grid;grid-template-columns:100px 1fr;gap:8px 12px;padding:14px 16px;background:var(--pale);border-radius:8px}dt{color:#52616d}dd{margin:0}footer{font-size:14px;color:#5b6570;text-align:center;padding:12px} @media(max-width:480px){.container{padding:12px}.panel{margin:12px auto;padding:18px}.path{float:none;display:block}}</style></head><body><div class="bar"><div class="container"><span class="brand">灯塔声音工作室</span><span class="path">服务登记 / 试听间预约</span></div></div><main class="container"><article class="panel"><span class="badge" id="step"></span><h1 id="screen"></h1><div id="content"></div><div class="actions" id="actions"></div></article></main><footer>灯塔声音工作室　|　试听间预约</footer><script>
+const options=[{"time": "09:30–10:00", "place": "北区试听间"}, {"time": "15:30–16:00", "place": "南区试听间"}],day="周三",unit="试听间";
+const stage=document.getElementById('step'),heading=document.getElementById('screen'),content=document.getElementById('content'),actions=document.getElementById('actions');
+let selected=0;
+function button(text,action,primary){
+  const btn=document.createElement('button');btn.type='button';btn.textContent=text;
+  if(primary)btn.className='primary';btn.addEventListener('click',action);actions.append(btn);
+}
+function step(num,title) {stage.textContent='第 '+num+' 步，共 3 步';heading.textContent=title;content.replaceChildren();actions.replaceChildren();}
+function summary(choice){
+ const dl=document.createElement('dl');
+ for(const [k,v] of [['日期',day],['时段',choice.time],[unit,choice.place]]){
+  const dt=document.createElement('dt');dt.textContent=k;const dd=document.createElement('dd');dd.textContent=v;dl.append(dt,dd);
+ }content.append(dl);
+}
+function choose(){
+ step(1,'选择时段');const desc=document.createElement('p');desc.textContent="在这里选择合适的试听时段。";content.append(desc);
+ const form=document.createElement('div');form.className='opts';form.setAttribute('role','radiogroup');form.setAttribute('aria-label','可选时段');
+ options.forEach((o,i)=>{
+   const label=document.createElement('label');label.className='option';const r=document.createElement('input');r.type='radio';r.name='slot';r.checked=i===selected;r.onchange=()=>{selected=i};
+   const wrap=document.createElement('span'),t=document.createElement('strong'),p=document.createElement('span');t.textContent=day+' '+o.time;p.className='val';p.textContent=o.place;wrap.append(t,p);label.append(r,wrap);form.append(label);
+ });
+ content.append(form);button('核对信息',check,true);
+}
+function check(){
+ step(2,'核对信息');summary(options[selected]);button('返回选择',()=>{selected=selected;choose()});button('提交登记',finish,true);
+}
+function finish(){
+ step(3,'登记完成');const p=document.createElement('p');p.textContent='本次登记信息如下。';content.append(p);summary(options[selected]);button('重新开始',()=>{selected=0;choose()});
+}
+choose();
+</script></body></html>

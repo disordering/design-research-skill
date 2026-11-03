@@ -1,0 +1,216 @@
+{
+  "样本脚本_SHA256": "cc11187540e09acc7b88ea4d00252392512d2063751d9604f6aa39e2ea9bad4c",
+  "需求_SHA256": "319a78d0869276a511b0b4689757aa6fae4d8413b0c756aa9741ad8b85f25abe",
+  "执行时间UTC": "2026-11-03T19:26:49.506568+00:00",
+  "浏览器": "Chromium 156.0.8078.4",
+  "各组": [
+    {
+      "初始页正文": "蓝桥文印\n\n设置打印单\n\n文件：课程讲义.pdf。每张纸 0.20 元，校内配送每单 3 元。\n\n原稿页数\n份数\n打印方式\n单面\n双面\n取件方式\n到店自取\n校内配送\n查看报价",
+      "输入属性": [
+        {
+          "id": "pages",
+          "type": "number",
+          "min": null,
+          "max": null,
+          "title": null,
+          "placeholder": null,
+          "describedby": null
+        },
+        {
+          "id": "copies",
+          "type": "number",
+          "min": null,
+          "max": null,
+          "title": null,
+          "placeholder": null,
+          "describedby": null
+        }
+      ],
+      "输入页数": 1,
+      "输入份数": 1,
+      "取件方式": "到店自取",
+      "打印方式": "双面",
+      "报价页实际明细": "1 页 · 1 份 · 双面\n\n到店自取\n\n打印费 ¥0.20，配送费 ¥0.00\n\n合计 ¥0.20"
+    },
+    {
+      "初始页正文": "蓝桥文印\n\n设置打印单\n\n文件：课程讲义.pdf。每张纸 0.20 元，校内配送每单 3 元。\n\n原稿页数\n份数\n打印方式\n单面\n双面\n取件方式\n到店自取\n校内配送\n查看报价",
+      "输入属性": [
+        {
+          "id": "pages",
+          "type": "number",
+          "min": null,
+          "max": null,
+          "title": null,
+          "placeholder": null,
+          "describedby": null
+        },
+        {
+          "id": "copies",
+          "type": "number",
+          "min": null,
+          "max": null,
+          "title": null,
+          "placeholder": null,
+          "describedby": null
+        }
+      ],
+      "输入页数": 60,
+      "输入份数": 5,
+      "取件方式": "到店自取",
+      "打印方式": "双面",
+      "报价页实际明细": "60 页 · 5 份 · 双面\n\n到店自取\n\n打印费 ¥30.00，配送费 ¥0.00\n\n合计 ¥30.00"
+    },
+    {
+      "初始页正文": "蓝桥文印\n\n设置打印单\n\n文件：课程讲义.pdf。每张纸 0.20 元，校内配送每单 3 元。\n\n原稿页数\n份数\n打印方式\n单面\n双面\n取件方式\n到店自取\n校内配送\n查看报价",
+      "输入属性": [
+        {
+          "id": "pages",
+          "type": "number",
+          "min": null,
+          "max": null,
+          "title": null,
+          "placeholder": null,
+          "describedby": null
+        },
+        {
+          "id": "copies",
+          "type": "number",
+          "min": null,
+          "max": null,
+          "title": null,
+          "placeholder": null,
+          "describedby": null
+        }
+      ],
+      "输入页数": 0,
+      "输入份数": 1,
+      "取件方式": "到店自取",
+      "打印方式": "双面",
+      "点击报价后提示": "页数须为 1 至 60，份数须为 1 至 5。",
+      "出错后输入保留": [
+        "0",
+        "1"
+      ],
+      "修正值": [
+        1,
+        1
+      ],
+      "报价页实际明细": "1 页 · 1 份 · 双面\n\n到店自取\n\n打印费 ¥0.20，配送费 ¥0.00\n\n合计 ¥0.20"
+    },
+    {
+      "初始页正文": "蓝桥文印\n\n设置打印单\n\n文件：课程讲义.pdf。每张纸 0.20 元，校内配送每单 3 元。\n\n原稿页数\n份数\n打印方式\n单面\n双面\n取件方式\n到店自取\n校内配送\n查看报价",
+      "输入属性": [
+        {
+          "id": "pages",
+          "type": "number",
+          "min": null,
+          "max": null,
+          "title": null,
+          "placeholder": null,
+          "describedby": null
+        },
+        {
+          "id": "copies",
+          "type": "number",
+          "min": null,
+          "max": null,
+          "title": null,
+          "placeholder": null,
+          "describedby": null
+        }
+      ],
+      "输入页数": 61,
+      "输入份数": 5,
+      "取件方式": "到店自取",
+      "打印方式": "双面",
+      "点击报价后提示": "页数须为 1 至 60，份数须为 1 至 5。",
+      "出错后输入保留": [
+        "61",
+        "5"
+      ],
+      "修正值": [
+        60,
+        5
+      ],
+      "报价页实际明细": "60 页 · 5 份 · 双面\n\n到店自取\n\n打印费 ¥30.00，配送费 ¥0.00\n\n合计 ¥30.00"
+    },
+    {
+      "初始页正文": "蓝桥文印\n\n设置打印单\n\n文件：课程讲义.pdf。每张纸 0.20 元，校内配送每单 3 元。\n\n原稿页数\n份数\n打印方式\n单面\n双面\n取件方式\n到店自取\n校内配送\n查看报价",
+      "输入属性": [
+        {
+          "id": "pages",
+          "type": "number",
+          "min": null,
+          "max": null,
+          "title": null,
+          "placeholder": null,
+          "describedby": null
+        },
+        {
+          "id": "copies",
+          "type": "number",
+          "min": null,
+          "max": null,
+          "title": null,
+          "placeholder": null,
+          "describedby": null
+        }
+      ],
+      "输入页数": 1,
+      "输入份数": 0,
+      "取件方式": "到店自取",
+      "打印方式": "双面",
+      "点击报价后提示": "页数须为 1 至 60，份数须为 1 至 5。",
+      "出错后输入保留": [
+        "1",
+        "0"
+      ],
+      "修正值": [
+        1,
+        1
+      ],
+      "报价页实际明细": "1 页 · 1 份 · 双面\n\n到店自取\n\n打印费 ¥0.20，配送费 ¥0.00\n\n合计 ¥0.20"
+    },
+    {
+      "初始页正文": "蓝桥文印\n\n设置打印单\n\n文件：课程讲义.pdf。每张纸 0.20 元，校内配送每单 3 元。\n\n原稿页数\n份数\n打印方式\n单面\n双面\n取件方式\n到店自取\n校内配送\n查看报价",
+      "输入属性": [
+        {
+          "id": "pages",
+          "type": "number",
+          "min": null,
+          "max": null,
+          "title": null,
+          "placeholder": null,
+          "describedby": null
+        },
+        {
+          "id": "copies",
+          "type": "number",
+          "min": null,
+          "max": null,
+          "title": null,
+          "placeholder": null,
+          "describedby": null
+        }
+      ],
+      "输入页数": 60,
+      "输入份数": 6,
+      "取件方式": "到店自取",
+      "打印方式": "双面",
+      "点击报价后提示": "页数须为 1 至 60，份数须为 1 至 5。",
+      "出错后输入保留": [
+        "60",
+        "6"
+      ],
+      "修正值": [
+        60,
+        5
+      ],
+      "报价页实际明细": "60 页 · 5 份 · 双面\n\n到店自取\n\n打印费 ¥30.00，配送费 ¥0.00\n\n合计 ¥30.00"
+    }
+  ],
+  "合规端点正确报价": 2,
+  "越界被拦且修正后正确报价": 4,
+  "事实": "初始页只提示单价和运费；两项输入均无 min/max。四种越界值在点击查看报价后才显示两个范围，并保留输入。",
+  "D裁决": "确认，低。提前显示上下界可省一次往返，价格计算和越界拦截均正常。"
+}

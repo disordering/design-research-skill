@@ -1,0 +1,376 @@
+[
+  {
+    "补充未匹配字号主张": false,
+    "交换编号": false,
+    "逆序输入": false,
+    "指标": {
+      "expected": 2,
+      "actual": 2,
+      "matched": 2,
+      "matched_predictions": 2,
+      "missed": 0,
+      "extra": 0,
+      "duplicates": 0,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "duplicate_rate": 0.0,
+      "f1": 1.0
+    },
+    "映射": [
+      {
+        "label_id": "参考乙",
+        "finding_id": "P02",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-0d1d575a60944bf69ca75556e8c4a39a",
+        "evidence_ids": [
+          "回执图"
+        ]
+      },
+      {
+        "label_id": "参考甲",
+        "finding_id": "P01",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-9ab795cf73d447449a0c8586bd61b148",
+        "evidence_ids": [
+          "回执图"
+        ]
+      }
+    ],
+    "重复": [],
+    "部分重合": []
+  },
+  {
+    "补充未匹配字号主张": false,
+    "交换编号": false,
+    "逆序输入": true,
+    "指标": {
+      "expected": 2,
+      "actual": 2,
+      "matched": 2,
+      "matched_predictions": 2,
+      "missed": 0,
+      "extra": 0,
+      "duplicates": 0,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "duplicate_rate": 0.0,
+      "f1": 1.0
+    },
+    "映射": [
+      {
+        "label_id": "参考乙",
+        "finding_id": "P02",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-0d0d3fb1be6b448ba31e998e3f9b0362",
+        "evidence_ids": [
+          "回执图"
+        ]
+      },
+      {
+        "label_id": "参考甲",
+        "finding_id": "P01",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-bf2a5f2fa42e466fa0279bbc3f8c064a",
+        "evidence_ids": [
+          "回执图"
+        ]
+      }
+    ],
+    "重复": [],
+    "部分重合": []
+  },
+  {
+    "补充未匹配字号主张": false,
+    "交换编号": true,
+    "逆序输入": false,
+    "指标": {
+      "expected": 2,
+      "actual": 2,
+      "matched": 2,
+      "matched_predictions": 2,
+      "missed": 0,
+      "extra": 0,
+      "duplicates": 0,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "duplicate_rate": 0.0,
+      "f1": 1.0
+    },
+    "映射": [
+      {
+        "label_id": "参考乙",
+        "finding_id": "P01",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-b6bd63c9b95c476495e0458640868dce",
+        "evidence_ids": [
+          "回执图"
+        ]
+      },
+      {
+        "label_id": "参考甲",
+        "finding_id": "P02",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-449279c8e4ea4b3d9f20651a1bdb0c8b",
+        "evidence_ids": [
+          "回执图"
+        ]
+      }
+    ],
+    "重复": [],
+    "部分重合": []
+  },
+  {
+    "补充未匹配字号主张": false,
+    "交换编号": true,
+    "逆序输入": true,
+    "指标": {
+      "expected": 2,
+      "actual": 2,
+      "matched": 2,
+      "matched_predictions": 2,
+      "missed": 0,
+      "extra": 0,
+      "duplicates": 0,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "duplicate_rate": 0.0,
+      "f1": 1.0
+    },
+    "映射": [
+      {
+        "label_id": "参考乙",
+        "finding_id": "P01",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-c31015bbef314fbcafae86a41cc9e2ff",
+        "evidence_ids": [
+          "回执图"
+        ]
+      },
+      {
+        "label_id": "参考甲",
+        "finding_id": "P02",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-1d22dcb2a6f74af5a4784a50e3e9c64d",
+        "evidence_ids": [
+          "回执图"
+        ]
+      }
+    ],
+    "重复": [],
+    "部分重合": []
+  },
+  {
+    "补充未匹配字号主张": true,
+    "交换编号": false,
+    "逆序输入": false,
+    "指标": {
+      "expected": 1,
+      "actual": 2,
+      "matched": 1,
+      "matched_predictions": 1,
+      "missed": 0,
+      "extra": 1,
+      "duplicates": 0,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "duplicate_rate": 0.0,
+      "f1": 0.6667
+    },
+    "映射": [
+      {
+        "label_id": "时段参考",
+        "finding_id": "P01",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-e9fd86de31414181888092f446958761",
+        "evidence_ids": [
+          "回执图"
+        ]
+      }
+    ],
+    "重复": [],
+    "部分重合": [
+      {
+        "finding_id": "P02",
+        "overlapping_label_ids": [
+          "时段参考"
+        ]
+      }
+    ]
+  },
+  {
+    "补充未匹配字号主张": true,
+    "交换编号": false,
+    "逆序输入": true,
+    "指标": {
+      "expected": 1,
+      "actual": 2,
+      "matched": 1,
+      "matched_predictions": 1,
+      "missed": 0,
+      "extra": 1,
+      "duplicates": 0,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "duplicate_rate": 0.0,
+      "f1": 0.6667
+    },
+    "映射": [
+      {
+        "label_id": "时段参考",
+        "finding_id": "P01",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-f856dfe847724b46bf0ba9c2b1dbc32e",
+        "evidence_ids": [
+          "回执图"
+        ]
+      }
+    ],
+    "重复": [],
+    "部分重合": [
+      {
+        "finding_id": "P02",
+        "overlapping_label_ids": [
+          "时段参考"
+        ]
+      }
+    ]
+  },
+  {
+    "补充未匹配字号主张": true,
+    "交换编号": true,
+    "逆序输入": false,
+    "指标": {
+      "expected": 1,
+      "actual": 1,
+      "matched": 1,
+      "matched_predictions": 1,
+      "missed": 0,
+      "extra": 0,
+      "duplicates": 1,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "duplicate_rate": 0.5,
+      "f1": 1.0
+    },
+    "映射": [
+      {
+        "label_id": "时段参考",
+        "finding_id": "P01",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-f5f8871fcb504622bb9e7cad3349b2ee",
+        "evidence_ids": [
+          "回执图"
+        ]
+      }
+    ],
+    "重复": [
+      {
+        "finding_id": "P02",
+        "duplicate_of": "P01",
+        "covered_by": [
+          "P01"
+        ]
+      }
+    ],
+    "部分重合": []
+  },
+  {
+    "补充未匹配字号主张": true,
+    "交换编号": true,
+    "逆序输入": true,
+    "指标": {
+      "expected": 1,
+      "actual": 1,
+      "matched": 1,
+      "matched_predictions": 1,
+      "missed": 0,
+      "extra": 0,
+      "duplicates": 1,
+      "suggestions": 0,
+      "conflicts": 0,
+      "overlap_pending": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "duplicate_rate": 0.5,
+      "f1": 1.0
+    },
+    "映射": [
+      {
+        "label_id": "时段参考",
+        "finding_id": "P01",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ],
+        "claim_id": "claim-f24e7c57c94f40b8a2a7316a76910abe",
+        "evidence_ids": [
+          "回执图"
+        ]
+      }
+    ],
+    "重复": [
+      {
+        "finding_id": "P02",
+        "duplicate_of": "P01",
+        "covered_by": [
+          "P01"
+        ]
+      }
+    ],
+    "部分重合": []
+  }
+]

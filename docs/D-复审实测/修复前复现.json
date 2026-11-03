@@ -1,0 +1,23 @@
+{
+  "基线": "ec17fea",
+  "输出来自": "未修复代码，护法补材料复演",
+  "会话编号": "session-1f5f88a434c043e9b12a33ed85931b99",
+  "校验错误": [
+    {
+      "判据": "E07",
+      "检查类型": "goal",
+      "规划状态": "not_applicable",
+      "程序写入": "not_applicable",
+      "校验错误": "1 validation error for CheckItem\n  Value error, Decision does not match the check kind. [type=value_error, input_value={'check_id': 'check-c4e23...red_evidence_kinds': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error"
+    }
+  ],
+  "第一轮警告": [
+    "会话执行失败（ValidationError），未生成替代判断。"
+  ],
+  "第二轮警告": [
+    "会话执行失败（ValidationError），未生成替代判断。",
+    "变更使关联结论过期；影响范围不明确时保守重查任务范围。",
+    "会话执行失败（ValidationError），未生成替代判断。"
+  ],
+  "第二轮有效候选数": 0
+}

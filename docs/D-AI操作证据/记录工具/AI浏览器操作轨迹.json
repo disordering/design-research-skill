@@ -1,0 +1,83 @@
+{
+  "evidenceType": "ai-browser-rehearsal-only",
+  "humanRecords": 0,
+  "source": "docs\\D-新版真人执行\\01-评审者\\独立评审记录.html",
+  "sourceSha256": "eb2a425042bb7856cc7d8098dd9b357c0800473b8b8825e9387457081de99d36",
+  "testedAt": "2026-11-04T02:43:07.688591+08:00",
+  "playwright": "1.64.1",
+  "checks": [
+    {
+      "action": "空白表单直接导出正式记录",
+      "message": "请检查填写：请填完任务登记、结论和独立填写声明。",
+      "downloadCount": 0
+    },
+    {
+      "action": "空白表单直接导出草稿",
+      "suggestedFilename": "undefined__draft_2026-11-03T18-43-08-371Z.json",
+      "message": "草稿已导出。重新打开本页可载入草稿。",
+      "reviewer": ""
+    },
+    {
+      "action": "选择发现问题，但未添加任何条目",
+      "message": "请检查填写：结论与问题条目不一致。",
+      "downloadCount": 0
+    },
+    {
+      "action": "问题条目缺证据位置，其他必填项已填",
+      "message": "请检查填写：每个问题都需填写观察、依据、证据和严重度。",
+      "downloadCount": 0
+    },
+    {
+      "action": "尚缺证据位置时，导出草稿",
+      "suggestedFilename": "R1_AI-REHEARSAL-ONLY_draft_2026-11-03T18-43-09-255Z.json",
+      "message": "草稿已导出。重新打开本页可载入草稿。",
+      "savedIssueCount": 1,
+      "savedAnchor": ""
+    },
+    {
+      "action": "有未导出编辑时直接刷新",
+      "fieldsAfterRefresh": {
+        "reviewer": "",
+        "task": "",
+        "version": "",
+        "scope": "",
+        "verdict": "",
+        "unknown": "",
+        "independent": ""
+      },
+      "issueCountAfterRefresh": 0
+    },
+    {
+      "action": "载入刚导出的草稿并确认替换",
+      "confirmation": "载入草稿会替换当前填写内容。继续载入？",
+      "message": "草稿已载入。",
+      "restoredSevenFields": true,
+      "restoredIssueWithBlankAnchor": true,
+      "restoredScope": "AI 演练；只操作记录页；非真人、非留出任务。"
+    },
+    {
+      "action": "补全证据位置后正式导出",
+      "suggestedFilename": "R1_AI-REHEARSAL-ONLY_final_2026-11-03T18-43-09-471Z.json",
+      "message": "正式记录已导出。请将 JSON 交给主持人。",
+      "readBack": {
+        "packageKind": "final",
+        "task": "AI-REHEARSAL-ONLY",
+        "version": "AI-TEST-NOT-HUMAN",
+        "reviewer": "R1",
+        "independent": "no",
+        "issueCount": 1,
+        "evidenceAnchor": "空表 → 导出草稿 → 查看建议文件名"
+      },
+      "rawFileRetained": false
+    },
+    {
+      "action": "尝试把刚导出的正式记录当草稿载入",
+      "message": "请选择本角色的草稿 JSON。"
+    },
+    {
+      "action": "运行期间未捕获的页面异常",
+      "errors": []
+    }
+  ],
+  "browser": "Chromium 156.0.8078.4"
+}

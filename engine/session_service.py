@@ -2130,6 +2130,8 @@ class SessionService:
                 if check.ref in blocked_constraints:
                     candidate.decision = "insufficient_evidence"
                     candidate.reason += "；涉及尚未裁决的正式要求冲突，不能擅自选择一方判断符合或违反。"
+                # 规划适用性单独保存。最终判断须使用目标、冲突或规则各自的状态。
+                candidate.decision = self._normalized_decision(check.kind, candidate.decision)
                 check_validated = CheckItem.model_validate(candidate.model_dump())
                 check.execution_status = check_validated.execution_status
                 check.decision = check_validated.decision

@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: preserves report, multiple rules, critical severity and separate rule results
+ok 1 - preserves report, multiple rules, critical severity and separate rule results
+  ---
+  duration_ms: 1.4177
+  type: 'test'
+  ...
+# Subtest: stub never presented as real analysis and new round never inherits confirmations
+ok 2 - stub never presented as real analysis and new round never inherits confirmations
+  ---
+  duration_ms: 0.1063
+  type: 'test'
+  ...
+# Subtest: invalid bounds and unknown severity rejected
+ok 3 - invalid bounds and unknown severity rejected
+  ---
+  duration_ms: 0.2474
+  type: 'test'
+  ...
+# Subtest: followup contains original finding and human feedback; oversized input fails before request
+ok 4 - followup contains original finding and human feedback; oversized input fails before request
+  ---
+  duration_ms: 0.8456
+  type: 'test'
+  ...
+# Subtest: one result per old issue; rule overlap is only a candidate and disappearance never means resolved
+ok 5 - one result per old issue; rule overlap is only a candidate and disappearance never means resolved
+  ---
+  duration_ms: 0.5958
+  type: 'test'
+  ...
+# Subtest: confirmed solved state requires reason and visible evidence; preserves pending source
+ok 6 - confirmed solved state requires reason and visible evidence; preserves pending source
+  ---
+  duration_ms: 0.2244
+  type: 'test'
+  ...
+# Subtest: foreign new IDs rejected, human exclusion distinguished from solved
+ok 7 - foreign new IDs rejected, human exclusion distinguished from solved
+  ---
+  duration_ms: 0.1256
+  type: 'test'
+  ...
+# Subtest: 问题补记要求明确来源、步骤、证据与等级；同题人工和 AI 的来源分别保留
+ok 8 - 问题补记要求明确来源、步骤、证据与等级；同题人工和 AI 的来源分别保留
+  ---
+  duration_ms: 0.5104
+  type: 'test'
+  ...
+# Subtest: 真实引擎适配器保留同图补记；换图时仅在原版及待核对结果中引用旧证据
+ok 9 - 真实引擎适配器保留同图补记；换图时仅在原版及待核对结果中引用旧证据
+  ---
+  duration_ms: 16.1153
+  type: 'test'
+  ...
+# Subtest: feedback keeps stable IDs, audit snapshot and user changes without mutating prior version
+ok 10 - feedback keeps stable IDs, audit snapshot and user changes without mutating prior version
+  ---
+  duration_ms: 917.2193
+  type: 'test'
+  ...
+# Subtest: recheck retains original image and excludes rejected finding
+ok 11 - recheck retains original image and excludes rejected finding
+  ---
+  duration_ms: 924.8186
+  type: 'test'
+  ...
+# Subtest: 修改目标后问题描述同步更新，并保留人工审核与旧版本
+ok 12 - 修改目标后问题描述同步更新，并保留人工审核与旧版本
+  ---
+  duration_ms: 922.2919
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2801.3257

@@ -1,0 +1,420 @@
+[
+  {
+    "场景": "两条原子问题已分别写入同一预测",
+    "预测": [
+      {
+        "finding_id": "F01",
+        "kind": "issue",
+        "title": "时段错误：14:00 被显示为 09:00；地点错误：二层被显示为一层",
+        "detection": "时段错误：14:00 被显示为 09:00；地点错误：二层被显示为一层",
+        "stale": false,
+        "object_id": "回执",
+        "claims": [
+          {
+            "claim_id": "claim-c52996f60e5f42cd85692eacbf861aaf",
+            "claim_type": "requirement_match",
+            "object_id": "回执",
+            "expected": "14:00",
+            "observed": "09:00",
+            "evidence_ids": [
+              "e1"
+            ],
+            "derived": false,
+            "verification_status": "supported",
+            "verification_reason": ""
+          },
+          {
+            "claim_id": "claim-3cfb2495aa76479aa0c98f210572f4b3",
+            "claim_type": "requirement_match",
+            "object_id": "回执",
+            "expected": "二层",
+            "observed": "一层",
+            "evidence_ids": [
+              "e1"
+            ],
+            "derived": false,
+            "verification_status": "supported",
+            "verification_reason": ""
+          }
+        ]
+      }
+    ],
+    "参考": [
+      {
+        "label_id": "回执的时段",
+        "object_id": "回执",
+        "title_contains": [
+          "时段错误"
+        ]
+      },
+      {
+        "label_id": "回执的地点",
+        "object_id": "回执",
+        "title_contains": [
+          "地点错误"
+        ]
+      }
+    ],
+    "规范期望": "两个参考均命中；只统计一条预测。",
+    "评分器实际": {
+      "expected": 2,
+      "actual": 1,
+      "matched": 1,
+      "missed": 1,
+      "extra": 0,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+    },
+    "配对": [
+      {
+        "label_id": "回执的时段",
+        "finding_id": "F01",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match",
+          "requirement_match"
+        ]
+      }
+    ],
+    "符合本项期望": false
+  },
+  {
+    "场景": "只有时段证据，不能顺带命中地点",
+    "预测": [
+      {
+        "finding_id": "F02",
+        "kind": "issue",
+        "title": "时段错误：14:00 被显示为 09:00",
+        "detection": "时段错误：14:00 被显示为 09:00",
+        "stale": false,
+        "object_id": "回执",
+        "claims": [
+          {
+            "claim_id": "claim-6446fdf8d5e44936a62fb52f874a4eaa",
+            "claim_type": "requirement_match",
+            "object_id": "回执",
+            "expected": "14:00 二层",
+            "observed": "时段错误：14:00 被显示为 09:00",
+            "evidence_ids": [
+              "e1"
+            ],
+            "derived": false,
+            "verification_status": "supported",
+            "verification_reason": ""
+          }
+        ]
+      }
+    ],
+    "参考": [
+      {
+        "label_id": "回执的时段",
+        "object_id": "回执",
+        "title_contains": [
+          "时段错误"
+        ]
+      },
+      {
+        "label_id": "回执的地点",
+        "object_id": "回执",
+        "title_contains": [
+          "地点错误"
+        ]
+      }
+    ],
+    "规范期望": "命中一处、漏掉一处。",
+    "评分器实际": {
+      "expected": 2,
+      "actual": 1,
+      "matched": 1,
+      "missed": 1,
+      "extra": 0,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+    },
+    "配对": [
+      {
+        "label_id": "回执的时段",
+        "finding_id": "F02",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ]
+      }
+    ],
+    "符合本项期望": true
+  },
+  {
+    "场景": "检索漏掉判据，已有明确参考",
+    "预测": [],
+    "参考": [
+      {
+        "label_id": "回执的时段",
+        "object_id": "回执",
+        "title_contains": [
+          "时段错误"
+        ]
+      }
+    ],
+    "规范期望": "漏检 1 项；召回为 0/1。",
+    "评分器实际": {
+      "expected": 1,
+      "actual": 0,
+      "matched": 0,
+      "missed": 1,
+      "extra": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "配对": [],
+    "符合本项期望": true
+  },
+  {
+    "场景": "没有参考也没有预测",
+    "预测": [],
+    "参考": [],
+    "规范期望": "准确率与召回的分母均为 0，展示为不适用。",
+    "评分器实际": {
+      "expected": 0,
+      "actual": 0,
+      "matched": 0,
+      "missed": 0,
+      "extra": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "配对": [],
+    "符合本项期望": false
+  },
+  {
+    "场景": "单列设计建议",
+    "预测": [
+      {
+        "finding_id": "F02",
+        "kind": "issue",
+        "title": "时段错误：14:00 被显示为 09:00",
+        "detection": "时段错误：14:00 被显示为 09:00",
+        "stale": false,
+        "object_id": "回执",
+        "claims": [
+          {
+            "claim_id": "claim-6446fdf8d5e44936a62fb52f874a4eaa",
+            "claim_type": "requirement_match",
+            "object_id": "回执",
+            "expected": "14:00 二层",
+            "observed": "时段错误：14:00 被显示为 09:00",
+            "evidence_ids": [
+              "e1"
+            ],
+            "derived": false,
+            "verification_status": "supported",
+            "verification_reason": ""
+          }
+        ]
+      },
+      {
+        "finding_id": "F03",
+        "kind": "suggestion",
+        "title": "可加入分享按钮",
+        "detection": "可加入分享按钮",
+        "stale": false,
+        "object_id": "回执",
+        "claims": [
+          {
+            "claim_id": "claim-a6d24beb822e4f6e844c3aa41acc50d7",
+            "claim_type": "requirement_match",
+            "object_id": "回执",
+            "expected": "14:00 二层",
+            "observed": "可加入分享按钮",
+            "evidence_ids": [
+              "e1"
+            ],
+            "derived": false,
+            "verification_status": "supported",
+            "verification_reason": ""
+          }
+        ]
+      }
+    ],
+    "参考": [
+      {
+        "label_id": "回执的时段",
+        "object_id": "回执",
+        "title_contains": [
+          "时段错误"
+        ]
+      }
+    ],
+    "规范期望": "问题预测 1、命中 1；建议 1，另行评价。",
+    "评分器实际": {
+      "expected": 1,
+      "actual": 2,
+      "matched": 1,
+      "missed": 0,
+      "extra": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667
+    },
+    "配对": [
+      {
+        "label_id": "回执的时段",
+        "finding_id": "F02",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ]
+      }
+    ],
+    "符合本项期望": false
+  },
+  {
+    "场景": "旧版本不重复计数",
+    "预测": [
+      {
+        "finding_id": "F02",
+        "kind": "issue",
+        "title": "时段错误：14:00 被显示为 09:00",
+        "detection": "时段错误：14:00 被显示为 09:00",
+        "stale": false,
+        "object_id": "回执",
+        "claims": [
+          {
+            "claim_id": "claim-6446fdf8d5e44936a62fb52f874a4eaa",
+            "claim_type": "requirement_match",
+            "object_id": "回执",
+            "expected": "14:00 二层",
+            "observed": "时段错误：14:00 被显示为 09:00",
+            "evidence_ids": [
+              "e1"
+            ],
+            "derived": false,
+            "verification_status": "supported",
+            "verification_reason": ""
+          }
+        ]
+      },
+      {
+        "finding_id": "OLD",
+        "kind": "issue",
+        "title": "地点错误",
+        "detection": "地点错误",
+        "stale": true,
+        "object_id": "回执",
+        "claims": [
+          {
+            "claim_id": "claim-0cc403beba874991afc1e794179c5047",
+            "claim_type": "requirement_match",
+            "object_id": "回执",
+            "expected": "14:00 二层",
+            "observed": "地点错误",
+            "evidence_ids": [
+              "e1"
+            ],
+            "derived": false,
+            "verification_status": "supported",
+            "verification_reason": ""
+          }
+        ]
+      }
+    ],
+    "参考": [
+      {
+        "label_id": "回执的时段",
+        "object_id": "回执",
+        "title_contains": [
+          "时段错误"
+        ]
+      },
+      {
+        "label_id": "回执的地点",
+        "object_id": "回执",
+        "title_contains": [
+          "地点错误"
+        ]
+      }
+    ],
+    "规范期望": "只计本版时段，旧版本地点不计。",
+    "评分器实际": {
+      "expected": 2,
+      "actual": 1,
+      "matched": 1,
+      "missed": 1,
+      "extra": 0,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+    },
+    "配对": [
+      {
+        "label_id": "回执的时段",
+        "finding_id": "F02",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ]
+      }
+    ],
+    "符合本项期望": true
+  },
+  {
+    "场景": "同一对象的不同问题：参考只给对象编号",
+    "预测": [
+      {
+        "finding_id": "F03",
+        "kind": "issue",
+        "title": "可加入分享按钮",
+        "detection": "可加入分享按钮",
+        "stale": false,
+        "object_id": "回执",
+        "claims": [
+          {
+            "claim_id": "claim-a6d24beb822e4f6e844c3aa41acc50d7",
+            "claim_type": "requirement_match",
+            "object_id": "回执",
+            "expected": "14:00 二层",
+            "observed": "可加入分享按钮",
+            "evidence_ids": [
+              "e1"
+            ],
+            "derived": false,
+            "verification_status": "supported",
+            "verification_reason": ""
+          }
+        ]
+      }
+    ],
+    "参考": [
+      {
+        "label_id": "该页回执时段错误",
+        "object_id": "回执",
+        "title_contains": []
+      }
+    ],
+    "规范期望": "只重合对象而现象不同，不应自动命中。",
+    "评分器实际": {
+      "expected": 1,
+      "actual": 1,
+      "matched": 1,
+      "missed": 0,
+      "extra": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "配对": [
+      {
+        "label_id": "该页回执时段错误",
+        "finding_id": "F03",
+        "object_id": "回执",
+        "claim_types": [
+          "requirement_match"
+        ]
+      }
+    ],
+    "符合本项期望": false
+  }
+]

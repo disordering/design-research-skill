@@ -1,0 +1,30 @@
+{
+  "原型": "https://www.figma.com/proto/hQWs65RmaYJHP8BS2gGGLg/CHOPS-by-RCMM-Wireframes?embed_origin=cdn.embedly.com&kind=proto&node-id=1780-4186&page-id=1582%3A14633&scaling=scale-down&show-proto-sidebar=1&starting-point-node-id=1780%3A4177",
+  "操作": [
+    {
+      "画面": "01-欢迎.jpg",
+      "入口操作": "打开组内数据集所列原型",
+      "节点": "1780-4186"
+    },
+    {
+      "画面": "02-登录原型.jpg",
+      "入口操作": "点欢迎页 Login",
+      "节点": "1780-4341"
+    },
+    {
+      "画面": "03-商店首页.jpg",
+      "入口操作": "空表单点原型中的 Login，无账号输入",
+      "节点": "1721-24490"
+    },
+    {
+      "画面": "04-选择方式弹窗.jpg",
+      "入口操作": "商店首页点 Shop Now",
+      "节点": "1721-24490"
+    },
+    {
+      "画面": "05-关闭后.jpg",
+      "入口操作": "点弹窗右上关闭",
+      "节点": "1721-24490"
+    }
+  ]
+}

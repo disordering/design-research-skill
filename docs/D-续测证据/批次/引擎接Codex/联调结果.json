@@ -1,0 +1,1579 @@
+{
+  "任务": "T02 静态图",
+  "运行类型": "SessionService 注入本地 Codex CLI 适配器",
+  "日期": "2026-11-03T19:00:00.837932+00:00",
+  "模型": "gpt-6-astra",
+  "会话": "session-a91d9c8434ac4fffa36cb5c073913825",
+  "报告版本": 1,
+  "会话状态": "completed",
+  "完整度": "partial",
+  "限制": {
+    "max_actions": 16,
+    "max_checks": 4,
+    "max_model_calls": 12,
+    "max_review_rounds": 1,
+    "max_seconds": 540,
+    "max_images_per_call": 12,
+    "max_material_chunks": 24,
+    "max_parallel_screens": 2
+  },
+  "引擎模型回合": [
+    {
+      "call_id": "call-da546992d52140819ef26af13268c3fb",
+      "run_id": "run-c4817bddd6224468b72ff9e903424f13",
+      "operation": "understand",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6-astra",
+      "usage": {
+        "input_tokens": 26057,
+        "cached_input_tokens": 12544,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 589,
+        "reasoning_output_tokens": 0
+      },
+      "request_id": "01a1a2c5-68dd-7233-aee2-853b661c6eb3",
+      "latency_ms": 17766,
+      "raw_artifact_id": "artifact-a817055946aa47e39d87c9fbad019430",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T03",
+      "status": "validated",
+      "schema": "MaterialUnderstanding",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-fe841475860b4216bf7f688815b71d77",
+          "src-a7375bb4159844cf9033852eb50f1de1"
+        ],
+        "evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2",
+          "ev-940de4c4949d4daf908fff976890d19b"
+        ],
+        "image_evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2"
+        ],
+        "check_refs": [],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "task_summary": "根据「个人设置」中的「通知偏好」截图，梳理如何查看提醒状态、找到调整选项和保存入口。评审范围限于静态画面。",
+        "target_user_summary": "",
+        "review_tasks": [
+          {
+            "task_id": "TASK01",
+            "text": "查看课程提醒和作业到期提醒各自的当前状态。",
+            "success_criteria": "能区分每行提供的选项与当前选择。「课程提醒」的「开启」为蓝底，「关闭」为白底；「作业到期」并列显示 ON 和 OFF，画面未明确区分当前选项。",
+            "evidence_ids": [
+              "ev-940de4c4949d4daf908fff976890d19b",
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "source_ids": [
+              "src-a7375bb4159844cf9033852eb50f1de1",
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "page_ids": [],
+            "state_ids": [],
+            "branches": []
+          },
+          {
+            "task_id": "TASK02",
+            "text": "找到调整课程提醒或作业到期提醒的对应选项，并定位「保存设置」。",
+            "success_criteria": "能指出「课程提醒」行的「开启／关闭」、「作业到期」行的 ON／OFF，以及通知偏好卡片右下角的「保存设置」按钮。",
+            "evidence_ids": [
+              "ev-940de4c4949d4daf908fff976890d19b",
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "source_ids": [
+              "src-a7375bb4159844cf9033852eb50f1de1",
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "page_ids": [],
+            "state_ids": [],
+            "branches": []
+          }
+        ],
+        "goals": [],
+        "requirements": [],
+        "opinions": [],
+        "conflicts": [],
+        "relationships": [
+          {
+            "from_evidence_id": "ev-940de4c4949d4daf908fff976890d19b",
+            "to_evidence_id": "ev-675baa5e1eb44545853a2a89c5588cc2",
+            "relation": "same_object",
+            "reason": "委托中的「这张设置页」对应附图，图中卡片标题为「通知偏好」。",
+            "basis": "described"
+          }
+        ],
+        "unknowns": [
+          "材料未说明产品原始目标或正式业务验收条件。",
+          "「界面主题」和「文字大小」各有两个选项，截图未明确标出各自的当前选择。「消息工具」的三个图标也没有可见的文字说明，其用途未知。",
+          "材料未说明选择是否立即生效、是否必须保存，以及保存后的反馈和持久化结果。"
+        ],
+        "assumptions": []
+      }
+    },
+    {
+      "call_id": "call-4ac64329174e442faeaa1f903df01212",
+      "run_id": "run-c4817bddd6224468b72ff9e903424f13",
+      "operation": "plan_checks",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6-astra",
+      "usage": {
+        "input_tokens": 28133,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1919,
+        "reasoning_output_tokens": 0
+      },
+      "request_id": "01a1a2c5-aee4-7323-a52a-5dc8e317bc77",
+      "latency_ms": 34469,
+      "raw_artifact_id": "artifact-017a846e2f644fa38c44317115ff4146",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T04",
+      "status": "validated",
+      "schema": "CheckPlanBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-fe841475860b4216bf7f688815b71d77",
+          "src-a7375bb4159844cf9033852eb50f1de1"
+        ],
+        "evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2",
+          "ev-940de4c4949d4daf908fff976890d19b"
+        ],
+        "image_evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2"
+        ],
+        "check_refs": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08"
+        ],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "items": [
+          {
+            "ref": "R01",
+            "coverage_id": "coverage-f65a5f393ba15ec3",
+            "coverage_title": "查看提醒状态：辨认当前页面",
+            "task_id": "TASK01",
+            "applicability": "not_applicable",
+            "reason": "完整画面以「个人设置」标明页面；顶栏没有包含当前页的并列导航项，两行提醒选项属于页内设置。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "个人设置页标题与顶栏"
+            ],
+            "object_ids": [
+              "obj-6013ba5292c965e451e9"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "R02",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "定位调整与保存入口：确认是否属于分步流程",
+            "task_id": "TASK02",
+            "applicability": "needs_context",
+            "reason": "提醒选项和「保存设置」同页可见；先选后存的动作顺序不能证明该页属于分步流程。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [
+              "说明该页是独立设置页，还是某一流程中的一步"
+            ],
+            "object_refs": [
+              "通知偏好卡片",
+              "保存设置"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design",
+              "statement"
+            ]
+          },
+          {
+            "ref": "R03",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "定位保存入口：区分设置画面与等待状态",
+            "task_id": "TASK02",
+            "applicability": "not_applicable",
+            "reason": "附图呈现已展开的设置项和保存入口，是普通设置画面；本状态没有待解释的处理进度。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "通知偏好卡片当前画面"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "R04",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "定位保存入口：确认保存结果的表达依据",
+            "task_id": "TASK02",
+            "applicability": "needs_context",
+            "reason": "「保存设置」标示动作入口，不能当作完成提示；现有材料没有提供保存后的结果表达。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [
+              "标明对应保存动作的完成态设计画面"
+            ],
+            "object_refs": [
+              "保存设置"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "R05",
+            "coverage_id": "coverage-f65a5f393ba15ec3",
+            "coverage_title": "查看提醒状态：核对「开启／关闭」与 ON／OFF 的理解条件",
+            "task_id": "TASK01",
+            "applicability": "needs_context",
+            "reason": "辨认两行状态需要理解选项，但中英文差异本身不能证明 ON／OFF 是内部术语，也不能证明用户不熟悉。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77",
+              "src-a7375bb4159844cf9033852eb50f1de1"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2",
+              "ev-940de4c4949d4daf908fff976890d19b"
+            ],
+            "evidence_needed": [
+              "目标用户及其专业背景",
+              "这些标签是否具有产品特定含义",
+              "目标用户对任务所需标签的熟悉度依据"
+            ],
+            "object_refs": [
+              "课程提醒：开启／关闭",
+              "作业到期：ON／OFF"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design",
+              "statement"
+            ]
+          },
+          {
+            "ref": "R06",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "定位调整选项与「保存设置」：核对操作名称",
+            "task_id": "TASK02",
+            "applicability": "applicable",
+            "reason": "调整对象与入口定位任务明确，可结合两行名称、对应选项和卡片右下角的保存按钮检查预期动作是否清楚。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77",
+              "src-a7375bb4159844cf9033852eb50f1de1"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2",
+              "ev-940de4c4949d4daf908fff976890d19b"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "课程提醒：开启／关闭",
+              "作业到期：ON／OFF",
+              "保存设置"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design",
+              "statement"
+            ]
+          },
+          {
+            "ref": "R07",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "定位调整选项：区分选择项与填写字段",
+            "task_id": "TASK02",
+            "applicability": "not_applicable",
+            "reason": "两项提醒均以行名和成对的固定选项呈现；本任务对应的是选择控件，没有需要填写内容的字段。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "课程提醒选项",
+              "作业到期选项"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "R08",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "定位调整与保存入口：确认容器是否为弹窗",
+            "task_id": "TASK02",
+            "applicability": "not_applicable",
+            "reason": "待定位的控件位于「个人设置」页正文的「通知偏好」卡片内；当前任务对象是页内卡片，没有弹窗退出入口需要检查。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "通知偏好卡片及其完整边界"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "call_id": "call-ee2592f7cba149afaa779e3b97ca7be6",
+      "run_id": "run-c4817bddd6224468b72ff9e903424f13",
+      "operation": "plan_checks",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6-astra",
+      "usage": {
+        "input_tokens": 28046,
+        "cached_input_tokens": 12544,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1904,
+        "reasoning_output_tokens": 0
+      },
+      "request_id": "01a1a2c6-357c-73d3-a32a-fa67ee8772cb",
+      "latency_ms": 32187,
+      "raw_artifact_id": "artifact-5b65ce70300944188b1015b10002d65f",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T04",
+      "status": "validated",
+      "schema": "CheckPlanBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-fe841475860b4216bf7f688815b71d77",
+          "src-a7375bb4159844cf9033852eb50f1de1"
+        ],
+        "evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2",
+          "ev-940de4c4949d4daf908fff976890d19b"
+        ],
+        "image_evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2"
+        ],
+        "check_refs": [
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16"
+        ],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "items": [
+          {
+            "ref": "R09",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "调整提醒时的返回入口",
+            "task_id": "TASK02",
+            "applicability": "needs_context",
+            "reason": "截图显示个人设置页，但无法确定它是否属于多步骤任务的非首步，也未涵盖浏览器导航。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [
+              "设置页在任务流程中的位置",
+              "若为非首步，需明确可用的返回或退出入口"
+            ],
+            "object_refs": [
+              "个人设置页"
+            ],
+            "object_ids": [
+              "obj-6013ba5292c965e451e9"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "R10",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "保存入口所在画面是否属于高风险确认页",
+            "task_id": "TASK02",
+            "applicability": "not_applicable",
+            "reason": "当前画面用于选择偏好并提供「保存设置」入口，所示状态是设置编辑页，没有正在确认的高风险操作。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "通知偏好卡片",
+              "保存设置"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "R11",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "两类提醒的动作名称",
+            "task_id": "TASK02",
+            "applicability": "not_applicable",
+            "reason": "「开启／关闭」和 ON／OFF 分别调整课程提醒和作业到期提醒，各自作用于不同设置。当前画面只有一个「保存设置」入口。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "课程提醒的开启／关闭",
+              "作业到期的 ON／OFF",
+              "保存设置"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "R12",
+            "coverage_id": "coverage-f65a5f393ba15ec3",
+            "coverage_title": "对照两行提醒区分选项与当前选择的方式",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "两行均在同一卡片内表达二选一提醒设置。可对照「开启」的蓝底与 ON／OFF 的选中线索，无需假定两项提醒当前都已开启。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "课程提醒的开启／关闭",
+              "作业到期的 ON／OFF"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "R13",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "保存前是否必须选择提醒选项",
+            "task_id": "TASK02",
+            "applicability": "needs_context",
+            "reason": "页面提供预设选项和保存入口，材料未说明用户是否必须作出选择才能保存。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [
+              "是否存在必选项及其范围"
+            ],
+            "object_refs": [
+              "课程提醒",
+              "作业到期",
+              "保存设置"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "requirement",
+              "design"
+            ]
+          },
+          {
+            "ref": "R14",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "调整提醒时是否需要按格式输入",
+            "task_id": "TASK02",
+            "applicability": "not_applicable",
+            "reason": "两行都直接列出开关选项，调整这两项提醒无需自行录入具有格式或长度要求的值。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "课程提醒的开启／关闭",
+              "作业到期的 ON／OFF"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "R15",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "当前画面的操作对象与后果说明",
+            "task_id": "TASK02",
+            "applicability": "not_applicable",
+            "reason": "当前画面是偏好编辑页，未处于高后果操作确认阶段。「消息工具」中的叉形图标也没有对象损失或不可逆后果的说明。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "通知偏好卡片",
+              "保存设置",
+              "消息工具中的叉形图标"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "R16",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "消息工具图标与调整提醒任务的关系",
+            "task_id": "TASK02",
+            "applicability": "needs_context",
+            "reason": "提醒选项和保存入口均有文字。「消息工具」另有三个图标，其用途、对该任务的重要性及目标用户的熟悉程度未知。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77",
+              "src-a7375bb4159844cf9033852eb50f1de1"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2",
+              "ev-940de4c4949d4daf908fff976890d19b"
+            ],
+            "evidence_needed": [
+              "三个图标的用途及任务必要性",
+              "若任务需要图标，需目标用户的熟悉度依据",
+              "若有悬停或聚焦说明，需对应设计画面"
+            ],
+            "object_refs": [
+              "消息工具行的折线、矩形和叉形图标"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design",
+              "statement"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "call_id": "call-d0279e5492674398b0708326d7364695",
+      "run_id": "run-c4817bddd6224468b72ff9e903424f13",
+      "operation": "plan_checks",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6-astra",
+      "usage": {
+        "input_tokens": 28180,
+        "cached_input_tokens": 12544,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2251,
+        "reasoning_output_tokens": 0
+      },
+      "request_id": "01a1a2c6-b380-7c72-b7eb-08c6b6aa8593",
+      "latency_ms": 36953,
+      "raw_artifact_id": "artifact-98afc974a34f4b2a8ead013f592f9657",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T04",
+      "status": "validated",
+      "schema": "CheckPlanBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-fe841475860b4216bf7f688815b71d77",
+          "src-a7375bb4159844cf9033852eb50f1de1"
+        ],
+        "evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2",
+          "ev-940de4c4949d4daf908fff976890d19b"
+        ],
+        "image_evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2"
+        ],
+        "check_refs": [
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24"
+        ],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "items": [
+          {
+            "ref": "R17",
+            "coverage_id": "coverage-f65a5f393ba15ec3",
+            "coverage_title": "查看课程提醒的当前选择",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "「开启」为蓝底、「关闭」为白底，可比较同一行的选中与未选样式，核对截图表达的当前选择。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "课程提醒行的「开启／关闭」"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "R17",
+            "coverage_id": "coverage-f65a5f393ba15ec3/作业到期",
+            "coverage_title": "查看作业到期提醒的当前选择",
+            "task_id": "TASK01",
+            "applicability": "needs_context",
+            "reason": "ON 和 OFF 并列在同一浅色底上，可定位两个选项，但无法确认此状态下是否已有一项被选中。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [
+              "说明该画面中是否已有选中项及其取值的状态标注"
+            ],
+            "object_refs": [
+              "作业到期行的 ON／OFF"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "R18",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "按行找到两组提醒选项",
+            "task_id": "TASK02",
+            "applicability": "applicable",
+            "reason": "TASK02 明确了两组选项的归属，可核对行标题、对齐和分隔线是否把每组选项与对应提醒关联起来。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77",
+              "src-a7375bb4159844cf9033852eb50f1de1"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2",
+              "ev-940de4c4949d4daf908fff976890d19b"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "课程提醒行及「开启／关闭」",
+              "作业到期行及 ON／OFF"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design",
+              "statement"
+            ]
+          },
+          {
+            "ref": "R19",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "从提醒选项定位「保存设置」",
+            "task_id": "TASK02",
+            "applicability": "applicable",
+            "reason": "任务指定了调整选项和保存入口，可核对两行右侧选项与卡片右下角按钮的位置、文字及遮挡情况。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77",
+              "src-a7375bb4159844cf9033852eb50f1de1"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2",
+              "ev-940de4c4949d4daf908fff976890d19b"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "课程提醒选项",
+              "作业到期选项",
+              "保存设置按钮"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design",
+              "statement"
+            ]
+          },
+          {
+            "ref": "R20",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "核对其他设置是否妨碍定位提醒选项和保存入口",
+            "task_id": "TASK02",
+            "applicability": "applicable",
+            "reason": "卡片同时展示主题、字号和消息工具，可对照本次任务检查这些行是否挤占或遮挡提醒选项和保存入口。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77",
+              "src-a7375bb4159844cf9033852eb50f1de1"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2",
+              "ev-940de4c4949d4daf908fff976890d19b"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "通知偏好卡片",
+              "界面主题、文字大小和消息工具行",
+              "提醒选项及保存设置按钮"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design",
+              "statement"
+            ]
+          },
+          {
+            "ref": "R21",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "调整或保存出错时的问题定位",
+            "task_id": "TASK02",
+            "applicability": "needs_context",
+            "reason": "仅有设置页静态画面，材料未确认调整或保存的错误状态，无法核对提示指向哪一行或哪项操作。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [
+              "如有错误状态，需含完整提示及对应设置项或操作的设计画面"
+            ],
+            "object_refs": [
+              "提醒调整或保存的错误提示（待确认）"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "R22",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "调整或保存出错时的修正线索",
+            "task_id": "TASK02",
+            "applicability": "needs_context",
+            "reason": "材料未确认具体错误及用户能采取的修正动作，不能据页首「帮助中心」判断是否给出了处理步骤。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [
+              "错误状态及用户可执行的处理方式",
+              "该状态的提示或直接关联的修正说明"
+            ],
+            "object_refs": [
+              "提醒调整或保存的修正说明（待确认）"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design",
+              "statement"
+            ]
+          },
+          {
+            "ref": "R23",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "调整或保存出错时的提示用语",
+            "task_id": "TASK02",
+            "applicability": "needs_context",
+            "reason": "材料未提供已确认的错误文案或目标用户背景。作业到期行的 ON／OFF 是选项文字，不能作为错误提示检查。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [
+              "面向用户的完整错误提示原文",
+              "目标用户及其对提示用语的熟悉程度"
+            ],
+            "object_refs": [
+              "提醒调整或保存的错误文案（待确认）"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design",
+              "statement"
+            ]
+          },
+          {
+            "ref": "R24",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "调整提醒和保存时是否需要就近说明",
+            "task_id": "TASK02",
+            "applicability": "needs_context",
+            "reason": "材料未说明哪一步需要目标用户借助解释才能完成，也未提供「帮助中心」中与提醒设置关联的内容。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77",
+              "src-a7375bb4159844cf9033852eb50f1de1"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2",
+              "ev-940de4c4949d4daf908fff976890d19b"
+            ],
+            "evidence_needed": [
+              "目标用户在哪个步骤需要解释及原因",
+              "若确需解释，该步骤附近的说明或关联帮助内容"
+            ],
+            "object_refs": [
+              "提醒选项",
+              "保存设置",
+              "帮助中心"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "statement",
+              "design"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "call_id": "call-bd054e21a9554d949ccee0b2da3097f7",
+      "run_id": "run-c4817bddd6224468b72ff9e903424f13",
+      "operation": "plan_checks",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6-astra",
+      "usage": {
+        "input_tokens": 28120,
+        "cached_input_tokens": 12544,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1992,
+        "reasoning_output_tokens": 0
+      },
+      "request_id": "01a1a2c7-4417-7db1-9347-dfc85adb6f5c",
+      "latency_ms": 32187,
+      "raw_artifact_id": "artifact-465ab8d379444ab9b049a79714d10ea3",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T04",
+      "status": "validated",
+      "schema": "CheckPlanBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-fe841475860b4216bf7f688815b71d77",
+          "src-a7375bb4159844cf9033852eb50f1de1"
+        ],
+        "evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2",
+          "ev-940de4c4949d4daf908fff976890d19b"
+        ],
+        "image_evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2"
+        ],
+        "check_refs": [
+          "E01",
+          "E02",
+          "E03",
+          "E04",
+          "E05",
+          "E06",
+          "E07",
+          "E08"
+        ],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "items": [
+          {
+            "ref": "E01",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "在通知偏好卡片内定位调整选项和保存入口",
+            "task_id": "TASK02",
+            "applicability": "not_applicable",
+            "reason": "任务终点是指出本页两行选项和右下角「保存设置」，没有需要抵达的下一页面或状态。",
+            "source_ids": [
+              "src-a7375bb4159844cf9033852eb50f1de1",
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-940de4c4949d4daf908fff976890d19b",
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "课程提醒行的开启／关闭",
+              "作业到期行的 ON／OFF",
+              "卡片右下角的保存设置"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "statement",
+              "design"
+            ]
+          },
+          {
+            "ref": "E02",
+            "coverage_id": "coverage-f65a5f393ba15ec3",
+            "coverage_title": "区分课程提醒与作业到期提醒的状态对象",
+            "task_id": "TASK01",
+            "applicability": "not_applicable",
+            "reason": "两行分别表示两种提醒，本轮各有一处状态展示，没有同一提醒在另一位置的值可供核对。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "课程提醒",
+              "作业到期"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "E03",
+            "coverage_id": "coverage-f65a5f393ba15ec3",
+            "coverage_title": "逐行核对提醒选项与当前选择的视觉区别",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "两行都有明确的开关选项。核对课程提醒的蓝底「开启」与白底「关闭」，再检查作业到期的 ON／OFF 有无区分当前项的标记。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77",
+              "src-a7375bb4159844cf9033852eb50f1de1"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2",
+              "ev-940de4c4949d4daf908fff976890d19b"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "课程提醒行的开启／关闭",
+              "作业到期行的 ON／OFF"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "design"
+            ]
+          },
+          {
+            "ref": "E04",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "界定保存入口定位任务的恢复分支",
+            "task_id": "TASK02",
+            "applicability": "not_applicable",
+            "reason": "本轮任务止于定位保存入口，未包含返回、取消或重进后恢复选择的分支。",
+            "source_ids": [
+              "src-a7375bb4159844cf9033852eb50f1de1",
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-940de4c4949d4daf908fff976890d19b",
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "保存设置入口"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "statement"
+            ]
+          },
+          {
+            "ref": "E05",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "界定提醒调整任务的异常恢复范围",
+            "task_id": "TASK02",
+            "applicability": "not_applicable",
+            "reason": "委托限定在当前静态画面识别选项和操作入口，任务不包含触发保存失败或从异常中恢复。",
+            "source_ids": [
+              "src-a7375bb4159844cf9033852eb50f1de1"
+            ],
+            "evidence_ids": [
+              "ev-940de4c4949d4daf908fff976890d19b"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "提醒选项和保存入口的定位任务"
+            ],
+            "object_ids": [
+              "obj-ce3c61c5871ca4634303"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "statement"
+            ]
+          },
+          {
+            "ref": "E06",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "核对保存入口是否受设置变更条件约束",
+            "task_id": "TASK02",
+            "applicability": "needs_context",
+            "reason": "截图可定位「保存设置」，材料未说明保存有无前置条件，也未说明当前是否有待保存的变更。",
+            "source_ids": [
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [
+              "保存开放条件的项目说明",
+              "若有条件，标明条件满足情况的对应设计状态"
+            ],
+            "object_refs": [
+              "保存设置按钮"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "requirement",
+              "design"
+            ]
+          },
+          {
+            "ref": "E07",
+            "coverage_id": "coverage-f65a5f393ba15ec3",
+            "coverage_title": "核对提醒当前状态是否有正式表达要求",
+            "task_id": "TASK01",
+            "applicability": "needs_context",
+            "reason": "委托说明了要检查什么，未提供产品对提醒状态表达的正式目标或验收条件。",
+            "source_ids": [
+              "src-a7375bb4159844cf9033852eb50f1de1",
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-940de4c4949d4daf908fff976890d19b",
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [
+              "适用于该版两类提醒状态表达的已确认要求原文"
+            ],
+            "object_refs": [
+              "课程提醒和作业到期的当前选择"
+            ],
+            "object_ids": [
+              "obj-2f61022dba36139f2048",
+              "obj-ce3c61c5871ca4634303"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "requirement",
+              "design"
+            ]
+          },
+          {
+            "ref": "E08",
+            "coverage_id": "coverage-14e5e808f9eb902d",
+            "coverage_title": "核对调整与保存方式有无跨职能要求冲突",
+            "task_id": "TASK02",
+            "applicability": "not_applicable",
+            "reason": "给定来源分别是评审委托和设置页截图，没有两项针对调整或保存方式的职能要求可作冲突比较。",
+            "source_ids": [
+              "src-a7375bb4159844cf9033852eb50f1de1",
+              "src-fe841475860b4216bf7f688815b71d77"
+            ],
+            "evidence_ids": [
+              "ev-940de4c4949d4daf908fff976890d19b",
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "评审委托",
+              "提醒调整选项与保存设置"
+            ],
+            "object_ids": [
+              "obj-ce3c61c5871ca4634303",
+              "obj-2f61022dba36139f2048"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "statement",
+              "design"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "call_id": "call-ff0b6e338e624c9882f328325cc22a73",
+      "run_id": "run-c4817bddd6224468b72ff9e903424f13",
+      "operation": "plan",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6-astra",
+      "usage": {
+        "input_tokens": 30934,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 202,
+        "reasoning_output_tokens": 0
+      },
+      "request_id": "01a1a2c7-c265-7d12-bc86-5843fee43c8d",
+      "latency_ms": 8828,
+      "raw_artifact_id": "artifact-b6264ea9435c402aad6aaa50217b012b",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T05",
+      "status": "validated",
+      "schema": "AgentStep",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-fe841475860b4216bf7f688815b71d77",
+          "src-a7375bb4159844cf9033852eb50f1de1"
+        ],
+        "evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2",
+          "ev-940de4c4949d4daf908fff976890d19b"
+        ],
+        "image_evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2"
+        ],
+        "check_refs": [],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "task_summary": "TASK01 核对两类提醒的当前选择。「课程提醒」的「开启」为蓝底，「关闭」为白底；「作业到期」并列显示 ON 和 OFF，截图中无法辨认当前选项。TASK02 按行定位两组调整选项，并指出卡片右下角的「保存设置」按钮。",
+        "scope": "仅评审「个人设置」中「通知偏好」卡片的静态画面，检查提醒状态、调整选项和保存入口的可见表达。",
+        "goals": [],
+        "requirements": [],
+        "assumptions": [],
+        "questions": [],
+        "action": null,
+        "ready_for_review": true,
+        "priority_refs": [
+          "E03",
+          "R17",
+          "R12",
+          "R18",
+          "R19",
+          "R06"
+        ],
+        "question_resolutions": []
+      }
+    },
+    {
+      "call_id": "call-a824cf45df6b49508ae4317a41ddf71a",
+      "run_id": "run-c4817bddd6224468b72ff9e903424f13",
+      "operation": "judge",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6-astra",
+      "usage": {
+        "input_tokens": 27771,
+        "cached_input_tokens": 12544,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1071,
+        "reasoning_output_tokens": 0
+      },
+      "request_id": "01a1a2c7-e539-7711-b874-88e950a171cc",
+      "latency_ms": 22344,
+      "raw_artifact_id": "artifact-331ed27d0d824579a763696f01eee602",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T06",
+      "status": "validated",
+      "schema": "JudgmentBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-fe841475860b4216bf7f688815b71d77",
+          "src-a7375bb4159844cf9033852eb50f1de1"
+        ],
+        "evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2",
+          "ev-940de4c4949d4daf908fff976890d19b"
+        ],
+        "image_evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2"
+        ],
+        "check_refs": [
+          "E03",
+          "R17",
+          "R17",
+          "R12"
+        ],
+        "check_ids": [
+          "check-c7e35f858aff083c",
+          "check-a272e2026ec8dc89",
+          "check-ec7d904b7b853abf",
+          "check-aa692394b0c7730a"
+        ],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "judgments": [
+          {
+            "check_id": "check-c7e35f858aff083c",
+            "decision": "candidate_issue",
+            "reason": "E03 静态检查两行提醒的当前状态表达。「课程提醒」用蓝底突出「开启」；「作业到期」的 ON 和 OFF 共用浅色底，没有可辨认的标记说明当前状态。",
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ]
+          },
+          {
+            "check_id": "check-a272e2026ec8dc89",
+            "decision": "no_visible_issue",
+            "reason": "R17 适用于「课程提醒」行的二选一设置。「开启」为蓝底白字，「关闭」为白底深色字，两者的区别足以辨认画面中的当前选择为「开启」。",
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ]
+          },
+          {
+            "check_id": "check-ec7d904b7b853abf",
+            "decision": "insufficient_evidence",
+            "reason": "R17 需先确认已有选中项。「作业到期」行可见 ON 和 OFF，但材料没有标注是否已选，也没有给出当前值。",
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ]
+          },
+          {
+            "check_id": "check-aa692394b0c7730a",
+            "decision": "insufficient_evidence",
+            "reason": "R12 可对照同一卡片内的两组提醒控件。「课程提醒」用两个独立按钮，「作业到期」将 ON／OFF 放在同一浅色区域。后者的选中状态未知，无法确认同状态控件采用了不同的选中规则。",
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "finding_id": "finding-8fd1a06030464301a31d12f735d06f7b",
+            "kind": "issue",
+            "title": "「作业到期」行可见 ON／OFF，当前状态难以辨认",
+            "check_ids": [
+              "check-c7e35f858aff083c"
+            ],
+            "evidence_ids": [
+              "ev-675baa5e1eb44545853a2a89c5588cc2"
+            ],
+            "principle": "查看提醒偏好时，应能区分可选值与当前状态。",
+            "detection": "对照两行提醒：「课程提醒」突出显示「开启」；「作业到期」的 ON 和 OFF 显示在同一浅色底上，未见单侧高亮、勾选或状态文字。",
+            "description": "TASK01 可从截图读出课程提醒已开启，但无法读出作业到期提醒当前是开启、关闭还是尚未选择。",
+            "suggestion": "若已有取值，在对应选项内显示勾选标记；若允许尚未选择，则显示「未设置」。",
+            "severity": "medium",
+            "severity_reason": "两类提醒中有一类无法仅凭当前画面完成状态核对。对应选项和卡片右下角的「保存设置」仍可定位，但截图无法验证重新选择后能否确认状态。",
+            "confidence": null,
+            "context_version": 1,
+            "run_id": "",
+            "screen_review_id": "",
+            "review_status": "unreviewed",
+            "human_severity": null,
+            "review_reason": "",
+            "reviewer": "unknown",
+            "reviewed_at": null,
+            "disposition": null,
+            "stale": false,
+            "object_id": "obj-2f61022dba36139f2048",
+            "object_ref": "通知偏好卡片中「作业到期」行右侧的 ON／OFF",
+            "claims": [
+              {
+                "claim_id": "claim-9d4e2b80bda14849b01f692ffac35c76",
+                "claim_type": "state_visibility",
+                "object_id": "obj-2f61022dba36139f2048",
+                "expected": "查看「作业到期」行时能辨认其当前状态，包括可能的未设置状态。",
+                "observed": "ON 和 OFF 并列显示，未见可区分当前项的标记或说明尚未选择的文字。",
+                "evidence_ids": [
+                  "ev-675baa5e1eb44545853a2a89c5588cc2"
+                ],
+                "derived": false,
+                "verification_status": "unverified",
+                "verification_reason": ""
+              }
+            ],
+            "mechanism": "",
+            "change_action": "",
+            "location": {}
+          }
+        ],
+        "questions": [
+          {
+            "question_id": "question-dd9f6cc49c9c43019239f8a1a873c689",
+            "text": "这张设计图中，「作业到期」预期呈现哪种状态：ON、OFF，还是尚未选择？",
+            "reason": "预期取值可用于判断选中标记是否缺失，以及两行的选中样式能否直接比较。",
+            "check_ids": [
+              "check-ec7d904b7b853abf",
+              "check-aa692394b0c7730a"
+            ],
+            "blocking": false,
+            "answered": false,
+            "answer": "",
+            "kind": "context",
+            "source_id": null,
+            "action_id": null,
+            "answer_actor": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "call_id": "call-6b331ee71efb45ea9f73740a587d0446",
+      "run_id": "run-c4817bddd6224468b72ff9e903424f13",
+      "operation": "plan",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6-astra",
+      "usage": {
+        "input_tokens": 25929,
+        "cached_input_tokens": 12544,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 132,
+        "reasoning_output_tokens": 0
+      },
+      "request_id": "01a1a2c8-3d6b-7d32-951b-161e51a9974d",
+      "latency_ms": 6578,
+      "raw_artifact_id": "artifact-d2010300747c4edc801c89890a9a50e8",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T05",
+      "status": "validated",
+      "schema": "AgentStep",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "evidence_gap",
+        "source_ids": [
+          "src-fe841475860b4216bf7f688815b71d77",
+          "src-a7375bb4159844cf9033852eb50f1de1"
+        ],
+        "evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2",
+          "ev-940de4c4949d4daf908fff976890d19b"
+        ],
+        "image_evidence_ids": [
+          "ev-675baa5e1eb44545853a2a89c5588cc2"
+        ],
+        "check_refs": [],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 3,
+        "evidence_gap_refs": [
+          "coverage-f65a5f393ba15ec3",
+          "coverage-f65a5f393ba15ec3/作业到期",
+          "coverage-f65a5f393ba15ec3"
+        ]
+      },
+      "output": {
+        "task_summary": "TASK01：截图中「课程提醒」的「开启」为蓝底；「作业到期」的 ON／OFF 并列显示。截图和委托文字均未标注「作业到期」的预期取值，现有来源无法补足状态证据。保留待答问题 question-a210086ed5f442c1bc8ec07086b6d72a。",
+        "scope": "",
+        "goals": [],
+        "requirements": [],
+        "assumptions": [],
+        "questions": [],
+        "action": null,
+        "ready_for_review": true,
+        "priority_refs": [
+          "E03",
+          "R17",
+          "R12"
+        ],
+        "question_resolutions": []
+      }
+    }
+  ],
+  "警告": [
+    "逐屏技术审查未启用：Reviewer config was not found at config/reviewer.toml.",
+    "发现退回补证：「作业到期」行可见 ON／OFF，当前状态难以辨认；结构/状态 claim 缺少 OCR、元素或结构数据。",
+    "评审任务 TASK02 没有形成可执行检查覆盖；报告不能视为任务全覆盖。",
+    "必需覆盖单元 coverage-14e5e808f9eb902d 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "会话不变量：必需覆盖单元 coverage-14e5e808f9eb902d 尚未覆盖。"
+  ],
+  "限制说明": [
+    "逐屏技术审查未启用：Reviewer config was not found at config/reviewer.toml.",
+    "评审任务 TASK02 没有形成可执行检查覆盖；报告不能视为任务全覆盖。",
+    "必需覆盖单元 coverage-14e5e808f9eb902d 尚未由检查或逐屏审查覆盖；报告不能视为完整。"
+  ],
+  "契约问题": [
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-14e5e808f9eb902d 尚未覆盖。",
+      "coverage_id": "coverage-14e5e808f9eb902d",
+      "gap_class": "state_not_reviewed"
+    }
+  ],
+  "问题数": 0,
+  "问题": []
+}

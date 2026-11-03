@@ -1,0 +1,17 @@
+{
+  "fixtures/d-v02-batch/tasks.json": "94ddb2f9163ef2231fc47b930ef4b9ecacad3a3731fbb14fa56887f7c39c3b05",
+  "fixtures/d-v02-sites/cases.json": "b6e11bf56d6ab284d364f0293663a1b22b947ac6d287597eaa67c2061b9529ef",
+  "fixtures/d-v02-static/T01.png": "f1201f54c66f3210ed14bd8785f0a3c532ee0e89cd6d3992cfaeb9970b7db1ed",
+  "fixtures/d-v02-static/T02.png": "490a35029c5a2cd09ff5863502d82a2f9c10a169039442ac97ea1654586d71a7",
+  "fixtures/d-v02-sites/public/index.html": "9875d5426488b50a0e9f605e1f316cc798a9bbbab9e16ded1718ba04e24cb605",
+  "fixtures/d-v02-sites/public/common.js": "86e96fa08ccc0c646b9f3a1eef20bb532aca14c614abae4f7badef311bdc0643",
+  "fixtures/d-v02-sites/public/style.css": "7f89bb6203321075fd147b2d41899e3fb2c5e6181c1fa18d720d12bbf206aa2b",
+  "fixtures/d-v02-sites/requirements/w01.md": "cbd6ea713af90c5dba306aa49f72278cc0e47e640acad36e1f5e6628754d28b7",
+  "fixtures/d-v02-sites/public/w01/app.js": "b15143c6dba816163686ca11730bd1fc135afd16f14a748785fda0f1445aaf7f",
+  "fixtures/d-v02-sites/requirements/w02.md": "319a78d0869276a511b0b4689757aa6fae4d8413b0c756aa9741ad8b85f25abe",
+  "fixtures/d-v02-sites/public/w02/app.js": "cc11187540e09acc7b88ea4d00252392512d2063751d9604f6aa39e2ea9bad4c",
+  "fixtures/d-v02-sites/requirements/w03.md": "b29a409bb8577f98cc3d9ed77f47067352c44c38caeac0018091072b66e261f9",
+  "fixtures/d-v02-sites/public/w03/app.js": "ff361987b7dc229eeb666d61015ddd6ba13b01547bbbd5cb97144fe724443985",
+  "fixtures/d-v02-sites/requirements/w04.md": "96f303e91db05153bf3988349afbb54e625102be937da1fa6d0ce632ec6e7b38",
+  "fixtures/d-v02-sites/public/w04/app.js": "c60eedcfa0ba39c9400769a85bb5187c46a6953305408c75de3cbbcd2c5a4532"
+}

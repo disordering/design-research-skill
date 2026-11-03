@@ -1,0 +1,76 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>两轮任务体验记录</title><style>*{box-sizing:border-box}body{font:16px/1.65 system-ui,'Microsoft Yahei',sans-serif;color:#1c2639;background:#f4f6fa;margin:0}main{max-width:760px;margin:32px auto;background:white;padding:28px 36px;border-radius:14px}h1{font-size:27px;margin:0}h2{font-size:18px;margin:24px 0 8px;color:#224f93}p,fieldset{margin:10px 0}fieldset{padding:14px;border:1px solid #c9d2df;border-radius:6px}label{display:block;margin-top:10px;font-weight:550}input,select,textarea{display:block;width:100%;font:inherit;border:1px solid #8496ad;border-radius:5px;padding:5px 8px;color:inherit;background:white}textarea{min-height:64px}button{font:inherit;border:1px solid #9daec5;border-radius:6px;padding:6px 12px;background:white;cursor:pointer;margin:4px 4px 4px 0}button:disabled{opacity:.5;cursor:default}.primary{background:#2152ac;color:white;border-color:#2152ac}small{color:#4d5d72}output{color:#174f83;font-weight:600}.row{display:flex;flex-wrap:wrap;gap:10px}.row label{flex:1 1 150px}.foot{border-top:1px solid #ccd7e7;margin-top:22px;padding-top:18px}input[type=file]{max-width:380px}@media(max-width:600px){main{padding:18px;margin:0;border-radius:0}}</style><main><h1>两轮任务体验记录</h1><p>每人做两轮，每轮各存一份 JSON。人工轮使用指定原材料；工具轮加用指定版本工作台。按主持人提供的任务卡操作，本页仅用来计时和记录。导出一轮后，重新打开本页填写下一轮。</p><h2>按主持人分配的顺序开始</h2><div class="row"><label>匿名体验编号<select id="participant"></select></label><label>轮次<select id="round"></select></label></div><output id="schedule"></output><div class="row"><label>材料版本<input id="version" placeholder="照抄本轮材料版本" autocomplete="off"></label><label>设备和浏览器<input id="device" placeholder="如 笔记本 / Chrome" autocomplete="off"></label></div><label>本轮工具版本<input id="build" placeholder="工具辅助填所用版本" autocomplete="off"></label><h2>现场计时</h2><p>看到任务、准备动手时点“开始”。系统在生成或加载、你只能等待时点“工具等待”；临时被打断点“外部中断”。继续工作点“恢复操作”，交出本轮结果时点“结束”。</p><div id="timers"></div><output id="clock"></output><p><small>退出前导出草稿。计时中的记录可留在本页，补填的记录用于体验评分。</small></p><label>计时记录情况<select id="timing"></select></label><label>中断、漏按或补填情况<textarea id="interruption" placeholder="有中断请写原因；补填请说明，勿估造时间"></textarea></label><h2>任务结果与个人感受</h2><label>任务结果<select id="outcome"></select></label><label>你提交的结果或文件名<textarea id="product" placeholder="写下你的判断、证据位置或你保存的记录；未完成可写停在哪一步。"></textarea></label><div class="row"><label>理解自己的评审结论<select id="understand"></select></label><label>找到支持结论的证据<select id="evidence"></select></label><label>保存或交出本轮结果<select id="saved"></select></label></div><small>分别评价这三件事的容易程度，1 很难，3 一般，5 很容易；没有经历请选择“不适用”。</small><label>用自己的话说，哪一步最顺或最费劲？<textarea id="quote" placeholder=""></textarea></label><label>提交确认<select id="consent"></select></label><div class="foot"><button type="button" onclick="exportNow('draft')">导出草稿</button><button type="button" class="primary" onclick="exportNow('final')">导出正式记录</button><details><summary>载入本人的草稿</summary><input type="file" accept=".json,application/json" id="load" onchange="loadDraft(this.files[0])"></details><output id="msg" aria-live="polite"></output></div></main><script>
+const el=id=>document.getElementById(id);
+const val=id=>el(id).value.trim();
+const now=()=>new Date().toISOString();
+function selected(id,options){
+  const select=el(id);select.add(new Option('请选择',''));for(const [v,l] of options)select.add(new Option(l,v));
+}
+function saveFile(packageKind,record,key){
+  const time=now();const doc={schema:'D-human-v2.1',role,packageKind,exportedAt:time,...record};
+  const file=new Blob([JSON.stringify(doc,null,2)],{type:'application/json;charset=utf-8'});
+  const url=URL.createObjectURL(file),a=document.createElement('a');
+  a.href=url;a.download=[key.replace(/[^a-zA-Z0-9_.-]/g,'_')||'draft',packageKind,time.replace(/[:.]/g,'-')].join('_')+'.json';
+  a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  el('msg').textContent=packageKind==='final'?'正式记录已导出。请将 JSON 交给主持人。':'草稿已导出。重新打开本页可载入草稿。';
+}
+function exportNow(kind){
+  try{const r=collect(kind==='final');saveFile(kind,r,r.reviewer? r.reviewer+'_'+r.task : r.participant+'_'+r.task);}
+  catch(err){el('msg').textContent='请检查填写：'+err.message;}
+}
+function ensure(condition,message){if(!condition)throw Error(message);}
+function fields(ids){return Object.fromEntries(ids.map(id=>[id,val(id)]));}
+function put(ids,r){for(const id of ids){if(r[id]!==undefined)el(id).value=String(r[id]);}}
+async function loadDraft(file){
+ if(!file)return;
+ try {
+   const d=JSON.parse(await file.text());ensure(d.schema==='D-human-v2.1'&&d.role===role&&d.packageKind==='draft','请选择本角色的草稿 JSON。');
+   if(!confirm('载入草稿会替换当前填写内容。继续载入？'))return;
+   restore(d);el('msg').textContent='草稿已载入。';
+ }catch(e){el('msg').textContent=e.message;}
+ el('load').value='';
+}
+
+const role='participant',ids=['participant','round','version','device','build','timing','interruption','outcome','product','understand','evidence','saved','quote','consent'];let events=[];
+const orders={U01:[['A','manual'],['B','tool']],U02:[['A','tool'],['B','manual']],U03:[['B','manual'],['C','tool']],U04:[['B','tool'],['C','manual']],U05:[['C','manual'],['A','tool']],U06:[['C','tool'],['A','manual']]};
+const methodNames={manual:'人工独立评审',tool:'工具辅助评审'};
+const assignment=()=>orders[val('participant')]?.[Number(val('round'))-1]||[];
+selected('participant',Object.keys(orders).map(x=>[x,x]));selected('round',[['1','第一轮'],['2','第二轮']]);
+selected('timing',[['live','现场计时完整'],['invalid','补填或计时不完整']]);
+selected('outcome',[['completed','独立完成'],['assisted','接受提示后完成'],['partial','部分完成'],['blocked','未能完成']]);
+for(const id of ['understand','evidence','saved'])selected(id,[['1','1 · 很难'],['2','2 · 较难'],['3','3 · 一般'],['4','4 · 较容易'],['5','5 · 很容易'],['na','不适用，未经历']]);
+selected('consent',[['yes','同意匿名提交本轮课程测试记录']]);
+const labels={active:'操作中',wait:'工具等待',break:'外部中断',ended:'已结束'};
+function action(type){
+ const [task,method]=assignment();if(!task){el('msg').textContent='请先选定编号和轮次。';return;}
+ if(type==='wait'&&method!=='tool')return;
+ const last=events.at(-1);if(last?.type===type||last?.type==='ended'||(!last&&type!=='active'))return;
+ events.push({type,at:now()});render();
+}
+function totals(){
+ const sums={active:0,wait:0,break:0};
+ for(let i=1;i<events.length;i++){const prev=events[i-1];sums[prev.type]+=(Date.parse(events[i].at)-Date.parse(prev.at))/1000;}
+ return {操作秒:sums.active,工具等待秒:sums.wait,外部中断秒:sums.break,起止总秒:sums.active+sums.wait+sums.break,扣中断后秒:sums.active+sums.wait};
+}
+const buttons={}; for(const [key,typ,name] of [['start','active','开始'],['wait','wait','工具等待'],['break','break','外部中断'],['resume','active','恢复操作'],['ended','ended','结束']]){
+ const b=document.createElement('button');b.textContent=name;b.onclick=()=>action(typ);el('timers').append(b);buttons[key]=b;
+}
+function render(){
+ const [task,method]=assignment(),current=events.at(-1)?.type;el('schedule').textContent=task?'本轮使用任务 '+task+'，方式为'+methodNames[method]+'。':'选好编号和轮次后，这里显示任务与方式。';
+ for(const k of ['participant','round'])el(k).disabled=events.length>0;
+ el('build').disabled=method==='manual';if(method==='manual')el('build').value='';
+ for(const key in buttons)buttons[key].disabled=!task||current==='ended'||(key==='start'?!!current:key==='resume'?!current||current==='active':key==='wait'?method!=='tool'||!current||current==='wait':key==='break'?!current||current==='break':!current);
+ el('clock').textContent=current?labels[current]+' · 已记录 '+events.length+' 个时点'+(current==='ended'?' · 起止 '+totals().起止总秒.toFixed(1)+' 秒':''):'尚未开始'; 
+}
+el('participant').onchange=el('round').onchange=render;render();
+function collect(final){
+ const d=fields(ids),[task,method]=assignment();Object.assign(d,{task,method,events:[...events]});
+ if(final){
+ for(const k of ['participant','round','version','device','timing','outcome','product','understand','evidence','saved','quote','consent'])ensure(d[k],'请完成任务登记、评分、原话与提交确认。');
+ ensure(method!=='tool'||d.build,'请记录工具版本。');
+ ensure(d.timing!=='live'||events.at(-1)?.type==='ended','现场计时请先结束；漏按请选计时不完整。');
+ ensure((d.timing!=='invalid'&&!events.some(e=>e.type==='break'))||d.interruption,'请补充计时或中断情况。');
+ }
+ d.timingValid=d.timing==='live'&&events.at(-1)?.type==='ended';d.seconds=d.timingValid?totals():null;return d;
+}
+function restore(r){put(ids,r);events=Array.isArray(r.events)?r.events:[];render();}
+</script></html>

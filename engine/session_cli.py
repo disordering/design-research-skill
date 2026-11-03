@@ -15,6 +15,12 @@ from .session_report import (
 )
 from .session_service import SessionService
 from .session_store import SessionStore
+from .session_evaluation import (
+    BatchEvaluationInput,
+    EvaluationLabels,
+    evaluate_batch,
+    evaluate_session,
+)
 
 
 def add_parsers(subparsers) -> None:
@@ -34,6 +40,13 @@ def add_parsers(subparsers) -> None:
     parser.add_argument("session_id")
     parser.add_argument("event_file")
     parser.add_argument("--run", action="store_true")
+    parser = subparsers.add_parser("session-evaluate")
+    parser.add_argument("session_id")
+    parser.add_argument("labels_file")
+    parser.add_argument("--output", default=None)
+    parser = subparsers.add_parser("session-batch-evaluate")
+    parser.add_argument("manifest_file")
+    parser.add_argument("--output", default=None)
     parser = subparsers.add_parser("figma-login", help="Authorize the backend MCP client independently")
     parser.add_argument("--timeout", type=int, default=300)
 
@@ -61,6 +74,35 @@ async def execute(args, root: Path) -> None:
             if should_run and args.run:
                 snapshot = await service.run(args.session_id)
             result = snapshot.model_dump(mode="json")
+        elif args.command == "session-evaluate":
+            snapshot = service.store.get(args.session_id)
+            labels = EvaluationLabels.model_validate_json(
+                Path(args.labels_file).read_text(encoding="utf-8-sig")
+            )
+            result = evaluate_session(snapshot, labels)
+            if args.output:
+                output = Path(args.output)
+                output.parent.mkdir(parents=True, exist_ok=True)
+                output.write_text(
+                    json.dumps(result, ensure_ascii=False, indent=2),
+                    encoding="utf-8",
+                )
+        elif args.command == "session-batch-evaluate":
+            batch = BatchEvaluationInput.model_validate_json(
+                Path(args.manifest_file).read_text(encoding="utf-8-sig")
+            )
+            snapshots = {
+                case.session_id: service.store.get(case.session_id)
+                for case in batch.cases
+            }
+            result = evaluate_batch(snapshots, batch)
+            if args.output:
+                output = Path(args.output)
+                output.parent.mkdir(parents=True, exist_ok=True)
+                output.write_text(
+                    json.dumps(result, ensure_ascii=False, indent=2),
+                    encoding="utf-8",
+                )
         elif args.command == "session-export":
             snapshot = service.store.get(args.session_id)
             if args.zip and not args.package:

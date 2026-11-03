@@ -14,7 +14,9 @@ from pathlib import Path
 from typing import Any, Callable
 
 from .session_contracts import SessionSnapshot
+from .session_flow import build_state_graph
 from .session_screen_review import _outside_screen_responsibility
+from .session_verification import missing_task_state_coverage
 
 ArtifactLoader = Callable[[str, str], tuple[Path, str]]
 
@@ -693,101 +695,31 @@ def _screen_issue_cluster(issue: dict[str, Any]) -> str:
         str(issue.get("title") or ""),
         str(issue.get("detection") or ""),
         str(issue.get("description") or ""),
-    ])
+    ]).lower()
     heuristics = set(issue.get("heuristic_ids") or [])
-    if (
-        ("黄色" in text and ("徽章" in text or "气泡" in text or "「1」" in text or "“1”" in text))
-        or "计数对象" in text
-    ):
-        return "attention-badge-ambiguity"
-    if (
-        any(term in text for term in ("列表", "卡片", "头像"))
-        and "选中态" in text
-        and any(term in text for term in ("无法确认", "不可辨", "没有", "缺少"))
-    ):
-        return "list-selection-state"
-    if (
-        "主操作" in text
-        and any(term in text for term in ("难以定位", "不易定位", "视觉权重", "层级倒挂"))
-    ):
-        return "primary-action-hierarchy"
-    if any(term in text for term in ("全选", "绑定", "空圆圈", "单选圆点", "复选框")):
-        if heuristics.intersection({"H02", "H04", "H06"}):
-            return "selection-control-semantics"
-    if "0000000" in text and any(term in text for term in ("数量", "分解可得")):
-        if any(term in text for term in ("选中", "勾选", "按钮", "汇总")):
-            return "selection-summary-state"
-        return "numeric-format-consistency"
-    if any(term in text for term in ("前导零", "七位", "7位", "九位", "9位")):
-        return "numeric-format-consistency"
+    facets = (
+        ("state-visibility", ("选中", "状态", "当前", "selected", "state")),
+        ("feedback-clarity", ("反馈", "响应", "提示", "结果", "feedback", "response")),
+        ("navigation-location", ("导航", "返回", "页签", "当前位置", "navigation", "back")),
+        ("input-validation", ("输入", "校验", "范围", "格式", "validation", "input")),
+        ("error-recovery", ("错误", "失败", "异常", "恢复", "error", "recover")),
+        ("visual-hierarchy", ("层级", "主操作", "突出", "权重", "hierarchy", "primary")),
+        ("control-semantics", ("全选", "单选", "复选", "开关", "控件", "control", "checkbox", "radio")),
+    )
+    matched = [
+        name for name, terms in facets
+        if any(term in text for term in terms)
+    ]
     if any(term in text for term in ("对比度", "不可读", "低对比", "小字")):
-        if any(term in text for term in ("绑", "角标")):
-            return "binding-label-legibility"
-        if any(term in text for term in ("页签", "导航", "当前模块")):
-            return "navigation-state-legibility"
-        return "text-legibility"
-    if (
-        "选中" in text
-        and any(term in text for term in ("不一致", "却是", "互相矛盾", "自相矛盾", "冲突"))
-    ):
-        return "selected-detail-mismatch"
-    if "回收" in text and any(term in text for term in ("作用域", "同名", "动作语义")):
-        return "duplicate-action-naming"
-    return "screen:" + re.sub(r"\s+", "", str(issue.get("title") or issue.get("issue_id")))
-
-
-SYSTEMIC_ISSUE_COPY = {
-    "selection-control-semantics": {
-        "title": "选择、筛选与批量操作共用同一控件语义",
-        "description": "多个界面把全选、绑定筛选和等级单选表达成相同空心圆，用户无法预判操作会替换、累加还是仅过滤当前选择。",
-        "suggestion": "统一选择控件语言：复选框用于多选，单选圆点用于互斥选择，筛选器使用独立标签或开关，并在状态变化后显示作用范围。",
-    },
-    "selection-summary-state": {
-        "title": "选择状态与数量、结果汇总不一致",
-        "description": "界面已出现勾选或全选状态，但数量仍显示 0000000，分解/兑换结果未同步，主按钮也保持可执行外观，用户无法在提交前核对。",
-        "suggestion": "让选择状态驱动数量和结果汇总；数量为 0 或尚未计算时禁用主操作，并在同一状态下呈现明确的反馈。",
-    },
-    "numeric-format-consistency": {
-        "title": "数量与相邻数值的位数、占位格式不一致",
-        "description": "数量字段以七位前导零显示，而相邻结果和拥有量使用九位数字；字段容量与展示格式不能稳定承载同类数值。",
-        "suggestion": "按最长可见数值统一字段宽度、对齐与占位规则，避免用前导零混同真实零值和未计算状态。",
-    },
-    "binding-label-legibility": {
-        "title": "绑定角标的可见性和措辞不一致",
-        "description": "多个界面依赖小尺寸“绑”角标表达关键状态，但部分角标对比度过低，且与“绑定”筛选控件使用不同措辞。",
-        "suggestion": "统一绑定状态的高对比标识与措辞，保证每张材料卡都能稳定辨认，并让筛选控件复用同一状态语言。",
-    },
-    "navigation-state-legibility": {
-        "title": "页签选中态对比不足",
-        "description": "当前模块与其他页签的文字对比接近，选中态缺少稳定可辨的视觉差异，用户难以确认所在位置。",
-        "suggestion": "提高页签文字对比，并为选中项提供独立而一致的高亮底、指示条或字重差异。",
-    },
-    "selected-detail-mismatch": {
-        "title": "列表选中项与详情对象不一致",
-        "description": "列表高亮对象与详情标题、操作对象不一致，用户无法确认当前正在查看或操作哪一项。",
-        "suggestion": "让列表选中状态、详情标题和主操作对象由同一状态源驱动，避免同时存在两个对象身份。",
-    },
-    "duplicate-action-naming": {
-        "title": "同名操作入口的作用范围不清",
-        "description": "同一界面存在多个“回收”入口，或“分解/回收”并列，但没有说明当前道具与批量操作的作用范围。",
-        "suggestion": "让同名入口补充对象或范围，例如“回收此道具”“批量回收”，并统一同一动作的名称。",
-    },
-    "attention-badge-ambiguity": {
-        "title": "高亮数字徽章缺少语义和目标锚点",
-        "description": "黄色数字“1”没有说明计数对象、步骤含义或指向入口，并与既有红点提示争夺注意力。",
-        "suggestion": "为提示补充明确标签或箭头锚点，并统一新内容、数量、步骤和可解锁状态等不同提示语义。",
-    },
-    "list-selection-state": {
-        "title": "角色或护法列表缺少可辨认的当前选中态",
-        "description": "左侧列表承载角色切换，但没有稳定高亮或勾选，用户无法把当前详情与列表对象一一对应。",
-        "suggestion": "为当前对象提供持续可见的选中态，并让详情标题、头像和主操作对象由同一选择状态驱动。",
-    },
-    "primary-action-hierarchy": {
-        "title": "主操作与装饰性入口的视觉层级倒挂",
-        "description": "页面的装饰徽章、中央圆形入口或同名区域在视觉上强于真正消耗材料的主按钮，用户难以定位下一步动作。",
-        "suggestion": "提升实际主操作的尺寸、对比与邻近关系，弱化同名或装饰性入口，避免两个相似控件竞争主操作地位。",
-    },
-}
+        matched.append("legibility")
+    if not matched and heuristics:
+        matched.extend(sorted(heuristics)[:2])
+    if not matched:
+        rules = issue.get("rule_ids") or []
+        matched.extend(str(rule) for rule in rules[:2])
+    return "+".join(dict.fromkeys(matched)) or "screen:" + re.sub(
+        r"\s+", "", str(issue.get("title") or issue.get("issue_id")),
+    )
 
 
 def _systemic_screen_issues(
@@ -808,7 +740,6 @@ def _systemic_screen_issues(
                 float(item[1].get("confidence") or 0),
             ),
         )
-        copy = SYSTEMIC_ISSUE_COPY.get(cluster_id)
         affected = []
         seen_nodes = set()
         for item_review, issue in entries:
@@ -825,15 +756,12 @@ def _systemic_screen_issues(
             **primary,
             "issue_id": f"systemic-{cluster_id}",
             "systemic_cluster": cluster_id,
-            "title": copy["title"] if copy and len(entries) > 1 else primary.get("title"),
-            "description": (
-                copy["description"] if copy and len(entries) > 1
-                else primary.get("description")
+            "title": (
+                f"重复出现：{primary.get('title')}"
+                if len(entries) > 1 else primary.get("title")
             ),
-            "suggestion": (
-                copy["suggestion"] if copy and len(entries) > 1
-                else primary.get("suggestion")
-            ),
+            "description": primary.get("description"),
+            "suggestion": primary.get("suggestion"),
             "detection": (
                 f"在 {len(entries)} 个界面观察中重复出现；代表证据：{primary.get('detection', '')}"
                 if len(entries) > 1 else primary.get("detection", "")
@@ -919,6 +847,7 @@ def structured_report(
     })
     test_fixture = bool(session.model_calls) and all(c.get("is_stub") for c in session.model_calls)
     current_calls = [c for c in calls if c["run_id"] == session.run_id]
+    state_graph = session.flow_graph or build_state_graph(session)
     method_fingerprints = (
         registry.fingerprints() if registry is not None
         else session.capability_status.get("method_fingerprints", {})
@@ -956,6 +885,7 @@ def structured_report(
             "context": session.context_version,
             "report": session.report_version,
             "models": models,
+            "verifier": session.verifier_model_status,
             "is_stub": test_fixture,
         },
         "context": {
@@ -972,9 +902,32 @@ def structured_report(
             "execution": dict(execution),
             "decisions": dict(decisions),
             "finding_count": len(current_findings),
+            "claim_count": sum(len(f.claims) for f in current_findings),
+            "supported_claim_count": sum(
+                claim.verification_status == "supported"
+                for finding in current_findings for claim in finding.claims
+            ),
+            "derived_claim_count": sum(
+                claim.derived
+                for finding in current_findings for claim in finding.claims
+            ),
             "severity": dict(severity),
             "unresolved_questions": sum(not q.answered for q in session.questions),
             "blocking_questions": sum(q.blocking and not q.answered for q in session.questions),
+            "uncovered_task_state_count": len(
+                missing_task_state_coverage(session)
+            ),
+            "required_coverage_count": len(session.required_coverage),
+            "uncovered_coverage_count": sum(
+                not item.get("covered") for item in session.required_coverage
+            ),
+            "contract_violation_count": len(session.contract_violations),
+            "covered_state_count": state_graph.get("summary", {}).get(
+                "covered_state_count", 0,
+            ),
+            "transition_count": state_graph.get("summary", {}).get(
+                "transition_count", 0,
+            ),
             "evidence_count": len([e for e in session.evidence if not e.stale]),
             "action_count": len(_current_actions(session)),
             "model_call_count": len([c for c in calls if c["run_id"] == session.run_id]),
@@ -1010,6 +963,10 @@ def structured_report(
                 int(e.get("analysis", {}).get("visible_text_node_count", 0))
                 for e in evidence
             ),
+            "accessibility_node_count": sum(
+                int(e.get("analysis", {}).get("accessibility_node_count", 0))
+                for e in evidence
+            ),
             "screen_review_count": sum(
                 review["status"] == "completed" for review in screen_review_payloads
             ),
@@ -1023,10 +980,13 @@ def structured_report(
         },
         "sources": sources,
         "constraints": {
+            "review_tasks": [task.model_dump(mode="json") for task in session.review_tasks],
             "goals": [g.model_dump(mode="json") for g in session.goals],
             "requirements": [r.model_dump(mode="json") for r in session.requirements],
             "assumptions": session.assumptions,
         },
+        "required_coverage": session.required_coverage,
+        "contract_violations": session.contract_violations,
         "material_understanding": _material_understanding_payload(session),
         "process": _process_steps(session, calls),
         "checks": checks,
@@ -1045,6 +1005,7 @@ def structured_report(
         "model_calls": calls,
         "actions": [a.model_dump(mode="json") for a in _current_actions(session)],
         "transitions": [t.model_dump(mode="json") for t in session.transitions],
+        "state_graph": state_graph,
         "rechecks": [r.model_dump(mode="json") for r in session.rechecks],
         "history": {
             "messages": session.messages,
@@ -1174,7 +1135,7 @@ def markdown_summary(session: SessionSnapshot, *, registry=None) -> str:
         lines.append("| 无 | — | — |")
     lines += [
         "",
-        "**边界**：本摘要只说明静态方案与明确要求的关系；筛选记忆、跳转、分解结果、"
+        "**边界**：本摘要只说明静态方案与明确要求的关系；持久化、跳转、提交结果、"
         "错误恢复等动态行为仍需原型或测试环境验证。",
         "",
         "完整人审报告见 `report-showcase.md`，逐步审计与全部证据见 `report-details.md`。",
@@ -1334,6 +1295,51 @@ def audit_report(
     else:
         lines.append("材料理解未完成；不得用评审委托替代产品目标或要求。")
 
+    graph = report.get("state_graph", {})
+    if graph.get("nodes"):
+        lines += [
+            "",
+            "### 已观察状态与动作迁移",
+            "",
+            "| 状态 | 来源 | 定位 | 入/出 | 已接入检查 |",
+            "| --- | --- | --- | ---: | --- |",
+        ]
+        for node in graph["nodes"]:
+            lines.append(
+                f"| `{node['state_id']}` | {node['source_id']} | "
+                f"{_text(_locator_brief(node.get('locator', {})))} | "
+                f"{node.get('incoming', 0)}/{node.get('outgoing', 0)} | "
+                f"{'是' if node.get('covered') else '否'} |"
+            )
+        if graph.get("edges"):
+            lines += [
+                "",
+                "| 迁移 | 动作 | 目标 | 结果 |",
+                "| --- | --- | --- | --- |",
+            ]
+            for edge in graph["edges"]:
+                lines.append(
+                    f"| `{edge['from_state']}` → `{edge['to_state']}` | "
+                    f"{_text(edge.get('action_kind'))} | {_text(edge.get('target_label') or '—')} | "
+                    f"{_text(edge.get('outcome') or edge.get('verification_status'))} |"
+                )
+    if report.get("required_coverage"):
+        lines += [
+            "",
+            "### 必需覆盖矩阵",
+            "",
+            "| 覆盖单元 | 任务 | 状态 | 来源 | 已覆盖 | 缺证类型 |",
+            "| --- | --- | --- | --- | --- | --- |",
+        ]
+        for item in report["required_coverage"]:
+            lines.append(
+                f"| `{item['coverage_id']}` | {item['task_id']} | "
+                f"{_text(item.get('state_id') or '任务级')} | "
+                f"{_text(item.get('source_id') or '—')} | "
+                f"{'是' if item.get('covered') else '否'} | "
+                f"{_text(item.get('gap_class') or '—')} |"
+            )
+
     lines += [
         "",
         "## 六、证据链总表",
@@ -1401,14 +1407,25 @@ def audit_report(
             f"- 类型 / 严重度 / 置信度：{finding['kind']} / {finding['severity']} / {finding['confidence']}",
             f"- 审核状态：{finding['review_status']}；人工等级：{finding['human_severity'] or '未调整'}",
             f"- 关联检查：{', '.join(finding['check_refs'])}",
+            f"- 规范对象：{_text(finding.get('object_id') or '未关联')} / "
+            f"{_text(finding.get('object_ref') or '无')}",
             f"- 原则：{_text(finding['principle'])}",
             f"- 检测：{_text(finding['detection'])}",
             f"- 描述：{_text(finding['description'])}",
             f"- 建议：{_text(finding['suggestion'])}",
             f"- 严重度理由：{_text(finding['severity_reason'])}",
             f"- 核验调用：{', '.join(finding['verify_call_ids']) or '未记录'}",
+            f"- 结构化断言：{len(finding.get('claims', []))} 项",
             "- 证据链：",
         ]
+        for claim in finding.get("claims", []):
+            lines.append(
+                f"  - `{claim['claim_id']}` {claim['claim_type']} / "
+                f"{claim['verification_status']}"
+                f"{' / 程序派生' if claim.get('derived') else ''}："
+                f"{_text(claim.get('observed') or '')}"
+                f"；{_text(claim.get('verification_reason') or '')}"
+            )
         for evidence in finding["evidence_chain"]:
             lines.append(_md_evidence(
                 session, evidence["evidence_id"], evidence_by_id,
@@ -1636,8 +1653,9 @@ def _human_evidence_excerpt(evidence: Any, limit: int = 700) -> str:
         weighted = [
             text for text in useful
             if any(key in text for key in (
-                "设计目的", "设计思路", "只允许", "15级", "积分商店", "功能入口",
-                "筛选", "排序", "Npc", "NPC", "可兑换", "分解", "提示",
+                "设计目的", "目标", "要求", "规则", "入口", "状态",
+                "错误", "失败", "取消", "返回", "保存", "反馈",
+                "权限", "限制", "成功", "完成",
             ))
         ]
         chosen = list(dict.fromkeys([*weighted[:10], *useful[:5]]))
@@ -1660,27 +1678,22 @@ def _humanize_ids(text: str, aliases: dict[str, str]) -> str:
 
 def _gap_group(text: str) -> tuple[str, str]:
     normalized = text.lower()
-    if "问号" in normalized or "tips" in normalized or "帮助" in normalized:
-        return "帮助与规则解释", "补充 Tips 内容及对等级、套装和折损规则的解释"
-    if any(word in normalized for word in ("数量输入", "输入限制", "格式", "非法输入", "超过拥有")):
-        return "输入约束与错误反馈", "补充数量输入限制、超限和非法输入反馈"
-    if any(word in normalized for word in ("筛选", "记忆", "持久化", "退出重进")):
-        return "筛选记忆与恢复", "说明筛选持久化方式，或提供退出重进后的原型证据"
-    if "排序" in normalized or "绑定优先" in normalized:
-        return "排序规则裁决", "确认采用绑定优先列表还是等级分区，并同步修改文案或方案"
-    if any(word in normalized for word in ("二次确认", "确认弹窗")):
-        return "高风险操作确认", "补充分解前二次确认和取消/返回状态"
-    if any(word in normalized for word in ("空状态", "没有任何符合")):
-        return "空状态", "补充无符合条件道具时的界面和下一步指引"
-    if any(word in normalized for word in ("错误", "异常", "分解失败", "网络")):
-        return "错误状态与恢复", "补充分解失败、无可分解道具等异常状态"
-    if any(word in normalized for word in ("积分商店", "获取途径")):
-        return "积分商店与获取途径", "补充商店高清界面、获取途径入口及11–15级获取途径"
-    if any(word in normalized for word in ("折损", "定价", "数值表", "经济")):
-        return "经济平衡与定价", "补充数值表、折损比例及10级以上兑换定价规则"
-    if any(word in normalized for word in ("提示", "toast", "反馈", "分解成功")):
-        return "完成反馈", "补充分解/兑换完成后的结果反馈"
-    return "其他未决", _first_sentence(text)
+    categories = (
+        ("help-and-rules", ("帮助", "规则", "说明", "tips", "help")),
+        ("input-validation", ("输入", "格式", "校验", "范围", "input", "validation")),
+        ("persistence", ("记忆", "持久", "保存", "退出", "persist", "remember")),
+        ("sort-and-filter", ("排序", "筛选", "过滤", "sort", "filter")),
+        ("confirmation", ("确认", "二次确认", "不可逆", "confirm", "irreversible")),
+        ("empty-state", ("空状态", "没有结果", "无结果", "empty")),
+        ("error-recovery", ("错误", "异常", "失败", "超时", "error", "failure", "recover")),
+        ("navigation", ("返回", "跳转", "入口", "路径", "back", "navigation")),
+        ("feedback", ("提示", "反馈", "toast", "feedback", "result")),
+        ("access-control", ("权限", "登录", "访问", "permission", "access")),
+    )
+    for name, terms in categories:
+        if any(term in normalized for term in terms):
+            return name, _first_sentence(text)
+    return "other", _first_sentence(text)
 
 
 def _finding_display_id(index: int) -> str:
@@ -1833,7 +1846,7 @@ def human_report(
         "",
         "**不能下的结论**",
         "",
-        "- 不能确认筛选记忆、跳转、分解结果、错误恢复等动态行为已经在真实环境生效。",
+        "- 不能确认持久化、跳转、提交结果、错误恢复等动态行为已经在真实环境生效。",
         "- 不能把“完整性：完整”解释成“全部通过”；它只表示本轮计划项都有可追溯处置。",
         "",
         "## 二、评审范围与材料",
@@ -2546,6 +2559,9 @@ def write_report_package(
         "evidence.json": structured["evidence"],
         "findings.json": structured["findings"],
         "screen-reviews.json": structured["screen_reviews"],
+        "flow-graph.json": structured["state_graph"],
+        "coverage.json": structured["required_coverage"],
+        "contract-violations.json": structured["contract_violations"],
     }
     from .figma_report import build_figma_plugin_script, build_figma_report_plan
 

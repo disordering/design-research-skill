@@ -9,7 +9,10 @@ from engine.errors import EngineError
 from engine.model import ModelCallResult
 from engine.session_adapters import Capture
 from engine.session_contracts import (
-    Action, EventInput, Finding, Question, SessionCreate, SourceInput, Constraint,
+    Action, EventInput, Evidence, Finding, Question, Recheck, SessionCreate,
+    SourceInput, SourceRecord, Constraint, Transition, ReviewTask, PageState,
+    ScreenTechnicalReview, ScreenTechnicalIssue, EvidenceObject, FindingClaim,
+    ReviewBranch,
 )
 from engine.session_report import markdown_report
 from engine.session_service import SessionService
@@ -95,12 +98,27 @@ class FixtureModel:
                 decision = "met" if check["kind"] == "goal" else "no_conflict" if check["kind"] == "conflict" else "no_visible_issue"
                 if self.issue and check["ref"] == "R17":
                     decision = "candidate_issue"
+                    evidence_payload = next(
+                        item for item in context["evidence"]
+                        if item["evidence_id"] == eid
+                    )
+                    object_id = evidence_payload.get("objects", [{}])[0].get(
+                        "object_id", "",
+                    )
                     findings.append({
                         "kind": "issue", "title": "夹具选择状态问题", "check_ids": [check["check_id"]],
                         "evidence_ids": ["nonexistent"] if self.invalid_evidence else [eid],
                         "principle": "测试依据", "detection": "测试现象", "description": "测试影响",
                         "suggestion": "测试修改", "severity_reason": "测试任务局部受阻",
-                        "object_ref": "fixture-control", "mechanism": "selection", "change_action": "show-state",
+                        "object_id": object_id, "object_ref": eid,
+                        "mechanism": "selection", "change_action": "show-state",
+                        "claims": [{
+                            "claim_type": "object_present",
+                            "object_id": object_id,
+                            "expected": "测试对象受检查",
+                            "observed": "测试证据中存在目标对象",
+                            "evidence_ids": [eid],
+                        }],
                     })
                 judgments.append({
                     "check_id": check["check_id"], "decision": decision, "reason": "契约测试判断，非模型效果",
@@ -120,11 +138,12 @@ class FixtureModel:
         )
 
 
-def create_service(tmp_path, model=None, adapters=None, factory=None):
+def create_service(tmp_path, model=None, adapters=None, factory=None, verifier_factory=None):
     model = model or FixtureModel()
     service = SessionService(
         SessionStore(tmp_path), adapters=adapters or FixtureAdapters(),
         model_factory=factory or (lambda request: model),
+        verifier_factory=verifier_factory,
     )
     return service, model
 
@@ -135,6 +154,7 @@ def request(website=False, **kwargs):
             kind="website" if website else "document",
             reference="https://example.test/" if website else "",
             content="" if website else "测试规则：保存成功后显示结果。",
+            evidence_kind="design",
         )], **kwargs,
     )
 
@@ -149,7 +169,8 @@ def test_raw_input_runs_through_all_methods_and_report_versions(tmp_path):
     assert all(c.execution_status == "executed" for c in finished.checks)
     assert finished.report_version == 1
     assert model.operations == [
-        "understand", "plan_checks", "plan_checks", "plan", "judge", "judge",
+        "understand", "plan_checks", "plan_checks", "plan_checks", "plan_checks",
+        "plan", "judge", "judge",
     ]
     assert all(call.get("call_id") and call.get("stage") for call in finished.model_calls)
     assert all("evidence_ids" in call.get("input", {}) for call in finished.model_calls)
@@ -188,6 +209,24 @@ def test_provider_rejection_detail_is_preserved_without_fake_judgments(tmp_path)
     assert finished.report_completeness == "partial"
     assert not finished.findings
     assert any("AccessDenied.Unpurchased" in warning for warning in finished.warnings)
+
+
+def test_configured_verifier_model_runs_semantic_verification(tmp_path):
+    primary = FixtureModel(issue=True)
+    verifier = FixtureModel()
+    service, _ = create_service(
+        tmp_path,
+        factory=lambda request: primary,
+        verifier_factory=lambda request: verifier,
+    )
+    result = asyncio.run(service.run(service.create(request(
+        verifier_provider="qwen",
+        verifier_model_name="verifier-fixture",
+    )).session_id))
+    assert "verify" in verifier.operations
+    assert "verify" not in primary.operations
+    assert result.verifier_model_status["enabled"] is True
+    assert result.verifier_model_status["model"] == "verifier-fixture"
 
 
 def test_question_reply_changes_context_and_restarts_actual_checks(tmp_path):
@@ -290,6 +329,36 @@ def test_review_records_do_not_overwrite_model_severity(tmp_path):
     assert reviewed.findings[0].reviewer == "reviewer-a"
 
 
+def test_finding_review_does_not_cancel_an_active_review_run(tmp_path):
+    service, _ = create_service(tmp_path)
+    session = service.create(request())
+
+    class RunningTask:
+        def __init__(self):
+            self.cancelled = False
+
+        def done(self):
+            return False
+
+        def cancel(self):
+            self.cancelled = True
+
+    task = RunningTask()
+    service._tasks[session.session_id] = task
+    with pytest.raises(EngineError) as error:
+        service.apply_event(session.session_id, EventInput(
+            event_id="review-busy", expected_context_version=1,
+            type="review_finding", actor="reviewer",
+            payload={
+                "finding_id": "finding-unknown",
+                "review_status": "confirmed",
+                "reason": "checked",
+            },
+        ))
+    assert error.value.code == "session_busy"
+    assert not task.cancelled
+
+
 def test_new_version_does_not_auto_resolve_old_finding(tmp_path):
     model = FixtureModel(issue=True, recheck_without_evidence=True)
     service, _ = create_service(tmp_path, model=model)
@@ -321,6 +390,51 @@ def test_planner_priorities_reorder_existing_checks_instead_of_silently_ignoring
     service._accept_plan(session, AgentStep(task_summary="Check the flow", priority_refs=["E01", "E07"]))
     assert [c.ref for c in session.checks[:2]] == ["E01", "E07"]
     assert len(session.checks) == 32
+
+
+def test_check_planning_automatically_splits_invalid_large_batches(tmp_path):
+    from engine.session_contracts import CheckPlanBatch
+
+    service, model = create_service(tmp_path)
+    session = service.create(request())
+    asyncio.run(service._read_sources(session))
+    service._prepare_checks(session)
+    evidence_id = session.evidence[0].evidence_id
+    source_id = session.sources[0].source_id
+    batch_sizes = []
+
+    async def plan_call(session, model, schema, operation, payload):
+        if operation != "plan_checks":
+            raise AssertionError(f"Unexpected operation: {operation}")
+        size = len(payload["checks"])
+        batch_sizes.append(size)
+        if size > 4:
+            raise EngineError(
+                "session_model_contract_failed",
+                "Fixture truncation",
+                status_code=502,
+            )
+        return CheckPlanBatch(items=[{
+            "ref": check["ref"],
+            "coverage_id": f"coverage-{check['ref']}",
+            "applicability": "applicable",
+            "reason": "Fixture plan after batch split",
+            "source_ids": [source_id],
+            "evidence_ids": [evidence_id],
+        } for check in payload["checks"]])
+
+    service._call = plan_call
+    asyncio.run(service._plan_checks(session, model))
+
+    assert 8 in batch_sizes
+    assert 4 in batch_sizes
+    assert all(
+        check.applicability == "applicable"
+        for check in session.checks
+        if check.run_id == session.run_id
+    )
+    assert session.check_plan_fingerprint
+    assert any("自动拆分重试" in warning for warning in session.warnings)
 
 
 def test_noop_action_keeps_before_after_evidence_without_a_verified_path(tmp_path):
@@ -795,6 +909,22 @@ def test_tall_figma_design_reads_visible_leaf_screens_but_business_text_does_not
     assert design_adapter.nodes == ["1:2", "1:3"]
     assert len([e for e in design.evidence if e.source_id == design.sources[0].source_id]) == 3
 
+    default_adapter = FigmaBoardAdapters()
+    default_service, _ = create_service(tmp_path / "default", adapters=default_adapter)
+    default_design = default_service.create(SessionCreate(
+        purpose="Check an unspecified Figma board", limits={"max_images_per_call": 4},
+        sources=[SourceInput(
+            kind="figma_board",
+            reference="https://www.figma.com/design/abc/Test?node-id=1-1",
+        )],
+    ))
+    asyncio.run(default_service._read_sources(default_design))
+    assert default_adapter.nodes == ["1:2", "1:3"]
+    assert len([
+        e for e in default_design.evidence
+        if e.source_id == default_design.sources[0].source_id
+    ]) == 3
+
     business_adapter = FigmaBoardAdapters()
     business_service, _ = create_service(tmp_path / "business", adapters=business_adapter)
     business = business_service.create(SessionCreate(
@@ -841,6 +971,29 @@ def test_visual_capture_persists_metrics_and_overlay_artifacts(tmp_path):
     }
     metrics_path, _ = service.store.artifact(session.session_id, evidence.analysis_artifact_id)
     assert metrics_path.exists()
+
+
+def test_wide_landscape_figma_screen_qualifies_for_screen_review(tmp_path):
+    service, _ = create_service(tmp_path)
+    session = service.create(request(website=True))
+    evidence = Evidence(
+        source_id=session.sources[0].source_id,
+        kind="design",
+        source_version="v1",
+        context_version=1,
+        locator={
+            "requested_node_id": "173:2607",
+            "node_id": "173:2620",
+            "screenshot_width": 1024,
+            "screenshot_height": 384,
+        },
+        content="Wide car screen",
+        artifact_id="artifact-wide-screen",
+    )
+    assert service._is_full_screen_review_target(evidence) is True
+
+    evidence.locator["node_id"] = "173:2607"
+    assert service._is_full_screen_review_target(evidence) is False
 
 
 def test_complete_screen_runs_single_image_technical_review_once(tmp_path):
@@ -948,6 +1101,66 @@ def test_complete_screen_runs_single_image_technical_review_once(tmp_path):
     assert "annotationPanel" not in script
     asyncio.run(service._review_individual_screens(session, RealLikeModel()))
     assert reviewer.calls == 1
+
+
+def test_screen_reviews_run_with_bounded_parallelism(tmp_path):
+    import io
+    from PIL import Image
+    from engine.session_screen_review import ScreenReviewOutput
+
+    class ConcurrentReviewer:
+        def __init__(self):
+            self.active = 0
+            self.max_active = 0
+            self.calls = 0
+
+        async def review(self, *, evidence, image_bytes, context, max_calls):
+            self.calls += 1
+            self.active += 1
+            self.max_active = max(self.max_active, self.active)
+            await asyncio.sleep(0.05)
+            self.active -= 1
+            return ScreenReviewOutput(review=ScreenTechnicalReview(
+                evidence_id=evidence.evidence_id,
+                source_id=evidence.source_id,
+                status="completed",
+                technical_metrics={"ui_element_count": 1},
+            ))
+
+    class RealLikeModel:
+        is_stub = False
+
+    service, _ = create_service(tmp_path)
+    reviewer = ConcurrentReviewer()
+    service.screen_reviewer = reviewer
+    session = service.create(SessionCreate(
+        purpose="Parallel screen fixture",
+        limits={"max_model_calls": 20, "max_parallel_screens": 2},
+        sources=[SourceInput(
+            kind="figma_board", role="design",
+            reference="https://www.figma.com/design/abc/Test?node-id=1-1",
+        )],
+    ))
+    raw = io.BytesIO()
+    Image.new("RGB", (1062, 600), "white").save(raw, "PNG")
+    artifact = service.store.write_artifact(
+        session.session_id, raw.getvalue(), "image/png",
+    )
+    for index in range(3):
+        session.evidence.append(Evidence(
+            source_id=session.sources[0].source_id,
+            kind="design", source_version="v1", context_version=1,
+            locator={
+                "node_id": f"1:{index + 2}",
+                "requested_node_id": "1:1",
+                "screenshot_width": 1062,
+                "screenshot_height": 600,
+            },
+            content="{}", artifact_id=artifact,
+        ))
+    asyncio.run(service._review_individual_screens(session, RealLikeModel()))
+    assert reviewer.calls == 3
+    assert reviewer.max_active == 2
 
 
 def test_screen_review_separates_business_values_from_interaction_evidence(tmp_path):
@@ -1089,8 +1302,1057 @@ def test_systemic_screen_issues_merge_repeated_patterns_and_cap_primary_findings
     assert len(merged) <= 8
     control = next(
         item for item in merged
-        if item["systemic_cluster"] == "selection-control-semantics"
+        if item["systemic_cluster"] == "control-semantics"
     )
     assert control["occurrence_count"] == 4
     assert len(control["affected_locations"]) == 4
     assert all(item["severity"] != "low" for item in merged)
+
+
+def test_plan_can_expand_one_rule_into_multiple_task_coverage_units(tmp_path):
+    from dataclasses import replace
+
+    class CoverageModel(FixtureModel):
+        async def complete(self, messages, **kwargs):
+            data = json.loads(messages[1]["content"][0]["text"])
+            result = await super().complete(messages, **kwargs)
+            if data["operation"] != "plan_checks":
+                return result
+            output = json.loads(result.text)
+            expanded = []
+            for item in output["items"]:
+                expanded.append(item)
+                if item["ref"] == "R17":
+                    expanded.append({
+                        **item,
+                        "coverage_id": "task01-page02",
+                        "coverage_title": "任务一 / 页面二的选择状态",
+                        "task_id": "TASK01",
+                        "object_refs": ["page-02/selection"],
+                        "reason": "第二个页面需要独立核对选择状态",
+                    })
+            output["items"] = expanded
+            return replace(result, text=json.dumps(output, ensure_ascii=False))
+
+    service, _ = create_service(tmp_path, model=CoverageModel())
+    result = asyncio.run(service.run(service.create(request()).session_id))
+    r17 = [
+        check for check in result.checks
+        if check.ref == "R17" and check.run_id == result.run_id
+    ]
+    assert len(r17) == 2
+    assert len({check.coverage_id for check in r17}) == 2
+    assert all(check.task_id == "TASK01" for check in r17)
+    assert all(check.execution_status == "executed" for check in r17)
+
+
+def test_judgment_gap_can_request_one_more_evidence_round(tmp_path):
+    from dataclasses import replace
+
+    class GapModel(FixtureModel):
+        def __init__(self):
+            super().__init__()
+            self.gap_requests = 0
+            self.action_requested = False
+
+        async def complete(self, messages, **kwargs):
+            data = json.loads(messages[1]["content"][0]["text"])
+            result = await super().complete(messages, **kwargs)
+            if data["operation"] == "plan_checks":
+                output = json.loads(result.text)
+                for item in output["items"]:
+                    if item["ref"] == "R17":
+                        item.update({
+                            "applicability": "needs_context",
+                            "evidence_needed": ["保存后的实际状态截图"],
+                            "required_evidence_kinds": ["observation"],
+                        })
+                return replace(result, text=json.dumps(output, ensure_ascii=False))
+            if data["operation"] == "plan" and data.get("mode") == "evidence_gap":
+                self.gap_requests += 1
+                if not self.action_requested:
+                    self.action_requested = True
+                    context = data["context"]
+                    source = next(
+                        item for item in context["sources"]
+                        if item["kind"] == "website"
+                    )
+                    evidence = next(
+                        item for item in reversed(context["evidence"])
+                        if item["source_id"] == source["source_id"]
+                    )
+                    output = {
+                        "task_summary": context["purpose"],
+                        "action": {
+                            "source_id": source["source_id"],
+                            "kind": "click",
+                            "selector": "#save",
+                            "expected_state_id": evidence["state_id"],
+                            "reason": "核实保存后的实际状态",
+                            "requires_explicit_authorization": False,
+                        },
+                    }
+                    return replace(
+                        result, text=json.dumps(output, ensure_ascii=False),
+                    )
+            return result
+
+    model = GapModel()
+    service, _ = create_service(tmp_path, model=model)
+    result = asyncio.run(service.run(service.create(
+        request(website=True, allow_interaction=True),
+    ).session_id))
+    assert model.gap_requests >= 1
+    assert any(action.status == "executed" for action in result.actions)
+
+
+def test_recheck_rejects_unrelated_statement_as_resolution_evidence(tmp_path):
+    from engine.model import ModelCallResult
+
+    service, _ = create_service(tmp_path, model=FixtureModel(issue=True))
+    first = asyncio.run(service.run(service.create(request()).session_id))
+    finding = first.findings[0]
+    changed, _ = service.apply_event(first.session_id, EventInput(
+        event_id="scope-change", expected_context_version=1,
+        type="change_scope", payload={"scope": "only the current flow"},
+    ))
+    unrelated = Evidence(
+        source_id=changed.sources[-1].source_id,
+        kind="statement", source_version="context-2",
+        context_version=changed.context_version,
+        locator={}, content="Only the current flow is in scope.",
+    )
+    changed.evidence.append(unrelated)
+    changed.rechecks = [Recheck(previous_finding_id=finding.finding_id)]
+
+    class ResolveWithStatement:
+        async def complete(self, messages, **kwargs):
+            return ModelCallResult(
+                text=json.dumps({"items": [{
+                    "previous_finding_id": finding.finding_id,
+                    "resolution": "resolved",
+                    "reason": "Only a new scope statement was supplied.",
+                    "evidence_ids": [unrelated.evidence_id],
+                }]}),
+                provider="test-fixture", model="recheck-fixture",
+                usage={}, request_id=None, latency_ms=1, json_mode_used=True,
+            )
+
+    asyncio.run(service._recheck(changed, ResolveWithStatement()))
+    assert changed.rechecks[0].resolution == "cannot_determine"
+
+
+def test_findings_on_distinct_objects_are_not_merged_by_similar_copy(tmp_path):
+    service, _ = create_service(tmp_path)
+    session = service.create(request())
+    common = {
+        "kind": "issue",
+        "title": "Selection lacks a visible state",
+        "check_ids": ["check-R17"],
+        "principle": "State visibility",
+        "detection": "Selection is not highlighted",
+        "description": "User cannot distinguish selected items",
+        "suggestion": "Highlight the selected item",
+        "severity_reason": "Local task ambiguity",
+        "mechanism": "selection",
+        "change_action": "highlight",
+        "run_id": session.run_id,
+    }
+    service._merge_finding(session, Finding(
+        **common, evidence_ids=["e1"], object_ref="page-A/button-1",
+        location={"page": "A"},
+    ))
+    service._merge_finding(session, Finding(
+        **common, evidence_ids=["e2"], object_ref="page-B/button-2",
+        location={"page": "B"},
+    ))
+    assert len(session.findings) == 2
+
+
+def test_capture_builds_canonical_control_objects(tmp_path):
+    service, _ = create_service(tmp_path)
+    session = service.create(request(website=True))
+    service._capture(session, session.sources[0], Capture(
+        content="Save form",
+        locator={"url": "https://example.test/form", "title": "Form"},
+        state_id="state-form",
+        controls=[{
+            "selector": "#save",
+            "label": "Save",
+            "tag": "button",
+            "x": 20, "y": 40, "width": 100, "height": 32,
+        }],
+    ))
+    control = next(
+        item for item in session.evidence[0].objects
+        if item.kind == "control"
+    )
+    assert control.object_id.startswith("obj-")
+    assert control.label == "Save"
+    assert control.locator["selector"] == "#save"
+    service._capture(session, session.sources[0], Capture(
+        content="Save form changed",
+        locator={"url": "https://example.test/form", "title": "Form"},
+        state_id="state-form-after",
+        controls=[{
+            "selector": "#save",
+            "label": "Save",
+            "tag": "button",
+            "x": 20, "y": 40, "width": 100, "height": 32,
+        }],
+    ))
+    second_control = next(
+        item for item in session.evidence[1].objects
+        if item.kind == "control"
+    )
+    assert second_control.object_id == control.object_id
+
+
+def test_model_image_selection_never_exceeds_requested_limit(tmp_path):
+    import io
+    from PIL import Image
+    from engine.session_contracts import AgentStep
+
+    service, model = create_service(tmp_path)
+    session = service.create(SessionCreate(
+        purpose="Review",
+        limits={"max_images_per_call": 1},
+        sources=[SourceInput(
+            kind="figma_board", reference="https://www.figma.com/design/abc/Test?node-id=1-1",
+        )],
+    ))
+    raw = io.BytesIO()
+    Image.new("RGB", (300, 300), "white").save(raw, "PNG")
+    artifact = service.store.write_artifact(session.session_id, raw.getvalue(), "image/png")
+    for node in ("1:1", "1:2", "1:3"):
+        session.evidence.append(Evidence(
+            source_id=session.sources[0].source_id, kind="design",
+            source_version="v1", context_version=1,
+            locator={"node_id": node, "requested_node_id": "1:1"},
+            content="Screenshot", artifact_id=artifact,
+        ))
+    asyncio.run(service._call(session, model, AgentStep, "plan", {}))
+    sent = session.model_calls[-1]["input"]["image_evidence_ids"]
+    assert len(sent) == 1
+
+
+def test_model_context_uses_task_aware_evidence_retrieval(tmp_path):
+    service, _ = create_service(tmp_path)
+    session = service.create(request())
+    source_id = session.sources[0].source_id
+    session.evidence = [
+        Evidence(
+            source_id=source_id, kind="statement", source_version="v1",
+            context_version=1, locator={"chunk_index": index},
+            content=(
+                "退款需要二次确认并显示成功反馈"
+                if index == 11 else f"普通说明 {index}"
+            ),
+        )
+        for index in range(12)
+    ]
+    context = service._model_context(session, query="退款二次确认")
+    selected_ids = {item["evidence_id"] for item in context["evidence"]}
+    assert session.evidence[11].evidence_id in selected_ids
+    assert context["retrieval"]["strategy"] == "task_aware_lexical"
+    assert context["retrieval"]["omitted_evidence_count"] > 0
+
+
+def test_screen_review_rejects_unknown_or_contradicted_rule_support(tmp_path):
+    import io
+    from types import SimpleNamespace
+    from PIL import Image
+    from engine.contracts import ReviewContext
+    from engine.model import ModelCallResult
+    from engine.session_screen_review import QwenScreenTechnicalReviewer
+
+    class Client:
+        def __init__(self, payload):
+            self.payload = payload
+
+        async def complete(self, *args, **kwargs):
+            return ModelCallResult(
+                text=json.dumps(self.payload), provider="fixture",
+                model="fixture", usage={}, request_id=None,
+                latency_ms=1, json_mode_used=True,
+            )
+
+    service, _ = create_service(tmp_path)
+    bbox = {"x": 0.1, "y": 0.1, "width": 0.2, "height": 0.1}
+    finding = {
+        "rule_ids": ["R17", "R99"],
+        "title": "Selection lacks a visible state",
+        "severity": "medium",
+        "confidence": 0.8,
+        "detection": "Selection is not highlighted",
+        "description": "User cannot distinguish selected items",
+        "suggestion": "Highlight the selected item",
+        "evidence": {**bbox, "description": "Selection area"},
+    }
+    reviewer = QwenScreenTechnicalReviewer.__new__(QwenScreenTechnicalReviewer)
+    reviewer.criteria = service.registry.criteria
+    reviewer.engine = SimpleNamespace(
+        ocr=Client({"blocks": []}),
+        gui=Client({
+            "page_type": "settings",
+            "elements": [{"id": "E1", "label": "Choice", "bbox": bbox}],
+        }),
+        reasoning=Client({
+            "rule_statuses": [{
+                "rule_id": "R17", "decision": "no_visible_issue",
+                "reason": "No issue observed",
+            }],
+            "findings": [finding],
+        }),
+    )
+    raw = io.BytesIO()
+    Image.new("RGB", (400, 400), "white").save(raw, "PNG")
+    evidence = Evidence(
+        source_id="source-1", kind="design", source_version="v1",
+        context_version=1, locator={}, content="Screenshot",
+    )
+    output = asyncio.run(reviewer.review(
+        evidence=evidence, image_bytes=raw.getvalue(),
+        context=ReviewContext(), max_calls=3,
+    ))
+    assert not output.review.issues
+    assert any(
+        "没有已知且判为 candidate_issue" in warning
+        for warning in output.review.warnings
+    )
+
+
+def test_verified_screen_issue_becomes_a_first_class_finding(tmp_path):
+    service, _ = create_service(tmp_path)
+    session = service.create(request(website=True))
+    service._capture(session, session.sources[0], Capture(
+        content="Numeric input",
+        locator={
+            "url": "https://example.test/input", "title": "Input",
+            "image_geometry": {
+                "width": 400, "height": 300,
+                "region": {"x": 0, "y": 0, "width": 400, "height": 300},
+            },
+        },
+        state_id="state-input",
+        controls=[
+            {
+                "selector": "#cancel", "label": "取消",
+                "tag": "button", "x": 20, "y": 30, "width": 100, "height": 36,
+            },
+            {
+                "selector": "#amount", "label": "数量输入",
+                "tag": "input", "x": 20, "y": 180, "width": 200, "height": 36,
+            },
+        ],
+    ))
+    evidence = session.evidence[0]
+    control = next(
+        item for item in evidence.objects
+        if item.kind == "control" and item.locator.get("selector") == "#amount"
+    )
+    original_check = next(item for item in session.checks if item.ref == "R14")
+    original_check.task_id = "TASK01"
+    original_check.object_ids = []
+    precise_check = original_check.model_copy(update={
+        "check_id": "check-R14-state",
+        "task_id": "TASK02",
+        "object_ids": [control.object_id],
+    })
+    session.checks.append(precise_check)
+    session.review_tasks = [
+        ReviewTask(
+            task_id="TASK01", text="Task one",
+            evidence_ids=[evidence.evidence_id],
+            source_ids=[evidence.source_id],
+        ),
+        ReviewTask(
+            task_id="TASK02", text="Task two",
+            evidence_ids=[evidence.evidence_id],
+            source_ids=[evidence.source_id],
+        ),
+    ]
+    review = ScreenTechnicalReview(
+        run_id=session.run_id,
+        evidence_id=evidence.evidence_id,
+        source_id=evidence.source_id,
+        status="completed",
+        issues=[ScreenTechnicalIssue(
+            rule_ids=["R14"],
+            title="九位数量值会截断",
+            severity="medium",
+            confidence=0.8,
+            detection="数量输入框宽度不足以显示九位数值",
+            description="用户无法核对完整数量",
+            suggestion="扩展输入框并验证长数值显示",
+            evidence_bbox={
+                "x": 0.05, "y": 0.6, "width": 0.5, "height": 0.12,
+                "description": "numeric input",
+            },
+        )],
+    )
+    service._ingest_screen_issues(session, evidence, review)
+    assert len(session.findings) == 1
+    finding = session.findings[0]
+    assert finding.screen_review_id == review.review_id
+    assert finding.object_id
+    assert finding.object_ref == "数量输入"
+    assert finding.claims[0].verification_status == "supported"
+    check = next(
+        item for item in session.checks
+        if item.check_id == "check-R14-state"
+    )
+    assert check.decision == "candidate_issue"
+    assert evidence.evidence_id in check.evidence_ids
+
+
+def test_deterministic_assertions_require_action_and_metric_evidence(tmp_path):
+    from engine.session_verification import verify_finding_support
+
+    service, _ = create_service(tmp_path)
+    session = service.create(request())
+    evidence = Evidence(
+        source_id=session.sources[0].source_id,
+        kind="observation",
+        source_version="v1",
+        context_version=1,
+        locator={
+            "url": "https://example.test/form",
+            "controls": [{"selector": "#save", "label": "Save"}],
+        },
+        content="Save button",
+        state_id="state-1",
+    )
+    session.evidence = [evidence]
+    dynamic = Finding(
+        kind="issue",
+        title="点击后无响应",
+        check_ids=["check-E01"],
+        evidence_ids=[evidence.evidence_id],
+        principle="系统状态应有反馈",
+        detection="点击保存后没有任何变化",
+        description="用户无法判断操作是否生效",
+        suggestion="显示保存结果",
+        severity_reason="任务无法完成",
+        object_ref="save-button",
+        run_id=session.run_id,
+    )
+    supported, reason = verify_finding_support(
+        session, dynamic, {evidence.evidence_id: evidence},
+    )
+    assert not supported and "动作记录" in reason
+
+    evidence.action_id = "action-1"
+    session.actions = [Action(
+        action_id="action-1",
+        source_id=evidence.source_id,
+        kind="click",
+        selector="#save",
+        expected_state_id="state-1",
+        reason="点击保存",
+        target_label="Save",
+        status="executed",
+        outcome="no_observed_change",
+    )]
+    session.transitions = [Transition(
+        source_id=evidence.source_id,
+        from_state="state-1",
+        to_state="state-2",
+        action_id="action-1",
+        evidence_ids=[evidence.evidence_id],
+    )]
+    assert verify_finding_support(
+        session, dynamic, {evidence.evidence_id: evidence},
+    )[0]
+    session.actions[0].outcome = "state_changed"
+    supported, reason = verify_finding_support(
+        session, dynamic, {evidence.evidence_id: evidence},
+    )
+    assert not supported and "发生了变化" in reason
+    session.actions[0].outcome = "no_observed_change"
+    fresh = Evidence(
+        source_id=evidence.source_id, kind="observation",
+        source_version="v2", context_version=1,
+        locator={"url": "https://example.test/form"}, content="New form",
+        state_id="state-2",
+    )
+    session.evidence.append(fresh)
+    assert not service._recheck_evidence_matches(
+        session, dynamic, [fresh.evidence_id], {fresh.evidence_id: fresh},
+    )
+    fresh.action_id = "action-1"
+    assert service._recheck_evidence_matches(
+        session, dynamic, [fresh.evidence_id], {fresh.evidence_id: fresh},
+    )
+
+    visual = dynamic.model_copy(update={
+        "title": "保存按钮文字对比度不足",
+        "detection": "按钮文字对比度过低",
+        "description": "用户难以辨认按钮文字",
+    })
+    supported, reason = verify_finding_support(
+        session, visual, {evidence.evidence_id: evidence},
+    )
+    assert not supported and "可读性指标" in reason
+    evidence.analysis = {"readability": {"local_contrast_p10": 0.12}}
+    assert verify_finding_support(
+        session, visual, {evidence.evidence_id: evidence},
+    )[0]
+
+
+def test_structured_claims_are_verified_against_canonical_objects(tmp_path):
+    from engine.session_verification import verify_finding_claims
+
+    service, _ = create_service(tmp_path)
+    session = service.create(request(website=True))
+    evidence = Evidence(
+        source_id=session.sources[0].source_id,
+        kind="observation", source_version="v1", context_version=1,
+        locator={}, content="Success state", state_id="state-after",
+        action_id="action-1",
+        objects=[EvidenceObject(
+            object_id="obj-save-result",
+            kind="text",
+            source_id=session.sources[0].source_id,
+            state_id="state-after",
+            label="Saved successfully",
+        )],
+    )
+    session.evidence = [evidence]
+    session.actions = [Action(
+        action_id="action-1", source_id=evidence.source_id,
+        kind="click", selector="#save", expected_state_id="state-before",
+        reason="保存", target_label="Save", status="executed",
+        outcome="state_changed",
+    )]
+    claim = FindingClaim(
+        claim_type="state_change",
+        object_id="obj-save-result",
+        expected="显示保存成功",
+        observed="进入保存成功状态",
+        evidence_ids=[evidence.evidence_id],
+    )
+    finding = Finding(
+        kind="issue", title="保存反馈", check_ids=["check-E03"],
+        evidence_ids=[evidence.evidence_id], principle="系统状态可见",
+        detection="保存后出现成功状态", description="用户获得反馈",
+        suggestion="保持反馈", severity_reason="反馈可观察",
+        object_id="obj-save-result", claims=[claim],
+        run_id=session.run_id,
+    )
+    supported, reason = verify_finding_claims(
+        session, finding, {evidence.evidence_id: evidence},
+    )
+    assert supported, reason
+    assert claim.verification_status == "supported"
+
+    session.actions[0].outcome = "no_observed_change"
+    claim.verification_status = "unverified"
+    supported, reason = verify_finding_claims(
+        session, finding, {evidence.evidence_id: evidence},
+    )
+    assert not supported and "state_changed" in reason
+    assert claim.verification_status == "rejected"
+    fresh = Evidence(
+        source_id=evidence.source_id, kind="observation",
+        source_version="v2", context_version=1,
+        locator={}, content="Different result", state_id="state-after-v2",
+        action_id="action-1",
+        objects=[EvidenceObject(
+            object_id="obj-other-result",
+            kind="text",
+            source_id=evidence.source_id,
+            state_id="state-after-v2",
+            label="Another result",
+        )],
+    )
+    session.evidence.append(fresh)
+    assert not service._recheck_evidence_matches(
+        session, finding, [fresh.evidence_id], {fresh.evidence_id: fresh},
+    )
+    fresh.objects[0].object_id = "obj-save-result"
+    assert service._recheck_evidence_matches(
+        session, finding, [fresh.evidence_id], {fresh.evidence_id: fresh},
+    )
+
+
+def test_new_sessions_reject_findings_without_structured_claims(tmp_path):
+    from dataclasses import replace
+
+    class NoClaims(FixtureModel):
+        async def complete(self, messages, **kwargs):
+            data = json.loads(messages[1]["content"][0]["text"])
+            result = await super().complete(messages, **kwargs)
+            if data["operation"] != "judge":
+                return result
+            output = json.loads(result.text)
+            for finding in output.get("findings", []):
+                finding.pop("claims", None)
+            return replace(result, text=json.dumps(output, ensure_ascii=False))
+
+    service, _ = create_service(tmp_path, model=NoClaims(issue=True))
+    result = asyncio.run(service.run(service.create(request()).session_id))
+    assert not result.findings
+    assert any("结构化 claim" in warning for warning in result.warnings)
+
+
+def test_session_evaluation_reports_finding_and_coverage_metrics(tmp_path):
+    from engine.session_evaluation import (
+        BatchEvaluationInput,
+        EvaluationLabels,
+        evaluate_batch,
+        evaluate_session,
+    )
+
+    service, _ = create_service(tmp_path, model=FixtureModel(issue=True))
+    session = asyncio.run(service.run(service.create(request()).session_id))
+    finding = session.findings[0]
+    labels = EvaluationLabels(
+        dataset="fixture-labels",
+        findings=[{
+            "label_id": "expected-selection-state",
+            "object_id": finding.object_id,
+            "claim_types": ["object_present"],
+            "title_contains": ["夹具选择状态"],
+        }],
+    )
+    metrics = evaluate_session(session, labels)
+    assert metrics["finding_metrics"]["matched"] == 1
+    assert metrics["finding_metrics"]["precision"] == 1.0
+    assert metrics["finding_metrics"]["recall"] == 1.0
+    assert metrics["claim_metrics"]["total"] >= 1
+    batch = BatchEvaluationInput(
+        dataset="fixture-batch",
+        cases=[{
+            "session_id": session.session_id,
+            "labels": labels.model_dump(mode="json"),
+        }],
+    )
+    aggregate = evaluate_batch({session.session_id: session}, batch)
+    assert aggregate["aggregate"]["matched"] == 1
+    assert aggregate["aggregate"]["f1"] == 1.0
+
+
+def test_session_invariants_classify_broken_evidence_links(tmp_path):
+    from engine.session_invariants import validate_session_invariants
+
+    service, _ = create_service(tmp_path)
+    session = service.create(request())
+    session.transitions = [Transition(
+        source_id=session.sources[0].source_id,
+        from_state="missing-a", to_state="missing-b",
+        action_id="missing-action", evidence_ids=["missing-evidence"],
+    )]
+    violations = validate_session_invariants(session)
+    codes = {item["code"] for item in violations}
+    assert "transition_action_missing" in codes
+    assert "transition_evidence_missing" in codes
+
+
+def test_multi_state_task_is_partial_when_a_state_has_no_check_evidence(tmp_path):
+    from engine.session_verification import missing_task_state_coverage
+
+    service, _ = create_service(tmp_path)
+    session = service.create(request())
+    first = Evidence(
+        source_id=session.sources[0].source_id,
+        kind="observation", source_version="v1", context_version=1,
+        locator={}, content="first state", state_id="state-1",
+    )
+    session.evidence = [first]
+    session.review_tasks = [ReviewTask(
+        task_id="TASK01", text="Complete the flow",
+        evidence_ids=[first.evidence_id], state_ids=["state-1", "state-2"],
+    )]
+    check = session.checks[0]
+    check.task_id = "TASK01"
+    check.evidence_ids = [first.evidence_id]
+    check.execution_status = "executed"
+    missing = missing_task_state_coverage(session)
+    assert missing == [("TASK01", "state-2")]
+    assert service._completeness(session) == "partial"
+    second = Evidence(
+        source_id=session.sources[0].source_id,
+        kind="observation", source_version="v1", context_version=1,
+        locator={}, content="second state", state_id="state-2",
+    )
+    session.evidence.append(second)
+    session.screen_reviews.append(ScreenTechnicalReview(
+        run_id=session.run_id, evidence_id=second.evidence_id,
+        source_id=second.source_id, status="completed",
+    ))
+    assert missing_task_state_coverage(session) == []
+
+
+def test_state_graph_exposes_observed_paths_and_check_coverage(tmp_path):
+    from engine.session_flow import build_state_graph
+
+    service, _ = create_service(tmp_path)
+    session = service.create(request(website=True))
+    source_id = session.sources[0].source_id
+    session.sources[0].acquisition_status = "success"
+    first = Evidence(
+        source_id=source_id, kind="observation", source_version="v1",
+        context_version=1, locator={"url": "https://example.test/a"},
+        content="A", state_id="state-a",
+    )
+    second = Evidence(
+        source_id=source_id, kind="observation", source_version="v1",
+        context_version=1, locator={"url": "https://example.test/b"},
+        content="B", state_id="state-b", action_id="action-1",
+    )
+    session.evidence = [first, second]
+    session.page_states = [
+        PageState(
+            page_id="page-a", state_id="state-a", source_id=source_id,
+            context_version=1, locator=first.locator,
+            evidence_ids=[first.evidence_id], mode="observation",
+        ),
+        PageState(
+            page_id="page-b", state_id="state-b", source_id=source_id,
+            context_version=1, locator=second.locator,
+            evidence_ids=[second.evidence_id], mode="observation",
+        ),
+    ]
+    session.actions = [Action(
+        action_id="action-1", source_id=source_id, kind="click",
+        selector="#next", expected_state_id="state-a", reason="Next",
+        target_label="Next", status="executed", outcome="state_changed",
+    )]
+    session.transitions = [Transition(
+        source_id=source_id, from_state="state-a", to_state="state-b",
+        action_id="action-1", evidence_ids=[first.evidence_id, second.evidence_id],
+    )]
+    session.checks[0].evidence_ids = [first.evidence_id]
+    session.checks[0].execution_status = "executed"
+    graph = build_state_graph(session)
+    assert graph["summary"]["state_count"] == 2
+    assert graph["summary"]["transition_count"] == 1
+    assert graph["summary"]["covered_state_count"] == 1
+    assert graph["edges"][0]["target_label"] == "Next"
+
+
+def test_auto_gap_action_selects_an_observed_control_without_model(tmp_path):
+    from engine.session_exploration import auto_gap_action
+
+    service, _ = create_service(tmp_path)
+    session = service.create(request(website=True))
+    evidence = Evidence(
+        source_id=session.sources[0].source_id,
+        kind="observation", source_version="v1", context_version=1,
+        locator={
+            "url": "https://example.test/form",
+            "controls": [{
+                "selector": "#save", "label": "保存",
+                "tag": "button", "disabled": False,
+            }],
+        },
+        content="Save form", state_id="state-form",
+    )
+    session.evidence = [evidence]
+    action = auto_gap_action(session, [{
+        "coverage_title": "保存后显示成功反馈",
+        "reason": "保存分支尚未观察",
+        "evidence_needed": ["执行保存并观察结果"],
+    }])
+    assert action is not None
+    assert action.selector == "#save"
+    assert action.expected_state_id == "state-form"
+
+
+def test_required_coverage_matrix_tracks_each_task_state(tmp_path):
+    from engine.session_coverage import (
+        build_required_coverage, missing_required_coverage,
+    )
+
+    service, _ = create_service(tmp_path)
+    session = service.create(request(website=True))
+    source_id = session.sources[0].source_id
+    session.sources[0].acquisition_status = "success"
+    first = Evidence(
+        source_id=source_id, kind="observation", source_version="v1",
+        context_version=1, locator={}, content="A", state_id="state-a",
+    )
+    second = Evidence(
+        source_id=source_id, kind="observation", source_version="v1",
+        context_version=1, locator={}, content="B", state_id="state-b",
+    )
+    session.evidence = [first, second]
+    session.page_states = [
+        PageState(
+            page_id="page-a", state_id="state-a", source_id=source_id,
+            context_version=1, locator={}, evidence_ids=[first.evidence_id],
+            mode="observation",
+        ),
+        PageState(
+            page_id="page-b", state_id="state-b", source_id=source_id,
+            context_version=1, locator={}, evidence_ids=[second.evidence_id],
+            mode="observation",
+        ),
+    ]
+    session.review_tasks = [ReviewTask(
+        task_id="TASK01", text="Complete task",
+        evidence_ids=[first.evidence_id],
+        source_ids=[source_id], state_ids=["state-a", "state-b"],
+        branches=[ReviewBranch(
+            branch_id="BR01", trigger="保存",
+            expected_outcome="显示保存成功",
+            evidence_ids=[first.evidence_id],
+        )],
+    )]
+    session.checks[0].task_id = "TASK01"
+    session.checks[0].evidence_ids = [first.evidence_id]
+    session.checks[0].execution_status = "executed"
+    matrix = build_required_coverage(session)
+    assert len(matrix) == 3
+    assert sum(item["covered"] for item in matrix) == 1
+    missing = missing_required_coverage(session)
+    assert next(item for item in missing if item["coverage_kind"] == "branch")[
+        "gap_class"
+    ] == "unobserved_branch"
+    session.actions = [Action(
+        action_id="action-save", source_id=source_id, kind="click",
+        selector="#save", expected_state_id="state-a",
+        reason="保存", target_label="保存", status="executed",
+        outcome="state_changed",
+    )]
+    session.transitions = [Transition(
+        source_id=source_id, from_state="state-a", to_state="state-b",
+        action_id="action-save",
+        evidence_ids=[first.evidence_id, second.evidence_id],
+    )]
+    second.content = "显示保存成功"
+    assert next(
+        item for item in build_required_coverage(session)
+        if item["coverage_kind"] == "branch"
+    )["covered"]
+    assert missing_required_coverage(session)[0]["state_id"] == "state-b"
+    session.screen_reviews.append(ScreenTechnicalReview(
+        run_id=session.run_id, evidence_id=second.evidence_id,
+        source_id=source_id, status="completed",
+    ))
+    assert missing_required_coverage(session) == []
+
+
+def test_planned_evidence_does_not_count_as_reviewed_coverage(tmp_path):
+    from engine.session_coverage import build_required_coverage
+    from engine.session_flow import build_state_graph
+
+    service, _ = create_service(tmp_path)
+    session = service.create(request(website=True))
+    source_id = session.sources[0].source_id
+    session.sources[0].acquisition_status = "success"
+    evidence = Evidence(
+        source_id=source_id,
+        kind="observation",
+        source_version="v1",
+        context_version=1,
+        locator={},
+        content="Visible state",
+        state_id="state-a",
+    )
+    session.evidence = [evidence]
+    session.page_states = [PageState(
+        page_id="page-a",
+        state_id="state-a",
+        source_id=source_id,
+        context_version=1,
+        locator={},
+        evidence_ids=[evidence.evidence_id],
+        mode="observation",
+    )]
+    session.review_tasks = [ReviewTask(
+        task_id="TASK01",
+        text="Review the visible state",
+        evidence_ids=[evidence.evidence_id],
+        source_ids=[source_id],
+        state_ids=["state-a"],
+    )]
+    check = session.checks[0]
+    check.task_id = "TASK01"
+    check.plan_evidence_ids = [evidence.evidence_id]
+    check.execution_status = "planned"
+
+    assert build_required_coverage(session)[0]["covered"] is False
+    assert build_state_graph(session)["summary"]["covered_state_count"] == 0
+
+    check.execution_status = "executed"
+    check.evidence_ids = [evidence.evidence_id]
+    assert build_required_coverage(session)[0]["covered"] is True
+    assert build_state_graph(session)["summary"]["covered_state_count"] == 1
+
+
+def test_branch_coverage_requires_destination_outcome_not_only_trigger(tmp_path):
+    from engine.session_coverage import build_required_coverage
+
+    service, _ = create_service(tmp_path)
+    session = service.create(request(website=True))
+    source_id = session.sources[0].source_id
+    session.sources[0].acquisition_status = "success"
+    before = Evidence(
+        source_id=source_id,
+        kind="observation",
+        source_version="v1",
+        context_version=1,
+        locator={},
+        content="保存按钮",
+        state_id="state-before",
+    )
+    after = Evidence(
+        source_id=source_id,
+        kind="observation",
+        source_version="v1",
+        context_version=1,
+        locator={},
+        content="保存按钮仍在",
+        state_id="state-after",
+        action_id="action-save",
+    )
+    session.evidence = [before, after]
+    session.page_states = [
+        PageState(
+            page_id="page-before",
+            state_id="state-before",
+            source_id=source_id,
+            context_version=1,
+            locator={},
+            evidence_ids=[before.evidence_id],
+            mode="observation",
+        ),
+        PageState(
+            page_id="page-after",
+            state_id="state-after",
+            source_id=source_id,
+            context_version=1,
+            locator={},
+            evidence_ids=[after.evidence_id],
+            mode="observation",
+        ),
+    ]
+    session.review_tasks = [ReviewTask(
+        task_id="TASK01",
+        text="Save the form",
+        evidence_ids=[before.evidence_id],
+        source_ids=[source_id],
+        state_ids=["state-before", "state-after"],
+        branches=[ReviewBranch(
+            branch_id="BR01",
+            trigger="保存",
+            expected_outcome="显示保存成功",
+            evidence_ids=[before.evidence_id],
+        )],
+    )]
+    session.actions = [Action(
+        action_id="action-save",
+        source_id=source_id,
+        kind="click",
+        selector="#save",
+        expected_state_id="state-before",
+        reason="保存",
+        target_label="保存",
+        status="executed",
+        outcome="state_changed",
+    )]
+    session.transitions = [Transition(
+        source_id=source_id,
+        from_state="state-before",
+        to_state="state-after",
+        action_id="action-save",
+        evidence_ids=[before.evidence_id, after.evidence_id],
+    )]
+
+    branch = next(
+        item for item in build_required_coverage(session)
+        if item["coverage_kind"] == "branch"
+    )
+    assert branch["covered"] is False
+
+    after.content = "保存成功"
+    branch = next(
+        item for item in build_required_coverage(session)
+        if item["coverage_kind"] == "branch"
+    )
+    assert branch["covered"] is True
+    assert branch["matched_transition_id"] == session.transitions[0].transition_id
+
+
+def test_selector_target_mismatch_is_blocked_before_authorization(tmp_path):
+    service, model = create_service(tmp_path)
+    session = service.create(request(website=True))
+    service._capture(session, session.sources[0], Capture(
+        content="Cancel and save",
+        locator={"url": "https://example.test/form"},
+        state_id="state-form",
+        controls=[
+            {"selector": "#cancel", "label": "Cancel", "tag": "button"},
+            {"selector": "#save", "label": "Save", "tag": "button"},
+        ],
+    ))
+    action = Action(
+        source_id=session.sources[0].source_id,
+        kind="click",
+        selector="#save",
+        expected_state_id="state-form",
+        reason="Try cancel",
+        target_label="Cancel",
+    )
+
+    assert asyncio.run(service._ground_action(session, model, action)) is False
+    assert action.status == "blocked"
+    assert action.error.startswith("action_target_mismatch:")
+    assert action.observed_target == "Save"
+
+
+def test_structured_dynamic_claim_requires_action_without_keyword_in_wording(tmp_path):
+    from engine.session_verification import (
+        finding_requires_action_evidence,
+        verify_finding_support,
+    )
+
+    service, _ = create_service(tmp_path)
+    session = service.create(request())
+    evidence = Evidence(
+        source_id=session.sources[0].source_id,
+        kind="design",
+        source_version="v1",
+        context_version=1,
+        locator={},
+        content="Continue button and current step",
+        state_id="state-form",
+        objects=[EvidenceObject(
+            object_id="obj-continue",
+            kind="control",
+            source_id=session.sources[0].source_id,
+            state_id="state-form",
+            label="Continue",
+        )],
+    )
+    finding = Finding(
+        kind="issue",
+        title="下一步不可达",
+        check_ids=["check-E03"],
+        evidence_ids=[evidence.evidence_id],
+        principle="流程连续",
+        detection="页面仍停留在当前步骤",
+        description="用户无法进入下一阶段",
+        suggestion="恢复跳转",
+        severity_reason="流程受阻",
+        object_id="obj-continue",
+        object_ref="Continue",
+        claims=[FindingClaim(
+            claim_type="action_result",
+            object_id="obj-continue",
+            expected="进入下一步",
+            observed="停留在当前步骤",
+            evidence_ids=[evidence.evidence_id],
+        )],
+    )
+
+    assert finding_requires_action_evidence(finding) is True
+    supported, reason = verify_finding_support(
+        session,
+        finding,
+        {evidence.evidence_id: evidence},
+    )
+    assert supported is False
+    assert "动作记录" in reason

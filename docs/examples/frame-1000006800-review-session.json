@@ -1,0 +1,27 @@
+{
+  "purpose": "对 Frame 1000006800 车机三屏方案进行交互与视觉可用性测试：检查首页、应用列表、IoMT应用界面的信息层级、入口可达性、控件可识别性、状态表达、跨屏一致性和潜在误操作风险。没有策划要求时只依据通用交互原则，不推断未提供的业务目标，也不把静态画板当作已运行原型。",
+  "provider": "qwen",
+  "allow_interaction": false,
+  "auto_run": false,
+  "limits": {
+    "max_actions": 0,
+    "max_checks": 40,
+    "max_model_calls": 60,
+    "max_review_rounds": 3,
+    "max_seconds": 900,
+    "max_images_per_call": 12,
+    "max_material_chunks": 24,
+    "max_parallel_screens": 2
+  },
+  "sources": [
+    {
+      "kind": "figma_board",
+      "reference": "https://www.figma.com/design/dAWQ1dG8pOh5RBHa3CFZ7t/skill?node-id=173-2607",
+      "title": "Frame 1000006800",
+      "role": "design",
+      "evidence_kind": "design",
+      "declared_by": "user",
+      "version": "figma-node-173-2607-2026-11-03"
+    }
+  ]
+}

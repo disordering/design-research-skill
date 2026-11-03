@@ -93,6 +93,13 @@ class BusinessFixture(FixtureModel):
                 evidence = [ids["方案标注"], ids["策划案"]]
                 if check["ref"] == "REQ01":
                     decision = "observed_violation"
+                    design_evidence = next(
+                        item for item in context["evidence"]
+                        if item["source_id"] == by_title["方案标注"]
+                    )
+                    object_id = design_evidence.get("objects", [{}])[0].get(
+                        "object_id", "",
+                    )
                     findings.append({
                         "kind": "nonconformity", "title": "取消草稿处理与策划不一致（夹具）",
                         "check_ids": [check["check_id"]], "evidence_ids": evidence,
@@ -100,6 +107,15 @@ class BusinessFixture(FixtureModel):
                         "description": "不符合所提供的业务要求，尚未实际运行",
                         "suggestion": "先确认业务规则，再修改方案或要求",
                         "severity_reason": "夹具业务差异，非真实产品评测",
+                        "object_id": object_id,
+                        "object_ref": design_evidence["content"][:80],
+                        "claims": [{
+                            "claim_type": "requirement_match",
+                            "object_id": object_id,
+                            "expected": "取消不保存草稿",
+                            "observed": "方案标注取消后保留草稿",
+                            "evidence_ids": evidence,
+                        }],
                     })
                 judgments.append({"check_id": check["check_id"], "decision": decision,
                                   "reason": "合成材料契约判断，不是准确率成绩", "evidence_ids": evidence})
@@ -120,6 +136,10 @@ def test_material_goals_requirements_opinions_plan_and_report_share_one_session(
     assert result.understanding_context_version == result.context_version
     assert len(result.goals) == len(result.requirements) == 1
     assert result.requirements[0].source_quotes[0].quote == SPEC
+    assert any(
+        branch.basis == "inferred" and "取消" in branch.trigger
+        for task in result.review_tasks for branch in task.branches
+    )
     assert result.material_understanding.opinions[0].source_quotes[0].quote == OPINION
     assert not result.material_understanding.conflicts[0].blocking
     assert next(c for c in result.checks if c.ref == "E08").decision == "needs_clarification"
@@ -141,7 +161,11 @@ def test_context_extraction_rejects_fake_quotes_and_unapproved_expert_requiremen
         assert not result.goals and not result.requirements
         assert len(result.model_calls) == 2
     else:
-        assert result.report_completeness == "complete"
+        assert result.report_completeness == "partial"
+        assert any(
+            item.get("gap_class") == "unobserved_branch"
+            for item in result.required_coverage
+        )
         assert result.material_understanding is not None
         assert result.goals
         assert not result.requirements
@@ -351,6 +375,33 @@ def test_nonapplicability_requires_source_backed_conditions_with_actionable_feed
     assert "R21" in error.value.message and "needs_context" in error.value.message
     plan.items[0].applicability = "needs_context"
     validate_check_plan(session, plan, ["R21"], service._valid_evidence(session))
+
+
+def test_check_plan_rejects_cartesian_coverage_for_one_rule(tmp_path):
+    from engine.session_context import validate_check_plan
+    from engine.session_contracts import CheckPlanBatch, PlannedCheck
+
+    service, _ = create_service(tmp_path)
+    session = service.create(business_request())
+    asyncio.run(service._read_sources(session))
+    plan = CheckPlanBatch(items=[PlannedCheck(
+        ref="R07",
+        coverage_id=f"coverage-{index}",
+        applicability="applicable",
+        reason="Synthetic coverage unit",
+        source_ids=[session.sources[0].source_id],
+        evidence_ids=[session.evidence[0].evidence_id],
+    ) for index in range(5)])
+
+    with pytest.raises(EngineError) as error:
+        validate_check_plan(
+            session,
+            plan,
+            ["R07"],
+            service._valid_evidence(session),
+        )
+    assert error.value.code == "check_plan_coverage_too_broad"
+    assert "最多返回4个" in error.value.message
 
 
 def test_rejected_claim_scope_survives_model_renaming_or_omitting_resolved_conflict(tmp_path):

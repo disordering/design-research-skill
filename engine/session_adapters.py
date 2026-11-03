@@ -24,6 +24,11 @@ from .errors import EngineError
 from .config import load_reviewer_config
 from .imaging import prepare_image
 from .session_contracts import Action, SourceRecord, identifier
+from .session_targets import (
+    control_is_available,
+    observed_control,
+    target_label_matches,
+)
 
 
 @dataclass
@@ -117,6 +122,16 @@ class BrowserAdapter:
         await validate_browser_url(source.input.reference, allow_local=self.allow_local)
         await self._start()
         key = (session_id, source.source_id)
+        fingerprint = hashlib.sha256(
+            source.input.model_dump_json().encode("utf-8")
+        ).hexdigest()
+        prior = self._pages.get(key)
+        if prior and (
+            prior.get("source_fingerprint") != fingerprint
+            or source.acquisition_status == "pending"
+        ):
+            await prior["context"].close()
+            self._pages.pop(key, None)
         if key not in self._pages:
             context = await self._browser.new_context(
                 viewport={"width": 1440, "height": 900},
@@ -125,6 +140,7 @@ class BrowserAdapter:
             page = await context.new_page()
             state: dict[str, Any] = {
                 "context": context, "page": page, "source": source,
+                "source_fingerprint": fingerprint,
                 "state_id": "", "allow_side_effects": False, "blocked_requests": [],
             }
             host = urlparse(source.input.reference).hostname
@@ -215,6 +231,33 @@ class BrowserAdapter:
             "width": right - left, "height": bottom - top,
         }
 
+    @staticmethod
+    def _bounded_accessibility(node: Any, *, limit: int = 300) -> dict[str, Any] | None:
+        if not isinstance(node, dict):
+            return None
+        count = 0
+
+        def visit(value: dict[str, Any], depth: int) -> dict[str, Any]:
+            nonlocal count
+            count += 1
+            result = {
+                key: value.get(key)
+                for key in ("role", "name", "value", "disabled", "checked", "expanded", "pressed")
+                if value.get(key) is not None
+            }
+            children = value.get("children")
+            if depth < 6 and count < limit and isinstance(children, list):
+                result["children"] = [
+                    visit(child, depth + 1)
+                    for child in children[:60]
+                    if isinstance(child, dict) and count < limit
+                ]
+            elif isinstance(children, list) and children:
+                result["children_omitted"] = len(children)
+            return result
+
+        return visit(node, 0)
+
     async def capture(self, session_id: str, source: SourceRecord) -> Capture:
         state = self._pages.get((session_id, source.source_id))
         if not state:
@@ -223,6 +266,43 @@ class BrowserAdapter:
         try:
             text = (await page.locator("body").inner_text(timeout=10000))[:30000]
             controls = await page.evaluate("""() => {
+                const parseColor = value => {
+                    const m=String(value||'').match(/rgba?\\(([^)]+)\\)/);
+                    if(!m) return null;
+                    const p=m[1].split(',').map(v=>parseFloat(v.trim()));
+                    return {r:p[0]||0,g:p[1]||0,b:p[2]||0,a:p.length>3?p[3]:1};
+                };
+                const channel = value => {
+                    const v=value/255;
+                    return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4);
+                };
+                const luminance = color =>
+                    0.2126*channel(color.r)+0.7152*channel(color.g)+0.0722*channel(color.b);
+                const background = node => {
+                    let current=node;
+                    while(current){
+                        const color=parseColor(getComputedStyle(current).backgroundColor);
+                        if(color&&color.a>0.1) return color;
+                        current=current.parentElement;
+                    }
+                    return {r:255,g:255,b:255,a:1};
+                };
+                const contrast = (foreground,back) => {
+                    if(!foreground) return null;
+                    const a=luminance(foreground),b=luminance(back);
+                    return Math.round(((Math.max(a,b)+0.05)/(Math.min(a,b)+0.05))*100)/100;
+                };
+                const ancestorPath = node => {
+                    const parts=[];
+                    let current=node.parentElement;
+                    while(current&&parts.length<5){
+                        parts.push(current.tagName.toLowerCase()+
+                            (current.id?'#'+current.id:'')+
+                            (current.getAttribute('data-testid')?'[data-testid="'+current.getAttribute('data-testid')+'"]':''));
+                        current=current.parentElement;
+                    }
+                    return parts.join('>');
+                };
                 const nodes = [...document.querySelectorAll('a,button,input,textarea,select,[role="button"]')]
                     .filter(n => { const r=n.getBoundingClientRect(),s=getComputedStyle(n);
                         return n.type!=='hidden' && r.width>0 && r.height>0
@@ -230,12 +310,30 @@ class BrowserAdapter:
                 return nodes.slice(0,100).map((n,i) => {
                     n.setAttribute('data-review-control', String(i));
                     const r=n.getBoundingClientRect();
+                    const s=getComputedStyle(n);
+                    const foreground=parseColor(s.color), back=background(n);
                     return {selector:'[data-review-control="'+i+'"]',
                         label:(n.innerText||n.getAttribute('aria-label')||n.getAttribute('placeholder')||n.name||'').slice(0,200),
                         tag:n.tagName.toLowerCase(),type:n.type||'',disabled:!!n.disabled,
+                        role:n.getAttribute('role')||n.tagName.toLowerCase(),
+                        ariaLabel:n.getAttribute('aria-label')||'',
+                        domId:n.id||'',
+                        name:n.getAttribute('name')||'',
+                        testId:n.getAttribute('data-testid')||n.getAttribute('data-test-id')||'',
+                        ancestorPath:ancestorPath(n),
                         value:n.type==='password'?'':String(n.value||'').slice(0,500),
                         checked:!!n.checked,ariaSelected:n.getAttribute('aria-selected'),
                         ariaPressed:n.getAttribute('aria-pressed'),
+                        ariaExpanded:n.getAttribute('aria-expanded'),
+                        title:n.getAttribute('title')||'',
+                        fontSizePx:parseFloat(s.fontSize)||null,
+                        fontWeight:s.fontWeight,
+                        color:s.color,
+                        backgroundColor:s.backgroundColor,
+                        contrastRatio:contrast(foreground,back),
+                        opacity:parseFloat(s.opacity),
+                        textDecoration:s.textDecorationLine,
+                        visibility:s.visibility,
                         x:r.x,y:r.y,width:r.width,height:r.height};
                 });
             }""")
@@ -253,6 +351,30 @@ class BrowserAdapter:
             elif prototype:
                 controls = []
                 text = "原型画布尚未出现。Figma 外壳的登录/菜单/评论不属于被评审产品，不能据此判产品内容。"
+            accessibility = None
+            if not prototype:
+                try:
+                    accessibility = self._bounded_accessibility(
+                        await page.accessibility.snapshot(interesting_only=True),
+                    )
+                except Exception:
+                    accessibility = None
+                if accessibility is None:
+                    accessibility = {
+                        "role": "document",
+                        "name": await page.title(),
+                        "source": "dom_control_fallback",
+                        "children": [
+                            {
+                                "role": control.get("role") or control.get("tag"),
+                                "name": control.get("ariaLabel") or control.get("label"),
+                                "pressed": control.get("ariaPressed"),
+                                "expanded": control.get("ariaExpanded"),
+                                "checked": control.get("checked"),
+                            }
+                            for control in controls[:80]
+                        ],
+                    }
             image = await page.screenshot(
                 type="png", full_page=False, clip=region, timeout=15000,
                 animations="disabled", caret="hide",
@@ -278,6 +400,7 @@ class BrowserAdapter:
                     "viewport": viewport,
                     "image_geometry": {"width": pixels.width, "height": pixels.height, "region": region},
                     "prototype_canvas": canvas,
+                    "accessibility": accessibility,
                     "environment_session": session_id, "provided_version": source.input.version,
                     "render_state": "loading_or_sparse" if empty_render else "captured",
                     "blocked_requests": state["blocked_requests"][-10:],
@@ -304,11 +427,29 @@ class BrowserAdapter:
             if not state:
                 return True
             target = state["page"].locator(action.selector).first
-            label = ((await target.inner_text(timeout=5000)) or await target.get_attribute("aria-label") or "")
-            target_type = await target.get_attribute("type") or ""
-            if re.search(r"删除|清空|支付|购买|领取|发送|提交|发布|delete|purchase|pay|submit|send", label, re.I):
-                return True
-            if target_type.lower() == "submit":
+            try:
+                if await target.count() == 0:
+                    return True
+                label_parts = [
+                    await target.inner_text(timeout=5000),
+                    await target.get_attribute("aria-label"),
+                    await target.get_attribute("title"),
+                    await target.get_attribute("name"),
+                    await target.get_attribute("data-testid"),
+                    await target.get_attribute("value"),
+                ]
+                target_type = await target.get_attribute("type") or ""
+                label = " ".join(part for part in label_parts if part)
+                if re.search(
+                    r"删除|清空|支付|购买|领取|发送|提交|发布|"
+                    r"delete|purchase|pay|submit|send",
+                    label,
+                    re.I,
+                ):
+                    return True
+                if target_type.lower() == "submit":
+                    return True
+            except Exception:
                 return True
         if action.kind == "fill" and action.selector:
             state = self._pages.get((session_id, source.source_id))
@@ -322,6 +463,40 @@ class BrowserAdapter:
         current = await self.capture(session_id, source)
         if action.kind != "observe" and current.state_id != action.expected_state_id:
             raise EngineError("browser_state_changed", "外部页面状态已变，需重新观察和规划，未执行旧动作。", status_code=409)
+        if (
+            source.input.kind != "figma_prototype"
+            and action.kind in {"click", "fill"}
+            and action.selector
+        ):
+            control = observed_control(
+                current.controls,
+                action.selector,
+            )
+            if control is None:
+                raise EngineError(
+                    "action_target_not_observed",
+                    "selector 不在当前状态已观察控件中，未执行动作。",
+                    status_code=409,
+                )
+            if not control_is_available(control):
+                raise EngineError(
+                    "action_target_unavailable",
+                    "目标控件当前不可用或已隐藏，未执行动作。",
+                    status_code=409,
+                )
+            matches, actual_target = target_label_matches(
+                action.target_label,
+                control,
+            )
+            if not matches:
+                raise EngineError(
+                    "action_target_mismatch",
+                    f"模型目标 {action.target_label!r} 与 selector 实际目标 "
+                    f"{actual_target!r} 不一致，未执行动作。",
+                    status_code=409,
+                )
+            action.target_label = action.target_label or actual_target
+            action.observed_target = actual_target
         state = self._pages[(session_id, source.source_id)]
         page = state["page"]
         state["allow_side_effects"] = authorized
@@ -335,6 +510,29 @@ class BrowserAdapter:
                     rect = await target.bounding_box()
                     if not rect or not _inside(rect, canvas) or action.selector not in {c["selector"] for c in current.controls}:
                         raise EngineError("prototype_shell_action_blocked", "只允许已观察到的原型内控件，不操作 Figma 外壳。", status_code=403)
+                    control = observed_control(
+                        current.controls,
+                        action.selector,
+                    )
+                    if control is None or not control_is_available(control):
+                        raise EngineError(
+                            "action_target_unavailable",
+                            "目标原型控件当前不可用或已隐藏，未执行动作。",
+                            status_code=409,
+                        )
+                    matches, actual_target = target_label_matches(
+                        action.target_label,
+                        control,
+                    )
+                    if not matches:
+                        raise EngineError(
+                            "action_target_mismatch",
+                            f"模型目标 {action.target_label!r} 与 selector 实际目标 "
+                            f"{actual_target!r} 不一致，未执行动作。",
+                            status_code=409,
+                        )
+                    action.target_label = action.target_label or actual_target
+                    action.observed_target = actual_target
             if action.kind == "observe":
                 await page.wait_for_timeout(1500)
                 if authorized and state["blocked_requests"]:
@@ -549,10 +747,18 @@ class FigmaMCPAdapter:
                         )
                     )
                 ):
-                    screen_like = slide_like or bool(re.search(
+                    named_screen = bool(re.search(
                         r"(?:^|\s)image(?:\s|$)|截图|界面|流程|页面|screen|dialog|modal|图\s*\d|列表",
                         name, flags=re.IGNORECASE,
                     ))
+                    large_leaf_frame = (
+                        child.tag in {"frame", "section"}
+                        and not len(child)
+                        and depth <= 2
+                        and rect["width"] >= 1200
+                        and rect["height"] >= 500
+                    )
+                    screen_like = slide_like or named_screen or large_leaf_frame
                     visual.append({
                         "node_id": node_id, "name": name or child.tag, "type": child.tag,
                         "hidden": hidden, "container": bool(len(child)), "screen_like": screen_like,

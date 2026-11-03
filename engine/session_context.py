@@ -110,6 +110,47 @@ def sanitize_understanding(session, result, evidence) -> list[str]:
     """Drop recoverable invalid items while preserving the rest of the material model."""
     sources = {source.source_id: source for source in session.sources if source.active}
     warnings: list[str] = []
+    known_pages = {state.page_id for state in session.page_states}
+    known_states = {state.state_id for state in session.page_states}
+    kept_tasks = []
+    for task in result.review_tasks:
+        if not task.evidence_ids or not set(task.evidence_ids).issubset(evidence):
+            warnings.append(f"评审任务 {task.task_id} 缺少本次有效证据，已剔除覆盖规划。")
+            continue
+        dropped_pages = set(task.page_ids) - known_pages
+        dropped_states = set(task.state_ids) - known_states
+        if dropped_pages or dropped_states:
+            warnings.append(
+                f"评审任务 {task.task_id} 引用了尚未观察的页面/状态，"
+                "已从覆盖声明中移除，后续须通过实际证据补入。"
+            )
+        task.page_ids = [
+            page_id for page_id in task.page_ids if page_id in known_pages
+        ]
+        task.state_ids = [
+            state_id for state_id in task.state_ids if state_id in known_states
+        ]
+        kept_branches = []
+        seen_branches = set()
+        for branch in task.branches:
+            if (
+                branch.branch_id in seen_branches
+                or not branch.evidence_ids
+                or not set(branch.evidence_ids).issubset(evidence)
+            ):
+                warnings.append(
+                    f"评审任务 {task.task_id} 的分支 {branch.branch_id} 编号重复"
+                    "或缺少有效材料证据，已剔除。"
+                )
+                continue
+            seen_branches.add(branch.branch_id)
+            kept_branches.append(branch)
+        task.branches = kept_branches
+        task.source_ids = list(dict.fromkeys(
+            evidence[eid].source_id for eid in task.evidence_ids
+        ))
+        kept_tasks.append(task)
+    result.review_tasks = kept_tasks
     allowed_opinions = []
     for opinion in result.opinions:
         roles: set[str] = set()
@@ -177,6 +218,48 @@ def sanitize_understanding(session, result, evidence) -> list[str]:
 
 def validate_understanding(session, result, evidence):
     sources = {source.source_id: source for source in session.sources if source.active}
+    task_ids = [task.task_id for task in result.review_tasks]
+    if len(task_ids) != len(set(task_ids)):
+        raise EngineError("material_task_duplicate", "评审任务编号重复。", status_code=502)
+    for task in result.review_tasks:
+        if not task.evidence_ids or not set(task.evidence_ids).issubset(evidence):
+            raise EngineError(
+                "material_task_evidence_invalid",
+                "评审任务必须引用本次有效材料证据。",
+                status_code=502,
+            )
+        allowed_sources = {evidence[eid].source_id for eid in task.evidence_ids}
+        if task.source_ids and not set(task.source_ids).issubset(allowed_sources):
+            raise EngineError(
+                "material_task_source_invalid",
+                "评审任务来源必须来自其任务证据。",
+                status_code=502,
+            )
+        known_pages = {state.page_id for state in session.page_states}
+        known_states = {state.state_id for state in session.page_states}
+        if (
+            not set(task.page_ids).issubset(known_pages)
+            or not set(task.state_ids).issubset(known_states)
+        ):
+            raise EngineError(
+                "material_task_state_invalid",
+                "评审任务只能声明本次已经观察到的页面和状态；未观察部分应作为证据缺口。",
+                status_code=502,
+            )
+        branch_ids = [branch.branch_id for branch in task.branches]
+        if len(branch_ids) != len(set(branch_ids)):
+            raise EngineError(
+                "material_task_branch_duplicate",
+                "同一评审任务的分支编号必须唯一。",
+                status_code=502,
+            )
+        for branch in task.branches:
+            if not set(branch.evidence_ids).issubset(evidence):
+                raise EngineError(
+                    "material_task_branch_invalid",
+                    "评审任务分支必须引用本次有效材料证据。",
+                    status_code=502,
+                )
     for field in ("unknowns", "assumptions"):
         for text in getattr(result, field):
             normalized = " ".join(text.split())
@@ -248,15 +331,61 @@ def validate_understanding(session, result, evidence):
 
 
 def validate_check_plan(session, batch, requested_refs, evidence):
+    tasks = {task.task_id: task for task in session.review_tasks}
+    for index, item in enumerate(batch.items):
+        if not item.task_id and len(tasks) == 1:
+            item.task_id = next(iter(tasks))
+        if not item.coverage_id:
+            key = f"{item.ref}|{item.task_id}|{index}|{','.join(item.object_refs)}"
+            item.coverage_id = "coverage-" + hashlib.sha256(
+                key.encode()
+            ).hexdigest()[:16]
+        if not item.coverage_title:
+            task = tasks.get(item.task_id)
+            item.coverage_title = (
+                task.text if task else "；".join(item.object_refs) or item.ref
+            )
     refs = [item.ref for item in batch.items]
-    if len(refs) != len(set(refs)) or set(refs) != set(requested_refs):
+    if set(refs) != set(requested_refs):
         raise EngineError(
             "check_plan_incomplete",
-            f"检查计划必须覆盖本批每个编号一次。缺少：{sorted(set(requested_refs) - set(refs))}；"
-            f"多余：{sorted(set(refs) - set(requested_refs))}；重复：{sorted({ref for ref in refs if refs.count(ref) > 1})}。",
+            f"检查计划必须覆盖本批每个编号。缺少：{sorted(set(requested_refs) - set(refs))}；"
+            f"多余：{sorted(set(refs) - set(requested_refs))}。",
             status_code=502,
         )
+    coverage_keys = [(item.ref, item.coverage_id) for item in batch.items if item.coverage_id]
+    if len(coverage_keys) != len(set(coverage_keys)):
+        raise EngineError(
+            "check_plan_coverage_duplicate",
+            "同一判据下的 coverage_id 必须唯一；不同判据可共享同一任务/页面覆盖单元。",
+            status_code=502,
+        )
+    counts: dict[str, int] = {}
+    for item in batch.items:
+        counts[item.ref] = counts.get(item.ref, 0) + 1
+    too_broad = {
+        ref: count for ref, count in counts.items() if count > 4
+    }
+    if too_broad:
+        raise EngineError(
+            "check_plan_coverage_too_broad",
+            "同一判据最多返回4个代表覆盖单元，不能枚举所有任务与状态的笛卡尔积："
+            f"{too_broad}。请保留最相关的页面/任务，多个状态可在同一覆盖单元内说明。",
+            status_code=502,
+        )
+    for item in batch.items:
+        if item.task_id and item.task_id not in tasks:
+            raise EngineError(
+                "check_plan_task_invalid",
+                f"{item.ref} 引用了不存在的评审任务 {item.task_id}。",
+                status_code=502,
+            )
     source_ids = {source.source_id for source in session.sources if source.active}
+    object_ids = {
+        item.object_id
+        for evidence in evidence.values()
+        for item in evidence.objects
+    }
     constraint_ids = {claim.id for claim in [*session.goals, *session.requirements]}
     opinion_ids = {claim.id for claim in session.material_understanding.opinions} if session.material_understanding else set()
     context_ids = constraint_ids | opinion_ids
@@ -266,6 +395,7 @@ def validate_check_plan(session, batch, requested_refs, evidence):
             ("source_ids", item.source_ids, source_ids),
             ("evidence_ids", item.evidence_ids, set(evidence)),
             ("constraint_refs", item.constraint_refs, context_ids),
+            ("object_ids", item.object_ids, object_ids),
         ):
             unknown = set(actual) - allowed
             if unknown:

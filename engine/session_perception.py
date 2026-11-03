@@ -15,6 +15,7 @@ from .cv_metrics import compute_pipeline_metrics
 from .imaging import MIN_IMAGE_DIMENSION
 from .session_adapters import Capture, FigmaMCPAdapter
 from .session_contracts import SessionSnapshot, SourceRecord
+from .session_objects import attach_evidence_objects
 
 
 @dataclass
@@ -58,12 +59,17 @@ def _line_box(
 
 def _role_for_control(control: dict[str, Any]) -> tuple[str, float, bool]:
     label = str(control.get("name") or control.get("label") or "").lower()
-    tag = str(control.get("kind") or control.get("tag") or "").lower()
+    tag = str(
+        control.get("role") or control.get("kind") or control.get("tag") or ""
+    ).lower()
     if control.get("annotation") == "arrow":
         return "connector", 0.25, False
     if any(word in label for word in ("image", "截图", "界面", "screen")):
         return "panel", 0.7, False
-    if any(word in label for word in ("按钮", "button", "分解", "兑换", "确定", "取消")):
+    if any(word in label for word in (
+        "按钮", "button", "确定", "取消", "保存", "提交",
+        "继续", "返回", "confirm", "cancel", "save", "submit",
+    )):
         return "primary_button", 0.9, True
     if tag in {"a", "button"} or control.get("disabled") is False and tag in {"input", "select"}:
         return "button", 0.7, True
@@ -205,6 +211,8 @@ def _browser_perception(
             state=(
                 "checked" if control.get("checked")
                 else "selected" if control.get("ariaSelected") == "true"
+                else "expanded" if control.get("ariaExpanded") == "true"
+                else "pressed" if control.get("ariaPressed") == "true"
                 else "default"
             ),
             confidence=0.9,
@@ -302,6 +310,16 @@ def analyze_capture(
         item for item in metrics.get("focus", {}).get("elements", [])
         if item.get("role") != "connector"
     ][:5]
+    def accessibility_count(node: dict[str, Any] | None) -> int:
+        if not isinstance(node, dict):
+            return 0
+        return 1 + sum(
+            accessibility_count(child)
+            for child in node.get("children", [])
+            if isinstance(child, dict)
+        )
+
+    accessibility_nodes = accessibility_count(capture.locator.get("accessibility"))
     summary = {
         "metric_version": metrics.get("metric_version"),
         "geometry_available": include_geometry,
@@ -336,7 +354,9 @@ def analyze_capture(
             *(["figma_screen_image"] if capture.image else []),
             *(["figma_connector_geometry"] if arrows else []),
             *(["screenshot_pixels"] if capture.image else []),
+            *(["browser_accessibility_tree"] if accessibility_nodes else []),
         ],
+        "accessibility_node_count": accessibility_nodes,
         "measurement_scale_limited": bool(
             image.width < 700 and image.height / max(1, image.width) > 2
         ),
@@ -428,6 +448,7 @@ def attach_missing_perception(session: SessionSnapshot, store) -> int:
                         raw_content=raw_path.read_text(encoding="utf-8"),
                     )
                     geometry_rebuilt = True
+            attach_evidence_objects(evidence, source, capture)
             perception = analyze_capture(
                 source, capture, include_geometry=geometry_rebuilt,
             )

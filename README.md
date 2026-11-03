@@ -191,6 +191,9 @@ python -m engine serve --port 8000
 
 会话评审不是纯提示词：当前已接回确定性的视觉指标、Figma/DOM 结构、可读性、密度、风格和显著性代理，并保留原始分析 JSON 与叠加图。感知与语义分工见 [`docs/perception-and-semantic-chain.md`](docs/perception-and-semantic-chain.md)。
 
+当前引擎代码审查、技术路线反推和有效性边界见
+[`docs/interaction-review-engine-audit-2026-11-03.md`](docs/interaction-review-engine-audit-2026-11-03.md)。
+
 ```powershell
 python -m pip install -r requirements-session.txt
 python -m playwright install chromium

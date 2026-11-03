@@ -226,6 +226,20 @@ def test_figma_tool_schema_and_page_overview(monkeypatch, file_targeted, page_ov
     assert capture.locator["image_status"] == ("page_overview_use_inspect_node" if page_overview else "captured")
 
 
+def test_large_leaf_frame_is_treated_as_screen_without_screen_keyword():
+    metadata = (
+        '<frame id="1:1" name="Flow board" x="0" y="0" width="2600" height="2000">'
+        '<frame id="1:2" name="首页" x="100" y="100" width="1920" height="720"/>'
+        '<frame id="1:3" name="装饰面板" x="100" y="900" width="800" height="400"/>'
+        '</frame>'
+    )
+    _, _, visual = FigmaMCPAdapter._structure_index(metadata)
+    home = next(item for item in visual if item["node_id"] == "1:2")
+    decoration = next(item for item in visual if item["node_id"] == "1:3")
+    assert home["screen_like"] is True
+    assert decoration["screen_like"] is False
+
+
 def test_figma_inspection_keeps_observed_siblings_but_clears_scope_on_version_change(monkeypatch):
     from contextlib import asynccontextmanager
     from mcp.types import Tool, ListToolsResult, CallToolResult, TextContent
@@ -331,7 +345,9 @@ def test_real_browser_capture_action_and_stale_state_guard():
     <input type="hidden" name="csrf" value="fixture-hidden-token">
     <div id="state">Step one</div>
     <button type="button" id="next" onclick="document.getElementById('state').textContent='Step two'">Next</button>
-    <button type="button" id="delete">Delete item</button></body></html>"""
+        <button type="button" id="delete">Delete item</button>
+        <button type="button" id="icon-delete" title="Delete">x</button>
+        </body></html>"""
 
     class Handler(BaseHTTPRequestHandler):
         def do_GET(self):
@@ -357,16 +373,54 @@ def test_real_browser_capture_action_and_stale_state_guard():
             assert not any(c.get("value") == "fixture-hidden-token" for c in before.controls)
             pixels = Image.open(io.BytesIO(before.image)).convert("L")
             assert pixels.getextrema()[0] != pixels.getextrema()[1]
-            action = Action(source_id=source.source_id, kind="click", selector="#next",
-                            expected_state_id=before.state_id, reason="Next", requires_explicit_authorization=False)
+            next_control = next(
+                control for control in before.controls
+                if control.get("label") == "Next"
+            )
+            action = Action(
+                source_id=source.source_id, kind="click",
+                selector=next_control["selector"],
+                expected_state_id=before.state_id, reason="Next",
+                target_label="Next",
+                requires_explicit_authorization=False,
+            )
             assert not await adapter.action_needs_authorization("s", source, action)
             after = await adapter.act("s", source, action, authorized=False)
             assert "Step two" in after.content and after.state_id != before.state_id
             with pytest.raises(EngineError) as error:
                 await adapter.act("s", source, action, authorized=False)
             assert error.value.code == "browser_state_changed"
-            destructive = action.model_copy(update={"selector": "#delete", "expected_state_id": after.state_id})
+            delete_control = next(
+                control for control in after.controls
+                if control.get("label") == "Delete item"
+            )
+            destructive = action.model_copy(update={
+                "selector": delete_control["selector"],
+                "expected_state_id": after.state_id,
+                "target_label": "Delete item",
+            })
             assert await adapter.action_needs_authorization("s", source, destructive)
+            titled_delete = next(
+                control for control in after.controls
+                if control.get("title") == "Delete"
+            )
+            assert await adapter.action_needs_authorization(
+                "s",
+                source,
+                action.model_copy(update={
+                    "selector": titled_delete["selector"],
+                    "expected_state_id": after.state_id,
+                    "target_label": "x",
+                }),
+            )
+            with pytest.raises(EngineError) as mismatch:
+                await adapter.act(
+                    "s",
+                    source,
+                    destructive.model_copy(update={"target_label": "Next"}),
+                    authorized=True,
+                )
+            assert mismatch.value.code == "action_target_mismatch"
         finally:
             await adapter.close()
 

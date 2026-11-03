@@ -76,14 +76,11 @@ affordance, and inconsistent state are.
 """
 
 BUSINESS_ONLY_TERMS = (
-    "定价", "折损", "比例", "经济平衡", "数值表", "数值规则", "兑换比例",
-    "所需积分", "上限提示", "最大值", "合法输入范围", "有效范围",
-    "持有量上限", "最大可分解", "最大可输入", "可输入范围", "积分不足规则",
-    "价格", "npc内容", "获取途径内容", "商业正确", "经济性", "经济问题",
-    "无单位", "单位缺失", "货币单位", "换算关系", "规则在点击前",
-    "消耗什么", "得到什么", "获得什么", "可分解条件", "作用与规则",
-    "price", "pricing", "exchange rate", "economic balance", "npc content",
-    "acquisition source content",
+    "业务规则", "业务策略", "定价", "价格", "金额", "预算", "成本",
+    "经济平衡", "数值表", "计算规则", "内容准确性", "商业正确",
+    "营销文案", "产品策略", "规则是否合理", "数据是否正确",
+    "business rule", "pricing", "price", "budget", "cost",
+    "commercial correctness", "content accuracy",
 )
 PRESENTATION_TERMS = (
     "位数", "溢出", "截断", "遮挡", "对齐", "换行", "滚动", "宽度",
@@ -94,14 +91,17 @@ PRESENTATION_TERMS = (
     "digit", "clipping", "visual hierarchy",
 )
 SEMANTIC_CONTENT_PATTERNS = (
-    "无单位", "单位缺失", "单位不明", "有效范围提示", "范围提示",
-    "格式提示", "规则在点击前", "结果与规则", "消耗什么", "得到什么",
-    "获得什么", "积分换算", "换算关系", "价格关系", "作用与规则",
+    "规则是否合理", "内容是否准确", "数值是否正确", "业务规则缺失",
+    "价格是否合理", "文案是否符合策略", "数据含义",
+    "无单位", "单位缺失", "单位不明",
+    "消耗什么", "得到什么", "获得什么", "作用与规则",
+    "结果与规则", "规则在点击前",
+    "business rule", "content accuracy", "value correctness",
 )
 STRONG_PRESENTATION_PATTERNS = (
     "对比度", "亮度", "溢出", "截断", "遮挡", "字号", "高亮", "选中态",
-    "前导零", "九位", "七位", "同形", "重名", "并列", "复用",
-    "层级倒置", "接近不可见", "不可读", "数值框", "裁切",
+    "对齐", "换行", "同形", "重名", "并列", "复用",
+    "层级", "接近不可见", "不可读", "数值框", "裁切",
     "contrast", "overflow", "truncat", "clipping", "legib", "highlight",
     "selected", "leading zero", "digit", "same visual",
 )
@@ -583,7 +583,28 @@ class QwenScreenTechnicalReviewer:
         rule_results = []
         if audit_result is not None:
             rule_results = [status.model_dump(mode="json") for status in audit_result.rule_statuses]
+            statuses = {
+                status.rule_id.strip().upper(): status.decision.value
+                for status in audit_result.rule_statuses
+                if status.rule_id.strip().upper() in self.criteria.by_id
+            }
             for finding in audit_result.findings:
+                valid_rules = [
+                    rule_id.strip().upper()
+                    for rule_id in finding.rule_ids
+                    if (
+                        rule_id.strip().upper() in self.criteria.by_id
+                        and statuses.get(rule_id.strip().upper())
+                        == "candidate_issue"
+                    )
+                ]
+                valid_rules = list(dict.fromkeys(valid_rules))
+                if not valid_rules:
+                    warnings.append(
+                        f"屏内发现“{finding.title}”没有已知且判为 candidate_issue 的判据支撑，已退回补证。"
+                    )
+                    continue
+                finding = finding.model_copy(update={"rule_ids": valid_rules})
                 if _outside_screen_responsibility(finding):
                     warnings.append(
                         f"屏内审查移出职责范围：{finding.title}；业务数值/内容不判为交互缺陷。"

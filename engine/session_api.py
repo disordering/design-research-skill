@@ -10,6 +10,7 @@ from fastapi import APIRouter
 from fastapi.responses import FileResponse, PlainTextResponse
 
 from .config import load_reviewer_config
+from .errors import EngineError
 from .session_contracts import EventInput, SessionCreate, SessionSnapshot
 from .session_report import (
     audit_report, markdown_report, markdown_summary, structured_report,
@@ -19,6 +20,15 @@ from .session_service import SessionService
 from .session_store import SessionStore
 
 ROOT = Path(__file__).resolve().parent.parent
+
+
+def public_snapshot(snapshot: SessionSnapshot) -> SessionSnapshot:
+    """Keep API polling bounded; raw uploads remain available through artifacts/report packages."""
+    result = snapshot.model_copy(deep=True)
+    for source in result.sources:
+        source.input.image_base64 = ""
+        source.input.document_base64 = ""
+    return result
 
 
 def install_session_routes(
@@ -47,18 +57,21 @@ def install_session_routes(
         created = service().create(request)
         if request.auto_run:
             service().submit(created.session_id)
-        return created
+        return public_snapshot(created)
 
     @router.get("/{session_id}", response_model=SessionSnapshot)
     async def get_session(session_id: str):
-        return service().store.get(session_id)
+        return public_snapshot(service().store.get(session_id))
 
     @router.get("/{session_id}/updates")
     async def updates(session_id: str, after_sequence: int = 0):
         snapshot = service().store.get(session_id)
         return {
             "sequence": snapshot.sequence, "changed": snapshot.sequence > after_sequence,
-            "snapshot": snapshot.model_dump(mode="json") if snapshot.sequence > after_sequence else None,
+            "snapshot": (
+                public_snapshot(snapshot).model_dump(mode="json")
+                if snapshot.sequence > after_sequence else None
+            ),
         }
 
     @router.post("/{session_id}/events", response_model=SessionSnapshot, status_code=202)
@@ -66,11 +79,23 @@ def install_session_routes(
         snapshot, run = service().apply_event(session_id, event)
         if run:
             service().submit(session_id)
-        return snapshot
+        return public_snapshot(snapshot)
+
+    @router.post("/{session_id}/run", response_model=SessionSnapshot, status_code=202)
+    async def run_session(session_id: str):
+        snapshot = service().store.get(session_id)
+        if snapshot.status in {"cancelled", "completed"}:
+            raise EngineError(
+                "session_run_invalid",
+                "已完成或已取消的会话不能直接继续；请提交新事件开启复审。",
+                status_code=409,
+            )
+        service().submit(session_id)
+        return public_snapshot(snapshot)
 
     @router.get("/{session_id}/reports/{version}", response_model=SessionSnapshot)
     async def report(session_id: str, version: int):
-        return service().store.report(session_id, version)
+        return public_snapshot(service().store.report(session_id, version))
 
     @router.get("/{session_id}/export", response_class=PlainTextResponse)
     async def export(

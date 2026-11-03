@@ -39,6 +39,7 @@ def test_session_routes_and_exports_share_the_same_stored_snapshot(tmp_path):
         assert structured.status_code == 200
         assert len(structured.json()["process"]) == 10
         assert structured.json()["checks"][0]["evidence_chain"]
+        assert "state_graph" in structured.json()
         package = client.get(f"/api/review-sessions/{session_id}/package")
         assert package.status_code == 200
         with zipfile.ZipFile(io.BytesIO(package.content)) as archive:
@@ -46,6 +47,7 @@ def test_session_routes_and_exports_share_the_same_stored_snapshot(tmp_path):
             showcase = archive.read("report-showcase.md").decode("utf-8")
         assert {"report-showcase.md", "report-details.md", "report-summary.md", "report.json",
                 "process.json", "checks.json", "evidence.json", "findings.json",
+                "flow-graph.json", "coverage.json", "contract-violations.json",
                 "stages/T01.json", "stages/T10.json", "stages/index.json",
                 "method/05-判据库-v0.2.json",
                 "method/07-会话变更重查与复审规则.md"} <= names
@@ -87,6 +89,17 @@ def test_artifact_api_does_not_accept_foreign_session_or_filesystem_paths(tmp_pa
         assert client.get(f"/api/review-sessions/{b.session_id}/artifacts/{artifact}").status_code == 404
 
 
+def test_run_endpoint_schedules_an_existing_session(tmp_path, monkeypatch):
+    service, _ = create_service(tmp_path)
+    session = service.create(request())
+    submitted = []
+    monkeypatch.setattr(service, "submit", lambda session_id: submitted.append(session_id))
+    with TestClient(create_app(session_service_factory=lambda: service)) as client:
+        response = client.post(f"/api/review-sessions/{session.session_id}/run")
+    assert response.status_code == 202
+    assert submitted == [session.session_id]
+
+
 def test_uploaded_document_and_material_context_are_available_to_frontend(tmp_path):
     from engine.session_adapters import AdapterHub
     from engine.session_service import SessionService
@@ -102,6 +115,7 @@ def test_uploaded_document_and_material_context_are_available_to_frontend(tmp_pa
     with TestClient(create_app(session_service_factory=lambda: service)) as client:
         created = client.post("/api/review-sessions", json=data)
         assert created.status_code == 201, created.text
+        assert created.json()["sources"][0]["input"]["document_base64"] == ""
         sid = created.json()["session_id"]
         asyncio.run(service.run(sid))
         snapshot = client.get(f"/api/review-sessions/{sid}").json()

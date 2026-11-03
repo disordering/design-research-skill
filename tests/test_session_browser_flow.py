@@ -117,6 +117,69 @@ def test_prototype_navigation_is_limited_to_the_submitted_file(target, allowed):
     assert prototype_navigation_allowed("https://www.figma.com/proto/abc/Test?node-id=1-2", target) is allowed
 
 
+def test_updated_reference_reloads_browser_instead_of_reusing_old_page():
+    class Handler(BaseHTTPRequestHandler):
+        def do_GET(self):
+            version = "v2" if self.path.startswith("/v2") else "v1"
+            body = (
+                f"<html><body><h1>{version}</h1>"
+                "<button id='toggle' data-testid='save-toggle' role='button' aria-pressed='true' "
+                "style='font-size:18px;color:rgb(20,20,20);background:white'>Toggle</button>"
+                "</body></html>"
+            ).encode()
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html")
+            self.end_headers()
+            self.wfile.write(body)
+
+        def log_message(self, *_):
+            pass
+
+    server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+
+    async def run():
+        browser = BrowserAdapter(allow_local=True)
+        source = SourceRecord(input=SourceInput(
+            kind="website",
+            reference=f"http://127.0.0.1:{server.server_port}/v1",
+            version="v1",
+        ))
+        try:
+            first = await browser.read("reload-fixture", source)
+            assert "v1" in first.content
+            source.input = source.input.model_copy(update={
+                "reference": f"http://127.0.0.1:{server.server_port}/v2",
+                "version": "v2",
+            })
+            second = await browser.read("reload-fixture", source)
+            assert "v2" in second.content
+            assert second.locator["url"].endswith("/v2")
+            toggle = next(
+                item for item in second.controls
+                if item["selector"] == '[data-review-control="0"]'
+            )
+            assert toggle["role"] == "button"
+            assert toggle["testId"] == "save-toggle"
+            assert toggle["ariaPressed"] == "true"
+            assert toggle["fontSizePx"] == 18
+            assert toggle["contrastRatio"] > 15
+            accessibility = second.locator["accessibility"]
+            assert accessibility["role"] in {"WebArea", "document"}
+            assert any(
+                item.get("name") == "Toggle"
+                for item in accessibility.get("children", [])
+            )
+        finally:
+            await browser.close()
+
+    try:
+        asyncio.run(run())
+    finally:
+        server.shutdown()
+        server.server_close()
+
+
 def test_uniform_padding_trim_retains_all_visible_content_and_coordinate_origin():
     pixels = Image.new("RGB", (1000, 1000), "black")
     draw = ImageDraw.Draw(pixels)

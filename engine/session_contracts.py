@@ -75,9 +75,11 @@ class Limits(Contract):
     max_actions: int = Field(default=12, ge=0, le=100)
     max_checks: int = Field(default=64, ge=1, le=500)
     max_model_calls: int = Field(default=60, ge=1, le=100)
+    max_review_rounds: int = Field(default=3, ge=1, le=8)
     max_seconds: int = Field(default=900, ge=10, le=7200)
     max_images_per_call: int = Field(default=12, ge=0, le=16)
     max_material_chunks: int = Field(default=24, ge=1, le=100)
+    max_parallel_screens: int = Field(default=2, ge=1, le=8)
 
 
 class SessionCreate(Contract):
@@ -90,6 +92,9 @@ class SessionCreate(Contract):
     auto_run: bool = False
     provider: Literal["qwen", "deepseek", "generic", "local"] = "qwen"
     model_name: str | None = Field(default=None, max_length=200)
+    verifier_provider: Literal["qwen", "deepseek", "generic", "local"] | None = None
+    verifier_model_name: str | None = Field(default=None, max_length=200)
+    require_structured_claims: bool = True
 
     @model_validator(mode="after")
     def combined_input_limit(self) -> "SessionCreate":
@@ -106,6 +111,20 @@ class SourceRecord(Contract):
     captured_at: str | None = None
     observed_version: str | None = None
     active: bool = True
+
+
+class EvidenceObject(Contract):
+    object_id: str
+    identity_key: str = Field(default="", max_length=1000)
+    kind: Literal["page", "control", "text", "node", "image", "document_section", "region"]
+    source_id: str
+    state_id: str | None = None
+    label: str = Field(default="", max_length=1000)
+    role: str = Field(default="", max_length=100)
+    bbox: dict[str, float] = Field(default_factory=dict)
+    locator: dict[str, Any] = Field(default_factory=dict)
+    interactable: bool = False
+    attributes: dict[str, Any] = Field(default_factory=dict)
 
 
 class Evidence(Contract):
@@ -125,6 +144,7 @@ class Evidence(Contract):
     analysis: dict[str, Any] = Field(default_factory=dict)
     action_id: str | None = None
     state_id: str | None = None
+    objects: list[EvidenceObject] = Field(default_factory=list, max_length=400)
     stale: bool = False
 
 
@@ -179,9 +199,29 @@ class ConflictDisposition(Contract):
     rejected_quote_signatures: list[str] = Field(default_factory=list)
 
 
+class ReviewBranch(Contract):
+    branch_id: str = Field(pattern=r"^BR[A-Za-z0-9_.-]{1,60}$")
+    trigger: str = Field(min_length=1, max_length=1000)
+    expected_outcome: str = Field(min_length=1, max_length=1000)
+    evidence_ids: list[str] = Field(min_length=1)
+    basis: Literal["explicit", "inferred"] = "explicit"
+
+
+class ReviewTask(Contract):
+    task_id: str = Field(pattern=r"^TASK[A-Za-z0-9_.-]{1,60}$")
+    text: str = Field(min_length=1, max_length=2000)
+    success_criteria: str = Field(default="", max_length=2000)
+    evidence_ids: list[str] = Field(min_length=1)
+    source_ids: list[str] = Field(default_factory=list)
+    page_ids: list[str] = Field(default_factory=list)
+    state_ids: list[str] = Field(default_factory=list)
+    branches: list[ReviewBranch] = Field(default_factory=list, max_length=30)
+
+
 class MaterialUnderstanding(Contract):
     task_summary: str
     target_user_summary: str = ""
+    review_tasks: list[ReviewTask] = Field(default_factory=list, max_length=12)
     goals: list[Constraint] = Field(default_factory=list, max_length=40)
     requirements: list[Constraint] = Field(default_factory=list, max_length=100)
     opinions: list[MaterialOpinion] = Field(default_factory=list, max_length=40)
@@ -193,12 +233,16 @@ class MaterialUnderstanding(Contract):
 
 class PlannedCheck(Contract):
     ref: str
+    coverage_id: str = Field(default="", max_length=160)
+    coverage_title: str = Field(default="", max_length=500)
+    task_id: str = Field(default="", max_length=100)
     applicability: Literal["applicable", "not_applicable", "needs_context"]
     reason: str = Field(min_length=1, max_length=2000)
     source_ids: list[str] = Field(min_length=1)
     evidence_ids: list[str] = Field(default_factory=list)
     evidence_needed: list[str] = Field(default_factory=list, max_length=10)
     object_refs: list[str] = Field(default_factory=list, max_length=15)
+    object_ids: list[str] = Field(default_factory=list, max_length=15)
     constraint_refs: list[str] = Field(
         default_factory=list, max_length=20,
         description="G/REQ constraints and OP discussion links; OP never becomes a scored requirement.",
@@ -289,6 +333,9 @@ class Action(Contract):
 class CheckItem(Contract):
     check_id: str
     ref: str
+    coverage_id: str = Field(default="", max_length=160)
+    coverage_title: str = Field(default="", max_length=500)
+    task_id: str = Field(default="", max_length=100)
     kind: Literal["rule", "method", "goal", "conflict"]
     run_id: str
     context_version: int
@@ -302,9 +349,11 @@ class CheckItem(Contract):
     scope_status: Literal["included", "excluded"] = "included"
     stale: bool = False
     applicability: Literal["not_assessed", "applicable", "not_applicable", "needs_context"] = "not_assessed"
+    reevaluation_requested: bool = False
     plan_reason: str = ""
     evidence_needed: list[str] = Field(default_factory=list)
     object_refs: list[str] = Field(default_factory=list)
+    object_ids: list[str] = Field(default_factory=list)
     constraint_refs: list[str] = Field(default_factory=list)
     plan_evidence_ids: list[str] = Field(default_factory=list)
     required_evidence_kinds: list[EvidenceKind] = Field(default_factory=list)
@@ -324,6 +373,21 @@ class CheckItem(Contract):
         return self
 
 
+class FindingClaim(Contract):
+    claim_id: str = Field(default_factory=lambda: identifier("claim"))
+    claim_type: Literal[
+        "object_present", "state_change", "no_state_change", "action_result",
+        "readability", "structure", "state_visibility", "requirement_match",
+    ]
+    object_id: str = Field(min_length=1, max_length=160)
+    expected: str = Field(default="", max_length=2000)
+    observed: str = Field(default="", max_length=2000)
+    evidence_ids: list[str] = Field(min_length=1)
+    derived: bool = False
+    verification_status: Literal["unverified", "supported", "rejected"] = "unverified"
+    verification_reason: str = Field(default="", max_length=2000)
+
+
 class Finding(Contract):
     finding_id: str = Field(default_factory=lambda: identifier("finding"))
     kind: Literal["issue", "nonconformity", "conflict", "suggestion"]
@@ -339,6 +403,7 @@ class Finding(Contract):
     confidence: float | None = Field(default=None, ge=0, le=1)
     context_version: int = 1
     run_id: str = ""
+    screen_review_id: str = ""
     review_status: Literal["unreviewed", "confirmed", "rejected", "needs_verification"] = "unreviewed"
     human_severity: Literal["critical", "high", "medium", "low"] | None = None
     review_reason: str = ""
@@ -346,7 +411,9 @@ class Finding(Contract):
     reviewed_at: str | None = None
     disposition: Literal["fix", "accept_risk", "defer"] | None = None
     stale: bool = False
+    object_id: str = Field(default="", max_length=160)
     object_ref: str = Field(default="", max_length=1000)
+    claims: list[FindingClaim] = Field(default_factory=list, max_length=12)
     mechanism: str = Field(default="", max_length=1000)
     change_action: str = Field(default="", max_length=1000)
     location: dict[str, Any] = Field(default_factory=dict)
@@ -402,6 +469,7 @@ class SessionSnapshot(Contract):
     request: SessionCreate
     task_summary: str = ""
     scope: str = ""
+    review_tasks: list[ReviewTask] = Field(default_factory=list, max_length=12)
     goals: list[Constraint] = Field(default_factory=list)
     requirements: list[Constraint] = Field(default_factory=list)
     assumptions: list[str] = Field(default_factory=list)
@@ -409,6 +477,8 @@ class SessionSnapshot(Contract):
     evidence: list[Evidence] = Field(default_factory=list)
     page_states: list[PageState] = Field(default_factory=list)
     transitions: list[Transition] = Field(default_factory=list)
+    flow_graph: dict[str, Any] = Field(default_factory=dict)
+    required_coverage: list[dict[str, Any]] = Field(default_factory=list)
     questions: list[Question] = Field(default_factory=list)
     actions: list[Action] = Field(default_factory=list)
     checks: list[CheckItem] = Field(default_factory=list)
@@ -421,7 +491,9 @@ class SessionSnapshot(Contract):
     model_calls: list[dict[str, Any]] = Field(default_factory=list)
     report_version: int = 0
     report_completeness: Literal["complete", "partial"] = "partial"
+    contract_violations: list[dict[str, Any]] = Field(default_factory=list)
     capability_status: dict[str, Any] = Field(default_factory=dict)
+    verifier_model_status: dict[str, Any] = Field(default_factory=dict)
     material_understanding: MaterialUnderstanding | None = None
     understanding_context_version: int = 0
     understanding_evidence_ids: list[str] = Field(default_factory=list)

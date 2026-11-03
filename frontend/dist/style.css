@@ -3,8 +3,5 @@
 .connection{display:flex;gap:18px;align-items:center;padding:14px 20px;margin:20px 0}.connection label{margin:0;min-width:160px}.connection span{font-size:12px;color:#778398}.badge.critical{background:#752739;color:white}.marker.evidence-box{transform:none;border:2px solid #4058e8;background:#4058e812;border-radius:3px;text-align:left;color:#213cba;min-width:0;min-height:0}.marker.evidence-box.focused{background:#ec912221;border-color:#cf6c21}#diagnostics{overflow-wrap:anywhere} @media(max-width:650px){.connection{flex-wrap:wrap}}
 
 #recheckResults{margin:20px 0}.recheck-item{padding:18px 0;border-top:1px solid #e3e7ef}.recheck-item h3{line-height:1.6}
-#findingDialog{width:min(540px,96vw);max-height:90vh;border:1px solid var(--line);border-radius:12px;padding:24px;color:inherit}
-#findingDialog::backdrop{background:#17203366}
-#findingDialog h2{margin-bottom:8px}
-#findingDialog .actions{justify-content:flex-end}
-#addFinding{margin-bottom:14px}
+
+#entryPanel{margin-bottom:24px}#sessionPanel{margin-bottom:24px}#sessionPanel ol{line-height:1.9}.session-note{border-top:1px solid #e2e5ee;padding:12px 0}#sessionPanel details{margin-top:14px}#sessionPanel small{color:#657087}

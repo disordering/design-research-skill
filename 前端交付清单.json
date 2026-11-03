@@ -1,0 +1,205 @@
+{
+  "delivery": "frontend-integration-20261104",
+  "status": "integration-ready; full review not accepted",
+  "files": [
+    {
+      "path": "frontend/backend-launch.py",
+      "bytes": 4919,
+      "sha256": "b1d83a7fd7e444e696281e1377cbf5bdf11151cdb638ef92268c9137b318d4e5"
+    },
+    {
+      "path": "frontend/B引擎临时副本修改.patch",
+      "bytes": 7571,
+      "sha256": "13a7b778b48deb115432d202e2aa1eb252312aef9fffbc30b2daf385bf67152c"
+    },
+    {
+      "path": "frontend/B引擎临时副本说明.md",
+      "bytes": 4996,
+      "sha256": "0d0d76c2222a26b03ddc014a11702427c924ddd138797947b50ab30926c32e96"
+    },
+    {
+      "path": "frontend/CHANGELOG.md",
+      "bytes": 2088,
+      "sha256": "d9761d20bf68c2ffcc20faff3ae62cab2bc12a9289b6fda06e80b220105763d2"
+    },
+    {
+      "path": "frontend/check-setup.py",
+      "bytes": 2920,
+      "sha256": "6b4b47b4732a42d0bfef43ed0d78f952b9d9767e708f7199a2ea9d750df0e479"
+    },
+    {
+      "path": "frontend/dist/app.js",
+      "bytes": 25928,
+      "sha256": "f01497c1c856ca9eba9bbde159b73e7a2d06f127e16cdaf8f43aac2b69c777cf"
+    },
+    {
+      "path": "frontend/dist/demo.svg",
+      "bytes": 1336,
+      "sha256": "a70e0dd313eee8d56f2add5d63035e36cf88f5127ada5b8b699caac853afa4b9"
+    },
+    {
+      "path": "frontend/dist/engine-adapter.js",
+      "bytes": 5606,
+      "sha256": "81161ddd195539fe84ff34fe9ba9825a6d07132b283f5fe7c524809994361240"
+    },
+    {
+      "path": "frontend/dist/index.html",
+      "bytes": 6678,
+      "sha256": "02725042651d51f679434add851f3abd4240f892aaeb7789abb5f8e8d1a29bb4"
+    },
+    {
+      "path": "frontend/dist/recheck-supplement.js",
+      "bytes": 2911,
+      "sha256": "fdf9665720b4e7c04b59b672fe053d85ef7a3e00071a894527922b8fe7a966bc"
+    },
+    {
+      "path": "frontend/dist/review-service.js",
+      "bytes": 3398,
+      "sha256": "9ecd1f0071c1f8365bd53a7c17267c2c9b5ade32e8ae11d37766ea06d197c7e6"
+    },
+    {
+      "path": "frontend/dist/session-api.js",
+      "bytes": 3152,
+      "sha256": "47b78289af6eea0fd5eac9a5f3dd3a3a14818903ec49c99a5dfcbbb389a4a75e"
+    },
+    {
+      "path": "frontend/dist/session-flow.js",
+      "bytes": 2727,
+      "sha256": "70d66014cb92688987719cd2ba30a9b9223f6122c201eebc09c4a50f77929e67"
+    },
+    {
+      "path": "frontend/dist/session-progress.js",
+      "bytes": 1792,
+      "sha256": "9aaf46e40095ff4244d9774fa2e3745a1d0442c399949e578c1542d60e460fec"
+    },
+    {
+      "path": "frontend/dist/session-ui.js",
+      "bytes": 21417,
+      "sha256": "636f12d6f61b71356f62c83c5ba87ae0a03e3211af2d00e7b69436652011eaad"
+    },
+    {
+      "path": "frontend/dist/session.css",
+      "bytes": 1131,
+      "sha256": "12762d6846af38a639cb9d64bc39062e9eddc34e264c3fb3ff2c288c5b607706"
+    },
+    {
+      "path": "frontend/dist/session.html",
+      "bytes": 5724,
+      "sha256": "d5917cb4b2888994a994dfacae8bde0ea780d45e73a91ee44e0976e8ed3bc7a9"
+    },
+    {
+      "path": "frontend/dist/storage.js",
+      "bytes": 1127,
+      "sha256": "7c133f1fb22ed1aa67aa8ae60aaf642faa6a8a06bee76b820183a39e85dbed5e"
+    },
+    {
+      "path": "frontend/dist/style.css",
+      "bytes": 8231,
+      "sha256": "9d9ac0aaf3d05f5c69a22eefc5f8e169b098357b3da0f263e03a81c8a4703a1f"
+    },
+    {
+      "path": "frontend/D交付与复现说明.md",
+      "bytes": 584,
+      "sha256": "a369ee71b21b28fcb9176e4622e4faf1f7dc7879756e238fd25c12169bba95fa"
+    },
+    {
+      "path": "frontend/launch.mjs",
+      "bytes": 1038,
+      "sha256": "4d683a652f8cf2aa08c2371964edb2c17bc8df81f4faa8e58f44e8c56a9024cb"
+    },
+    {
+      "path": "frontend/model.env.example",
+      "bytes": 486,
+      "sha256": "5421c731ca95ffa987694c2f41bcab3e7824a55c0d8b689d1782522ccb91093d"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 165,
+      "sha256": "1a64f3c568d1b0e6f0dc91ebf8130dc1120851d37cabe6ff5fe8cc45fa4ccb94"
+    },
+    {
+      "path": "frontend/README.md",
+      "bytes": 2622,
+      "sha256": "d675a0e4ecb847f778f5dbbcfb77faabe6d13ca00429057867fd0f359f7b25fc"
+    },
+    {
+      "path": "frontend/reviewer.generic.example.toml",
+      "bytes": 4135,
+      "sha256": "0bb1af1aa913f400e7204d5d51c83a98f7cfae47baeaf11715f2263ccd4336aa"
+    },
+    {
+      "path": "frontend/server.mjs",
+      "bytes": 2852,
+      "sha256": "226b298202f4d8dd10a69e6e218b6b16962915e526598261b4954e33eba68ff8"
+    },
+    {
+      "path": "frontend/tests/adapter.test.mjs",
+      "bytes": 2513,
+      "sha256": "0532de0163fe11c10423e798110b5d8958ce1f914f8c1b6c5c3bec1a89bed68b"
+    },
+    {
+      "path": "frontend/tests/progress.test.mjs",
+      "bytes": 2144,
+      "sha256": "81b99ffd5bbdc4e7ef7f7a18d95cdd97e058ca01b34b03bb903a25d5d697c264"
+    },
+    {
+      "path": "frontend/tests/recheck.test.mjs",
+      "bytes": 1866,
+      "sha256": "0ef0f476def76215697ccf51c161b3315da14104149ff705175e8d9937c87492"
+    },
+    {
+      "path": "frontend/tests/service.test.mjs",
+      "bytes": 2922,
+      "sha256": "c0cd1c5a9b332032a8e4375b80d8962c5d6109235121776d6b437da29d89f37a"
+    },
+    {
+      "path": "frontend/tests/session-api.test.mjs",
+      "bytes": 3651,
+      "sha256": "e565c3dbf6566d98b37bbc5b4912b17e986a03296e66617fc78990432c195791"
+    },
+    {
+      "path": "frontend/tests/session.test.mjs",
+      "bytes": 1319,
+      "sha256": "2f6800dc8669611325da99f37228bc23fa163781f88d2cae68ffcdc21bbab4f2"
+    },
+    {
+      "path": "frontend/使用说明.md",
+      "bytes": 5582,
+      "sha256": "5903243b3acb4eca67ea8939c5df9f6794751b36ba9d31006871ba3811cf9d5e"
+    },
+    {
+      "path": "frontend/切换引擎.ps1",
+      "bytes": 730,
+      "sha256": "d0f5970e2d5c50ae600a602e7cb496851a29cd51a80565c2f4c61b96f4a5bc06"
+    },
+    {
+      "path": "frontend/协同评审接入说明.md",
+      "bytes": 584,
+      "sha256": "f8984e6d2358bfd23d016dffd3e45a834355734446f31a298f5e853c341e5e3b"
+    },
+    {
+      "path": "frontend/启动交互界面.cmd",
+      "bytes": 211,
+      "sha256": "1d95877f77845b8f8284c22a9a6268db747906754c2e5d8a2ae4708361906dd2"
+    },
+    {
+      "path": "frontend/启动新版后端.ps1",
+      "bytes": 718,
+      "sha256": "f2d96a0561d74f05c91790489de1d6686ca0d1f5e399eccd1dae3083dc3068db"
+    },
+    {
+      "path": "frontend/当前情况.md",
+      "bytes": 2801,
+      "sha256": "af46e68f7ef20c8afefe399422395751d13e8b03149c5392abac27938333bd6a"
+    },
+    {
+      "path": "先读我.md",
+      "bytes": 1331,
+      "sha256": "55ce698c8c27d856cf27afb4ee8c3a3d4423597ce9a737ea7e264d388a0c4fa5"
+    }
+  ],
+  "manifest_self_excluded": true,
+  "frontend_tests_passed": 24,
+  "backend_copy_included": false,
+  "real_credentials_included": false
+}

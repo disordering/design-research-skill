@@ -1,0 +1,128 @@
+--- original/engine/session_context.py
++++ temporary-copy/engine/session_context.py
+@@ -407,3 +407,37 @@
+             )
+     if errors:
+         raise EngineError("check_plan_reference_invalid", "；".join(errors), status_code=502)
++
++
++def quarantine_unverifiable_claims(result, evidence):
++    """Temporary copy: keep strict quotes; quarantine unsupported claims, never invent OCR."""
++    warnings = []
++    removed = set()
++    for field in ('goals', 'requirements', 'opinions'):
++        kept = []
++        for claim in getattr(result, field):
++            quotes = claim.source_quotes
++            bad_quote = any(q.evidence_id not in evidence or not quote_matches(evidence[q.evidence_id], q.quote) for q in quotes)
++            missing = field != 'opinions' and not claim.is_assumption and (
++                not quotes or set(claim.evidence_ids) != {q.evidence_id for q in quotes})
++            if bad_quote or missing:
++                removed.add(claim.id)
++                note = f'待核实声明 {claim.id}：{claim.text[:350]}（缺少可逐字验证的完整来源引用，未作为正式评审依据。）'
++                result.unknowns.append(note)
++                warnings.append(f'副本引用隔离：{claim.id} 已移至待核实项；未放宽逐字引用校验。')
++            else:
++                kept.append(claim)
++        setattr(result, field, kept)
++    # A child cannot outlive an unsupported parent.
++    while True:
++        descendants = [c for c in [*result.goals, *result.requirements] if c.parent_id in removed]
++        if not descendants:
++            break
++        for claim in descendants:
++            removed.add(claim.id)
++            result.unknowns.append(f'待核实声明 {claim.id}：{claim.text[:350]}（父声明未通过来源校验。）')
++        result.goals = [c for c in result.goals if c.id not in removed]
++        result.requirements = [c for c in result.requirements if c.id not in removed]
++    result.conflicts = [c for c in result.conflicts if not set(c.claim_ids).intersection(removed) and all(
++        q.evidence_id in evidence and quote_matches(evidence[q.evidence_id], q.quote) for q in c.source_quotes)]
++    return warnings
+--- original/engine/session_service.py
++++ temporary-copy/engine/session_service.py
+@@ -1135,6 +1135,12 @@
+                     ):
+                         if warning not in session.warnings:
+                             session.warnings.append(warning)
++                    from .session_context import quarantine_unverifiable_claims
++                    for warning in quarantine_unverifiable_claims(parsed, self._valid_evidence(session)):
++                        if warning not in session.warnings:
++                            session.warnings.append(warning)
++                        if warning not in session.run_limitations:
++                            session.run_limitations.append(warning)
+                     for warning in sanitize_understanding(
+                         session, parsed, self._valid_evidence(session),
+                     ):
+@@ -2130,6 +2136,8 @@
+                 if check.ref in blocked_constraints:
+                     candidate.decision = "insufficient_evidence"
+                     candidate.reason += "；涉及尚未裁决的正式要求冲突，不能擅自选择一方判断符合或违反。"
++                # Temporary-copy fix: evidence downgrades must still use this check kind's enum.
++                candidate.decision = self._normalized_decision(check.kind, candidate.decision)
+                 check_validated = CheckItem.model_validate(candidate.model_dump())
+                 check.execution_status = check_validated.execution_status
+                 check.decision = check_validated.decision
+--- original/tests/test_session_context_pipeline.py
++++ temporary-copy/tests/test_session_context_pipeline.py
+@@ -157,9 +157,11 @@
+     result = asyncio.run(service.run(service.create(business_request()).session_id))
+     if invalid_quote:
+         assert result.report_completeness == "partial"
+-        assert result.material_understanding is None
+-        assert not result.goals and not result.requirements
+-        assert len(result.model_calls) == 2
++        # Copy policy: preserve independently supported goals, quarantine the invalid requirement.
++        assert result.material_understanding is not None
++        assert result.goals and not result.requirements
++        assert any('REQ01' in item and '待核实' in item for item in result.material_understanding.unknowns)
++        assert any('副本引用隔离' in item for item in result.warnings)
+     else:
+         assert result.report_completeness == "partial"
+         assert any(
+--- original/tests/test_temporary_quote_quarantine.py
++++ temporary-copy/tests/test_temporary_quote_quarantine.py
+@@ -0,0 +1,44 @@
++from engine.session_contracts import MaterialUnderstanding, Constraint, EvidenceQuote
++from engine.session_context import quarantine_unverifiable_claims, validate_quotes
++from types import SimpleNamespace
++import pytest
++
++def test_unsupported_image_quote_is_quarantined_not_accepted():
++    evidence={'image':SimpleNamespace(content='静态图片，不证明点击行为。')}
++    bad=EvidenceQuote(evidence_id='image',quote='点击分解获得积分')
++    with pytest.raises(Exception): validate_quotes([bad],evidence)
++    result=MaterialUnderstanding(task_summary='Review', requirements=[Constraint(id='REQ1',text='点击分解获得积分',evidence_ids=['image'],source_quotes=[bad])])
++    assert quarantine_unverifiable_claims(result,evidence)
++    assert not result.requirements
++    assert 'REQ1' in result.unknowns[0]
++    with pytest.raises(Exception): validate_quotes([bad],evidence)
++
++def test_supported_claim_survives_and_orphaned_child_is_quarantined():
++    evidence={'text':SimpleNamespace(content='取消不得保存。')}
++    good=Constraint(id='G1',text='取消不得保存',evidence_ids=['text'],source_quotes=[EvidenceQuote(evidence_id='text',quote='取消不得保存。')])
++    missing=Constraint(id='REQ1',text='Unsupported',evidence_ids=['text'])
++    child=Constraint(id='REQ2',text='Child',evidence_ids=['text'],is_assumption=True,parent_id='REQ1')
++    result=MaterialUnderstanding(task_summary='Review',goals=[good],requirements=[missing,child])
++    quarantine_unverifiable_claims(result,evidence)
++    assert result.goals==[good]
++    assert not result.requirements
++    assert len(result.unknowns)==2
++
++
++def test_conflict_evidence_downgrade_uses_needs_clarification(tmp_path):
++    import asyncio
++    from tests.test_session_service import create_service, FixtureModel
++    from engine.session_contracts import SessionCreate, SourceInput
++    service, _ = create_service(tmp_path)
++    session = service.create(SessionCreate(purpose='Conflict enum regression',sources=[SourceInput(kind='document',content='Unconfirmed constraints',role='product_spec')]))
++    async def run():
++        await service._read_sources(session)
++        for check in session.checks:
++            check.scope_status = 'included' if check.ref == 'E08' else 'excluded'
++            if check.ref == 'E08':
++                check.applicability='needs_context'
++        await service._judge(session,FixtureModel())
++    asyncio.run(run())
++    check=next(c for c in session.checks if c.ref=='E08')
++    assert check.execution_status=='executed'
++    assert check.decision=='needs_clarification'

@@ -1,0 +1,6 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {sessionFor,addSource,addNote,recordDecision,checkpoint,sessionMarkdown} from '../dist/session-flow.js';
+test('links remain unexecuted and unsafe schemes are rejected',()=>{const s=sessionFor({});addSource(s,'https://example.com');addSource(s,'https://example.com');assert.equal(s.sources.length,1);assert.equal(s.sources[0].status,'not_executed');assert.throws(()=>addSource(s,'javascript:alert(1)'));});
+test('human decisions require reasons and retain version and actor',()=>{const r={version:2};assert.throws(()=>recordDecision(r,{id:'f',reviewStatus:'confirmed',note:''}));recordDecision(r,{id:'f',reviewStatus:'confirmed',note:'可见错误'});assert.equal(r.session.events[0].version,2);assert.equal(r.session.events[0].actor_type,'human');});
+test('recheck preserves independent historical snapshots and pending notes',()=>{const old={id:'old',version:1,context:{goal:'任务'},issues:[{id:'f',note:'原判断'}]};addNote(sessionFor(old),'补充事实');const next=checkpoint(old,{id:'new',version:2},'feedback');next.session.versions[0].issues[0].note='变更';assert.equal(old.issues[0].note,'原判断');assert.equal(next.session.notes[0].status,'pending');assert.match(sessionMarkdown(next).join(' '),/补充事实/);});

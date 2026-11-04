@@ -1,0 +1,26 @@
+{
+  "对应提交": "377ec722769cd229973b55ccb9e046aa69d0dc01",
+  "说明": "此提交产生于正式源码冻结之后；不改既有冻结清单。逐文件核对冻结字节与提交blob。",
+  "四文件": [
+    {
+      "文件": "engine/session_service.py",
+      "冻结SHA256": "790f8f53014851ac718e79a33e83bf8c93d641fdd5e9fe691e4924d3a788945d",
+      "提交BlobSHA256": "790f8f53014851ac718e79a33e83bf8c93d641fdd5e9fe691e4924d3a788945d"
+    },
+    {
+      "文件": "engine/session_adapters.py",
+      "冻结SHA256": "1c96354883b5c6b97cfca6e87813d351fa457948b3bf27a8accdf977857e5e27",
+      "提交BlobSHA256": "1c96354883b5c6b97cfca6e87813d351fa457948b3bf27a8accdf977857e5e27"
+    },
+    {
+      "文件": "engine/session_contracts.py",
+      "冻结SHA256": "efd364d33f28de0342c622292513d35207cfbceec462b83eded746120c575152",
+      "提交BlobSHA256": "efd364d33f28de0342c622292513d35207cfbceec462b83eded746120c575152"
+    },
+    {
+      "文件": "engine/session_verification.py",
+      "冻结SHA256": "809ccc248f5039b3081b41d070505ebe3faa296b6eec620eaf0f104d2ade832a",
+      "提交BlobSHA256": "809ccc248f5039b3081b41d070505ebe3faa296b6eec620eaf0f104d2ade832a"
+    }
+  ]
+}

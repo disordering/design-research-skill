@@ -1,0 +1,19 @@
+{
+  "version": "AI-evidence-review-v1",
+  "recorded_at": "2026-11-04T10:22:37.040559+00:00",
+  "reference_type": "独立 AI 证据审阅参考",
+  "reviewer_actor": "Codex 独立审阅代理",
+  "evidence_collection": "样本执行代理提供实际操作前后截图、动作与DOM事实记录；参考代理查看这些材料并独立判断",
+  "not_claimed": [
+    "参考代理亲自操作浏览器",
+    "真人专家共识",
+    "真人体验或理解效果"
+  ],
+  "input_exclusions": [
+    "作者预期答案",
+    "待测模型输出",
+    "其他模型的缺陷解释"
+  ],
+  "collection_constraint": "参考代理的原生Chrome操作因安全工具不能确认当前URL而停止；不调用备用浏览器执行该操作。",
+  "reference_freeze": "完成原始证据审阅后冻结参考及SHA，之后才接收待测预测；不为提高结果变更参考分母。"
+}

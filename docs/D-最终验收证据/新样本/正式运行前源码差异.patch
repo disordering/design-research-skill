@@ -1,0 +1,275 @@
+diff --git a/engine/session_adapters.py b/engine/session_adapters.py
+index 1bf1d32..052e72a 100644
+--- a/engine/session_adapters.py
++++ b/engine/session_adapters.py
+@@ -35,7 +35,15 @@ from .session_targets import (
+ CONTROL_LABEL_JS = r"""node => {
+     const ids=(node.getAttribute('aria-labelledby')||'').trim().split(/\s+/).filter(Boolean);
+     const referenced=ids.map(id=>document.getElementById(id)?.textContent||'').join(' ').trim();
+-    const associated=Array.from(node.labels||[]).map(label=>label.innerText||label.textContent||'').join(' ').trim();
++    const associated=Array.from(node.labels||[]).map(label=>{
++        // 嵌套在 label 中的 select，其选项文字不属于字段名称。
++        if(node.tagName==='SELECT'){
++            const copy=label.cloneNode(true);
++            copy.querySelectorAll('select').forEach(item=>item.remove());
++            return copy.textContent||'';
++        }
++        return label.innerText||label.textContent||'';
++    }).join(' ').trim();
+     return (referenced||node.getAttribute('aria-label')||associated||node.innerText||
+             node.getAttribute('placeholder')||node.name||'').trim().slice(0,200);
+ }"""
+@@ -325,7 +333,8 @@ class BrowserAdapter:
+                     const foreground=parseColor(s.color), back=background(n);
+                     return {selector:'[data-review-control="'+i+'"]',
+                         label:controlLabel(n),
+-                        tag:n.tagName.toLowerCase(),type:n.type||'',disabled:!!n.disabled,
++                        tag:n.tagName.toLowerCase(),type:n.type||'',
++                        disabled:!!n.disabled||(n.tagName==='SELECT'&&n.matches(':disabled')),
+                         role:n.getAttribute('role')||n.tagName.toLowerCase(),
+                         ariaLabel:n.getAttribute('aria-label')||'',
+                         domId:n.id||'',
+@@ -333,6 +342,16 @@ class BrowserAdapter:
+                         testId:n.getAttribute('data-testid')||n.getAttribute('data-test-id')||'',
+                         ancestorPath:ancestorPath(n),
+                         value:n.type==='password'?'':String(n.value||'').slice(0,500),
++                        ...(n.tagName==='SELECT'?{
++                            multiple:!!n.multiple,
++                            optionCount:n.options.length,
++                            optionsTruncated:n.options.length>200,
++                            options:Array.from(n.options).slice(0,200).map(o=>({
++                                label:o.label,value:o.value,selected:!!o.selected,
++                                disabled:!!o.disabled||!!o.closest('optgroup')?.disabled||n.matches(':disabled'),
++                                optgroup:o.closest('optgroup')?.label||'',
++                            })),
++                        }:{}),
+                         checked:!!n.checked,ariaSelected:n.getAttribute('aria-selected'),
+                         ariaPressed:n.getAttribute('aria-pressed'),
+                         ariaExpanded:n.getAttribute('aria-expanded'),
+@@ -431,7 +450,7 @@ class BrowserAdapter:
+                 if state and (await state["page"].locator(action.selector).first.get_attribute("type")) == "password":
+                     return True
+             return action.requires_explicit_authorization
+-        if action.kind == "click":
++        if action.kind in {"click", "select"}:
+             if not action.selector:
+                 return True
+             state = self._pages.get((session_id, source.source_id))
+@@ -477,7 +496,7 @@ class BrowserAdapter:
+             raise EngineError("browser_state_changed", "外部页面状态已变，需重新观察和规划，未执行旧动作。", status_code=409)
+         if (
+             source.input.kind != "figma_prototype"
+-            and action.kind in {"click", "fill"}
++            and action.kind in {"click", "fill", "select"}
+             and action.selector
+         ):
+             control = observed_control(
+@@ -513,7 +532,7 @@ class BrowserAdapter:
+         page = state["page"]
+         state["allow_side_effects"] = authorized
+         try:
+-            if source.input.kind == "figma_prototype" and action.kind in {"click", "fill", "scroll"}:
++            if source.input.kind == "figma_prototype" and action.kind in {"click", "fill", "select", "scroll"}:
+                 canvas = current.locator["prototype_canvas"]
+                 if not canvas or current.partial:
+                     raise EngineError("prototype_not_ready", "原型画布未可靠呈现，请先观察，不能点外壳。", status_code=409)
+@@ -563,6 +582,27 @@ class BrowserAdapter:
+                 if not action.selector:
+                     raise EngineError("action_target_missing", "填写动作需要控件定位。", status_code=422)
+                 await page.locator(action.selector).first.fill(action.value, timeout=10000)
++            elif action.kind == "select":
++                if not action.selector:
++                    raise EngineError("action_target_missing", "下拉选择需要已观察控件定位。", status_code=422)
++                control = observed_control(current.controls, action.selector)
++                if control is None:
++                    raise EngineError("action_target_not_observed", "下拉控件不在当前已观察状态中。", status_code=409)
++                if control.get("tag") != "select":
++                    raise EngineError("select_target_invalid", "select 动作只支持原生下拉控件。", status_code=422)
++                if control.get("multiple"):
++                    raise EngineError("select_multiple_unsupported", "当前选择动作不支持多选列表。", status_code=422)
++                if control.get("optionsTruncated"):
++                    raise EngineError("select_options_incomplete", "当前选项清单超过观察上限，不能确认完整选项范围，未执行选择。", status_code=409)
++                options = [option for option in control.get("options", []) if option.get("value") == action.value]
++                if not options:
++                    raise EngineError("select_option_not_observed", "value 不在当前已观察选项中，未执行选择。", status_code=409)
++                if len(options) != 1:
++                    raise EngineError("select_option_ambiguous", "多个选项使用同一 value，无法唯一定位选择。", status_code=409)
++                if options[0].get("disabled"):
++                    raise EngineError("select_option_unavailable", "目标选项或所属选项组已禁用，未执行选择。", status_code=409)
++                # 使用浏览器原生选择，让页面原有 input/change 处理继续执行。
++                await page.locator(action.selector).first.select_option(value=action.value, timeout=10000)
+             elif action.kind == "scroll":
+                 region = current.locator["image_geometry"]["region"]
+                 await page.mouse.move(
+diff --git a/engine/session_contracts.py b/engine/session_contracts.py
+index 1fb246f..f9cff21 100644
+--- a/engine/session_contracts.py
++++ b/engine/session_contracts.py
+@@ -3,12 +3,12 @@
+ from __future__ import annotations
+ 
+ from datetime import datetime, timezone
+-from typing import Any, Literal
++from typing import Annotated, Any, Literal
+ from uuid import uuid4
+ from urllib.parse import urlparse
+ import re
+ 
+-from pydantic import BaseModel, ConfigDict, Field, model_validator
++from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_validator
+ 
+ 
+ def now() -> str:
+@@ -294,11 +294,12 @@ class Question(Contract):
+ class Action(Contract):
+     action_id: str = Field(default_factory=lambda: identifier("action"))
+     source_id: str
+-    kind: Literal["click", "fill", "back", "navigate", "observe", "scroll", "inspect_node", "inspect_document"]
++    kind: Literal["click", "fill", "select", "back", "navigate", "observe", "scroll", "inspect_node", "inspect_document"]
+     node_id: str = Field(default="", max_length=100)
+     chunk_index: int = Field(default=0, ge=0, le=100)
+     selector: str = Field(default="", max_length=1000)
+-    value: str = Field(default="", max_length=4000)
++    # 页面选项的 value 可能包含空白，动作值保留原文以便精确匹配。
++    value: Annotated[str, StringConstraints(strip_whitespace=False)] = Field(default="", max_length=4000)
+     url: str = Field(default="", max_length=4000)
+     x: float | None = Field(default=None, ge=0, le=1)
+     y: float | None = Field(default=None, ge=0, le=1)
+@@ -322,6 +323,8 @@ class Action(Contract):
+             raise ValueError("A click requires a selector or both normalized x/y coordinates.")
+         if self.kind == "fill" and not self.selector:
+             raise ValueError("A fill requires an observed control selector.")
++        if self.kind == "select" and not self.selector:
++            raise ValueError("下拉选择需要已观察到的控件 selector。")
+         if self.kind == "scroll" and not (self.scroll_x or self.scroll_y):
+             raise ValueError("A scroll requires a non-zero bounded scroll_x/scroll_y.")
+         if self.kind == "inspect_node" and not re.fullmatch(r"\d+:\d+", self.node_id):
+diff --git a/engine/session_service.py b/engine/session_service.py
+index b1b1867..ac72e1c 100644
+--- a/engine/session_service.py
++++ b/engine/session_service.py
+@@ -1266,7 +1266,7 @@ class SessionService:
+                                     "required_evidence_kinds": c.required_evidence_kinds,
+                                 } for c in session.checks if c.run_id == session.run_id and not c.stale
+                                    and c.scope_status == "included"],
+-                                "instruction": "以material_understanding中的目标/要求为准，动作规划的goals/requirements留空，不重新改写约束。scope保留context.scope，仅为空时补充，不反复改写范围措辞。只提出一个必要动作；click给selector或完整x/y，source_id真实存在，expected_state_id复制对应latest_state_id。只读/无副作用原型操作可requires_explicit_authorization=false。有条件可评审时ready_for_review=true；不要求用户预填或手工评审材料。",
++                                "instruction": "以material_understanding中的目标/要求为准，动作规划的goals/requirements留空，不重新改写约束。scope保留context.scope，仅为空时补充，不反复改写范围措辞。只提出一个必要动作；click给selector或完整x/y；原生下拉框用select，selector取已观察控件，value精确复制当前options中可用选项的value。source_id真实存在，expected_state_id复制对应latest_state_id。只读/无副作用原型操作可requires_explicit_authorization=false。有条件可评审时ready_for_review=true；不要求用户预填或手工评审材料。",
+                             })
+                         except EngineError as exc:
+                             if exc.code != "session_model_contract_failed":
+@@ -1791,7 +1791,7 @@ class SessionService:
+                 for previous in session.actions
+             ):
+                 raise EngineError("plan_target_repeat", "该定位已经核对为其他控件；必须改变定位或明确不同目标。", status_code=502)
+-            if source.input.kind == "figma_prototype" and action.kind in {"click", "fill", "scroll"}:
++            if source.input.kind == "figma_prototype" and action.kind in {"click", "fill", "select", "scroll"}:
+                 if latest.locator.get("partial") or not latest.locator.get("prototype_canvas"):
+                     raise EngineError("plan_prototype_not_ready", "原型尚未可靠呈现，先observe再规划点击。", status_code=502)
+                 if action.selector and action.selector not in {
+@@ -1836,7 +1836,7 @@ class SessionService:
+ 
+     async def _ground_action(self, session: SessionSnapshot, model: ReviewModel, action: Action) -> bool:
+         latest = next(e for e in reversed(session.evidence) if e.source_id == action.source_id and not e.stale)
+-        if action.kind in {"click", "fill"} and action.selector:
++        if action.kind in {"click", "fill", "select"} and action.selector:
+             controls = latest.locator.get("controls", [])
+             control = observed_control(controls, action.selector)
+             if control is None and controls:
+@@ -1933,7 +1933,7 @@ class SessionService:
+         need_explicit = await self.adapters.needs_authorization(session.session_id, source, action)
+         if any(
+             previous.status in {"failed", "interrupted"}
+-            and previous.kind in {"click", "fill"}
++            and previous.kind in {"click", "fill", "select"}
+             and previous.source_id == action.source_id and previous.kind == action.kind
+             and previous.selector == action.selector and previous.x == action.x and previous.y == action.y
+             for previous in session.actions
+@@ -2655,6 +2655,35 @@ class SessionService:
+                 return False
+         return True
+ 
++    @staticmethod
++    def _recheck_scope_change_matches(
++        session: SessionSnapshot,
++        previous: Finding,
++        evidence_ids: list[str],
++        valid: dict[str, Evidence],
++    ) -> bool:
++        """正式材料取消原功能时，以关联需求证明范围变更，不要求旧控件继续存在。"""
++        related_sources = {
++            evidence.source_id for evidence in session.evidence
++            if evidence.evidence_id in previous.evidence_ids
++        }
++        related_sources.update(
++            source_id for check in session.checks
++            if check.check_id in previous.check_ids and check.run_id == previous.run_id
++            for source_id in check.source_ids
++        )
++        formal_sources = {
++            source.source_id for source in session.sources
++            if source.active and source.input.role in {"product_spec", "design_brief"}
++        }
++        return any(
++            evidence_id in valid
++            and valid[evidence_id].context_version == session.context_version
++            and valid[evidence_id].kind == "requirement"
++            and valid[evidence_id].source_id in related_sources & formal_sources
++            for evidence_id in evidence_ids
++        )
++
+     async def _recheck(self, session: SessionSnapshot, model: ReviewModel) -> None:
+         pending = [r for r in session.rechecks if r.human_confirmation == "unreviewed" and r.resolution == "cannot_determine"]
+         if not pending:
+@@ -2671,6 +2700,8 @@ class SessionService:
+                 "不同条件或缺新版证据保留cannot_determine。必须引用当前证据，不能用旧快照。"
+                 "若旧问题有object_id，新证据必须包含同一规范对象；current_finding_ids只能关联"
+                 "相同object_id的新发现。"
++                "not_applicable用于正式新版需求取消原功能：引用与旧问题来源关联的当前product_spec或design_brief要求证据，"
++                "说明取消条款怎样改变原触发条件；无需要求被取消的控件仍存在，也不计为resolved。"
+             ),
+         })
+         valid = self._valid_evidence(session)
+@@ -2702,8 +2733,10 @@ class SessionService:
+             if (
+                 previous_finding is None
+                 or proposed.resolution != "cannot_determine"
+-                and not self._recheck_evidence_matches(
+-                    session, previous_finding, fresh_ids, valid,
++                and not (
++                    self._recheck_scope_change_matches(session, previous_finding, fresh_ids, valid)
++                    if proposed.resolution == "not_applicable"
++                    else self._recheck_evidence_matches(session, previous_finding, fresh_ids, valid)
+                 )
+             ):
+                 continue
+@@ -3004,6 +3037,17 @@ class SessionService:
+                 (finding for finding in session.findings if finding.finding_id == recheck.previous_finding_id),
+                 None,
+             )
++            if proposed.resolution == "not_applicable" and (
++                previous_finding is None
++                or not proposed.evidence_ids
++                or any(eid not in valid or valid[eid].context_version != session.context_version for eid in proposed.evidence_ids)
++                or not self._recheck_scope_change_matches(session, previous_finding, proposed.evidence_ids, valid)
++            ):
++                raise EngineError(
++                    "recheck_scope_evidence_required",
++                    "不再适用需要与原问题来源关联的新版正式需求；保留取消条款，不计为问题修复。",
++                    status_code=422,
++                )
+             if (
+                 proposed.resolution in {"resolved", "partially_resolved", "persists"}
+                 and (
+diff --git a/engine/session_verification.py b/engine/session_verification.py
+index 4f53596..7ba1720 100644
+--- a/engine/session_verification.py
++++ b/engine/session_verification.py
+@@ -187,7 +187,7 @@ def finding_location_evidence(
+             evidence for evidence in claim_candidates
+             if (action := _action_for_evidence(session, evidence)) is not None
+             and action.status == "executed"
+-            and action.kind in {"click", "fill", "scroll", "back", "navigate"}
++            and action.kind in {"click", "fill", "select", "scroll", "back", "navigate"}
+         ]
+         if action_results:
+             return action_results[-1]

@@ -1,0 +1,394 @@
+[
+  {
+    "节点": "tests/test_d_continuation.py::test_static_image_observation_reuses_pixels_without_authorization",
+    "结果": "passed",
+    "秒": 0.294,
+    "目录": "01-test_static_image_observation_reuses_pixels_without_authorization",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_continuation.py::test_legacy_event_retry_keeps_idempotency_and_new_actor_is_not_inferred",
+    "结果": "passed",
+    "秒": 0.082,
+    "目录": "02-test_legacy_event_retry_keeps_idempotency_and_new_actor_is_not_inferred",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_adapters.py::test_figma_snapshot_reads_metadata_and_each_child_screenshot_without_live_tab",
+    "结果": "passed",
+    "秒": 0.021,
+    "目录": "03-test_figma_snapshot_reads_metadata_and_each_child_screenshot_without_live_tab",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_adapters.py::test_figma_without_backend_authorization_is_not_a_successful_read",
+    "结果": "passed",
+    "秒": 0.001,
+    "目录": "04-test_figma_without_backend_authorization_is_not_a_successful_read",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_adapters.py::test_real_browser_capture_action_and_stale_state_guard",
+    "结果": "passed",
+    "秒": 1.449,
+    "目录": "05-test_real_browser_capture_action_and_stale_state_guard",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_browser_flow.py::test_canvas_coordinates_same_url_states_and_shell_safety[False]",
+    "结果": "passed",
+    "秒": 5.911,
+    "目录": "06-test_canvas_coordinates_same_url_states_and_shell_safety[False]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_browser_flow.py::test_canvas_coordinates_same_url_states_and_shell_safety[True]",
+    "结果": "passed",
+    "秒": 5.843,
+    "目录": "07-test_canvas_coordinates_same_url_states_and_shell_safety[True]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_browser_flow.py::test_updated_reference_reloads_browser_instead_of_reusing_old_page",
+    "结果": "passed",
+    "秒": 1.031,
+    "目录": "08-test_updated_reference_reloads_browser_instead_of_reusing_old_page",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_access_failure_is_partial_and_not_a_product_finding",
+    "结果": "passed",
+    "秒": 0.141,
+    "目录": "09-test_access_failure_is_partial_and_not_a_product_finding",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_goal_change_invalidates_old_results_and_duplicate_event_does_not_repeat",
+    "结果": "passed",
+    "秒": 0.729,
+    "目录": "10-test_goal_change_invalidates_old_results_and_duplicate_event_does_not_repeat",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_action_is_not_executed_until_authorized_and_event_is_idempotent",
+    "结果": "passed",
+    "秒": 1.999,
+    "目录": "11-test_action_is_not_executed_until_authorized_and_event_is_idempotent",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_invalid_finding_evidence_cannot_become_a_confirmed_issue",
+    "结果": "passed",
+    "秒": 0.728,
+    "目录": "12-test_invalid_finding_evidence_cannot_become_a_confirmed_issue",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_new_version_does_not_auto_resolve_old_finding",
+    "结果": "passed",
+    "秒": 1.653,
+    "目录": "13-test_new_version_does_not_auto_resolve_old_finding",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_resource_limit_is_reported_not_silently_skipped",
+    "结果": "passed",
+    "秒": 0.642,
+    "目录": "14-test_resource_limit_is_reported_not_silently_skipped",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_noop_action_keeps_before_after_evidence_without_a_verified_path",
+    "结果": "passed",
+    "秒": 0.151,
+    "目录": "15-test_noop_action_keeps_before_after_evidence_without_a_verified_path",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_noop_prototype_click_does_not_establish_a_dynamic_product_defect",
+    "结果": "passed",
+    "秒": 0.14,
+    "目录": "16-test_noop_prototype_click_does_not_establish_a_dynamic_product_defect",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_compound_goal_cannot_hide_unknown_or_violation[insufficient_evidence-insufficient_evidence]",
+    "结果": "passed",
+    "秒": 0.786,
+    "目录": "17-test_compound_goal_cannot_hide_unknown_or_violation[insufficient_evidence-insufficient_evidence]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_compound_goal_cannot_hide_unknown_or_violation[observed_violation-observed_violation]",
+    "结果": "passed",
+    "秒": 0.971,
+    "目录": "18-test_compound_goal_cannot_hide_unknown_or_violation[observed_violation-observed_violation]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_compound_goal_cannot_hide_unknown_or_violation[met-met]",
+    "结果": "passed",
+    "秒": 0.819,
+    "目录": "19-test_compound_goal_cannot_hide_unknown_or_violation[met-met]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_planned_not_applicable_check_does_not_turn_missing_execution_into_failure[R21-not_applicable]",
+    "结果": "passed",
+    "秒": 0.173,
+    "目录": "20-test_planned_not_applicable_check_does_not_turn_missing_execution_into_failure[R21-not_applicable]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_planned_not_applicable_check_does_not_turn_missing_execution_into_failure[E07-insufficient_evidence]",
+    "结果": "passed",
+    "秒": 0.168,
+    "目录": "21-test_planned_not_applicable_check_does_not_turn_missing_execution_into_failure[E07-insufficient_evidence]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_planned_not_applicable_check_does_not_turn_missing_execution_into_failure[E08-needs_clarification]",
+    "结果": "passed",
+    "秒": 0.171,
+    "目录": "22-test_planned_not_applicable_check_does_not_turn_missing_execution_into_failure[E08-needs_clarification]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_recheck_rejects_unrelated_statement_as_resolution_evidence",
+    "结果": "passed",
+    "秒": 0.827,
+    "目录": "23-test_recheck_rejects_unrelated_statement_as_resolution_evidence",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_service.py::test_structured_dynamic_claim_requires_action_without_keyword_in_wording",
+    "结果": "passed",
+    "秒": 0.063,
+    "目录": "24-test_structured_dynamic_claim_requires_action_without_keyword_in_wording",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_context_pipeline.py::test_conflict_decision_needs_an_actor_and_is_not_an_implementation_fix",
+    "结果": "passed",
+    "秒": 2.179,
+    "目录": "25-test_conflict_decision_needs_an_actor_and_is_not_an_implementation_fix",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_context_pipeline.py::test_unresolved_formal_requirements_block_goal_aggregation",
+    "结果": "passed",
+    "秒": 0.923,
+    "目录": "26-test_unresolved_formal_requirements_block_goal_aggregation",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_context_pipeline.py::test_requirements_text_alone_does_not_prove_implementation_compliance",
+    "结果": "passed",
+    "秒": 0.177,
+    "目录": "27-test_requirements_text_alone_does_not_prove_implementation_compliance",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_context_pipeline.py::test_nonapplicability_requires_source_backed_conditions_with_actionable_feedback",
+    "结果": "passed",
+    "秒": 0.159,
+    "目录": "28-test_nonapplicability_requires_source_backed_conditions_with_actionable_feedback",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_context_pipeline.py::test_rejected_claim_scope_survives_model_renaming_or_omitting_resolved_conflict",
+    "结果": "passed",
+    "秒": 1.142,
+    "目录": "29-test_rejected_claim_scope_survives_model_renaming_or_omitting_resolved_conflict",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_session_context_pipeline.py::test_blocking_formal_conflict_cannot_create_product_nonconformity",
+    "结果": "passed",
+    "秒": 0.864,
+    "目录": "30-test_blocking_formal_conflict_cannot_create_product_nonconformity",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa16_tool_failure_is_recorded_without_product_finding",
+    "结果": "passed",
+    "秒": 0.136,
+    "目录": "31-test_qa16_tool_failure_is_recorded_without_product_finding",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa21_unsupported_rejection_reruns_without_erasing_prior_evidence",
+    "结果": "passed",
+    "秒": 1.734,
+    "目录": "32-test_qa21_unsupported_rejection_reruns_without_erasing_prior_evidence",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa22_new_fact_reruns_and_preserves_old_value_and_reason",
+    "结果": "passed",
+    "秒": 1.723,
+    "目录": "33-test_qa22_new_fact_reruns_and_preserves_old_value_and_reason",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa24_resume_persists_review_questions_and_interrupts_running_action",
+    "结果": "passed",
+    "秒": 1.005,
+    "目录": "34-test_qa24_resume_persists_review_questions_and_interrupts_running_action",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_retired_function_with_formal_scope_evidence_is_not_fixed",
+    "结果": "passed",
+    "秒": 0.902,
+    "目录": "35-test_qa26_retired_function_with_formal_scope_evidence_is_not_fixed",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa27_unselected_reference_remains_in_false_negative_denominator",
+    "结果": "passed",
+    "秒": 0.732,
+    "目录": "36-test_qa27_unselected_reference_remains_in_false_negative_denominator",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa28_same_texture_finding_merges_checks_without_losing_goal_states",
+    "结果": "passed",
+    "秒": 0.054,
+    "目录": "37-test_qa28_same_texture_finding_merges_checks_without_losing_goal_states",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa32_finish_preserves_partial_report_and_per_item_reason",
+    "结果": "passed",
+    "秒": 0.081,
+    "目录": "38-test_qa32_finish_preserves_partial_report_and_per_item_reason",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-product_spec]",
+    "结果": "passed",
+    "秒": 0.949,
+    "目录": "39-test_qa26_scope_proof_guards_model_and_confirmation[model-product_spec]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-design_brief]",
+    "结果": "passed",
+    "秒": 0.905,
+    "目录": "40-test_qa26_scope_proof_guards_model_and_confirmation[model-design_brief]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-unrelated]",
+    "结果": "passed",
+    "秒": 0.902,
+    "目录": "41-test_qa26_scope_proof_guards_model_and_confirmation[model-unrelated]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-stale]",
+    "结果": "passed",
+    "秒": 0.957,
+    "目录": "42-test_qa26_scope_proof_guards_model_and_confirmation[model-stale]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-old_context]",
+    "结果": "passed",
+    "秒": 0.886,
+    "目录": "43-test_qa26_scope_proof_guards_model_and_confirmation[model-old_context]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-statement]",
+    "结果": "passed",
+    "秒": 0.948,
+    "目录": "44-test_qa26_scope_proof_guards_model_and_confirmation[model-statement]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-missing]",
+    "结果": "passed",
+    "秒": 0.928,
+    "目录": "45-test_qa26_scope_proof_guards_model_and_confirmation[model-missing]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-inactive]",
+    "结果": "passed",
+    "秒": 1.144,
+    "目录": "46-test_qa26_scope_proof_guards_model_and_confirmation[model-inactive]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-product_spec]",
+    "结果": "passed",
+    "秒": 0.972,
+    "目录": "47-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-product_spec]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-design_brief]",
+    "结果": "passed",
+    "秒": 0.903,
+    "目录": "48-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-design_brief]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-unrelated]",
+    "结果": "passed",
+    "秒": 0.881,
+    "目录": "49-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-unrelated]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-stale]",
+    "结果": "passed",
+    "秒": 0.786,
+    "目录": "50-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-stale]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-old_context]",
+    "结果": "passed",
+    "秒": 1.043,
+    "目录": "51-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-old_context]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-statement]",
+    "结果": "passed",
+    "秒": 0.882,
+    "目录": "52-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-statement]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-missing]",
+    "结果": "passed",
+    "秒": 0.961,
+    "目录": "53-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-missing]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-inactive]",
+    "结果": "passed",
+    "秒": 0.911,
+    "目录": "54-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-inactive]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa05_qa06_three_child_goals_preserve_unknown_and_violation[insufficient_evidence-insufficient_evidence]",
+    "结果": "failed",
+    "秒": 0.053,
+    "目录": "55-test_qa05_qa06_three_child_goals_preserve_unknown_and_violation[insufficient_evidence-insufficient_evidence]",
+    "失败说明": "tests\\test_d_acceptance_42.py:218: in test_qa05_qa06_three_child_goals_preserve_unknown_and_violation\n    session.goals = [Constraint(id=\"G02\", text=\"三个子目标\"),\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   pydantic_core._pydantic_core.ValidationError: 1 validation error for Constraint\nE   evidence_ids\nE     Field required [type=missing, input_value={'id': 'G02', 'text': '三个子目标'}, input_type=dict]\nE       For further information visit https://errors.pydantic.dev/2.14/v/missing"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa05_qa06_three_child_goals_preserve_unknown_and_violation[observed_violation-observed_violation]",
+    "结果": "failed",
+    "秒": 0.052,
+    "目录": "56-test_qa05_qa06_three_child_goals_preserve_unknown_and_violation[observed_violation-observed_violation]",
+    "失败说明": "tests\\test_d_acceptance_42.py:218: in test_qa05_qa06_three_child_goals_preserve_unknown_and_violation\n    session.goals = [Constraint(id=\"G02\", text=\"三个子目标\"),\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   pydantic_core._pydantic_core.ValidationError: 1 validation error for Constraint\nE   evidence_ids\nE     Field required [type=missing, input_value={'id': 'G02', 'text': '三个子目标'}, input_type=dict]\nE       For further information visit https://errors.pydantic.dev/2.14/v/missing"
+  }
+]

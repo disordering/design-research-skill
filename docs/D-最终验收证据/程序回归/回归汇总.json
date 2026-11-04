@@ -1,0 +1,30 @@
+{
+  "来源": "实际后端pytest与前端node test；不调用模型",
+  "后端主用例": 329,
+  "后端子场景": 3,
+  "后端JUnit": {
+    "tests": 332,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "前端": {
+    "tests": 29,
+    "passed": 29,
+    "failed": 0,
+    "skipped": 0
+  },
+  "Python": "3.12.14",
+  "Node": "v24.15.0",
+  "代码基线": "66a0f0919ada6d334565c3451e9f16ea95000bc9",
+  "本轮源码SHA256": {
+    "engine/session_service.py": "790f8f53014851ac718e79a33e83bf8c93d641fdd5e9fe691e4924d3a788945d",
+    "engine/session_adapters.py": "1c96354883b5c6b97cfca6e87813d351fa457948b3bf27a8accdf977857e5e27",
+    "engine/session_contracts.py": "efd364d33f28de0342c622292513d35207cfbceec462b83eded746120c575152",
+    "engine/session_verification.py": "809ccc248f5039b3081b41d070505ebe3faa296b6eec620eaf0f104d2ade832a",
+    "tests/test_d_acceptance_42.py": "eb7c5d196c46780dd8b2f1ba87ffa45f6d95e002ebe9548f78ca71bb7a821bc5",
+    "tests/test_d_browser_select.py": "4c8b600f1dd9d9b8e27ab98f3c83be2871106f46605e2459f3c48bedcd1e38cb"
+  },
+  "依赖加载": "site.addsitedir 加载已有独立依赖及Windows .pth；最终两套回归退出码均为0。",
+  "环境预检": "单独保留后端-环境预检.xml/txt：仅设置PYTHONPATH未初始化Windows pywin32 .pth，修正启动方式后原用例全过。"
+}

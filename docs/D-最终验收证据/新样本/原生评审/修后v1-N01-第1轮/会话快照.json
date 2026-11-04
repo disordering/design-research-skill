@@ -1,0 +1,5107 @@
+{
+  "review_mode": "runtime",
+  "schema_version": "session-1.0",
+  "session_id": "session-32a45f293ff44c558b747ea2e3092ff6",
+  "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+  "status": "completed",
+  "revision": 16,
+  "sequence": 16,
+  "context_version": 1,
+  "created_at": "2026-11-04T10:46:09.480735+00:00",
+  "updated_at": "2026-11-04T10:53:08.612327+00:00",
+  "request": {
+    "purpose": "本次检查本机演示原型的实际操作。按以下任务卡执行评审：\n任务名称：阅读版面设置与恢复\n材料来源：AI 制作的独立本地交互样本，版本 N01-v1。\n任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。\n初始状态：新开页面，标准字号、紧凑行距、白色背景。\n允许动作：选择字号和行距、切换背景、应用设置、恢复初始；可以等待反馈、查看预览。\n结束条件：完成应用和恢复，并观察两个结果；遇到阻碍则记录当前状态和原因。\n验收要求：\nREQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。\nREQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。\nREQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。\n请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。",
+    "actor": "D 新样本 AI 操作员",
+    "actor_type": "ai",
+    "design_purpose": "",
+    "target_user": "",
+    "sources": [
+      {
+        "kind": "website",
+        "reference": "http://127.0.0.1:49920/N01-%E9%98%85%E8%AF%BB%E8%AE%BE%E7%BD%AE/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+        "title": "N01-阅读设置",
+        "content": "",
+        "image_base64": "",
+        "version": "N01-v1",
+        "evidence_kind": "observation",
+        "role": "design",
+        "declared_by": "D 新样本 AI 操作员",
+        "document_base64": "",
+        "filename": "",
+        "figma_snapshot_id": ""
+      },
+      {
+        "kind": "document",
+        "reference": "",
+        "title": "N01-阅读设置任务要求",
+        "content": "任务名称：阅读版面设置与恢复\n材料来源：AI 制作的独立本地交互样本，版本 N01-v1。\n任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。\n初始状态：新开页面，标准字号、紧凑行距、白色背景。\n允许动作：选择字号和行距、切换背景、应用设置、恢复初始；可以等待反馈、查看预览。\n结束条件：完成应用和恢复，并观察两个结果；遇到阻碍则记录当前状态和原因。\n验收要求：\nREQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。\nREQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。\nREQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。\n请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。",
+        "image_base64": "",
+        "version": "冻结任务卡-v1",
+        "evidence_kind": null,
+        "role": "product_spec",
+        "declared_by": "D 新样本 AI 操作员",
+        "document_base64": "",
+        "filename": "",
+        "figma_snapshot_id": ""
+      }
+    ],
+    "limits": {
+      "max_actions": 24,
+      "max_checks": 160,
+      "max_model_calls": 100,
+      "max_review_rounds": 1,
+      "max_seconds": 7200,
+      "max_images_per_call": 10,
+      "max_material_chunks": 24,
+      "max_parallel_screens": 1
+    },
+    "allow_interaction": true,
+    "auto_run": false,
+    "provider": "generic",
+    "model_name": "gpt-6.1-sol",
+    "verifier_provider": null,
+    "verifier_model_name": null,
+    "require_structured_claims": true
+  },
+  "task_summary": "在本地演示样本 N01-v1 中，将阅读版面设为大字号、舒适行距和暖色背景，应用并查看预览，再恢复初始版面并检查选项及预览。当前仅有初始状态观察，尚无应用或恢复的操作结果。",
+  "scope": "",
+  "review_tasks": [
+    {
+      "task_id": "TASK-N01-01",
+      "text": "选择大字号、舒适行距和暖色背景，应用设置并查看阅读预览。",
+      "success_criteria": "预览与三个所选值一致；应用期间和完成后有明确状态反馈，处理期间避免重复提交。",
+      "evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "page_ids": [],
+      "state_ids": [],
+      "branches": [
+        {
+          "branch_id": "BR-N01-01",
+          "trigger": "选择大字号、舒适行距和暖色背景后应用设置。",
+          "expected_outcome": "应用后的阅读预览与用户所选字号、行距、背景一致。",
+          "evidence_ids": [
+            "ev-96a00dac4e8f4bee955da23bef9745f9"
+          ],
+          "basis": "explicit"
+        },
+        {
+          "branch_id": "BR-N01-02",
+          "trigger": "应用设置处于处理期间及完成后。",
+          "expected_outcome": "有明确状态反馈，处理期间避免重复提交。",
+          "evidence_ids": [
+            "ev-96a00dac4e8f4bee955da23bef9745f9"
+          ],
+          "basis": "explicit"
+        },
+        {
+          "branch_id": "BR-INF-68cbd58d867a",
+          "trigger": "任务目标：将版面设为大字号、舒适行距和暖色背景，应用后",
+          "expected_outcome": "查看预览",
+          "evidence_ids": [
+            "ev-96a00dac4e8f4bee955da23bef9745f9"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-7b1575d9f4b4",
+          "trigger": "遇到阻碍则记录当前状态和原因",
+          "expected_outcome": "完成该条件分支并按材料反馈",
+          "evidence_ids": [
+            "ev-96a00dac4e8f4bee955da23bef9745f9"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-93595f9b8ea8",
+          "trigger": "REQ-N01-01 应用后",
+          "expected_outcome": "的阅读预览与用户所选字号、行距、背景一致",
+          "evidence_ids": [
+            "ev-96a00dac4e8f4bee955da23bef9745f9"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-7b11fa35e571",
+          "trigger": "REQ-N01-02 应用期间和完成后",
+          "expected_outcome": "有明确状态反馈，处理期间避免重复提交",
+          "evidence_ids": [
+            "ev-96a00dac4e8f4bee955da23bef9745f9"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-9a3c91661da2",
+          "trigger": "REQ-N01-03 恢复初始后",
+          "expected_outcome": "三个选项及已应用预览共同恢复初始值",
+          "evidence_ids": [
+            "ev-96a00dac4e8f4bee955da23bef9745f9"
+          ],
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "task_id": "TASK-N01-02",
+      "text": "应用目标版面后，恢复初始版面并检查三个选项及已应用预览。",
+      "success_criteria": "三个选项及已应用预览共同恢复为标准字号、紧凑行距和白色背景。",
+      "evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "page_ids": [],
+      "state_ids": [],
+      "branches": [
+        {
+          "branch_id": "BR-N01-03",
+          "trigger": "应用目标版面后执行恢复初始。",
+          "expected_outcome": "三个选项及已应用预览共同恢复初始值。",
+          "evidence_ids": [
+            "ev-96a00dac4e8f4bee955da23bef9745f9"
+          ],
+          "basis": "explicit"
+        },
+        {
+          "branch_id": "BR-INF-a63731b557dd",
+          "trigger": "任务目标：将版面设为大字号、舒适行距和暖色背景，应用后",
+          "expected_outcome": "查看预览",
+          "evidence_ids": [
+            "ev-96a00dac4e8f4bee955da23bef9745f9"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-1b53bd962bc3",
+          "trigger": "遇到阻碍则记录当前状态和原因",
+          "expected_outcome": "完成该条件分支并按材料反馈",
+          "evidence_ids": [
+            "ev-96a00dac4e8f4bee955da23bef9745f9"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-7e7deb959da9",
+          "trigger": "REQ-N01-01 应用后",
+          "expected_outcome": "的阅读预览与用户所选字号、行距、背景一致",
+          "evidence_ids": [
+            "ev-96a00dac4e8f4bee955da23bef9745f9"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-69433914cb21",
+          "trigger": "REQ-N01-02 应用期间和完成后",
+          "expected_outcome": "有明确状态反馈，处理期间避免重复提交",
+          "evidence_ids": [
+            "ev-96a00dac4e8f4bee955da23bef9745f9"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-259016a3bba5",
+          "trigger": "REQ-N01-03 恢复初始后",
+          "expected_outcome": "三个选项及已应用预览共同恢复初始值",
+          "evidence_ids": [
+            "ev-96a00dac4e8f4bee955da23bef9745f9"
+          ],
+          "basis": "inferred"
+        }
+      ]
+    }
+  ],
+  "goals": [
+    {
+      "id": "G-N01-01",
+      "text": "完成阅读版面的目标设置、应用预览和初始版面恢复检查。",
+      "evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "is_assumption": false,
+      "parent_id": null,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+          "quote": "任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。"
+        }
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-N01-01",
+      "text": "应用后的阅读预览与用户所选字号、行距、背景一致。",
+      "evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "is_assumption": false,
+      "parent_id": "G-N01-01",
+      "source_quotes": [
+        {
+          "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+          "quote": "REQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。"
+        }
+      ]
+    },
+    {
+      "id": "REQ-N01-02",
+      "text": "应用期间和完成后有明确状态反馈，处理期间避免重复提交。",
+      "evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "is_assumption": false,
+      "parent_id": "G-N01-01",
+      "source_quotes": [
+        {
+          "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+          "quote": "REQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。"
+        }
+      ]
+    },
+    {
+      "id": "REQ-N01-03",
+      "text": "恢复初始后，三个选项及已应用预览共同恢复初始值；初始值为标准字号、紧凑行距、白色背景。",
+      "evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "is_assumption": false,
+      "parent_id": "G-N01-01",
+      "source_quotes": [
+        {
+          "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+          "quote": "REQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。"
+        },
+        {
+          "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+          "quote": "初始状态：新开页面，标准字号、紧凑行距、白色背景。"
+        }
+      ]
+    }
+  ],
+  "assumptions": [],
+  "sources": [
+    {
+      "source_id": "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+      "input": {
+        "kind": "website",
+        "reference": "http://127.0.0.1:49920/N01-%E9%98%85%E8%AF%BB%E8%AE%BE%E7%BD%AE/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+        "title": "N01-阅读设置",
+        "content": "",
+        "image_base64": "",
+        "version": "N01-v1",
+        "evidence_kind": "observation",
+        "role": "design",
+        "declared_by": "D 新样本 AI 操作员",
+        "document_base64": "",
+        "filename": "",
+        "figma_snapshot_id": ""
+      },
+      "acquisition_status": "success",
+      "error": "",
+      "captured_at": "2026-11-04T10:46:10.243491+00:00",
+      "observed_version": "N01-v1",
+      "active": true
+    },
+    {
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "input": {
+        "kind": "document",
+        "reference": "",
+        "title": "N01-阅读设置任务要求",
+        "content": "任务名称：阅读版面设置与恢复\n材料来源：AI 制作的独立本地交互样本，版本 N01-v1。\n任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。\n初始状态：新开页面，标准字号、紧凑行距、白色背景。\n允许动作：选择字号和行距、切换背景、应用设置、恢复初始；可以等待反馈、查看预览。\n结束条件：完成应用和恢复，并观察两个结果；遇到阻碍则记录当前状态和原因。\n验收要求：\nREQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。\nREQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。\nREQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。\n请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。",
+        "image_base64": "",
+        "version": "冻结任务卡-v1",
+        "evidence_kind": null,
+        "role": "product_spec",
+        "declared_by": "D 新样本 AI 操作员",
+        "document_base64": "",
+        "filename": "",
+        "figma_snapshot_id": ""
+      },
+      "acquisition_status": "success",
+      "error": "",
+      "captured_at": "2026-11-04T10:46:10.287535+00:00",
+      "observed_version": "冻结任务卡-v1",
+      "active": true
+    },
+    {
+      "source_id": "src-0b75f13c2c734b4494c3cacdf3c068fd",
+      "input": {
+        "kind": "document",
+        "reference": "user://initial_purpose",
+        "title": "initial_purpose",
+        "content": "本次检查本机演示原型的实际操作。按以下任务卡执行评审：\n任务名称：阅读版面设置与恢复\n材料来源：AI 制作的独立本地交互样本，版本 N01-v1。\n任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。\n初始状态：新开页面，标准字号、紧凑行距、白色背景。\n允许动作：选择字号和行距、切换背景、应用设置、恢复初始；可以等待反馈、查看预览。\n结束条件：完成应用和恢复，并观察两个结果；遇到阻碍则记录当前状态和原因。\n验收要求：\nREQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。\nREQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。\nREQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。\n请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。",
+        "image_base64": "",
+        "version": "context-1",
+        "evidence_kind": "statement",
+        "role": "review_instruction",
+        "declared_by": "D 新样本 AI 操作员",
+        "document_base64": "",
+        "filename": "",
+        "figma_snapshot_id": ""
+      },
+      "acquisition_status": "success",
+      "error": "",
+      "captured_at": "2026-11-04T10:46:10.332300+00:00",
+      "observed_version": "context-1",
+      "active": true
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "ev-c6d21d063e434730b10e7c627c28839a",
+      "source_id": "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+      "kind": "observation",
+      "source_version": "N01-v1",
+      "context_version": 1,
+      "captured_at": "2026-11-04T10:46:10.243491+00:00",
+      "locator": {
+        "url": "http://127.0.0.1:49920/N01-%E9%98%85%E8%AF%BB%E8%AE%BE%E7%BD%AE/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+        "title": "阅读设置",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "image_geometry": {
+          "width": 1440,
+          "height": 900,
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          }
+        },
+        "prototype_canvas": null,
+        "accessibility": {
+          "role": "document",
+          "name": "阅读设置",
+          "source": "dom_control_fallback",
+          "children": [
+            {
+              "role": "select",
+              "name": "文字大小",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            },
+            {
+              "role": "select",
+              "name": "段落行距",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            },
+            {
+              "role": "input",
+              "name": "使用暖色背景",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            },
+            {
+              "role": "button",
+              "name": "应用设置",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            },
+            {
+              "role": "button",
+              "name": "恢复初始",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            }
+          ]
+        },
+        "environment_session": "session-32a45f293ff44c558b747ea2e3092ff6",
+        "provided_version": "N01-v1",
+        "render_state": "captured",
+        "blocked_requests": [],
+        "controls": [
+          {
+            "selector": "[data-review-control=\"0\"]",
+            "label": "文字大小",
+            "tag": "select",
+            "type": "select-one",
+            "disabled": false,
+            "role": "select",
+            "ariaLabel": "",
+            "domId": "fontSize",
+            "name": "",
+            "testId": "",
+            "ancestorPath": "section>div>main>body>html",
+            "value": "normal",
+            "multiple": false,
+            "optionCount": 2,
+            "optionsTruncated": false,
+            "options": [
+              {
+                "label": "标准字号",
+                "value": "normal",
+                "selected": true,
+                "disabled": false,
+                "optgroup": ""
+              },
+              {
+                "label": "大字号",
+                "value": "big",
+                "selected": false,
+                "disabled": false,
+                "optgroup": ""
+              }
+            ],
+            "checked": false,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "title": "",
+            "fontSizePx": 18,
+            "fontWeight": "400",
+            "color": "rgb(23, 32, 51)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "contrastRatio": 16.27,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "x": 259,
+            "y": 236.984375,
+            "width": 420,
+            "height": 46
+          },
+          {
+            "selector": "[data-review-control=\"1\"]",
+            "label": "段落行距",
+            "tag": "select",
+            "type": "select-one",
+            "disabled": false,
+            "role": "select",
+            "ariaLabel": "",
+            "domId": "spacing",
+            "name": "",
+            "testId": "",
+            "ancestorPath": "section>div>main>body>html",
+            "value": "compact",
+            "multiple": false,
+            "optionCount": 2,
+            "optionsTruncated": false,
+            "options": [
+              {
+                "label": "紧凑行距",
+                "value": "compact",
+                "selected": true,
+                "disabled": false,
+                "optgroup": ""
+              },
+              {
+                "label": "舒适行距",
+                "value": "comfort",
+                "selected": false,
+                "disabled": false,
+                "optgroup": ""
+              }
+            ],
+            "checked": false,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "title": "",
+            "fontSizePx": 18,
+            "fontWeight": "400",
+            "color": "rgb(23, 32, 51)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "contrastRatio": 16.27,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "x": 259,
+            "y": 331.78125,
+            "width": 420,
+            "height": 46
+          },
+          {
+            "selector": "[data-review-control=\"2\"]",
+            "label": "使用暖色背景",
+            "tag": "input",
+            "type": "checkbox",
+            "disabled": false,
+            "role": "input",
+            "ariaLabel": "",
+            "domId": "warm",
+            "name": "",
+            "testId": "",
+            "ancestorPath": "label>section>div>main>body",
+            "value": "on",
+            "checked": false,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "title": "",
+            "fontSizePx": 18,
+            "fontWeight": "600",
+            "color": "rgb(0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "contrastRatio": 21,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "x": 263,
+            "y": 396.171875,
+            "width": 20,
+            "height": 20
+          },
+          {
+            "selector": "[data-review-control=\"3\"]",
+            "label": "应用设置",
+            "tag": "button",
+            "type": "submit",
+            "disabled": false,
+            "role": "button",
+            "ariaLabel": "",
+            "domId": "save",
+            "name": "",
+            "testId": "",
+            "ancestorPath": "div>section>div>main>body",
+            "value": "",
+            "checked": false,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "title": "",
+            "fontSizePx": 18,
+            "fontWeight": "400",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgb(36, 92, 218)",
+            "contrastRatio": 5.8,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "x": 259,
+            "y": 442.578125,
+            "width": 110,
+            "height": 50.796875
+          },
+          {
+            "selector": "[data-review-control=\"4\"]",
+            "label": "恢复初始",
+            "tag": "button",
+            "type": "submit",
+            "disabled": false,
+            "role": "button",
+            "ariaLabel": "",
+            "domId": "reset",
+            "name": "",
+            "testId": "",
+            "ancestorPath": "div>section>div>main>body",
+            "value": "",
+            "checked": false,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "title": "",
+            "fontSizePx": 18,
+            "fontWeight": "400",
+            "color": "rgb(23, 32, 51)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "contrastRatio": 16.27,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "x": 381,
+            "y": 442.578125,
+            "width": 110,
+            "height": 50.796875
+          }
+        ],
+        "partial": false
+      },
+      "content": "阅读设置\n设置阅读版面\n文字大小\n标准字号\n大字号\n段落行距\n紧凑行距\n舒适行距\n使用暖色背景\n应用设置\n恢复初始\n\n当前使用初始版面\n\n阅读预览\n城市中的绿意\n\n清晨沿着街角向前，树叶的影子落在长椅上。留一点时间观察身边的植物，熟悉的街道也会带来新的发现。\n\n已应用：标准字号 · 紧凑行距 · 白色背景\n\n本地演示 · N01-v1 · 操作仅在当前页面生效",
+      "artifact_id": "artifact-715f6fb417894d4d8f9aa55a9ad97180",
+      "raw_artifact_id": null,
+      "original_artifact_id": null,
+      "analysis_artifact_id": "artifact-3386f9cd87c34f0a8a21a99338e6d06b",
+      "overlay_artifact_ids": {
+        "overlay-elements.png": "artifact-0209fe9cd99846a499c8c91b99e4235f",
+        "overlay-focus.png": "artifact-84e5fb3be43c4e09933acfd72cd856a7",
+        "overlay-flow.png": "artifact-fd06148c873047fd9ce83bd4fd27dfda"
+      },
+      "analysis": {
+        "metric_version": "cv-metrics-v1",
+        "geometry_available": true,
+        "geometry_note": "",
+        "element_count": 5,
+        "connector_element_count": 0,
+        "ocr_block_count": 0,
+        "visible_text_node_count": 0,
+        "screen_crop": false,
+        "crop_kind": "source_capture",
+        "model_image_eligible": true,
+        "arrow_count": 0,
+        "arrow_annotations": [],
+        "arrow_interpretation_note": "箭头几何只确定画布位置、轴向和邻接画板；具体语义必须结合画面与说明核对，不能仅凭节点名断言跳转或因果关系。",
+        "source_modalities": [
+          "figma_screen_image",
+          "screenshot_pixels",
+          "browser_accessibility_tree"
+        ],
+        "accessibility_node_count": 6,
+        "measurement_scale_limited": false,
+        "measurement_scale_note": "",
+        "focus_top": [
+          {
+            "rank": 1,
+            "element_id": "E03",
+            "label": "使用暖色背景",
+            "role": "button",
+            "bbox": [
+              0.18263888888888888,
+              0.4401909722222222,
+              0.013888888888888888,
+              0.022222222222222223
+            ],
+            "focus_share": 0.2055
+          },
+          {
+            "rank": 2,
+            "element_id": "E05",
+            "label": "恢复初始",
+            "role": "button",
+            "bbox": [
+              0.26458333333333334,
+              0.4917534722222222,
+              0.0763888888888889,
+              0.05644097222222222
+            ],
+            "focus_share": 0.2025
+          },
+          {
+            "rank": 3,
+            "element_id": "E02",
+            "label": "段落行距",
+            "role": "button",
+            "bbox": [
+              0.1798611111111111,
+              0.36864583333333334,
+              0.2916666666666667,
+              0.051111111111111114
+            ],
+            "focus_share": 0.2005
+          },
+          {
+            "rank": 4,
+            "element_id": "E04",
+            "label": "应用设置",
+            "role": "button",
+            "bbox": [
+              0.1798611111111111,
+              0.4917534722222222,
+              0.0763888888888889,
+              0.05644097222222222
+            ],
+            "focus_share": 0.1964
+          },
+          {
+            "rank": 5,
+            "element_id": "E01",
+            "label": "文字大小",
+            "role": "button",
+            "bbox": [
+              0.1798611111111111,
+              0.26331597222222225,
+              0.2916666666666667,
+              0.051111111111111114
+            ],
+            "focus_share": 0.1952
+          }
+        ],
+        "readability": {
+          "text_block_count": 0,
+          "low_contrast_count": 0,
+          "small_text_candidate_count": 0,
+          "estimated_height_p10": 0.0,
+          "local_contrast_p10": 0.0
+        },
+        "global": {
+          "mean_luminance": 0.9614,
+          "luminance_p05": 0.9451,
+          "luminance_p50": 0.9647,
+          "luminance_p95": 1.0,
+          "luminance_contrast": 0.0829,
+          "bright_pixel_fraction": 0.9636,
+          "dark_pixel_fraction": 0.0006,
+          "mean_saturation": 0.0253,
+          "high_saturation_fraction": 0.0041,
+          "edge_density": 0.0563,
+          "high_frequency_mean": 0.0094,
+          "palette_entropy_bits": 1.6514,
+          "negative_space_proxy": 0.9437
+        },
+        "density": {
+          "element_count": 5,
+          "interactive_element_count": 5,
+          "ocr_text_block_count": 0,
+          "elements_per_megapixel": 3.86,
+          "interactive_coverage": 0.0387,
+          "text_coverage": 0.0,
+          "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+        },
+        "style": {
+          "control_count": 5,
+          "control_saturation_dispersion": 0.2883,
+          "control_contrast_dispersion": 0.0935,
+          "control_mean_saturation": 0.156,
+          "control_mean_contrast": 0.2298,
+          "note": "Dispersion measures same-role visual consistency only when roles are correctly labeled."
+        },
+        "analysis_source": "capture",
+        "analysis_artifact_id": "artifact-3386f9cd87c34f0a8a21a99338e6d06b",
+        "overlay_artifact_ids": {
+          "overlay-elements.png": "artifact-0209fe9cd99846a499c8c91b99e4235f",
+          "overlay-focus.png": "artifact-84e5fb3be43c4e09933acfd72cd856a7",
+          "overlay-flow.png": "artifact-fd06148c873047fd9ce83bd4fd27dfda"
+        }
+      },
+      "action_id": null,
+      "state_id": "b4b55ae03f67bcd1bd7bcbe0",
+      "objects": [
+        {
+          "object_id": "obj-9aea2a7a936c5d5793b0",
+          "identity_key": "http://127.0.0.1:49920/N01-%E9%98%85%E8%AF%BB%E8%AE%BE%E7%BD%AE/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+          "kind": "page",
+          "source_id": "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+          "state_id": "b4b55ae03f67bcd1bd7bcbe0",
+          "label": "阅读设置",
+          "role": "website",
+          "bbox": {},
+          "locator": {
+            "url": "http://127.0.0.1:49920/N01-%E9%98%85%E8%AF%BB%E8%AE%BE%E7%BD%AE/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+            "title": "阅读设置"
+          },
+          "interactable": false,
+          "attributes": {}
+        },
+        {
+          "object_id": "obj-39036c0950e6b18c5bda",
+          "identity_key": "id:fontSize",
+          "kind": "control",
+          "source_id": "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+          "state_id": "b4b55ae03f67bcd1bd7bcbe0",
+          "label": "文字大小",
+          "role": "select",
+          "bbox": {},
+          "locator": {
+            "selector": "[data-review-control=\"0\"]",
+            "label": "文字大小",
+            "name": "",
+            "tag": "select",
+            "type": "select-one",
+            "domId": "fontSize",
+            "testId": "",
+            "ancestorPath": "section>div>main>body>html",
+            "x": 259,
+            "y": 236.984375,
+            "width": 420,
+            "height": 46
+          },
+          "interactable": true,
+          "attributes": {
+            "checked": false,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "ariaLabel": "",
+            "title": "",
+            "domId": "fontSize",
+            "name": "",
+            "testId": "",
+            "ancestorPath": "section>div>main>body>html",
+            "fontSizePx": 18,
+            "fontWeight": "400",
+            "color": "rgb(23, 32, 51)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "contrastRatio": 16.27,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "role": "select",
+            "value": "normal"
+          }
+        },
+        {
+          "object_id": "obj-2d4d5ba410e1402b84e2",
+          "identity_key": "id:spacing",
+          "kind": "control",
+          "source_id": "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+          "state_id": "b4b55ae03f67bcd1bd7bcbe0",
+          "label": "段落行距",
+          "role": "select",
+          "bbox": {},
+          "locator": {
+            "selector": "[data-review-control=\"1\"]",
+            "label": "段落行距",
+            "name": "",
+            "tag": "select",
+            "type": "select-one",
+            "domId": "spacing",
+            "testId": "",
+            "ancestorPath": "section>div>main>body>html",
+            "x": 259,
+            "y": 331.78125,
+            "width": 420,
+            "height": 46
+          },
+          "interactable": true,
+          "attributes": {
+            "checked": false,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "ariaLabel": "",
+            "title": "",
+            "domId": "spacing",
+            "name": "",
+            "testId": "",
+            "ancestorPath": "section>div>main>body>html",
+            "fontSizePx": 18,
+            "fontWeight": "400",
+            "color": "rgb(23, 32, 51)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "contrastRatio": 16.27,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "role": "select",
+            "value": "compact"
+          }
+        },
+        {
+          "object_id": "obj-c1481bcb008aa28f02f2",
+          "identity_key": "id:warm",
+          "kind": "control",
+          "source_id": "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+          "state_id": "b4b55ae03f67bcd1bd7bcbe0",
+          "label": "使用暖色背景",
+          "role": "input",
+          "bbox": {},
+          "locator": {
+            "selector": "[data-review-control=\"2\"]",
+            "label": "使用暖色背景",
+            "name": "",
+            "tag": "input",
+            "type": "checkbox",
+            "domId": "warm",
+            "testId": "",
+            "ancestorPath": "label>section>div>main>body",
+            "x": 263,
+            "y": 396.171875,
+            "width": 20,
+            "height": 20
+          },
+          "interactable": true,
+          "attributes": {
+            "checked": false,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "ariaLabel": "",
+            "title": "",
+            "domId": "warm",
+            "name": "",
+            "testId": "",
+            "ancestorPath": "label>section>div>main>body",
+            "fontSizePx": 18,
+            "fontWeight": "600",
+            "color": "rgb(0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "contrastRatio": 21,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "role": "input",
+            "value": "on"
+          }
+        },
+        {
+          "object_id": "obj-07fe591537bb41ae2b27",
+          "identity_key": "id:save",
+          "kind": "control",
+          "source_id": "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+          "state_id": "b4b55ae03f67bcd1bd7bcbe0",
+          "label": "应用设置",
+          "role": "button",
+          "bbox": {},
+          "locator": {
+            "selector": "[data-review-control=\"3\"]",
+            "label": "应用设置",
+            "name": "",
+            "tag": "button",
+            "type": "submit",
+            "domId": "save",
+            "testId": "",
+            "ancestorPath": "div>section>div>main>body",
+            "x": 259,
+            "y": 442.578125,
+            "width": 110,
+            "height": 50.796875
+          },
+          "interactable": true,
+          "attributes": {
+            "checked": false,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "ariaLabel": "",
+            "title": "",
+            "domId": "save",
+            "name": "",
+            "testId": "",
+            "ancestorPath": "div>section>div>main>body",
+            "fontSizePx": 18,
+            "fontWeight": "400",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgb(36, 92, 218)",
+            "contrastRatio": 5.8,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "role": "button",
+            "value": ""
+          }
+        },
+        {
+          "object_id": "obj-3deaf62bb142b3fa80e4",
+          "identity_key": "id:reset",
+          "kind": "control",
+          "source_id": "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+          "state_id": "b4b55ae03f67bcd1bd7bcbe0",
+          "label": "恢复初始",
+          "role": "button",
+          "bbox": {},
+          "locator": {
+            "selector": "[data-review-control=\"4\"]",
+            "label": "恢复初始",
+            "name": "",
+            "tag": "button",
+            "type": "submit",
+            "domId": "reset",
+            "testId": "",
+            "ancestorPath": "div>section>div>main>body",
+            "x": 381,
+            "y": 442.578125,
+            "width": 110,
+            "height": 50.796875
+          },
+          "interactable": true,
+          "attributes": {
+            "checked": false,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "ariaLabel": "",
+            "title": "",
+            "domId": "reset",
+            "name": "",
+            "testId": "",
+            "ancestorPath": "div>section>div>main>body",
+            "fontSizePx": 18,
+            "fontWeight": "400",
+            "color": "rgb(23, 32, 51)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "contrastRatio": 16.27,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "role": "button",
+            "value": ""
+          }
+        }
+      ],
+      "stale": false
+    },
+    {
+      "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "kind": "requirement",
+      "source_version": "冻结任务卡-v1",
+      "context_version": 1,
+      "captured_at": "2026-11-04T10:46:10.287535+00:00",
+      "locator": {
+        "reference": "",
+        "resolved_reference": "",
+        "title": "N01-阅读设置任务要求",
+        "chunk_index": 0,
+        "chunk_count": 1,
+        "start_character": 0,
+        "end_character": 352,
+        "start_line": 1,
+        "end_line": 11,
+        "text_truncated": false,
+        "original_sha256": "4185b39427836d323fc88e00a7af4166bf45b7040fa1424c0884456dc444920d",
+        "controls": [],
+        "partial": false
+      },
+      "content": "任务名称：阅读版面设置与恢复\n材料来源：AI 制作的独立本地交互样本，版本 N01-v1。\n任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。\n初始状态：新开页面，标准字号、紧凑行距、白色背景。\n允许动作：选择字号和行距、切换背景、应用设置、恢复初始；可以等待反馈、查看预览。\n结束条件：完成应用和恢复，并观察两个结果；遇到阻碍则记录当前状态和原因。\n验收要求：\nREQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。\nREQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。\nREQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。\n请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。",
+      "artifact_id": null,
+      "raw_artifact_id": "artifact-cee0ab007aaa4d07afe96d5203112639",
+      "original_artifact_id": "artifact-a2e9671a37d6472da65c88327f6a8258",
+      "analysis_artifact_id": null,
+      "overlay_artifact_ids": {},
+      "analysis": {},
+      "action_id": null,
+      "state_id": "56c2e7b5d70996e284b10e96",
+      "objects": [
+        {
+          "object_id": "obj-42ae918d07e1b2a86761",
+          "identity_key": "src-e984ee13de234010a97d3c322a6e67fa",
+          "kind": "page",
+          "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+          "state_id": "56c2e7b5d70996e284b10e96",
+          "label": "N01-阅读设置任务要求",
+          "role": "document",
+          "bbox": {},
+          "locator": {
+            "title": "N01-阅读设置任务要求",
+            "reference": "",
+            "chunk_index": 0
+          },
+          "interactable": false,
+          "attributes": {}
+        },
+        {
+          "object_id": "obj-3f181737dec013550a76",
+          "identity_key": "chunk-0",
+          "kind": "document_section",
+          "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+          "state_id": "56c2e7b5d70996e284b10e96",
+          "label": "N01-阅读设置任务要求",
+          "role": "document",
+          "bbox": {},
+          "locator": {
+            "reference": "",
+            "resolved_reference": "",
+            "chunk_index": 0,
+            "chunk_count": 1,
+            "start_line": 1,
+            "end_line": 11
+          },
+          "interactable": false,
+          "attributes": {
+            "excerpt": "任务名称：阅读版面设置与恢复 材料来源：AI 制作的独立本地交互样本，版本 N01-v1。 任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。 初始状态：新开页面，标准字号、紧凑行距、白色背景。 允许动作：选择字号和行距、切换背景、应用设置、恢复初始；可以等待反馈、查看预览。 结束条件：完成应用和恢复，并观察两个结果；遇到阻碍则记录当前状态和原因。 验收要求： REQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。 REQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。 REQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。 请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。"
+          }
+        }
+      ],
+      "stale": false
+    },
+    {
+      "evidence_id": "ev-dc5f4846880d431c92d3af450e889187",
+      "source_id": "src-0b75f13c2c734b4494c3cacdf3c068fd",
+      "kind": "statement",
+      "source_version": "context-1",
+      "context_version": 1,
+      "captured_at": "2026-11-04T10:46:10.332300+00:00",
+      "locator": {
+        "reference": "user://initial_purpose",
+        "resolved_reference": "user://initial_purpose",
+        "title": "initial_purpose",
+        "chunk_index": 0,
+        "chunk_count": 1,
+        "start_character": 0,
+        "end_character": 380,
+        "start_line": 1,
+        "end_line": 12,
+        "text_truncated": false,
+        "original_sha256": "49860dc0d42ac9fce0934778924ae55c38b8c96cf6ad37d933e2288d314d71d0",
+        "controls": [],
+        "partial": false
+      },
+      "content": "本次检查本机演示原型的实际操作。按以下任务卡执行评审：\n任务名称：阅读版面设置与恢复\n材料来源：AI 制作的独立本地交互样本，版本 N01-v1。\n任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。\n初始状态：新开页面，标准字号、紧凑行距、白色背景。\n允许动作：选择字号和行距、切换背景、应用设置、恢复初始；可以等待反馈、查看预览。\n结束条件：完成应用和恢复，并观察两个结果；遇到阻碍则记录当前状态和原因。\n验收要求：\nREQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。\nREQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。\nREQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。\n请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。",
+      "artifact_id": null,
+      "raw_artifact_id": "artifact-00f687214b5c4db9bc77f44873dfed1f",
+      "original_artifact_id": "artifact-aaeda4eb32354b66b164926e28f7357f",
+      "analysis_artifact_id": null,
+      "overlay_artifact_ids": {},
+      "analysis": {},
+      "action_id": null,
+      "state_id": "962fb91f06d595e92cedaee9",
+      "objects": [
+        {
+          "object_id": "obj-81e0944f9924b5e79112",
+          "identity_key": "user://initial_purpose",
+          "kind": "page",
+          "source_id": "src-0b75f13c2c734b4494c3cacdf3c068fd",
+          "state_id": "962fb91f06d595e92cedaee9",
+          "label": "initial_purpose",
+          "role": "document",
+          "bbox": {},
+          "locator": {
+            "title": "initial_purpose",
+            "reference": "user://initial_purpose",
+            "chunk_index": 0
+          },
+          "interactable": false,
+          "attributes": {}
+        },
+        {
+          "object_id": "obj-b80538d6301b0a865a74",
+          "identity_key": "chunk-0",
+          "kind": "document_section",
+          "source_id": "src-0b75f13c2c734b4494c3cacdf3c068fd",
+          "state_id": "962fb91f06d595e92cedaee9",
+          "label": "initial_purpose",
+          "role": "document",
+          "bbox": {},
+          "locator": {
+            "reference": "user://initial_purpose",
+            "resolved_reference": "user://initial_purpose",
+            "chunk_index": 0,
+            "chunk_count": 1,
+            "start_line": 1,
+            "end_line": 12
+          },
+          "interactable": false,
+          "attributes": {
+            "excerpt": "本次检查本机演示原型的实际操作。按以下任务卡执行评审： 任务名称：阅读版面设置与恢复 材料来源：AI 制作的独立本地交互样本，版本 N01-v1。 任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。 初始状态：新开页面，标准字号、紧凑行距、白色背景。 允许动作：选择字号和行距、切换背景、应用设置、恢复初始；可以等待反馈、查看预览。 结束条件：完成应用和恢复，并观察两个结果；遇到阻碍则记录当前状态和原因。 验收要求： REQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。 REQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。 REQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。 请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。"
+          }
+        }
+      ],
+      "stale": false
+    }
+  ],
+  "page_states": [
+    {
+      "page_id": "page-9ff1abfb26262614",
+      "state_id": "b4b55ae03f67bcd1bd7bcbe0",
+      "source_id": "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+      "context_version": 1,
+      "locator": {
+        "url": "http://127.0.0.1:49920/N01-%E9%98%85%E8%AF%BB%E8%AE%BE%E7%BD%AE/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+        "title": "阅读设置",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "image_geometry": {
+          "width": 1440,
+          "height": 900,
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          }
+        },
+        "prototype_canvas": null,
+        "accessibility": {
+          "role": "document",
+          "name": "阅读设置",
+          "source": "dom_control_fallback",
+          "children": [
+            {
+              "role": "select",
+              "name": "文字大小",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            },
+            {
+              "role": "select",
+              "name": "段落行距",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            },
+            {
+              "role": "input",
+              "name": "使用暖色背景",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            },
+            {
+              "role": "button",
+              "name": "应用设置",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            },
+            {
+              "role": "button",
+              "name": "恢复初始",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            }
+          ]
+        },
+        "environment_session": "session-32a45f293ff44c558b747ea2e3092ff6",
+        "provided_version": "N01-v1",
+        "render_state": "captured",
+        "blocked_requests": []
+      },
+      "evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "mode": "observation"
+    }
+  ],
+  "transitions": [],
+  "flow_graph": {
+    "schema_version": "session-flow-1.0",
+    "context_version": 1,
+    "nodes": [
+      {
+        "state_id": "b4b55ae03f67bcd1bd7bcbe0",
+        "page_id": "page-9ff1abfb26262614",
+        "source_id": "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "context_version": 1,
+        "mode": "observation",
+        "locator": {
+          "url": "http://127.0.0.1:49920/N01-%E9%98%85%E8%AF%BB%E8%AE%BE%E7%BD%AE/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+          "title": "阅读设置",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "image_geometry": {
+            "width": 1440,
+            "height": 900,
+            "region": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "prototype_canvas": null,
+          "accessibility": {
+            "role": "document",
+            "name": "阅读设置",
+            "source": "dom_control_fallback",
+            "children": [
+              {
+                "role": "select",
+                "name": "文字大小",
+                "pressed": null,
+                "expanded": null,
+                "checked": false
+              },
+              {
+                "role": "select",
+                "name": "段落行距",
+                "pressed": null,
+                "expanded": null,
+                "checked": false
+              },
+              {
+                "role": "input",
+                "name": "使用暖色背景",
+                "pressed": null,
+                "expanded": null,
+                "checked": false
+              },
+              {
+                "role": "button",
+                "name": "应用设置",
+                "pressed": null,
+                "expanded": null,
+                "checked": false
+              },
+              {
+                "role": "button",
+                "name": "恢复初始",
+                "pressed": null,
+                "expanded": null,
+                "checked": false
+              }
+            ]
+          },
+          "environment_session": "session-32a45f293ff44c558b747ea2e3092ff6",
+          "provided_version": "N01-v1",
+          "render_state": "captured",
+          "blocked_requests": []
+        },
+        "evidence_ids": [
+          "ev-c6d21d063e434730b10e7c627c28839a"
+        ],
+        "check_ids": [],
+        "covered": false,
+        "reviewed": false,
+        "incoming": 0,
+        "outgoing": 0
+      }
+    ],
+    "edges": [],
+    "uncovered_task_states": [],
+    "summary": {
+      "state_count": 1,
+      "transition_count": 0,
+      "covered_state_count": 0,
+      "uncovered_task_state_count": 0
+    }
+  },
+  "required_coverage": [
+    {
+      "coverage_id": "coverage-8feebfcf352e8f36",
+      "task_id": "TASK-N01-01",
+      "task_text": "选择大字号、舒适行距和暖色背景，应用设置并查看阅读预览。",
+      "branch_id": "BR-N01-01",
+      "trigger": "选择大字号、舒适行距和暖色背景后应用设置。",
+      "expected_outcome": "应用后的阅读预览与用户所选字号、行距、背景一致。",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-740c6165fad8e0ad",
+      "task_id": "TASK-N01-01",
+      "task_text": "选择大字号、舒适行距和暖色背景，应用设置并查看阅读预览。",
+      "branch_id": "BR-N01-02",
+      "trigger": "应用设置处于处理期间及完成后。",
+      "expected_outcome": "有明确状态反馈，处理期间避免重复提交。",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-c7e6550b1db32aa6",
+      "task_id": "TASK-N01-01",
+      "task_text": "选择大字号、舒适行距和暖色背景，应用设置并查看阅读预览。",
+      "branch_id": "BR-INF-68cbd58d867a",
+      "trigger": "任务目标：将版面设为大字号、舒适行距和暖色背景，应用后",
+      "expected_outcome": "查看预览",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-73ad4f0bbd4edd0f",
+      "task_id": "TASK-N01-01",
+      "task_text": "选择大字号、舒适行距和暖色背景，应用设置并查看阅读预览。",
+      "branch_id": "BR-INF-7b1575d9f4b4",
+      "trigger": "遇到阻碍则记录当前状态和原因",
+      "expected_outcome": "完成该条件分支并按材料反馈",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-28561631ef5c1943",
+      "task_id": "TASK-N01-01",
+      "task_text": "选择大字号、舒适行距和暖色背景，应用设置并查看阅读预览。",
+      "branch_id": "BR-INF-93595f9b8ea8",
+      "trigger": "REQ-N01-01 应用后",
+      "expected_outcome": "的阅读预览与用户所选字号、行距、背景一致",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-49e1191f85849c7e",
+      "task_id": "TASK-N01-01",
+      "task_text": "选择大字号、舒适行距和暖色背景，应用设置并查看阅读预览。",
+      "branch_id": "BR-INF-7b11fa35e571",
+      "trigger": "REQ-N01-02 应用期间和完成后",
+      "expected_outcome": "有明确状态反馈，处理期间避免重复提交",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-01e61b924e816181",
+      "task_id": "TASK-N01-01",
+      "task_text": "选择大字号、舒适行距和暖色背景，应用设置并查看阅读预览。",
+      "branch_id": "BR-INF-9a3c91661da2",
+      "trigger": "REQ-N01-03 恢复初始后",
+      "expected_outcome": "三个选项及已应用预览共同恢复初始值",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "task_id": "TASK-N01-01",
+      "task_text": "选择大字号、舒适行距和暖色背景，应用设置并查看阅读预览。",
+      "page_id": "",
+      "state_id": "",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "task",
+      "gap_class": "task_not_planned"
+    },
+    {
+      "coverage_id": "coverage-25821a585b8d4b9f",
+      "task_id": "TASK-N01-02",
+      "task_text": "应用目标版面后，恢复初始版面并检查三个选项及已应用预览。",
+      "branch_id": "BR-N01-03",
+      "trigger": "应用目标版面后执行恢复初始。",
+      "expected_outcome": "三个选项及已应用预览共同恢复初始值。",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-35d643f1d1e726c8",
+      "task_id": "TASK-N01-02",
+      "task_text": "应用目标版面后，恢复初始版面并检查三个选项及已应用预览。",
+      "branch_id": "BR-INF-a63731b557dd",
+      "trigger": "任务目标：将版面设为大字号、舒适行距和暖色背景，应用后",
+      "expected_outcome": "查看预览",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-815d8fd735d23a2f",
+      "task_id": "TASK-N01-02",
+      "task_text": "应用目标版面后，恢复初始版面并检查三个选项及已应用预览。",
+      "branch_id": "BR-INF-1b53bd962bc3",
+      "trigger": "遇到阻碍则记录当前状态和原因",
+      "expected_outcome": "完成该条件分支并按材料反馈",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-a2d15a3fbad574f7",
+      "task_id": "TASK-N01-02",
+      "task_text": "应用目标版面后，恢复初始版面并检查三个选项及已应用预览。",
+      "branch_id": "BR-INF-7e7deb959da9",
+      "trigger": "REQ-N01-01 应用后",
+      "expected_outcome": "的阅读预览与用户所选字号、行距、背景一致",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-b1e90fc023928f17",
+      "task_id": "TASK-N01-02",
+      "task_text": "应用目标版面后，恢复初始版面并检查三个选项及已应用预览。",
+      "branch_id": "BR-INF-69433914cb21",
+      "trigger": "REQ-N01-02 应用期间和完成后",
+      "expected_outcome": "有明确状态反馈，处理期间避免重复提交",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-1330b3666dd938a0",
+      "task_id": "TASK-N01-02",
+      "task_text": "应用目标版面后，恢复初始版面并检查三个选项及已应用预览。",
+      "branch_id": "BR-INF-259016a3bba5",
+      "trigger": "REQ-N01-03 恢复初始后",
+      "expected_outcome": "三个选项及已应用预览共同恢复初始值",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-b8612a8630caf22a",
+      "task_id": "TASK-N01-02",
+      "task_text": "应用目标版面后，恢复初始版面并检查三个选项及已应用预览。",
+      "page_id": "",
+      "state_id": "",
+      "source_id": "src-e984ee13de234010a97d3c322a6e67fa",
+      "covered": false,
+      "coverage_kind": "task",
+      "gap_class": "task_not_planned"
+    }
+  ],
+  "questions": [],
+  "actions": [],
+  "checks": [
+    {
+      "check_id": "check-f6e3746f2eae53c2",
+      "ref": "G-N01-01",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "目标版面选择、应用及预览观察",
+      "task_id": "TASK-N01-01",
+      "kind": "goal",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "任务卡明确要求完成目标设置并查看预览；当前仅有初始状态，需补实际操作结果。",
+      "evidence_needed": [
+        "三个目标选项选定后的记录",
+        "应用动作、处理期间及完成后的预览记录"
+      ],
+      "object_refs": [
+        "文字大小",
+        "段落行距",
+        "使用暖色背景",
+        "应用设置",
+        "阅读预览"
+      ],
+      "object_ids": [
+        "obj-39036c0950e6b18c5bda",
+        "obj-2d4d5ba410e1402b84e2",
+        "obj-c1481bcb008aa28f02f2",
+        "obj-07fe591537bb41ae2b27",
+        "obj-9aea2a7a936c5d5793b0"
+      ],
+      "constraint_refs": [
+        "G-N01-01",
+        "REQ-N01-01",
+        "REQ-N01-02"
+      ],
+      "plan_evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9",
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-4f4a76df2775f56a",
+      "ref": "REQ-N01-01",
+      "coverage_id": "coverage-8feebfcf352e8f36",
+      "coverage_title": "应用后预览与三个目标选项一致",
+      "task_id": "TASK-N01-01",
+      "kind": "goal",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "明确要求应用后预览匹配所选值；应核对实际样式与已应用摘要，不能只查摘要文字。",
+      "evidence_needed": [
+        "大字号、舒适行距和暖色背景选定记录",
+        "应用后预览实际样式及摘要，与初始状态的对照"
+      ],
+      "object_refs": [
+        "文字大小",
+        "段落行距",
+        "使用暖色背景",
+        "阅读预览及已应用摘要"
+      ],
+      "object_ids": [
+        "obj-39036c0950e6b18c5bda",
+        "obj-2d4d5ba410e1402b84e2",
+        "obj-c1481bcb008aa28f02f2",
+        "obj-9aea2a7a936c5d5793b0"
+      ],
+      "constraint_refs": [
+        "REQ-N01-01"
+      ],
+      "plan_evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9",
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-66236f8f24406ba7",
+      "ref": "REQ-N01-02",
+      "coverage_id": "coverage-740c6165fad8e0ad",
+      "coverage_title": "应用处理期间及完成后的反馈与重复提交防护",
+      "task_id": "TASK-N01-01",
+      "kind": "goal",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "任务卡明确要求处理反馈和防重复提交；初始按钮可用不代表处理期间仍可重复提交。",
+      "evidence_needed": [
+        "应用触发后处理期间的反馈和按钮状态",
+        "处理期间重复提交被阻止的实际证据",
+        "应用完成后的状态反馈"
+      ],
+      "object_refs": [
+        "应用设置",
+        "状态反馈区域"
+      ],
+      "object_ids": [
+        "obj-07fe591537bb41ae2b27",
+        "obj-9aea2a7a936c5d5793b0"
+      ],
+      "constraint_refs": [
+        "REQ-N01-02"
+      ],
+      "plan_evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9",
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-3ddba40dc141569c",
+      "ref": "REQ-N01-03",
+      "coverage_id": "coverage-25821a585b8d4b9f",
+      "coverage_title": "恢复后三个选项与已应用预览共同回到初始值",
+      "task_id": "TASK-N01-02",
+      "kind": "goal",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "明确要求选项和预览共同恢复；以初始截图为基线，检查恢复动作后的实际值与样式。",
+      "evidence_needed": [
+        "目标版面应用完成后的记录",
+        "恢复初始动作及选项值记录",
+        "恢复后预览实际样式、摘要及反馈"
+      ],
+      "object_refs": [
+        "恢复初始",
+        "文字大小",
+        "段落行距",
+        "使用暖色背景",
+        "阅读预览"
+      ],
+      "object_ids": [
+        "obj-3deaf62bb142b3fa80e4",
+        "obj-39036c0950e6b18c5bda",
+        "obj-2d4d5ba410e1402b84e2",
+        "obj-c1481bcb008aa28f02f2",
+        "obj-9aea2a7a936c5d5793b0"
+      ],
+      "constraint_refs": [
+        "REQ-N01-03"
+      ],
+      "plan_evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9",
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-5f6f48046463e9dc",
+      "ref": "E07",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "应用任务对应明确要求的落实",
+      "task_id": "TASK-N01-01",
+      "kind": "goal",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "存在可检查的预览一致性、反馈及防重复提交要求；分别核对后汇总，不以初始画面判完成。",
+      "evidence_needed": [
+        "选择和应用的动作记录及结果",
+        "处理期间、完成后反馈及防重复提交证据"
+      ],
+      "object_refs": [
+        "阅读设置页面的应用任务"
+      ],
+      "object_ids": [
+        "obj-9aea2a7a936c5d5793b0",
+        "obj-07fe591537bb41ae2b27"
+      ],
+      "constraint_refs": [
+        "G-N01-01",
+        "REQ-N01-01",
+        "REQ-N01-02"
+      ],
+      "plan_evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9",
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-438f73a166a7318b",
+      "ref": "E08",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "同一样本目标设置与恢复约束的兼容性",
+      "task_id": "TASK-N01-01",
+      "kind": "conflict",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-0b75f13c2c734b4494c3cacdf3c068fd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "多项要求指向同一样本，可核对时序及约束兼容性；委托复述不是独立要求，实现差异也不自动构成冲突。",
+      "evidence_needed": [],
+      "object_refs": [
+        "N01-v1任务目标及三项验收要求"
+      ],
+      "object_ids": [
+        "obj-3f181737dec013550a76",
+        "obj-b80538d6301b0a865a74"
+      ],
+      "constraint_refs": [
+        "G-N01-01",
+        "REQ-N01-01",
+        "REQ-N01-02",
+        "REQ-N01-03"
+      ],
+      "plan_evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9",
+        "ev-dc5f4846880d431c92d3af450e889187"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "statement"
+      ]
+    },
+    {
+      "check_id": "check-6db0bc25fd4f93d3",
+      "ref": "R01",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "独立阅读设置页的页面级导航适用性",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "任务卡限定独立本地单页样本及页内操作，完整初始页面与控件结构无页面级导航；字号选项不属导航。",
+      "evidence_needed": [],
+      "object_refs": [
+        "阅读设置独立页面"
+      ],
+      "object_ids": [
+        "obj-9aea2a7a936c5d5793b0"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9",
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-8c650cea2ab94d73",
+      "ref": "R02",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "独立单页设置任务的步骤位置适用性",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "任务卡与页面共同确认选择、应用和恢复均在独立单页完成；操作先后不构成需标识当前位置的分步页面流程。",
+      "evidence_needed": [],
+      "object_refs": [
+        "阅读设置独立页面"
+      ],
+      "object_ids": [
+        "obj-9aea2a7a936c5d5793b0"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9",
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-e559bf48800facc8",
+      "ref": "R03",
+      "coverage_id": "coverage-740c6165fad8e0ad",
+      "coverage_title": "应用设置期间的等待说明",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "needs_context",
+      "reevaluation_requested": false,
+      "plan_reason": "初始画面为非等待状态；尚无应用后的观察，不能确认是否出现等待及其说明。",
+      "evidence_needed": [
+        "应用触发动作与处理期间画面",
+        "观察时长及前后状态"
+      ],
+      "object_refs": [
+        "应用设置",
+        "状态反馈区域"
+      ],
+      "object_ids": [
+        "obj-07fe591537bb41ae2b27"
+      ],
+      "constraint_refs": [
+        "REQ-N01-02"
+      ],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a",
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "required_evidence_kinds": [
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-14caa5160427a574",
+      "ref": "R04",
+      "coverage_id": "coverage-8feebfcf352e8f36",
+      "coverage_title": "应用完成后的结果表达",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "needs_context",
+      "reevaluation_requested": false,
+      "plan_reason": "当前仅有初始版面说明，未取得本次应用完成状态，需确认完成对象及反馈内容。",
+      "evidence_needed": [
+        "选择目标版面并应用的动作记录",
+        "完成后的反馈与预览画面"
+      ],
+      "object_refs": [
+        "应用设置",
+        "阅读预览",
+        "已应用摘要"
+      ],
+      "object_ids": [
+        "obj-07fe591537bb41ae2b27"
+      ],
+      "constraint_refs": [
+        "REQ-N01-01",
+        "REQ-N01-02"
+      ],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a",
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "required_evidence_kinds": [
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-811e8bb812875c3d",
+      "ref": "R05",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "设置页面关键任务文案的用户熟悉度",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "needs_context",
+      "reevaluation_requested": false,
+      "plan_reason": "关键任务文案可见，但目标用户、专业程度及熟悉度未提供，不能据日常用词推定理解情况。",
+      "evidence_needed": [
+        "目标用户及专业程度依据",
+        "若存在疑似内部术语，其含义、任务必要性和用户熟悉度依据"
+      ],
+      "object_refs": [
+        "文字大小",
+        "段落行距",
+        "使用暖色背景"
+      ],
+      "object_ids": [
+        "obj-39036c0950e6b18c5bda",
+        "obj-2d4d5ba410e1402b84e2",
+        "obj-c1481bcb008aa28f02f2"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a",
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "required_evidence_kinds": [
+        "statement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-7ba9e809ec59a1c5",
+      "ref": "R06",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "应用设置入口的预期结果命名",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "任务卡明确应用目的，初始画面完整呈现“应用设置”及邻近选项，可检查名称是否说明预期动作。",
+      "evidence_needed": [],
+      "object_refs": [
+        "应用设置"
+      ],
+      "object_ids": [
+        "obj-07fe591537bb41ae2b27"
+      ],
+      "constraint_refs": [
+        "REQ-N01-01"
+      ],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a",
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-9b54bc5cb86a177e",
+      "ref": "R07",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "版面设置字段名称及选择后持续可见性",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "任务需要操作两个选择框及背景复选框，字段用途明确；可检查现有标签，选择后的持续性仍需观察。",
+      "evidence_needed": [
+        "选择大字号、舒适行距及暖色背景后的字段画面"
+      ],
+      "object_refs": [
+        "文字大小",
+        "段落行距",
+        "使用暖色背景"
+      ],
+      "object_ids": [
+        "obj-39036c0950e6b18c5bda",
+        "obj-2d4d5ba410e1402b84e2",
+        "obj-c1481bcb008aa28f02f2"
+      ],
+      "constraint_refs": [
+        "REQ-N01-01"
+      ],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a",
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-c1a215be0071436b",
+      "ref": "R08",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "初始设置页面的普通弹窗适用性",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "当前完整截图呈现普通设置页，未处于占据焦点的弹窗状态；此结论仅限初始状态。",
+      "evidence_needed": [],
+      "object_refs": [
+        "阅读设置初始页面"
+      ],
+      "object_ids": [
+        "obj-9aea2a7a936c5d5793b0"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-cd008d8c7b115bf0",
+      "ref": "R09",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "独立设置页面的步骤返回适用性",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "任务卡说明为独立本地样本的新开页面，截图为同页设置与预览，当前并非多步骤任务的非首步页面。",
+      "evidence_needed": [],
+      "object_refs": [
+        "阅读设置初始页面"
+      ],
+      "object_ids": [
+        "obj-9aea2a7a936c5d5793b0"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a",
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-6984c9f7ca1ba527",
+      "ref": "R10",
+      "coverage_id": "coverage-b8612a8630caf22a",
+      "coverage_title": "本地版面恢复操作的高风险确认适用性",
+      "task_id": "TASK-N01-02",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "材料限定操作仅影响本地页面，恢复对象为三个版面选项与预览；无对象损失或不可逆后果，不属于高风险确认。",
+      "evidence_needed": [],
+      "object_refs": [
+        "恢复初始"
+      ],
+      "object_ids": [
+        "obj-3deaf62bb142b3fa80e4"
+      ],
+      "constraint_refs": [
+        "REQ-N01-03"
+      ],
+      "plan_evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9",
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-76638df410bd795d",
+      "ref": "R11",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "阅读设置页的动作入口命名",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "当前完整页面中，应用和恢复各有一个入口，且是不同动作；没有同一动作的多个入口可比较。",
+      "evidence_needed": [],
+      "object_refs": [
+        "应用设置",
+        "恢复初始"
+      ],
+      "object_ids": [
+        "obj-07fe591537bb41ae2b27",
+        "obj-3deaf62bb142b3fa80e4"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-8f8301f9e84b74f1",
+      "ref": "R12",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "阅读设置页两个选择控件的视觉规则",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "字号与行距均为同一设置组内、启用状态的单选下拉框，可比较呈现规则；应用与恢复按钮的强调差异需结合动作层级解释。",
+      "evidence_needed": [],
+      "object_refs": [
+        "文字大小",
+        "段落行距"
+      ],
+      "object_ids": [
+        "obj-39036c0950e6b18c5bda",
+        "obj-2d4d5ba410e1402b84e2"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-2295551c5285385b",
+      "ref": "R13",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "阅读设置项的必填要求适用性",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "needs_context",
+      "reevaluation_requested": false,
+      "plan_reason": "已见预选下拉框和背景复选框，但材料未说明是否存在必填要求；任务指定目标值不等于字段必填规则。",
+      "evidence_needed": [
+        "确认是否存在必填字段及其要求来源；若明确没有，则不适用。"
+      ],
+      "object_refs": [
+        "文字大小",
+        "段落行距",
+        "使用暖色背景"
+      ],
+      "object_ids": [
+        "obj-39036c0950e6b18c5bda",
+        "obj-2d4d5ba410e1402b84e2",
+        "obj-c1481bcb008aa28f02f2"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a",
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-89325b35890a79a3",
+      "ref": "R14",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "字号与行距有效选项的事前提示",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "控件记录明确列出字号和行距各两个有效选项，可核对字段名称及展开选项是否清楚表达允许值，无需另设格式阈值。",
+      "evidence_needed": [
+        "选择目标值时取得两个下拉框展开后的可见选项证据。"
+      ],
+      "object_refs": [
+        "文字大小",
+        "段落行距"
+      ],
+      "object_ids": [
+        "obj-39036c0950e6b18c5bda",
+        "obj-2d4d5ba410e1402b84e2"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-fa46ac4255488b15",
+      "ref": "R15",
+      "coverage_id": "coverage-b8612a8630caf22a",
+      "coverage_title": "本地版面恢复的操作后果",
+      "task_id": "TASK-N01-02",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "任务卡明确操作仅影响本地页面，恢复对象为阅读版面初始值；材料没有对象损失、不可逆或其他高后果操作。",
+      "evidence_needed": [],
+      "object_refs": [
+        "恢复初始"
+      ],
+      "object_ids": [
+        "obj-3deaf62bb142b3fa80e4"
+      ],
+      "constraint_refs": [
+        "REQ-N01-03"
+      ],
+      "plan_evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "required_evidence_kinds": [
+        "requirement"
+      ]
+    },
+    {
+      "check_id": "check-9e15f2586e6caa67",
+      "ref": "R16",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "阅读设置主任务入口的图标适用性",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "完整页面中的任务入口均有文字标签；下拉箭头附属于已命名选择控件，没有独立承担主任务的重要图标操作。",
+      "evidence_needed": [],
+      "object_refs": [
+        "阅读设置页五个操作控件"
+      ],
+      "object_ids": [
+        "obj-39036c0950e6b18c5bda",
+        "obj-2d4d5ba410e1402b84e2",
+        "obj-c1481bcb008aa28f02f2",
+        "obj-07fe591537bb41ae2b27",
+        "obj-3deaf62bb142b3fa80e4"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-c8b4d1cdcccad512",
+      "ref": "R17",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "目标版面选择前后的当前选项表达",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "初始下拉框已有确定选中值，背景复选框为未勾选；应核对选择目标值后可见表达与实际控件状态，不能仅凭点击判定已选。",
+      "evidence_needed": [
+        "选择大字号、舒适行距并勾选暖色背景后的画面与控件状态。"
+      ],
+      "object_refs": [
+        "文字大小",
+        "段落行距",
+        "使用暖色背景"
+      ],
+      "object_ids": [
+        "obj-39036c0950e6b18c5bda",
+        "obj-2d4d5ba410e1402b84e2",
+        "obj-c1481bcb008aa28f02f2"
+      ],
+      "constraint_refs": [
+        "REQ-N01-01"
+      ],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a",
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "required_evidence_kinds": [
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-5d8a2aee3cbe3978",
+      "ref": "R18",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "coverage_title": "三个阅读版面选项的分组",
+      "task_id": "TASK-N01-01",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "控件记录确认两个单选下拉框和一个复选框；任务卡确认三者共同设置阅读版面，可检查组标题、标签、间距和边界。",
+      "evidence_needed": [],
+      "object_refs": [
+        "设置阅读版面组：文字大小、段落行距、使用暖色背景"
+      ],
+      "object_ids": [
+        "obj-39036c0950e6b18c5bda",
+        "obj-2d4d5ba410e1402b84e2",
+        "obj-c1481bcb008aa28f02f2"
+      ],
+      "constraint_refs": [
+        "G-N01-01"
+      ],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a",
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-9d8856d8c6227455",
+      "ref": "R19",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-0b75f13c2c734b4494c3cacdf3c068fd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-0e9b91ae8134692d",
+      "ref": "R20",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-0b75f13c2c734b4494c3cacdf3c068fd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-0670f8ea51020513",
+      "ref": "R21",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-0b75f13c2c734b4494c3cacdf3c068fd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-cff9109491762457",
+      "ref": "R22",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-0b75f13c2c734b4494c3cacdf3c068fd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-c88159d3136f3ab2",
+      "ref": "R23",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-0b75f13c2c734b4494c3cacdf3c068fd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-5befc57a956b7ca3",
+      "ref": "R24",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-0b75f13c2c734b4494c3cacdf3c068fd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-e7e7dd241b31082d",
+      "ref": "E01",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-0b75f13c2c734b4494c3cacdf3c068fd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-d134709e21f92151",
+      "ref": "E02",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-0b75f13c2c734b4494c3cacdf3c068fd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-1454eab04012fd46",
+      "ref": "E03",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-0b75f13c2c734b4494c3cacdf3c068fd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-bf3d2191e215de96",
+      "ref": "E04",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-0b75f13c2c734b4494c3cacdf3c068fd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-26e2b663c8399b7c",
+      "ref": "E05",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-0b75f13c2c734b4494c3cacdf3c068fd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-51afa6f61e345ec3",
+      "ref": "E06",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-0b75f13c2c734b4494c3cacdf3c068fd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-e8d7c8e506951ca0",
+      "ref": "G-N01-01",
+      "coverage_id": "coverage-b8612a8630caf22a",
+      "coverage_title": "应用后恢复初始版面并观察结果",
+      "task_id": "TASK-N01-02",
+      "kind": "goal",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "目标包含恢复及结果检查；需在应用目标版面后观察恢复，初始截图不能证明恢复成功。",
+      "evidence_needed": [
+        "目标版面已应用的前置记录",
+        "恢复动作及恢复后三个选项和预览记录"
+      ],
+      "object_refs": [
+        "恢复初始",
+        "三个版面选项",
+        "阅读预览"
+      ],
+      "object_ids": [
+        "obj-3deaf62bb142b3fa80e4",
+        "obj-39036c0950e6b18c5bda",
+        "obj-2d4d5ba410e1402b84e2",
+        "obj-c1481bcb008aa28f02f2",
+        "obj-9aea2a7a936c5d5793b0"
+      ],
+      "constraint_refs": [
+        "G-N01-01",
+        "REQ-N01-03"
+      ],
+      "plan_evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9",
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-49d46331db348ac6",
+      "ref": "E07",
+      "coverage_id": "coverage-b8612a8630caf22a",
+      "coverage_title": "恢复任务对应明确要求的落实",
+      "task_id": "TASK-N01-02",
+      "kind": "goal",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-e984ee13de234010a97d3c322a6e67fa",
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "恢复选项和预览有明确初始值要求；需在目标版面应用后逐项检查，不能以部分恢复抵消未知。",
+      "evidence_needed": [
+        "应用完成到恢复的动作衔接记录",
+        "恢复后的三个选项、预览样式及摘要"
+      ],
+      "object_refs": [
+        "阅读设置页面的恢复任务"
+      ],
+      "object_ids": [
+        "obj-9aea2a7a936c5d5793b0",
+        "obj-3deaf62bb142b3fa80e4"
+      ],
+      "constraint_refs": [
+        "G-N01-01",
+        "REQ-N01-03"
+      ],
+      "plan_evidence_ids": [
+        "ev-96a00dac4e8f4bee955da23bef9745f9",
+        "ev-c6d21d063e434730b10e7c627c28839a"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-12eeb6ecc904f7e6",
+      "ref": "R04",
+      "coverage_id": "coverage-25821a585b8d4b9f",
+      "coverage_title": "恢复初始完成后的结果表达",
+      "task_id": "TASK-N01-02",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "needs_context",
+      "reevaluation_requested": false,
+      "plan_reason": "恢复入口可见，但尚无恢复动作及完成状态；初始页面不能证明恢复反馈清晰。",
+      "evidence_needed": [
+        "目标版面已应用的前置状态",
+        "恢复动作及完成后的反馈画面"
+      ],
+      "object_refs": [
+        "恢复初始",
+        "状态反馈区域",
+        "已应用摘要"
+      ],
+      "object_ids": [
+        "obj-3deaf62bb142b3fa80e4"
+      ],
+      "constraint_refs": [
+        "REQ-N01-03"
+      ],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a",
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "required_evidence_kinds": [
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-75b93cc37591be0b",
+      "ref": "R06",
+      "coverage_id": "coverage-b8612a8630caf22a",
+      "coverage_title": "恢复初始入口的预期结果命名",
+      "task_id": "TASK-N01-02",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "任务卡明确恢复对象及初始值，页面呈现“恢复初始”与版面设置上下文，可检查命名清晰度。",
+      "evidence_needed": [],
+      "object_refs": [
+        "恢复初始"
+      ],
+      "object_ids": [
+        "obj-3deaf62bb142b3fa80e4"
+      ],
+      "constraint_refs": [
+        "REQ-N01-03"
+      ],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a",
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-410cca21735a85f2",
+      "ref": "R17",
+      "coverage_id": "coverage-b8612a8630caf22a",
+      "coverage_title": "恢复初始后的当前选项表达",
+      "task_id": "TASK-N01-02",
+      "kind": "rule",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "当前运行未执行/未完成此检查；继续时可重新安排。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+        "src-e984ee13de234010a97d3c322a6e67fa"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "恢复任务明确涉及三个选项回到初始值；应在应用目标版面后执行恢复并核对状态，现有初始截图不能代替恢复结果。",
+      "evidence_needed": [
+        "应用目标版面后执行恢复的动作记录及恢复后画面、控件状态。"
+      ],
+      "object_refs": [
+        "文字大小",
+        "段落行距",
+        "使用暖色背景",
+        "恢复初始"
+      ],
+      "object_ids": [
+        "obj-39036c0950e6b18c5bda",
+        "obj-2d4d5ba410e1402b84e2",
+        "obj-c1481bcb008aa28f02f2",
+        "obj-3deaf62bb142b3fa80e4"
+      ],
+      "constraint_refs": [
+        "REQ-N01-03"
+      ],
+      "plan_evidence_ids": [
+        "ev-c6d21d063e434730b10e7c627c28839a",
+        "ev-96a00dac4e8f4bee955da23bef9745f9"
+      ],
+      "required_evidence_kinds": [
+        "observation"
+      ]
+    }
+  ],
+  "findings": [],
+  "screen_reviews": [],
+  "rechecks": [],
+  "messages": [
+    {
+      "at": "2026-11-04T10:46:09.480735+00:00",
+      "actor_type": "ai",
+      "actor": "D 新样本 AI 操作员",
+      "type": "purpose",
+      "content": "本次检查本机演示原型的实际操作。按以下任务卡执行评审：\n任务名称：阅读版面设置与恢复\n材料来源：AI 制作的独立本地交互样本，版本 N01-v1。\n任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。\n初始状态：新开页面，标准字号、紧凑行距、白色背景。\n允许动作：选择字号和行距、切换背景、应用设置、恢复初始；可以等待反馈、查看预览。\n结束条件：完成应用和恢复，并观察两个结果；遇到阻碍则记录当前状态和原因。\n验收要求：\nREQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。\nREQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。\nREQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。\n请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。"
+    },
+    {
+      "at": "2026-11-04T10:46:09.500140+00:00",
+      "actor_type": "program",
+      "type": "run_started",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "warning_count": 0
+    },
+    {
+      "at": "2026-11-04T10:53:08.612327+00:00",
+      "actor_type": "program",
+      "type": "run_finished",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "completeness": "partial",
+      "elapsed_seconds": 419.112187
+    }
+  ],
+  "warnings": [
+    "Codex 单次调用超过 180 秒。",
+    "评审任务 TASK-N01-01 没有形成可执行检查覆盖；报告不能视为任务全覆盖。",
+    "评审任务 TASK-N01-02 没有形成可执行检查覆盖；报告不能视为任务全覆盖。",
+    "必需覆盖单元 coverage-8feebfcf352e8f36 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-740c6165fad8e0ad 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-c7e6550b1db32aa6 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-73ad4f0bbd4edd0f 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-28561631ef5c1943 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-49e1191f85849c7e 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-01e61b924e816181 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-17aa00f5052f7bd3 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-25821a585b8d4b9f 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-35d643f1d1e726c8 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-815d8fd735d23a2f 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-a2d15a3fbad574f7 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-b1e90fc023928f17 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-1330b3666dd938a0 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-b8612a8630caf22a 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "会话不变量：必需覆盖单元 coverage-8feebfcf352e8f36 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-740c6165fad8e0ad 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-c7e6550b1db32aa6 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-73ad4f0bbd4edd0f 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-28561631ef5c1943 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-49e1191f85849c7e 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-01e61b924e816181 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-17aa00f5052f7bd3 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-25821a585b8d4b9f 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-35d643f1d1e726c8 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-815d8fd735d23a2f 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-a2d15a3fbad574f7 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-b1e90fc023928f17 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-1330b3666dd938a0 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-b8612a8630caf22a 尚未覆盖。"
+  ],
+  "run_limitations": [
+    "Codex 单次调用超过 180 秒。",
+    "评审任务 TASK-N01-01 没有形成可执行检查覆盖；报告不能视为任务全覆盖。",
+    "评审任务 TASK-N01-02 没有形成可执行检查覆盖；报告不能视为任务全覆盖。",
+    "必需覆盖单元 coverage-8feebfcf352e8f36 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-740c6165fad8e0ad 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-c7e6550b1db32aa6 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-73ad4f0bbd4edd0f 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-28561631ef5c1943 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-49e1191f85849c7e 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-01e61b924e816181 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-17aa00f5052f7bd3 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-25821a585b8d4b9f 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-35d643f1d1e726c8 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-815d8fd735d23a2f 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-a2d15a3fbad574f7 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-b1e90fc023928f17 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-1330b3666dd938a0 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-b8612a8630caf22a 尚未由检查或逐屏审查覆盖；报告不能视为完整。"
+  ],
+  "model_calls": [
+    {
+      "call_id": "call-4bd0e6e972324f58a810c715fb0215f2",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "operation": "understand",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 30866,
+        "cached_input_tokens": 12416,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1707,
+        "reasoning_output_tokens": 0
+      },
+      "request_id": "01a1a62a-939f-7880-a8ba-250e1d9ccbb9",
+      "latency_ms": 39719,
+      "raw_artifact_id": "artifact-d65c63b592bd4d0f92489bc45add1d06",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T03",
+      "status": "validated",
+      "schema": "MaterialUnderstanding",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+          "src-e984ee13de234010a97d3c322a6e67fa",
+          "src-0b75f13c2c734b4494c3cacdf3c068fd"
+        ],
+        "evidence_ids": [
+          "ev-96a00dac4e8f4bee955da23bef9745f9",
+          "ev-c6d21d063e434730b10e7c627c28839a",
+          "ev-dc5f4846880d431c92d3af450e889187"
+        ],
+        "image_evidence_ids": [
+          "ev-c6d21d063e434730b10e7c627c28839a"
+        ],
+        "check_refs": [],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "task_summary": "在本地演示样本 N01-v1 中，将阅读版面设为大字号、舒适行距和暖色背景，应用并查看预览，再恢复初始版面并检查选项及预览。当前仅有初始状态观察，尚无应用或恢复的操作结果。",
+        "target_user_summary": "",
+        "review_tasks": [
+          {
+            "task_id": "TASK-N01-01",
+            "text": "选择大字号、舒适行距和暖色背景，应用设置并查看阅读预览。",
+            "success_criteria": "预览与三个所选值一致；应用期间和完成后有明确状态反馈，处理期间避免重复提交。",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "page_ids": [],
+            "state_ids": [],
+            "branches": [
+              {
+                "branch_id": "BR-N01-01",
+                "trigger": "选择大字号、舒适行距和暖色背景后应用设置。",
+                "expected_outcome": "应用后的阅读预览与用户所选字号、行距、背景一致。",
+                "evidence_ids": [
+                  "ev-96a00dac4e8f4bee955da23bef9745f9"
+                ],
+                "basis": "explicit"
+              },
+              {
+                "branch_id": "BR-N01-02",
+                "trigger": "应用设置处于处理期间及完成后。",
+                "expected_outcome": "有明确状态反馈，处理期间避免重复提交。",
+                "evidence_ids": [
+                  "ev-96a00dac4e8f4bee955da23bef9745f9"
+                ],
+                "basis": "explicit"
+              }
+            ]
+          },
+          {
+            "task_id": "TASK-N01-02",
+            "text": "应用目标版面后，恢复初始版面并检查三个选项及已应用预览。",
+            "success_criteria": "三个选项及已应用预览共同恢复为标准字号、紧凑行距和白色背景。",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "page_ids": [],
+            "state_ids": [],
+            "branches": [
+              {
+                "branch_id": "BR-N01-03",
+                "trigger": "应用目标版面后执行恢复初始。",
+                "expected_outcome": "三个选项及已应用预览共同恢复初始值。",
+                "evidence_ids": [
+                  "ev-96a00dac4e8f4bee955da23bef9745f9"
+                ],
+                "basis": "explicit"
+              }
+            ]
+          }
+        ],
+        "goals": [
+          {
+            "id": "G-N01-01",
+            "text": "完成阅读版面的目标设置、应用预览和初始版面恢复检查。",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "is_assumption": false,
+            "parent_id": null,
+            "source_quotes": [
+              {
+                "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+                "quote": "任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。"
+              }
+            ]
+          }
+        ],
+        "requirements": [
+          {
+            "id": "REQ-N01-01",
+            "text": "应用后的阅读预览与用户所选字号、行距、背景一致。",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "is_assumption": false,
+            "parent_id": "G-N01-01",
+            "source_quotes": [
+              {
+                "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+                "quote": "REQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。"
+              }
+            ]
+          },
+          {
+            "id": "REQ-N01-02",
+            "text": "应用期间和完成后有明确状态反馈，处理期间避免重复提交。",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "is_assumption": false,
+            "parent_id": "G-N01-01",
+            "source_quotes": [
+              {
+                "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+                "quote": "REQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。"
+              }
+            ]
+          },
+          {
+            "id": "REQ-N01-03",
+            "text": "恢复初始后，三个选项及已应用预览共同恢复初始值；初始值为标准字号、紧凑行距、白色背景。",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "is_assumption": false,
+            "parent_id": "G-N01-01",
+            "source_quotes": [
+              {
+                "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+                "quote": "REQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。"
+              },
+              {
+                "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+                "quote": "初始状态：新开页面，标准字号、紧凑行距、白色背景。"
+              }
+            ]
+          }
+        ],
+        "opinions": [],
+        "conflicts": [],
+        "relationships": [
+          {
+            "from_evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+            "to_evidence_id": "ev-c6d21d063e434730b10e7c627c28839a",
+            "relation": "same_object",
+            "reason": "任务卡指定 N01-v1 阅读设置样本；页面观察标示相同版本，包含任务所述选项、应用设置、恢复初始及阅读预览。",
+            "basis": "described"
+          },
+          {
+            "from_evidence_id": "ev-dc5f4846880d431c92d3af450e889187",
+            "to_evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+            "relation": "same_object",
+            "reason": "评审委托引用同一任务卡，目标和三项验收要求一致；正式要求依据产品规格提取，不重复建立。",
+            "basis": "described"
+          }
+        ],
+        "unknowns": [
+          "未提供目标用户、使用经验或熟悉度；目标用户摘要保留为空。",
+          "ev-c6d21d063e434730b10e7c627c28839a 仅记录初始选项和初始预览；REQ-N01-01 至 REQ-N01-03 仍需应用期间、应用完成及恢复后的实际操作证据。",
+          "材料未规定大字号、舒适行距和暖色背景的具体样式数值，也未规定状态反馈时长；不得自行增设验收阈值。",
+          "材料给出本次样本的任务目标和验收要求，未提供更上层业务目的。"
+        ],
+        "assumptions": []
+      }
+    },
+    {
+      "call_id": "call-60248f7610714843bb792da0af777dcf",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "operation": "plan_checks",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 39811,
+        "cached_input_tokens": 12416,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3462,
+        "reasoning_output_tokens": 54
+      },
+      "request_id": "01a1a62b-2f02-7282-8b06-f223beaa57e6",
+      "latency_ms": 76859,
+      "raw_artifact_id": "artifact-b962f06f68924058b1f424db17b0783a",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T04",
+      "status": "validated",
+      "schema": "CheckPlanBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+          "src-e984ee13de234010a97d3c322a6e67fa",
+          "src-0b75f13c2c734b4494c3cacdf3c068fd"
+        ],
+        "evidence_ids": [
+          "ev-96a00dac4e8f4bee955da23bef9745f9",
+          "ev-c6d21d063e434730b10e7c627c28839a",
+          "ev-dc5f4846880d431c92d3af450e889187"
+        ],
+        "image_evidence_ids": [
+          "ev-c6d21d063e434730b10e7c627c28839a"
+        ],
+        "check_refs": [
+          "G-N01-01",
+          "REQ-N01-01",
+          "REQ-N01-02",
+          "REQ-N01-03",
+          "E07",
+          "E08",
+          "R01",
+          "R02"
+        ],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "items": [
+          {
+            "ref": "G-N01-01",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "目标版面选择、应用及预览观察",
+            "task_id": "TASK-N01-01",
+            "applicability": "applicable",
+            "reason": "任务卡明确要求完成目标设置并查看预览；当前仅有初始状态，需补实际操作结果。",
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa",
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9",
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [
+              "三个目标选项选定后的记录",
+              "应用动作、处理期间及完成后的预览记录"
+            ],
+            "object_refs": [
+              "文字大小",
+              "段落行距",
+              "使用暖色背景",
+              "应用设置",
+              "阅读预览"
+            ],
+            "object_ids": [
+              "obj-39036c0950e6b18c5bda",
+              "obj-2d4d5ba410e1402b84e2",
+              "obj-c1481bcb008aa28f02f2",
+              "obj-07fe591537bb41ae2b27",
+              "obj-9aea2a7a936c5d5793b0"
+            ],
+            "constraint_refs": [
+              "G-N01-01",
+              "REQ-N01-01",
+              "REQ-N01-02"
+            ],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "G-N01-01",
+            "coverage_id": "coverage-b8612a8630caf22a",
+            "coverage_title": "应用后恢复初始版面并观察结果",
+            "task_id": "TASK-N01-02",
+            "applicability": "applicable",
+            "reason": "目标包含恢复及结果检查；需在应用目标版面后观察恢复，初始截图不能证明恢复成功。",
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa",
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9",
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [
+              "目标版面已应用的前置记录",
+              "恢复动作及恢复后三个选项和预览记录"
+            ],
+            "object_refs": [
+              "恢复初始",
+              "三个版面选项",
+              "阅读预览"
+            ],
+            "object_ids": [
+              "obj-3deaf62bb142b3fa80e4",
+              "obj-39036c0950e6b18c5bda",
+              "obj-2d4d5ba410e1402b84e2",
+              "obj-c1481bcb008aa28f02f2",
+              "obj-9aea2a7a936c5d5793b0"
+            ],
+            "constraint_refs": [
+              "G-N01-01",
+              "REQ-N01-03"
+            ],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "REQ-N01-01",
+            "coverage_id": "coverage-8feebfcf352e8f36",
+            "coverage_title": "应用后预览与三个目标选项一致",
+            "task_id": "TASK-N01-01",
+            "applicability": "applicable",
+            "reason": "明确要求应用后预览匹配所选值；应核对实际样式与已应用摘要，不能只查摘要文字。",
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa",
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9",
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [
+              "大字号、舒适行距和暖色背景选定记录",
+              "应用后预览实际样式及摘要，与初始状态的对照"
+            ],
+            "object_refs": [
+              "文字大小",
+              "段落行距",
+              "使用暖色背景",
+              "阅读预览及已应用摘要"
+            ],
+            "object_ids": [
+              "obj-39036c0950e6b18c5bda",
+              "obj-2d4d5ba410e1402b84e2",
+              "obj-c1481bcb008aa28f02f2",
+              "obj-9aea2a7a936c5d5793b0"
+            ],
+            "constraint_refs": [
+              "REQ-N01-01"
+            ],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "REQ-N01-02",
+            "coverage_id": "coverage-740c6165fad8e0ad",
+            "coverage_title": "应用处理期间及完成后的反馈与重复提交防护",
+            "task_id": "TASK-N01-01",
+            "applicability": "applicable",
+            "reason": "任务卡明确要求处理反馈和防重复提交；初始按钮可用不代表处理期间仍可重复提交。",
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa",
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9",
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [
+              "应用触发后处理期间的反馈和按钮状态",
+              "处理期间重复提交被阻止的实际证据",
+              "应用完成后的状态反馈"
+            ],
+            "object_refs": [
+              "应用设置",
+              "状态反馈区域"
+            ],
+            "object_ids": [
+              "obj-07fe591537bb41ae2b27",
+              "obj-9aea2a7a936c5d5793b0"
+            ],
+            "constraint_refs": [
+              "REQ-N01-02"
+            ],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "REQ-N01-03",
+            "coverage_id": "coverage-25821a585b8d4b9f",
+            "coverage_title": "恢复后三个选项与已应用预览共同回到初始值",
+            "task_id": "TASK-N01-02",
+            "applicability": "applicable",
+            "reason": "明确要求选项和预览共同恢复；以初始截图为基线，检查恢复动作后的实际值与样式。",
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa",
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9",
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [
+              "目标版面应用完成后的记录",
+              "恢复初始动作及选项值记录",
+              "恢复后预览实际样式、摘要及反馈"
+            ],
+            "object_refs": [
+              "恢复初始",
+              "文字大小",
+              "段落行距",
+              "使用暖色背景",
+              "阅读预览"
+            ],
+            "object_ids": [
+              "obj-3deaf62bb142b3fa80e4",
+              "obj-39036c0950e6b18c5bda",
+              "obj-2d4d5ba410e1402b84e2",
+              "obj-c1481bcb008aa28f02f2",
+              "obj-9aea2a7a936c5d5793b0"
+            ],
+            "constraint_refs": [
+              "REQ-N01-03"
+            ],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "E07",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "应用任务对应明确要求的落实",
+            "task_id": "TASK-N01-01",
+            "applicability": "applicable",
+            "reason": "存在可检查的预览一致性、反馈及防重复提交要求；分别核对后汇总，不以初始画面判完成。",
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa",
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9",
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [
+              "选择和应用的动作记录及结果",
+              "处理期间、完成后反馈及防重复提交证据"
+            ],
+            "object_refs": [
+              "阅读设置页面的应用任务"
+            ],
+            "object_ids": [
+              "obj-9aea2a7a936c5d5793b0",
+              "obj-07fe591537bb41ae2b27"
+            ],
+            "constraint_refs": [
+              "G-N01-01",
+              "REQ-N01-01",
+              "REQ-N01-02"
+            ],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "E07",
+            "coverage_id": "coverage-b8612a8630caf22a",
+            "coverage_title": "恢复任务对应明确要求的落实",
+            "task_id": "TASK-N01-02",
+            "applicability": "applicable",
+            "reason": "恢复选项和预览有明确初始值要求；需在目标版面应用后逐项检查，不能以部分恢复抵消未知。",
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa",
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9",
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [
+              "应用完成到恢复的动作衔接记录",
+              "恢复后的三个选项、预览样式及摘要"
+            ],
+            "object_refs": [
+              "阅读设置页面的恢复任务"
+            ],
+            "object_ids": [
+              "obj-9aea2a7a936c5d5793b0",
+              "obj-3deaf62bb142b3fa80e4"
+            ],
+            "constraint_refs": [
+              "G-N01-01",
+              "REQ-N01-03"
+            ],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "E08",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "同一样本目标设置与恢复约束的兼容性",
+            "task_id": "TASK-N01-01",
+            "applicability": "applicable",
+            "reason": "多项要求指向同一样本，可核对时序及约束兼容性；委托复述不是独立要求，实现差异也不自动构成冲突。",
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa",
+              "src-0b75f13c2c734b4494c3cacdf3c068fd"
+            ],
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9",
+              "ev-dc5f4846880d431c92d3af450e889187"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "N01-v1任务目标及三项验收要求"
+            ],
+            "object_ids": [
+              "obj-3f181737dec013550a76",
+              "obj-b80538d6301b0a865a74"
+            ],
+            "constraint_refs": [
+              "G-N01-01",
+              "REQ-N01-01",
+              "REQ-N01-02",
+              "REQ-N01-03"
+            ],
+            "required_evidence_kinds": [
+              "requirement",
+              "statement"
+            ]
+          },
+          {
+            "ref": "R01",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "独立阅读设置页的页面级导航适用性",
+            "task_id": "TASK-N01-01",
+            "applicability": "not_applicable",
+            "reason": "任务卡限定独立本地单页样本及页内操作，完整初始页面与控件结构无页面级导航；字号选项不属导航。",
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa",
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9",
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "阅读设置独立页面"
+            ],
+            "object_ids": [
+              "obj-9aea2a7a936c5d5793b0"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "R02",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "独立单页设置任务的步骤位置适用性",
+            "task_id": "TASK-N01-01",
+            "applicability": "not_applicable",
+            "reason": "任务卡与页面共同确认选择、应用和恢复均在独立单页完成；操作先后不构成需标识当前位置的分步页面流程。",
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa",
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9",
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "阅读设置独立页面"
+            ],
+            "object_ids": [
+              "obj-9aea2a7a936c5d5793b0"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "call_id": "call-0e74d309af58487abef597c5f92d7538",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "operation": "plan_checks",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 41317,
+        "cached_input_tokens": 12416,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2489,
+        "reasoning_output_tokens": 23
+      },
+      "request_id": "01a1a62c-5b83-77d1-8ce8-e022a058ae89",
+      "latency_ms": 60250,
+      "raw_artifact_id": "artifact-61d6bdae735745e492611759365ca618",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T04",
+      "status": "validated",
+      "schema": "CheckPlanBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+          "src-e984ee13de234010a97d3c322a6e67fa",
+          "src-0b75f13c2c734b4494c3cacdf3c068fd"
+        ],
+        "evidence_ids": [
+          "ev-96a00dac4e8f4bee955da23bef9745f9",
+          "ev-c6d21d063e434730b10e7c627c28839a",
+          "ev-dc5f4846880d431c92d3af450e889187"
+        ],
+        "image_evidence_ids": [
+          "ev-c6d21d063e434730b10e7c627c28839a"
+        ],
+        "check_refs": [
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10"
+        ],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "items": [
+          {
+            "ref": "R03",
+            "coverage_id": "coverage-740c6165fad8e0ad",
+            "coverage_title": "应用设置期间的等待说明",
+            "task_id": "TASK-N01-01",
+            "applicability": "needs_context",
+            "reason": "初始画面为非等待状态；尚无应用后的观察，不能确认是否出现等待及其说明。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a",
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "evidence_needed": [
+              "应用触发动作与处理期间画面",
+              "观察时长及前后状态"
+            ],
+            "object_refs": [
+              "应用设置",
+              "状态反馈区域"
+            ],
+            "object_ids": [
+              "obj-07fe591537bb41ae2b27"
+            ],
+            "constraint_refs": [
+              "REQ-N01-02"
+            ],
+            "required_evidence_kinds": [
+              "observation"
+            ]
+          },
+          {
+            "ref": "R04",
+            "coverage_id": "coverage-8feebfcf352e8f36",
+            "coverage_title": "应用完成后的结果表达",
+            "task_id": "TASK-N01-01",
+            "applicability": "needs_context",
+            "reason": "当前仅有初始版面说明，未取得本次应用完成状态，需确认完成对象及反馈内容。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a",
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "evidence_needed": [
+              "选择目标版面并应用的动作记录",
+              "完成后的反馈与预览画面"
+            ],
+            "object_refs": [
+              "应用设置",
+              "阅读预览",
+              "已应用摘要"
+            ],
+            "object_ids": [
+              "obj-07fe591537bb41ae2b27"
+            ],
+            "constraint_refs": [
+              "REQ-N01-01",
+              "REQ-N01-02"
+            ],
+            "required_evidence_kinds": [
+              "observation"
+            ]
+          },
+          {
+            "ref": "R04",
+            "coverage_id": "coverage-25821a585b8d4b9f",
+            "coverage_title": "恢复初始完成后的结果表达",
+            "task_id": "TASK-N01-02",
+            "applicability": "needs_context",
+            "reason": "恢复入口可见，但尚无恢复动作及完成状态；初始页面不能证明恢复反馈清晰。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a",
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "evidence_needed": [
+              "目标版面已应用的前置状态",
+              "恢复动作及完成后的反馈画面"
+            ],
+            "object_refs": [
+              "恢复初始",
+              "状态反馈区域",
+              "已应用摘要"
+            ],
+            "object_ids": [
+              "obj-3deaf62bb142b3fa80e4"
+            ],
+            "constraint_refs": [
+              "REQ-N01-03"
+            ],
+            "required_evidence_kinds": [
+              "observation"
+            ]
+          },
+          {
+            "ref": "R05",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "设置页面关键任务文案的用户熟悉度",
+            "task_id": "TASK-N01-01",
+            "applicability": "needs_context",
+            "reason": "关键任务文案可见，但目标用户、专业程度及熟悉度未提供，不能据日常用词推定理解情况。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a",
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "evidence_needed": [
+              "目标用户及专业程度依据",
+              "若存在疑似内部术语，其含义、任务必要性和用户熟悉度依据"
+            ],
+            "object_refs": [
+              "文字大小",
+              "段落行距",
+              "使用暖色背景"
+            ],
+            "object_ids": [
+              "obj-39036c0950e6b18c5bda",
+              "obj-2d4d5ba410e1402b84e2",
+              "obj-c1481bcb008aa28f02f2"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "statement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "R06",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "应用设置入口的预期结果命名",
+            "task_id": "TASK-N01-01",
+            "applicability": "applicable",
+            "reason": "任务卡明确应用目的，初始画面完整呈现“应用设置”及邻近选项，可检查名称是否说明预期动作。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a",
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "应用设置"
+            ],
+            "object_ids": [
+              "obj-07fe591537bb41ae2b27"
+            ],
+            "constraint_refs": [
+              "REQ-N01-01"
+            ],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "R06",
+            "coverage_id": "coverage-b8612a8630caf22a",
+            "coverage_title": "恢复初始入口的预期结果命名",
+            "task_id": "TASK-N01-02",
+            "applicability": "applicable",
+            "reason": "任务卡明确恢复对象及初始值，页面呈现“恢复初始”与版面设置上下文，可检查命名清晰度。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a",
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "恢复初始"
+            ],
+            "object_ids": [
+              "obj-3deaf62bb142b3fa80e4"
+            ],
+            "constraint_refs": [
+              "REQ-N01-03"
+            ],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "R07",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "版面设置字段名称及选择后持续可见性",
+            "task_id": "TASK-N01-01",
+            "applicability": "applicable",
+            "reason": "任务需要操作两个选择框及背景复选框，字段用途明确；可检查现有标签，选择后的持续性仍需观察。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a",
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "evidence_needed": [
+              "选择大字号、舒适行距及暖色背景后的字段画面"
+            ],
+            "object_refs": [
+              "文字大小",
+              "段落行距",
+              "使用暖色背景"
+            ],
+            "object_ids": [
+              "obj-39036c0950e6b18c5bda",
+              "obj-2d4d5ba410e1402b84e2",
+              "obj-c1481bcb008aa28f02f2"
+            ],
+            "constraint_refs": [
+              "REQ-N01-01"
+            ],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "R08",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "初始设置页面的普通弹窗适用性",
+            "task_id": "TASK-N01-01",
+            "applicability": "not_applicable",
+            "reason": "当前完整截图呈现普通设置页，未处于占据焦点的弹窗状态；此结论仅限初始状态。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "阅读设置初始页面"
+            ],
+            "object_ids": [
+              "obj-9aea2a7a936c5d5793b0"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "observation"
+            ]
+          },
+          {
+            "ref": "R09",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "独立设置页面的步骤返回适用性",
+            "task_id": "TASK-N01-01",
+            "applicability": "not_applicable",
+            "reason": "任务卡说明为独立本地样本的新开页面，截图为同页设置与预览，当前并非多步骤任务的非首步页面。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a",
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "阅读设置初始页面"
+            ],
+            "object_ids": [
+              "obj-9aea2a7a936c5d5793b0"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "R10",
+            "coverage_id": "coverage-b8612a8630caf22a",
+            "coverage_title": "本地版面恢复操作的高风险确认适用性",
+            "task_id": "TASK-N01-02",
+            "applicability": "not_applicable",
+            "reason": "材料限定操作仅影响本地页面，恢复对象为三个版面选项与预览；无对象损失或不可逆后果，不属于高风险确认。",
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa",
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9",
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "恢复初始"
+            ],
+            "object_ids": [
+              "obj-3deaf62bb142b3fa80e4"
+            ],
+            "constraint_refs": [
+              "REQ-N01-03"
+            ],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "call_id": "call-b617e2de187f4dbf9d5e1282f777d4ca",
+      "run_id": "run-278a1078dc514a12a5300a60aea695d7",
+      "operation": "plan_checks",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6.1-sol",
+      "usage": {
+        "input_tokens": 41248,
+        "cached_input_tokens": 12416,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2756,
+        "reasoning_output_tokens": 95
+      },
+      "request_id": "01a1a62d-472a-7d82-868a-e94a8bfb066c",
+      "latency_ms": 61078,
+      "raw_artifact_id": "artifact-d4aa2066ea7e4e24b75ae4eea9cc0615",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T04",
+      "status": "validated",
+      "schema": "CheckPlanBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+          "src-e984ee13de234010a97d3c322a6e67fa",
+          "src-0b75f13c2c734b4494c3cacdf3c068fd"
+        ],
+        "evidence_ids": [
+          "ev-96a00dac4e8f4bee955da23bef9745f9",
+          "ev-c6d21d063e434730b10e7c627c28839a",
+          "ev-dc5f4846880d431c92d3af450e889187"
+        ],
+        "image_evidence_ids": [
+          "ev-c6d21d063e434730b10e7c627c28839a"
+        ],
+        "check_refs": [
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16",
+          "R17",
+          "R18"
+        ],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "items": [
+          {
+            "ref": "R11",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "阅读设置页的动作入口命名",
+            "task_id": "TASK-N01-01",
+            "applicability": "not_applicable",
+            "reason": "当前完整页面中，应用和恢复各有一个入口，且是不同动作；没有同一动作的多个入口可比较。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "应用设置",
+              "恢复初始"
+            ],
+            "object_ids": [
+              "obj-07fe591537bb41ae2b27",
+              "obj-3deaf62bb142b3fa80e4"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "observation"
+            ]
+          },
+          {
+            "ref": "R12",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "阅读设置页两个选择控件的视觉规则",
+            "task_id": "TASK-N01-01",
+            "applicability": "applicable",
+            "reason": "字号与行距均为同一设置组内、启用状态的单选下拉框，可比较呈现规则；应用与恢复按钮的强调差异需结合动作层级解释。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "文字大小",
+              "段落行距"
+            ],
+            "object_ids": [
+              "obj-39036c0950e6b18c5bda",
+              "obj-2d4d5ba410e1402b84e2"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "observation"
+            ]
+          },
+          {
+            "ref": "R13",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "阅读设置项的必填要求适用性",
+            "task_id": "TASK-N01-01",
+            "applicability": "needs_context",
+            "reason": "已见预选下拉框和背景复选框，但材料未说明是否存在必填要求；任务指定目标值不等于字段必填规则。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a",
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "evidence_needed": [
+              "确认是否存在必填字段及其要求来源；若明确没有，则不适用。"
+            ],
+            "object_refs": [
+              "文字大小",
+              "段落行距",
+              "使用暖色背景"
+            ],
+            "object_ids": [
+              "obj-39036c0950e6b18c5bda",
+              "obj-2d4d5ba410e1402b84e2",
+              "obj-c1481bcb008aa28f02f2"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          },
+          {
+            "ref": "R14",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "字号与行距有效选项的事前提示",
+            "task_id": "TASK-N01-01",
+            "applicability": "applicable",
+            "reason": "控件记录明确列出字号和行距各两个有效选项，可核对字段名称及展开选项是否清楚表达允许值，无需另设格式阈值。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [
+              "选择目标值时取得两个下拉框展开后的可见选项证据。"
+            ],
+            "object_refs": [
+              "文字大小",
+              "段落行距"
+            ],
+            "object_ids": [
+              "obj-39036c0950e6b18c5bda",
+              "obj-2d4d5ba410e1402b84e2"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "observation"
+            ]
+          },
+          {
+            "ref": "R15",
+            "coverage_id": "coverage-b8612a8630caf22a",
+            "coverage_title": "本地版面恢复的操作后果",
+            "task_id": "TASK-N01-02",
+            "applicability": "not_applicable",
+            "reason": "任务卡明确操作仅影响本地页面，恢复对象为阅读版面初始值；材料没有对象损失、不可逆或其他高后果操作。",
+            "source_ids": [
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "恢复初始"
+            ],
+            "object_ids": [
+              "obj-3deaf62bb142b3fa80e4"
+            ],
+            "constraint_refs": [
+              "REQ-N01-03"
+            ],
+            "required_evidence_kinds": [
+              "requirement"
+            ]
+          },
+          {
+            "ref": "R16",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "阅读设置主任务入口的图标适用性",
+            "task_id": "TASK-N01-01",
+            "applicability": "not_applicable",
+            "reason": "完整页面中的任务入口均有文字标签；下拉箭头附属于已命名选择控件，没有独立承担主任务的重要图标操作。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "阅读设置页五个操作控件"
+            ],
+            "object_ids": [
+              "obj-39036c0950e6b18c5bda",
+              "obj-2d4d5ba410e1402b84e2",
+              "obj-c1481bcb008aa28f02f2",
+              "obj-07fe591537bb41ae2b27",
+              "obj-3deaf62bb142b3fa80e4"
+            ],
+            "constraint_refs": [],
+            "required_evidence_kinds": [
+              "observation"
+            ]
+          },
+          {
+            "ref": "R17",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "目标版面选择前后的当前选项表达",
+            "task_id": "TASK-N01-01",
+            "applicability": "applicable",
+            "reason": "初始下拉框已有确定选中值，背景复选框为未勾选；应核对选择目标值后可见表达与实际控件状态，不能仅凭点击判定已选。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a",
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "evidence_needed": [
+              "选择大字号、舒适行距并勾选暖色背景后的画面与控件状态。"
+            ],
+            "object_refs": [
+              "文字大小",
+              "段落行距",
+              "使用暖色背景"
+            ],
+            "object_ids": [
+              "obj-39036c0950e6b18c5bda",
+              "obj-2d4d5ba410e1402b84e2",
+              "obj-c1481bcb008aa28f02f2"
+            ],
+            "constraint_refs": [
+              "REQ-N01-01"
+            ],
+            "required_evidence_kinds": [
+              "observation"
+            ]
+          },
+          {
+            "ref": "R17",
+            "coverage_id": "coverage-b8612a8630caf22a",
+            "coverage_title": "恢复初始后的当前选项表达",
+            "task_id": "TASK-N01-02",
+            "applicability": "applicable",
+            "reason": "恢复任务明确涉及三个选项回到初始值；应在应用目标版面后执行恢复并核对状态，现有初始截图不能代替恢复结果。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a",
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "evidence_needed": [
+              "应用目标版面后执行恢复的动作记录及恢复后画面、控件状态。"
+            ],
+            "object_refs": [
+              "文字大小",
+              "段落行距",
+              "使用暖色背景",
+              "恢复初始"
+            ],
+            "object_ids": [
+              "obj-39036c0950e6b18c5bda",
+              "obj-2d4d5ba410e1402b84e2",
+              "obj-c1481bcb008aa28f02f2",
+              "obj-3deaf62bb142b3fa80e4"
+            ],
+            "constraint_refs": [
+              "REQ-N01-03"
+            ],
+            "required_evidence_kinds": [
+              "observation"
+            ]
+          },
+          {
+            "ref": "R18",
+            "coverage_id": "coverage-17aa00f5052f7bd3",
+            "coverage_title": "三个阅读版面选项的分组",
+            "task_id": "TASK-N01-01",
+            "applicability": "applicable",
+            "reason": "控件记录确认两个单选下拉框和一个复选框；任务卡确认三者共同设置阅读版面，可检查组标题、标签、间距和边界。",
+            "source_ids": [
+              "src-3ae82da454ed4be8a91ad9ff40f5d9bb",
+              "src-e984ee13de234010a97d3c322a6e67fa"
+            ],
+            "evidence_ids": [
+              "ev-c6d21d063e434730b10e7c627c28839a",
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "设置阅读版面组：文字大小、段落行距、使用暖色背景"
+            ],
+            "object_ids": [
+              "obj-39036c0950e6b18c5bda",
+              "obj-2d4d5ba410e1402b84e2",
+              "obj-c1481bcb008aa28f02f2"
+            ],
+            "constraint_refs": [
+              "G-N01-01"
+            ],
+            "required_evidence_kinds": [
+              "requirement",
+              "observation"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "report_version": 1,
+  "report_completeness": "partial",
+  "contract_violations": [
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-8feebfcf352e8f36 尚未覆盖。",
+      "coverage_id": "coverage-8feebfcf352e8f36",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-740c6165fad8e0ad 尚未覆盖。",
+      "coverage_id": "coverage-740c6165fad8e0ad",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-c7e6550b1db32aa6 尚未覆盖。",
+      "coverage_id": "coverage-c7e6550b1db32aa6",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-73ad4f0bbd4edd0f 尚未覆盖。",
+      "coverage_id": "coverage-73ad4f0bbd4edd0f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-28561631ef5c1943 尚未覆盖。",
+      "coverage_id": "coverage-28561631ef5c1943",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-49e1191f85849c7e 尚未覆盖。",
+      "coverage_id": "coverage-49e1191f85849c7e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-01e61b924e816181 尚未覆盖。",
+      "coverage_id": "coverage-01e61b924e816181",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-17aa00f5052f7bd3 尚未覆盖。",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "gap_class": "task_not_planned"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-25821a585b8d4b9f 尚未覆盖。",
+      "coverage_id": "coverage-25821a585b8d4b9f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-35d643f1d1e726c8 尚未覆盖。",
+      "coverage_id": "coverage-35d643f1d1e726c8",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-815d8fd735d23a2f 尚未覆盖。",
+      "coverage_id": "coverage-815d8fd735d23a2f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-a2d15a3fbad574f7 尚未覆盖。",
+      "coverage_id": "coverage-a2d15a3fbad574f7",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-b1e90fc023928f17 尚未覆盖。",
+      "coverage_id": "coverage-b1e90fc023928f17",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-1330b3666dd938a0 尚未覆盖。",
+      "coverage_id": "coverage-1330b3666dd938a0",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-b8612a8630caf22a 尚未覆盖。",
+      "coverage_id": "coverage-b8612a8630caf22a",
+      "gap_class": "task_not_planned"
+    }
+  ],
+  "capability_status": {
+    "schema_version": "session-1.0",
+    "methods_version": "0.2-method-draft",
+    "technical_path_version": "A-0.2/T01-T10",
+    "method_root": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\docs\\D-最终验收证据\\新样本\\冻结运行源码-修后v1\\方法专家开发交付-v0.2",
+    "method_validation": {
+      "delivery_version": "0.2-method-draft",
+      "checked_files": 12,
+      "mismatches": 0
+    },
+    "rules": 24,
+    "methods": 8,
+    "method_fingerprints": {
+      "00先看这个！！！！-阅读与开发交接.md": "6dca7b14918a08d65e40362bfec2fc40a1f8f1d0492e4f356b2ac9b8f00d051e",
+      "01-04-场景输入流程与技术路径.md": "fe432cf3851ad10528e53d6fecc14e9ffaba0a4fafd96a1b6ee61c4007c28347",
+      "05-24条判据修订与变更对照.md": "bd2f82f8d8e539d2011b0b684d77de775b0149ec0e14736717944f2057847c99",
+      "05-判据库-v0.2.json": "b785eb9c6b64b5d9ceb87ca76430af4a2658c944c9aff99a97ce9298bdf54af7",
+      "05-判据执行补充-v0.2.json": "8e502b943023c7e39a8da6a479c1cc09f621c9474520e4f116cae0553bc9c24d",
+      "05-逐字段变更对照.csv": "d0b1d25442662ecf10150e923b98b8049ad7291e2bf56653690a138392d8307d",
+      "06-新场景方法-v0.2.json": "1702aa0350c41ced0363a41d73c46aeb547d60d7299616964875b51ce8fd689c",
+      "06-新场景方法与正反例.md": "e21e0996cc25bc218f5e24e2c3a7aa66649001eb58ad00e84fcb5fc88b48ca26",
+      "07-会话变更重查与复审规则.md": "c9a5f573648a20094f4b0c4602043979b33ea3cb935a6976b641cf57b539f025",
+      "08-问题表达严重度与评价验收.md": "4d92cfcfdb8417a20678995528ea0180f6182eb52b0b2becbb3a7fc44886eead",
+      "09-开发验收用例.json": "fc85e0bd301b081d393ab4764f0f0b59003e2462d842ebee91bc990eb9f41f60",
+      "09-开发验收用例.md": "e2ca3487871026558697e1283734849af2ef94de25b984ade9ae8334a73a2fd3",
+      "10-来源索引.json": "e6147e42231bb4602cb506caa7a2d6ff69812b2d7d1289731a33220db667017a",
+      "11-交付校验结果.json": "3ec123147dae0c46a6bd2a473a0c5f0bbe5f1d311f42bc2568e41b63b5694cad"
+    },
+    "perception": {
+      "deterministic_metrics": true,
+      "metric_version": "cv-metrics-v1",
+      "structure_sources": [
+        "browser_dom",
+        "figma_metadata"
+      ],
+      "semantic_review_model": true,
+      "specialized_ocr_model": true,
+      "screen_technical_review": true,
+      "screen_review_operations": [
+        "screen_ocr",
+        "screen_ui",
+        "screen_audit"
+      ]
+    },
+    "inputs": {
+      "website": {
+        "installed": true,
+        "read_verified": true,
+        "operation_verified": false
+      },
+      "figma_prototype": {
+        "installed": true,
+        "read_verified": false,
+        "operation_verified": false
+      },
+      "figma_board": {
+        "installed": true,
+        "configured": false,
+        "verified": false,
+        "snapshot_root_configured": true,
+        "authorization": "backend_oauth",
+        "read_verified": false
+      },
+      "document": {
+        "configured": true
+      },
+      "image": {
+        "configured": true
+      }
+    },
+    "models": {
+      "qwen": {
+        "enabled": false,
+        "model": null,
+        "vision": true,
+        "verified": false
+      },
+      "deepseek": {
+        "enabled": false,
+        "model": null,
+        "vision": false,
+        "verified": false
+      },
+      "local": {
+        "enabled": false,
+        "model": null,
+        "vision": true,
+        "verified": false
+      }
+    },
+    "storage": "sqlite",
+    "report_versions": "immutable",
+    "event_idempotency": true
+  },
+  "verifier_model_status": {},
+  "material_understanding": {
+    "task_summary": "在本地演示样本 N01-v1 中，将阅读版面设为大字号、舒适行距和暖色背景，应用并查看预览，再恢复初始版面并检查选项及预览。当前仅有初始状态观察，尚无应用或恢复的操作结果。",
+    "target_user_summary": "",
+    "review_tasks": [
+      {
+        "task_id": "TASK-N01-01",
+        "text": "选择大字号、舒适行距和暖色背景，应用设置并查看阅读预览。",
+        "success_criteria": "预览与三个所选值一致；应用期间和完成后有明确状态反馈，处理期间避免重复提交。",
+        "evidence_ids": [
+          "ev-96a00dac4e8f4bee955da23bef9745f9"
+        ],
+        "source_ids": [
+          "src-e984ee13de234010a97d3c322a6e67fa"
+        ],
+        "page_ids": [],
+        "state_ids": [],
+        "branches": [
+          {
+            "branch_id": "BR-N01-01",
+            "trigger": "选择大字号、舒适行距和暖色背景后应用设置。",
+            "expected_outcome": "应用后的阅读预览与用户所选字号、行距、背景一致。",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "basis": "explicit"
+          },
+          {
+            "branch_id": "BR-N01-02",
+            "trigger": "应用设置处于处理期间及完成后。",
+            "expected_outcome": "有明确状态反馈，处理期间避免重复提交。",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "basis": "explicit"
+          },
+          {
+            "branch_id": "BR-INF-68cbd58d867a",
+            "trigger": "任务目标：将版面设为大字号、舒适行距和暖色背景，应用后",
+            "expected_outcome": "查看预览",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-7b1575d9f4b4",
+            "trigger": "遇到阻碍则记录当前状态和原因",
+            "expected_outcome": "完成该条件分支并按材料反馈",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-93595f9b8ea8",
+            "trigger": "REQ-N01-01 应用后",
+            "expected_outcome": "的阅读预览与用户所选字号、行距、背景一致",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-7b11fa35e571",
+            "trigger": "REQ-N01-02 应用期间和完成后",
+            "expected_outcome": "有明确状态反馈，处理期间避免重复提交",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-9a3c91661da2",
+            "trigger": "REQ-N01-03 恢复初始后",
+            "expected_outcome": "三个选项及已应用预览共同恢复初始值",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "basis": "inferred"
+          }
+        ]
+      },
+      {
+        "task_id": "TASK-N01-02",
+        "text": "应用目标版面后，恢复初始版面并检查三个选项及已应用预览。",
+        "success_criteria": "三个选项及已应用预览共同恢复为标准字号、紧凑行距和白色背景。",
+        "evidence_ids": [
+          "ev-96a00dac4e8f4bee955da23bef9745f9"
+        ],
+        "source_ids": [
+          "src-e984ee13de234010a97d3c322a6e67fa"
+        ],
+        "page_ids": [],
+        "state_ids": [],
+        "branches": [
+          {
+            "branch_id": "BR-N01-03",
+            "trigger": "应用目标版面后执行恢复初始。",
+            "expected_outcome": "三个选项及已应用预览共同恢复初始值。",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "basis": "explicit"
+          },
+          {
+            "branch_id": "BR-INF-a63731b557dd",
+            "trigger": "任务目标：将版面设为大字号、舒适行距和暖色背景，应用后",
+            "expected_outcome": "查看预览",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-1b53bd962bc3",
+            "trigger": "遇到阻碍则记录当前状态和原因",
+            "expected_outcome": "完成该条件分支并按材料反馈",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-7e7deb959da9",
+            "trigger": "REQ-N01-01 应用后",
+            "expected_outcome": "的阅读预览与用户所选字号、行距、背景一致",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-69433914cb21",
+            "trigger": "REQ-N01-02 应用期间和完成后",
+            "expected_outcome": "有明确状态反馈，处理期间避免重复提交",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-259016a3bba5",
+            "trigger": "REQ-N01-03 恢复初始后",
+            "expected_outcome": "三个选项及已应用预览共同恢复初始值",
+            "evidence_ids": [
+              "ev-96a00dac4e8f4bee955da23bef9745f9"
+            ],
+            "basis": "inferred"
+          }
+        ]
+      }
+    ],
+    "goals": [
+      {
+        "id": "G-N01-01",
+        "text": "完成阅读版面的目标设置、应用预览和初始版面恢复检查。",
+        "evidence_ids": [
+          "ev-96a00dac4e8f4bee955da23bef9745f9"
+        ],
+        "is_assumption": false,
+        "parent_id": null,
+        "source_quotes": [
+          {
+            "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+            "quote": "任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。"
+          }
+        ]
+      }
+    ],
+    "requirements": [
+      {
+        "id": "REQ-N01-01",
+        "text": "应用后的阅读预览与用户所选字号、行距、背景一致。",
+        "evidence_ids": [
+          "ev-96a00dac4e8f4bee955da23bef9745f9"
+        ],
+        "is_assumption": false,
+        "parent_id": "G-N01-01",
+        "source_quotes": [
+          {
+            "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+            "quote": "REQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。"
+          }
+        ]
+      },
+      {
+        "id": "REQ-N01-02",
+        "text": "应用期间和完成后有明确状态反馈，处理期间避免重复提交。",
+        "evidence_ids": [
+          "ev-96a00dac4e8f4bee955da23bef9745f9"
+        ],
+        "is_assumption": false,
+        "parent_id": "G-N01-01",
+        "source_quotes": [
+          {
+            "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+            "quote": "REQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。"
+          }
+        ]
+      },
+      {
+        "id": "REQ-N01-03",
+        "text": "恢复初始后，三个选项及已应用预览共同恢复初始值；初始值为标准字号、紧凑行距、白色背景。",
+        "evidence_ids": [
+          "ev-96a00dac4e8f4bee955da23bef9745f9"
+        ],
+        "is_assumption": false,
+        "parent_id": "G-N01-01",
+        "source_quotes": [
+          {
+            "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+            "quote": "REQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。"
+          },
+          {
+            "evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+            "quote": "初始状态：新开页面，标准字号、紧凑行距、白色背景。"
+          }
+        ]
+      }
+    ],
+    "opinions": [],
+    "conflicts": [],
+    "relationships": [
+      {
+        "from_evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+        "to_evidence_id": "ev-c6d21d063e434730b10e7c627c28839a",
+        "relation": "same_object",
+        "reason": "任务卡指定 N01-v1 阅读设置样本；页面观察标示相同版本，包含任务所述选项、应用设置、恢复初始及阅读预览。",
+        "basis": "described"
+      },
+      {
+        "from_evidence_id": "ev-dc5f4846880d431c92d3af450e889187",
+        "to_evidence_id": "ev-96a00dac4e8f4bee955da23bef9745f9",
+        "relation": "same_object",
+        "reason": "评审委托引用同一任务卡，目标和三项验收要求一致；正式要求依据产品规格提取，不重复建立。",
+        "basis": "described"
+      }
+    ],
+    "unknowns": [
+      "未提供目标用户、使用经验或熟悉度；目标用户摘要保留为空。",
+      "ev-c6d21d063e434730b10e7c627c28839a 仅记录初始选项和初始预览；REQ-N01-01 至 REQ-N01-03 仍需应用期间、应用完成及恢复后的实际操作证据。",
+      "材料未规定大字号、舒适行距和暖色背景的具体样式数值，也未规定状态反馈时长；不得自行增设验收阈值。",
+      "材料给出本次样本的任务目标和验收要求，未提供更上层业务目的。"
+    ],
+    "assumptions": []
+  },
+  "understanding_context_version": 1,
+  "understanding_evidence_ids": [
+    "ev-c6d21d063e434730b10e7c627c28839a",
+    "ev-96a00dac4e8f4bee955da23bef9745f9",
+    "ev-dc5f4846880d431c92d3af450e889187"
+  ],
+  "check_plan_fingerprint": "",
+  "conflict_dispositions": [],
+  "active_phase": "T09"
+}

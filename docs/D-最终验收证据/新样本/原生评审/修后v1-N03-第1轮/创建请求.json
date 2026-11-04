@@ -1,0 +1,54 @@
+{
+  "purpose": "本次检查本机演示原型的实际操作。按以下任务卡执行评审：\n任务名称：图书出版年份校验与错误恢复\n材料来源：AI 制作的独立本地交互样本，版本 N03-v1。\n任务目标：填写书名“城市植物图鉴”、作者“林叶”，先输入出版年份 2029 并尝试保存；观察反馈，随后将年份改为 2021，完成保存并核对结果。\n初始状态：新开页面，三个字段为空，尚未保存图书记录。\n允许动作：填写和修改书名、作者、出版年份，保存图书、清空表单；如有需要可补填并重试。\n结束条件：观察不合法年份的反馈，并查看修正后的保存结果；遇到阻碍则记录当前状态和原因。\n验收要求：\nREQ-N03-01 不合法年份在对应字段附近给出清楚的有效范围。\nREQ-N03-02 一个字段校验失败时，保留其他已经正确填写的字段内容。\nREQ-N03-03 修正后可完成保存，并且成功反馈和结果记录与最终输入一致。\n请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。",
+  "actor": "D 新样本 AI 操作员",
+  "actor_type": "ai",
+  "design_purpose": "",
+  "target_user": "",
+  "sources": [
+    {
+      "kind": "website",
+      "reference": "http://127.0.0.1:49920/N03-%E5%9B%BE%E4%B9%A6%E7%BC%96%E7%9B%AE%E5%BD%95%E5%85%A5/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+      "title": "N03-图书编目录入",
+      "content": "",
+      "image_base64": "",
+      "version": "N03-v1",
+      "evidence_kind": "observation",
+      "role": "design",
+      "declared_by": "D 新样本 AI 操作员",
+      "document_base64": "",
+      "filename": "",
+      "figma_snapshot_id": ""
+    },
+    {
+      "kind": "document",
+      "reference": "",
+      "title": "N03-图书编目录入任务要求",
+      "content": "任务名称：图书出版年份校验与错误恢复\n材料来源：AI 制作的独立本地交互样本，版本 N03-v1。\n任务目标：填写书名“城市植物图鉴”、作者“林叶”，先输入出版年份 2029 并尝试保存；观察反馈，随后将年份改为 2021，完成保存并核对结果。\n初始状态：新开页面，三个字段为空，尚未保存图书记录。\n允许动作：填写和修改书名、作者、出版年份，保存图书、清空表单；如有需要可补填并重试。\n结束条件：观察不合法年份的反馈，并查看修正后的保存结果；遇到阻碍则记录当前状态和原因。\n验收要求：\nREQ-N03-01 不合法年份在对应字段附近给出清楚的有效范围。\nREQ-N03-02 一个字段校验失败时，保留其他已经正确填写的字段内容。\nREQ-N03-03 修正后可完成保存，并且成功反馈和结果记录与最终输入一致。\n请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。",
+      "image_base64": "",
+      "version": "冻结任务卡-v1",
+      "evidence_kind": null,
+      "role": "product_spec",
+      "declared_by": "D 新样本 AI 操作员",
+      "document_base64": "",
+      "filename": "",
+      "figma_snapshot_id": ""
+    }
+  ],
+  "limits": {
+    "max_actions": 24,
+    "max_checks": 160,
+    "max_model_calls": 100,
+    "max_review_rounds": 1,
+    "max_seconds": 7200,
+    "max_images_per_call": 10,
+    "max_material_chunks": 24,
+    "max_parallel_screens": 1
+  },
+  "allow_interaction": true,
+  "auto_run": false,
+  "provider": "generic",
+  "model_name": "gpt-6.1-sol",
+  "verifier_provider": null,
+  "verifier_model_name": null,
+  "require_structured_claims": true
+}

@@ -1,0 +1,1 @@
+{"judgments":[{"check_id":"check-46165daa97b98f17","decision":"insufficient_evidence","reason":"R11适用于至少两个入口明确指向同一动作的情况。材料仅说明活动标题为“锋芒崭露”、角色标题为“锋芒斩露”，未证明两者指向同一动作，也无必须同名的正式要求。字形差异不能据此判定动作命名不一致；适用条件尚未确认，不能判为不适用或候选问题。","evidence_ids":["ev-2ae7c9852ac843a6834ce2ddb31500ec"]}],"findings":[],"questions":[]}

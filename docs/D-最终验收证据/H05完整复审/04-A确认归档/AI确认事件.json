@@ -1,0 +1,82 @@
+[
+  {
+    "事件": {
+      "event_id": "b481770c-06ac-49c6-8eed-c7319544e105",
+      "expected_context_version": 2,
+      "type": "confirm_recheck",
+      "payload": {
+        "recheck_id": "recheck-4439088468c1447a8ff42a5a456b4d6b",
+        "resolution": "persists",
+        "reason": "AI复核：下午二层核对后提交，回执显示上午一层；本轮错配仍存在。",
+        "evidence_ids": [
+          "ev-7a2a26f0bce84eb5843b0457517f07f2",
+          "ev-02b1301742a148cfbe48d1d7e937e2e7",
+          "ev-044dae439f994270b16399504f86eca1",
+          "ev-f4b6b3083e8f4d8d8bcf4706f1b1ea18",
+          "ev-f450608bcf0247eda3e356ae17d64563",
+          "ev-d0d02278f1c14cf79dee6b1fff107fe1"
+        ],
+        "current_finding_ids": []
+      },
+      "actor": "AI模型验收-D",
+      "actor_type": "ai"
+    },
+    "HTTP": 202,
+    "确认记录": {
+      "recheck_id": "recheck-4439088468c1447a8ff42a5a456b4d6b",
+      "previous_finding_id": "finding-2b889800c51c43d7a60c72987671624d",
+      "current_finding_ids": [],
+      "resolution": "persists",
+      "reason": "AI复核：下午二层核对后提交，回执显示上午一层；本轮错配仍存在。",
+      "evidence_ids": [
+        "ev-7a2a26f0bce84eb5843b0457517f07f2",
+        "ev-02b1301742a148cfbe48d1d7e937e2e7",
+        "ev-044dae439f994270b16399504f86eca1",
+        "ev-f4b6b3083e8f4d8d8bcf4706f1b1ea18",
+        "ev-f450608bcf0247eda3e356ae17d64563",
+        "ev-d0d02278f1c14cf79dee6b1fff107fe1"
+      ],
+      "human_confirmation": "confirmed",
+      "reviewer": "AI模型验收-D",
+      "reviewed_at": "2026-11-04T11:37:16.437474+00:00"
+    }
+  },
+  {
+    "事件": {
+      "event_id": "07dd9d70-9343-409a-986c-46bf6189fd65",
+      "expected_context_version": 2,
+      "type": "confirm_recheck",
+      "payload": {
+        "recheck_id": "recheck-17f0cf711c9c4a8da785bd2dcf3451f8",
+        "resolution": "persists",
+        "reason": "AI复核：下午二层核对后提交，回执显示上午一层；本轮错配仍存在。",
+        "evidence_ids": [
+          "ev-044dae439f994270b16399504f86eca1",
+          "ev-f4b6b3083e8f4d8d8bcf4706f1b1ea18",
+          "ev-f450608bcf0247eda3e356ae17d64563",
+          "ev-d0d02278f1c14cf79dee6b1fff107fe1"
+        ],
+        "current_finding_ids": []
+      },
+      "actor": "AI模型验收-D",
+      "actor_type": "ai"
+    },
+    "HTTP": 202,
+    "确认记录": {
+      "recheck_id": "recheck-17f0cf711c9c4a8da785bd2dcf3451f8",
+      "previous_finding_id": "finding-149e805558484b9d850775c841603fda",
+      "current_finding_ids": [],
+      "resolution": "persists",
+      "reason": "AI复核：下午二层核对后提交，回执显示上午一层；本轮错配仍存在。",
+      "evidence_ids": [
+        "ev-044dae439f994270b16399504f86eca1",
+        "ev-f4b6b3083e8f4d8d8bcf4706f1b1ea18",
+        "ev-f450608bcf0247eda3e356ae17d64563",
+        "ev-d0d02278f1c14cf79dee6b1fff107fe1"
+      ],
+      "human_confirmation": "confirmed",
+      "reviewer": "AI模型验收-D",
+      "reviewed_at": "2026-11-04T11:37:16.885593+00:00"
+    }
+  }
+]

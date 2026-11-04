@@ -1,0 +1,220 @@
+{
+  "files": [
+    {
+      "path": "任务卡/N01-任务卡.txt",
+      "bytes": 962,
+      "sha256": "f9c27abfd1f05513c0b2b924b270f77907349dfcd22313cb86d7ecb3757d09ce"
+    },
+    {
+      "path": "任务卡/N02-任务卡.txt",
+      "bytes": 946,
+      "sha256": "c2784b35c2762399a7591390e7b0e82bc60f2343b20f7ae3cbe58323dd7b5ba0"
+    },
+    {
+      "path": "任务卡/N03-任务卡.txt",
+      "bytes": 1066,
+      "sha256": "953378651786b6390cb044b471bbe0644367a1f1aa78007d30d8f17f46c7aaca"
+    },
+    {
+      "path": "冻结回执.json",
+      "bytes": 298,
+      "sha256": "c1e3427c94d89771a9e29f4fb087f5aaa8e2f329c1f531976d227455ddc9f161"
+    },
+    {
+      "path": "原始操作证据/N01/01-初始.json",
+      "bytes": 2200,
+      "sha256": "7d14decb93a332708ea40d070252ba4e42021f6c49dd869f5c47b7a2eb00df8c"
+    },
+    {
+      "path": "原始操作证据/N01/01-初始.png",
+      "bytes": 50144,
+      "sha256": "be1bbe20d1b338439484caf911676b4e500f9e00001265c4f432812cb8d6ebe8"
+    },
+    {
+      "path": "原始操作证据/N01/02-选择完成.json",
+      "bytes": 2196,
+      "sha256": "5f61474ac54a6ac8f4d21f233fee03faeb1905a819983fa05792363b44ad1514"
+    },
+    {
+      "path": "原始操作证据/N01/02-选择完成.png",
+      "bytes": 49874,
+      "sha256": "02764ab26fe87db182b66782877866e1f1c09dd16908f664b8bfe2846402f923"
+    },
+    {
+      "path": "原始操作证据/N01/03-应用响应.json",
+      "bytes": 2212,
+      "sha256": "39550e738f5c114e30efd036732e3351b4d110abe0429f8674e7b3c0892c01e2"
+    },
+    {
+      "path": "原始操作证据/N01/03-应用响应.png",
+      "bytes": 50289,
+      "sha256": "28a474cb9aeeb62e08438b3f26c5ec6ccac7fb68c88e3c7a54a9623f08cc0073"
+    },
+    {
+      "path": "原始操作证据/N01/04-应用后.json",
+      "bytes": 2182,
+      "sha256": "848af20e258d5f7c242307b2b15de3bc2fb61237668518af5a80466ea2546ec9"
+    },
+    {
+      "path": "原始操作证据/N01/04-应用后.png",
+      "bytes": 66151,
+      "sha256": "d6a31112f2445e377c381d449cf09aa2f685634c345c54ed44943430afe2c96a"
+    },
+    {
+      "path": "原始操作证据/N01/05-恢复后.json",
+      "bytes": 2197,
+      "sha256": "0834d7e56e8d9dbd316376273ff8ed69565d0e19922829cf16bbb19faa48c1e4"
+    },
+    {
+      "path": "原始操作证据/N01/05-恢复后.png",
+      "bytes": 50208,
+      "sha256": "bcd8497abf05e6ba08d05478842595737e05d95c5313a330f494d208e4f8e654"
+    },
+    {
+      "path": "原始操作证据/N01/动作与观察索引.json",
+      "bytes": 2772,
+      "sha256": "1205a2c059178ead379050f1deee1ad20037c9de056b73d0d3f8f538693ada0b"
+    },
+    {
+      "path": "原始操作证据/N02/01-初始.json",
+      "bytes": 3005,
+      "sha256": "f2aec51d9e2bfd9c7596114d65317a4b2973ee608d6e7cb70abb221718a91875"
+    },
+    {
+      "path": "原始操作证据/N02/01-初始.png",
+      "bytes": 43401,
+      "sha256": "727efcba999eea60d1232bc1afbd80f896d25594a55cfafba387bacf6d702e04"
+    },
+    {
+      "path": "原始操作证据/N02/02-数量选择后.json",
+      "bytes": 3009,
+      "sha256": "98d0e66213184118cf86d0886bef987b9f5f0323ae61a2420d437c90d15eb401"
+    },
+    {
+      "path": "原始操作证据/N02/02-数量选择后.png",
+      "bytes": 42382,
+      "sha256": "d2a07ad3f699446bcf0225a92883c016eb6efb7c711db5561ca2f3a76a776977"
+    },
+    {
+      "path": "原始操作证据/N02/03-首次清单.json",
+      "bytes": 3063,
+      "sha256": "88c1acdcc0f3d43202c11550dcb1efc913d34337021166fc74cb0689352390fc"
+    },
+    {
+      "path": "原始操作证据/N02/03-首次清单.png",
+      "bytes": 50020,
+      "sha256": "70af85dd53a6726b97e50b2e40fdba56f13abfa082d4377e259c4ac9711e6bfc"
+    },
+    {
+      "path": "原始操作证据/N02/04-修改后清单.json",
+      "bytes": 3063,
+      "sha256": "45eb768c0a2636dae60f43dcf692c2faf2d2f416e703c674e7532f03b0802fb7"
+    },
+    {
+      "path": "原始操作证据/N02/04-修改后清单.png",
+      "bytes": 50149,
+      "sha256": "8f5c6b8a939ffd1fe2b31439b31bbee627904a793d53b4834bc2ec5b52acda4e"
+    },
+    {
+      "path": "原始操作证据/N02/动作与观察索引.json",
+      "bytes": 2773,
+      "sha256": "0555e174dc68b9aee8288b334b2bc83ecb6deb04ae2380e6e430895cf51bdfee"
+    },
+    {
+      "path": "原始操作证据/N03/01-初始.json",
+      "bytes": 1691,
+      "sha256": "f83b29069f266ef756496870b8a31a065b97ff62e3275941b69197b7d5cd2263"
+    },
+    {
+      "path": "原始操作证据/N03/01-初始.png",
+      "bytes": 34419,
+      "sha256": "1d1b73ede5490f5981fb120c2ea3f02c8dd96f6391796879be5c674641452c82"
+    },
+    {
+      "path": "原始操作证据/N03/02-首次填写后.json",
+      "bytes": 1719,
+      "sha256": "18da5545fdd52b51abd0ee1c2bbf879743ca99c76181370295eebac3ad53009b"
+    },
+    {
+      "path": "原始操作证据/N03/02-首次填写后.png",
+      "bytes": 39281,
+      "sha256": "b2f090471c97f31f55cbec107d1e8a60cc8764e4bdef03ec43a60d9e7959e492"
+    },
+    {
+      "path": "原始操作证据/N03/03-首次保存响应.json",
+      "bytes": 1780,
+      "sha256": "aab94438e0cb45132320fd00f7677b4de8ba0de1e7a68b3205e0e0667835315d"
+    },
+    {
+      "path": "原始操作证据/N03/03-首次保存响应.png",
+      "bytes": 40849,
+      "sha256": "798ea05952ece07d2a0c175c83130002522f9f35982c9cecfbbfefd042037066"
+    },
+    {
+      "path": "原始操作证据/N03/04-修正年份后.json",
+      "bytes": 1780,
+      "sha256": "61541f21b8e5ae87912073ad0b964941f7e86cf0c46bf12d5b0712888e016e88"
+    },
+    {
+      "path": "原始操作证据/N03/04-修正年份后.png",
+      "bytes": 42515,
+      "sha256": "c0c93509192910ce0c8e601aaa123ecaac93e43cf768183e98fab1d5d1c4b052"
+    },
+    {
+      "path": "原始操作证据/N03/05-再次保存响应.json",
+      "bytes": 1749,
+      "sha256": "7fc26a4ed83cef745c3a370589dd2b792f0ba8f6a5031b4d72db573699bb0265"
+    },
+    {
+      "path": "原始操作证据/N03/05-再次保存响应.png",
+      "bytes": 38285,
+      "sha256": "f483f3daa388d4ddad2d6605f93da5a04342f729c03c79656ae3753ccb6570ce"
+    },
+    {
+      "path": "原始操作证据/N03/06-补填后保存响应.json",
+      "bytes": 1759,
+      "sha256": "7ba9c04fe80fe313e357a5814da211ddffcff624dd0cfc8b363c0e0a15f6c4ed"
+    },
+    {
+      "path": "原始操作证据/N03/06-补填后保存响应.png",
+      "bytes": 39288,
+      "sha256": "8b14eb54bf847f2b38615dff6af827f306179e530a77b53ffb22f6e6f5f34494"
+    },
+    {
+      "path": "原始操作证据/N03/动作与观察索引.json",
+      "bytes": 3478,
+      "sha256": "b373e9fbe54b395d41c1f759c4a36234cc68b1eda933a60c4f1da5bd8a569fe9"
+    },
+    {
+      "path": "原始操作证据/取证说明.json",
+      "bytes": 403,
+      "sha256": "adf08da6fbd8613d55668cd21e51c990f0cb68a329a4690ec06f76adaf3f3d0c"
+    },
+    {
+      "path": "参考取得方式.json",
+      "bytes": 902,
+      "sha256": "241d59bc2877a988e5655cda913f9ab2a274d71841545416af03301916423a95"
+    },
+    {
+      "path": "执行协议_输入时冻结.md",
+      "bytes": 3287,
+      "sha256": "4d375bbc2582d8d42f718af3fa153cec64af67c3a7f00a449220ffeeaedbe359"
+    },
+    {
+      "path": "样本材料冻结清单.json",
+      "bytes": 1386,
+      "sha256": "f2fee023ebc0d0ed6ebb70cceda4a904b28804fa5b218e77f1b86ce3ba815766"
+    },
+    {
+      "path": "独立AI参考_冻结.json",
+      "bytes": 18338,
+      "sha256": "f9497ff9660d8f66d556802d2870a06a183e9e3be3c488e73642c4074a21ccc3"
+    },
+    {
+      "path": "评分口径_预注册.json",
+      "bytes": 3261,
+      "sha256": "6bcc00db2fcdfe855a101d35307dc048f56e1f408f2d4c2d6ee7b3dd7be687e5"
+    }
+  ],
+  "count": 43
+}

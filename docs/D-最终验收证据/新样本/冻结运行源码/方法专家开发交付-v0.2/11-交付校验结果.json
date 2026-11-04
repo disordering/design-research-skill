@@ -1,0 +1,315 @@
+{
+  "delivery_version": "0.2-method-draft",
+  "scope": "交付文件结构、引用、来源和原加载器兼容性；不是模型效果、UI、状态机实现或真人测试",
+  "checks": [
+    {
+      "check": "core_top_level_matches_original",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "24_rules_unique_and_all_original_ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R01_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R02_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R03_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R04_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R05_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R06_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R07_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R08_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R09_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R10_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R11_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R12_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R13_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R14_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R15_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R16_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R17_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R18_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R19_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R20_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R21_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R22_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R23_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R24_schema_identity_nonempty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "source_identity_preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "24_rule_execution_supplements",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "each_rule_four_examples_and_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "120_exact_field_diffs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "8_methods_all_ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "method_specs_complete",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "method_rule_refs_valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "32_test_specs_not_run",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test_refs_valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "source_hash_README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "source_hash_判据库_v1.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "source_hash_docs/D-测试判定说明-v1.1.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "source_hash_docs/D-单案例复核勘误.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "source_hash_docs/D-Codex三轮一致性对照.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "source_hash_docs/D-数据收尾结果.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "actual_original_CriteriaLibrary_load",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "original_loader": {
+    "status": "passed",
+    "implementation": "原criteria.py、contracts.py、errors.py未修改，隔离包加载CriteriaLibrary.load；跳过engine/__init__.py对HTTP服务的初始化导入",
+    "rules_loaded": 24,
+    "model_or_server_invoked": false,
+    "full_engine_startup_tested": false
+  },
+  "counts": {
+    "rules": 24,
+    "field_changes": 120,
+    "methods": 8,
+    "acceptance_specs": 32
+  },
+  "product_tests": "not_run",
+  "new_model_runs": 0,
+  "new_human_experiments": 0,
+  "limitations": [
+    "方法JSON和文本为设计交付，E方法/会话/新证据契约仍需实现",
+    "原核心库加载通过不证明新语义正确执行",
+    "公开例子不构成隔离专家评估"
+  ],
+  "files": [
+    {
+      "path": "00-阅读与开发交接.md",
+      "sha256": "6dca7b14918a08d65e40362bfec2fc40a1f8f1d0492e4f356b2ac9b8f00d051e"
+    },
+    {
+      "path": "01-04-场景输入流程与技术路径.md",
+      "sha256": "fe432cf3851ad10528e53d6fecc14e9ffaba0a4fafd96a1b6ee61c4007c28347"
+    },
+    {
+      "path": "05-24条判据修订与变更对照.md",
+      "sha256": "bd2f82f8d8e539d2011b0b684d77de775b0149ec0e14736717944f2057847c99"
+    },
+    {
+      "path": "05-判据库-v0.2.json",
+      "sha256": "b785eb9c6b64b5d9ceb87ca76430af4a2658c944c9aff99a97ce9298bdf54af7"
+    },
+    {
+      "path": "05-判据执行补充-v0.2.json",
+      "sha256": "8e502b943023c7e39a8da6a479c1cc09f621c9474520e4f116cae0553bc9c24d"
+    },
+    {
+      "path": "05-逐字段变更对照.csv",
+      "sha256": "d0b1d25442662ecf10150e923b98b8049ad7291e2bf56653690a138392d8307d"
+    },
+    {
+      "path": "06-新场景方法-v0.2.json",
+      "sha256": "1702aa0350c41ced0363a41d73c46aeb547d60d7299616964875b51ce8fd689c"
+    },
+    {
+      "path": "06-新场景方法与正反例.md",
+      "sha256": "e21e0996cc25bc218f5e24e2c3a7aa66649001eb58ad00e84fcb5fc88b48ca26"
+    },
+    {
+      "path": "07-会话变更重查与复审规则.md",
+      "sha256": "c9a5f573648a20094f4b0c4602043979b33ea3cb935a6976b641cf57b539f025"
+    },
+    {
+      "path": "08-问题表达严重度与评价验收.md",
+      "sha256": "4d92cfcfdb8417a20678995528ea0180f6182eb52b0b2becbb3a7fc44886eead"
+    },
+    {
+      "path": "09-开发验收用例.json",
+      "sha256": "fc85e0bd301b081d393ab4764f0f0b59003e2462d842ebee91bc990eb9f41f60"
+    },
+    {
+      "path": "09-开发验收用例.md",
+      "sha256": "e2ca3487871026558697e1283734849af2ef94de25b984ade9ae8334a73a2fd3"
+    },
+    {
+      "path": "10-来源索引.json",
+      "sha256": "e6147e42231bb4602cb506caa7a2d6ff69812b2d7d1289731a33220db667017a"
+    },
+    {
+      "path": "参考来源/D-Codex三轮一致性对照.md",
+      "sha256": "94894016185026ce10c551901a58b8aa969a2d1d966ba0159af75a1f75a75efe"
+    },
+    {
+      "path": "参考来源/D-单案例复核勘误.md",
+      "sha256": "89217e2d931d9014c24e0c94cc8a2d3ad06a17f0451537013e72c7baa0c3616d"
+    },
+    {
+      "path": "参考来源/D-数据收尾结果.md",
+      "sha256": "49e6530b1e1960c8956359ee486869ca1a25d11b996935ecb42666c1b9a40e0e"
+    },
+    {
+      "path": "参考来源/D-测试判定说明-v1.1.md",
+      "sha256": "378799d1ae883cf33beafd392a402dcdf292b73011f132f562d07dd3a78fe6d7"
+    },
+    {
+      "path": "参考来源/README.md",
+      "sha256": "03d73ef3b1181eceb87f842e08031cb31723089b51c8616c9cfec68d047f901b"
+    },
+    {
+      "path": "参考来源/判据库_v1.json",
+      "sha256": "8be40cfe628bf5d914f970ef5b4d5367810eada5e77be432e81bec9937ce3688"
+    }
+  ]
+}

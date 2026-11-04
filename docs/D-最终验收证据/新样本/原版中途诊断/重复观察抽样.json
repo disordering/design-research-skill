@@ -1,0 +1,32 @@
+{
+  "采样UTC": "2026-11-04T11:03:08.254573+00:00",
+  "来源": "原版试点运行状态库只读抽样；未改在途数据",
+  "证据": [
+    {
+      "证据ID": "ev-f6ed86036d764ea8acf282490e1fb3a9",
+      "state_id": "5c5e9c5a015071a4c9b83169",
+      "来源": "src-104f6e84a5f44565bb0dfcf050edba69",
+      "动作ID": "action-a388d53709ff47d1abab826264f2c9d8",
+      "文字SHA256": "14f7c0a4eb1469dfb67ab87f3067f19c2e20be361e531e16cb85840b3addff32",
+      "截图存储SHA256": "b7c67dc0390ea9640d4cd23677d3d0cb108e2c0bb06b08737aefe06bcb58d615",
+      "文件实际SHA256": "b7c67dc0390ea9640d4cd23677d3d0cb108e2c0bb06b08737aefe06bcb58d615",
+      "文字大小值": [
+        "normal"
+      ]
+    },
+    {
+      "证据ID": "ev-30fe62cedd264a2fa8d065935bca3ff4",
+      "state_id": "5c5e9c5a015071a4c9b83169",
+      "来源": "src-104f6e84a5f44565bb0dfcf050edba69",
+      "动作ID": null,
+      "文字SHA256": "14f7c0a4eb1469dfb67ab87f3067f19c2e20be361e531e16cb85840b3addff32",
+      "截图存储SHA256": "b7c67dc0390ea9640d4cd23677d3d0cb108e2c0bb06b08737aefe06bcb58d615",
+      "文件实际SHA256": "b7c67dc0390ea9640d4cd23677d3d0cb108e2c0bb06b08737aefe06bcb58d615",
+      "文字大小值": [
+        "normal"
+      ]
+    }
+  ],
+  "相同state": true,
+  "相同截图": true
+}

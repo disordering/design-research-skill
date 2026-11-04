@@ -1,0 +1,4304 @@
+{
+  "review_mode": "materials",
+  "schema_version": "session-1.0",
+  "session_id": "session-05ac68c7ce3848d790882e1702b6f939",
+  "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+  "status": "reading",
+  "revision": 34,
+  "sequence": 34,
+  "context_version": 2,
+  "created_at": "2026-11-04T10:24:01.246471+00:00",
+  "updated_at": "2026-11-04T10:24:01.999706+00:00",
+  "request": {
+    "purpose": "检查保存设置",
+    "actor": "unknown",
+    "actor_type": "ai",
+    "design_purpose": "",
+    "target_user": "",
+    "sources": [
+      {
+        "kind": "document",
+        "reference": "",
+        "title": "",
+        "content": "测试规则：保存成功后显示结果。",
+        "image_base64": "",
+        "version": "unknown",
+        "evidence_kind": "design",
+        "role": "unspecified",
+        "declared_by": "unknown",
+        "document_base64": "",
+        "filename": "",
+        "figma_snapshot_id": ""
+      }
+    ],
+    "limits": {
+      "max_actions": 12,
+      "max_checks": 64,
+      "max_model_calls": 60,
+      "max_review_rounds": 3,
+      "max_seconds": 900,
+      "max_images_per_call": 12,
+      "max_material_chunks": 24,
+      "max_parallel_screens": 2
+    },
+    "allow_interaction": false,
+    "auto_run": false,
+    "provider": "qwen",
+    "model_name": null,
+    "verifier_provider": null,
+    "verifier_model_name": null,
+    "require_structured_claims": true
+  },
+  "task_summary": "检查保存设置",
+  "scope": "",
+  "review_tasks": [
+    {
+      "task_id": "TASK01",
+      "text": "检查保存设置",
+      "success_criteria": "按已提取目标和正式要求完成可观察任务。",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef",
+        "ev-0410071796c143048ce94e56dcecca25"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "page_ids": [],
+      "state_ids": [],
+      "branches": []
+    }
+  ],
+  "goals": [],
+  "requirements": [],
+  "assumptions": [],
+  "sources": [
+    {
+      "source_id": "src-4993cfc3233145db9865f627161deee7",
+      "input": {
+        "kind": "document",
+        "reference": "",
+        "title": "",
+        "content": "正式需求 v2：取消全部选择功能，原选择卡不再属于本版本范围。",
+        "image_base64": "",
+        "version": "v2",
+        "evidence_kind": null,
+        "role": "product_spec",
+        "declared_by": "unknown",
+        "document_base64": "",
+        "filename": "",
+        "figma_snapshot_id": ""
+      },
+      "acquisition_status": "success",
+      "error": "",
+      "captured_at": "2026-11-04T10:24:01.962672+00:00",
+      "observed_version": "v2",
+      "active": true
+    },
+    {
+      "source_id": "src-500c26207e9f4d6da650883d7cabf035",
+      "input": {
+        "kind": "document",
+        "reference": "user://initial_purpose",
+        "title": "initial_purpose",
+        "content": "检查保存设置",
+        "image_base64": "",
+        "version": "context-1",
+        "evidence_kind": "statement",
+        "role": "review_instruction",
+        "declared_by": "unknown",
+        "document_base64": "",
+        "filename": "",
+        "figma_snapshot_id": ""
+      },
+      "acquisition_status": "success",
+      "error": "",
+      "captured_at": "2026-11-04T10:24:01.285869+00:00",
+      "observed_version": "context-1",
+      "active": true
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "ev-73af710bc3b5485582e9de09303f42ef",
+      "source_id": "src-4993cfc3233145db9865f627161deee7",
+      "kind": "design",
+      "source_version": "fixture-state",
+      "context_version": 1,
+      "captured_at": "2026-11-04T10:24:01.276448+00:00",
+      "locator": {
+        "url": "",
+        "is_test_fixture": true,
+        "controls": [],
+        "partial": false
+      },
+      "content": "测试规则：保存成功后显示结果。",
+      "artifact_id": null,
+      "raw_artifact_id": null,
+      "original_artifact_id": null,
+      "analysis_artifact_id": null,
+      "overlay_artifact_ids": {},
+      "analysis": {},
+      "action_id": null,
+      "state_id": "fixture-state",
+      "objects": [
+        {
+          "object_id": "obj-73547b11925caa4175f0",
+          "identity_key": "src-4993cfc3233145db9865f627161deee7",
+          "kind": "page",
+          "source_id": "src-4993cfc3233145db9865f627161deee7",
+          "state_id": "fixture-state",
+          "label": "",
+          "role": "document",
+          "bbox": {},
+          "locator": {
+            "url": ""
+          },
+          "interactable": false,
+          "attributes": {}
+        },
+        {
+          "object_id": "obj-6f1fd1bacc73cdf9d9ac",
+          "identity_key": "chunk-0",
+          "kind": "document_section",
+          "source_id": "src-4993cfc3233145db9865f627161deee7",
+          "state_id": "fixture-state",
+          "label": "",
+          "role": "document",
+          "bbox": {},
+          "locator": {},
+          "interactable": false,
+          "attributes": {
+            "excerpt": "测试规则：保存成功后显示结果。"
+          }
+        }
+      ],
+      "stale": true
+    },
+    {
+      "evidence_id": "ev-0410071796c143048ce94e56dcecca25",
+      "source_id": "src-500c26207e9f4d6da650883d7cabf035",
+      "kind": "statement",
+      "source_version": "context-1",
+      "context_version": 1,
+      "captured_at": "2026-11-04T10:24:01.285869+00:00",
+      "locator": {
+        "url": "user://initial_purpose",
+        "is_test_fixture": true,
+        "controls": [],
+        "partial": false
+      },
+      "content": "检查保存设置",
+      "artifact_id": null,
+      "raw_artifact_id": null,
+      "original_artifact_id": null,
+      "analysis_artifact_id": null,
+      "overlay_artifact_ids": {},
+      "analysis": {},
+      "action_id": null,
+      "state_id": "fixture-state",
+      "objects": [
+        {
+          "object_id": "obj-2206d21e2d0230573590",
+          "identity_key": "user://initial_purpose",
+          "kind": "page",
+          "source_id": "src-500c26207e9f4d6da650883d7cabf035",
+          "state_id": "fixture-state",
+          "label": "initial_purpose",
+          "role": "document",
+          "bbox": {},
+          "locator": {
+            "url": "user://initial_purpose"
+          },
+          "interactable": false,
+          "attributes": {}
+        },
+        {
+          "object_id": "obj-46cfb727421ecff7ad61",
+          "identity_key": "chunk-0",
+          "kind": "document_section",
+          "source_id": "src-500c26207e9f4d6da650883d7cabf035",
+          "state_id": "fixture-state",
+          "label": "initial_purpose",
+          "role": "document",
+          "bbox": {},
+          "locator": {},
+          "interactable": false,
+          "attributes": {
+            "excerpt": "检查保存设置"
+          }
+        }
+      ],
+      "stale": false
+    },
+    {
+      "evidence_id": "ev-652fe3cb079445949b28744753877d95",
+      "source_id": "src-4993cfc3233145db9865f627161deee7",
+      "kind": "requirement",
+      "source_version": "v2",
+      "context_version": 2,
+      "captured_at": "2026-11-04T10:24:01.962672+00:00",
+      "locator": {
+        "url": "",
+        "is_test_fixture": true,
+        "controls": [],
+        "partial": false
+      },
+      "content": "正式需求 v2：取消全部选择功能，原选择卡不再属于本版本范围。",
+      "artifact_id": null,
+      "raw_artifact_id": null,
+      "original_artifact_id": null,
+      "analysis_artifact_id": null,
+      "overlay_artifact_ids": {},
+      "analysis": {},
+      "action_id": null,
+      "state_id": "fixture-state",
+      "objects": [
+        {
+          "object_id": "obj-73547b11925caa4175f0",
+          "identity_key": "src-4993cfc3233145db9865f627161deee7",
+          "kind": "page",
+          "source_id": "src-4993cfc3233145db9865f627161deee7",
+          "state_id": "fixture-state",
+          "label": "",
+          "role": "document",
+          "bbox": {},
+          "locator": {
+            "url": ""
+          },
+          "interactable": false,
+          "attributes": {}
+        },
+        {
+          "object_id": "obj-6f1fd1bacc73cdf9d9ac",
+          "identity_key": "chunk-0",
+          "kind": "document_section",
+          "source_id": "src-4993cfc3233145db9865f627161deee7",
+          "state_id": "fixture-state",
+          "label": "",
+          "role": "document",
+          "bbox": {},
+          "locator": {},
+          "interactable": false,
+          "attributes": {
+            "excerpt": "正式需求 v2：取消全部选择功能，原选择卡不再属于本版本范围。"
+          }
+        }
+      ],
+      "stale": false
+    }
+  ],
+  "page_states": [],
+  "transitions": [],
+  "flow_graph": {
+    "schema_version": "session-flow-1.0",
+    "context_version": 2,
+    "nodes": [],
+    "edges": [],
+    "uncovered_task_states": [],
+    "summary": {
+      "state_count": 0,
+      "transition_count": 0,
+      "covered_state_count": 0,
+      "uncovered_task_state_count": 0
+    }
+  },
+  "required_coverage": [
+    {
+      "coverage_id": "coverage-f49929bfbcc31137",
+      "task_id": "TASK01",
+      "task_text": "检查保存设置",
+      "page_id": "",
+      "state_id": "",
+      "source_id": "src-4993cfc3233145db9865f627161deee7",
+      "covered": false,
+      "coverage_kind": "task",
+      "gap_class": "access_or_source"
+    }
+  ],
+  "questions": [],
+  "actions": [],
+  "checks": [
+    {
+      "check_id": "check-339cb0b4844aa2d8",
+      "ref": "R01",
+      "coverage_id": "coverage-91941d54d423097f",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-b85b2ec612172d8f",
+      "ref": "R02",
+      "coverage_id": "coverage-e44adc601d217548",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-22e1815a410df230",
+      "ref": "R03",
+      "coverage_id": "coverage-851c863b2425c17d",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-76c244fc659400a1",
+      "ref": "R04",
+      "coverage_id": "coverage-5ba779a60f2b7820",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-2bb5fe73f34155f4",
+      "ref": "R05",
+      "coverage_id": "coverage-c6d361d886e5e781",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-664782108908aa64",
+      "ref": "R06",
+      "coverage_id": "coverage-6e537134cd18812d",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-4257c7d5d482da68",
+      "ref": "R07",
+      "coverage_id": "coverage-34c62b58561d0f06",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-d804658e61f11379",
+      "ref": "R08",
+      "coverage_id": "coverage-e01a0bbe7af00cbf",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-4d7bed2833a63de6",
+      "ref": "R09",
+      "coverage_id": "coverage-ace9e08bc28d9565",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-84a05727f19fc061",
+      "ref": "R10",
+      "coverage_id": "coverage-b718105ebcb63940",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-51c656a3ed6ba95c",
+      "ref": "R11",
+      "coverage_id": "coverage-d4d8b97c7ce3ef16",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-fdaa38d7f4a47526",
+      "ref": "R12",
+      "coverage_id": "coverage-8ae7e5b64f30ba05",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-8b5063e4d265f630",
+      "ref": "R13",
+      "coverage_id": "coverage-2ac7a61beba01b71",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-f810802614149257",
+      "ref": "R14",
+      "coverage_id": "coverage-c54e69b1146a6bd9",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-91cd8c19b052ca05",
+      "ref": "R15",
+      "coverage_id": "coverage-0409c129c2546f2f",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-62bdd661564210b5",
+      "ref": "R16",
+      "coverage_id": "coverage-14d4da6e81cc31fd",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-759649c4cb5599fc",
+      "ref": "R17",
+      "coverage_id": "coverage-3561f2b896377424",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "candidate_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-a02fa6467e73010d",
+      "ref": "R18",
+      "coverage_id": "coverage-878a426c807bc1f6",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-d48310a7cb934434",
+      "ref": "R19",
+      "coverage_id": "coverage-1cd906f4f5f14191",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-9bfdcaf5dc71350e",
+      "ref": "R20",
+      "coverage_id": "coverage-2f137bfcd86f5f18",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-ab6689786c977c19",
+      "ref": "R21",
+      "coverage_id": "coverage-27449ea80db9b00c",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-46b976e4fad76c51",
+      "ref": "R22",
+      "coverage_id": "coverage-b95c84bb0ba2cb9a",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-ed52d1af69334981",
+      "ref": "R23",
+      "coverage_id": "coverage-538be8843c252b9b",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-5995ec39dc8f3dc1",
+      "ref": "R24",
+      "coverage_id": "coverage-2a85aa583ad0f7b3",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "rule",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-2dffeacf4fb39420",
+      "ref": "E01",
+      "coverage_id": "coverage-33da1ab419327e0b",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "method",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-03f8e5d8b6b232a4",
+      "ref": "E02",
+      "coverage_id": "coverage-92b78d0af211db53",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "method",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-8840beb832cbd370",
+      "ref": "E03",
+      "coverage_id": "coverage-19a693adeb2e0752",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "method",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-c1812913ad5e6667",
+      "ref": "E04",
+      "coverage_id": "coverage-3e28a2bca153c022",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "method",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-7026ab0b1b64b958",
+      "ref": "E05",
+      "coverage_id": "coverage-55c18eacd2ba37ff",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "method",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-d6ef10c2b4cc43aa",
+      "ref": "E06",
+      "coverage_id": "coverage-301f587703f818b7",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "method",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-07b5c27398f0da8a",
+      "ref": "E07",
+      "coverage_id": "coverage-0bc6c6e3384441cd",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "goal",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "insufficient_evidence",
+      "reason": "程序按当前任务内全部覆盖单元的明确目标/要求根项汇总，未知或未执行不算满足。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-2f63eb8e2a1b8c57",
+      "ref": "E08",
+      "coverage_id": "coverage-6a14da1cd54c67bc",
+      "coverage_title": "检查保存设置",
+      "task_id": "TASK01",
+      "kind": "conflict",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_conflict",
+      "reason": "契约测试判断，非模型效果",
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": true,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "契约夹具计划，不证明模型效果",
+      "evidence_needed": [],
+      "object_refs": [
+        "fixture"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-e0a64b0b6d837fa4",
+      "ref": "R01",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-c719df3d28484a1a",
+      "ref": "R02",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-721ba03d5fe40ec7",
+      "ref": "R03",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-9d1987f13d2f450d",
+      "ref": "R04",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-1444962ff685397f",
+      "ref": "R05",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-e7a271ee676b0303",
+      "ref": "R06",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-3ce42add5ce7a870",
+      "ref": "R07",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-bda7ec4bbac58dc5",
+      "ref": "R08",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-022ba278a0b38716",
+      "ref": "R09",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-38fea159d1d76d6f",
+      "ref": "R10",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-46165daa97b98f17",
+      "ref": "R11",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-f0a6cd0884bfee98",
+      "ref": "R12",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-7a2eca4de16fc0df",
+      "ref": "R13",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-f01df5b35044865c",
+      "ref": "R14",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-71ef1a102315afd0",
+      "ref": "R15",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-32c71e5b9e5d9535",
+      "ref": "R16",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-b8c94a38f7c8b47e",
+      "ref": "R17",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-4bcfa70baaca9ae4",
+      "ref": "R18",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-9d8856d8c6227455",
+      "ref": "R19",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-0e9b91ae8134692d",
+      "ref": "R20",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-0670f8ea51020513",
+      "ref": "R21",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-cff9109491762457",
+      "ref": "R22",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-c88159d3136f3ab2",
+      "ref": "R23",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-5befc57a956b7ca3",
+      "ref": "R24",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-e7e7dd241b31082d",
+      "ref": "E01",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-d134709e21f92151",
+      "ref": "E02",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-1454eab04012fd46",
+      "ref": "E03",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-bf3d2191e215de96",
+      "ref": "E04",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-26e2b663c8399b7c",
+      "ref": "E05",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-51afa6f61e345ec3",
+      "ref": "E06",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-99e3940e063f5ff2",
+      "ref": "E07",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "goal",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-d6f62ec0a4c3dd6e",
+      "ref": "E08",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "conflict",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "context_version": 2,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "planned",
+      "decision": null,
+      "reason": "已登记待检查项，尚未作出判断。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-4993cfc3233145db9865f627161deee7",
+        "src-500c26207e9f4d6da650883d7cabf035"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "finding-b2eb9b9bce2b4994958fb149cbf33d89",
+      "kind": "issue",
+      "title": "夹具选择状态问题",
+      "check_ids": [
+        "check-759649c4cb5599fc"
+      ],
+      "evidence_ids": [
+        "ev-73af710bc3b5485582e9de09303f42ef"
+      ],
+      "principle": "测试依据",
+      "detection": "测试现象",
+      "description": "测试影响",
+      "suggestion": "测试修改",
+      "severity": "medium",
+      "severity_reason": "测试任务局部受阻",
+      "confidence": null,
+      "context_version": 1,
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "screen_review_id": "",
+      "review_status": "unreviewed",
+      "human_severity": null,
+      "review_reason": "",
+      "reviewer": "unknown",
+      "reviewed_at": null,
+      "disposition": null,
+      "stale": true,
+      "object_id": "obj-73547b11925caa4175f0",
+      "object_ref": "ev-73af710bc3b5485582e9de09303f42ef",
+      "claims": [
+        {
+          "claim_id": "claim-16611a24429549e0a4957727c3104edb",
+          "claim_type": "object_present",
+          "object_id": "obj-73547b11925caa4175f0",
+          "expected": "测试对象受检查",
+          "observed": "测试证据中存在目标对象",
+          "evidence_ids": [
+            "ev-73af710bc3b5485582e9de09303f42ef"
+          ],
+          "derived": false,
+          "verification_status": "supported",
+          "verification_reason": "证据对象、类型和观察结果通过程序核验。"
+        }
+      ],
+      "mechanism": "selection",
+      "change_action": "show-state",
+      "location": {
+        "source_id": "src-4993cfc3233145db9865f627161deee7",
+        "state_id": "fixture-state",
+        "object_id": "obj-73547b11925caa4175f0"
+      }
+    }
+  ],
+  "screen_reviews": [],
+  "rechecks": [
+    {
+      "recheck_id": "recheck-37deedfe7fac4afebf784808728d6bff",
+      "previous_finding_id": "finding-b2eb9b9bce2b4994958fb149cbf33d89",
+      "current_finding_ids": [],
+      "resolution": "cannot_determine",
+      "reason": "新版证据尚未取得，不能依据漏报推断已解决。",
+      "evidence_ids": [],
+      "human_confirmation": "unreviewed",
+      "reviewer": "unknown",
+      "reviewed_at": null
+    }
+  ],
+  "messages": [
+    {
+      "at": "2026-11-04T10:24:01.246471+00:00",
+      "actor_type": "ai",
+      "actor": "unknown",
+      "type": "purpose",
+      "content": "检查保存设置"
+    },
+    {
+      "at": "2026-11-04T10:24:01.263134+00:00",
+      "actor_type": "program",
+      "type": "run_started",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "warning_count": 0
+    },
+    {
+      "at": "2026-11-04T10:24:01.600592+00:00",
+      "actor_type": "program",
+      "type": "screen_review_skipped",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "reason": "stub_model"
+    },
+    {
+      "at": "2026-11-04T10:24:01.809979+00:00",
+      "actor_type": "program",
+      "type": "finding_assertion_passed",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "content": {
+        "finding_title": "夹具选择状态问题",
+        "object_id": "obj-73547b11925caa4175f0",
+        "object_ref": "ev-73af710bc3b5485582e9de09303f42ef",
+        "evidence_ids": [
+          "ev-73af710bc3b5485582e9de09303f42ef"
+        ],
+        "claims": [
+          {
+            "claim_id": "claim-16611a24429549e0a4957727c3104edb",
+            "claim_type": "object_present",
+            "object_id": "obj-73547b11925caa4175f0",
+            "expected": "测试对象受检查",
+            "observed": "测试证据中存在目标对象",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "derived": false,
+            "verification_status": "supported",
+            "verification_reason": "证据对象、类型和观察结果通过程序核验。"
+          }
+        ],
+        "checks": [
+          "object_present"
+        ]
+      }
+    },
+    {
+      "at": "2026-11-04T10:24:01.903969+00:00",
+      "actor_type": "program",
+      "type": "run_finished",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "completeness": "complete",
+      "elapsed_seconds": 0.640835
+    },
+    {
+      "at": "2026-11-04T10:24:01.928409+00:00",
+      "actor_type": "ai",
+      "actor": "D-AI验收",
+      "type": "recheck",
+      "event_id": "QA26-取消原功能",
+      "context_version": 2,
+      "content": {
+        "updates": [
+          {
+            "source_id": "src-4993cfc3233145db9865f627161deee7",
+            "input": {
+              "kind": "document",
+              "content": "正式需求 v2：取消全部选择功能，原选择卡不再属于本版本范围。",
+              "role": "product_spec",
+              "version": "v2"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "warnings": [
+    "变更使关联结论过期；影响范围不明确时保守重查任务范围。"
+  ],
+  "run_limitations": [],
+  "model_calls": [
+    {
+      "call_id": "call-1a164cae12124a33b4155daa239c85fe",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "operation": "understand",
+      "attempt": 1,
+      "provider": "test-fixture",
+      "model": "contract-fixture",
+      "usage": {},
+      "request_id": null,
+      "latency_ms": 1,
+      "raw_artifact_id": "artifact-d4164fe5ec6c40c9bff86596d50d6761",
+      "is_stub": true,
+      "parameters": {},
+      "stage": "T03",
+      "status": "validated",
+      "schema": "MaterialUnderstanding",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-4993cfc3233145db9865f627161deee7",
+          "src-500c26207e9f4d6da650883d7cabf035"
+        ],
+        "evidence_ids": [
+          "ev-0410071796c143048ce94e56dcecca25",
+          "ev-73af710bc3b5485582e9de09303f42ef"
+        ],
+        "image_evidence_ids": [],
+        "check_refs": [],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "task_summary": "检查保存设置",
+        "target_user_summary": "",
+        "review_tasks": [],
+        "goals": [],
+        "requirements": [],
+        "opinions": [],
+        "conflicts": [],
+        "relationships": [],
+        "unknowns": [],
+        "assumptions": []
+      }
+    },
+    {
+      "call_id": "call-31916c2dfc684c04bc6be1ef4d2d361a",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "operation": "plan_checks",
+      "attempt": 1,
+      "provider": "test-fixture",
+      "model": "contract-fixture",
+      "usage": {},
+      "request_id": null,
+      "latency_ms": 1,
+      "raw_artifact_id": "artifact-0ae8002b764b4bbbad3a8f597277a02a",
+      "is_stub": true,
+      "parameters": {},
+      "stage": "T04",
+      "status": "validated",
+      "schema": "CheckPlanBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-4993cfc3233145db9865f627161deee7",
+          "src-500c26207e9f4d6da650883d7cabf035"
+        ],
+        "evidence_ids": [
+          "ev-0410071796c143048ce94e56dcecca25",
+          "ev-73af710bc3b5485582e9de09303f42ef"
+        ],
+        "image_evidence_ids": [],
+        "check_refs": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08"
+        ],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "items": [
+          {
+            "ref": "R01",
+            "coverage_id": "coverage-91941d54d423097f",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R02",
+            "coverage_id": "coverage-e44adc601d217548",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R03",
+            "coverage_id": "coverage-851c863b2425c17d",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R04",
+            "coverage_id": "coverage-5ba779a60f2b7820",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R05",
+            "coverage_id": "coverage-c6d361d886e5e781",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R06",
+            "coverage_id": "coverage-6e537134cd18812d",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R07",
+            "coverage_id": "coverage-34c62b58561d0f06",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R08",
+            "coverage_id": "coverage-e01a0bbe7af00cbf",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          }
+        ]
+      }
+    },
+    {
+      "call_id": "call-1082f1e3b4214724b1af6e2a12018897",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "operation": "plan_checks",
+      "attempt": 1,
+      "provider": "test-fixture",
+      "model": "contract-fixture",
+      "usage": {},
+      "request_id": null,
+      "latency_ms": 1,
+      "raw_artifact_id": "artifact-1a9171fc790f4cdc881a2cf171ced64c",
+      "is_stub": true,
+      "parameters": {},
+      "stage": "T04",
+      "status": "validated",
+      "schema": "CheckPlanBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-4993cfc3233145db9865f627161deee7",
+          "src-500c26207e9f4d6da650883d7cabf035"
+        ],
+        "evidence_ids": [
+          "ev-0410071796c143048ce94e56dcecca25",
+          "ev-73af710bc3b5485582e9de09303f42ef"
+        ],
+        "image_evidence_ids": [],
+        "check_refs": [
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16"
+        ],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "items": [
+          {
+            "ref": "R09",
+            "coverage_id": "coverage-ace9e08bc28d9565",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R10",
+            "coverage_id": "coverage-b718105ebcb63940",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R11",
+            "coverage_id": "coverage-d4d8b97c7ce3ef16",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R12",
+            "coverage_id": "coverage-8ae7e5b64f30ba05",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R13",
+            "coverage_id": "coverage-2ac7a61beba01b71",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R14",
+            "coverage_id": "coverage-c54e69b1146a6bd9",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R15",
+            "coverage_id": "coverage-0409c129c2546f2f",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R16",
+            "coverage_id": "coverage-14d4da6e81cc31fd",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          }
+        ]
+      }
+    },
+    {
+      "call_id": "call-553799f54cc840bdac7aeca3afe13827",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "operation": "plan_checks",
+      "attempt": 1,
+      "provider": "test-fixture",
+      "model": "contract-fixture",
+      "usage": {},
+      "request_id": null,
+      "latency_ms": 1,
+      "raw_artifact_id": "artifact-64bb97f50b794cd5b282be3aa2cdf8c4",
+      "is_stub": true,
+      "parameters": {},
+      "stage": "T04",
+      "status": "validated",
+      "schema": "CheckPlanBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-4993cfc3233145db9865f627161deee7",
+          "src-500c26207e9f4d6da650883d7cabf035"
+        ],
+        "evidence_ids": [
+          "ev-0410071796c143048ce94e56dcecca25",
+          "ev-73af710bc3b5485582e9de09303f42ef"
+        ],
+        "image_evidence_ids": [],
+        "check_refs": [
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24"
+        ],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "items": [
+          {
+            "ref": "R17",
+            "coverage_id": "coverage-3561f2b896377424",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R18",
+            "coverage_id": "coverage-878a426c807bc1f6",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R19",
+            "coverage_id": "coverage-1cd906f4f5f14191",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R20",
+            "coverage_id": "coverage-2f137bfcd86f5f18",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R21",
+            "coverage_id": "coverage-27449ea80db9b00c",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R22",
+            "coverage_id": "coverage-b95c84bb0ba2cb9a",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R23",
+            "coverage_id": "coverage-538be8843c252b9b",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "R24",
+            "coverage_id": "coverage-2a85aa583ad0f7b3",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          }
+        ]
+      }
+    },
+    {
+      "call_id": "call-99b69db3425641aaaccce03f6ac0766e",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "operation": "plan_checks",
+      "attempt": 1,
+      "provider": "test-fixture",
+      "model": "contract-fixture",
+      "usage": {},
+      "request_id": null,
+      "latency_ms": 1,
+      "raw_artifact_id": "artifact-f352e0a66d8143a1b025312524f36cda",
+      "is_stub": true,
+      "parameters": {},
+      "stage": "T04",
+      "status": "validated",
+      "schema": "CheckPlanBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-4993cfc3233145db9865f627161deee7",
+          "src-500c26207e9f4d6da650883d7cabf035"
+        ],
+        "evidence_ids": [
+          "ev-0410071796c143048ce94e56dcecca25",
+          "ev-73af710bc3b5485582e9de09303f42ef"
+        ],
+        "image_evidence_ids": [],
+        "check_refs": [
+          "E01",
+          "E02",
+          "E03",
+          "E04",
+          "E05",
+          "E06",
+          "E07",
+          "E08"
+        ],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "items": [
+          {
+            "ref": "E01",
+            "coverage_id": "coverage-33da1ab419327e0b",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "E02",
+            "coverage_id": "coverage-92b78d0af211db53",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "E03",
+            "coverage_id": "coverage-19a693adeb2e0752",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "E04",
+            "coverage_id": "coverage-3e28a2bca153c022",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "E05",
+            "coverage_id": "coverage-55c18eacd2ba37ff",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "E06",
+            "coverage_id": "coverage-301f587703f818b7",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "E07",
+            "coverage_id": "coverage-0bc6c6e3384441cd",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          },
+          {
+            "ref": "E08",
+            "coverage_id": "coverage-6a14da1cd54c67bc",
+            "coverage_title": "检查保存设置",
+            "task_id": "TASK01",
+            "applicability": "applicable",
+            "reason": "契约夹具计划，不证明模型效果",
+            "source_ids": [
+              "src-4993cfc3233145db9865f627161deee7",
+              "src-500c26207e9f4d6da650883d7cabf035"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "evidence_needed": [],
+            "object_refs": [
+              "fixture"
+            ],
+            "object_ids": [],
+            "constraint_refs": [],
+            "required_evidence_kinds": []
+          }
+        ]
+      }
+    },
+    {
+      "call_id": "call-6255d64ea9fb46e1804fdf613cfc9cdd",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "operation": "plan",
+      "attempt": 1,
+      "provider": "test-fixture",
+      "model": "contract-fixture",
+      "usage": {},
+      "request_id": null,
+      "latency_ms": 1,
+      "raw_artifact_id": "artifact-b0e28814002646ec879cecb1e54b0066",
+      "is_stub": true,
+      "parameters": {},
+      "stage": "T05",
+      "status": "validated",
+      "schema": "AgentStep",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-4993cfc3233145db9865f627161deee7",
+          "src-500c26207e9f4d6da650883d7cabf035"
+        ],
+        "evidence_ids": [
+          "ev-0410071796c143048ce94e56dcecca25",
+          "ev-73af710bc3b5485582e9de09303f42ef"
+        ],
+        "image_evidence_ids": [],
+        "check_refs": [],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "task_summary": "检查保存设置",
+        "scope": "",
+        "goals": [],
+        "requirements": [],
+        "assumptions": [],
+        "questions": [],
+        "action": null,
+        "ready_for_review": true,
+        "priority_refs": [],
+        "question_resolutions": []
+      }
+    },
+    {
+      "call_id": "call-44a35e4acaa84a7385145346a9af508d",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "operation": "judge",
+      "attempt": 1,
+      "provider": "test-fixture",
+      "model": "contract-fixture",
+      "usage": {},
+      "request_id": null,
+      "latency_ms": 1,
+      "raw_artifact_id": "artifact-eee7eef62acf4af587d20e72ca739ac4",
+      "is_stub": true,
+      "parameters": {},
+      "stage": "T06",
+      "status": "validated",
+      "schema": "JudgmentBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-4993cfc3233145db9865f627161deee7",
+          "src-500c26207e9f4d6da650883d7cabf035"
+        ],
+        "evidence_ids": [
+          "ev-0410071796c143048ce94e56dcecca25",
+          "ev-73af710bc3b5485582e9de09303f42ef"
+        ],
+        "image_evidence_ids": [],
+        "check_refs": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11",
+          "R12",
+          "R13",
+          "R14",
+          "R15",
+          "R16"
+        ],
+        "check_ids": [
+          "check-339cb0b4844aa2d8",
+          "check-b85b2ec612172d8f",
+          "check-22e1815a410df230",
+          "check-76c244fc659400a1",
+          "check-2bb5fe73f34155f4",
+          "check-664782108908aa64",
+          "check-4257c7d5d482da68",
+          "check-d804658e61f11379",
+          "check-4d7bed2833a63de6",
+          "check-84a05727f19fc061",
+          "check-51c656a3ed6ba95c",
+          "check-fdaa38d7f4a47526",
+          "check-8b5063e4d265f630",
+          "check-f810802614149257",
+          "check-91cd8c19b052ca05",
+          "check-62bdd661564210b5"
+        ],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "judgments": [
+          {
+            "check_id": "check-339cb0b4844aa2d8",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-b85b2ec612172d8f",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-22e1815a410df230",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-76c244fc659400a1",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-2bb5fe73f34155f4",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-664782108908aa64",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-4257c7d5d482da68",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-d804658e61f11379",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-4d7bed2833a63de6",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-84a05727f19fc061",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-51c656a3ed6ba95c",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-fdaa38d7f4a47526",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-8b5063e4d265f630",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-f810802614149257",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-91cd8c19b052ca05",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-62bdd661564210b5",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          }
+        ],
+        "findings": [],
+        "questions": []
+      }
+    },
+    {
+      "call_id": "call-33b32cf3d9334789acc6af86d176cb9f",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "operation": "judge",
+      "attempt": 1,
+      "provider": "test-fixture",
+      "model": "contract-fixture",
+      "usage": {},
+      "request_id": null,
+      "latency_ms": 1,
+      "raw_artifact_id": "artifact-628a8a3aafc840c593d6b9b97b3bb3b9",
+      "is_stub": true,
+      "parameters": {},
+      "stage": "T06",
+      "status": "validated",
+      "schema": "JudgmentBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-4993cfc3233145db9865f627161deee7",
+          "src-500c26207e9f4d6da650883d7cabf035"
+        ],
+        "evidence_ids": [
+          "ev-0410071796c143048ce94e56dcecca25",
+          "ev-73af710bc3b5485582e9de09303f42ef"
+        ],
+        "image_evidence_ids": [],
+        "check_refs": [
+          "R17",
+          "R18",
+          "R19",
+          "R20",
+          "R21",
+          "R22",
+          "R23",
+          "R24",
+          "E01",
+          "E02",
+          "E03",
+          "E04",
+          "E05",
+          "E06",
+          "E07",
+          "E08"
+        ],
+        "check_ids": [
+          "check-759649c4cb5599fc",
+          "check-a02fa6467e73010d",
+          "check-d48310a7cb934434",
+          "check-9bfdcaf5dc71350e",
+          "check-ab6689786c977c19",
+          "check-46b976e4fad76c51",
+          "check-ed52d1af69334981",
+          "check-5995ec39dc8f3dc1",
+          "check-2dffeacf4fb39420",
+          "check-03f8e5d8b6b232a4",
+          "check-8840beb832cbd370",
+          "check-c1812913ad5e6667",
+          "check-7026ab0b1b64b958",
+          "check-d6ef10c2b4cc43aa",
+          "check-07b5c27398f0da8a",
+          "check-2f63eb8e2a1b8c57"
+        ],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "judgments": [
+          {
+            "check_id": "check-759649c4cb5599fc",
+            "decision": "candidate_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-a02fa6467e73010d",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-d48310a7cb934434",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-9bfdcaf5dc71350e",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-ab6689786c977c19",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-46b976e4fad76c51",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-ed52d1af69334981",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-5995ec39dc8f3dc1",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-2dffeacf4fb39420",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-03f8e5d8b6b232a4",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-8840beb832cbd370",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-c1812913ad5e6667",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-7026ab0b1b64b958",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-d6ef10c2b4cc43aa",
+            "decision": "no_visible_issue",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-07b5c27398f0da8a",
+            "decision": "met",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          },
+          {
+            "check_id": "check-2f63eb8e2a1b8c57",
+            "decision": "no_conflict",
+            "reason": "契约测试判断，非模型效果",
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "finding_id": "finding-b91dfdf3764e4616b99737f436454700",
+            "kind": "issue",
+            "title": "夹具选择状态问题",
+            "check_ids": [
+              "check-759649c4cb5599fc"
+            ],
+            "evidence_ids": [
+              "ev-73af710bc3b5485582e9de09303f42ef"
+            ],
+            "principle": "测试依据",
+            "detection": "测试现象",
+            "description": "测试影响",
+            "suggestion": "测试修改",
+            "severity": "medium",
+            "severity_reason": "测试任务局部受阻",
+            "confidence": null,
+            "context_version": 1,
+            "run_id": "",
+            "screen_review_id": "",
+            "review_status": "unreviewed",
+            "human_severity": null,
+            "review_reason": "",
+            "reviewer": "unknown",
+            "reviewed_at": null,
+            "disposition": null,
+            "stale": false,
+            "object_id": "obj-73547b11925caa4175f0",
+            "object_ref": "ev-73af710bc3b5485582e9de09303f42ef",
+            "claims": [
+              {
+                "claim_id": "claim-16611a24429549e0a4957727c3104edb",
+                "claim_type": "object_present",
+                "object_id": "obj-73547b11925caa4175f0",
+                "expected": "测试对象受检查",
+                "observed": "测试证据中存在目标对象",
+                "evidence_ids": [
+                  "ev-73af710bc3b5485582e9de09303f42ef"
+                ],
+                "derived": false,
+                "verification_status": "unverified",
+                "verification_reason": ""
+              }
+            ],
+            "mechanism": "selection",
+            "change_action": "show-state",
+            "location": {}
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "call_id": "call-dcc87f9736f64ca392be5b4d16d9a201",
+      "run_id": "run-0d57e342630f40e7a92d296e99798762",
+      "operation": "verify",
+      "attempt": 1,
+      "provider": "test-fixture",
+      "model": "contract-fixture",
+      "usage": {},
+      "request_id": null,
+      "latency_ms": 1,
+      "raw_artifact_id": "artifact-9858c1bd7a604d2a9fedcd1b1c7ca852",
+      "is_stub": true,
+      "parameters": {},
+      "stage": "T07",
+      "status": "validated",
+      "schema": "Verification",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-4993cfc3233145db9865f627161deee7",
+          "src-500c26207e9f4d6da650883d7cabf035"
+        ],
+        "evidence_ids": [
+          "ev-0410071796c143048ce94e56dcecca25",
+          "ev-73af710bc3b5485582e9de09303f42ef"
+        ],
+        "image_evidence_ids": [],
+        "check_refs": [],
+        "check_ids": [],
+        "finding_ids": [
+          "finding-b2eb9b9bce2b4994958fb149cbf33d89"
+        ],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "supported_finding_ids": [
+          "finding-b2eb9b9bce2b4994958fb149cbf33d89"
+        ],
+        "rejected": {}
+      }
+    },
+    {
+      "call_id": "call-4f6df2c513494b0ca18975f562f72cd6",
+      "run_id": "run-0294627aca3946dc8ca88f22ef40af9e",
+      "operation": "recheck",
+      "attempt": 1,
+      "provider": "test-fixture",
+      "model": "QA26-范围取消固定响应",
+      "usage": {},
+      "request_id": null,
+      "latency_ms": 0,
+      "raw_artifact_id": "artifact-ff1ad08a3a3c4113a90aa988ecd1ef40",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T10",
+      "status": "validated",
+      "schema": "RecheckBatch",
+      "input": {
+        "context_version": 2,
+        "operation_mode": "",
+        "source_ids": [
+          "src-4993cfc3233145db9865f627161deee7",
+          "src-500c26207e9f4d6da650883d7cabf035"
+        ],
+        "evidence_ids": [
+          "ev-0410071796c143048ce94e56dcecca25",
+          "ev-652fe3cb079445949b28744753877d95"
+        ],
+        "image_evidence_ids": [],
+        "check_refs": [],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [
+          "finding-b2eb9b9bce2b4994958fb149cbf33d89"
+        ],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "items": [
+          {
+            "recheck_id": "recheck-f42fb627e38544668be231fadc7b5a42",
+            "previous_finding_id": "finding-b2eb9b9bce2b4994958fb149cbf33d89",
+            "current_finding_ids": [],
+            "resolution": "not_applicable",
+            "reason": "正式需求 v2 取消原功能，旧问题退出新版范围；并未宣称问题修复。",
+            "evidence_ids": [
+              "ev-652fe3cb079445949b28744753877d95"
+            ],
+            "human_confirmation": "unreviewed",
+            "reviewer": "unknown",
+            "reviewed_at": null
+          }
+        ]
+      }
+    }
+  ],
+  "report_version": 1,
+  "report_completeness": "complete",
+  "contract_violations": [],
+  "capability_status": {
+    "schema_version": "session-1.0",
+    "methods_version": "0.2-method-draft",
+    "technical_path_version": "A-0.2/T01-T10",
+    "method_root": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\方法专家开发交付-v0.2",
+    "method_validation": {
+      "delivery_version": "0.2-method-draft",
+      "checked_files": 12,
+      "mismatches": 0
+    },
+    "rules": 24,
+    "methods": 8,
+    "method_fingerprints": {
+      "00先看这个！！！！-阅读与开发交接.md": "6dca7b14918a08d65e40362bfec2fc40a1f8f1d0492e4f356b2ac9b8f00d051e",
+      "01-04-场景输入流程与技术路径.md": "fe432cf3851ad10528e53d6fecc14e9ffaba0a4fafd96a1b6ee61c4007c28347",
+      "05-24条判据修订与变更对照.md": "bd2f82f8d8e539d2011b0b684d77de775b0149ec0e14736717944f2057847c99",
+      "05-判据库-v0.2.json": "b785eb9c6b64b5d9ceb87ca76430af4a2658c944c9aff99a97ce9298bdf54af7",
+      "05-判据执行补充-v0.2.json": "8e502b943023c7e39a8da6a479c1cc09f621c9474520e4f116cae0553bc9c24d",
+      "05-逐字段变更对照.csv": "d0b1d25442662ecf10150e923b98b8049ad7291e2bf56653690a138392d8307d",
+      "06-新场景方法-v0.2.json": "1702aa0350c41ced0363a41d73c46aeb547d60d7299616964875b51ce8fd689c",
+      "06-新场景方法与正反例.md": "e21e0996cc25bc218f5e24e2c3a7aa66649001eb58ad00e84fcb5fc88b48ca26",
+      "07-会话变更重查与复审规则.md": "c9a5f573648a20094f4b0c4602043979b33ea3cb935a6976b641cf57b539f025",
+      "08-问题表达严重度与评价验收.md": "4d92cfcfdb8417a20678995528ea0180f6182eb52b0b2becbb3a7fc44886eead",
+      "09-开发验收用例.json": "fc85e0bd301b081d393ab4764f0f0b59003e2462d842ebee91bc990eb9f41f60",
+      "09-开发验收用例.md": "e2ca3487871026558697e1283734849af2ef94de25b984ade9ae8334a73a2fd3",
+      "10-来源索引.json": "e6147e42231bb4602cb506caa7a2d6ff69812b2d7d1289731a33220db667017a",
+      "11-交付校验结果.json": "3ec123147dae0c46a6bd2a473a0c5f0bbe5f1d311f42bc2568e41b63b5694cad"
+    },
+    "perception": {
+      "deterministic_metrics": true,
+      "metric_version": "cv-metrics-v1",
+      "structure_sources": [
+        "browser_dom",
+        "figma_metadata"
+      ],
+      "semantic_review_model": true,
+      "specialized_ocr_model": true,
+      "screen_technical_review": true,
+      "screen_review_operations": [
+        "screen_ocr",
+        "screen_ui",
+        "screen_audit"
+      ]
+    },
+    "inputs": {
+      "fixture": {
+        "is_test_fixture": true
+      }
+    },
+    "models": {
+      "qwen": {
+        "enabled": false,
+        "model": null,
+        "vision": true,
+        "verified": false
+      },
+      "deepseek": {
+        "enabled": false,
+        "model": null,
+        "vision": false,
+        "verified": false
+      },
+      "local": {
+        "enabled": false,
+        "model": null,
+        "vision": true,
+        "verified": false
+      }
+    },
+    "storage": "sqlite",
+    "report_versions": "immutable",
+    "event_idempotency": true
+  },
+  "verifier_model_status": {},
+  "material_understanding": {
+    "task_summary": "检查保存设置",
+    "target_user_summary": "",
+    "review_tasks": [],
+    "goals": [],
+    "requirements": [],
+    "opinions": [],
+    "conflicts": [],
+    "relationships": [],
+    "unknowns": [],
+    "assumptions": []
+  },
+  "understanding_context_version": 1,
+  "understanding_evidence_ids": [
+    "ev-73af710bc3b5485582e9de09303f42ef",
+    "ev-0410071796c143048ce94e56dcecca25"
+  ],
+  "check_plan_fingerprint": "7ff3a0cf5711dcbf2b6880d3041e2e6930cde0fb9969d241ef183ab6234ac399",
+  "conflict_dispositions": [],
+  "active_phase": "T10"
+}

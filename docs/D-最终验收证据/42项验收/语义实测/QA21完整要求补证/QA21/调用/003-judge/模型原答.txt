@@ -1,0 +1,50 @@
+{
+  "judgments": [
+    {
+      "check_id": "check-2fc0dcdb049c4532",
+      "decision": "candidate_issue",
+      "reason": "R13适用：正式要求确认姓名、手机号均必填；完整页面的设计文字明确两项均无字段标记，也无整体必填说明，符合候选问题条件。此为设计材料判断，未声称实测。QA21-讨论仅要求撤回且明确无新增事实，不改变证据判断；该意见与模型判断分开记录。",
+      "evidence_ids": [
+        "ev-d48678d42bd647d7b183b5b6df005b2a",
+        "ev-f2dd071162534bb1b405966b85232e82"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "finding-591b5e06e80840a48e2ec04e8addb3ef",
+      "kind": "issue",
+      "title": "R13：登记页填写前未说明姓名和手机号必填",
+      "check_ids": [
+        "check-2fc0dcdb049c4532"
+      ],
+      "evidence_ids": [
+        "ev-d48678d42bd647d7b183b5b6df005b2a",
+        "ev-f2dd071162534bb1b405966b85232e82"
+      ],
+      "principle": "R13（H05）：存在有来源的必填要求时，应在填写前通过字段标记或清楚的整体说明使其可识别。",
+      "detection": "对照正式业务要求与完整页面设计文字：姓名、手机号均必填，但填写前无星号、必填/选填标识或整体说明。本次未接收截图或执行操作。",
+      "description": "设计未表达两项字段的必填属性，用户无法从所提供页面内容辨认必填要求。此结论不涉及提交校验是否实现。",
+      "suggestion": "在填写前增加“姓名和手机号均为必填项”的整体说明，或在两个字段旁一致标注“必填”。",
+      "severity": "low",
+      "severity_reason": "影响填写前对必填要求的识别，可能导致遗漏和补填；通过补充说明可修复。材料未提供提交失败、实际恢复过程或高后果证据。",
+      "review_status": "unreviewed",
+      "object_id": "obj-aa73988b83630cfdd4a3",
+      "object_ref": "登记页填写前：姓名、手机号及整体说明",
+      "claims": [
+        {
+          "claim_type": "requirement_match",
+          "object_id": "obj-aa73988b83630cfdd4a3",
+          "expected": "正式要求规定两项均必填；按R13，应在填写前以字段标记或整体说明表达该要求。正式要求本身未指定标记形式。",
+          "observed": "完整页面设计文字明确：姓名、手机号均无必填标记，且不存在整体说明或其他段落。",
+          "evidence_ids": [
+            "ev-d48678d42bd647d7b183b5b6df005b2a",
+            "ev-f2dd071162534bb1b405966b85232e82"
+          ],
+          "verification_status": "supported"
+        }
+      ]
+    }
+  ],
+  "questions": []
+}

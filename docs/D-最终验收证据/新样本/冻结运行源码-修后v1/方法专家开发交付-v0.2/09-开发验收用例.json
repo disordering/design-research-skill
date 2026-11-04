@@ -1,0 +1,391 @@
+{
+  "version": "0.2-method-draft",
+  "cases": [
+    {
+      "test_id": "QA01",
+      "related_ids": [
+        "R05"
+      ],
+      "condition": "只有中轻度玩家标签，无术语熟悉度/任务必要性证据",
+      "expected": "insufficient_evidence",
+      "acceptance": "不得靠玩家经验断言熟悉或不熟悉",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA02",
+      "related_ids": [
+        "R18"
+      ],
+      "condition": "已确认奖励卡仅展示，无选择能力",
+      "expected": "not_applicable",
+      "acceptance": "不得以分组清楚判no_visible_issue",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA03",
+      "related_ids": [
+        "R18"
+      ],
+      "condition": "奖励卡可否选择未知",
+      "expected": "insufficient_evidence",
+      "acceptance": "不得靠卡片形状认定可选或纯展示",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA04",
+      "related_ids": [
+        "R11",
+        "E02"
+      ],
+      "condition": "活动名与角色名用字不同，无必须同名/同一动作依据",
+      "expected": "insufficient_evidence",
+      "acceptance": "不能将F001当已确认真阳性",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA05",
+      "related_ids": [
+        "E07"
+      ],
+      "condition": "G02三个子项分别met/met/insufficient_evidence",
+      "expected": "insufficient_evidence",
+      "acceptance": "角色醒目不能覆盖其他子项未知",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA06",
+      "related_ids": [
+        "E07"
+      ],
+      "condition": "G02三个子项分别met/met/observed_violation",
+      "expected": "observed_violation",
+      "acceptance": "两个子项通过不能抵消违反",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA07",
+      "related_ids": [
+        "R06"
+      ],
+      "condition": "按钮写确定，邻近明确说明删除哪个配置",
+      "expected": "no_visible_issue",
+      "acceptance": "不能仅凭泛词报问题或判不适用",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA08",
+      "related_ids": [
+        "R13"
+      ],
+      "condition": "全部字段必填且有整体说明",
+      "expected": "no_visible_issue",
+      "acceptance": "已清楚说明属于通过检查而非排除",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA09",
+      "related_ids": [
+        "R23"
+      ],
+      "condition": "普通用户错误提示同时有通俗说明和技术码",
+      "expected": "no_visible_issue",
+      "acceptance": "技术码本身不触发问题",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA10",
+      "related_ids": [
+        "E03",
+        "R03"
+      ],
+      "condition": "只有操作前静态图，用户要求验证操作反馈",
+      "expected": "insufficient_evidence",
+      "acceptance": "R03当前非等待可不适用，E03反馈验证仍不足；不可证明无反馈",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA11",
+      "related_ids": [
+        "E03"
+      ],
+      "condition": "同步切换立即完成，无等待动画",
+      "expected": "no_visible_issue",
+      "acceptance": "不强制所有操作显示加载",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA12",
+      "related_ids": [
+        "E01"
+      ],
+      "condition": "网站访问权限失败",
+      "expected": "blocked",
+      "acceptance": "工具失败不是产品流程缺陷，静态降级不可算网站能力通过",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA13",
+      "related_ids": [
+        "E01"
+      ],
+      "condition": "只有画板，无原型连接或运行证据",
+      "expected": "insufficient_evidence",
+      "acceptance": "不把画板顺序当实际路径",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA14",
+      "related_ids": [
+        "E03"
+      ],
+      "condition": "代码定义成功提示，运行状态未取得",
+      "expected": "insufficient_evidence",
+      "acceptance": "代码不是实际观察",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA15",
+      "related_ids": [
+        "E04"
+      ],
+      "condition": "退出后进度清零，但是否保留未知",
+      "expected": "insufficient_evidence",
+      "acceptance": "不得自动要求保留进度",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA16",
+      "related_ids": [
+        "E05"
+      ],
+      "condition": "工具本身点击失败，未发生产品错误",
+      "expected": "failed",
+      "acceptance": "不把工具异常归产品错误",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA17",
+      "related_ids": [
+        "E06"
+      ],
+      "condition": "真实奖励领取未获操作授权",
+      "expected": "blocked",
+      "acceptance": "不触发真实发放，不重复危险动作",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA18",
+      "related_ids": [
+        "E08"
+      ],
+      "condition": "同版同对象有效要求一份规定手动领取另一份禁止手动领取",
+      "expected": "open",
+      "acceptance": "输出冲突，不直接指定哪个产品界面违规",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA19",
+      "related_ids": [
+        "E08"
+      ],
+      "condition": "用户裁决采用自动发放，但无新实现证据",
+      "expected": "resolved/conflict_only",
+      "acceptance": "冲突可解决，实现符合性仍待核验",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA20",
+      "related_ids": [
+        "SESSION"
+      ],
+      "condition": "用户改主任务为退出恢复",
+      "expected": "rechecking",
+      "acceptance": "重排任务依赖；旧结果保留原范围，不能只改显示",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA21",
+      "related_ids": [
+        "SESSION"
+      ],
+      "condition": "用户无证据要求撤回仍有充分证据的发现",
+      "expected": "retain_with_reason",
+      "acceptance": "重新核对并解释，不无依据迎合",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA22",
+      "related_ids": [
+        "SESSION"
+      ],
+      "condition": "用户补充新事实证明原假设错误",
+      "expected": "revise_with_reason",
+      "acceptance": "撤回或修改并保存旧值及原因，不机械维持",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA23",
+      "related_ids": [
+        "SESSION"
+      ],
+      "condition": "同一个事件重复提交",
+      "expected": "idempotent",
+      "acceptance": "只产生一次变更，不重复操作或报告",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA24",
+      "related_ids": [
+        "SESSION"
+      ],
+      "condition": "运行中刷新并恢复，外部页面可能变化",
+      "expected": "restore_and_revalidate",
+      "acceptance": "保存审核和待答；核对当前状态后恢复，不盲点旧坐标",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA25",
+      "related_ids": [
+        "RECHECK"
+      ],
+      "condition": "新版报告未再出现旧问题，未针对性检查",
+      "expected": "cannot_determine",
+      "acceptance": "禁止自动resolved",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA26",
+      "related_ids": [
+        "RECHECK"
+      ],
+      "condition": "新版需求明确取消旧功能，证据与范围齐全",
+      "expected": "not_applicable",
+      "acceptance": "不计修复，不删除旧记录",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA27",
+      "related_ids": [
+        "COVERAGE"
+      ],
+      "condition": "Top-K漏选冻结参考中的明确问题",
+      "expected": "FN",
+      "acceptance": "仍计漏检；未执行单列不能当通过",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA28",
+      "related_ids": [
+        "REPORT"
+      ],
+      "condition": "同一底板纹理同时触发多个目标且同一改法",
+      "expected": "one_finding",
+      "acceptance": "保留各目标状态，建议只计一次",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA29",
+      "related_ids": [
+        "REPORT"
+      ],
+      "condition": "证据位置不存在或来自旧版",
+      "expected": "reject_or_pending",
+      "acceptance": "不能作为新版正式证据输出",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA30",
+      "related_ids": [
+        "METRIC"
+      ],
+      "condition": "全部规则未执行且三轮状态相同",
+      "expected": "no_judgment_accuracy_claim",
+      "acceptance": "共同判断覆盖为0时一致率N/A，报告执行覆盖",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA31",
+      "related_ids": [
+        "METRIC"
+      ],
+      "condition": "人工体验在使用后补填1秒计时",
+      "expected": "timing_invalid",
+      "acceptance": "可计真实体验但不计有效任务耗时",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    },
+    {
+      "test_id": "QA32",
+      "related_ids": [
+        "REPORT"
+      ],
+      "condition": "用户终止时仍有未检项",
+      "expected": "partial",
+      "acceptance": "保留已检记录，列未检原因，不声称全部通过",
+      "execution_status": "not_run",
+      "actual_evidence": [],
+      "origin": "公开方法开发用例，非隔离效果参考"
+    }
+  ]
+}

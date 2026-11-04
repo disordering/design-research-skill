@@ -1,0 +1,17 @@
+[
+  {
+    "事件": {
+      "event_id": "d-new-原版试点-N01-action-58f67ee98e2d4bafac1a93cfa2d110cc",
+      "expected_context_version": 1,
+      "type": "authorize_action",
+      "payload": {
+        "action_id": "action-58f67ee98e2d4bafac1a93cfa2d110cc",
+        "approved": true,
+        "reason": "按已授权任务卡继续本机独立原型操作；只影响当前页面，无外部提交。"
+      },
+      "actor": "D 新样本 AI 操作员",
+      "actor_type": "ai"
+    },
+    "应运行": true
+  }
+]

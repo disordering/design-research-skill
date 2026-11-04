@@ -1,0 +1,42 @@
+{
+  "QA01": {
+    "ref": "R05",
+    "expected": "insufficient_evidence"
+  },
+  "QA02": {
+    "ref": "R18",
+    "expected": "not_applicable"
+  },
+  "QA03": {
+    "ref": "R18",
+    "expected": "insufficient_evidence"
+  },
+  "QA04": {
+    "ref": "R11",
+    "expected": "insufficient_evidence"
+  },
+  "QA07": {
+    "ref": "R06",
+    "expected": "no_visible_issue"
+  },
+  "QA08": {
+    "ref": "R13",
+    "expected": "no_visible_issue"
+  },
+  "QA09": {
+    "ref": "R23",
+    "expected": "no_visible_issue"
+  },
+  "QA10": {
+    "ref": "E03",
+    "expected": "insufficient_evidence"
+  },
+  "QA11": {
+    "ref": "E03",
+    "expected": "no_visible_issue"
+  },
+  "QA15": {
+    "ref": "E04",
+    "expected": "insufficient_evidence"
+  }
+}

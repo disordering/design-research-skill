@@ -1,0 +1,1 @@
+{"judgments":[{"check_id":"check-46038f218f1f0114","decision":"not_applicable","reason":"R18适用于多个相关输入字段或成组选项，明确排除纯展示卡。D-QA42-1设计文字明确三个奖励卡片仅展示将获得的奖励，无点击、选择或切换能力，故满足排除条件；并列不构成选择分组对象，无需运行观察补证。本判断仅依据设计文字，不代表已查看实际画面。","evidence_ids":["ev-d59f51670c55420399ee428702ced1d1"]}],"findings":[],"questions":[]}

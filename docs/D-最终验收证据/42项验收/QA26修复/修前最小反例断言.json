@@ -1,0 +1,7 @@
+{
+  "节点": "tests/test_d_acceptance_42.py::test_qa26_retired_function_with_formal_scope_evidence_is_not_fixed",
+  "结果": "failed",
+  "秒": 0.811,
+  "目录": "35-test_qa26_retired_function_with_formal_scope_evidence_is_not_fixed",
+  "失败说明": "tests\\test_d_acceptance_42.py:118: in test_qa26_retired_function_with_formal_scope_evidence_is_not_fixed\n    assert changed.rechecks[0].resolution == \"not_applicable\"\nE   AssertionError: assert 'cannot_determine' == 'not_applicable'\nE     \nE     - not_applicable\nE     + cannot_determine"
+}

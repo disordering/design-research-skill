@@ -1,0 +1,9 @@
+{
+  "说明": "本轮测试使用本地提交冻结源码；GitHub 代码提交与该本地提交的整棵目录树一致。原始运行环境不回写。",
+  "本地代码提交": "377ec722769cd229973b55ccb9e046aa69d0dc01",
+  "GitHub代码提交": "2a337269dd59e3629071a4e4a3a8d4100e0c9615",
+  "共同目录树": "13f4a1c78ccaacd503ab3296518bc32cddb3bea8",
+  "目录树逐字节一致": true,
+  "仓库": "ochriseal743780179/design-research-skill",
+  "分支": "d/2026-11-04-final-acceptance"
+}

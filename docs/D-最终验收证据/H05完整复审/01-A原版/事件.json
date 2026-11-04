@@ -1,0 +1,42 @@
+[
+  {
+    "event_id": "d-final-01-A原版",
+    "expected_context_version": 1,
+    "type": "recheck",
+    "payload": {
+      "updates": [
+        {
+          "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+          "input": {
+            "kind": "website",
+            "reference": "http://127.0.0.1:61886/v1/",
+            "title": "修书咨询登记",
+            "content": "",
+            "image_base64": "",
+            "version": "本轮复审稿件",
+            "evidence_kind": "observation",
+            "role": "design",
+            "declared_by": "AI模型验收-D",
+            "document_base64": "",
+            "filename": "",
+            "figma_snapshot_id": ""
+          }
+        }
+      ]
+    },
+    "actor": "AI模型验收-D",
+    "actor_type": "ai"
+  },
+  {
+    "event_id": "d-final-01-A原版-action-030165b1b21147e1967dbd6685185776",
+    "expected_context_version": 2,
+    "type": "authorize_action",
+    "payload": {
+      "action_id": "action-030165b1b21147e1967dbd6685185776",
+      "approved": true,
+      "reason": "本机演示页面的 AI 操作测试，登记只影响本页内存。"
+    },
+    "actor": "AI模型验收-D",
+    "actor_type": "ai"
+  }
+]

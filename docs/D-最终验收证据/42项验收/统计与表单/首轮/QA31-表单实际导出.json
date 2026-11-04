@@ -1,0 +1,34 @@
+{
+  "schema": "D-human-v2.1",
+  "role": "participant",
+  "packageKind": "final",
+  "exportedAt": "2026-11-04T10:25:41.149Z",
+  "participant": "U01",
+  "round": "2",
+  "version": "QA31受控材料",
+  "device": "AI自动操作 / Edge",
+  "build": "QA31本地表单",
+  "timing": "invalid",
+  "interruption": "AI工具验收：模拟已体验后补填，计时仅按约1秒。",
+  "outcome": "completed",
+  "product": "已完成体验的受控填表示例",
+  "understand": "4",
+  "evidence": "4",
+  "saved": "4",
+  "quote": "AI工具验收：保留评分，补填时长不参与效率统计。",
+  "consent": "yes",
+  "task": "B",
+  "method": "tool",
+  "events": [
+    {
+      "type": "active",
+      "at": "2026-11-04T10:25:40.044Z"
+    },
+    {
+      "type": "ended",
+      "at": "2026-11-04T10:25:41.078Z"
+    }
+  ],
+  "timingValid": false,
+  "seconds": null
+}

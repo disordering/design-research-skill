@@ -1,0 +1,31 @@
+{
+  "来源": "AI 操作员调用生产 finish，未杀进程、浏览器或在途CLI",
+  "范围调整原因": "用户要求从12:09 UTC起15分钟内完成测试；已有实际提交回执，结束重复拓展，独立续接旧候选T10复审；保留全部原始调用与未执行检查。",
+  "事件": {
+    "event_id": "d-h05-b-deadline-finish-20261104",
+    "expected_context_version": 2,
+    "type": "finish",
+    "payload": {
+      "reason": "用户要求从12:09 UTC起15分钟内完成测试；已有实际提交回执，结束重复拓展，独立续接旧候选T10复审；保留全部原始调用与未执行检查。"
+    },
+    "actor": "D 限时收尾 AI 操作员",
+    "actor_type": "ai"
+  },
+  "应运行": false,
+  "收尾前状态": "planning",
+  "收尾前revision": 443,
+  "收尾后状态": "completed",
+  "收尾后revision": 444,
+  "完整度": "partial",
+  "检查记录保持": false,
+  "动作记录保持": true,
+  "调试说明": "初版断言比较全部checks，触发AssertionError；生产finish已正常落库，不重复提交。冻结apply_event结束分支将planned/running归not_executed，这类变化是结束语义，不是已执行成绩被改写。",
+  "代码分支依据": "冻结基线/engine/session_service.py:3089-3094",
+  "实际保全对照": {
+    "对照来源": "02启动快照与收尾后导出，按run_id+check_id逐字段比较历史executed对象",
+    "历史已执行数": 178,
+    "完整对象差异数": 0,
+    "本轮已执行数": 229,
+    "边界": "未保存revision443全量快照，不将历史基线对照表述为本轮229条finish前后字节对照。"
+  }
+}

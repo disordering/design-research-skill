@@ -1,0 +1,20 @@
+{
+  "开始": "2026-11-04T10:32:42.767023+00:00",
+  "操作": "judge",
+  "模型": "gpt-6-astra",
+  "推理设置": "low",
+  "非固定响应": true,
+  "输入SHA256": "4229b4291fd46d9900932e2ffc5f73e82bab4bf76e2f4e7715bbf8574b224b72",
+  "图片": [],
+  "结束": "2026-11-04T10:33:02.799144+00:00",
+  "状态": "已返回",
+  "Codex会话": "01a1a61e-40cc-72c2-b2a4-0f3565ab9147",
+  "耗时毫秒": 20032,
+  "用量": {
+    "input_tokens": 20633,
+    "cached_input_tokens": 12416,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 719,
+    "reasoning_output_tokens": 0
+  }
+}

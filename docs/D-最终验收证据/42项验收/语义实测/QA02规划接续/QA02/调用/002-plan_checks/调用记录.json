@@ -1,0 +1,20 @@
+{
+  "开始": "2026-11-04T10:21:25.786957+00:00",
+  "操作": "plan_checks",
+  "模型": "gpt-6-astra",
+  "推理设置": "low",
+  "非固定响应": true,
+  "输入SHA256": "96fcef4dfcbd7f0b9b81caa543f9683a8a40d7371a536a2225b75fb616ed6944",
+  "图片": [],
+  "结束": "2026-11-04T10:21:35.217228+00:00",
+  "状态": "已返回",
+  "Codex会话": "01a1a613-ec50-7ea0-9db9-2dae4803318b",
+  "耗时毫秒": 9438,
+  "用量": {
+    "input_tokens": 19584,
+    "cached_input_tokens": 12416,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 193,
+    "reasoning_output_tokens": 0
+  }
+}

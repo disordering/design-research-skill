@@ -1,0 +1,318 @@
+{
+  "归档UTC": "2026-11-04T12:17:11.914036+00:00",
+  "时序": "全部已启动模型会话结束后逐字节复制；原始参考从未进入运行输入",
+  "文件": [
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\任务卡\\N01-任务卡.txt",
+      "归档": "独立参考原件/任务卡/N01-任务卡.txt",
+      "字节": 962,
+      "SHA256": "f9c27abfd1f05513c0b2b924b270f77907349dfcd22313cb86d7ecb3757d09ce"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\任务卡\\N02-任务卡.txt",
+      "归档": "独立参考原件/任务卡/N02-任务卡.txt",
+      "字节": 946,
+      "SHA256": "c2784b35c2762399a7591390e7b0e82bc60f2343b20f7ae3cbe58323dd7b5ba0"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\任务卡\\N03-任务卡.txt",
+      "归档": "独立参考原件/任务卡/N03-任务卡.txt",
+      "字节": 1066,
+      "SHA256": "953378651786b6390cb044b471bbe0644367a1f1aa78007d30d8f17f46c7aaca"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\冻结回执.json",
+      "归档": "独立参考原件/冻结回执.json",
+      "字节": 298,
+      "SHA256": "c1e3427c94d89771a9e29f4fb087f5aaa8e2f329c1f531976d227455ddc9f161"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N01\\01-初始.json",
+      "归档": "独立参考原件/原始操作证据/N01/01-初始.json",
+      "字节": 2200,
+      "SHA256": "7d14decb93a332708ea40d070252ba4e42021f6c49dd869f5c47b7a2eb00df8c"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N01\\01-初始.png",
+      "归档": "独立参考原件/原始操作证据/N01/01-初始.png",
+      "字节": 50144,
+      "SHA256": "be1bbe20d1b338439484caf911676b4e500f9e00001265c4f432812cb8d6ebe8"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N01\\02-选择完成.json",
+      "归档": "独立参考原件/原始操作证据/N01/02-选择完成.json",
+      "字节": 2196,
+      "SHA256": "5f61474ac54a6ac8f4d21f233fee03faeb1905a819983fa05792363b44ad1514"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N01\\02-选择完成.png",
+      "归档": "独立参考原件/原始操作证据/N01/02-选择完成.png",
+      "字节": 49874,
+      "SHA256": "02764ab26fe87db182b66782877866e1f1c09dd16908f664b8bfe2846402f923"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N01\\03-应用响应.json",
+      "归档": "独立参考原件/原始操作证据/N01/03-应用响应.json",
+      "字节": 2212,
+      "SHA256": "39550e738f5c114e30efd036732e3351b4d110abe0429f8674e7b3c0892c01e2"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N01\\03-应用响应.png",
+      "归档": "独立参考原件/原始操作证据/N01/03-应用响应.png",
+      "字节": 50289,
+      "SHA256": "28a474cb9aeeb62e08438b3f26c5ec6ccac7fb68c88e3c7a54a9623f08cc0073"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N01\\04-应用后.json",
+      "归档": "独立参考原件/原始操作证据/N01/04-应用后.json",
+      "字节": 2182,
+      "SHA256": "848af20e258d5f7c242307b2b15de3bc2fb61237668518af5a80466ea2546ec9"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N01\\04-应用后.png",
+      "归档": "独立参考原件/原始操作证据/N01/04-应用后.png",
+      "字节": 66151,
+      "SHA256": "d6a31112f2445e377c381d449cf09aa2f685634c345c54ed44943430afe2c96a"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N01\\05-恢复后.json",
+      "归档": "独立参考原件/原始操作证据/N01/05-恢复后.json",
+      "字节": 2197,
+      "SHA256": "0834d7e56e8d9dbd316376273ff8ed69565d0e19922829cf16bbb19faa48c1e4"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N01\\05-恢复后.png",
+      "归档": "独立参考原件/原始操作证据/N01/05-恢复后.png",
+      "字节": 50208,
+      "SHA256": "bcd8497abf05e6ba08d05478842595737e05d95c5313a330f494d208e4f8e654"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N01\\动作与观察索引.json",
+      "归档": "独立参考原件/原始操作证据/N01/动作与观察索引.json",
+      "字节": 2772,
+      "SHA256": "1205a2c059178ead379050f1deee1ad20037c9de056b73d0d3f8f538693ada0b"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N02\\01-初始.json",
+      "归档": "独立参考原件/原始操作证据/N02/01-初始.json",
+      "字节": 3005,
+      "SHA256": "f2aec51d9e2bfd9c7596114d65317a4b2973ee608d6e7cb70abb221718a91875"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N02\\01-初始.png",
+      "归档": "独立参考原件/原始操作证据/N02/01-初始.png",
+      "字节": 43401,
+      "SHA256": "727efcba999eea60d1232bc1afbd80f896d25594a55cfafba387bacf6d702e04"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N02\\02-数量选择后.json",
+      "归档": "独立参考原件/原始操作证据/N02/02-数量选择后.json",
+      "字节": 3009,
+      "SHA256": "98d0e66213184118cf86d0886bef987b9f5f0323ae61a2420d437c90d15eb401"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N02\\02-数量选择后.png",
+      "归档": "独立参考原件/原始操作证据/N02/02-数量选择后.png",
+      "字节": 42382,
+      "SHA256": "d2a07ad3f699446bcf0225a92883c016eb6efb7c711db5561ca2f3a76a776977"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N02\\03-首次清单.json",
+      "归档": "独立参考原件/原始操作证据/N02/03-首次清单.json",
+      "字节": 3063,
+      "SHA256": "88c1acdcc0f3d43202c11550dcb1efc913d34337021166fc74cb0689352390fc"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N02\\03-首次清单.png",
+      "归档": "独立参考原件/原始操作证据/N02/03-首次清单.png",
+      "字节": 50020,
+      "SHA256": "70af85dd53a6726b97e50b2e40fdba56f13abfa082d4377e259c4ac9711e6bfc"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N02\\04-修改后清单.json",
+      "归档": "独立参考原件/原始操作证据/N02/04-修改后清单.json",
+      "字节": 3063,
+      "SHA256": "45eb768c0a2636dae60f43dcf692c2faf2d2f416e703c674e7532f03b0802fb7"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N02\\04-修改后清单.png",
+      "归档": "独立参考原件/原始操作证据/N02/04-修改后清单.png",
+      "字节": 50149,
+      "SHA256": "8f5c6b8a939ffd1fe2b31439b31bbee627904a793d53b4834bc2ec5b52acda4e"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N02\\动作与观察索引.json",
+      "归档": "独立参考原件/原始操作证据/N02/动作与观察索引.json",
+      "字节": 2773,
+      "SHA256": "0555e174dc68b9aee8288b334b2bc83ecb6deb04ae2380e6e430895cf51bdfee"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N03\\01-初始.json",
+      "归档": "独立参考原件/原始操作证据/N03/01-初始.json",
+      "字节": 1691,
+      "SHA256": "f83b29069f266ef756496870b8a31a065b97ff62e3275941b69197b7d5cd2263"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N03\\01-初始.png",
+      "归档": "独立参考原件/原始操作证据/N03/01-初始.png",
+      "字节": 34419,
+      "SHA256": "1d1b73ede5490f5981fb120c2ea3f02c8dd96f6391796879be5c674641452c82"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N03\\02-首次填写后.json",
+      "归档": "独立参考原件/原始操作证据/N03/02-首次填写后.json",
+      "字节": 1719,
+      "SHA256": "18da5545fdd52b51abd0ee1c2bbf879743ca99c76181370295eebac3ad53009b"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N03\\02-首次填写后.png",
+      "归档": "独立参考原件/原始操作证据/N03/02-首次填写后.png",
+      "字节": 39281,
+      "SHA256": "b2f090471c97f31f55cbec107d1e8a60cc8764e4bdef03ec43a60d9e7959e492"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N03\\03-首次保存响应.json",
+      "归档": "独立参考原件/原始操作证据/N03/03-首次保存响应.json",
+      "字节": 1780,
+      "SHA256": "aab94438e0cb45132320fd00f7677b4de8ba0de1e7a68b3205e0e0667835315d"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N03\\03-首次保存响应.png",
+      "归档": "独立参考原件/原始操作证据/N03/03-首次保存响应.png",
+      "字节": 40849,
+      "SHA256": "798ea05952ece07d2a0c175c83130002522f9f35982c9cecfbbfefd042037066"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N03\\04-修正年份后.json",
+      "归档": "独立参考原件/原始操作证据/N03/04-修正年份后.json",
+      "字节": 1780,
+      "SHA256": "61541f21b8e5ae87912073ad0b964941f7e86cf0c46bf12d5b0712888e016e88"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N03\\04-修正年份后.png",
+      "归档": "独立参考原件/原始操作证据/N03/04-修正年份后.png",
+      "字节": 42515,
+      "SHA256": "c0c93509192910ce0c8e601aaa123ecaac93e43cf768183e98fab1d5d1c4b052"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N03\\05-再次保存响应.json",
+      "归档": "独立参考原件/原始操作证据/N03/05-再次保存响应.json",
+      "字节": 1749,
+      "SHA256": "7fc26a4ed83cef745c3a370589dd2b792f0ba8f6a5031b4d72db573699bb0265"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N03\\05-再次保存响应.png",
+      "归档": "独立参考原件/原始操作证据/N03/05-再次保存响应.png",
+      "字节": 38285,
+      "SHA256": "f483f3daa388d4ddad2d6605f93da5a04342f729c03c79656ae3753ccb6570ce"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N03\\06-补填后保存响应.json",
+      "归档": "独立参考原件/原始操作证据/N03/06-补填后保存响应.json",
+      "字节": 1759,
+      "SHA256": "7ba9c04fe80fe313e357a5814da211ddffcff624dd0cfc8b363c0e0a15f6c4ed"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N03\\06-补填后保存响应.png",
+      "归档": "独立参考原件/原始操作证据/N03/06-补填后保存响应.png",
+      "字节": 39288,
+      "SHA256": "8b14eb54bf847f2b38615dff6af827f306179e530a77b53ffb22f6e6f5f34494"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\N03\\动作与观察索引.json",
+      "归档": "独立参考原件/原始操作证据/N03/动作与观察索引.json",
+      "字节": 3478,
+      "SHA256": "b373e9fbe54b395d41c1f759c4a36234cc68b1eda933a60c4f1da5bd8a569fe9"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\原始操作证据\\取证说明.json",
+      "归档": "独立参考原件/原始操作证据/取证说明.json",
+      "字节": 403,
+      "SHA256": "adf08da6fbd8613d55668cd21e51c990f0cb68a329a4690ec06f76adaf3f3d0c"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\参考包文件校验.json",
+      "归档": "独立参考原件/参考包文件校验.json",
+      "字节": 7781,
+      "SHA256": "945e13c8e879ea3fe72e824b75186aa6144ed94231ff4d6f0ede7daa0b875031"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\参考取得方式.json",
+      "归档": "独立参考原件/参考取得方式.json",
+      "字节": 902,
+      "SHA256": "241d59bc2877a988e5655cda913f9ab2a274d71841545416af03301916423a95"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\执行协议_输入时冻结.md",
+      "归档": "独立参考原件/执行协议_输入时冻结.md",
+      "字节": 3287,
+      "SHA256": "4d375bbc2582d8d42f718af3fa153cec64af67c3a7f00a449220ffeeaedbe359"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\样本材料冻结清单.json",
+      "归档": "独立参考原件/样本材料冻结清单.json",
+      "字节": 1386,
+      "SHA256": "f2fee023ebc0d0ed6ebb70cceda4a904b28804fa5b218e77f1b86ce3ba815766"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\独立AI参考_冻结.json",
+      "归档": "独立参考原件/独立AI参考_冻结.json",
+      "字节": 18338,
+      "SHA256": "f9497ff9660d8f66d556802d2870a06a183e9e3be3c488e73642c4074a21ccc3"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_reference\\评分口径_预注册.json",
+      "归档": "独立参考原件/评分口径_预注册.json",
+      "字节": 3261,
+      "SHA256": "6bcc00db2fcdfe855a101d35307dc048f56e1f408f2d4c2d6ee7b3dd7be687e5"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_adjudication\\N01第1轮输入隔离标识核对.json",
+      "归档": "独立裁决原件/N01第1轮输入隔离标识核对.json",
+      "字节": 1358,
+      "SHA256": "944be3df4fc310bd5617bc3da38dc210deb6b7095eb45be166c1bbf62ed37ab5"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_adjudication\\N01第2轮追加回归附录.json",
+      "归档": "独立裁决原件/N01第2轮追加回归附录.json",
+      "字节": 1205,
+      "SHA256": "269d9be7c4f2a6c0f3d7a905fa646a08143bbb6a25c7f5449a730e63302241f7"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_adjudication\\修后v1-N01-第1轮-独立裁决.json",
+      "归档": "独立裁决原件/修后v1-N01-第1轮-独立裁决.json",
+      "字节": 7036,
+      "SHA256": "1c6a1c7e7d946ea247abce1f625d98bb757d090927ee614b36f6a11250b438d2"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_adjudication\\修后v1-N02-第1轮-独立裁决.json",
+      "归档": "独立裁决原件/修后v1-N02-第1轮-独立裁决.json",
+      "字节": 29301,
+      "SHA256": "83bcda6390ac02b372e3123f4fb25310dc61c2716bfc344c918ab88b27de4bb5"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_adjudication\\修后v1-N03-第1轮-独立裁决.json",
+      "归档": "独立裁决原件/修后v1-N03-第1轮-独立裁决.json",
+      "字节": 13876,
+      "SHA256": "745e24ca4314fee03ae6d3f3f73113f0d899d052685857fae35e506eef99017b"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_adjudication\\裁决字段与引用说明.json",
+      "归档": "独立裁决原件/裁决字段与引用说明.json",
+      "字节": 3181,
+      "SHA256": "720d4797bee335d5e36aff51a7bdefd3fd9699a2735dee7dbf41c8e8a2c76708"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_adjudication\\裁决进度.json",
+      "归档": "独立裁决原件/裁决进度.json",
+      "字节": 1956,
+      "SHA256": "69c861bb655969566cc30cf5fc89ad91937dd3503e13d490e8a577dd9bb6cd33"
+    },
+    {
+      "来源": "..\\work\\d_final_acceptance_adjudication\\首轮主结果汇总.json",
+      "归档": "独立裁决原件/首轮主结果汇总.json",
+      "字节": 4507,
+      "SHA256": "483754d4df72bfa49912750ededa6d7163779099da20afd57d47447f616826bc"
+    }
+  ]
+}

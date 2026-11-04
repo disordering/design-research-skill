@@ -1,0 +1,62 @@
+{
+  "来源": "AI 操作脚本 / Chromium 实际页面观察",
+  "URL": "http://127.0.0.1:49920/N01-%E9%98%85%E8%AF%BB%E8%AE%BE%E7%BD%AE/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+  "时间UTC": "2026-11-04T10:23:07.076780+00:00",
+  "事实": {
+    "标题": "阅读设置",
+    "文本": "阅读设置\n设置阅读版面\n文字大小\n标准字号\n大字号\n段落行距\n紧凑行距\n舒适行距\n使用暖色背景\n正在应用…\n恢复初始\n\n正在应用阅读设置，请稍候\n\n阅读预览\n城市中的绿意\n\n清晨沿着街角向前，树叶的影子落在长椅上。留一点时间观察身边的植物，熟悉的街道也会带来新的发现。\n\n已应用：标准字号 · 紧凑行距 · 白色背景\n\n本地演示 · N01-v1 · 操作仅在当前页面生效",
+    "控件": [
+      {
+        "标签": "文字大小",
+        "id": "fontSize",
+        "类型": "select-one",
+        "value": "big",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "段落行距",
+        "id": "spacing",
+        "类型": "select-one",
+        "value": "comfort",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "使用暖色背景",
+        "id": "warm",
+        "类型": "checkbox",
+        "value": "on",
+        "checked": true,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "正在应用…",
+        "id": "save",
+        "类型": "submit",
+        "value": "",
+        "checked": false,
+        "disabled": true,
+        "invalid": null
+      },
+      {
+        "标签": "恢复初始",
+        "id": "reset",
+        "类型": "submit",
+        "value": "",
+        "checked": false,
+        "disabled": true,
+        "invalid": null
+      }
+    ],
+    "预览": {
+      "文字": "城市中的绿意\n\n清晨沿着街角向前，树叶的影子落在长椅上。留一点时间观察身边的植物，熟悉的街道也会带来新的发现。",
+      "字号": "18px",
+      "行高": "27.9px",
+      "背景": "rgb(255, 255, 255)"
+    }
+  }
+}

@@ -1,0 +1,411 @@
+{
+  "来源": "真实浏览器短流程断言；复现缺陷的通过表示复现成立，不表示产品无缺陷",
+  "模型调用": 0,
+  "任务": [
+    {
+      "样本": "N01",
+      "动作数": 5,
+      "截图数": 5,
+      "浏览器异常": []
+    },
+    {
+      "样本": "N03",
+      "动作数": 7,
+      "截图数": 5,
+      "浏览器异常": []
+    }
+  ],
+  "断言": [
+    {
+      "断言": "N01 两个原生下拉框和暖色选择生效",
+      "通过": true,
+      "实际": {
+        "fontSize": {
+          "id": "fontSize",
+          "type": "select-one",
+          "tag": "SELECT",
+          "value": "big",
+          "checked": false,
+          "disabled": false,
+          "invalid": null,
+          "text": "标准字号\n大字号"
+        },
+        "spacing": {
+          "id": "spacing",
+          "type": "select-one",
+          "tag": "SELECT",
+          "value": "comfort",
+          "checked": false,
+          "disabled": false,
+          "invalid": null,
+          "text": "紧凑行距\n舒适行距"
+        },
+        "warm": {
+          "id": "warm",
+          "type": "checkbox",
+          "tag": "INPUT",
+          "value": "on",
+          "checked": true,
+          "disabled": false,
+          "invalid": null,
+          "text": ""
+        },
+        "save": {
+          "id": "save",
+          "type": "submit",
+          "tag": "BUTTON",
+          "value": "",
+          "checked": false,
+          "disabled": false,
+          "invalid": null,
+          "text": "应用设置"
+        },
+        "reset": {
+          "id": "reset",
+          "type": "submit",
+          "tag": "BUTTON",
+          "value": "",
+          "checked": false,
+          "disabled": false,
+          "invalid": null,
+          "text": "恢复初始"
+        }
+      }
+    },
+    {
+      "断言": "N01 处理中显示反馈且两按钮不可重复操作",
+      "通过": true,
+      "实际": {
+        "title": "阅读设置",
+        "text": "阅读设置\n设置阅读版面\n文字大小\n标准字号\n大字号\n段落行距\n紧凑行距\n舒适行距\n使用暖色背景\n正在应用…\n恢复初始\n\n正在应用阅读设置，请稍候\n\n阅读预览\n城市中的绿意\n\n清晨沿着街角向前，树叶的影子落在长椅上。留一点时间观察身边的植物，熟悉的街道也会带来新的发现。\n\n已应用：标准字号 · 紧凑行距 · 白色背景\n\n本地演示 · N01-v1 · 操作仅在当前页面生效",
+        "controls": [
+          {
+            "id": "fontSize",
+            "type": "select-one",
+            "tag": "SELECT",
+            "value": "big",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": "标准字号\n大字号"
+          },
+          {
+            "id": "spacing",
+            "type": "select-one",
+            "tag": "SELECT",
+            "value": "comfort",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": "紧凑行距\n舒适行距"
+          },
+          {
+            "id": "warm",
+            "type": "checkbox",
+            "tag": "INPUT",
+            "value": "on",
+            "checked": true,
+            "disabled": false,
+            "invalid": null,
+            "text": ""
+          },
+          {
+            "id": "save",
+            "type": "submit",
+            "tag": "BUTTON",
+            "value": "",
+            "checked": false,
+            "disabled": true,
+            "invalid": null,
+            "text": "正在应用…"
+          },
+          {
+            "id": "reset",
+            "type": "submit",
+            "tag": "BUTTON",
+            "value": "",
+            "checked": false,
+            "disabled": true,
+            "invalid": null,
+            "text": "恢复初始"
+          }
+        ],
+        "status": "正在应用阅读设置，请稍候",
+        "applied": "已应用：标准字号 · 紧凑行距 · 白色背景",
+        "record": null,
+        "errors": [],
+        "preview": {
+          "fontSize": "18px",
+          "lineHeight": "27.9px",
+          "background": "rgb(255, 255, 255)"
+        }
+      }
+    },
+    {
+      "断言": "N01 字号行高背景按选择改变",
+      "通过": true,
+      "实际": {
+        "初始": {
+          "fontSize": "18px",
+          "lineHeight": "27.9px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "应用后": {
+          "fontSize": "24px",
+          "lineHeight": "48px",
+          "background": "rgb(255, 241, 214)"
+        }
+      }
+    },
+    {
+      "断言": "N01 完成反馈与摘要匹配",
+      "通过": true,
+      "实际": "已应用：大字号 · 舒适行距 · 暖色背景"
+    },
+    {
+      "断言": "N01 恢复控件与预览全部回到初始",
+      "通过": true,
+      "实际": {
+        "title": "阅读设置",
+        "text": "阅读设置\n设置阅读版面\n文字大小\n标准字号\n大字号\n段落行距\n紧凑行距\n舒适行距\n使用暖色背景\n应用设置\n恢复初始\n\n已恢复初始版面\n\n阅读预览\n城市中的绿意\n\n清晨沿着街角向前，树叶的影子落在长椅上。留一点时间观察身边的植物，熟悉的街道也会带来新的发现。\n\n已应用：标准字号 · 紧凑行距 · 白色背景\n\n本地演示 · N01-v1 · 操作仅在当前页面生效",
+        "controls": [
+          {
+            "id": "fontSize",
+            "type": "select-one",
+            "tag": "SELECT",
+            "value": "normal",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": "标准字号\n大字号"
+          },
+          {
+            "id": "spacing",
+            "type": "select-one",
+            "tag": "SELECT",
+            "value": "compact",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": "紧凑行距\n舒适行距"
+          },
+          {
+            "id": "warm",
+            "type": "checkbox",
+            "tag": "INPUT",
+            "value": "on",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": ""
+          },
+          {
+            "id": "save",
+            "type": "submit",
+            "tag": "BUTTON",
+            "value": "",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": "应用设置"
+          },
+          {
+            "id": "reset",
+            "type": "submit",
+            "tag": "BUTTON",
+            "value": "",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": "恢复初始"
+          }
+        ],
+        "status": "已恢复初始版面",
+        "applied": "已应用：标准字号 · 紧凑行距 · 白色背景",
+        "record": null,
+        "errors": [],
+        "preview": {
+          "fontSize": "18px",
+          "lineHeight": "27.9px",
+          "background": "rgb(255, 255, 255)"
+        }
+      }
+    },
+    {
+      "断言": "N01 浏览器无脚本异常",
+      "通过": true,
+      "实际": []
+    },
+    {
+      "断言": "N03 错误年份显示范围反馈且未保存",
+      "通过": true,
+      "实际": {
+        "title": "图书编目录入",
+        "text": "图书编目录入\n\n填写图书信息。出版年份范围为 1900–2026。\n\n图书信息\n书名\n\n作者\n\n出版年份\n\n出版年份须为 1900–2026 之间的整数\n\n保存图书\n清空表单\n\n保存未完成，请按字段提示修正后重试\n\n保存结果\n\n尚未保存图书记录\n\n本地演示 · N03-v1 · 操作仅在当前页面生效",
+        "controls": [
+          {
+            "id": "book",
+            "type": "text",
+            "tag": "INPUT",
+            "value": "",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": ""
+          },
+          {
+            "id": "author",
+            "type": "text",
+            "tag": "INPUT",
+            "value": "林叶",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": ""
+          },
+          {
+            "id": "year",
+            "type": "number",
+            "tag": "INPUT",
+            "value": "2029",
+            "checked": false,
+            "disabled": false,
+            "invalid": "true",
+            "text": ""
+          },
+          {
+            "id": "",
+            "type": "submit",
+            "tag": "BUTTON",
+            "value": "",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": "保存图书"
+          },
+          {
+            "id": "reset",
+            "type": "button",
+            "tag": "BUTTON",
+            "value": "",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": "清空表单"
+          }
+        ],
+        "status": "保存未完成，请按字段提示修正后重试",
+        "applied": null,
+        "record": "尚未保存图书记录",
+        "errors": [
+          {
+            "id": "bookError",
+            "text": ""
+          },
+          {
+            "id": "authorError",
+            "text": ""
+          },
+          {
+            "id": "yearError",
+            "text": "出版年份须为 1900–2026 之间的整数"
+          }
+        ],
+        "preview": null
+      }
+    },
+    {
+      "断言": "N03 复现校验失败清空正确书名",
+      "通过": true,
+      "实际": {
+        "书名": "",
+        "作者": "林叶"
+      }
+    },
+    {
+      "断言": "N03 修正补回后最终保存字段一致",
+      "通过": true,
+      "实际": {
+        "title": "图书编目录入",
+        "text": "图书编目录入\n\n填写图书信息。出版年份范围为 1900–2026。\n\n图书信息\n书名\n\n作者\n\n出版年份\n\n保存图书\n清空表单\n\n图书记录已保存\n\n保存结果\n\n书名：城市植物图鉴；作者：林叶；出版年份：2021\n\n本地演示 · N03-v1 · 操作仅在当前页面生效",
+        "controls": [
+          {
+            "id": "book",
+            "type": "text",
+            "tag": "INPUT",
+            "value": "城市植物图鉴",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": ""
+          },
+          {
+            "id": "author",
+            "type": "text",
+            "tag": "INPUT",
+            "value": "林叶",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": ""
+          },
+          {
+            "id": "year",
+            "type": "number",
+            "tag": "INPUT",
+            "value": "2021",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": ""
+          },
+          {
+            "id": "",
+            "type": "submit",
+            "tag": "BUTTON",
+            "value": "",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": "保存图书"
+          },
+          {
+            "id": "reset",
+            "type": "button",
+            "tag": "BUTTON",
+            "value": "",
+            "checked": false,
+            "disabled": false,
+            "invalid": null,
+            "text": "清空表单"
+          }
+        ],
+        "status": "图书记录已保存",
+        "applied": null,
+        "record": "书名：城市植物图鉴；作者：林叶；出版年份：2021",
+        "errors": [
+          {
+            "id": "bookError",
+            "text": ""
+          },
+          {
+            "id": "authorError",
+            "text": ""
+          },
+          {
+            "id": "yearError",
+            "text": ""
+          }
+        ],
+        "preview": null
+      }
+    },
+    {
+      "断言": "N03 浏览器无脚本异常",
+      "通过": true,
+      "实际": []
+    }
+  ],
+  "通过": 10,
+  "总数": 10
+}

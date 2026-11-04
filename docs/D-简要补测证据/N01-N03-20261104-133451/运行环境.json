@@ -1,0 +1,17 @@
+{
+  "开始UTC": "2026-11-04T13:34:51.428401+00:00",
+  "来源": "AI 操作补测，真实 Chromium＋生产 BrowserAdapter/Action",
+  "不包含": "无 SessionService 规划队列、无模型调用、无自动评审准确性评分；原模型超时成绩不变",
+  "代码提交": "1bbeee18ddc88709f300ef3d3b8c257abaedd7e7",
+  "代码SHA256": {
+    "engine/session_adapters.py": "1c96354883b5c6b97cfca6e87813d351fa457948b3bf27a8accdf977857e5e27",
+    "engine/session_contracts.py": "efd364d33f28de0342c622292513d35207cfbceec462b83eded746120c575152",
+    "engine/session_targets.py": "e38483b5b04c5f38bf062d6697f480295481a1916b7c964c3f72458ef9318ce5"
+  },
+  "脚本SHA256": "698d710ec74cea6f3ae778f90a0a93f7f608baa2fe9318aa249fba9fd6e39df0",
+  "材料清单SHA256": "f2fee023ebc0d0ed6ebb70cceda4a904b28804fa5b218e77f1b86ce3ba815766",
+  "服务端口": 64615,
+  "浏览器关闭": true,
+  "服务关闭": true,
+  "结束UTC": "2026-11-04T13:35:02.447706+00:00"
+}

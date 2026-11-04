@@ -1,0 +1,29 @@
+{
+  "检查时间UTC": "2026-11-04T13:40:32.090531+00:00",
+  "来源": "AI 执行当前生产 Figma 适配器只读连接检查",
+  "代码提交": "1bbeee18ddc88709f300ef3d3b8c257abaedd7e7",
+  "MCP依赖已安装": true,
+  "后端地址已配置": false,
+  "Bearer已配置": false,
+  "OAuth缓存存在": false,
+  "桌面3845端口可连接": false,
+  "请求": {
+    "kind": "figma_board",
+    "reference": "https://www.figma.com/design/j9Z5Y839AREXf0OPysbbJ7/?node-id=19-92",
+    "title": "智能设计系统",
+    "content": "",
+    "image_base64": "",
+    "version": "unknown",
+    "evidence_kind": null,
+    "role": "unspecified",
+    "declared_by": "unknown",
+    "document_base64": "",
+    "filename": "",
+    "figma_snapshot_id": ""
+  },
+  "结果": "配置待完成",
+  "错误码": "figma_mcp_not_configured",
+  "错误说明": "后端未配置 Figma MCP 地址与授权；当前聊天的连接不能自动继承。",
+  "后续操作": "在 Figma 桌面打开项目并启用本地 MCP，后端指向 http://127.0.0.1:3845/mcp 后再验读。",
+  "适配器SHA256": "1c96354883b5c6b97cfca6e87813d351fa457948b3bf27a8accdf977857e5e27"
+}

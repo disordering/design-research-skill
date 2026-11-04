@@ -1,0 +1,82 @@
+{
+  "protocol_id": "D-final-independent-AI-reference-v1",
+  "actor_type": "ai_reference_reviewer",
+  "reference_source": "独立 Codex 参考；不表示真人或双人专家共识",
+  "created_at": "2026-11-04T10:07:43.005207+00:00",
+  "isolation": {
+    "inputs_allowed": [
+      "冻结任务卡",
+      "用户可见界面及真实操作",
+      "截图及操作记录",
+      "明确提供给运行方的设计目的与约束"
+    ],
+    "inputs_excluded": [
+      "样本作者预期答案",
+      "待测模型输出",
+      "其他评审参考"
+    ],
+    "freeze_before_results": true,
+    "reference_excluded_from_model_inputs": true
+  },
+  "primary_run": 1,
+  "repeated_runs_plan": 3,
+  "reference_atom_fields": [
+    "reference_id",
+    "task_id",
+    "task_version",
+    "object",
+    "location",
+    "state_or_transition",
+    "phenomenon",
+    "evidence_ids",
+    "observed_facts",
+    "task_impact",
+    "severity",
+    "severity_reason",
+    "recovery_or_alternative",
+    "rule_or_method_ids",
+    "dedup_key"
+  ],
+  "normal_control": "独立记录已观察的正常行为及证据；不假定未走查路径通过。",
+  "matching": [
+    "同对象或位置",
+    "同现象或机制",
+    "符合对应任务条件",
+    "预测实质描述该原子并有证据"
+  ],
+  "metrics": {
+    "recall": "TP_ref/(TP_ref+FN_ref)；参考分母冻结，未执行也计FN",
+    "FDR": "含至少一条无支持主张的去重预测条目数/已裁决去重预测条目数",
+    "pending": "不能裁决项单列；同时报告(FP_pred+pending)/(adjudicated+pending)",
+    "duplicates": "重复额外条目单列，不增加召回，不自动算错误事实",
+    "zero_denominator": "N/A，保留原始计数",
+    "consistency": "固定check_id三轮均执行且结论可比项的完全一致比例，同时给共同执行覆盖",
+    "support": "结构完整与事实语义支持分开审计；哈希或JSON合法不代替语义正确",
+    "tiers": "通用R、流程E、目标G/REQ分层，跨类别同一原子总体仅计一次；suggestion/conflict另列"
+  },
+  "severity": {
+    "critical": "充分证据表明不可逆重大损失或所有关键路径无替代地阻断",
+    "high": "关键任务或分支明确无法完成或严重错误结果且无合理可用替代",
+    "medium": "明显理解操作成本或局部受阻，有可用替代或恢复",
+    "low": "局部表达一致性问题，任务影响有限且易恢复"
+  },
+  "predeclared_targets": {
+    "recall": 0.8,
+    "FDR": 0.2,
+    "adjudicated_coverage": 0.9,
+    "common_execution_coverage": 0.9,
+    "three_run_state_consistency": 0.85,
+    "interpretation": "项目试行目标；本轮结果单列AI参考来源，不能冒充真人专家验证。"
+  },
+  "sources": [
+    {
+      "path": "design-research-skill/README.md",
+      "sha256": "002e72b296bc46dcc8ebebc1d8850ea8275c0219b5d2a6eb70d689d2fd89dd2f"
+    },
+    {
+      "path": "design-research-skill/方法专家开发交付-v0.2/08-问题表达严重度与评价验收.md",
+      "sha256": "4d92cfcfdb8417a20678995528ea0180f6182eb52b0b2becbb3a7fc44886eead"
+    }
+  ],
+  "status": "评分口径先冻结，待新任务材料"
+}

@@ -1,0 +1,184 @@
+[
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa16_tool_failure_is_recorded_without_product_finding",
+    "结果": "passed",
+    "秒": 0.134,
+    "目录": "01-test_qa16_tool_failure_is_recorded_without_product_finding",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa21_unsupported_rejection_reruns_without_erasing_prior_evidence",
+    "结果": "passed",
+    "秒": 1.581,
+    "目录": "02-test_qa21_unsupported_rejection_reruns_without_erasing_prior_evidence",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa22_new_fact_reruns_and_preserves_old_value_and_reason",
+    "结果": "passed",
+    "秒": 1.614,
+    "目录": "03-test_qa22_new_fact_reruns_and_preserves_old_value_and_reason",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa24_resume_persists_review_questions_and_interrupts_running_action",
+    "结果": "passed",
+    "秒": 0.878,
+    "目录": "04-test_qa24_resume_persists_review_questions_and_interrupts_running_action",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_retired_function_with_formal_scope_evidence_is_not_fixed",
+    "结果": "passed",
+    "秒": 0.914,
+    "目录": "05-test_qa26_retired_function_with_formal_scope_evidence_is_not_fixed",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa27_unselected_reference_remains_in_false_negative_denominator",
+    "结果": "passed",
+    "秒": 0.706,
+    "目录": "06-test_qa27_unselected_reference_remains_in_false_negative_denominator",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa28_same_texture_finding_merges_checks_without_losing_goal_states",
+    "结果": "passed",
+    "秒": 0.05,
+    "目录": "07-test_qa28_same_texture_finding_merges_checks_without_losing_goal_states",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa32_finish_preserves_partial_report_and_per_item_reason",
+    "结果": "passed",
+    "秒": 0.081,
+    "目录": "08-test_qa32_finish_preserves_partial_report_and_per_item_reason",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-product_spec]",
+    "结果": "passed",
+    "秒": 0.88,
+    "目录": "09-test_qa26_scope_proof_guards_model_and_confirmation[model-product_spec]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-design_brief]",
+    "结果": "passed",
+    "秒": 0.857,
+    "目录": "10-test_qa26_scope_proof_guards_model_and_confirmation[model-design_brief]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-unrelated]",
+    "结果": "passed",
+    "秒": 0.907,
+    "目录": "11-test_qa26_scope_proof_guards_model_and_confirmation[model-unrelated]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-stale]",
+    "结果": "passed",
+    "秒": 0.902,
+    "目录": "12-test_qa26_scope_proof_guards_model_and_confirmation[model-stale]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-old_context]",
+    "结果": "passed",
+    "秒": 0.911,
+    "目录": "13-test_qa26_scope_proof_guards_model_and_confirmation[model-old_context]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-statement]",
+    "结果": "passed",
+    "秒": 0.909,
+    "目录": "14-test_qa26_scope_proof_guards_model_and_confirmation[model-statement]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-missing]",
+    "结果": "passed",
+    "秒": 0.896,
+    "目录": "15-test_qa26_scope_proof_guards_model_and_confirmation[model-missing]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-inactive]",
+    "结果": "passed",
+    "秒": 1.016,
+    "目录": "16-test_qa26_scope_proof_guards_model_and_confirmation[model-inactive]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-product_spec]",
+    "结果": "passed",
+    "秒": 0.869,
+    "目录": "17-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-product_spec]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-design_brief]",
+    "结果": "passed",
+    "秒": 0.904,
+    "目录": "18-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-design_brief]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-unrelated]",
+    "结果": "passed",
+    "秒": 1.49,
+    "目录": "19-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-unrelated]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-stale]",
+    "结果": "passed",
+    "秒": 1.245,
+    "目录": "20-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-stale]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-old_context]",
+    "结果": "passed",
+    "秒": 1.359,
+    "目录": "21-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-old_context]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-statement]",
+    "结果": "passed",
+    "秒": 1.298,
+    "目录": "22-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-statement]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-missing]",
+    "结果": "passed",
+    "秒": 1.338,
+    "目录": "23-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-missing]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-inactive]",
+    "结果": "passed",
+    "秒": 1.277,
+    "目录": "24-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-inactive]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa05_qa06_three_child_goals_preserve_unknown_and_violation[insufficient_evidence-insufficient_evidence]",
+    "结果": "passed",
+    "秒": 1.61,
+    "目录": "25-test_qa05_qa06_three_child_goals_preserve_unknown_and_violation[insufficient_evidence-insufficient_evidence]",
+    "失败说明": ""
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa05_qa06_three_child_goals_preserve_unknown_and_violation[observed_violation-observed_violation]",
+    "结果": "passed",
+    "秒": 1.302,
+    "目录": "26-test_qa05_qa06_three_child_goals_preserve_unknown_and_violation[observed_violation-observed_violation]",
+    "失败说明": ""
+  }
+]

@@ -1,0 +1,154 @@
+[
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_retired_function_with_formal_scope_evidence_is_not_fixed",
+    "结果": "passed",
+    "秒": 1.002,
+    "目录": "05-test_qa26_retired_function_with_formal_scope_evidence_is_not_fixed",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-product_spec]",
+    "结果": "passed",
+    "秒": 0.93,
+    "目录": "09-test_qa26_scope_proof_guards_model_and_confirmation[model-product_spec]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-design_brief]",
+    "结果": "passed",
+    "秒": 0.881,
+    "目录": "10-test_qa26_scope_proof_guards_model_and_confirmation[model-design_brief]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-unrelated]",
+    "结果": "passed",
+    "秒": 0.946,
+    "目录": "11-test_qa26_scope_proof_guards_model_and_confirmation[model-unrelated]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-stale]",
+    "结果": "passed",
+    "秒": 1.045,
+    "目录": "13-test_qa26_scope_proof_guards_model_and_confirmation[model-stale]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-old_context]",
+    "结果": "passed",
+    "秒": 0.897,
+    "目录": "14-test_qa26_scope_proof_guards_model_and_confirmation[model-old_context]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-statement]",
+    "结果": "passed",
+    "秒": 1.177,
+    "目录": "15-test_qa26_scope_proof_guards_model_and_confirmation[model-statement]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-missing]",
+    "结果": "passed",
+    "秒": 0.955,
+    "目录": "16-test_qa26_scope_proof_guards_model_and_confirmation[model-missing]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-inactive]",
+    "结果": "passed",
+    "秒": 0.896,
+    "目录": "17-test_qa26_scope_proof_guards_model_and_confirmation[model-inactive]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-product_spec]",
+    "结果": "passed",
+    "秒": 0.894,
+    "目录": "18-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-product_spec]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-design_brief]",
+    "结果": "passed",
+    "秒": 1.143,
+    "目录": "19-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-design_brief]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-unrelated]",
+    "结果": "passed",
+    "秒": 1.042,
+    "目录": "20-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-unrelated]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-stale]",
+    "结果": "passed",
+    "秒": 1.03,
+    "目录": "22-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-stale]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-old_context]",
+    "结果": "passed",
+    "秒": 0.97,
+    "目录": "23-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-old_context]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-statement]",
+    "结果": "passed",
+    "秒": 1.172,
+    "目录": "24-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-statement]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-missing]",
+    "结果": "passed",
+    "秒": 1.081,
+    "目录": "25-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-missing]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-inactive]",
+    "结果": "passed",
+    "秒": 0.864,
+    "目录": "26-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-inactive]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-new_run_only]",
+    "结果": "passed",
+    "秒": 1.279,
+    "目录": "12-test_qa26_scope_proof_guards_model_and_confirmation[model-new_run_only]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  },
+  {
+    "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-new_run_only]",
+    "结果": "passed",
+    "秒": 1.016,
+    "目录": "21-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-new_run_only]",
+    "失败说明": "",
+    "批次": "范围来源最终边界2"
+  }
+]

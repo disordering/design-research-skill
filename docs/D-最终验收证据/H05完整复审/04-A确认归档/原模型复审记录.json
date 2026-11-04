@@ -1,0 +1,36 @@
+[
+  {
+    "recheck_id": "recheck-4439088468c1447a8ff42a5a456b4d6b",
+    "previous_finding_id": "finding-2b889800c51c43d7a60c72987671624d",
+    "current_finding_ids": [],
+    "resolution": "persists",
+    "reason": "本轮同一对象obj-91d36b9f4dbc6cbcf6c0已重现原触发路径：选择下午二层服务台→核对→返回选择→再次核对→提交。提交前ev-f450608bcf0247eda3e356ae17d64563为14:00–14:30、二层服务台；action-030165b1b21147e1967dbd6685185776后的ev-d0d02278f1c14cf79dee6b1fff107fe1显示09:00–09:30、一层服务台，REQ3仍为observed_violation。重新开始复位不证明错配已修复。当前发现列表为空，不关联新发现；历史AI复核不作为人工确认。",
+    "evidence_ids": [
+      "ev-7a2a26f0bce84eb5843b0457517f07f2",
+      "ev-02b1301742a148cfbe48d1d7e937e2e7",
+      "ev-044dae439f994270b16399504f86eca1",
+      "ev-f4b6b3083e8f4d8d8bcf4706f1b1ea18",
+      "ev-f450608bcf0247eda3e356ae17d64563",
+      "ev-d0d02278f1c14cf79dee6b1fff107fe1"
+    ],
+    "human_confirmation": "unreviewed",
+    "reviewer": "unknown",
+    "reviewed_at": null
+  },
+  {
+    "recheck_id": "recheck-17f0cf711c9c4a8da785bd2dcf3451f8",
+    "previous_finding_id": "finding-149e805558484b9d850775c841603fda",
+    "current_finding_ids": [],
+    "resolution": "persists",
+    "reason": "本轮同一对象obj-91d36b9f4dbc6cbcf6c0在返回后再次核对并提交的条件下，完成反馈仍与最终确认信息不符：ev-f450608bcf0247eda3e356ae17d64563显示14:00–14:30、二层服务台；action-030165b1b21147e1967dbd6685185776后的ev-d0d02278f1c14cf79dee6b1fff107fe1显示09:00–09:30、一层服务台，继续支持E03、R04的candidate_issue。与另一旧记录属于同一可见错配事件，不推断内部原因或真实登记损失。当前发现列表为空；历史AI复核不作为人工确认。",
+    "evidence_ids": [
+      "ev-044dae439f994270b16399504f86eca1",
+      "ev-f4b6b3083e8f4d8d8bcf4706f1b1ea18",
+      "ev-f450608bcf0247eda3e356ae17d64563",
+      "ev-d0d02278f1c14cf79dee6b1fff107fe1"
+    ],
+    "human_confirmation": "unreviewed",
+    "reviewer": "unknown",
+    "reviewed_at": null
+  }
+]

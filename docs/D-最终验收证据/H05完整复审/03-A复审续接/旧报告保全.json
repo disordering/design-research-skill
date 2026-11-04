@@ -1,0 +1,22 @@
+{
+  "旧报告原字节SHA256": {
+    "1": "406088810d3d6eaf51717283c83e5295bf8d35323d07730bd559783fe93e622f",
+    "2": "8232846bd86d2bfbc0338706d91a175c44cc6970e8485beed04ea8a4c46acfe6",
+    "3": "43f41d9f3b6de4ff0bb121a142e2c0acfefd2d17253da0b33708c7d9cad9eeea",
+    "4": "0dd7b03f9d00506712d62dcf96611474e57832c9adeae0b25ba5ea92ef922402",
+    "5": "40ada1bd954e1763ce19a3f3b26acef6ddad3c79333409abbc21aa915d34c0e3",
+    "6": "3e7ea14a44487a02cfa682c4c00f53366d5608a2a670e4dfb0edaff2fefebb29",
+    "7": "5f9204d206cc8901efca8213fe2a0170bd41d70f57b570f2df23b33e599e2889",
+    "8": "444c36e73f50e8fe640d0f1d552a45f4ee19952bff082f54e0e6bbe31d72f8fb"
+  },
+  "旧报告全部保持": true,
+  "原会话旧报告保持": true,
+  "原会话四表逻辑内容保持": true,
+  "原四表内容SHA256": {
+    "sessions": "854df74c45f730e887525a8ff107bb7eefcbb912d03210d65726f2401ba5c42c",
+    "events": "76dd20b9c46b84e0b2c552590867866daba00eff202b0f3363454d81a88e4943",
+    "reports": "06975201d0b594552745b0f738f10ee54afae5fee871456e7f0faea51b1e85ce",
+    "artifacts": "eca210d278692e889060b57e297750e767985ab5ed2acc27ba854ffbbdf7d2db"
+  },
+  "前段检查与动作保持": true
+}

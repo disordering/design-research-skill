@@ -1,0 +1,4037 @@
+{
+  "会话": "session-456687020eca454c9ba41242b9e0e429",
+  "上下文版本": 1,
+  "报告版本": 2,
+  "状态": "completed",
+  "完整度": "partial",
+  "模型调用": 40,
+  "已记录调用状态": {
+    "validated": 40
+  },
+  "本轮已记录调用": 40,
+  "本轮有效范围检查": {
+    "总数": 62,
+    "执行状态": {
+      "executed": 57,
+      "not_executed": 5
+    }
+  },
+  "本轮judge实际输入": {
+    "唯一检查数": 57,
+    "检查ID": [
+      "check-0da384568d20fede",
+      "check-0ee18a17afdeae0c",
+      "check-12eeb6ecc904f7e6",
+      "check-14caa5160427a574",
+      "check-1bd8f35a31643041",
+      "check-1c9e2cead84e7f80",
+      "check-2295551c5285385b",
+      "check-2a020686417013ef",
+      "check-3c4db19a5be5cd12",
+      "check-3ddba40dc141569c",
+      "check-410cca21735a85f2",
+      "check-438f73a166a7318b",
+      "check-4f4a76df2775f56a",
+      "check-5367530b133aa5b5",
+      "check-5812126c0106e5e6",
+      "check-5a824e66a4d22be7",
+      "check-5bac01d7e814a842",
+      "check-5d3d1245b6c30706",
+      "check-5d8a2aee3cbe3978",
+      "check-66236f8f24406ba7",
+      "check-6984c9f7ca1ba527",
+      "check-6d42442218ab96e6",
+      "check-6db0bc25fd4f93d3",
+      "check-6f3c1318c96b913d",
+      "check-72e7f289abf80c8a",
+      "check-75b93cc37591be0b",
+      "check-76638df410bd795d",
+      "check-7a8718b4caf82279",
+      "check-7ba9e809ec59a1c5",
+      "check-811e8bb812875c3d",
+      "check-89325b35890a79a3",
+      "check-8a93ace320144312",
+      "check-8c650cea2ab94d73",
+      "check-8f8301f9e84b74f1",
+      "check-94de0d56d48a18c8",
+      "check-9b54bc5cb86a177e",
+      "check-9b716d3fa0816b37",
+      "check-9e15f2586e6caa67",
+      "check-a02c63e7a7a8c450",
+      "check-b4ecebb48cb9557c",
+      "check-b53c7af752e9cf61",
+      "check-bc3b47f44828f8d1",
+      "check-c191d3419655b80f",
+      "check-c1a215be0071436b",
+      "check-c8b4d1cdcccad512",
+      "check-c92a87b9c199c456",
+      "check-c9b3089b6cd1ae3e",
+      "check-cd008d8c7b115bf0",
+      "check-d503f8e80b0e4dc5",
+      "check-e1e7666fec8f60fc",
+      "check-e1f2a3f74d899f01",
+      "check-e559bf48800facc8",
+      "check-e63bebe83da3d371",
+      "check-e8d7c8e506951ca0",
+      "check-ecdf00a123171695",
+      "check-f6e3746f2eae53c2",
+      "check-fa46ac4255488b15"
+    ]
+  },
+  "本轮judge输入与当前范围交集": {
+    "唯一检查数": 57,
+    "检查ID": [
+      "check-0da384568d20fede",
+      "check-0ee18a17afdeae0c",
+      "check-12eeb6ecc904f7e6",
+      "check-14caa5160427a574",
+      "check-1bd8f35a31643041",
+      "check-1c9e2cead84e7f80",
+      "check-2295551c5285385b",
+      "check-2a020686417013ef",
+      "check-3c4db19a5be5cd12",
+      "check-3ddba40dc141569c",
+      "check-410cca21735a85f2",
+      "check-438f73a166a7318b",
+      "check-4f4a76df2775f56a",
+      "check-5367530b133aa5b5",
+      "check-5812126c0106e5e6",
+      "check-5a824e66a4d22be7",
+      "check-5bac01d7e814a842",
+      "check-5d3d1245b6c30706",
+      "check-5d8a2aee3cbe3978",
+      "check-66236f8f24406ba7",
+      "check-6984c9f7ca1ba527",
+      "check-6d42442218ab96e6",
+      "check-6db0bc25fd4f93d3",
+      "check-6f3c1318c96b913d",
+      "check-72e7f289abf80c8a",
+      "check-75b93cc37591be0b",
+      "check-76638df410bd795d",
+      "check-7a8718b4caf82279",
+      "check-7ba9e809ec59a1c5",
+      "check-811e8bb812875c3d",
+      "check-89325b35890a79a3",
+      "check-8a93ace320144312",
+      "check-8c650cea2ab94d73",
+      "check-8f8301f9e84b74f1",
+      "check-94de0d56d48a18c8",
+      "check-9b54bc5cb86a177e",
+      "check-9b716d3fa0816b37",
+      "check-9e15f2586e6caa67",
+      "check-a02c63e7a7a8c450",
+      "check-b4ecebb48cb9557c",
+      "check-b53c7af752e9cf61",
+      "check-bc3b47f44828f8d1",
+      "check-c191d3419655b80f",
+      "check-c1a215be0071436b",
+      "check-c8b4d1cdcccad512",
+      "check-c92a87b9c199c456",
+      "check-c9b3089b6cd1ae3e",
+      "check-cd008d8c7b115bf0",
+      "check-d503f8e80b0e4dc5",
+      "check-e1e7666fec8f60fc",
+      "check-e1f2a3f74d899f01",
+      "check-e559bf48800facc8",
+      "check-e63bebe83da3d371",
+      "check-e8d7c8e506951ca0",
+      "check-ecdf00a123171695",
+      "check-f6e3746f2eae53c2",
+      "check-fa46ac4255488b15"
+    ]
+  },
+  "当前executed但本轮未进judge": {
+    "唯一检查数": 0,
+    "检查ID": []
+  },
+  "本轮judge有效输出": {
+    "唯一检查数": 57,
+    "检查ID": [
+      "check-0da384568d20fede",
+      "check-0ee18a17afdeae0c",
+      "check-12eeb6ecc904f7e6",
+      "check-14caa5160427a574",
+      "check-1bd8f35a31643041",
+      "check-1c9e2cead84e7f80",
+      "check-2295551c5285385b",
+      "check-2a020686417013ef",
+      "check-3c4db19a5be5cd12",
+      "check-3ddba40dc141569c",
+      "check-410cca21735a85f2",
+      "check-438f73a166a7318b",
+      "check-4f4a76df2775f56a",
+      "check-5367530b133aa5b5",
+      "check-5812126c0106e5e6",
+      "check-5a824e66a4d22be7",
+      "check-5bac01d7e814a842",
+      "check-5d3d1245b6c30706",
+      "check-5d8a2aee3cbe3978",
+      "check-66236f8f24406ba7",
+      "check-6984c9f7ca1ba527",
+      "check-6d42442218ab96e6",
+      "check-6db0bc25fd4f93d3",
+      "check-6f3c1318c96b913d",
+      "check-72e7f289abf80c8a",
+      "check-75b93cc37591be0b",
+      "check-76638df410bd795d",
+      "check-7a8718b4caf82279",
+      "check-7ba9e809ec59a1c5",
+      "check-811e8bb812875c3d",
+      "check-89325b35890a79a3",
+      "check-8a93ace320144312",
+      "check-8c650cea2ab94d73",
+      "check-8f8301f9e84b74f1",
+      "check-94de0d56d48a18c8",
+      "check-9b54bc5cb86a177e",
+      "check-9b716d3fa0816b37",
+      "check-9e15f2586e6caa67",
+      "check-a02c63e7a7a8c450",
+      "check-b4ecebb48cb9557c",
+      "check-b53c7af752e9cf61",
+      "check-bc3b47f44828f8d1",
+      "check-c191d3419655b80f",
+      "check-c1a215be0071436b",
+      "check-c8b4d1cdcccad512",
+      "check-c92a87b9c199c456",
+      "check-c9b3089b6cd1ae3e",
+      "check-cd008d8c7b115bf0",
+      "check-d503f8e80b0e4dc5",
+      "check-e1e7666fec8f60fc",
+      "check-e1f2a3f74d899f01",
+      "check-e559bf48800facc8",
+      "check-e63bebe83da3d371",
+      "check-e8d7c8e506951ca0",
+      "check-ecdf00a123171695",
+      "check-f6e3746f2eae53c2",
+      "check-fa46ac4255488b15"
+    ]
+  },
+  "全部历史检查": {
+    "总数": 62,
+    "执行状态": {
+      "executed": 57,
+      "not_executed": 5
+    }
+  },
+  "发现": [],
+  "复审": [],
+  "动作": [
+    {
+      "action_id": "action-a388d53709ff47d1abab826264f2c9d8",
+      "source_id": "src-104f6e84a5f44565bb0dfcf050edba69",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"0\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "b820b40eece7f46cb981500f",
+      "reason": "TASK-N01-01 要求选择大字号；初始证据显示文字大小为标准字号且控件可用。先展开选项，为选择目标字号取得实际观察。",
+      "target_label": "文字大小",
+      "observed_target": "文字大小 / normal",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-43e905d5d12f4990b09f57c8628f2b98",
+      "evidence_ids": [
+        "ev-a9f457eda73e4435815506f82a156914",
+        "ev-f6ed86036d764ea8acf282490e1fb3a9"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    },
+    {
+      "action_id": "action-58f67ee98e2d4bafac1a93cfa2d110cc",
+      "source_id": "src-104f6e84a5f44565bb0dfcf050edba69",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "",
+      "value": "",
+      "url": "",
+      "x": 0.326,
+      "y": 0.3695,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "5c5e9c5a015071a4c9b83169",
+      "reason": "TASK-N01-01 要求大字号。ev-f6ed86036d764ea8acf282490e1fb3a9 显示菜单已展开，当前仍为标准字号；已核对图像尺寸为1440×900，点击“大字号”选项内部中心，随后依据新观察核实选择结果。",
+      "target_label": "大字号",
+      "observed_target": "文字大小下拉菜单中的“大字号”选项",
+      "target_marker_artifact_id": "artifact-bce21e7ad26e4c55bd74c64a446a3fb3",
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-43e905d5d12f4990b09f57c8628f2b98",
+      "evidence_ids": [
+        "ev-f6ed86036d764ea8acf282490e1fb3a9",
+        "ev-30fe62cedd264a2fa8d065935bca3ff4",
+        "ev-b3a86f4a3d1543dfbb01c1ec2f1f8059"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    },
+    {
+      "action_id": "action-69399365443842c3b4fe2ad03de6c630",
+      "source_id": "src-104f6e84a5f44565bb0dfcf050edba69",
+      "kind": "observe",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "21b6e4383c539909a694e99e",
+      "reason": "ev-b3a86f4a3d1543dfbb01c1ec2f1f8059 与附图4显示展开的是段落行距菜单，文字大小仍为标准字号，与上次点击“大字号”的意图不同。先重新观察当前菜单及控件值，检查定位或原生菜单交互差异，不重复旧坐标，也不据此判定产品缺陷。",
+      "target_label": "",
+      "observed_target": "",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-43e905d5d12f4990b09f57c8628f2b98",
+      "evidence_ids": [
+        "ev-b3a86f4a3d1543dfbb01c1ec2f1f8059",
+        "ev-129ef2a4d61c449e915964c403375ede"
+      ],
+      "error": "",
+      "outcome": "read"
+    }
+  ],
+  "问题": [
+    {
+      "question_id": "question-7190ef4ddd794999bbbb175ad7dbed9f",
+      "text": "是否授权动作：TASK-N01-01 要求大字号。ev-f6ed86036d764ea8acf282490e1fb3a9 显示菜单已展开，当前仍为标准字号；已核对图像尺寸为1440×900，点击“大字号”选项内部中心，随后依据新观察核实选择结果。",
+      "reason": "来源 src-104f6e84a5f44565bb0dfcf050edba69，动作 click；尚未执行。",
+      "check_ids": [],
+      "blocking": true,
+      "answered": true,
+      "answer": "已授权",
+      "kind": "authorization",
+      "source_id": "src-104f6e84a5f44565bb0dfcf050edba69",
+      "action_id": "action-58f67ee98e2d4bafac1a93cfa2d110cc",
+      "answer_actor": "ai"
+    }
+  ],
+  "警告": [
+    "存在待授权动作；只判断现有证据，不把待执行路径算通过。",
+    "必需覆盖单元 coverage-8feebfcf352e8f36 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-740c6165fad8e0ad 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-c7e6550b1db32aa6 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-73ad4f0bbd4edd0f 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-28561631ef5c1943 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-49e1191f85849c7e 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-01e61b924e816181 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-35d643f1d1e726c8 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-815d8fd735d23a2f 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-a2d15a3fbad574f7 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-b1e90fc023928f17 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-1330b3666dd938a0 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "会话不变量：必需覆盖单元 coverage-8feebfcf352e8f36 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-740c6165fad8e0ad 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-c7e6550b1db32aa6 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-73ad4f0bbd4edd0f 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-28561631ef5c1943 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-49e1191f85849c7e 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-01e61b924e816181 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-35d643f1d1e726c8 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-815d8fd735d23a2f 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-a2d15a3fbad574f7 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-b1e90fc023928f17 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-1330b3666dd938a0 尚未覆盖。"
+  ],
+  "运行说明": [
+    "必需覆盖单元 coverage-8feebfcf352e8f36 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-740c6165fad8e0ad 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-c7e6550b1db32aa6 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-73ad4f0bbd4edd0f 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-28561631ef5c1943 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-49e1191f85849c7e 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-01e61b924e816181 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-35d643f1d1e726c8 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-815d8fd735d23a2f 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-a2d15a3fbad574f7 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-b1e90fc023928f17 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-1330b3666dd938a0 尚未由检查或逐屏审查覆盖；报告不能视为完整。"
+  ],
+  "契约问题": [
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-8feebfcf352e8f36 尚未覆盖。",
+      "coverage_id": "coverage-8feebfcf352e8f36",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-740c6165fad8e0ad 尚未覆盖。",
+      "coverage_id": "coverage-740c6165fad8e0ad",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-c7e6550b1db32aa6 尚未覆盖。",
+      "coverage_id": "coverage-c7e6550b1db32aa6",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-73ad4f0bbd4edd0f 尚未覆盖。",
+      "coverage_id": "coverage-73ad4f0bbd4edd0f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-28561631ef5c1943 尚未覆盖。",
+      "coverage_id": "coverage-28561631ef5c1943",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-49e1191f85849c7e 尚未覆盖。",
+      "coverage_id": "coverage-49e1191f85849c7e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-01e61b924e816181 尚未覆盖。",
+      "coverage_id": "coverage-01e61b924e816181",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-35d643f1d1e726c8 尚未覆盖。",
+      "coverage_id": "coverage-35d643f1d1e726c8",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-815d8fd735d23a2f 尚未覆盖。",
+      "coverage_id": "coverage-815d8fd735d23a2f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-a2d15a3fbad574f7 尚未覆盖。",
+      "coverage_id": "coverage-a2d15a3fbad574f7",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-b1e90fc023928f17 尚未覆盖。",
+      "coverage_id": "coverage-b1e90fc023928f17",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-1330b3666dd938a0 尚未覆盖。",
+      "coverage_id": "coverage-1330b3666dd938a0",
+      "gap_class": "unobserved_branch"
+    }
+  ],
+  "结束": "2026-11-04T11:06:28.381790+00:00",
+  "墙钟秒": 2332.719,
+  "执行来源": "AI 真实模型验收",
+  "主任务CLI调用": 28,
+  "逐屏CLI调用": 15,
+  "全部CLI调用": 43,
+  "逐屏审查": [
+    {
+      "review_id": "screen-review-66f0f43fa53b4dcd9cf89576fb67f62d",
+      "run_id": "run-43e905d5d12f4990b09f57c8628f2b98",
+      "evidence_id": "ev-a9f457eda73e4435815506f82a156914",
+      "source_id": "src-104f6e84a5f44565bb0dfcf050edba69",
+      "node_id": "",
+      "page_type": "阅读版面设置",
+      "status": "completed",
+      "summary": "UI 元素 18，OCR 文本块 17，候选技术问题 0。",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "rule_results": [
+        {
+          "rule_id": "R01",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前为独立设置页，没有页面级导航；E01标题清楚标明阅读设置。"
+        },
+        {
+          "rule_id": "R02",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "选择、应用和恢复均属于同一页内操作，没有分步页面关系，不要求步骤条。"
+        },
+        {
+          "rule_id": "R03",
+          "decision": "insufficient_evidence",
+          "confidence": 0.99,
+          "reason": "H01：仅取得点击前初始画面，未取得应用期间状态，不能推断等待反馈缺失。"
+        },
+        {
+          "rule_id": "R04",
+          "decision": "insufficient_evidence",
+          "confidence": 0.99,
+          "reason": "H01：E17清楚列出当前已应用值，但它位于初始页面，不能证明某次应用或恢复完成后的反馈质量。"
+        },
+        {
+          "rule_id": "R05",
+          "decision": "no_visible_issue",
+          "confidence": 0.92,
+          "reason": "H02：任务文案使用字号、行距、背景等明确词语；N01-v1仅为辅助版本信息，无需理解它即可操作。"
+        },
+        {
+          "rule_id": "R06",
+          "decision": "no_visible_issue",
+          "confidence": 0.98,
+          "reason": "H02：E09应用设置与E10恢复初始结合设置面板，能够说明预期动作。"
+        },
+        {
+          "rule_id": "R07",
+          "decision": "no_visible_issue",
+          "confidence": 0.98,
+          "reason": "H02：文字大小、段落行距及使用暖色背景均有常驻可见标签，选项含义明确。"
+        },
+        {
+          "rule_id": "R08",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前没有弹窗。"
+        },
+        {
+          "rule_id": "R09",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "当前是独立单页，不是已确认的多步骤任务非首步。"
+        },
+        {
+          "rule_id": "R10",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前没有高风险操作确认界面。"
+        },
+        {
+          "rule_id": "R11",
+          "decision": "not_applicable",
+          "confidence": 0.97,
+          "reason": "应用和恢复为不同动作，各只有一个入口；已应用属于状态摘要，不是重复动作入口。"
+        },
+        {
+          "rule_id": "R12",
+          "decision": "no_visible_issue",
+          "confidence": 0.98,
+          "reason": "H04：E05与E07下拉框的尺寸、边框、箭头和标签布局一致；应用与恢复按钮的颜色差异表达主次层级，不构成不一致。"
+        },
+        {
+          "rule_id": "R13",
+          "decision": "not_applicable",
+          "confidence": 0.96,
+          "reason": "当前为已有默认值的偏好选择，没有需要用户补填的必填字段。"
+        },
+        {
+          "rule_id": "R14",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "当前只有下拉选择和复选框，没有需要猜测格式或长度的自由输入字段。"
+        },
+        {
+          "rule_id": "R15",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前不是高后果操作确认页。"
+        },
+        {
+          "rule_id": "R16",
+          "decision": "no_visible_issue",
+          "confidence": 0.96,
+          "reason": "H06：下拉箭头依附明确的字段标签与当前值，应用和恢复均使用文字按钮，没有含义不明的关键图标入口。"
+        },
+        {
+          "rule_id": "R17",
+          "decision": "no_visible_issue",
+          "confidence": 0.99,
+          "reason": "H06：E05显示标准字号，E07显示紧凑行距，E08为空复选框；当前选择可辨，并与E17摘要一致。"
+        },
+        {
+          "rule_id": "R18",
+          "decision": "no_visible_issue",
+          "confidence": 0.99,
+          "reason": "H06：三个设置集中于设置阅读版面面板，标签贴近控件，与右侧纯展示预览有明确边界。"
+        },
+        {
+          "rule_id": "R19",
+          "decision": "no_visible_issue",
+          "confidence": 0.99,
+          "reason": "H08：E09蓝色应用设置按钮位于选项下方，没有遮挡；焦点代理排名第一与可见主次层级相符，但不代表实测注意力。"
+        },
+        {
+          "rule_id": "R20",
+          "decision": "no_visible_issue",
+          "confidence": 0.98,
+          "reason": "H08：预览与状态摘要服务于主任务；底部版本说明视觉权重低，没有挤占或遮挡设置内容。"
+        },
+        {
+          "rule_id": "R21",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前为正常初始状态，没有错误提示可检查。"
+        },
+        {
+          "rule_id": "R22",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前没有错误状态或对应修正提示，不能评价未展示的错误恢复行为。"
+        },
+        {
+          "rule_id": "R23",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "页面内没有错误文案。"
+        },
+        {
+          "rule_id": "R24",
+          "decision": "not_applicable",
+          "confidence": 0.94,
+          "reason": "当前任务由三个明确命名的偏好选项及两个动作组成，没有已确认需要额外解释的复杂字段或步骤。"
+        }
+      ],
+      "issues": [],
+      "technical_metrics": {
+        "image": {
+          "width": 1440,
+          "height": 900,
+          "megapixels": 1.296
+        },
+        "ui_element_count": 18,
+        "interactive_element_count": 5,
+        "ocr_block_count": 17,
+        "readability": {
+          "text_block_count": 17,
+          "low_contrast_count": 0,
+          "small_text_candidate_count": 1,
+          "estimated_height_p10": 18.0,
+          "estimated_height_p50": 18.0,
+          "local_contrast_p10": 0.5961,
+          "blocks": [
+            {
+              "block": 1,
+              "text": "阅读设置",
+              "bbox": [
+                0.1597,
+                0.0544,
+                0.0951,
+                0.0378
+              ],
+              "estimated_height_px": 34.0,
+              "local_luminance_contrast": 0.8431,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 2,
+              "text": "设置阅读版面",
+              "bbox": [
+                0.1799,
+                0.1711,
+                0.0965,
+                0.0267
+              ],
+              "estimated_height_px": 24.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 3,
+              "text": "文字大小",
+              "bbox": [
+                0.1799,
+                0.2311,
+                0.05,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 4,
+              "text": "标准字号",
+              "bbox": [
+                0.191,
+                0.28,
+                0.05,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 5,
+              "text": "段落行距",
+              "bbox": [
+                0.1799,
+                0.3367,
+                0.05,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 6,
+              "text": "紧凑行距",
+              "bbox": [
+                0.191,
+                0.3856,
+                0.05,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 7,
+              "text": "使用暖色背景",
+              "bbox": [
+                0.2056,
+                0.4422,
+                0.075,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 8,
+              "text": "应用设置",
+              "bbox": [
+                0.1931,
+                0.5111,
+                0.05,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.6471,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 9,
+              "text": "恢复初始",
+              "bbox": [
+                0.2778,
+                0.5111,
+                0.05,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 10,
+              "text": "当前使用初始版面",
+              "bbox": [
+                0.1882,
+                0.5878,
+                0.1,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8235,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 11,
+              "text": "阅读预览",
+              "bbox": [
+                0.5285,
+                0.1711,
+                0.0646,
+                0.0267
+              ],
+              "estimated_height_px": 24.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 12,
+              "text": "城市中的绿意",
+              "bbox": [
+                0.5431,
+                0.2533,
+                0.075,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 13,
+              "text": "清晨沿着街角向前，树叶的影子落在长椅上。留",
+              "bbox": [
+                0.5431,
+                0.2933,
+                0.2625,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.5961,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 14,
+              "text": "一点时间观察身边的植物，熟悉的街道也会带来",
+              "bbox": [
+                0.5431,
+                0.3244,
+                0.2625,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.6118,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 15,
+              "text": "新的发现。",
+              "bbox": [
+                0.5431,
+                0.3556,
+                0.0625,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8353,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 16,
+              "text": "已应用：标准字号 · 紧凑行距 · 白色背景",
+              "bbox": [
+                0.5285,
+                0.4289,
+                0.2215,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.451,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 17,
+              "text": "本地演示 · N01-v1 · 操作仅在当前页面生效",
+              "bbox": [
+                0.1597,
+                0.7267,
+                0.1875,
+                0.0156
+              ],
+              "estimated_height_px": 14.0,
+              "local_luminance_contrast": 0.4549,
+              "low_contrast": false,
+              "small_text_candidate": true,
+              "ocr_confidence": 0.99
+            }
+          ]
+        },
+        "density": {
+          "element_count": 18,
+          "interactive_element_count": 5,
+          "ocr_text_block_count": 17,
+          "elements_per_megapixel": 13.89,
+          "interactive_coverage": 0.0411,
+          "text_coverage": 0.0381,
+          "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+        },
+        "style": {
+          "control_count": 2,
+          "control_saturation_dispersion": 0.3392,
+          "control_contrast_dispersion": 0.0509,
+          "control_mean_saturation": 0.3652,
+          "control_mean_contrast": 0.3569,
+          "note": "Dispersion measures same-role visual consistency only when roles are correctly labeled."
+        },
+        "global": {
+          "mean_luminance": 0.9614,
+          "luminance_p05": 0.9451,
+          "luminance_p50": 0.9647,
+          "luminance_p95": 1.0,
+          "luminance_contrast": 0.0829,
+          "bright_pixel_fraction": 0.9636,
+          "dark_pixel_fraction": 0.0006,
+          "mean_saturation": 0.0253,
+          "high_saturation_fraction": 0.0041,
+          "edge_density": 0.0563,
+          "high_frequency_mean": 0.0094,
+          "palette_entropy_bits": 1.6514,
+          "negative_space_proxy": 0.9437
+        },
+        "focus_top": [
+          {
+            "element_id": "E09",
+            "label": "应用设置",
+            "role": "primary_button",
+            "bbox": [
+              0.18,
+              0.492,
+              0.076,
+              0.057
+            ],
+            "area_ratio": 0.0043,
+            "center_distance": 0.3999,
+            "model_visual_importance": 0.9,
+            "region": {
+              "luminance_p10": 0.3529,
+              "luminance_p90": 0.8,
+              "luminance_contrast": 0.4471,
+              "mean_saturation": 0.7447,
+              "edge_density": 0.1419,
+              "bright_fraction": 0.0825
+            },
+            "focus_proxy_raw": 0.704,
+            "focus_share": 0.067,
+            "rank": 1
+          },
+          {
+            "element_id": "E01",
+            "label": "阅读设置",
+            "role": "title",
+            "bbox": [
+              0.16,
+              0.054,
+              0.096,
+              0.04
+            ],
+            "area_ratio": 0.0038,
+            "center_distance": 0.7304,
+            "model_visual_importance": 0.95,
+            "region": {
+              "luminance_p10": 0.1216,
+              "luminance_p90": 0.9647,
+              "luminance_contrast": 0.8431,
+              "mean_saturation": 0.3147,
+              "edge_density": 0.3859,
+              "bright_fraction": 0.3721
+            },
+            "focus_proxy_raw": 0.6532,
+            "focus_share": 0.0622,
+            "rank": 2
+          },
+          {
+            "element_id": "E13",
+            "label": "阅读预览",
+            "role": "title",
+            "bbox": [
+              0.528,
+              0.171,
+              0.065,
+              0.029
+            ],
+            "area_ratio": 0.0019,
+            "center_distance": 0.4529,
+            "model_visual_importance": 0.75,
+            "region": {
+              "luminance_p10": 0.1216,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.8784,
+              "mean_saturation": 0.322,
+              "edge_density": 0.4775,
+              "bright_fraction": 0.3961
+            },
+            "focus_proxy_raw": 0.6384,
+            "focus_share": 0.0607,
+            "rank": 3
+          },
+          {
+            "element_id": "E14",
+            "label": "文章预览区域",
+            "role": "panel",
+            "bbox": [
+              0.528,
+              0.224,
+              0.292,
+              0.19
+            ],
+            "area_ratio": 0.0555,
+            "center_distance": 0.3551,
+            "model_visual_importance": 0.7,
+            "region": {
+              "luminance_p10": 0.6941,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.3059,
+              "mean_saturation": 0.0385,
+              "edge_density": 0.2039,
+              "bright_fraction": 0.8335
+            },
+            "focus_proxy_raw": 0.6283,
+            "focus_share": 0.0598,
+            "rank": 4
+          },
+          {
+            "element_id": "E03",
+            "label": "设置阅读版面",
+            "role": "title",
+            "bbox": [
+              0.18,
+              0.171,
+              0.1,
+              0.029
+            ],
+            "area_ratio": 0.0029,
+            "center_distance": 0.5862,
+            "model_visual_importance": 0.75,
+            "region": {
+              "luminance_p10": 0.1216,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.8784,
+              "mean_saturation": 0.304,
+              "edge_density": 0.4629,
+              "bright_fraction": 0.3862
+            },
+            "focus_proxy_raw": 0.6206,
+            "focus_share": 0.0591,
+            "rank": 5
+          }
+        ],
+        "heuristic_probes": {
+          "numeric_adaptation": {
+            "max_visible_digits": 0,
+            "max_placeholder_digits": 0,
+            "digit_length_groups": {},
+            "length_mismatch": false,
+            "longest_values": []
+          },
+          "state": {
+            "selected_or_explicit_state_elements": [
+              {
+                "element_id": "E05",
+                "label": "文字大小下拉框：标准字号",
+                "role": "other",
+                "state": "closed; selected=标准字号",
+                "bbox": [
+                  0.18,
+                  0.263,
+                  0.292,
+                  0.052
+                ]
+              },
+              {
+                "element_id": "E07",
+                "label": "段落行距下拉框：紧凑行距",
+                "role": "other",
+                "state": "closed; selected=紧凑行距",
+                "bbox": [
+                  0.18,
+                  0.369,
+                  0.292,
+                  0.051
+                ]
+              },
+              {
+                "element_id": "E08",
+                "label": "使用暖色背景",
+                "role": "other",
+                "state": "unchecked",
+                "bbox": [
+                  0.183,
+                  0.44,
+                  0.098,
+                  0.024
+                ]
+              },
+              {
+                "element_id": "E11",
+                "label": "当前使用初始版面",
+                "role": "text",
+                "state": "initial",
+                "bbox": [
+                  0.18,
+                  0.568,
+                  0.292,
+                  0.06
+                ]
+              },
+              {
+                "element_id": "E14",
+                "label": "文章预览区域",
+                "role": "panel",
+                "state": "标准字号; 紧凑行距; 白色背景",
+                "bbox": [
+                  0.528,
+                  0.224,
+                  0.292,
+                  0.19
+                ]
+              },
+              {
+                "element_id": "E17",
+                "label": "已应用：标准字号 · 紧凑行距 · 白色背景",
+                "role": "text",
+                "state": "initial",
+                "bbox": [
+                  0.528,
+                  0.428,
+                  0.223,
+                  0.023
+                ]
+              }
+            ],
+            "interactive_element_count": 5
+          },
+          "affordance": {
+            "primary_actions": [
+              {
+                "element_id": "E09",
+                "label": "应用设置",
+                "role": "primary_button",
+                "bbox": [
+                  0.18,
+                  0.492,
+                  0.076,
+                  0.057
+                ]
+              }
+            ],
+            "small_target_candidates": [
+              {
+                "element_id": "E08",
+                "label": "使用暖色背景",
+                "role": "other",
+                "width_px": 141.1,
+                "height_px": 21.6,
+                "bbox": [
+                  0.183,
+                  0.44,
+                  0.098,
+                  0.024
+                ]
+              }
+            ]
+          },
+          "legibility": {
+            "low_contrast_candidates": [],
+            "small_text_candidate_count": 1,
+            "estimated_height_p10": 18.0,
+            "text_edge_candidates": []
+          },
+          "layout": {
+            "element_density": {
+              "element_count": 18,
+              "interactive_element_count": 5,
+              "ocr_text_block_count": 17,
+              "elements_per_megapixel": 13.89,
+              "interactive_coverage": 0.0411,
+              "text_coverage": 0.0381,
+              "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+            },
+            "focus_top": [
+              {
+                "element_id": "E09",
+                "label": "应用设置",
+                "role": "primary_button",
+                "bbox": [
+                  0.18,
+                  0.492,
+                  0.076,
+                  0.057
+                ],
+                "area_ratio": 0.0043,
+                "center_distance": 0.3999,
+                "model_visual_importance": 0.9,
+                "region": {
+                  "luminance_p10": 0.3529,
+                  "luminance_p90": 0.8,
+                  "luminance_contrast": 0.4471,
+                  "mean_saturation": 0.7447,
+                  "edge_density": 0.1419,
+                  "bright_fraction": 0.0825
+                },
+                "focus_proxy_raw": 0.704,
+                "focus_share": 0.067,
+                "rank": 1
+              },
+              {
+                "element_id": "E01",
+                "label": "阅读设置",
+                "role": "title",
+                "bbox": [
+                  0.16,
+                  0.054,
+                  0.096,
+                  0.04
+                ],
+                "area_ratio": 0.0038,
+                "center_distance": 0.7304,
+                "model_visual_importance": 0.95,
+                "region": {
+                  "luminance_p10": 0.1216,
+                  "luminance_p90": 0.9647,
+                  "luminance_contrast": 0.8431,
+                  "mean_saturation": 0.3147,
+                  "edge_density": 0.3859,
+                  "bright_fraction": 0.3721
+                },
+                "focus_proxy_raw": 0.6532,
+                "focus_share": 0.0622,
+                "rank": 2
+              },
+              {
+                "element_id": "E13",
+                "label": "阅读预览",
+                "role": "title",
+                "bbox": [
+                  0.528,
+                  0.171,
+                  0.065,
+                  0.029
+                ],
+                "area_ratio": 0.0019,
+                "center_distance": 0.4529,
+                "model_visual_importance": 0.75,
+                "region": {
+                  "luminance_p10": 0.1216,
+                  "luminance_p90": 1.0,
+                  "luminance_contrast": 0.8784,
+                  "mean_saturation": 0.322,
+                  "edge_density": 0.4775,
+                  "bright_fraction": 0.3961
+                },
+                "focus_proxy_raw": 0.6384,
+                "focus_share": 0.0607,
+                "rank": 3
+              },
+              {
+                "element_id": "E14",
+                "label": "文章预览区域",
+                "role": "panel",
+                "bbox": [
+                  0.528,
+                  0.224,
+                  0.292,
+                  0.19
+                ],
+                "area_ratio": 0.0555,
+                "center_distance": 0.3551,
+                "model_visual_importance": 0.7,
+                "region": {
+                  "luminance_p10": 0.6941,
+                  "luminance_p90": 1.0,
+                  "luminance_contrast": 0.3059,
+                  "mean_saturation": 0.0385,
+                  "edge_density": 0.2039,
+                  "bright_fraction": 0.8335
+                },
+                "focus_proxy_raw": 0.6283,
+                "focus_share": 0.0598,
+                "rank": 4
+              },
+              {
+                "element_id": "E03",
+                "label": "设置阅读版面",
+                "role": "title",
+                "bbox": [
+                  0.18,
+                  0.171,
+                  0.1,
+                  0.029
+                ],
+                "area_ratio": 0.0029,
+                "center_distance": 0.5862,
+                "model_visual_importance": 0.75,
+                "region": {
+                  "luminance_p10": 0.1216,
+                  "luminance_p90": 1.0,
+                  "luminance_contrast": 0.8784,
+                  "mean_saturation": 0.304,
+                  "edge_density": 0.4629,
+                  "bright_fraction": 0.3862
+                },
+                "focus_proxy_raw": 0.6206,
+                "focus_share": 0.0591,
+                "rank": 5
+              }
+            ]
+          },
+          "instructions": "These probes are diagnostic, not standalone defects. Verify against the image. Evaluate whether the longest visible values fit, whether selection agrees with details/actions, and whether controls and text remain legible and distinct."
+        }
+      },
+      "ocr_artifact_id": "artifact-22dc77e491a74519920b24dfc7a78fe8",
+      "elements_artifact_id": "artifact-5b1ce85eb45c4691bc9af7edf02aebf9",
+      "metrics_artifact_id": "artifact-7262e39948f045e0be2ad359d8c66052",
+      "overlay_artifact_ids": {
+        "overlay-elements.png": "artifact-af4bb1af2a8048cba6772bcb0b51c2c5",
+        "overlay-focus.png": "artifact-9c128ac213354541b3a3df7bd705366c",
+        "overlay-flow.png": "artifact-ce259ccb825244c184df8dedb8ac1186"
+      },
+      "model_call_ids": [
+        "call-c4f4caf34aaf4857b62e13f840ad8959",
+        "call-036df9435b7f496683b9fa2f783e1b05",
+        "call-2d89d154bbc7487793b1f316c0f329ec"
+      ],
+      "warnings": []
+    },
+    {
+      "review_id": "screen-review-86d00f33700944c5964cf1e9f4431b02",
+      "run_id": "run-43e905d5d12f4990b09f57c8628f2b98",
+      "evidence_id": "ev-f6ed86036d764ea8acf282490e1fb3a9",
+      "source_id": "src-104f6e84a5f44565bb0dfcf050edba69",
+      "node_id": "",
+      "page_type": "阅读设置",
+      "status": "completed",
+      "summary": "UI 元素 19，OCR 文本块 18，候选技术问题 0。",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "rule_results": [
+        {
+          "rule_id": "R01",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前为独立设置单页，无页面级导航；阅读设置标题清楚标明页面用途。"
+        },
+        {
+          "rule_id": "R02",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "任务包含连续操作，但界面为独立单页，不是需要标识当前步骤的分步页面。"
+        },
+        {
+          "rule_id": "R03",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "画面明确为初始设置状态，未呈现等待；不能由点击前画面推断处理反馈缺失。"
+        },
+        {
+          "rule_id": "R04",
+          "decision": "insufficient_evidence",
+          "confidence": 0.99,
+          "reason": "E12与E18说明初始配置，未取得某次应用或恢复完成后的反馈，无法判断操作完成状态。"
+        },
+        {
+          "rule_id": "R05",
+          "decision": "no_visible_issue",
+          "confidence": 0.94,
+          "reason": "关键任务文案使用字号、行距、背景等直接表达；N01-v1仅在页脚标注版本，不构成完成任务所必需理解的内部术语。"
+        },
+        {
+          "rule_id": "R06",
+          "decision": "no_visible_issue",
+          "confidence": 0.98,
+          "reason": "H02：E10“应用设置”和E11“恢复初始”结合设置面板及初始状态提示，清楚表达预期动作。"
+        },
+        {
+          "rule_id": "R07",
+          "decision": "insufficient_evidence",
+          "confidence": 0.97,
+          "reason": "文字大小及使用暖色背景含义清楚；行距标签区域被菜单遮挡，不能对全部字段名称作完整判断，也不能推断标签缺失。"
+        },
+        {
+          "rule_id": "R08",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前展开的是下拉选项菜单，不是普通信息或输入弹窗。"
+        },
+        {
+          "rule_id": "R09",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前是独立设置单页，不属于已确认的多步骤任务非首步页面。"
+        },
+        {
+          "rule_id": "R10",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "没有高风险操作确认界面；恢复本地阅读版面不构成已确认的高风险操作。"
+        },
+        {
+          "rule_id": "R11",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "应用与恢复分别只有一个入口，且属于不同动作，没有同一动作的多个入口可比较。"
+        },
+        {
+          "rule_id": "R12",
+          "decision": "no_visible_issue",
+          "confidence": 0.93,
+          "reason": "H04：可见下拉控件使用相近边框与箭头表达；选项的蓝白差异对应选中状态，按钮的实心与描边差异对应主次层级，未见类别混淆。"
+        },
+        {
+          "rule_id": "R13",
+          "decision": "not_applicable",
+          "confidence": 0.96,
+          "reason": "当前为已有默认值的偏好设置，没有待填写的必填字段。"
+        },
+        {
+          "rule_id": "R14",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "界面通过预设选项和复选框设置版面，没有要求用户猜测输入格式的自由输入字段。"
+        },
+        {
+          "rule_id": "R15",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "没有高后果操作确认界面。"
+        },
+        {
+          "rule_id": "R16",
+          "decision": "no_visible_issue",
+          "confidence": 0.96,
+          "reason": "H06：下拉箭头位于显示当前值的控件内，主要动作均有文字，没有含义不明的任务必需自定义图标。"
+        },
+        {
+          "rule_id": "R17",
+          "decision": "no_visible_issue",
+          "confidence": 0.99,
+          "reason": "H06：E06标准字号蓝底高亮且与E05当前值一致；E09未勾选，E18配置摘要与这些初始选择一致。"
+        },
+        {
+          "rule_id": "R18",
+          "decision": "no_visible_issue",
+          "confidence": 0.97,
+          "reason": "H06：设置选项集中在“设置阅读版面”面板内，预览另成一组；展开菜单临时覆盖相邻区域，不足以证明分组归属混乱。"
+        },
+        {
+          "rule_id": "R19",
+          "decision": "no_visible_issue",
+          "confidence": 0.99,
+          "reason": "H08：E10应用设置位于选项下方，蓝色实心样式与恢复按钮形成清楚层级，未被菜单遮挡；显著性排名仅作辅助线索。"
+        },
+        {
+          "rule_id": "R20",
+          "decision": "no_visible_issue",
+          "confidence": 0.98,
+          "reason": "H08：设置和预览占据主要区域，页脚说明权重较低，未见无关信息挤占或遮挡主任务。"
+        },
+        {
+          "rule_id": "R21",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "截图未呈现错误状态，当前使用初始版面是状态说明。"
+        },
+        {
+          "rule_id": "R22",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "没有可评估修正办法的错误提示；恢复初始入口可见，但执行结果尚未取得。"
+        },
+        {
+          "rule_id": "R23",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "界面没有错误提示对象。"
+        },
+        {
+          "rule_id": "R24",
+          "decision": "not_applicable",
+          "confidence": 0.95,
+          "reason": "可见任务是通过常见控件设置三项阅读偏好，没有已确认必须依赖额外解释的复杂字段或步骤。"
+        }
+      ],
+      "issues": [],
+      "technical_metrics": {
+        "image": {
+          "width": 1440,
+          "height": 900,
+          "megapixels": 1.296
+        },
+        "ui_element_count": 19,
+        "interactive_element_count": 7,
+        "ocr_block_count": 18,
+        "readability": {
+          "text_block_count": 18,
+          "low_contrast_count": 0,
+          "small_text_candidate_count": 1,
+          "estimated_height_p10": 19.0,
+          "estimated_height_p50": 19.0,
+          "local_contrast_p10": 0.6078,
+          "blocks": [
+            {
+              "block": 1,
+              "text": "阅读设置",
+              "bbox": [
+                0.1597,
+                0.0544,
+                0.0951,
+                0.0378
+              ],
+              "estimated_height_px": 34.0,
+              "local_luminance_contrast": 0.8431,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 2,
+              "text": "设置阅读版面",
+              "bbox": [
+                0.1799,
+                0.1711,
+                0.0965,
+                0.0267
+              ],
+              "estimated_height_px": 24.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 3,
+              "text": "阅读预览",
+              "bbox": [
+                0.5285,
+                0.1711,
+                0.0653,
+                0.0267
+              ],
+              "estimated_height_px": 24.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 4,
+              "text": "文字大小",
+              "bbox": [
+                0.1799,
+                0.2311,
+                0.0507,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 5,
+              "text": "标准字号",
+              "bbox": [
+                0.191,
+                0.28,
+                0.0514,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 6,
+              "text": "标准字号",
+              "bbox": [
+                0.191,
+                0.3244,
+                0.0514,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.6392,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 7,
+              "text": "大字号",
+              "bbox": [
+                0.191,
+                0.36,
+                0.0382,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 8,
+              "text": "紧凑行距",
+              "bbox": [
+                0.191,
+                0.3867,
+                0.0514,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.8588,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 9,
+              "text": "使用暖色背景",
+              "bbox": [
+                0.2056,
+                0.4422,
+                0.0757,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 10,
+              "text": "应用设置",
+              "bbox": [
+                0.1931,
+                0.5111,
+                0.0507,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.6471,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 11,
+              "text": "恢复初始",
+              "bbox": [
+                0.2778,
+                0.5111,
+                0.0507,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 12,
+              "text": "当前使用初始版面",
+              "bbox": [
+                0.1882,
+                0.5878,
+                0.1,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.8235,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 13,
+              "text": "城市中的绿意",
+              "bbox": [
+                0.5431,
+                0.2533,
+                0.0757,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 14,
+              "text": "清晨沿着街角向前，树叶的影子落在长椅上。留",
+              "bbox": [
+                0.5431,
+                0.2933,
+                0.2625,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.6078,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 15,
+              "text": "一点时间观察身边的植物，熟悉的街道也会带来",
+              "bbox": [
+                0.5431,
+                0.3244,
+                0.2625,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.6118,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 16,
+              "text": "新的发现。",
+              "bbox": [
+                0.5431,
+                0.3556,
+                0.0625,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.8157,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 17,
+              "text": "已应用：标准字号 · 紧凑行距 · 白色背景",
+              "bbox": [
+                0.5285,
+                0.4289,
+                0.2222,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.4431,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 18,
+              "text": "本地演示 · N01-v1 · 操作仅在当前页面生效",
+              "bbox": [
+                0.1597,
+                0.7267,
+                0.1882,
+                0.0156
+              ],
+              "estimated_height_px": 14.0,
+              "local_luminance_contrast": 0.451,
+              "low_contrast": false,
+              "small_text_candidate": true,
+              "ocr_confidence": 0.99
+            }
+          ]
+        },
+        "density": {
+          "element_count": 19,
+          "interactive_element_count": 7,
+          "ocr_text_block_count": 18,
+          "elements_per_megapixel": 14.66,
+          "interactive_coverage": 0.0565,
+          "text_coverage": 0.0406,
+          "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+        },
+        "style": {
+          "control_count": 2,
+          "control_saturation_dispersion": 0.3392,
+          "control_contrast_dispersion": 0.0509,
+          "control_mean_saturation": 0.3652,
+          "control_mean_contrast": 0.3569,
+          "note": "Dispersion measures same-role visual consistency only when roles are correctly labeled."
+        },
+        "global": {
+          "mean_luminance": 0.955,
+          "luminance_p05": 0.9294,
+          "luminance_p50": 0.9647,
+          "luminance_p95": 1.0,
+          "luminance_contrast": 0.1013,
+          "bright_pixel_fraction": 0.9525,
+          "dark_pixel_fraction": 0.0006,
+          "mean_saturation": 0.034,
+          "high_saturation_fraction": 0.0136,
+          "edge_density": 0.0579,
+          "high_frequency_mean": 0.0102,
+          "palette_entropy_bits": 1.7127,
+          "negative_space_proxy": 0.9421
+        },
+        "focus_top": [
+          {
+            "element_id": "E02",
+            "label": "阅读版面设置面板",
+            "role": "panel",
+            "bbox": [
+              0.16,
+              0.131,
+              0.332,
+              0.537
+            ],
+            "area_ratio": 0.1783,
+            "center_distance": 0.2842,
+            "model_visual_importance": 0.85,
+            "region": {
+              "luminance_p10": 0.5294,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.4706,
+              "mean_saturation": 0.0883,
+              "edge_density": 0.125,
+              "bright_fraction": 0.8499
+            },
+            "focus_proxy_raw": 0.768,
+            "focus_share": 0.0685,
+            "rank": 1
+          },
+          {
+            "element_id": "E10",
+            "label": "应用设置",
+            "role": "primary_button",
+            "bbox": [
+              0.18,
+              0.492,
+              0.076,
+              0.057
+            ],
+            "area_ratio": 0.0043,
+            "center_distance": 0.3999,
+            "model_visual_importance": 0.9,
+            "region": {
+              "luminance_p10": 0.3529,
+              "luminance_p90": 0.8,
+              "luminance_contrast": 0.4471,
+              "mean_saturation": 0.7447,
+              "edge_density": 0.1419,
+              "bright_fraction": 0.0825
+            },
+            "focus_proxy_raw": 0.704,
+            "focus_share": 0.0628,
+            "rank": 2
+          },
+          {
+            "element_id": "E01",
+            "label": "阅读设置",
+            "role": "title",
+            "bbox": [
+              0.159,
+              0.054,
+              0.097,
+              0.04
+            ],
+            "area_ratio": 0.0039,
+            "center_distance": 0.7308,
+            "model_visual_importance": 0.95,
+            "region": {
+              "luminance_p10": 0.1216,
+              "luminance_p90": 0.9647,
+              "luminance_contrast": 0.8431,
+              "mean_saturation": 0.3126,
+              "edge_density": 0.3891,
+              "bright_fraction": 0.3766
+            },
+            "focus_proxy_raw": 0.653,
+            "focus_share": 0.0583,
+            "rank": 3
+          },
+          {
+            "element_id": "E14",
+            "label": "阅读预览",
+            "role": "title",
+            "bbox": [
+              0.528,
+              0.171,
+              0.067,
+              0.028
+            ],
+            "area_ratio": 0.0019,
+            "center_distance": 0.4539,
+            "model_visual_importance": 0.75,
+            "region": {
+              "luminance_p10": 0.1216,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.8784,
+              "mean_saturation": 0.3246,
+              "edge_density": 0.487,
+              "bright_fraction": 0.3913
+            },
+            "focus_proxy_raw": 0.6385,
+            "focus_share": 0.057,
+            "rank": 4
+          },
+          {
+            "element_id": "E06",
+            "label": "标准字号",
+            "role": "other",
+            "bbox": [
+              0.181,
+              0.316,
+              0.29,
+              0.036
+            ],
+            "area_ratio": 0.0104,
+            "center_distance": 0.3401,
+            "model_visual_importance": 0.85,
+            "region": {
+              "luminance_p10": 0.3608,
+              "luminance_p90": 0.4902,
+              "luminance_contrast": 0.1294,
+              "mean_saturation": 0.826,
+              "edge_density": 0.2016,
+              "bright_fraction": 0.0031
+            },
+            "focus_proxy_raw": 0.6251,
+            "focus_share": 0.0558,
+            "rank": 5
+          }
+        ],
+        "heuristic_probes": {
+          "numeric_adaptation": {
+            "max_visible_digits": 0,
+            "max_placeholder_digits": 0,
+            "digit_length_groups": {},
+            "length_mismatch": false,
+            "longest_values": []
+          },
+          "state": {
+            "selected_or_explicit_state_elements": [
+              {
+                "element_id": "E05",
+                "label": "文字大小下拉框：标准字号",
+                "role": "other",
+                "state": "expanded",
+                "bbox": [
+                  0.18,
+                  0.263,
+                  0.292,
+                  0.052
+                ]
+              },
+              {
+                "element_id": "E06",
+                "label": "标准字号",
+                "role": "other",
+                "state": "selected",
+                "bbox": [
+                  0.181,
+                  0.316,
+                  0.29,
+                  0.036
+                ]
+              },
+              {
+                "element_id": "E08",
+                "label": "行距下拉框：紧凑行距",
+                "role": "other",
+                "state": "partially_occluded",
+                "bbox": [
+                  0.18,
+                  0.387,
+                  0.292,
+                  0.033
+                ]
+              },
+              {
+                "element_id": "E09",
+                "label": "使用暖色背景",
+                "role": "other",
+                "state": "unchecked",
+                "bbox": [
+                  0.182,
+                  0.44,
+                  0.102,
+                  0.024
+                ]
+              },
+              {
+                "element_id": "E12",
+                "label": "当前使用初始版面",
+                "role": "text",
+                "state": "initial",
+                "bbox": [
+                  0.18,
+                  0.568,
+                  0.292,
+                  0.06
+                ]
+              },
+              {
+                "element_id": "E15",
+                "label": "文章预览区域",
+                "role": "panel",
+                "state": "white_background",
+                "bbox": [
+                  0.528,
+                  0.224,
+                  0.292,
+                  0.19
+                ]
+              },
+              {
+                "element_id": "E18",
+                "label": "已应用：标准字号 · 紧凑行距 · 白色背景",
+                "role": "text",
+                "state": "initial",
+                "bbox": [
+                  0.528,
+                  0.428,
+                  0.224,
+                  0.023
+                ]
+              }
+            ],
+            "interactive_element_count": 7
+          },
+          "affordance": {
+            "primary_actions": [
+              {
+                "element_id": "E10",
+                "label": "应用设置",
+                "role": "primary_button",
+                "bbox": [
+                  0.18,
+                  0.492,
+                  0.076,
+                  0.057
+                ]
+              }
+            ],
+            "small_target_candidates": [
+              {
+                "element_id": "E07",
+                "label": "大字号",
+                "role": "other",
+                "width_px": 417.6,
+                "height_px": 31.5,
+                "bbox": [
+                  0.181,
+                  0.352,
+                  0.29,
+                  0.035
+                ]
+              },
+              {
+                "element_id": "E08",
+                "label": "行距下拉框：紧凑行距",
+                "role": "other",
+                "width_px": 420.5,
+                "height_px": 29.7,
+                "bbox": [
+                  0.18,
+                  0.387,
+                  0.292,
+                  0.033
+                ]
+              },
+              {
+                "element_id": "E09",
+                "label": "使用暖色背景",
+                "role": "other",
+                "width_px": 146.9,
+                "height_px": 21.6,
+                "bbox": [
+                  0.182,
+                  0.44,
+                  0.102,
+                  0.024
+                ]
+              }
+            ]
+          },
+          "legibility": {
+            "low_contrast_candidates": [],
+            "small_text_candidate_count": 1,
+            "estimated_height_p10": 19.0,
+            "text_edge_candidates": []
+          },
+          "layout": {
+            "element_density": {
+              "element_count": 19,
+              "interactive_element_count": 7,
+              "ocr_text_block_count": 18,
+              "elements_per_megapixel": 14.66,
+              "interactive_coverage": 0.0565,
+              "text_coverage": 0.0406,
+              "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+            },
+            "focus_top": [
+              {
+                "element_id": "E02",
+                "label": "阅读版面设置面板",
+                "role": "panel",
+                "bbox": [
+                  0.16,
+                  0.131,
+                  0.332,
+                  0.537
+                ],
+                "area_ratio": 0.1783,
+                "center_distance": 0.2842,
+                "model_visual_importance": 0.85,
+                "region": {
+                  "luminance_p10": 0.5294,
+                  "luminance_p90": 1.0,
+                  "luminance_contrast": 0.4706,
+                  "mean_saturation": 0.0883,
+                  "edge_density": 0.125,
+                  "bright_fraction": 0.8499
+                },
+                "focus_proxy_raw": 0.768,
+                "focus_share": 0.0685,
+                "rank": 1
+              },
+              {
+                "element_id": "E10",
+                "label": "应用设置",
+                "role": "primary_button",
+                "bbox": [
+                  0.18,
+                  0.492,
+                  0.076,
+                  0.057
+                ],
+                "area_ratio": 0.0043,
+                "center_distance": 0.3999,
+                "model_visual_importance": 0.9,
+                "region": {
+                  "luminance_p10": 0.3529,
+                  "luminance_p90": 0.8,
+                  "luminance_contrast": 0.4471,
+                  "mean_saturation": 0.7447,
+                  "edge_density": 0.1419,
+                  "bright_fraction": 0.0825
+                },
+                "focus_proxy_raw": 0.704,
+                "focus_share": 0.0628,
+                "rank": 2
+              },
+              {
+                "element_id": "E01",
+                "label": "阅读设置",
+                "role": "title",
+                "bbox": [
+                  0.159,
+                  0.054,
+                  0.097,
+                  0.04
+                ],
+                "area_ratio": 0.0039,
+                "center_distance": 0.7308,
+                "model_visual_importance": 0.95,
+                "region": {
+                  "luminance_p10": 0.1216,
+                  "luminance_p90": 0.9647,
+                  "luminance_contrast": 0.8431,
+                  "mean_saturation": 0.3126,
+                  "edge_density": 0.3891,
+                  "bright_fraction": 0.3766
+                },
+                "focus_proxy_raw": 0.653,
+                "focus_share": 0.0583,
+                "rank": 3
+              },
+              {
+                "element_id": "E14",
+                "label": "阅读预览",
+                "role": "title",
+                "bbox": [
+                  0.528,
+                  0.171,
+                  0.067,
+                  0.028
+                ],
+                "area_ratio": 0.0019,
+                "center_distance": 0.4539,
+                "model_visual_importance": 0.75,
+                "region": {
+                  "luminance_p10": 0.1216,
+                  "luminance_p90": 1.0,
+                  "luminance_contrast": 0.8784,
+                  "mean_saturation": 0.3246,
+                  "edge_density": 0.487,
+                  "bright_fraction": 0.3913
+                },
+                "focus_proxy_raw": 0.6385,
+                "focus_share": 0.057,
+                "rank": 4
+              },
+              {
+                "element_id": "E06",
+                "label": "标准字号",
+                "role": "other",
+                "bbox": [
+                  0.181,
+                  0.316,
+                  0.29,
+                  0.036
+                ],
+                "area_ratio": 0.0104,
+                "center_distance": 0.3401,
+                "model_visual_importance": 0.85,
+                "region": {
+                  "luminance_p10": 0.3608,
+                  "luminance_p90": 0.4902,
+                  "luminance_contrast": 0.1294,
+                  "mean_saturation": 0.826,
+                  "edge_density": 0.2016,
+                  "bright_fraction": 0.0031
+                },
+                "focus_proxy_raw": 0.6251,
+                "focus_share": 0.0558,
+                "rank": 5
+              }
+            ]
+          },
+          "instructions": "These probes are diagnostic, not standalone defects. Verify against the image. Evaluate whether the longest visible values fit, whether selection agrees with details/actions, and whether controls and text remain legible and distinct."
+        }
+      },
+      "ocr_artifact_id": "artifact-c32d1523c47942a29c2ca066b866ad32",
+      "elements_artifact_id": "artifact-01132010c8094409984f660604373380",
+      "metrics_artifact_id": "artifact-6784d60f06ac4eb784cdc98bd97c152c",
+      "overlay_artifact_ids": {
+        "overlay-elements.png": "artifact-43d0e18d5e524f6e8046b51c55f54609",
+        "overlay-focus.png": "artifact-8a7c5fc76575462daa5fd31145167f62",
+        "overlay-flow.png": "artifact-4a6fd71f0c2d4252b8860ad11569e5f4"
+      },
+      "model_call_ids": [
+        "call-727bc5b3c1a0475794f268563741eaef",
+        "call-fcbe09b4ef914823a06b809ae9c2b223",
+        "call-ebee69afaca740c1b59713454f9dfb31"
+      ],
+      "warnings": []
+    },
+    {
+      "review_id": "screen-review-9facff624d34493bafa54e7bb8aad012",
+      "run_id": "run-43e905d5d12f4990b09f57c8628f2b98",
+      "evidence_id": "ev-30fe62cedd264a2fa8d065935bca3ff4",
+      "source_id": "src-104f6e84a5f44565bb0dfcf050edba69",
+      "node_id": "",
+      "page_type": "阅读设置",
+      "status": "completed",
+      "summary": "UI 元素 19，OCR 文本块 18，候选技术问题 0。",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "rule_results": [
+        {
+          "rule_id": "R01",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "当前为独立设置单页，无页面级导航；标题“阅读设置”明确。"
+        },
+        {
+          "rule_id": "R02",
+          "decision": "not_applicable",
+          "confidence": 0.96,
+          "reason": "选择、应用和恢复属于同页操作序列，并非分步页面；无需据此要求步骤条。"
+        },
+        {
+          "rule_id": "R03",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前为普通菜单展开状态，未呈现等待；应用期间反馈另列验收证据不足。"
+        },
+        {
+          "rule_id": "R04",
+          "decision": "insufficient_evidence",
+          "confidence": 0.99,
+          "reason": "“当前使用初始版面”和已应用摘要说明当前配置，但未取得本次应用或恢复完成状态。"
+        },
+        {
+          "rule_id": "R05",
+          "decision": "no_visible_issue",
+          "confidence": 0.93,
+          "reason": "任务必要文案使用字号、行距、背景等直观词语；页脚版本号不妨碍理解操作。"
+        },
+        {
+          "rule_id": "R06",
+          "decision": "no_visible_issue",
+          "confidence": 0.99,
+          "reason": "“应用设置”和“恢复初始”结合设置面板与初始状态说明，明确表达预期动作。"
+        },
+        {
+          "rule_id": "R07",
+          "decision": "insufficient_evidence",
+          "confidence": 0.97,
+          "reason": "文字大小和暖色背景含义清楚；行距标签区域被展开菜单遮挡，无法评价其完整名称呈现。"
+        },
+        {
+          "rule_id": "R08",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前为下拉选项菜单，不是普通信息或输入弹窗，不应强制要求关闭按钮。"
+        },
+        {
+          "rule_id": "R09",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "独立设置页，不是多步骤任务的非首步页面。"
+        },
+        {
+          "rule_id": "R10",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "未呈现高风险操作确认界面。"
+        },
+        {
+          "rule_id": "R11",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "应用与恢复各仅一个入口，二者为不同动作，没有同一动作多入口可比。"
+        },
+        {
+          "rule_id": "R12",
+          "decision": "no_visible_issue",
+          "confidence": 0.94,
+          "reason": "应用按钮实色、恢复按钮描边体现主次层级；菜单选中与未选项的差异表达状态，不构成视觉规则矛盾。"
+        },
+        {
+          "rule_id": "R13",
+          "decision": "not_applicable",
+          "confidence": 0.96,
+          "reason": "页面提供已有默认值的偏好选择，无待填写的必填内容。"
+        },
+        {
+          "rule_id": "R14",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "输入通过下拉选项和复选框完成，没有需要用户猜测格式的自由输入字段。"
+        },
+        {
+          "rule_id": "R15",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前不是高后果操作确认页。"
+        },
+        {
+          "rule_id": "R16",
+          "decision": "no_visible_issue",
+          "confidence": 0.95,
+          "reason": "下拉箭头与当前值相邻，主要动作均有文字，不存在含义不明的任务关键自定义图标。"
+        },
+        {
+          "rule_id": "R17",
+          "decision": "no_visible_issue",
+          "confidence": 0.99,
+          "reason": "标准字号蓝底高亮且与字段值一致；大字号白底未选，暖色背景未勾选，与当前摘要相符。"
+        },
+        {
+          "rule_id": "R18",
+          "decision": "no_visible_issue",
+          "confidence": 0.98,
+          "reason": "相关设置集中于“设置阅读版面”面板，预览独立成组；未见输入与无关内容混排造成归属歧义。"
+        },
+        {
+          "rule_id": "R19",
+          "decision": "no_visible_issue",
+          "confidence": 0.99,
+          "reason": "“大字号”选项完整可见，“应用设置”蓝色按钮位于设置下方且无遮挡；视觉检查支持其易定位，非仅依据显著性分值。"
+        },
+        {
+          "rule_id": "R20",
+          "decision": "no_visible_issue",
+          "confidence": 0.98,
+          "reason": "设置与预览占据主要区域，页脚演示说明权重较低；展开菜单属于当前任务内容，暂时覆盖后续字段不等于无关信息干扰。"
+        },
+        {
+          "rule_id": "R21",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前没有可见错误状态。"
+        },
+        {
+          "rule_id": "R22",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前没有需修正的错误或错误提示，不能推断缺少恢复路径。"
+        },
+        {
+          "rule_id": "R23",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "截图内不存在错误提示文案。"
+        },
+        {
+          "rule_id": "R24",
+          "decision": "not_applicable",
+          "confidence": 0.95,
+          "reason": "当前为直观的阅读偏好选择，未见必须额外解释才能操作的复杂字段或领域步骤。"
+        }
+      ],
+      "issues": [],
+      "technical_metrics": {
+        "image": {
+          "width": 1440,
+          "height": 900,
+          "megapixels": 1.296
+        },
+        "ui_element_count": 19,
+        "interactive_element_count": 7,
+        "ocr_block_count": 18,
+        "readability": {
+          "text_block_count": 18,
+          "low_contrast_count": 0,
+          "small_text_candidate_count": 1,
+          "estimated_height_p10": 19.0,
+          "estimated_height_p50": 20.0,
+          "local_contrast_p10": 0.6,
+          "blocks": [
+            {
+              "block": 1,
+              "text": "阅读设置",
+              "bbox": [
+                0.1597,
+                0.0544,
+                0.0958,
+                0.0389
+              ],
+              "estimated_height_px": 35.0,
+              "local_luminance_contrast": 0.8431,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 2,
+              "text": "设置阅读版面",
+              "bbox": [
+                0.1799,
+                0.1711,
+                0.0965,
+                0.0267
+              ],
+              "estimated_height_px": 24.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 3,
+              "text": "文字大小",
+              "bbox": [
+                0.1799,
+                0.2311,
+                0.0507,
+                0.0211
+              ],
+              "estimated_height_px": 19.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 4,
+              "text": "标准字号",
+              "bbox": [
+                0.191,
+                0.2789,
+                0.0514,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 5,
+              "text": "标准字号",
+              "bbox": [
+                0.191,
+                0.3233,
+                0.0514,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.6392,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 6,
+              "text": "大字号",
+              "bbox": [
+                0.191,
+                0.3589,
+                0.0389,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 7,
+              "text": "紧凑行距",
+              "bbox": [
+                0.191,
+                0.3867,
+                0.0514,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8588,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.98
+            },
+            {
+              "block": 8,
+              "text": "使用暖色背景",
+              "bbox": [
+                0.2056,
+                0.4411,
+                0.0764,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 9,
+              "text": "应用设置",
+              "bbox": [
+                0.1924,
+                0.51,
+                0.0514,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.6471,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 10,
+              "text": "恢复初始",
+              "bbox": [
+                0.2778,
+                0.51,
+                0.0514,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.8588,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 11,
+              "text": "当前使用初始版面",
+              "bbox": [
+                0.1882,
+                0.5867,
+                0.1007,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.8235,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 12,
+              "text": "阅读预览",
+              "bbox": [
+                0.5285,
+                0.1711,
+                0.0646,
+                0.0267
+              ],
+              "estimated_height_px": 24.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 13,
+              "text": "城市中的绿意",
+              "bbox": [
+                0.5431,
+                0.2533,
+                0.0764,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 14,
+              "text": "清晨沿着街角向前，树叶的影子落在长椅上。留",
+              "bbox": [
+                0.5431,
+                0.2933,
+                0.2625,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.6,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 15,
+              "text": "一点时间观察身边的植物，熟悉的街道也会带来",
+              "bbox": [
+                0.5431,
+                0.3244,
+                0.2625,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.6196,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 16,
+              "text": "新的发现。",
+              "bbox": [
+                0.5431,
+                0.3556,
+                0.0625,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.8157,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 17,
+              "text": "已应用：标准字号 · 紧凑行距 · 白色背景",
+              "bbox": [
+                0.5285,
+                0.4289,
+                0.2208,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.4549,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 18,
+              "text": "本地演示 · N01-v1 · 操作仅在当前页面生效",
+              "bbox": [
+                0.1597,
+                0.7267,
+                0.1875,
+                0.0156
+              ],
+              "estimated_height_px": 14.0,
+              "local_luminance_contrast": 0.4549,
+              "low_contrast": false,
+              "small_text_candidate": true,
+              "ocr_confidence": 0.99
+            }
+          ]
+        },
+        "density": {
+          "element_count": 19,
+          "interactive_element_count": 7,
+          "ocr_text_block_count": 18,
+          "elements_per_megapixel": 14.66,
+          "interactive_coverage": 0.0572,
+          "text_coverage": 0.0421,
+          "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+        },
+        "style": {
+          "control_count": 2,
+          "control_saturation_dispersion": 0.3392,
+          "control_contrast_dispersion": 0.0509,
+          "control_mean_saturation": 0.3652,
+          "control_mean_contrast": 0.3569,
+          "note": "Dispersion measures same-role visual consistency only when roles are correctly labeled."
+        },
+        "global": {
+          "mean_luminance": 0.955,
+          "luminance_p05": 0.9294,
+          "luminance_p50": 0.9647,
+          "luminance_p95": 1.0,
+          "luminance_contrast": 0.1013,
+          "bright_pixel_fraction": 0.9525,
+          "dark_pixel_fraction": 0.0006,
+          "mean_saturation": 0.034,
+          "high_saturation_fraction": 0.0136,
+          "edge_density": 0.0579,
+          "high_frequency_mean": 0.0102,
+          "palette_entropy_bits": 1.7127,
+          "negative_space_proxy": 0.9421
+        },
+        "focus_top": [
+          {
+            "element_id": "E02",
+            "label": "设置阅读版面面板",
+            "role": "panel",
+            "bbox": [
+              0.16,
+              0.131,
+              0.332,
+              0.537
+            ],
+            "area_ratio": 0.1783,
+            "center_distance": 0.2842,
+            "model_visual_importance": 0.85,
+            "region": {
+              "luminance_p10": 0.5294,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.4706,
+              "mean_saturation": 0.0883,
+              "edge_density": 0.125,
+              "bright_fraction": 0.8499
+            },
+            "focus_proxy_raw": 0.768,
+            "focus_share": 0.0688,
+            "rank": 1
+          },
+          {
+            "element_id": "E10",
+            "label": "应用设置",
+            "role": "primary_button",
+            "bbox": [
+              0.18,
+              0.492,
+              0.076,
+              0.057
+            ],
+            "area_ratio": 0.0043,
+            "center_distance": 0.3999,
+            "model_visual_importance": 0.9,
+            "region": {
+              "luminance_p10": 0.3529,
+              "luminance_p90": 0.8,
+              "luminance_contrast": 0.4471,
+              "mean_saturation": 0.7447,
+              "edge_density": 0.1419,
+              "bright_fraction": 0.0825
+            },
+            "focus_proxy_raw": 0.704,
+            "focus_share": 0.0631,
+            "rank": 2
+          },
+          {
+            "element_id": "E01",
+            "label": "阅读设置",
+            "role": "title",
+            "bbox": [
+              0.159,
+              0.053,
+              0.098,
+              0.04
+            ],
+            "area_ratio": 0.0039,
+            "center_distance": 0.7316,
+            "model_visual_importance": 0.95,
+            "region": {
+              "luminance_p10": 0.1216,
+              "luminance_p90": 0.9647,
+              "luminance_contrast": 0.8431,
+              "mean_saturation": 0.3106,
+              "edge_density": 0.3948,
+              "bright_fraction": 0.381
+            },
+            "focus_proxy_raw": 0.6529,
+            "focus_share": 0.0585,
+            "rank": 3
+          },
+          {
+            "element_id": "E14",
+            "label": "阅读预览",
+            "role": "title",
+            "bbox": [
+              0.528,
+              0.17,
+              0.067,
+              0.028
+            ],
+            "area_ratio": 0.0019,
+            "center_distance": 0.4553,
+            "model_visual_importance": 0.75,
+            "region": {
+              "luminance_p10": 0.1216,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.8784,
+              "mean_saturation": 0.3246,
+              "edge_density": 0.4792,
+              "bright_fraction": 0.3913
+            },
+            "focus_proxy_raw": 0.6383,
+            "focus_share": 0.0572,
+            "rank": 4
+          },
+          {
+            "element_id": "E03",
+            "label": "设置阅读版面",
+            "role": "title",
+            "bbox": [
+              0.18,
+              0.17,
+              0.098,
+              0.028
+            ],
+            "area_ratio": 0.0027,
+            "center_distance": 0.5887,
+            "model_visual_importance": 0.75,
+            "region": {
+              "luminance_p10": 0.1216,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.8784,
+              "mean_saturation": 0.3229,
+              "edge_density": 0.486,
+              "bright_fraction": 0.3481
+            },
+            "focus_proxy_raw": 0.6216,
+            "focus_share": 0.0557,
+            "rank": 5
+          }
+        ],
+        "heuristic_probes": {
+          "numeric_adaptation": {
+            "max_visible_digits": 0,
+            "max_placeholder_digits": 0,
+            "digit_length_groups": {},
+            "length_mismatch": false,
+            "longest_values": []
+          },
+          "state": {
+            "selected_or_explicit_state_elements": [
+              {
+                "element_id": "E05",
+                "label": "文字大小下拉框：标准字号",
+                "role": "other",
+                "state": "expanded",
+                "bbox": [
+                  0.18,
+                  0.263,
+                  0.292,
+                  0.052
+                ]
+              },
+              {
+                "element_id": "E06",
+                "label": "标准字号",
+                "role": "other",
+                "state": "selected",
+                "bbox": [
+                  0.18,
+                  0.314,
+                  0.292,
+                  0.037
+                ]
+              },
+              {
+                "element_id": "E08",
+                "label": "行距下拉框：紧凑行距",
+                "role": "other",
+                "state": "partially_occluded",
+                "bbox": [
+                  0.18,
+                  0.387,
+                  0.292,
+                  0.033
+                ]
+              },
+              {
+                "element_id": "E09",
+                "label": "使用暖色背景",
+                "role": "other",
+                "state": "unchecked",
+                "bbox": [
+                  0.183,
+                  0.44,
+                  0.099,
+                  0.024
+                ]
+              },
+              {
+                "element_id": "E12",
+                "label": "当前使用初始版面",
+                "role": "text",
+                "state": "initial",
+                "bbox": [
+                  0.18,
+                  0.568,
+                  0.292,
+                  0.06
+                ]
+              },
+              {
+                "element_id": "E15",
+                "label": "文章预览区域",
+                "role": "panel",
+                "state": "white_background",
+                "bbox": [
+                  0.528,
+                  0.224,
+                  0.292,
+                  0.19
+                ]
+              },
+              {
+                "element_id": "E18",
+                "label": "已应用：标准字号 · 紧凑行距 · 白色背景",
+                "role": "text",
+                "state": "applied_initial_settings",
+                "bbox": [
+                  0.528,
+                  0.429,
+                  0.224,
+                  0.023
+                ]
+              }
+            ],
+            "interactive_element_count": 7
+          },
+          "affordance": {
+            "primary_actions": [
+              {
+                "element_id": "E10",
+                "label": "应用设置",
+                "role": "primary_button",
+                "bbox": [
+                  0.18,
+                  0.492,
+                  0.076,
+                  0.057
+                ]
+              }
+            ],
+            "small_target_candidates": [
+              {
+                "element_id": "E08",
+                "label": "行距下拉框：紧凑行距",
+                "role": "other",
+                "width_px": 420.5,
+                "height_px": 29.7,
+                "bbox": [
+                  0.18,
+                  0.387,
+                  0.292,
+                  0.033
+                ]
+              },
+              {
+                "element_id": "E09",
+                "label": "使用暖色背景",
+                "role": "other",
+                "width_px": 142.6,
+                "height_px": 21.6,
+                "bbox": [
+                  0.183,
+                  0.44,
+                  0.099,
+                  0.024
+                ]
+              }
+            ]
+          },
+          "legibility": {
+            "low_contrast_candidates": [],
+            "small_text_candidate_count": 1,
+            "estimated_height_p10": 19.0,
+            "text_edge_candidates": []
+          },
+          "layout": {
+            "element_density": {
+              "element_count": 19,
+              "interactive_element_count": 7,
+              "ocr_text_block_count": 18,
+              "elements_per_megapixel": 14.66,
+              "interactive_coverage": 0.0572,
+              "text_coverage": 0.0421,
+              "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+            },
+            "focus_top": [
+              {
+                "element_id": "E02",
+                "label": "设置阅读版面面板",
+                "role": "panel",
+                "bbox": [
+                  0.16,
+                  0.131,
+                  0.332,
+                  0.537
+                ],
+                "area_ratio": 0.1783,
+                "center_distance": 0.2842,
+                "model_visual_importance": 0.85,
+                "region": {
+                  "luminance_p10": 0.5294,
+                  "luminance_p90": 1.0,
+                  "luminance_contrast": 0.4706,
+                  "mean_saturation": 0.0883,
+                  "edge_density": 0.125,
+                  "bright_fraction": 0.8499
+                },
+                "focus_proxy_raw": 0.768,
+                "focus_share": 0.0688,
+                "rank": 1
+              },
+              {
+                "element_id": "E10",
+                "label": "应用设置",
+                "role": "primary_button",
+                "bbox": [
+                  0.18,
+                  0.492,
+                  0.076,
+                  0.057
+                ],
+                "area_ratio": 0.0043,
+                "center_distance": 0.3999,
+                "model_visual_importance": 0.9,
+                "region": {
+                  "luminance_p10": 0.3529,
+                  "luminance_p90": 0.8,
+                  "luminance_contrast": 0.4471,
+                  "mean_saturation": 0.7447,
+                  "edge_density": 0.1419,
+                  "bright_fraction": 0.0825
+                },
+                "focus_proxy_raw": 0.704,
+                "focus_share": 0.0631,
+                "rank": 2
+              },
+              {
+                "element_id": "E01",
+                "label": "阅读设置",
+                "role": "title",
+                "bbox": [
+                  0.159,
+                  0.053,
+                  0.098,
+                  0.04
+                ],
+                "area_ratio": 0.0039,
+                "center_distance": 0.7316,
+                "model_visual_importance": 0.95,
+                "region": {
+                  "luminance_p10": 0.1216,
+                  "luminance_p90": 0.9647,
+                  "luminance_contrast": 0.8431,
+                  "mean_saturation": 0.3106,
+                  "edge_density": 0.3948,
+                  "bright_fraction": 0.381
+                },
+                "focus_proxy_raw": 0.6529,
+                "focus_share": 0.0585,
+                "rank": 3
+              },
+              {
+                "element_id": "E14",
+                "label": "阅读预览",
+                "role": "title",
+                "bbox": [
+                  0.528,
+                  0.17,
+                  0.067,
+                  0.028
+                ],
+                "area_ratio": 0.0019,
+                "center_distance": 0.4553,
+                "model_visual_importance": 0.75,
+                "region": {
+                  "luminance_p10": 0.1216,
+                  "luminance_p90": 1.0,
+                  "luminance_contrast": 0.8784,
+                  "mean_saturation": 0.3246,
+                  "edge_density": 0.4792,
+                  "bright_fraction": 0.3913
+                },
+                "focus_proxy_raw": 0.6383,
+                "focus_share": 0.0572,
+                "rank": 4
+              },
+              {
+                "element_id": "E03",
+                "label": "设置阅读版面",
+                "role": "title",
+                "bbox": [
+                  0.18,
+                  0.17,
+                  0.098,
+                  0.028
+                ],
+                "area_ratio": 0.0027,
+                "center_distance": 0.5887,
+                "model_visual_importance": 0.75,
+                "region": {
+                  "luminance_p10": 0.1216,
+                  "luminance_p90": 1.0,
+                  "luminance_contrast": 0.8784,
+                  "mean_saturation": 0.3229,
+                  "edge_density": 0.486,
+                  "bright_fraction": 0.3481
+                },
+                "focus_proxy_raw": 0.6216,
+                "focus_share": 0.0557,
+                "rank": 5
+              }
+            ]
+          },
+          "instructions": "These probes are diagnostic, not standalone defects. Verify against the image. Evaluate whether the longest visible values fit, whether selection agrees with details/actions, and whether controls and text remain legible and distinct."
+        }
+      },
+      "ocr_artifact_id": "artifact-da98fb970817450b8153ec57fbecdeeb",
+      "elements_artifact_id": "artifact-e0702ef388eb4a62a305a42342bbb038",
+      "metrics_artifact_id": "artifact-4002bb178915459cb49a8b822c5ce1e8",
+      "overlay_artifact_ids": {
+        "overlay-elements.png": "artifact-4f9c0b9a1d9d45e3a947dfb66f4dc992",
+        "overlay-focus.png": "artifact-9e7a0e00e4de4de0bc2e3884655af64a",
+        "overlay-flow.png": "artifact-a978e47ec0a44aa38747bcb72e00daff"
+      },
+      "model_call_ids": [
+        "call-468ec6d44759458d9e3ec93051e74cba",
+        "call-0ab39b49b140434ea0990a68cb6da08b",
+        "call-b2c5952cc7ac4da29231193b74253a43"
+      ],
+      "warnings": []
+    },
+    {
+      "review_id": "screen-review-a793a25c14ae416fbddf56ec11e5931b",
+      "run_id": "run-43e905d5d12f4990b09f57c8628f2b98",
+      "evidence_id": "ev-b3a86f4a3d1543dfbb01c1ec2f1f8059",
+      "source_id": "src-104f6e84a5f44565bb0dfcf050edba69",
+      "node_id": "",
+      "page_type": "阅读设置",
+      "status": "completed",
+      "summary": "UI 元素 19，OCR 文本块 18，候选技术问题 0。",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "rule_results": [
+        {
+          "rule_id": "R01",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "这是独立设置页，标题清楚，未设置页面级导航。"
+        },
+        {
+          "rule_id": "R02",
+          "decision": "not_applicable",
+          "confidence": 0.97,
+          "reason": "任务包含连续操作，但界面为独立单页设置，不是分步页面流程，无需据此要求步骤条。"
+        },
+        {
+          "rule_id": "R03",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前为初始设置及菜单展开状态，没有正在处理的可见证据；后续等待反馈另记证据不足。"
+        },
+        {
+          "rule_id": "R04",
+          "decision": "insufficient_evidence",
+          "confidence": 0.99,
+          "reason": "E18明确列出当前已应用参数，但没有某次应用或恢复完成后的截图，不能验证完成反馈。"
+        },
+        {
+          "rule_id": "R05",
+          "decision": "no_visible_issue",
+          "confidence": 0.95,
+          "reason": "关键文案为文字大小、段落行距、应用设置和恢复初始，未见任务必需且未解释的内部术语；版本号仅为辅助信息。"
+        },
+        {
+          "rule_id": "R06",
+          "decision": "no_visible_issue",
+          "confidence": 0.99,
+          "reason": "H02：E10应用设置与E11恢复初始结合设置面板，能说明各自预期结果。"
+        },
+        {
+          "rule_id": "R07",
+          "decision": "no_visible_issue",
+          "confidence": 0.99,
+          "reason": "H02：两个可见选择框分别具有持续可见的文字大小、段落行距标签，输入含义明确。"
+        },
+        {
+          "rule_id": "R08",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "展开对象是下拉选项菜单，不是普通信息或输入弹窗，不要求配置弹窗关闭按钮。"
+        },
+        {
+          "rule_id": "R09",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "当前为独立设置页，未呈现多步骤任务的非首步页面。"
+        },
+        {
+          "rule_id": "R10",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "没有高风险操作确认界面。"
+        },
+        {
+          "rule_id": "R11",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "应用与恢复是不同动作，各只有一个可见入口，没有同一动作的多个命名可供比较。"
+        },
+        {
+          "rule_id": "R12",
+          "decision": "no_visible_issue",
+          "confidence": 0.97,
+          "reason": "H04：两个选择框宽度、边框及箭头形式一致；展开与收起的差异有状态依据，应用与恢复的颜色差异表达主次层级。"
+        },
+        {
+          "rule_id": "R13",
+          "decision": "not_applicable",
+          "confidence": 0.95,
+          "reason": "可见对象是已有默认值的偏好选择，没有需要用户补填的必填信息。"
+        },
+        {
+          "rule_id": "R14",
+          "decision": "not_applicable",
+          "confidence": 0.98,
+          "reason": "可见控件采用预设选项，没有需要猜测格式或长度的自由输入字段。"
+        },
+        {
+          "rule_id": "R15",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "没有高后果操作确认界面；本页为本地阅读偏好设置。"
+        },
+        {
+          "rule_id": "R16",
+          "decision": "no_visible_issue",
+          "confidence": 0.97,
+          "reason": "H06：下拉箭头与字段标签、当前值相邻，主操作均使用文字按钮，未见含义不明的重要图标入口。"
+        },
+        {
+          "rule_id": "R17",
+          "decision": "no_visible_issue",
+          "confidence": 0.99,
+          "reason": "H06：E05显示标准字号，E07显示紧凑行距，E08以蓝底高亮并与E09区分；state探针与截图相符。"
+        },
+        {
+          "rule_id": "R18",
+          "decision": "no_visible_issue",
+          "confidence": 0.98,
+          "reason": "H06：字号与行距集中在设置阅读版面卡片内，各标签紧邻控件，右侧预览单独成组，归属清楚。"
+        },
+        {
+          "rule_id": "R19",
+          "decision": "no_visible_issue",
+          "confidence": 0.98,
+          "reason": "H08：E10应用设置位于输入区下方，蓝色填充与恢复按钮区分，文字完整可见；菜单没有造成主操作不可辨认。"
+        },
+        {
+          "rule_id": "R20",
+          "decision": "no_visible_issue",
+          "confidence": 0.98,
+          "reason": "H08：设置与预览占据主要区域，底部版本及本地生效说明视觉权重较低，未挤占或压制任务内容。"
+        },
+        {
+          "rule_id": "R21",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前没有错误状态，初始版面提示不是错误信息。"
+        },
+        {
+          "rule_id": "R22",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "当前没有错误或需要修正的失败状态，不能据此要求错误恢复说明。"
+        },
+        {
+          "rule_id": "R23",
+          "decision": "not_applicable",
+          "confidence": 0.99,
+          "reason": "页面没有错误提示对象。"
+        },
+        {
+          "rule_id": "R24",
+          "decision": "not_applicable",
+          "confidence": 0.95,
+          "reason": "可见操作为带明确标签的常规阅读偏好选择，未发现必须借助领域解释才能完成的复杂字段或步骤。"
+        }
+      ],
+      "issues": [],
+      "technical_metrics": {
+        "image": {
+          "width": 1440,
+          "height": 900,
+          "megapixels": 1.296
+        },
+        "ui_element_count": 19,
+        "interactive_element_count": 6,
+        "ocr_block_count": 18,
+        "readability": {
+          "text_block_count": 18,
+          "low_contrast_count": 0,
+          "small_text_candidate_count": 1,
+          "estimated_height_p10": 18.0,
+          "estimated_height_p50": 18.0,
+          "local_contrast_p10": 0.6,
+          "blocks": [
+            {
+              "block": 1,
+              "text": "阅读设置",
+              "bbox": [
+                0.1597,
+                0.0556,
+                0.0944,
+                0.0378
+              ],
+              "estimated_height_px": 34.0,
+              "local_luminance_contrast": 0.8431,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 2,
+              "text": "设置阅读版面",
+              "bbox": [
+                0.1799,
+                0.1722,
+                0.0958,
+                0.0267
+              ],
+              "estimated_height_px": 24.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 3,
+              "text": "阅读预览",
+              "bbox": [
+                0.5285,
+                0.1722,
+                0.0646,
+                0.0267
+              ],
+              "estimated_height_px": 24.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 4,
+              "text": "文字大小",
+              "bbox": [
+                0.1799,
+                0.2311,
+                0.0507,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 5,
+              "text": "标准字号",
+              "bbox": [
+                0.191,
+                0.28,
+                0.0514,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 6,
+              "text": "段落行距",
+              "bbox": [
+                0.1799,
+                0.3378,
+                0.0507,
+                0.0222
+              ],
+              "estimated_height_px": 20.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 7,
+              "text": "紧凑行距",
+              "bbox": [
+                0.191,
+                0.3867,
+                0.0514,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 8,
+              "text": "紧凑行距",
+              "bbox": [
+                0.191,
+                0.4311,
+                0.0514,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.6392,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 9,
+              "text": "舒适行距",
+              "bbox": [
+                0.191,
+                0.4667,
+                0.0514,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 10,
+              "text": "应用设置",
+              "bbox": [
+                0.1924,
+                0.5122,
+                0.0514,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.6471,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 11,
+              "text": "恢复初始",
+              "bbox": [
+                0.2778,
+                0.5122,
+                0.0514,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 12,
+              "text": "当前使用初始版面",
+              "bbox": [
+                0.1882,
+                0.5889,
+                0.1007,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8235,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 13,
+              "text": "城市中的绿意",
+              "bbox": [
+                0.5431,
+                0.2544,
+                0.075,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8784,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 14,
+              "text": "清晨沿着街角向前，树叶的影子落在长椅上。留",
+              "bbox": [
+                0.5431,
+                0.2944,
+                0.2625,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.6,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 15,
+              "text": "一点时间观察身边的植物，熟悉的街道也会带来",
+              "bbox": [
+                0.5431,
+                0.3256,
+                0.2625,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.6118,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 16,
+              "text": "新的发现。",
+              "bbox": [
+                0.5431,
+                0.3567,
+                0.0625,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.8353,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 17,
+              "text": "已应用：标准字号 · 紧凑行距 · 白色背景",
+              "bbox": [
+                0.5285,
+                0.43,
+                0.2222,
+                0.02
+              ],
+              "estimated_height_px": 18.0,
+              "local_luminance_contrast": 0.4627,
+              "low_contrast": false,
+              "small_text_candidate": false,
+              "ocr_confidence": 0.99
+            },
+            {
+              "block": 18,
+              "text": "本地演示 · N01-v1 · 操作仅在当前页面生效",
+              "bbox": [
+                0.1597,
+                0.7267,
+                0.1875,
+                0.0156
+              ],
+              "estimated_height_px": 14.0,
+              "local_luminance_contrast": 0.4549,
+              "low_contrast": false,
+              "small_text_candidate": true,
+              "ocr_confidence": 0.98
+            }
+          ]
+        },
+        "density": {
+          "element_count": 19,
+          "interactive_element_count": 6,
+          "ocr_text_block_count": 18,
+          "elements_per_megapixel": 14.66,
+          "interactive_coverage": 0.0603,
+          "text_coverage": 0.0389,
+          "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+        },
+        "style": {
+          "control_count": 2,
+          "control_saturation_dispersion": 0.334,
+          "control_contrast_dispersion": 0.0509,
+          "control_mean_saturation": 0.3578,
+          "control_mean_contrast": 0.3569,
+          "note": "Dispersion measures same-role visual consistency only when roles are correctly labeled."
+        },
+        "global": {
+          "mean_luminance": 0.9551,
+          "luminance_p05": 0.9294,
+          "luminance_p50": 0.9647,
+          "luminance_p95": 1.0,
+          "luminance_contrast": 0.1007,
+          "bright_pixel_fraction": 0.9524,
+          "dark_pixel_fraction": 0.0006,
+          "mean_saturation": 0.0339,
+          "high_saturation_fraction": 0.0126,
+          "edge_density": 0.058,
+          "high_frequency_mean": 0.0103,
+          "palette_entropy_bits": 1.7137,
+          "negative_space_proxy": 0.942
+        },
+        "focus_top": [
+          {
+            "element_id": "E02",
+            "label": "阅读版面设置面板",
+            "role": "panel",
+            "bbox": [
+              0.16,
+              0.131,
+              0.332,
+              0.537
+            ],
+            "area_ratio": 0.1783,
+            "center_distance": 0.2842,
+            "model_visual_importance": 0.85,
+            "region": {
+              "luminance_p10": 0.5765,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.4235,
+              "mean_saturation": 0.0879,
+              "edge_density": 0.1381,
+              "bright_fraction": 0.8485
+            },
+            "focus_proxy_raw": 0.7675,
+            "focus_share": 0.0673,
+            "rank": 1
+          },
+          {
+            "element_id": "E10",
+            "label": "应用设置",
+            "role": "primary_button",
+            "bbox": [
+              0.18,
+              0.492,
+              0.076,
+              0.057
+            ],
+            "area_ratio": 0.0043,
+            "center_distance": 0.3999,
+            "model_visual_importance": 0.9,
+            "region": {
+              "luminance_p10": 0.3529,
+              "luminance_p90": 0.8,
+              "luminance_contrast": 0.4471,
+              "mean_saturation": 0.7296,
+              "edge_density": 0.1422,
+              "bright_fraction": 0.0815
+            },
+            "focus_proxy_raw": 0.7027,
+            "focus_share": 0.0616,
+            "rank": 2
+          },
+          {
+            "element_id": "E01",
+            "label": "阅读设置",
+            "role": "title",
+            "bbox": [
+              0.159,
+              0.053,
+              0.097,
+              0.041
+            ],
+            "area_ratio": 0.004,
+            "center_distance": 0.7314,
+            "model_visual_importance": 0.95,
+            "region": {
+              "luminance_p10": 0.1216,
+              "luminance_p90": 0.9647,
+              "luminance_contrast": 0.8431,
+              "mean_saturation": 0.3048,
+              "edge_density": 0.3917,
+              "bright_fraction": 0.3934
+            },
+            "focus_proxy_raw": 0.6525,
+            "focus_share": 0.0572,
+            "rank": 3
+          },
+          {
+            "element_id": "E14",
+            "label": "阅读预览",
+            "role": "title",
+            "bbox": [
+              0.528,
+              0.17,
+              0.067,
+              0.029
+            ],
+            "area_ratio": 0.0019,
+            "center_distance": 0.4546,
+            "model_visual_importance": 0.75,
+            "region": {
+              "luminance_p10": 0.1216,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.8784,
+              "mean_saturation": 0.3121,
+              "edge_density": 0.4869,
+              "bright_fraction": 0.4148
+            },
+            "focus_proxy_raw": 0.6374,
+            "focus_share": 0.0559,
+            "rank": 4
+          },
+          {
+            "element_id": "E17",
+            "label": "清晨沿着街角向前，树叶的影子落在长椅上。留一点时间观察身边的植物，熟悉的街道也会带来新的发现。",
+            "role": "text",
+            "bbox": [
+              0.542,
+              0.293,
+              0.264,
+              0.082
+            ],
+            "area_ratio": 0.0216,
+            "center_distance": 0.3401,
+            "model_visual_importance": 0.6,
+            "region": {
+              "luminance_p10": 0.4627,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.5373,
+              "mean_saturation": 0.0828,
+              "edge_density": 0.3367,
+              "bright_fraction": 0.6878
+            },
+            "focus_proxy_raw": 0.6337,
+            "focus_share": 0.0556,
+            "rank": 5
+          }
+        ],
+        "heuristic_probes": {
+          "numeric_adaptation": {
+            "max_visible_digits": 0,
+            "max_placeholder_digits": 0,
+            "digit_length_groups": {},
+            "length_mismatch": false,
+            "longest_values": []
+          },
+          "state": {
+            "selected_or_explicit_state_elements": [
+              {
+                "element_id": "E05",
+                "label": "文字大小：标准字号",
+                "role": "other",
+                "state": "collapsed; selected=标准字号",
+                "bbox": [
+                  0.18,
+                  0.263,
+                  0.292,
+                  0.052
+                ]
+              },
+              {
+                "element_id": "E07",
+                "label": "段落行距：紧凑行距",
+                "role": "other",
+                "state": "expanded; selected=紧凑行距",
+                "bbox": [
+                  0.18,
+                  0.369,
+                  0.292,
+                  0.052
+                ]
+              },
+              {
+                "element_id": "E08",
+                "label": "紧凑行距",
+                "role": "other",
+                "state": "selected; highlighted",
+                "bbox": [
+                  0.18,
+                  0.42,
+                  0.291,
+                  0.037
+                ]
+              },
+              {
+                "element_id": "E12",
+                "label": "当前使用初始版面",
+                "role": "text",
+                "state": "initial",
+                "bbox": [
+                  0.18,
+                  0.568,
+                  0.292,
+                  0.06
+                ]
+              },
+              {
+                "element_id": "E15",
+                "label": "文章预览区域",
+                "role": "panel",
+                "state": "white_background",
+                "bbox": [
+                  0.528,
+                  0.224,
+                  0.292,
+                  0.19
+                ]
+              },
+              {
+                "element_id": "E18",
+                "label": "已应用：标准字号 · 紧凑行距 · 白色背景",
+                "role": "text",
+                "state": "applied",
+                "bbox": [
+                  0.528,
+                  0.429,
+                  0.222,
+                  0.022
+                ]
+              }
+            ],
+            "interactive_element_count": 6
+          },
+          "affordance": {
+            "primary_actions": [
+              {
+                "element_id": "E10",
+                "label": "应用设置",
+                "role": "primary_button",
+                "bbox": [
+                  0.18,
+                  0.492,
+                  0.076,
+                  0.057
+                ]
+              }
+            ],
+            "small_target_candidates": []
+          },
+          "legibility": {
+            "low_contrast_candidates": [],
+            "small_text_candidate_count": 1,
+            "estimated_height_p10": 18.0,
+            "text_edge_candidates": []
+          },
+          "layout": {
+            "element_density": {
+              "element_count": 19,
+              "interactive_element_count": 6,
+              "ocr_text_block_count": 18,
+              "elements_per_megapixel": 14.66,
+              "interactive_coverage": 0.0603,
+              "text_coverage": 0.0389,
+              "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+            },
+            "focus_top": [
+              {
+                "element_id": "E02",
+                "label": "阅读版面设置面板",
+                "role": "panel",
+                "bbox": [
+                  0.16,
+                  0.131,
+                  0.332,
+                  0.537
+                ],
+                "area_ratio": 0.1783,
+                "center_distance": 0.2842,
+                "model_visual_importance": 0.85,
+                "region": {
+                  "luminance_p10": 0.5765,
+                  "luminance_p90": 1.0,
+                  "luminance_contrast": 0.4235,
+                  "mean_saturation": 0.0879,
+                  "edge_density": 0.1381,
+                  "bright_fraction": 0.8485
+                },
+                "focus_proxy_raw": 0.7675,
+                "focus_share": 0.0673,
+                "rank": 1
+              },
+              {
+                "element_id": "E10",
+                "label": "应用设置",
+                "role": "primary_button",
+                "bbox": [
+                  0.18,
+                  0.492,
+                  0.076,
+                  0.057
+                ],
+                "area_ratio": 0.0043,
+                "center_distance": 0.3999,
+                "model_visual_importance": 0.9,
+                "region": {
+                  "luminance_p10": 0.3529,
+                  "luminance_p90": 0.8,
+                  "luminance_contrast": 0.4471,
+                  "mean_saturation": 0.7296,
+                  "edge_density": 0.1422,
+                  "bright_fraction": 0.0815
+                },
+                "focus_proxy_raw": 0.7027,
+                "focus_share": 0.0616,
+                "rank": 2
+              },
+              {
+                "element_id": "E01",
+                "label": "阅读设置",
+                "role": "title",
+                "bbox": [
+                  0.159,
+                  0.053,
+                  0.097,
+                  0.041
+                ],
+                "area_ratio": 0.004,
+                "center_distance": 0.7314,
+                "model_visual_importance": 0.95,
+                "region": {
+                  "luminance_p10": 0.1216,
+                  "luminance_p90": 0.9647,
+                  "luminance_contrast": 0.8431,
+                  "mean_saturation": 0.3048,
+                  "edge_density": 0.3917,
+                  "bright_fraction": 0.3934
+                },
+                "focus_proxy_raw": 0.6525,
+                "focus_share": 0.0572,
+                "rank": 3
+              },
+              {
+                "element_id": "E14",
+                "label": "阅读预览",
+                "role": "title",
+                "bbox": [
+                  0.528,
+                  0.17,
+                  0.067,
+                  0.029
+                ],
+                "area_ratio": 0.0019,
+                "center_distance": 0.4546,
+                "model_visual_importance": 0.75,
+                "region": {
+                  "luminance_p10": 0.1216,
+                  "luminance_p90": 1.0,
+                  "luminance_contrast": 0.8784,
+                  "mean_saturation": 0.3121,
+                  "edge_density": 0.4869,
+                  "bright_fraction": 0.4148
+                },
+                "focus_proxy_raw": 0.6374,
+                "focus_share": 0.0559,
+                "rank": 4
+              },
+              {
+                "element_id": "E17",
+                "label": "清晨沿着街角向前，树叶的影子落在长椅上。留一点时间观察身边的植物，熟悉的街道也会带来新的发现。",
+                "role": "text",
+                "bbox": [
+                  0.542,
+                  0.293,
+                  0.264,
+                  0.082
+                ],
+                "area_ratio": 0.0216,
+                "center_distance": 0.3401,
+                "model_visual_importance": 0.6,
+                "region": {
+                  "luminance_p10": 0.4627,
+                  "luminance_p90": 1.0,
+                  "luminance_contrast": 0.5373,
+                  "mean_saturation": 0.0828,
+                  "edge_density": 0.3367,
+                  "bright_fraction": 0.6878
+                },
+                "focus_proxy_raw": 0.6337,
+                "focus_share": 0.0556,
+                "rank": 5
+              }
+            ]
+          },
+          "instructions": "These probes are diagnostic, not standalone defects. Verify against the image. Evaluate whether the longest visible values fit, whether selection agrees with details/actions, and whether controls and text remain legible and distinct."
+        }
+      },
+      "ocr_artifact_id": "artifact-f282a132f6b646fa81536a23660d7b40",
+      "elements_artifact_id": "artifact-a35cc2c6b1b74e4dad1f996057267729",
+      "metrics_artifact_id": "artifact-13000332b809455f82f85287add06eb3",
+      "overlay_artifact_ids": {
+        "overlay-elements.png": "artifact-0eed9884a4fb4e18991b4e7ef1c1ecc0",
+        "overlay-focus.png": "artifact-80d3b2e9a0864a45b3741f1e8c3dcc9c",
+        "overlay-flow.png": "artifact-5535a979a90649cab1e908ea3b93904f"
+      },
+      "model_call_ids": [
+        "call-4b87f58b7e424690960365e6ea0717ee",
+        "call-e44d00d487a24ea1a9e9c1631f8a99f1",
+        "call-9f7e4bbd79ba4034ac09b07482f0505d"
+      ],
+      "warnings": []
+    }
+  ],
+  "事件": [
+    {
+      "事件": {
+        "event_id": "d-new-原版试点-N01-action-58f67ee98e2d4bafac1a93cfa2d110cc",
+        "expected_context_version": 1,
+        "type": "authorize_action",
+        "payload": {
+          "action_id": "action-58f67ee98e2d4bafac1a93cfa2d110cc",
+          "approved": true,
+          "reason": "按已授权任务卡继续本机独立原型操作；只影响当前页面，无外部提交。"
+        },
+        "actor": "D 新样本 AI 操作员",
+        "actor_type": "ai"
+      },
+      "应运行": true
+    }
+  ]
+}

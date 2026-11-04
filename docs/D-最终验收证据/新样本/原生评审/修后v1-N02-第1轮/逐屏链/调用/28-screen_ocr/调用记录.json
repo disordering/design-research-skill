@@ -1,0 +1,28 @@
+{
+  "执行来源": "真实 Codex CLI / AI 模型调用",
+  "开始": "2026-11-04T11:55:53.612789+00:00",
+  "操作标签": "screen_ocr",
+  "模型": "gpt-6.1-sol",
+  "推理设置": "low",
+  "输入SHA256": "b43b690489839dfdccdd01b50c05aeec0bb2a69ce7b992c505b226f853c81587",
+  "图片": [
+    {
+      "序号": 1,
+      "SHA256": "5e5c9276dba2174dd498ef1415e21db5b7b8a32df3837e4893955bcc0e3d6fa2",
+      "文件": "输入图片/5e5c9276dba2174dd498ef1415e21db5b7b8a32df3837e4893955bcc0e3d6fa2.jpg"
+    }
+  ],
+  "固定响应": false,
+  "结束": "2026-11-04T11:56:42.657356+00:00",
+  "退出码": 0,
+  "Codex会话": "01a1a66a-6842-7283-a4ad-7c1e851ffcb3",
+  "耗时毫秒": 49047,
+  "状态": "已返回",
+  "用量": {
+    "input_tokens": 18586,
+    "cached_input_tokens": 15744,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1541,
+    "reasoning_output_tokens": 19
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "purpose": "本次检查本机演示原型的实际操作。按以下任务卡执行评审：\n任务名称：多件器材借用清单与数量调整\n材料来源：AI 制作的独立本地交互样本，版本 N02-v1。\n任务目标：借用投影仪 2 件、无线麦克风 3 件、三脚架 1 件，生成并核对清单；随后将无线麦克风增加 1 件，再核对清单。\n初始状态：新开页面，三类器材数量均为 0，尚未生成清单。\n允许动作：使用各项增减按钮、生成清单、清空选择；可以核对各行和总数量。\n结束条件：观察首次生成和修改数量后的两次清单；遇到阻碍则记录当前状态和原因。\n验收要求：\nREQ-N02-01 清单各行器材和数量与用户所选一致。\nREQ-N02-02 借用总数量等于清单所有器材件数之和。\nREQ-N02-03 生成后修改某项数量，该行数量和总数量及时更新。\n请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。",
+  "actor": "D 新样本 AI 操作员",
+  "actor_type": "ai",
+  "design_purpose": "",
+  "target_user": "",
+  "sources": [
+    {
+      "kind": "website",
+      "reference": "http://127.0.0.1:49920/N02-%E5%99%A8%E6%9D%90%E5%80%9F%E7%94%A8%E6%B8%85%E5%8D%95/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+      "title": "N02-器材借用清单",
+      "content": "",
+      "image_base64": "",
+      "version": "N02-v1",
+      "evidence_kind": "observation",
+      "role": "design",
+      "declared_by": "D 新样本 AI 操作员",
+      "document_base64": "",
+      "filename": "",
+      "figma_snapshot_id": ""
+    },
+    {
+      "kind": "document",
+      "reference": "",
+      "title": "N02-器材借用清单任务要求",
+      "content": "任务名称：多件器材借用清单与数量调整\n材料来源：AI 制作的独立本地交互样本，版本 N02-v1。\n任务目标：借用投影仪 2 件、无线麦克风 3 件、三脚架 1 件，生成并核对清单；随后将无线麦克风增加 1 件，再核对清单。\n初始状态：新开页面，三类器材数量均为 0，尚未生成清单。\n允许动作：使用各项增减按钮、生成清单、清空选择；可以核对各行和总数量。\n结束条件：观察首次生成和修改数量后的两次清单；遇到阻碍则记录当前状态和原因。\n验收要求：\nREQ-N02-01 清单各行器材和数量与用户所选一致。\nREQ-N02-02 借用总数量等于清单所有器材件数之和。\nREQ-N02-03 生成后修改某项数量，该行数量和总数量及时更新。\n请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。",
+      "image_base64": "",
+      "version": "冻结任务卡-v1",
+      "evidence_kind": null,
+      "role": "product_spec",
+      "declared_by": "D 新样本 AI 操作员",
+      "document_base64": "",
+      "filename": "",
+      "figma_snapshot_id": ""
+    }
+  ],
+  "limits": {
+    "max_actions": 24,
+    "max_checks": 160,
+    "max_model_calls": 100,
+    "max_review_rounds": 1,
+    "max_seconds": 7200,
+    "max_images_per_call": 10,
+    "max_material_chunks": 24,
+    "max_parallel_screens": 1
+  },
+  "allow_interaction": true,
+  "auto_run": false,
+  "provider": "generic",
+  "model_name": "gpt-6.1-sol",
+  "verifier_provider": null,
+  "verifier_model_name": null,
+  "require_structured_claims": true
+}

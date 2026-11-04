@@ -1,0 +1,57 @@
+{
+  "来源": "AI 操作脚本 / Chromium 实际页面观察",
+  "URL": "http://127.0.0.1:49920/N03-%E5%9B%BE%E4%B9%A6%E7%BC%96%E7%9B%AE%E5%BD%95%E5%85%A5/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+  "时间UTC": "2026-11-04T10:23:09.792036+00:00",
+  "事实": {
+    "标题": "图书编目录入",
+    "文本": "图书编目录入\n\n填写图书信息。出版年份范围为 1900–2026。\n\n图书信息\n书名\n\n请填写书名\n\n作者\n\n出版年份\n\n保存图书\n清空表单\n\n保存未完成，请按字段提示修正后重试\n\n保存结果\n\n尚未保存图书记录\n\n本地演示 · N03-v1 · 操作仅在当前页面生效",
+    "控件": [
+      {
+        "标签": "书名",
+        "id": "book",
+        "类型": "text",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": "true"
+      },
+      {
+        "标签": "作者",
+        "id": "author",
+        "类型": "text",
+        "value": "林叶",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "出版年份",
+        "id": "year",
+        "类型": "number",
+        "value": "2021",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "保存图书",
+        "id": "",
+        "类型": "submit",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "清空表单",
+        "id": "reset",
+        "类型": "button",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      }
+    ],
+    "预览": null
+  }
+}

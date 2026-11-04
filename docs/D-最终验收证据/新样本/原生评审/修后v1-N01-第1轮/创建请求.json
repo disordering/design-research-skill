@@ -1,0 +1,54 @@
+{
+  "purpose": "本次检查本机演示原型的实际操作。按以下任务卡执行评审：\n任务名称：阅读版面设置与恢复\n材料来源：AI 制作的独立本地交互样本，版本 N01-v1。\n任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。\n初始状态：新开页面，标准字号、紧凑行距、白色背景。\n允许动作：选择字号和行距、切换背景、应用设置、恢复初始；可以等待反馈、查看预览。\n结束条件：完成应用和恢复，并观察两个结果；遇到阻碍则记录当前状态和原因。\n验收要求：\nREQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。\nREQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。\nREQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。\n请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。",
+  "actor": "D 新样本 AI 操作员",
+  "actor_type": "ai",
+  "design_purpose": "",
+  "target_user": "",
+  "sources": [
+    {
+      "kind": "website",
+      "reference": "http://127.0.0.1:49920/N01-%E9%98%85%E8%AF%BB%E8%AE%BE%E7%BD%AE/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+      "title": "N01-阅读设置",
+      "content": "",
+      "image_base64": "",
+      "version": "N01-v1",
+      "evidence_kind": "observation",
+      "role": "design",
+      "declared_by": "D 新样本 AI 操作员",
+      "document_base64": "",
+      "filename": "",
+      "figma_snapshot_id": ""
+    },
+    {
+      "kind": "document",
+      "reference": "",
+      "title": "N01-阅读设置任务要求",
+      "content": "任务名称：阅读版面设置与恢复\n材料来源：AI 制作的独立本地交互样本，版本 N01-v1。\n任务目标：将版面设为大字号、舒适行距和暖色背景，应用后查看预览；再恢复初始版面并检查结果。\n初始状态：新开页面，标准字号、紧凑行距、白色背景。\n允许动作：选择字号和行距、切换背景、应用设置、恢复初始；可以等待反馈、查看预览。\n结束条件：完成应用和恢复，并观察两个结果；遇到阻碍则记录当前状态和原因。\n验收要求：\nREQ-N01-01 应用后的阅读预览与用户所选字号、行距、背景一致。\nREQ-N01-02 应用期间和完成后有明确状态反馈，处理期间避免重复提交。\nREQ-N01-03 恢复初始后，三个选项及已应用预览共同恢复初始值。\n请根据实际操作证据逐项评审，并记录其他具体、可定位的问题。操作仅影响本地页面。",
+      "image_base64": "",
+      "version": "冻结任务卡-v1",
+      "evidence_kind": null,
+      "role": "product_spec",
+      "declared_by": "D 新样本 AI 操作员",
+      "document_base64": "",
+      "filename": "",
+      "figma_snapshot_id": ""
+    }
+  ],
+  "limits": {
+    "max_actions": 24,
+    "max_checks": 160,
+    "max_model_calls": 100,
+    "max_review_rounds": 1,
+    "max_seconds": 7200,
+    "max_images_per_call": 10,
+    "max_material_chunks": 24,
+    "max_parallel_screens": 1
+  },
+  "allow_interaction": true,
+  "auto_run": false,
+  "provider": "generic",
+  "model_name": "gpt-6.1-sol",
+  "verifier_provider": null,
+  "verifier_model_name": null,
+  "require_structured_claims": true
+}

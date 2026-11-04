@@ -1,0 +1,40 @@
+{
+  "judgments": [
+    {
+      "check_id": "check-2fc0dcdb049c4532",
+      "decision": "candidate_issue",
+      "reason": "R13适用：D-QA42-1明确姓名、手机号均必填，且完整描述填写前页面没有字段标记或整体说明，满足候选问题条件。此为设计文字核对，并非运行观察。QA21-讨论仅表达撤回偏好，明确没有新增事实，不改变证据支持的模型判断，也不视为人工确认或解决。",
+      "evidence_ids": ["ev-734e37cc8a584edcb782cf0701205c0f"]
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "finding-2168516f615145d49446ad376bea3212",
+      "kind": "issue",
+      "title": "R13：登记页未在填写前说明姓名和手机号必填",
+      "check_ids": ["check-2fc0dcdb049c4532"],
+      "evidence_ids": ["ev-734e37cc8a584edcb782cf0701205c0f"],
+      "principle": "R13：存在有来源的必填要求时，应在填写前通过字段标记或清楚整体说明使其可识别。",
+      "detection": "核对D-QA42-1的完整页面文字描述与已确认业务规则；材料明确两个字段均必填，且没有星号、必填/选填标识、整体说明或其他段落。未查看截图或执行操作。",
+      "description": "姓名、手机号已有字段标签，但标签没有表达必填要求；所描述设计缺少填写前识别两项必填要求的信息。",
+      "suggestion": "在两字段前增加“以下均为必填”的整体说明，或为两字段添加一致且含义清楚的必填标记。",
+      "severity": "low",
+      "severity_reason": "缺失说明影响填写前理解要求；材料仅涉及两个字段，未提供实际提交失败、损失或恢复过程证据。设计可通过补充说明修正，实际操作恢复成本未知。",
+      "review_status": "unreviewed",
+      "object_id": "obj-62bc021aa1e6885df290",
+      "object_ref": "登记页填写前的姓名、手机号字段及整体说明",
+      "claims": [
+        {
+          "claim_type": "requirement_match",
+          "object_id": "obj-62bc021aa1e6885df290",
+          "expected": "依据已确认两字段均必填的业务规则及R13，填写前应有字段标记或清楚整体说明。",
+          "observed": "完整设计文字描述明确姓名和手机号均必填，但填写前没有必填字段标记或整体说明。",
+          "evidence_ids": ["ev-734e37cc8a584edcb782cf0701205c0f"]
+        }
+      ],
+      "mechanism": "已知必填约束未通过填写前说明表达。",
+      "change_action": "补充清楚的整体必填说明或一致的字段必填标记。"
+    }
+  ],
+  "questions": []
+}

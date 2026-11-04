@@ -589,6 +589,10 @@ python -m engine session-batch-evaluate <manifest.json>
 
 ## 当前成果
 
+- [D 本轮完整验收与最新结果](docs/D-最终验收收尾.md)
+- [D 42 项工程与方法验收](docs/D-42项工程验收.md)
+- [D 新样本关键任务验收](docs/D-新样本独立验收.md)
+- [D 后续迭代交接](docs/D-后续迭代交接.md)
 - [D 新版工作台续测与修复记录](docs/D-新版工作台续测.md)
 - [D 迭代日志](docs/D-迭代日志.md)
 - [六人识别与数据收尾](docs/D-数据收尾结果.md)

@@ -1,0 +1,85 @@
+{
+  "来源": "AI 对真实生产调用原始记录的只读摘录",
+  "统计角色": "产品程序后续改进发现，不是样本页面候选；不计入新样本模型准确性预测条数",
+  "原始文件": [
+    {
+      "文件": "原生评审/修后v1-N02-第1轮/主任务链/调用/015-plan/模型原答.txt",
+      "文件SHA256": "22904fccfd75869d737547579927ff2bc6233bf061615b77376eabcdc80849e6"
+    },
+    {
+      "文件": "原生评审/修后v1-N02-第1轮/主任务链/调用/029-judge/原始输入.txt",
+      "文件SHA256": "f1103cd2d0c32bf1bccdb6527c58506ef1422560bb1309719cdb5285e44af734"
+    },
+    {
+      "文件": "原生评审/修后v1-N02-第1轮/主任务链/调用/030-plan_checks/原始输入.txt",
+      "文件SHA256": "b17c41a4ecd36122bbce135e64166850701910e0cefe678dc122cc237ba88196"
+    }
+  ],
+  "模型原答": {
+    "task_summary": "TASK-N02-01／BR-N02-01与TASK-N02-02／BR-N02-02均已有操作及结果证据，两次清单的观察结束条件已满足，无需继续操作。ev-ff12dc5bf1794b1fa0209af04d1191ed中选择区与清单各行为2、3、1，总数量却为3件，应为6件；ev-2b14d323ca4049dba5ce45c2a5f1c9df中增加无线麦克风后，选择区与清单各行为2、4、1，总数量仍为3件，应为7件。因此REQ-N02-01在两次已观察状态下met，REQ-N02-02为observed_violation；REQ-N02-03适用于生成后调整，行数量已更新但总数量未更新，整体为observed_violation。G-N02-01及E07为observed_violation。R17生成前提示矛盾仍有ev-6d6b54c566c044b98d260517c3cefbc3至ev-fae56274ca7e4005a91ca096d414a7f7的历史依据，不能因生成后提示改变认定已解决。后续评审应分别记录总数量错误与生成前提示矛盾；总数量两次异常可合并为同一对象的候选问题，具体实现原因未知。旧task_summary、material_understanding及覆盖标记中的未执行描述已落后于最新证据，应据实更新；这属于评审记录同步，不是产品要求冲突。",
+    "action": null,
+    "ready_for_review": true
+  },
+  "判断前后动作数": [
+    8,
+    9
+  ],
+  "新增程序动作": {
+    "action_id": "action-92ac1e9c10744934a7c43965a18d2ff9",
+    "source_id": "src-c69116c6e3314631858c0a4a0e9b97fa",
+    "kind": "click",
+    "node_id": "",
+    "chunk_index": 0,
+    "selector": "[data-review-control=\"3\"]",
+    "url": "",
+    "x": null,
+    "y": null,
+    "scroll_x": 0,
+    "scroll_y": 0,
+    "expected_state_id": "e3549eea24f44aa4034de97b",
+    "reason": "程序按覆盖缺口选择已观察控件：增加无线麦克风",
+    "target_label": "增加无线麦克风",
+    "observed_target": "增加无线麦克风",
+    "target_marker_artifact_id": null,
+    "requires_explicit_authorization": false,
+    "status": "executed",
+    "context_version": 1,
+    "run_id": "run-52c4ebf514d54edd9df2cb99631d639d",
+    "evidence_ids": [
+      "ev-2b14d323ca4049dba5ce45c2a5f1c9df",
+      "ev-d9b34090f74d47e5aed2ee4499cea5be"
+    ],
+    "error": "",
+    "outcome": "state_changed"
+  },
+  "前后实际观察": [
+    {
+      "evidence_id": "ev-2b14d323ca4049dba5ce45c2a5f1c9df",
+      "source_id": "src-c69116c6e3314631858c0a4a0e9b97fa",
+      "state_id": "e3549eea24f44aa4034de97b",
+      "kind": "observation",
+      "captured_at": "2026-11-04T11:27:30.129927+00:00",
+      "content": "器材借用清单\n\n选择各类器材的借用数量，然后生成本次清单。\n\n选择器材\n投影仪\n−\n2\n+\n无线麦克风\n−\n4\n+\n三脚架\n−\n1\n+\n生成清单\n清空选择\n\n清单已更新，可继续调整数量\n\n本次借用预览\n器材\t数量（件）\n投影仪\t2\n无线麦克风\t4\n三脚架\t1\n\n借用总数量：3 件\n\n本地演示 · N02-v1 · 操作仅在当前页面生效",
+      "artifact_ids": null
+    },
+    {
+      "evidence_id": "ev-d9b34090f74d47e5aed2ee4499cea5be",
+      "source_id": "src-c69116c6e3314631858c0a4a0e9b97fa",
+      "state_id": "f5197d0ca0320ca6da87a3b1",
+      "kind": "observation",
+      "captured_at": "2026-11-04T11:44:28.230198+00:00",
+      "content": "器材借用清单\n\n选择各类器材的借用数量，然后生成本次清单。\n\n选择器材\n投影仪\n−\n2\n+\n无线麦克风\n−\n5\n+\n三脚架\n−\n1\n+\n生成清单\n清空选择\n\n清单已更新，可继续调整数量\n\n本次借用预览\n器材\t数量（件）\n投影仪\t2\n无线麦克风\t5\n三脚架\t1\n\n借用总数量：3 件\n\n本地演示 · N02-v1 · 操作仅在当前页面生效",
+      "artifact_ids": null
+    }
+  ],
+  "后续规划": {
+    "调用": "030-plan_checks",
+    "operation": "plan_checks",
+    "page_states": 10
+  },
+  "证据范围": "原始记录保留“按覆盖缺口选择”的动作原因，没有直接记录本次匹配的具体gap ID。此摘录不推造命中缺口；后续验收应要求动作与未覆盖任务条件明确关联。",
+  "冻结源码位置": [
+    "冻结运行源码-修后v1/engine/session_service.py:1329",
+    "冻结运行源码-修后v1/engine/session_exploration.py:40"
+  ]
+}

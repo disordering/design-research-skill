@@ -1,0 +1,13 @@
+{
+  "事件": {
+    "event_id": "fe358d63-e732-42a6-b733-1e2985ad2ec6",
+    "expected_context_version": 2,
+    "type": "finish",
+    "payload": {},
+    "actor": "AI模型验收-D",
+    "actor_type": "ai"
+  },
+  "HTTP": 202,
+  "原报告版本": 9,
+  "新报告版本": 10
+}

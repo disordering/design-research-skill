@@ -1,0 +1,24 @@
+{
+  "时间UTC": "2026-11-04T12:10:32.470983+00:00",
+  "来源": "AI 操作员执行用户缩减范围决定，调用生产 finish；未杀模型或浏览器",
+  "收尾前状态": "planning",
+  "收尾前revision": 20,
+  "事件": [
+    {
+      "事件": {
+        "event_id": "d-short-scope-finish-20261104",
+        "expected_context_version": 1,
+        "type": "finish",
+        "payload": {
+          "reason": "用户要求15分钟内完成测试；按新范围结束当前追加运行，保留已执行证据与未执行覆盖。"
+        },
+        "actor": "D 新样本 AI 操作员",
+        "actor_type": "ai"
+      },
+      "应运行": false
+    }
+  ],
+  "收尾后revision": 21,
+  "收尾后状态": "completed",
+  "完整度": "partial"
+}

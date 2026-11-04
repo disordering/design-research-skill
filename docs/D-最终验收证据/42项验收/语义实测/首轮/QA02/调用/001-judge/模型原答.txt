@@ -1,0 +1,1 @@
+{"judgments":[{"check_id":"check-4bcfa70baaca9ae4","decision":"not_applicable","reason":"R18适用于多个相关输入字段或成组选项，明确排除纯展示卡。提供的设计文字明确三个奖励卡片均只展示将获得的奖励，没有点击、选择或切换能力，因此不存在本条适用对象。此判断依据文字说明，不代表已查看画面或验证运行行为；卡片并列不构成本条通过或问题的依据。","evidence_ids":["ev-6ee1cb47a5234f958efd1f99cf4262c6"]}],"findings":[],"questions":[]}

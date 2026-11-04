@@ -4,6 +4,7 @@ deliverables/** text eol=lf
 # D 的冻结材料、原答及运行证据按原始字节核对 SHA-256。
 docs/D-三项修复证据/** -text
 docs/D-本轮续测证据/** -text
+docs/D-最终验收证据/** -text
 docs/D-续测证据/** -text
 docs/D-程序回归证据/** -text
 docs/D-复审实测/** -text

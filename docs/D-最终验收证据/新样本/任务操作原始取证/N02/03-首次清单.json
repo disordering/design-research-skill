@@ -1,0 +1,111 @@
+{
+  "来源": "AI 操作脚本 / Chromium 实际页面观察",
+  "URL": "http://127.0.0.1:49920/N02-%E5%99%A8%E6%9D%90%E5%80%9F%E7%94%A8%E6%B8%85%E5%8D%95/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+  "时间UTC": "2026-11-04T10:23:08.910106+00:00",
+  "事实": {
+    "标题": "器材借用清单",
+    "文本": "器材借用清单\n\n选择各类器材的借用数量，然后生成本次清单。\n\n选择器材\n投影仪\n−\n2\n+\n无线麦克风\n−\n3\n+\n三脚架\n−\n1\n+\n生成清单\n清空选择\n\n清单已生成，请核对右侧预览\n\n本次借用预览\n器材\t数量（件）\n投影仪\t2\n无线麦克风\t3\n三脚架\t1\n\n借用总数量：3 件\n\n本地演示 · N02-v1 · 操作仅在当前页面生效",
+    "控件": [
+      {
+        "标签": "减少投影仪",
+        "id": "",
+        "类型": "submit",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "2",
+        "id": "n0",
+        "类型": "output",
+        "value": "2",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "增加投影仪",
+        "id": "",
+        "类型": "submit",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "减少无线麦克风",
+        "id": "",
+        "类型": "submit",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "3",
+        "id": "n1",
+        "类型": "output",
+        "value": "3",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "增加无线麦克风",
+        "id": "",
+        "类型": "submit",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "减少三脚架",
+        "id": "",
+        "类型": "submit",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "1",
+        "id": "n2",
+        "类型": "output",
+        "value": "1",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "增加三脚架",
+        "id": "",
+        "类型": "submit",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "生成清单",
+        "id": "build",
+        "类型": "submit",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      },
+      {
+        "标签": "清空选择",
+        "id": "clear",
+        "类型": "submit",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null
+      }
+    ],
+    "预览": null
+  }
+}

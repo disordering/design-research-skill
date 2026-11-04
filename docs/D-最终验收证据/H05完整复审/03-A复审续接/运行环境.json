@@ -1,0 +1,51 @@
+{
+  "开始": "2026-11-04T11:07:11.740331+00:00",
+  "性质": "H05 v6 报告的完整原生版本复审",
+  "AI来源": "ai",
+  "真实模型": true,
+  "固定响应": false,
+  "答案注入": false,
+  "模型": "gpt-6-astra",
+  "基线": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_1104_native_recheck\\06-修后原答回放",
+  "基线报告版本": 6,
+  "变体": "A",
+  "本机服务": "http://127.0.0.1:61886",
+  "会话目录": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_final_h05\\03-A复审续接",
+  "材料SHA256": "c4777991726ae655f5a1582c0fca360d4517f96302503122544b58d1e157e2e2",
+  "原预算": {
+    "max_actions": 16,
+    "max_checks": 250,
+    "max_model_calls": 60,
+    "max_review_rounds": 1,
+    "max_seconds": 1800,
+    "max_images_per_call": 10,
+    "max_material_chunks": 24,
+    "max_parallel_screens": 2
+  },
+  "本轮预算": {
+    "max_actions": 16,
+    "max_checks": 500,
+    "max_model_calls": 100,
+    "max_review_rounds": 1,
+    "max_seconds": 5400,
+    "max_images_per_call": 10,
+    "max_material_chunks": 24,
+    "max_parallel_screens": 2
+  },
+  "代码SHA256": {
+    "engine/session_service.py": "c905328d60fe48426d33aa8c682519a57cdc660cbb8015791a691d154a6885cf",
+    "engine/session_verification.py": "2e4d69bd5a1486e88de40d46e702a4938815ab21c506e5e5e1ad3cd474ff0d53",
+    "engine/session_contracts.py": "662057e04d2b92a8255068f1c94292567aa0d6b219a56bf31ffc6a794886560c"
+  },
+  "git": "66a0f0919ada6d334565c3451e9f16ea95000bc9",
+  "控制变量": "相同 v6 初审、URL、来源 ID、任务、规则范围、预算；仅网页内容为对应变体。",
+  "运行性质": "原生已取证会话的 T10 单步恢复；不是新独立试验或整份报告全覆盖",
+  "来源阶段": "01-A原版",
+  "恢复操作": "仅调用生产 _recheck 和 _finish；没有新浏览器操作，没有重写未执行检查",
+  "原表内容SHA256": {
+    "sessions": "854df74c45f730e887525a8ff107bb7eefcbb912d03210d65726f2401ba5c42c",
+    "events": "76dd20b9c46b84e0b2c552590867866daba00eff202b0f3363454d81a88e4943",
+    "reports": "06975201d0b594552745b0f738f10ee54afae5fee871456e7f0faea51b1e85ce",
+    "artifacts": "eca210d278692e889060b57e297750e767985ab5ed2acc27ba854ffbbdf7d2db"
+  }
+}

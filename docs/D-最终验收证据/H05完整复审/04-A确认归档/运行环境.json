@@ -1,0 +1,36 @@
+{
+  "来源阶段": "03-A复审续接",
+  "阶段": "04-A确认归档",
+  "开始": "2026-11-04T11:37:14.773484+00:00",
+  "会话": "session-8e92a333d79d4678bac0b330efcd3e94",
+  "操作员": "AI模型验收-D",
+  "操作者类型": "ai",
+  "运行性质": "既有会话复审确认、导出及历史读回",
+  "模型调用": 0,
+  "引擎来源": {
+    "git": "66a0f0919ada6d334565c3451e9f16ea95000bc9",
+    "获取方式": "git archive HEAD engine；归档固定为66a0f09的全部engine文件",
+    "用途": "保持H05 A/B使用完全相同的生产源码，避免同时进行的新修复改变对照"
+  },
+  "实际引擎目录": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_h05_confirm_runtime\\66a0\\engine",
+  "冻结引擎原目录": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_final_h05\\冻结基线",
+  "运行资源": "独立复制冻结引擎，逐文件字节校验；判据库_v1.json 取自同一 66a0 提交。",
+  "来源报告版本": 9,
+  "原报告完整度": "partial",
+  "前端SHA256": {
+    "server.mjs": "226b298202f4d8dd10a69e6e218b6b16962915e526598261b4954e33eba68ff8",
+    "dist/session.html": "12f73c815462b3c7ff2333c5bc8930d9996b15f53cbc1a56fd3c0afe48ae8ab5",
+    "dist/session-ui.js": "a4807532e62f45409a574309e5931151b1ae5cba2502a74a23204cf6bcdc2bbb",
+    "dist/session-api.js": "5afca0c40e4cde73913ef0d187d8de6f9849ea3c5260d8d8352df5eee7a3f5ab"
+  },
+  "HTTP": [],
+  "浏览器异常": [],
+  "AI确认事件": [],
+  "确认来源说明": "前端按钮沿用通用确认文案；实际提交及导出事件均标明 actor_type=ai。",
+  "会话目录": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_final_h05\\04-A确认归档",
+  "代码SHA256": {
+    "engine/session_service.py": "c905328d60fe48426d33aa8c682519a57cdc660cbb8015791a691d154a6885cf",
+    "engine/session_verification.py": "2e4d69bd5a1486e88de40d46e702a4938815ab21c506e5e5e1ad3cd474ff0d53",
+    "engine/session_contracts.py": "662057e04d2b92a8255068f1c94292567aa0d6b219a56bf31ffc6a794886560c"
+  }
+}

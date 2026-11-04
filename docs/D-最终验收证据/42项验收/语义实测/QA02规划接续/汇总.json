@@ -1,0 +1,22 @@
+[
+  {
+    "用例": "QA02",
+    "产品入口": "SessionService._plan_checks → _judge",
+    "执行者": "Codex AI",
+    "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+    "模型来源": "实际Codex CLI，生产提示与结构校验",
+    "固定模型响应": false,
+    "期望": "not_applicable",
+    "实际": null,
+    "执行状态": "running",
+    "理由": "",
+    "候选数": 0,
+    "真实CLI次数": 2,
+    "通过": false,
+    "错误": {
+      "类型": "EngineError",
+      "代码": "session_model_budget",
+      "说明": "已达到本轮模型调用限制。"
+    }
+  }
+]

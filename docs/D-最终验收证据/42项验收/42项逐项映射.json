@@ -1,0 +1,1101 @@
+[
+  {
+    "编号": "C01",
+    "内容": "单图静态边界",
+    "产品入口": "AdapterHub.read/act；_judge",
+    "证据方式": "真实静态图适配器＋QA10语义",
+    "结论": "静态图可读取且不能点击；无后态时保留证据不足",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_d_continuation.py::test_static_image_observation_reuses_pixels_without_authorization",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/01-test_static_image_observation_reuses_pixels_without_authorization"
+      },
+      {
+        "节点": "tests/test_session_service.py::test_structured_dynamic_claim_requires_action_without_keyword_in_wording",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/24-test_structured_dynamic_claim_requires_action_without_keyword_in_wording"
+      }
+    ],
+    "真实语义": [
+      {
+        "用例": "QA10",
+        "批次": "首轮",
+        "结果": {
+          "用例": "QA10",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "insufficient_evidence",
+          "实际": "insufficient_evidence",
+          "执行状态": "executed",
+          "理由": "E03适用于提交动作与反馈的对应检查：材料描述存在可用的“提交”按钮，评审任务明确关注提交后反馈。但当前证据仅为程序构造的操作前状态文字，并非实际画面观察；没有动作触发记录、后状态、观察时长或预期反馈来源。操作前未处于等待态不能证明提交后缺少反馈，也不能判为通过或不适用。allow_interaction=false，本次不能通过交互补证。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "C02",
+    "内容": "网站读取与操作",
+    "产品入口": "BrowserAdapter.read/act；_perform_action",
+    "证据方式": "真实浏览器本地网页",
+    "结论": "保存读取、动作、前后状态与截图；未执行检查单列",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_adapters.py::test_real_browser_capture_action_and_stale_state_guard",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/05-test_real_browser_capture_action_and_stale_state_guard"
+      },
+      {
+        "节点": "tests/test_session_service.py::test_resource_limit_is_reported_not_silently_skipped",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/14-test_resource_limit_is_reported_not_silently_skipped"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "C03",
+    "内容": "画板无连接",
+    "产品入口": "FigmaMCPAdapter.read；_judge(E01)",
+    "证据方式": "本地画板快照＋真实语义",
+    "结论": "读取子画板；无连接时不推断可达路径",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_adapters.py::test_figma_snapshot_reads_metadata_and_each_child_screenshot_without_live_tab",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/03-test_figma_snapshot_reads_metadata_and_each_child_screenshot_without_live_tab"
+      }
+    ],
+    "真实语义": [
+      {
+        "用例": "QA13",
+        "批次": "证据分层两项",
+        "结果": {
+          "用例": "QA13",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "接续来源": "",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "insufficient_evidence",
+          "实际": "insufficient_evidence",
+          "执行状态": "executed",
+          "理由": "E01适用于有明确跨页或跨状态关系的任务。本次委托检查画板间可达性，但材料仅转录预约填写页、核对页和预约回执并排展示，未提供预期连接、动作入口与目标对应关系，不能按排列推断路径，也不能认定为无连接对象的独立静态任务。设计路径缺少关系依据；运行路径未执行且无动作前后证据，allow_interaction=false。因此既不能判定可达，也不能认定断链或死路。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "C04",
+    "内容": "原型路径与无效果点击",
+    "产品入口": "BrowserAdapter.act；_judge",
+    "证据方式": "真实浏览器受控原型画布",
+    "结论": "点击记录图像变化；无变化不当成已验证路径或产品缺陷",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_browser_flow.py::test_canvas_coordinates_same_url_states_and_shell_safety[False]",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/06-test_canvas_coordinates_same_url_states_and_shell_safety[False]"
+      },
+      {
+        "节点": "tests/test_session_browser_flow.py::test_canvas_coordinates_same_url_states_and_shell_safety[True]",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/07-test_canvas_coordinates_same_url_states_and_shell_safety[True]"
+      },
+      {
+        "节点": "tests/test_session_service.py::test_noop_prototype_click_does_not_establish_a_dynamic_product_defect",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/16-test_noop_prototype_click_does_not_establish_a_dynamic_product_defect"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "C05",
+    "内容": "代码说明与运行观察",
+    "产品入口": "_capture；_judge(E03)",
+    "证据方式": "真实语义／实现来源",
+    "结论": "仅有成功回调代码，运行反馈仍为证据不足",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [
+      {
+        "用例": "QA14",
+        "批次": "证据分层两项",
+        "结果": {
+          "用例": "QA14",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "接续来源": "",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "insufficient_evidence",
+          "实际": "insufficient_evidence",
+          "执行状态": "executed",
+          "理由": "E03适用：任务明确要求验证保存动作与成功反馈的对应，源码片段描述了成功回调中的提示。但该材料仅为实现说明，不是本次运行观察；缺少点击触发记录、成功回调执行证据、操作前后状态及观察条件，无法确认反馈实际出现或对应本次保存。不能据此判定通过，也不能判定反馈缺失。allow_interaction=false，本次不执行交互。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "C06",
+    "内容": "目标变化",
+    "产品入口": "apply_event(change_goal)；_prepare_checks",
+    "证据方式": "固定响应的真实会话契约",
+    "结论": "变更触发新轮，旧检查保留并标记过期",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_service.py::test_goal_change_invalidates_old_results_and_duplicate_event_does_not_repeat",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/10-test_goal_change_invalidates_old_results_and_duplicate_event_does_not_repeat"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "C07",
+    "内容": "正式材料冲突",
+    "产品入口": "_aggregate_goals；resolve_conflict",
+    "证据方式": "固定响应的真实会话契约",
+    "结论": "双方来源留存；未裁决冲突阻止自动符合/违规结论",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_context_pipeline.py::test_unresolved_formal_requirements_block_goal_aggregation",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/26-test_unresolved_formal_requirements_block_goal_aggregation"
+      },
+      {
+        "节点": "tests/test_session_context_pipeline.py::test_blocking_formal_conflict_cannot_create_product_nonconformity",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/30-test_blocking_formal_conflict_cannot_create_product_nonconformity"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "C08",
+    "内容": "访问阻断",
+    "产品入口": "FigmaMCPAdapter.read；_read_sources",
+    "证据方式": "实际适配器异常＋受控权限失败",
+    "结论": "失败独立记录，不伪装成成功取材或产品问题",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_adapters.py::test_figma_without_backend_authorization_is_not_a_successful_read",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/04-test_figma_without_backend_authorization_is_not_a_successful_read"
+      },
+      {
+        "节点": "tests/test_session_service.py::test_access_failure_is_partial_and_not_a_product_finding",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/09-test_access_failure_is_partial_and_not_a_product_finding"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "C09",
+    "内容": "资源不足",
+    "产品入口": "_judge；_completeness",
+    "证据方式": "固定响应的真实会话契约",
+    "结论": "预算外项保留未执行，报告为部分完成",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_service.py::test_resource_limit_is_reported_not_silently_skipped",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/14-test_resource_limit_is_reported_not_silently_skipped"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "C10",
+    "内容": "新版未检出旧问题",
+    "产品入口": "apply_event(recheck)；_recheck",
+    "证据方式": "固定响应的真实会话契约",
+    "结论": "缺新版定向证据时保留无法判断",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_service.py::test_new_version_does_not_auto_resolve_old_finding",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/13-test_new_version_does_not_auto_resolve_old_finding"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA01",
+    "内容": "用户标签不能代替熟悉度",
+    "产品入口": "_judge(R05)",
+    "证据方式": "真实语义",
+    "结论": "insufficient_evidence",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [
+      {
+        "用例": "QA01",
+        "批次": "首轮",
+        "结果": {
+          "用例": "QA01",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "insufficient_evidence",
+          "实际": "insufficient_evidence",
+          "执行状态": "executed",
+          "理由": "R05适用于已确认非领域专家用户的非错误状态关键任务文案。材料仅说明使用“织羽、共鸣”及用户标签“中轻度玩家”，不足以确认专业程度、术语含义、任务理解必要性和用户熟悉度，也未提供可见解释情况。不能据此认定术语不适用、未见问题或不适用本条；当前仅有构造场景文字，没有实际界面观察。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA02",
+    "内容": "纯展示卡排除选择检查",
+    "产品入口": "_plan_checks→_judge(R18)",
+    "证据方式": "真实规划＋真实语义",
+    "结论": "not_applicable",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [
+      {
+        "用例": "QA02",
+        "批次": "QA02规划后判断2",
+        "结果": {
+          "用例": "QA02",
+          "产品入口": "SessionService._plan_checks → _judge",
+          "执行者": "Codex AI",
+          "接续来源": "docs/D-最终验收证据/42项验收/语义实测/QA02规划接续/QA02/实际规划.json",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "not_applicable",
+          "实际": "not_applicable",
+          "执行状态": "executed",
+          "理由": "R18适用于多个相关输入字段或成组选项，明确排除纯展示卡。D-QA42-1设计文字明确三个奖励卡片仅展示将获得的奖励，无点击、选择或切换能力，故满足排除条件；并列不构成选择分组对象，无需运行观察补证。本判断仅依据设计文字，不代表已查看实际画面。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA03",
+    "内容": "卡片可选性未知",
+    "产品入口": "_judge(R18)",
+    "证据方式": "真实语义",
+    "结论": "insufficient_evidence",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [
+      {
+        "用例": "QA03",
+        "批次": "首轮",
+        "结果": {
+          "用例": "QA03",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "insufficient_evidence",
+          "实际": "insufficient_evidence",
+          "执行状态": "executed",
+          "理由": "R18适用于已确认存在多个相关输入或选项且业务分组关系已知的情形。提供的构造场景文字仅说明三个奖励卡片并列，并明确其可选或纯展示角色未知；业务分组关系也未提供。因此无法确认适用性，不能判为不适用、未见问题或候选问题。本次未接收图片，不能判断实际标题、间距与边界。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA04",
+    "内容": "不同对象标题不强行同名",
+    "产品入口": "_judge(R11)",
+    "证据方式": "真实语义",
+    "结论": "insufficient_evidence",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [
+      {
+        "用例": "QA04",
+        "批次": "首轮",
+        "结果": {
+          "用例": "QA04",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "insufficient_evidence",
+          "实际": "insufficient_evidence",
+          "执行状态": "executed",
+          "理由": "R11适用于至少两个入口明确指向同一动作的情况。材料仅说明活动标题为“锋芒崭露”、角色标题为“锋芒斩露”，未证明两者指向同一动作，也无必须同名的正式要求。字形差异不能据此判定动作命名不一致；适用条件尚未确认，不能判为不适用或候选问题。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA05",
+    "内容": "三个子目标中有未知",
+    "产品入口": "_aggregate_goals",
+    "证据方式": "实际聚合程序",
+    "结论": "met/met/insufficient_evidence 聚合为不足",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa05_qa06_three_child_goals_preserve_unknown_and_violation[insufficient_evidence-insufficient_evidence]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/27-test_qa05_qa06_three_child_goals_preserve_unknown_and_violation[insufficient_evidence-insufficient_evidence]"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA06",
+    "内容": "三个子目标中有违规",
+    "产品入口": "_aggregate_goals",
+    "证据方式": "实际聚合程序",
+    "结论": "met/met/observed_violation 聚合为违规",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa05_qa06_three_child_goals_preserve_unknown_and_violation[observed_violation-observed_violation]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/28-test_qa05_qa06_three_child_goals_preserve_unknown_and_violation[observed_violation-observed_violation]"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA07",
+    "内容": "确定按钮结合相邻文案",
+    "产品入口": "_judge(R06)",
+    "证据方式": "真实语义",
+    "结论": "no_visible_issue",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [
+      {
+        "用例": "QA07",
+        "批次": "首轮",
+        "结果": {
+          "用例": "QA07",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "no_visible_issue",
+          "实际": "no_visible_issue",
+          "执行状态": "executed",
+          "理由": "R06适用：材料明确有确认按钮，动作目的为删除“春季排班”配置。根据所提供的设计文字，标题“删除工作配置”和紧邻按钮的正文“将删除配置：春季排班”已说明动作及唯一对象，因此“确定”结合上下文能够说明预期结果，泛词本身不构成问题。本判断仅针对设计文案，不表示已查看实际画面或验证删除结果。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA08",
+    "内容": "整体必填说明有效",
+    "产品入口": "_judge(R13)",
+    "证据方式": "真实语义",
+    "结论": "no_visible_issue",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [
+      {
+        "用例": "QA08",
+        "批次": "首轮",
+        "结果": {
+          "用例": "QA08",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "no_visible_issue",
+          "实际": "no_visible_issue",
+          "执行状态": "executed",
+          "理由": "设计层面：R13适用，材料明确姓名、手机号、预约用途三个字段全部必填，且没有其他字段。标题下的整体说明“以下全部字段均为必填”在填写前可见，已清楚覆盖全部必填字段，符合R13的整体说明判据，未见问题。本判断依据受控场景文字，不代表已查看真实界面或完成运行验证。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA09",
+    "内容": "通俗说明可以附技术码",
+    "产品入口": "_judge(R23)",
+    "证据方式": "真实语义",
+    "结论": "no_visible_issue",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [
+      {
+        "用例": "QA09",
+        "批次": "首轮",
+        "结果": {
+          "用例": "QA09",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "no_visible_issue",
+          "实际": "no_visible_issue",
+          "执行状态": "executed",
+          "理由": "R23适用：材料明确错误提示面向普通用户。设计原文为“暂时无法保存，请检查网络连接后重试。错误代码：NET-04”，已用通俗语言说明无法保存并给出重试建议，技术码仅作辅助，未见仅有内部码而无解释的问题。结论限于所提供的设计文字，不代表真实用户理解或错误恢复已验证。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA10",
+    "内容": "前态不能证明后续反馈",
+    "产品入口": "_judge(E03)",
+    "证据方式": "真实语义＋动态证据守卫",
+    "结论": "insufficient_evidence；不凭前态报反馈缺失",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_service.py::test_structured_dynamic_claim_requires_action_without_keyword_in_wording",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/24-test_structured_dynamic_claim_requires_action_without_keyword_in_wording"
+      }
+    ],
+    "真实语义": [
+      {
+        "用例": "QA10",
+        "批次": "首轮",
+        "结果": {
+          "用例": "QA10",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "insufficient_evidence",
+          "实际": "insufficient_evidence",
+          "执行状态": "executed",
+          "理由": "E03适用于提交动作与反馈的对应检查：材料描述存在可用的“提交”按钮，评审任务明确关注提交后反馈。但当前证据仅为程序构造的操作前状态文字，并非实际画面观察；没有动作触发记录、后状态、观察时长或预期反馈来源。操作前未处于等待态不能证明提交后缺少反馈，也不能判为通过或不适用。allow_interaction=false，本次不能通过交互补证。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA11",
+    "内容": "同步变化无需加载动画",
+    "产品入口": "_judge(E03)",
+    "证据方式": "真实语义／受控动作与状态",
+    "结论": "no_visible_issue",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [
+      {
+        "用例": "QA11",
+        "批次": "动态两项",
+        "结果": {
+          "用例": "QA11",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "no_visible_issue",
+          "实际": "no_visible_issue",
+          "执行状态": "executed",
+          "理由": "E03适用：材料明确描述页签动作及其前后状态。受控记录中，点击后“已完成”立即选中，内容区同步显示已完成列表，反馈与当前操作对象对应；同步完成且无等待过程，不需要额外加载动画。判断仅限程序构造的场景文字，不代表真实网页已运行验证，也不单凭state_changed认定成功。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA12",
+    "内容": "权限失败不是产品错误",
+    "产品入口": "_read_sources",
+    "证据方式": "受控权限失败的实际程序",
+    "结论": "blocked／部分完成，候选为空",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_service.py::test_access_failure_is_partial_and_not_a_product_finding",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/09-test_access_failure_is_partial_and_not_a_product_finding"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA13",
+    "内容": "无连接画板不猜流程",
+    "产品入口": "_judge(E01)",
+    "证据方式": "真实语义",
+    "结论": "insufficient_evidence",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [
+      {
+        "用例": "QA13",
+        "批次": "证据分层两项",
+        "结果": {
+          "用例": "QA13",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "接续来源": "",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "insufficient_evidence",
+          "实际": "insufficient_evidence",
+          "执行状态": "executed",
+          "理由": "E01适用于有明确跨页或跨状态关系的任务。本次委托检查画板间可达性，但材料仅转录预约填写页、核对页和预约回执并排展示，未提供预期连接、动作入口与目标对应关系，不能按排列推断路径，也不能认定为无连接对象的独立静态任务。设计路径缺少关系依据；运行路径未执行且无动作前后证据，allow_interaction=false。因此既不能判定可达，也不能认定断链或死路。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA14",
+    "内容": "源码成功提示不证明运行",
+    "产品入口": "_judge(E03)",
+    "证据方式": "真实语义／implementation 来源",
+    "结论": "insufficient_evidence",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [
+      {
+        "用例": "QA14",
+        "批次": "证据分层两项",
+        "结果": {
+          "用例": "QA14",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "接续来源": "",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "insufficient_evidence",
+          "实际": "insufficient_evidence",
+          "执行状态": "executed",
+          "理由": "E03适用：任务明确要求验证保存动作与成功反馈的对应，源码片段描述了成功回调中的提示。但该材料仅为实现说明，不是本次运行观察；缺少点击触发记录、成功回调执行证据、操作前后状态及观察条件，无法确认反馈实际出现或对应本次保存。不能据此判定通过，也不能判定反馈缺失。allow_interaction=false，本次不执行交互。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA15",
+    "内容": "保留要求未知时不默认恢复",
+    "产品入口": "_judge(E04)",
+    "证据方式": "真实语义／受控前后状态",
+    "结论": "insufficient_evidence",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [
+      {
+        "用例": "QA15",
+        "批次": "动态两项",
+        "结果": {
+          "用例": "QA15",
+          "产品入口": "SessionService._judge",
+          "执行者": "Codex AI",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "insufficient_evidence",
+          "实际": "insufficient_evidence",
+          "执行状态": "executed",
+          "理由": "E04适用于存在退出再进入分支且保留或重置要求可确定的任务。受控文字记录了第3步及已填字段变为第1步且字段清空，但明确缺少进度保留规则和已确认的恢复要求，适用条件尚未完整确定。该记录是程序构造场景，不是真实网页观察；state_changed也不能证明恢复成功或失败。评审委托不能替代产品要求，因此不能默认进度必须保留，也不能据此判为候选问题或不适用。",
+          "候选数": 0,
+          "真实CLI次数": 1,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA16",
+    "内容": "工具点击失败单独记录",
+    "产品入口": "_perform_action",
+    "证据方式": "实际程序＋故障注入",
+    "结论": "failed；没有发现或状态迁移",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa16_tool_failure_is_recorded_without_product_finding",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/01-test_qa16_tool_failure_is_recorded_without_product_finding"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA17",
+    "内容": "未授权动作不执行",
+    "产品入口": "_perform_action；authorize_action",
+    "证据方式": "实际程序＋固定动作计划",
+    "结论": "动作保留等待授权；批准前适配器未执行",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_service.py::test_action_is_not_executed_until_authorized_and_event_is_idempotent",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/11-test_action_is_not_executed_until_authorized_and_event_is_idempotent"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA18",
+    "内容": "正式要求冲突待决",
+    "产品入口": "_aggregate_goals；_judge",
+    "证据方式": "实际程序＋固定材料解读",
+    "结论": "保留冲突，不擅自生成产品违规",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_context_pipeline.py::test_unresolved_formal_requirements_block_goal_aggregation",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/26-test_unresolved_formal_requirements_block_goal_aggregation"
+      },
+      {
+        "节点": "tests/test_session_context_pipeline.py::test_blocking_formal_conflict_cannot_create_product_nonconformity",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/30-test_blocking_formal_conflict_cannot_create_product_nonconformity"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA19",
+    "内容": "业务裁决不等于实现修复",
+    "产品入口": "apply_event(resolve_conflict)；run",
+    "证据方式": "实际程序＋固定模型响应",
+    "结论": "冲突已裁决，要求仍可违规；不自动变通过",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_context_pipeline.py::test_conflict_decision_needs_an_actor_and_is_not_an_implementation_fix",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/25-test_conflict_decision_needs_an_actor_and_is_not_an_implementation_fix"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA20",
+    "内容": "改变任务真实触发重查",
+    "产品入口": "apply_event(change_goal)",
+    "证据方式": "实际会话与事件",
+    "结论": "新任务进入新轮；旧值与事件保留",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_service.py::test_goal_change_invalidates_old_results_and_duplicate_event_does_not_repeat",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/10-test_goal_change_invalidates_old_results_and_duplicate_event_does_not_repeat"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA21",
+    "内容": "无事实撤回要求不迎合",
+    "产品入口": "review_finding→plan→judge→verify",
+    "证据方式": "真实语义＋固定历史状态",
+    "结论": "补齐正式要求后保留1个有证据候选；旧审核意见留存",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa21_unsupported_rejection_reruns_without_erasing_prior_evidence",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/02-test_qa21_unsupported_rejection_reruns_without_erasing_prior_evidence"
+      }
+    ],
+    "真实语义": [
+      {
+        "用例": "QA21",
+        "批次": "QA21完整要求补证",
+        "结果": {
+          "用例": "QA21",
+          "产品入口": "SessionService.apply_event → _plan_checks → _judge",
+          "执行者": "Codex AI",
+          "接续来源": "",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "candidate_issue",
+          "实际": "candidate_issue",
+          "执行状态": "executed",
+          "理由": "R13适用：正式要求确认姓名、手机号均必填；完整页面的设计文字明确两项均无字段标记，也无整体必填说明，符合候选问题条件。此为设计材料判断，未声称实测。QA21-讨论仅要求撤回且明确无新增事实，不改变证据判断；该意见与模型判断分开记录。",
+          "候选数": 1,
+          "真实CLI次数": 4,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA22",
+    "内容": "补充事实后修正判断",
+    "产品入口": "review_finding→plan→judge",
+    "证据方式": "真实语义＋固定历史状态",
+    "结论": "改为不适用并指出原假设不成立；旧值与原因保留",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa22_new_fact_reruns_and_preserves_old_value_and_reason",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/03-test_qa22_new_fact_reruns_and_preserves_old_value_and_reason"
+      }
+    ],
+    "真实语义": [
+      {
+        "用例": "QA22",
+        "批次": "讨论语义两项",
+        "结果": {
+          "用例": "QA22",
+          "产品入口": "SessionService.apply_event → _plan_checks → _judge",
+          "执行者": "Codex AI",
+          "接续来源": "",
+          "输入来源": "公开验收规格的受控事实；动作与状态为标明来源的工程夹具",
+          "模型来源": "实际Codex CLI，生产提示与结构校验",
+          "固定模型响应": false,
+          "期望": "not_applicable",
+          "实际": "not_applicable",
+          "执行状态": "executed",
+          "理由": "R18适用于相关输入字段或成组选项，明确排除纯展示卡。D-QA42-1设计材料确认三个奖励卡片仅展示将获得的奖励，无点击、选择或切换能力，因此不适用选择分组检查。原发现finding-660ce4d52a2c428d80aa61d5c725ba0b的可选性假设不成立；这属于依据新材料修正模型判断，不代表产品已修复或人工已确认，也不评价展示布局质量。",
+          "候选数": 0,
+          "真实CLI次数": 3,
+          "通过": true,
+          "错误": null
+        }
+      }
+    ]
+  },
+  {
+    "编号": "QA23",
+    "内容": "重复事件幂等",
+    "产品入口": "SessionStore.existing_event；apply_event",
+    "证据方式": "实际SQLite与事件",
+    "结论": "相同事件不重复执行；同ID不同内容拒绝",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_d_continuation.py::test_legacy_event_retry_keeps_idempotency_and_new_actor_is_not_inferred",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/02-test_legacy_event_retry_keeps_idempotency_and_new_actor_is_not_inferred"
+      },
+      {
+        "节点": "tests/test_session_service.py::test_goal_change_invalidates_old_results_and_duplicate_event_does_not_repeat",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/10-test_goal_change_invalidates_old_results_and_duplicate_event_does_not_repeat"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA24",
+    "内容": "恢复与当前状态复核",
+    "产品入口": "SessionStore；resume；BrowserAdapter.act",
+    "证据方式": "真实存储＋真实浏览器",
+    "结论": "审核/追问保留，中断动作不重放；过期状态拒绝，更新入口重读",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa24_resume_persists_review_questions_and_interrupts_running_action",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/04-test_qa24_resume_persists_review_questions_and_interrupts_running_action"
+      },
+      {
+        "节点": "tests/test_session_adapters.py::test_real_browser_capture_action_and_stale_state_guard",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/05-test_real_browser_capture_action_and_stale_state_guard"
+      },
+      {
+        "节点": "tests/test_session_browser_flow.py::test_updated_reference_reloads_browser_instead_of_reusing_old_page",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/08-test_updated_reference_reloads_browser_instead_of_reusing_old_page"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA25",
+    "内容": "漏报不是修复证据",
+    "产品入口": "_recheck",
+    "证据方式": "实际程序＋固定复审响应",
+    "结论": "cannot_determine，旧来源过期记录保留",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_service.py::test_new_version_does_not_auto_resolve_old_finding",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/13-test_new_version_does_not_auto_resolve_old_finding"
+      },
+      {
+        "节点": "tests/test_session_service.py::test_recheck_rejects_unrelated_statement_as_resolution_evidence",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/23-test_recheck_rejects_unrelated_statement_as_resolution_evidence"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA26",
+    "内容": "正式取消功能归为不适用",
+    "产品入口": "_recheck_scope_change_matches；_recheck；confirm_recheck",
+    "证据方式": "修前/修后实际程序＋固定响应",
+    "结论": "not_applicable；19条关联/时效/来源/确认边界通过",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_retired_function_with_formal_scope_evidence_is_not_fixed",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/05-test_qa26_retired_function_with_formal_scope_evidence_is_not_fixed"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-product_spec]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/09-test_qa26_scope_proof_guards_model_and_confirmation[model-product_spec]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-design_brief]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/10-test_qa26_scope_proof_guards_model_and_confirmation[model-design_brief]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-unrelated]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/11-test_qa26_scope_proof_guards_model_and_confirmation[model-unrelated]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-stale]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/13-test_qa26_scope_proof_guards_model_and_confirmation[model-stale]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-old_context]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/14-test_qa26_scope_proof_guards_model_and_confirmation[model-old_context]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-statement]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/15-test_qa26_scope_proof_guards_model_and_confirmation[model-statement]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-missing]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/16-test_qa26_scope_proof_guards_model_and_confirmation[model-missing]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-inactive]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/17-test_qa26_scope_proof_guards_model_and_confirmation[model-inactive]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-product_spec]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/18-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-product_spec]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-design_brief]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/19-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-design_brief]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-unrelated]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/20-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-unrelated]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-stale]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/22-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-stale]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-old_context]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/23-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-old_context]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-statement]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/24-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-statement]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-missing]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/25-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-missing]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-inactive]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/26-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-inactive]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[model-new_run_only]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/12-test_qa26_scope_proof_guards_model_and_confirmation[model-new_run_only]"
+      },
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-new_run_only]",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/21-test_qa26_scope_proof_guards_model_and_confirmation[confirm_event-new_run_only]"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA27",
+    "内容": "未选中参考仍计FN",
+    "产品入口": "evaluate_session",
+    "证据方式": "真实会话＋实际评分函数",
+    "结论": "冻结参考 expected=1、missed=1、recall=0",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa27_unselected_reference_remains_in_false_negative_denominator",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/06-test_qa27_unselected_reference_remains_in_false_negative_denominator"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA28",
+    "内容": "同成因建议合并",
+    "产品入口": "_merge_finding",
+    "证据方式": "实际去重程序",
+    "结论": "1条发现关联3项检查，3项目标状态各自保留",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa28_same_texture_finding_merges_checks_without_losing_goal_states",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/07-test_qa28_same_texture_finding_merges_checks_without_losing_goal_states"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA29",
+    "内容": "证据引用失效不能转正式问题",
+    "产品入口": "_judge；verify_finding_support",
+    "证据方式": "实际证据校验＋固定响应",
+    "结论": "无效ID被拒绝；旧版对象守卫沿用并进入全套回归",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_session_service.py::test_invalid_finding_evidence_cannot_become_a_confirmed_issue",
+        "批次": "QA26修后及边界",
+        "归档内目录": "工程实测/QA26修后及边界/12-test_invalid_finding_evidence_cannot_become_a_confirmed_issue"
+      }
+    ],
+    "真实语义": []
+  },
+  {
+    "编号": "QA30",
+    "内容": "零执行不算稳定正确",
+    "产品入口": "apply_event(finish)；D repeatability",
+    "证据方式": "3个真实空执行会话＋独立统计",
+    "结论": "共同执行0，一致率null，零分母未写成100%",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [],
+    "独立结果": "统计与表单/首轮/QA30-统计.json"
+  },
+  {
+    "编号": "QA31",
+    "内容": "补填计时与评分分别处理",
+    "产品入口": "体验表 collect/exportNow",
+    "证据方式": "真实Edge填写与下载",
+    "结论": "约1秒补填 timingValid=false、seconds=null，评分4/4/4保留",
+    "本轮状态": "通过",
+    "工程断言": [],
+    "真实语义": [],
+    "独立结果": "统计与表单/首轮/QA31-核对结果.json"
+  },
+  {
+    "编号": "QA32",
+    "内容": "提前结束保留未完成",
+    "产品入口": "apply_event(finish)；SessionStore.report",
+    "证据方式": "实际会话与导出版本",
+    "结论": "partial，未执行项有原因且无伪通过状态",
+    "本轮状态": "通过",
+    "工程断言": [
+      {
+        "节点": "tests/test_d_acceptance_42.py::test_qa32_finish_preserves_partial_report_and_per_item_reason",
+        "批次": "范围来源最终边界2",
+        "归档内目录": "工程实测/范围来源最终边界2/08-test_qa32_finish_preserves_partial_report_and_per_item_reason"
+      }
+    ],
+    "真实语义": []
+  }
+]

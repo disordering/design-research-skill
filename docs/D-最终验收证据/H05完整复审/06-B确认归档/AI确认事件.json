@@ -1,0 +1,82 @@
+[
+  {
+    "事件": {
+      "event_id": "0ebc14cb-5e22-4fbd-9107-6a4df5a88b2d",
+      "expected_context_version": 2,
+      "type": "confirm_recheck",
+      "payload": {
+        "recheck_id": "recheck-28d8ce030a6f4b498055e144f032fb58",
+        "resolution": "resolved",
+        "reason": "AI复核：下午二层核对后提交，回执保持下午二层；该旧错配已修复。",
+        "evidence_ids": [
+          "ev-01fe5714b14042bbb9e9bfc498af3e9a",
+          "ev-5890dd87f67246d09a928c3d22ed12fb",
+          "ev-acef8a0b06654f11a439d3bcf5ad9cec",
+          "ev-1f54a5253f7a4d16b003d6fdd40d2595",
+          "ev-83f462c812d741ac94c0a8f241ff1101",
+          "ev-d9a7bc026f8a444ba99fa3089c051991"
+        ],
+        "current_finding_ids": []
+      },
+      "actor": "AI模型验收-D",
+      "actor_type": "ai"
+    },
+    "HTTP": 202,
+    "确认记录": {
+      "recheck_id": "recheck-28d8ce030a6f4b498055e144f032fb58",
+      "previous_finding_id": "finding-2b889800c51c43d7a60c72987671624d",
+      "current_finding_ids": [],
+      "resolution": "resolved",
+      "reason": "AI复核：下午二层核对后提交，回执保持下午二层；该旧错配已修复。",
+      "evidence_ids": [
+        "ev-01fe5714b14042bbb9e9bfc498af3e9a",
+        "ev-5890dd87f67246d09a928c3d22ed12fb",
+        "ev-acef8a0b06654f11a439d3bcf5ad9cec",
+        "ev-1f54a5253f7a4d16b003d6fdd40d2595",
+        "ev-83f462c812d741ac94c0a8f241ff1101",
+        "ev-d9a7bc026f8a444ba99fa3089c051991"
+      ],
+      "human_confirmation": "confirmed",
+      "reviewer": "AI模型验收-D",
+      "reviewed_at": "2026-11-04T12:14:47.957308+00:00"
+    }
+  },
+  {
+    "事件": {
+      "event_id": "ddb7d7fe-a4f5-4f8f-828a-6ac4c337c6b6",
+      "expected_context_version": 2,
+      "type": "confirm_recheck",
+      "payload": {
+        "recheck_id": "recheck-67eaa19c412344e79af5789d693d0c6a",
+        "resolution": "resolved",
+        "reason": "AI复核：下午二层核对后提交，回执保持下午二层；该旧错配已修复。",
+        "evidence_ids": [
+          "ev-acef8a0b06654f11a439d3bcf5ad9cec",
+          "ev-1f54a5253f7a4d16b003d6fdd40d2595",
+          "ev-83f462c812d741ac94c0a8f241ff1101",
+          "ev-d9a7bc026f8a444ba99fa3089c051991"
+        ],
+        "current_finding_ids": []
+      },
+      "actor": "AI模型验收-D",
+      "actor_type": "ai"
+    },
+    "HTTP": 202,
+    "确认记录": {
+      "recheck_id": "recheck-67eaa19c412344e79af5789d693d0c6a",
+      "previous_finding_id": "finding-149e805558484b9d850775c841603fda",
+      "current_finding_ids": [],
+      "resolution": "resolved",
+      "reason": "AI复核：下午二层核对后提交，回执保持下午二层；该旧错配已修复。",
+      "evidence_ids": [
+        "ev-acef8a0b06654f11a439d3bcf5ad9cec",
+        "ev-1f54a5253f7a4d16b003d6fdd40d2595",
+        "ev-83f462c812d741ac94c0a8f241ff1101",
+        "ev-d9a7bc026f8a444ba99fa3089c051991"
+      ],
+      "human_confirmation": "confirmed",
+      "reviewer": "AI模型验收-D",
+      "reviewed_at": "2026-11-04T12:14:48.491783+00:00"
+    }
+  }
+]

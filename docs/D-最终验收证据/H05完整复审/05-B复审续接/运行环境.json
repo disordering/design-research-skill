@@ -1,0 +1,58 @@
+{
+  "开始": "2026-11-04T12:12:47.281709+00:00",
+  "性质": "H05 v6 报告的完整原生版本复审",
+  "AI来源": "ai",
+  "真实模型": true,
+  "固定响应": false,
+  "答案注入": false,
+  "模型": "gpt-6-astra",
+  "基线": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_1104_native_recheck\\06-修后原答回放",
+  "基线报告版本": 6,
+  "变体": "B",
+  "本机服务": "http://127.0.0.1:61886",
+  "会话目录": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_final_h05\\05-B复审续接",
+  "材料SHA256": "0b3c745a3058c8e0bde7b958d033da148333fe3e3a212a97cceadafb05bd5a78",
+  "原预算": {
+    "max_actions": 16,
+    "max_checks": 250,
+    "max_model_calls": 60,
+    "max_review_rounds": 1,
+    "max_seconds": 1800,
+    "max_images_per_call": 10,
+    "max_material_chunks": 24,
+    "max_parallel_screens": 2
+  },
+  "本轮预算": {
+    "max_actions": 16,
+    "max_checks": 500,
+    "max_model_calls": 100,
+    "max_review_rounds": 1,
+    "max_seconds": 5400,
+    "max_images_per_call": 10,
+    "max_material_chunks": 24,
+    "max_parallel_screens": 2
+  },
+  "代码SHA256": {
+    "engine/session_service.py": "c905328d60fe48426d33aa8c682519a57cdc660cbb8015791a691d154a6885cf",
+    "engine/session_verification.py": "2e4d69bd5a1486e88de40d46e702a4938815ab21c506e5e5e1ad3cd474ff0d53",
+    "engine/session_contracts.py": "662057e04d2b92a8255068f1c94292567aa0d6b219a56bf31ffc6a794886560c"
+  },
+  "实际引擎目录": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_final_h05\\冻结基线\\engine",
+  "冻结源码来源": {
+    "git": "66a0f0919ada6d334565c3451e9f16ea95000bc9",
+    "获取方式": "git archive HEAD engine；归档固定为66a0f09的全部engine文件",
+    "用途": "保持H05 A/B使用完全相同的生产源码，避免同时进行的新修复改变对照"
+  },
+  "git": "377ec722769cd229973b55ccb9e046aa69d0dc01",
+  "控制变量": "相同 v6 初审、URL、来源 ID、任务、规则范围、预算；仅网页内容为对应变体。",
+  "运行性质": "原生已取证会话的 T10 单步恢复；不是新独立试验或整份报告全覆盖",
+  "来源阶段": "02-B修正版",
+  "恢复原因": "用户要求限时收尾，生产finish已结束重复拓展；沿用实际提交回执，只续做旧候选T10，原检查与动作不重写。",
+  "恢复操作": "仅调用生产 _recheck 和 _finish；没有新浏览器操作，没有重写未执行检查",
+  "原表内容SHA256": {
+    "sessions": "a6413e116cd33517f4142c7b68e356df82dfa12fb43a8fa17dd810e1411bb892",
+    "events": "55a87b8b3a227119282ecae113aa826ece81809aff062afd4194a9466bc0ef1b",
+    "reports": "43082484ff57179a4bfda5bc207a12c2c08e02607bd3299cb283a7dc924fba74",
+    "artifacts": "ea65c5156c380577d4a5eeb0b670d55500813b43cf25162e385086d66ed9a15f"
+  }
+}

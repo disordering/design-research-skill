@@ -1,0 +1,301 @@
+{
+  "来源阶段": "05-B复审续接",
+  "阶段": "06-B确认归档",
+  "开始": "2026-11-04T12:14:46.620371+00:00",
+  "会话": "session-8e92a333d79d4678bac0b330efcd3e94",
+  "操作员": "AI模型验收-D",
+  "操作者类型": "ai",
+  "运行性质": "既有会话复审确认、导出及历史读回",
+  "模型调用": 0,
+  "引擎来源": {
+    "git": "66a0f0919ada6d334565c3451e9f16ea95000bc9",
+    "获取方式": "git archive HEAD engine；归档固定为66a0f09的全部engine文件",
+    "用途": "保持H05 A/B使用完全相同的生产源码，避免同时进行的新修复改变对照"
+  },
+  "实际引擎目录": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_h05_confirm_runtime\\66a0\\engine",
+  "冻结引擎原目录": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_final_h05\\冻结基线",
+  "运行资源": "独立复制冻结引擎，逐文件字节校验；判据库_v1.json 取自同一 66a0 提交。",
+  "来源报告版本": 9,
+  "原报告完整度": "partial",
+  "前端SHA256": {
+    "server.mjs": "226b298202f4d8dd10a69e6e218b6b16962915e526598261b4954e33eba68ff8",
+    "dist/session.html": "12f73c815462b3c7ff2333c5bc8930d9996b15f53cbc1a56fd3c0afe48ae8ab5",
+    "dist/session-ui.js": "a4807532e62f45409a574309e5931151b1ae5cba2502a74a23204cf6bcdc2bbb",
+    "dist/session-api.js": "5afca0c40e4cde73913ef0d187d8de6f9849ea3c5260d8d8352df5eee7a3f5ab"
+  },
+  "HTTP": [
+    {
+      "方法": "GET",
+      "路径": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94",
+      "HTTP": 200
+    },
+    {
+      "方法": "POST",
+      "路径": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/events",
+      "HTTP": 202
+    },
+    {
+      "方法": "POST",
+      "路径": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/events",
+      "HTTP": 202
+    },
+    {
+      "方法": "POST",
+      "路径": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/events",
+      "HTTP": 202
+    },
+    {
+      "方法": "GET",
+      "路径": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/updates?after_sequence=451",
+      "HTTP": 200
+    },
+    {
+      "方法": "GET",
+      "路径": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/reports/6",
+      "HTTP": 200
+    },
+    {
+      "方法": "GET",
+      "路径": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/reports/9",
+      "HTTP": 200
+    },
+    {
+      "方法": "GET",
+      "路径": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/reports/10",
+      "HTTP": 200
+    }
+  ],
+  "浏览器异常": [],
+  "AI确认事件": [
+    {
+      "事件": {
+        "event_id": "0ebc14cb-5e22-4fbd-9107-6a4df5a88b2d",
+        "expected_context_version": 2,
+        "type": "confirm_recheck",
+        "payload": {
+          "recheck_id": "recheck-28d8ce030a6f4b498055e144f032fb58",
+          "resolution": "resolved",
+          "reason": "AI复核：下午二层核对后提交，回执保持下午二层；该旧错配已修复。",
+          "evidence_ids": [
+            "ev-01fe5714b14042bbb9e9bfc498af3e9a",
+            "ev-5890dd87f67246d09a928c3d22ed12fb",
+            "ev-acef8a0b06654f11a439d3bcf5ad9cec",
+            "ev-1f54a5253f7a4d16b003d6fdd40d2595",
+            "ev-83f462c812d741ac94c0a8f241ff1101",
+            "ev-d9a7bc026f8a444ba99fa3089c051991"
+          ],
+          "current_finding_ids": []
+        },
+        "actor": "AI模型验收-D",
+        "actor_type": "ai"
+      },
+      "HTTP": 202,
+      "确认记录": {
+        "recheck_id": "recheck-28d8ce030a6f4b498055e144f032fb58",
+        "previous_finding_id": "finding-2b889800c51c43d7a60c72987671624d",
+        "current_finding_ids": [],
+        "resolution": "resolved",
+        "reason": "AI复核：下午二层核对后提交，回执保持下午二层；该旧错配已修复。",
+        "evidence_ids": [
+          "ev-01fe5714b14042bbb9e9bfc498af3e9a",
+          "ev-5890dd87f67246d09a928c3d22ed12fb",
+          "ev-acef8a0b06654f11a439d3bcf5ad9cec",
+          "ev-1f54a5253f7a4d16b003d6fdd40d2595",
+          "ev-83f462c812d741ac94c0a8f241ff1101",
+          "ev-d9a7bc026f8a444ba99fa3089c051991"
+        ],
+        "human_confirmation": "confirmed",
+        "reviewer": "AI模型验收-D",
+        "reviewed_at": "2026-11-04T12:14:47.957308+00:00"
+      }
+    },
+    {
+      "事件": {
+        "event_id": "ddb7d7fe-a4f5-4f8f-828a-6ac4c337c6b6",
+        "expected_context_version": 2,
+        "type": "confirm_recheck",
+        "payload": {
+          "recheck_id": "recheck-67eaa19c412344e79af5789d693d0c6a",
+          "resolution": "resolved",
+          "reason": "AI复核：下午二层核对后提交，回执保持下午二层；该旧错配已修复。",
+          "evidence_ids": [
+            "ev-acef8a0b06654f11a439d3bcf5ad9cec",
+            "ev-1f54a5253f7a4d16b003d6fdd40d2595",
+            "ev-83f462c812d741ac94c0a8f241ff1101",
+            "ev-d9a7bc026f8a444ba99fa3089c051991"
+          ],
+          "current_finding_ids": []
+        },
+        "actor": "AI模型验收-D",
+        "actor_type": "ai"
+      },
+      "HTTP": 202,
+      "确认记录": {
+        "recheck_id": "recheck-67eaa19c412344e79af5789d693d0c6a",
+        "previous_finding_id": "finding-149e805558484b9d850775c841603fda",
+        "current_finding_ids": [],
+        "resolution": "resolved",
+        "reason": "AI复核：下午二层核对后提交，回执保持下午二层；该旧错配已修复。",
+        "evidence_ids": [
+          "ev-acef8a0b06654f11a439d3bcf5ad9cec",
+          "ev-1f54a5253f7a4d16b003d6fdd40d2595",
+          "ev-83f462c812d741ac94c0a8f241ff1101",
+          "ev-d9a7bc026f8a444ba99fa3089c051991"
+        ],
+        "human_confirmation": "confirmed",
+        "reviewer": "AI模型验收-D",
+        "reviewed_at": "2026-11-04T12:14:48.491783+00:00"
+      }
+    }
+  ],
+  "确认来源说明": "前端按钮沿用通用确认文案；实际提交及导出事件均标明 actor_type=ai。",
+  "AI归档事件": {
+    "事件": {
+      "event_id": "9ec67681-7ca0-41aa-b45c-39a543b4b370",
+      "expected_context_version": 2,
+      "type": "finish",
+      "payload": {},
+      "actor": "AI模型验收-D",
+      "actor_type": "ai"
+    },
+    "HTTP": 202,
+    "原报告版本": 9,
+    "新报告版本": 10
+  },
+  "ZIP": {
+    "SHA256": "6efe56a06bef5e857bbe041d5fdc2c17f19ca241fb141d4adc20d652ac8b9a82",
+    "成员数": 239,
+    "报告版本": 10,
+    "导出对象": "确认后通过原生 finish 生成的新报告版本",
+    "两条确认与当前快照一致": true,
+    "AI事件均保留": true,
+    "AI事件": [
+      {
+        "at": "2026-11-04T12:14:47.965775+00:00",
+        "actor_type": "ai",
+        "actor": "AI模型验收-D",
+        "type": "confirm_recheck",
+        "event_id": "0ebc14cb-5e22-4fbd-9107-6a4df5a88b2d",
+        "context_version": 2,
+        "content": {
+          "recheck_id": "recheck-28d8ce030a6f4b498055e144f032fb58",
+          "resolution": "resolved",
+          "reason": "AI复核：下午二层核对后提交，回执保持下午二层；该旧错配已修复。",
+          "evidence_ids": [
+            "ev-01fe5714b14042bbb9e9bfc498af3e9a",
+            "ev-5890dd87f67246d09a928c3d22ed12fb",
+            "ev-acef8a0b06654f11a439d3bcf5ad9cec",
+            "ev-1f54a5253f7a4d16b003d6fdd40d2595",
+            "ev-83f462c812d741ac94c0a8f241ff1101",
+            "ev-d9a7bc026f8a444ba99fa3089c051991"
+          ],
+          "current_finding_ids": []
+        }
+      },
+      {
+        "at": "2026-11-04T12:14:48.499386+00:00",
+        "actor_type": "ai",
+        "actor": "AI模型验收-D",
+        "type": "confirm_recheck",
+        "event_id": "ddb7d7fe-a4f5-4f8f-828a-6ac4c337c6b6",
+        "context_version": 2,
+        "content": {
+          "recheck_id": "recheck-67eaa19c412344e79af5789d693d0c6a",
+          "resolution": "resolved",
+          "reason": "AI复核：下午二层核对后提交，回执保持下午二层；该旧错配已修复。",
+          "evidence_ids": [
+            "ev-acef8a0b06654f11a439d3bcf5ad9cec",
+            "ev-1f54a5253f7a4d16b003d6fdd40d2595",
+            "ev-83f462c812d741ac94c0a8f241ff1101",
+            "ev-d9a7bc026f8a444ba99fa3089c051991"
+          ],
+          "current_finding_ids": []
+        }
+      },
+      {
+        "at": "2026-11-04T12:14:49.123176+00:00",
+        "actor_type": "ai",
+        "actor": "AI模型验收-D",
+        "type": "finish",
+        "event_id": "9ec67681-7ca0-41aa-b45c-39a543b4b370",
+        "context_version": 2,
+        "content": {}
+      }
+    ],
+    "原模型调用保持": true,
+    "复审": [
+      {
+        "recheck_id": "recheck-28d8ce030a6f4b498055e144f032fb58",
+        "previous_finding_id": "finding-2b889800c51c43d7a60c72987671624d",
+        "current_finding_ids": [],
+        "resolution": "resolved",
+        "reason": "AI复核：下午二层核对后提交，回执保持下午二层；该旧错配已修复。",
+        "evidence_ids": [
+          "ev-01fe5714b14042bbb9e9bfc498af3e9a",
+          "ev-5890dd87f67246d09a928c3d22ed12fb",
+          "ev-acef8a0b06654f11a439d3bcf5ad9cec",
+          "ev-1f54a5253f7a4d16b003d6fdd40d2595",
+          "ev-83f462c812d741ac94c0a8f241ff1101",
+          "ev-d9a7bc026f8a444ba99fa3089c051991"
+        ],
+        "human_confirmation": "confirmed",
+        "reviewer": "AI模型验收-D",
+        "reviewed_at": "2026-11-04T12:14:47.957308+00:00"
+      },
+      {
+        "recheck_id": "recheck-67eaa19c412344e79af5789d693d0c6a",
+        "previous_finding_id": "finding-149e805558484b9d850775c841603fda",
+        "current_finding_ids": [],
+        "resolution": "resolved",
+        "reason": "AI复核：下午二层核对后提交，回执保持下午二层；该旧错配已修复。",
+        "evidence_ids": [
+          "ev-acef8a0b06654f11a439d3bcf5ad9cec",
+          "ev-1f54a5253f7a4d16b003d6fdd40d2595",
+          "ev-83f462c812d741ac94c0a8f241ff1101",
+          "ev-d9a7bc026f8a444ba99fa3089c051991"
+        ],
+        "human_confirmation": "confirmed",
+        "reviewer": "AI模型验收-D",
+        "reviewed_at": "2026-11-04T12:14:48.491783+00:00"
+      }
+    ]
+  },
+  "历史读回": [
+    {
+      "报告版本": 6,
+      "HTTP": 200,
+      "报告正文SHA256": "3e7ea14a44487a02cfa682c4c00f53366d5608a2a670e4dfb0edaff2fefebb29",
+      "复审与保存历史一致": true,
+      "模型调用与原历史一致": true,
+      "历史反馈隐藏": true,
+      "复审按钮禁用": true,
+      "页面状态": "本轮结束 · 阶段 T08 · 上下文 v1 · 报告 v6 · runtime · 部分报告 · 历史只读"
+    },
+    {
+      "报告版本": 9,
+      "HTTP": 200,
+      "报告正文SHA256": "9ad3d77000b0815812a0b84c4382b888c7f7fbea288155d67a9cb08873294d41",
+      "复审与保存历史一致": true,
+      "模型调用与原历史一致": true,
+      "历史反馈隐藏": true,
+      "复审按钮禁用": true,
+      "页面状态": "本轮结束 · 阶段 T09 · 上下文 v2 · 报告 v9 · runtime · 部分报告 · 历史只读"
+    },
+    {
+      "报告版本": 10,
+      "HTTP": 200,
+      "报告正文SHA256": "c6095c14596f5e1401870fa66f470d79f810365cbfd26bbab8676c50dad73ad9",
+      "复审与保存历史一致": true,
+      "模型调用与原历史一致": true,
+      "历史反馈隐藏": true,
+      "复审按钮禁用": true,
+      "页面状态": "本轮结束 · 阶段 T08 · 上下文 v2 · 报告 v10 · runtime · 部分报告 · 历史只读"
+    }
+  ],
+  "历史版本口径": "两条 AI 确认后通过原生 finish 生成新报告；新历史版本与 ZIP 均保留确认状态，旧历史报告原字节保持。",
+  "结束": "2026-11-04T12:14:53.075928+00:00",
+  "状态": "确认归档完成",
+  "新增模型调用": 0,
+  "报告版本": 10,
+  "报告完整度": "partial"
+}

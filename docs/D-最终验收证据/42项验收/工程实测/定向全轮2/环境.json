@@ -1,0 +1,30 @@
+{
+  "时间": "2026-11-04T10:23:28.039870+00:00",
+  "git": "66a0f0919ada6d334565c3451e9f16ea95000bc9",
+  "源SHA256": {
+    "engine/session_adapters.py": "0e335d65241964f249923185cc3543f145a93aa9b0586088bcce9acb608e4fb5",
+    "engine/session_api.py": "f8f2101249bd145c678c3ee953c4ea25f1f7053dbe54106fc959cbe9aa3ab12e",
+    "engine/session_branches.py": "1005f2cf7fbf6203d8ddf4c42a9267b991516305d319c4e2f2b2894d9fcce40d",
+    "engine/session_cli.py": "e83c30b2540435218da5900ae11c9f8f0c5c0166d3bdd00535e9d612fe55f03c",
+    "engine/session_context.py": "44f325f2a321553488595d0889339bbe6ace92cd7e4ad0285925c58d5a8898a5",
+    "engine/session_contracts.py": "662057e04d2b92a8255068f1c94292567aa0d6b219a56bf31ffc6a794886560c",
+    "engine/session_coverage.py": "bbba1941a7d8f5091817382e8c92ca77f074a1de39c664c25f8ccbf3e8362b5a",
+    "engine/session_evaluation.py": "524dd0c03fb537ca8f0806a10ee7b4e8bb88f76c7029faa43ca7da6246e1327e",
+    "engine/session_exploration.py": "62c96ac229464cd90ed57e58983a29d2fd666b7a4d98aded9836c19aa5c0a200",
+    "engine/session_flow.py": "e124851ec4247297e1877f9224bcc94b43e198f2021b6361e74346bc72909d42",
+    "engine/session_invariants.py": "898be255cead789340108e350588cf5e6abdb17adfd903ab059317c036e79b8a",
+    "engine/session_materials.py": "628720933a7c8f11b28cddab14c07606792a9244814885bcc3937b1e277123d0",
+    "engine/session_models.py": "40f2f7ca591efb55e799b7e49544b44427280241642c3dede39908bdc37b57ec",
+    "engine/session_objects.py": "1ea51902bfc5839da71b2e0005bc056fa7498038790731c0f441b4fa22f3e0e3",
+    "engine/session_perception.py": "e128a48a61bae2c65ffb820e2d4b0bbed0946bd1515cef1946553c56234038ca",
+    "engine/session_report.py": "0cb05de87b31a8ac0baabd5ab36ee5d5a920557699dae7894e9b450bfe997fb4",
+    "engine/session_screen_review.py": "3ceca92cde41a8e789c70b1bd7bfddf9a2f077701faba791c65023816c682ba1",
+    "engine/session_service.py": "c905328d60fe48426d33aa8c682519a57cdc660cbb8015791a691d154a6885cf",
+    "engine/session_store.py": "0423ba8b0279ebac88228517d125e64928baae3aa391ecdaf04ec19b88855dea",
+    "engine/session_targets.py": "e38483b5b04c5f38bf062d6697f480295481a1916b7c964c3f72458ef9318ce5",
+    "engine/session_verification.py": "2e4d69bd5a1486e88de40d46e702a4938815ab21c506e5e5e1ad3cd474ff0d53",
+    "tests/test_d_acceptance_42.py": "b5becf2da4d8e86051f7c513b18af63897b2bfba2a897eec9f5bf331f81cd96f"
+  },
+  "执行范围": "42 项验收对应定向测试；不是全套回归",
+  "真实模型调用": 0
+}

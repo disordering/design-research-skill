@@ -1,0 +1,91 @@
+{
+  "核查UTC": "2026-11-04T12:22:18.557223+00:00",
+  "来源": "AI 程序核对原始归档，无新增模型调用",
+  "冻结文件数": {
+    "冻结材料": 7,
+    "冻结运行源码-修后v1": 58
+  },
+  "已完成轮数": 4,
+  "待完成轮次": [],
+  "用户取消未启动轮次": [
+    "N01-3",
+    "N02-2",
+    "N02-3",
+    "N03-2",
+    "N03-3"
+  ],
+  "正式配置一致": true,
+  "问题": [],
+  "轮次": [
+    {
+      "轮次": "N01-1",
+      "统计组": "修复回归",
+      "会话ID": "session-32a45f293ff44c558b747ea2e3092ff6",
+      "实际CLI调用": 5,
+      "输入图片引用": 5,
+      "已返回用量的CLI数": 4,
+      "CLI原始用量": {
+        "input_tokens": 153242,
+        "cached_input_tokens": 49664,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 10414,
+        "reasoning_output_tokens": 172
+      },
+      "状态": "completed",
+      "完整度": "partial"
+    },
+    {
+      "轮次": "N01-2",
+      "统计组": "修复回归",
+      "会话ID": "session-d52bfcc6dfc641bc98aeedbcfa8ae1ea",
+      "实际CLI调用": 9,
+      "输入图片引用": 9,
+      "已返回用量的CLI数": 9,
+      "CLI原始用量": {
+        "input_tokens": 299026,
+        "cached_input_tokens": 111744,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 20676,
+        "reasoning_output_tokens": 390
+      },
+      "状态": "completed",
+      "完整度": "partial"
+    },
+    {
+      "轮次": "N02-1",
+      "统计组": "新任务独立验收",
+      "会话ID": "session-167526da0aa34dac86a3b0f20a27eee1",
+      "实际CLI调用": 76,
+      "输入图片引用": 377,
+      "已返回用量的CLI数": 76,
+      "CLI原始用量": {
+        "input_tokens": 8434739,
+        "cached_input_tokens": 963584,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 141267,
+        "reasoning_output_tokens": 2207
+      },
+      "状态": "completed",
+      "完整度": "partial"
+    },
+    {
+      "轮次": "N03-1",
+      "统计组": "新任务独立验收",
+      "会话ID": "session-bd87f80fc0ac46179089a6c80f2866ae",
+      "实际CLI调用": 80,
+      "输入图片引用": 353,
+      "已返回用量的CLI数": 79,
+      "CLI原始用量": {
+        "input_tokens": 6581743,
+        "cached_input_tokens": 990848,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 124188,
+        "reasoning_output_tokens": 2346
+      },
+      "状态": "completed",
+      "完整度": "partial"
+    }
+  ],
+  "隔离核对范围": "核对冻结任务卡、驱动指纹和生产输入未出现参考文件标识；独立参考内容未读取。结合驱动交叉核查记录解释输入隔离。",
+  "用量口径": "输入、缓存输入与输出按 CLI 原始 usage 分别汇总，不估算费用；无返回用量的调用不记作零消耗。"
+}

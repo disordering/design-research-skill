@@ -1,0 +1,37 @@
+{
+  "开始": "2026-11-04T12:03:22.260492+00:00",
+  "来源": "AI 使用真实 Codex CLI + 原生 SessionService / BrowserAdapter / 逐屏生产 review",
+  "样本": "N01",
+  "轮次": 2,
+  "原版能力试点": false,
+  "固定响应": false,
+  "答案注入": false,
+  "独立性": "新会话、新浏览器上下文、新状态库，每个模型调用为新的 ephemeral CLI",
+  "材料冻结清单SHA256": "f2fee023ebc0d0ed6ebb70cceda4a904b28804fa5b218e77f1b86ce3ba815766",
+  "源码冻结清单SHA256": "670764639a69fafaff87bba76c40c39a086d6a9e935f2d8c6b3218ddee62e503",
+  "参考冻结回执SHA256": "c1e3427c94d89771a9e29f4fb087f5aaa8e2f329c1f531976d227455ddc9f161",
+  "参考回执": {
+    "参考文件名": "独立AI参考_冻结.json",
+    "参考SHA256": "f9497ff9660d8f66d556802d2870a06a183e9e3be3c488e73642c4074a21ccc3",
+    "冻结时间UTC": "2026-11-04T10:26:58.956480+00:00",
+    "来源": "独立 AI 证据审阅；非真人共识，浏览器操作由隔离脚本完成"
+  },
+  "模型": "gpt-6.1-sol",
+  "运行脚本SHA256": "46fa3f6bc04048356e586a39cc35d8356037fbf3dacddccfe493dd9cda356733",
+  "主任务桥接SHA256": "85a4af2ea16c3c2f93868e98f721d8a8675f5aaf8a267fdf24d0eace412f9433",
+  "逐屏桥接SHA256": "bc3403be1a487c7fcd0c27505e17bb8b1d53765da9d1f660628f4877ff348ddf",
+  "源码位置": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\docs\\D-最终验收证据\\新样本\\冻结运行源码-修后v1",
+  "会话状态库": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_final_new_samples_state\\修后v1-N01-第2轮",
+  "会话ID": "session-d52bfcc6dfc641bc98aeedbcfa8ae1ea",
+  "限额": {
+    "max_actions": 24,
+    "max_checks": 160,
+    "max_model_calls": 100,
+    "max_review_rounds": 1,
+    "max_seconds": 7200,
+    "max_images_per_call": 10,
+    "max_material_chunks": 24,
+    "max_parallel_screens": 1
+  },
+  "屏幕审查与任务判断": "独立列出原始输出，不把两类候选简单相加"
+}

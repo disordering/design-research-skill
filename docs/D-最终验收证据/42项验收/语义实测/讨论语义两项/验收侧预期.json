@@ -1,0 +1,10 @@
+{
+  "QA21": {
+    "ref": "R13",
+    "expected": "candidate_issue"
+  },
+  "QA22": {
+    "ref": "R18",
+    "expected": "not_applicable"
+  }
+}

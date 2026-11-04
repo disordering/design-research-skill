@@ -1,0 +1,1 @@
+{"judgments":[{"check_id":"check-c88159d3136f3ab2","decision":"no_visible_issue","reason":"R23适用：材料明确错误提示面向普通用户。设计原文为“暂时无法保存，请检查网络连接后重试。错误代码：NET-04”，已用通俗语言说明无法保存并给出重试建议，技术码仅作辅助，未见仅有内部码而无解释的问题。结论限于所提供的设计文字，不代表真实用户理解或错误恢复已验证。","evidence_ids":["ev-c005b4059a6843c198027ce0d071ff6d"]}],"findings":[],"questions":[]}

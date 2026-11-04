@@ -1,0 +1,66 @@
+{
+  "judgments": [
+    {
+      "check_id": "check-eb3624a4a81916bb",
+      "decision": "not_applicable",
+      "reason": "R15仅适用于已确认的高后果操作确认界面。本对象为本地页面的数量增加按钮，动作后更新数量和预览，不是确认界面；任务卡明确操作仅影响本地页面。",
+      "evidence_ids": ["ev-b6e3c889caf04f94ab621497bfc78956", "ev-2b14d323ca4049dba5ce45c2a5f1c9df"]
+    },
+    {
+      "check_id": "check-a780b7971c395467",
+      "decision": "insufficient_evidence",
+      "reason": "R16涉及任务必需图标的含义。加减号与器材名称、数量同行，已有可见语境；但目标用户及符号熟悉度依据未提供，不能完整判断用户理解，也不能仅凭没有常驻文字标签报问题。",
+      "evidence_ids": ["ev-b6e3c889caf04f94ab621497bfc78956", "ev-fae56274ca7e4005a91ca096d414a7f7"]
+    },
+    {
+      "check_id": "check-2f65229a59311089",
+      "decision": "no_visible_issue",
+      "reason": "R18适用于已确认的相关数量选择组。任务卡和增量操作确认左侧三行为数量选择；每行器材名称、数字和增减按钮对齐，行间分隔线及“选择器材”标题明确归属，未见具体分组歧义。",
+      "evidence_ids": ["ev-b6e3c889caf04f94ab621497bfc78956", "ev-6d6b54c566c044b98d260517c3cefbc3", "ev-fae56274ca7e4005a91ca096d414a7f7"]
+    },
+    {
+      "check_id": "check-9af95787aaca198b",
+      "decision": "no_visible_issue",
+      "reason": "R18适用于生成后仍可调整的左侧数量组。增加无线麦克风的操作及前后画面确认其交互角色；名称、数量与按钮同行，归属清楚。右侧预览是纯展示，不作为本条输入分组的通过依据。",
+      "evidence_ids": ["ev-ff12dc5bf1794b1fa0209af04d1191ed", "ev-2b14d323ca4049dba5ce45c2a5f1c9df"]
+    },
+    {
+      "check_id": "check-395ee853ca9d0343",
+      "decision": "no_visible_issue",
+      "reason": "R19适用于本任务的“增加无线麦克风”入口。生成后画面中加号位于无线麦克风数量右侧，与该行直接关联，无遮挡或可见层级混淆；操作记录也确认命中该按钮。本判断不代表真实用户定位测试通过。",
+      "evidence_ids": ["ev-b6e3c889caf04f94ab621497bfc78956", "ev-ff12dc5bf1794b1fa0209af04d1191ed", "ev-2b14d323ca4049dba5ce45c2a5f1c9df"]
+    },
+    {
+      "check_id": "check-86a9931c4679f7c0",
+      "decision": "no_visible_issue",
+      "reason": "R20适用于修改后核对区域与次要说明的竞争关系。选择区、预览表和反馈均服务本次任务，页脚演示说明未遮挡或挤占核对内容。总数量错误属于内容正确性，不构成本覆盖单元的无关信息干扰。",
+      "evidence_ids": ["ev-b6e3c889caf04f94ab621497bfc78956", "ev-2b14d323ca4049dba5ce45c2a5f1c9df"]
+    },
+    {
+      "check_id": "check-f672a166775c6ebb",
+      "decision": "not_applicable",
+      "reason": "R21检查错误提示的问题定位。本覆盖对象明确为“清单已更新，可继续调整数量”的成功反馈，不是错误提示。预览总数量异常不自动使该反馈成为错误提示对象。",
+      "evidence_ids": ["ev-2b14d323ca4049dba5ce45c2a5f1c9df"]
+    },
+    {
+      "check_id": "check-6acfc5f85b0e9337",
+      "decision": "insufficient_evidence",
+      "reason": "R22要求异常及用户可执行的处理途径均已确认。两次清单行数量分别为2、3、1和2、4、1，总数量均显示3件，异常明确；但材料未确认用户可执行的修正方法，不能据此认定缺少修正说明，也不能将尚未验证的清空或重新生成当作恢复办法。",
+      "evidence_ids": ["ev-b6e3c889caf04f94ab621497bfc78956", "ev-ff12dc5bf1794b1fa0209af04d1191ed", "ev-2b14d323ca4049dba5ce45c2a5f1c9df"]
+    },
+    {
+      "check_id": "check-c8a46c1848486701",
+      "decision": "insufficient_evidence",
+      "reason": "R23适用于面向已知用户的错误提示。“请先选择至少一件器材”在已有非零选择时仍出现，但材料未明确其为初始引导还是校验错误反馈，目标用户背景也未知。状态矛盾已有R17历史依据，本项不重复认定为错误语言问题。",
+      "evidence_ids": ["ev-1f75f6035aee4d20ae2ce1aa368a22fa", "ev-6d6b54c566c044b98d260517c3cefbc3", "ev-fae56274ca7e4005a91ca096d414a7f7"]
+    },
+    {
+      "check_id": "check-39e89f435b0747d5",
+      "decision": "insufficient_evidence",
+      "reason": "E05检查有明确处理依据的异常恢复。汇总异常已经观察，但未提供应交付的恢复方式及其动作结果。增加无线麦克风后行数量和页面反馈发生变化，总数量仍错误；这不是已执行的恢复验证，不能判恢复成功或失败。",
+      "evidence_ids": ["ev-b6e3c889caf04f94ab621497bfc78956", "ev-ff12dc5bf1794b1fa0209af04d1191ed", "ev-2b14d323ca4049dba5ce45c2a5f1c9df"]
+    }
+  ],
+  "findings": [],
+  "questions": []
+}

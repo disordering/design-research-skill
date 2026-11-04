@@ -1,0 +1,434 @@
+{
+  "reference_version": "N-v1-AI-independent-evidence-reference-1",
+  "frozen_at_utc": "2026-11-04T10:26:58.956480+00:00",
+  "actor_type": "ai_reference_reviewer",
+  "reference_source": "独立 Codex 对原始浏览器像素及DOM事实的证据审阅",
+  "operation_source": "样本执行代理的隔离 Chromium 脚本",
+  "reviewer_personally_operated_browser": false,
+  "isolation_attestation": {
+    "read_author_expected_answers": false,
+    "read_test_model_outputs": false,
+    "read_sample_html_source": false,
+    "reference_in_runtime_inputs": false
+  },
+  "sample_manifest_sha256": "f2fee023ebc0d0ed6ebb70cceda4a904b28804fa5b218e77f1b86ce3ba815766",
+  "scope": {
+    "tasks": [
+      "N01",
+      "N02",
+      "N03"
+    ],
+    "task_version": "v1",
+    "observed_stages": 15,
+    "screenshots_visually_reviewed": 15,
+    "dom_fact_files_read": 15,
+    "fixed_requirement_count": 9,
+    "certain_reference_atoms": 2,
+    "ambiguous_reference_atoms": 0,
+    "human_reviewers": 0,
+    "source_fact_files_hash_verified": 30
+  },
+  "reference_atoms": [
+    {
+      "reference_id": "REF-N02-01",
+      "task_id": "N02",
+      "task_version": "N02-v1",
+      "finding_kind": "issue",
+      "title": "借用总数量与清单各行件数之和不一致，修改数量后仍保持错误值",
+      "object": "本次借用预览的借用总数量",
+      "location": "右侧预览表格下方的借用总数量：3件；截图1440×900中约x760–960,y475–505",
+      "state_or_transition": "首次生成清单；随后无线麦克风3→4",
+      "related_check_ids": [
+        "REQ-N02-02",
+        "REQ-N02-03"
+      ],
+      "rule_ids": [
+        "R04"
+      ],
+      "method_ids": [
+        "E02",
+        "E03",
+        "E07"
+      ],
+      "phenomenon": "行项目数量正确，但总件数字段错误；同一总量字段在数量变化后仍错误。",
+      "evidence_ids": [
+        "N02-EV02",
+        "N02-EV03",
+        "N02-EV04"
+      ],
+      "observed_facts": [
+        "首次清单投影仪2、无线麦克风3、三脚架1，行和为6，总量显示3件。",
+        "无线麦克风增加1后清单行变为4，行和为7，总量仍显示3件。",
+        "操作状态从清单已生成变为清单已更新，表格各行同步更新。"
+      ],
+      "task_impact": "用户无法直接依靠总量字段核对借用件数，需要自行相加。",
+      "severity": "medium",
+      "severity_reason": {
+        "importance": "任务明确要求核对件数，汇总值是核对信息。",
+        "blocking": "错误结果影响核对，但各行数值仍可读取。",
+        "scope": "本次2/3/1和2/4/1两组受控选择。",
+        "recovery": "可依据清单行数据手工相加；未观察真实借用或资源扣减。",
+        "frequency": "unknown"
+      },
+      "suggestion": "使总数量取当前各行件数的和，并在生成与增减后同步刷新。",
+      "dedup_key": "N02-v1|借用预览总量|与行和不一致|修正并刷新总件数",
+      "dedup_notes": "首次为3而非6与修改后仍3而非7为同一汇总字段机制，合并一个原子；不因两个要求或两个状态重复计数。",
+      "claim_boundary": "不声称内部使用种类计数算法，也不声称真实发放数量错误；只确认页面可见汇总错误。"
+    },
+    {
+      "reference_id": "REF-N03-01",
+      "task_id": "N03",
+      "task_version": "N03-v1",
+      "finding_kind": "issue",
+      "title": "出版年份校验失败清空了已经正确填写的书名",
+      "object": "图书信息的书名字段",
+      "location": "左侧图书信息卡第一输入框；截图1440×900中约x258–680,y245–325",
+      "state_or_transition": "书名城市植物图鉴、作者林叶、年份2029→点击保存→仅年份被标错但书名清空",
+      "related_check_ids": [
+        "REQ-N03-02"
+      ],
+      "rule_ids": [],
+      "method_ids": [
+        "E05",
+        "E07"
+      ],
+      "phenomenon": "一个字段失败使另一个正确字段丢失，恢复时必须重复填写。",
+      "evidence_ids": [
+        "N03-EV02",
+        "N03-EV03",
+        "N03-EV04",
+        "N03-EV05",
+        "N03-EV06"
+      ],
+      "observed_facts": [
+        "首次提交前书名为城市植物图鉴、作者为林叶、年份2029。",
+        "年份错误响应后书名为空、作者仍为林叶、年份仍为2029。",
+        "仅将年份改2021并保存后，界面转为请填写书名。",
+        "重新填入书名后保存成功，最终三字段与预期一致。"
+      ],
+      "task_impact": "修正年份还不足以完成保存，用户必须重新输入先前正确的书名，多一次填写及保存。",
+      "severity": "medium",
+      "severity_reason": {
+        "importance": "图书录入的必要字段保持，属于错误恢复流程。",
+        "blocking": "局部恢复受阻，允许补填后可保存。",
+        "scope": "本次2029无效年份提交中的书名字段；作者没有丢失。",
+        "recovery": "补填城市植物图鉴并保存即可恢复。",
+        "frequency": "unknown"
+      },
+      "suggestion": "年份校验失败只显示该字段错误并保留其他已填值，复测仅修改年份即可保存。",
+      "dedup_key": "N03-v1|书名字段|年份错误时清空有效输入|保留其他字段",
+      "dedup_notes": "书名清空与随后被要求补填是同一状态丢失问题的因果链，计一个原子。",
+      "claim_boundary": "不声称作者丢失、所有字段重置、数据永久不可恢复或合法年份被系统拒绝。"
+    }
+  ],
+  "requirement_reference": [
+    {
+      "check_id": "REQ-N01-01",
+      "status": "met",
+      "evidence_ids": [
+        "N01-EV02",
+        "N01-EV04"
+      ],
+      "basis": "大字号、舒适行距、暖色背景被选中后，实际预览从18px/27.9px/白色变为24px/48px/暖色，已应用文案对应三项选择。"
+    },
+    {
+      "check_id": "REQ-N01-02",
+      "status": "met",
+      "evidence_ids": [
+        "N01-EV03",
+        "N01-EV04"
+      ],
+      "basis": "应用响应阶段显示正在应用阅读设置，请稍候；应用按钮禁用，恢复按钮也禁用。完成后显示设置已应用，按钮恢复可用。"
+    },
+    {
+      "check_id": "REQ-N01-03",
+      "status": "met",
+      "evidence_ids": [
+        "N01-EV01",
+        "N01-EV04",
+        "N01-EV05"
+      ],
+      "basis": "恢复后两个选择框分别为标准字号、紧凑行距，暖色未勾选，预览18px/27.9px/白色与初始相同，显示已恢复初始版面。"
+    },
+    {
+      "check_id": "REQ-N02-01",
+      "status": "met",
+      "evidence_ids": [
+        "N02-EV02",
+        "N02-EV03"
+      ],
+      "basis": "首次选择投影仪2、无线麦克风3、三脚架1，清单三行对象及数量逐项一致。"
+    },
+    {
+      "check_id": "REQ-N02-02",
+      "status": "observed_violation",
+      "reference_ids": [
+        "REF-N02-01"
+      ],
+      "evidence_ids": [
+        "N02-EV03",
+        "N02-EV04"
+      ],
+      "basis": "首次三行2+3+1=6，总数量却是3件；修改后2+4+1=7，总数量仍是3件。"
+    },
+    {
+      "check_id": "REQ-N02-03",
+      "status": "observed_violation",
+      "reference_ids": [
+        "REF-N02-01"
+      ],
+      "evidence_ids": [
+        "N02-EV03",
+        "N02-EV04"
+      ],
+      "basis": "无线麦克风从3加至4后，选择和清单该行同步变为4；总数量仍为3，没有随实际总件数更新。行更新满足，总量子项违反。"
+    },
+    {
+      "check_id": "REQ-N03-01",
+      "status": "met",
+      "evidence_ids": [
+        "N03-EV02",
+        "N03-EV03"
+      ],
+      "basis": "2029保存失败时出版年份字段红框，紧邻下方显示出版年份须为1900–2026之间的整数，并显示保存未完成。"
+    },
+    {
+      "check_id": "REQ-N03-02",
+      "status": "observed_violation",
+      "reference_ids": [
+        "REF-N03-01"
+      ],
+      "evidence_ids": [
+        "N03-EV02",
+        "N03-EV03"
+      ],
+      "basis": "年份2029校验失败后，正确填写的书名城市植物图鉴被清空，作者林叶保留。"
+    },
+    {
+      "check_id": "REQ-N03-03",
+      "status": "met",
+      "evidence_ids": [
+        "N03-EV04",
+        "N03-EV05",
+        "N03-EV06"
+      ],
+      "basis": "改年为2021并按任务卡允许补填书名后，图书记录已保存；右侧书名城市植物图鉴、作者林叶、年份2021与最终输入一致。此前额外补填成本归REF-N03-01，不重复拆出第二个问题。"
+    }
+  ],
+  "normal_controls": [
+    {
+      "control_id": "NC-N01",
+      "task_id": "N01",
+      "scope": "按任务卡选择、应用、恢复路径",
+      "status": "no_supported_issue_in_observed_scope",
+      "requirement_ids": [
+        "REQ-N01-01",
+        "REQ-N01-02",
+        "REQ-N01-03"
+      ],
+      "evidence_ids": [
+        "N01-EV01",
+        "N01-EV02",
+        "N01-EV03",
+        "N01-EV04",
+        "N01-EV05"
+      ]
+    },
+    {
+      "control_id": "NC-N02-ROWS",
+      "task_id": "N02",
+      "scope": "首次器材对象与行数量、修改后的该行同步",
+      "status": "supported_normal",
+      "evidence_ids": [
+        "N02-EV02",
+        "N02-EV03",
+        "N02-EV04"
+      ],
+      "facts": "三行对象/数量正确，麦克风行3→4同步。"
+    },
+    {
+      "control_id": "NC-N02-INITIAL",
+      "task_id": "N02",
+      "scope": "全零初始选择",
+      "status": "supported_normal",
+      "evidence_ids": [
+        "N02-EV01"
+      ],
+      "facts": "三个减号及生成清单按钮禁用，提示先选至少一件。"
+    },
+    {
+      "control_id": "NC-N03-ERROR",
+      "task_id": "N03",
+      "scope": "无效年份的定位与有效范围",
+      "status": "supported_normal",
+      "evidence_ids": [
+        "N03-EV03"
+      ],
+      "facts": "年份框标错且紧邻提示1900–2026整数。"
+    },
+    {
+      "control_id": "NC-N03-SUCCESS",
+      "task_id": "N03",
+      "scope": "补填并修正后的保存结果",
+      "status": "supported_normal",
+      "evidence_ids": [
+        "N03-EV06"
+      ],
+      "facts": "成功反馈与书名、作者、年份全部对应最终输入。"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "N01-EV01",
+      "stage": "初始",
+      "screenshot": "原始操作证据/N01/01-初始.png",
+      "screenshot_sha256": "be1bbe20d1b338439484caf911676b4e500f9e00001265c4f432812cb8d6ebe8",
+      "facts": "原始操作证据/N01/01-初始.json",
+      "facts_sha256": "7d14decb93a332708ea40d070252ba4e42021f6c49dd869f5c47b7a2eb00df8c"
+    },
+    {
+      "evidence_id": "N01-EV02",
+      "stage": "选择完成",
+      "screenshot": "原始操作证据/N01/02-选择完成.png",
+      "screenshot_sha256": "02764ab26fe87db182b66782877866e1f1c09dd16908f664b8bfe2846402f923",
+      "facts": "原始操作证据/N01/02-选择完成.json",
+      "facts_sha256": "5f61474ac54a6ac8f4d21f233fee03faeb1905a819983fa05792363b44ad1514"
+    },
+    {
+      "evidence_id": "N01-EV03",
+      "stage": "应用响应",
+      "screenshot": "原始操作证据/N01/03-应用响应.png",
+      "screenshot_sha256": "28a474cb9aeeb62e08438b3f26c5ec6ccac7fb68c88e3c7a54a9623f08cc0073",
+      "facts": "原始操作证据/N01/03-应用响应.json",
+      "facts_sha256": "39550e738f5c114e30efd036732e3351b4d110abe0429f8674e7b3c0892c01e2"
+    },
+    {
+      "evidence_id": "N01-EV04",
+      "stage": "应用后",
+      "screenshot": "原始操作证据/N01/04-应用后.png",
+      "screenshot_sha256": "d6a31112f2445e377c381d449cf09aa2f685634c345c54ed44943430afe2c96a",
+      "facts": "原始操作证据/N01/04-应用后.json",
+      "facts_sha256": "848af20e258d5f7c242307b2b15de3bc2fb61237668518af5a80466ea2546ec9"
+    },
+    {
+      "evidence_id": "N01-EV05",
+      "stage": "恢复后",
+      "screenshot": "原始操作证据/N01/05-恢复后.png",
+      "screenshot_sha256": "bcd8497abf05e6ba08d05478842595737e05d95c5313a330f494d208e4f8e654",
+      "facts": "原始操作证据/N01/05-恢复后.json",
+      "facts_sha256": "0834d7e56e8d9dbd316376273ff8ed69565d0e19922829cf16bbb19faa48c1e4"
+    },
+    {
+      "evidence_id": "N02-EV01",
+      "stage": "初始",
+      "screenshot": "原始操作证据/N02/01-初始.png",
+      "screenshot_sha256": "727efcba999eea60d1232bc1afbd80f896d25594a55cfafba387bacf6d702e04",
+      "facts": "原始操作证据/N02/01-初始.json",
+      "facts_sha256": "f2aec51d9e2bfd9c7596114d65317a4b2973ee608d6e7cb70abb221718a91875"
+    },
+    {
+      "evidence_id": "N02-EV02",
+      "stage": "数量选择后",
+      "screenshot": "原始操作证据/N02/02-数量选择后.png",
+      "screenshot_sha256": "d2a07ad3f699446bcf0225a92883c016eb6efb7c711db5561ca2f3a76a776977",
+      "facts": "原始操作证据/N02/02-数量选择后.json",
+      "facts_sha256": "98d0e66213184118cf86d0886bef987b9f5f0323ae61a2420d437c90d15eb401"
+    },
+    {
+      "evidence_id": "N02-EV03",
+      "stage": "首次清单",
+      "screenshot": "原始操作证据/N02/03-首次清单.png",
+      "screenshot_sha256": "70af85dd53a6726b97e50b2e40fdba56f13abfa082d4377e259c4ac9711e6bfc",
+      "facts": "原始操作证据/N02/03-首次清单.json",
+      "facts_sha256": "88c1acdcc0f3d43202c11550dcb1efc913d34337021166fc74cb0689352390fc"
+    },
+    {
+      "evidence_id": "N02-EV04",
+      "stage": "修改后清单",
+      "screenshot": "原始操作证据/N02/04-修改后清单.png",
+      "screenshot_sha256": "8f5c6b8a939ffd1fe2b31439b31bbee627904a793d53b4834bc2ec5b52acda4e",
+      "facts": "原始操作证据/N02/04-修改后清单.json",
+      "facts_sha256": "45eb768c0a2636dae60f43dcf692c2faf2d2f416e703c674e7532f03b0802fb7"
+    },
+    {
+      "evidence_id": "N03-EV01",
+      "stage": "初始",
+      "screenshot": "原始操作证据/N03/01-初始.png",
+      "screenshot_sha256": "1d1b73ede5490f5981fb120c2ea3f02c8dd96f6391796879be5c674641452c82",
+      "facts": "原始操作证据/N03/01-初始.json",
+      "facts_sha256": "f83b29069f266ef756496870b8a31a065b97ff62e3275941b69197b7d5cd2263"
+    },
+    {
+      "evidence_id": "N03-EV02",
+      "stage": "首次填写后",
+      "screenshot": "原始操作证据/N03/02-首次填写后.png",
+      "screenshot_sha256": "b2f090471c97f31f55cbec107d1e8a60cc8764e4bdef03ec43a60d9e7959e492",
+      "facts": "原始操作证据/N03/02-首次填写后.json",
+      "facts_sha256": "18da5545fdd52b51abd0ee1c2bbf879743ca99c76181370295eebac3ad53009b"
+    },
+    {
+      "evidence_id": "N03-EV03",
+      "stage": "首次保存响应",
+      "screenshot": "原始操作证据/N03/03-首次保存响应.png",
+      "screenshot_sha256": "798ea05952ece07d2a0c175c83130002522f9f35982c9cecfbbfefd042037066",
+      "facts": "原始操作证据/N03/03-首次保存响应.json",
+      "facts_sha256": "aab94438e0cb45132320fd00f7677b4de8ba0de1e7a68b3205e0e0667835315d"
+    },
+    {
+      "evidence_id": "N03-EV04",
+      "stage": "修正年份后",
+      "screenshot": "原始操作证据/N03/04-修正年份后.png",
+      "screenshot_sha256": "c0c93509192910ce0c8e601aaa123ecaac93e43cf768183e98fab1d5d1c4b052",
+      "facts": "原始操作证据/N03/04-修正年份后.json",
+      "facts_sha256": "61541f21b8e5ae87912073ad0b964941f7e86cf0c46bf12d5b0712888e016e88"
+    },
+    {
+      "evidence_id": "N03-EV05",
+      "stage": "再次保存响应",
+      "screenshot": "原始操作证据/N03/05-再次保存响应.png",
+      "screenshot_sha256": "f483f3daa388d4ddad2d6605f93da5a04342f729c03c79656ae3753ccb6570ce",
+      "facts": "原始操作证据/N03/05-再次保存响应.json",
+      "facts_sha256": "7fc26a4ed83cef745c3a370589dd2b792f0ba8f6a5031b4d72db573699bb0265"
+    },
+    {
+      "evidence_id": "N03-EV06",
+      "stage": "补填后保存响应",
+      "screenshot": "原始操作证据/N03/06-补填后保存响应.png",
+      "screenshot_sha256": "8b14eb54bf847f2b38615dff6af827f306179e530a77b53ffb22f6e6f5f34494",
+      "facts": "原始操作证据/N03/06-补填后保存响应.json",
+      "facts_sha256": "7ba9c04fe80fe313e357a5814da211ddffcff624dd0cfc8b363c0e0a15f6c4ed"
+    }
+  ],
+  "nonissue_observations": [
+    {
+      "task_id": "N02",
+      "observation": "选完2/3/1后蓝色区仍显示请先选择至少一件器材。",
+      "evidence_ids": [
+        "N02-EV02"
+      ],
+      "decision": "不计确定问题原子",
+      "reason": "此句可读为先选择再生成的常设步骤指引；选择数量与生成可用状态明确。仅凭此句不足以确定一个独立状态错误。"
+    },
+    {
+      "task_id": "N03",
+      "observation": "年份改为2021但尚未重提时仍显示上一轮年份错误，重提后该错误消失。",
+      "evidence_ids": [
+        "N03-EV04",
+        "N03-EV05"
+      ],
+      "decision": "不计确定问题原子",
+      "reason": "任务未要求输入时实时校验；按提交重新校验与当前记录相符。"
+    }
+  ],
+  "scoring_rules": {
+    "primary_run": 1,
+    "recall_denominator": 2,
+    "predictions_unit": "当前版本去重后的最终issue/nonconformity候选条目，逐屏中间候选另列",
+    "FDR": "去重预测中含至少一项无证据支持的实质主张记为错误条目；已裁决分母与pending分开",
+    "unmatched_supported": "参考未列而证据支持的新主张单列补充有效发现，不倒改冻结召回分母，也不因未命中参考自动算FP",
+    "requirement_consistency_denominator": 9,
+    "comparable_mapping": "按REQ编号、对象、任务条件和状态转移；先确认三轮均实际执行再比较结论",
+    "unchanged_reference": "后续判断不因待测模型结果调整本参考原子或分母。"
+  },
+  "source_count_note": "取证说明.json写文件数36；实际提供34个文件，其中15截图、15事实、3索引和1说明。本参考逐项核对30个截图/事实哈希，按实际清单归档。"
+}

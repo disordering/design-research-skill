@@ -35,7 +35,15 @@ from .session_targets import (
 CONTROL_LABEL_JS = r"""node => {
     const ids=(node.getAttribute('aria-labelledby')||'').trim().split(/\s+/).filter(Boolean);
     const referenced=ids.map(id=>document.getElementById(id)?.textContent||'').join(' ').trim();
-    const associated=Array.from(node.labels||[]).map(label=>label.innerText||label.textContent||'').join(' ').trim();
+    const associated=Array.from(node.labels||[]).map(label=>{
+        // 嵌套在 label 中的 select，其选项文字不属于字段名称。
+        if(node.tagName==='SELECT'){
+            const copy=label.cloneNode(true);
+            copy.querySelectorAll('select').forEach(item=>item.remove());
+            return copy.textContent||'';
+        }
+        return label.innerText||label.textContent||'';
+    }).join(' ').trim();
     return (referenced||node.getAttribute('aria-label')||associated||node.innerText||
             node.getAttribute('placeholder')||node.name||'').trim().slice(0,200);
 }"""
@@ -325,7 +333,8 @@ class BrowserAdapter:
                     const foreground=parseColor(s.color), back=background(n);
                     return {selector:'[data-review-control="'+i+'"]',
                         label:controlLabel(n),
-                        tag:n.tagName.toLowerCase(),type:n.type||'',disabled:!!n.disabled,
+                        tag:n.tagName.toLowerCase(),type:n.type||'',
+                        disabled:!!n.disabled||(n.tagName==='SELECT'&&n.matches(':disabled')),
                         role:n.getAttribute('role')||n.tagName.toLowerCase(),
                         ariaLabel:n.getAttribute('aria-label')||'',
                         domId:n.id||'',
@@ -333,6 +342,16 @@ class BrowserAdapter:
                         testId:n.getAttribute('data-testid')||n.getAttribute('data-test-id')||'',
                         ancestorPath:ancestorPath(n),
                         value:n.type==='password'?'':String(n.value||'').slice(0,500),
+                        ...(n.tagName==='SELECT'?{
+                            multiple:!!n.multiple,
+                            optionCount:n.options.length,
+                            optionsTruncated:n.options.length>200,
+                            options:Array.from(n.options).slice(0,200).map(o=>({
+                                label:o.label,value:o.value,selected:!!o.selected,
+                                disabled:!!o.disabled||!!o.closest('optgroup')?.disabled||n.matches(':disabled'),
+                                optgroup:o.closest('optgroup')?.label||'',
+                            })),
+                        }:{}),
                         checked:!!n.checked,ariaSelected:n.getAttribute('aria-selected'),
                         ariaPressed:n.getAttribute('aria-pressed'),
                         ariaExpanded:n.getAttribute('aria-expanded'),
@@ -431,7 +450,7 @@ class BrowserAdapter:
                 if state and (await state["page"].locator(action.selector).first.get_attribute("type")) == "password":
                     return True
             return action.requires_explicit_authorization
-        if action.kind == "click":
+        if action.kind in {"click", "select"}:
             if not action.selector:
                 return True
             state = self._pages.get((session_id, source.source_id))
@@ -477,7 +496,7 @@ class BrowserAdapter:
             raise EngineError("browser_state_changed", "外部页面状态已变，需重新观察和规划，未执行旧动作。", status_code=409)
         if (
             source.input.kind != "figma_prototype"
-            and action.kind in {"click", "fill"}
+            and action.kind in {"click", "fill", "select"}
             and action.selector
         ):
             control = observed_control(
@@ -513,7 +532,7 @@ class BrowserAdapter:
         page = state["page"]
         state["allow_side_effects"] = authorized
         try:
-            if source.input.kind == "figma_prototype" and action.kind in {"click", "fill", "scroll"}:
+            if source.input.kind == "figma_prototype" and action.kind in {"click", "fill", "select", "scroll"}:
                 canvas = current.locator["prototype_canvas"]
                 if not canvas or current.partial:
                     raise EngineError("prototype_not_ready", "原型画布未可靠呈现，请先观察，不能点外壳。", status_code=409)
@@ -563,6 +582,27 @@ class BrowserAdapter:
                 if not action.selector:
                     raise EngineError("action_target_missing", "填写动作需要控件定位。", status_code=422)
                 await page.locator(action.selector).first.fill(action.value, timeout=10000)
+            elif action.kind == "select":
+                if not action.selector:
+                    raise EngineError("action_target_missing", "下拉选择需要已观察控件定位。", status_code=422)
+                control = observed_control(current.controls, action.selector)
+                if control is None:
+                    raise EngineError("action_target_not_observed", "下拉控件不在当前已观察状态中。", status_code=409)
+                if control.get("tag") != "select":
+                    raise EngineError("select_target_invalid", "select 动作只支持原生下拉控件。", status_code=422)
+                if control.get("multiple"):
+                    raise EngineError("select_multiple_unsupported", "当前选择动作不支持多选列表。", status_code=422)
+                if control.get("optionsTruncated"):
+                    raise EngineError("select_options_incomplete", "当前选项清单超过观察上限，不能确认完整选项范围，未执行选择。", status_code=409)
+                options = [option for option in control.get("options", []) if option.get("value") == action.value]
+                if not options:
+                    raise EngineError("select_option_not_observed", "value 不在当前已观察选项中，未执行选择。", status_code=409)
+                if len(options) != 1:
+                    raise EngineError("select_option_ambiguous", "多个选项使用同一 value，无法唯一定位选择。", status_code=409)
+                if options[0].get("disabled"):
+                    raise EngineError("select_option_unavailable", "目标选项或所属选项组已禁用，未执行选择。", status_code=409)
+                # 使用浏览器原生选择，让页面原有 input/change 处理继续执行。
+                await page.locator(action.selector).first.select_option(value=action.value, timeout=10000)
             elif action.kind == "scroll":
                 region = current.locator["image_geometry"]["region"]
                 await page.mouse.move(

@@ -1,0 +1,23 @@
+{
+  "来源": "AI 操作员调用生产 finish 事件，未杀进程或浏览器",
+  "收尾前状态": "planning",
+  "收尾前revision": 95,
+  "事件": [
+    {
+      "事件": {
+        "event_id": "d-pilot-final-wrap-20261104",
+        "expected_context_version": 1,
+        "type": "finish",
+        "payload": {
+          "reason": "原版能力诊断收尾，转入冻结修后批次"
+        },
+        "actor": "D 新样本 AI 操作员",
+        "actor_type": "ai"
+      },
+      "应运行": false
+    }
+  ],
+  "收尾后revision": 96,
+  "收尾后状态": "completed",
+  "完整度": "partial"
+}

@@ -1,0 +1,1 @@
+{"judgments":[{"check_id":"check-aeb9393211ddbcae","decision":"not_applicable","reason":"R18适用于相关输入字段或成组选项，明确排除纯展示卡。D-QA42-1设计材料确认三个奖励卡片仅展示将获得的奖励，无点击、选择或切换能力，因此不适用选择分组检查。原发现finding-660ce4d52a2c428d80aa61d5c725ba0b的可选性假设不成立；这属于依据新材料修正模型判断，不代表产品已修复或人工已确认，也不评价展示布局质量。","evidence_ids":["ev-8d85aba0bc1742698cdcf233e2eac6aa"]}],"findings":[],"questions":[]}

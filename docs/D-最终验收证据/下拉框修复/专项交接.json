@@ -1,0 +1,43 @@
+{
+  "完成时间UTC": "2026-11-04T10:39:37.192055+00:00",
+  "变更": "生产浏览器支持原生单选select，选项与动作均保留原value；原生input/change事件按页面处理执行。",
+  "文件": [
+    {
+      "path": "engine/session_adapters.py",
+      "sha256": "1c96354883b5c6b97cfca6e87813d351fa457948b3bf27a8accdf977857e5e27"
+    },
+    {
+      "path": "engine/session_contracts.py",
+      "sha256": "efd364d33f28de0342c622292513d35207cfbceec462b83eded746120c575152"
+    },
+    {
+      "path": "engine/session_verification.py",
+      "sha256": "809ccc248f5039b3081b41d070505ebe3faa296b6eec620eaf0f104d2ade832a"
+    },
+    {
+      "path": "tests/test_d_browser_select.py",
+      "sha256": "4c8b600f1dd9d9b8e27ab98f3c83be2871106f46605e2459f3c48bedcd1e38cb"
+    }
+  ],
+  "测试": {
+    "总数": 32,
+    "通过": 32,
+    "失败": 0,
+    "新增select专项": 21,
+    "日志": "最终专项及边界回归.txt",
+    "JUnit": "最终专项及边界回归.xml"
+  },
+  "行为边界": [
+    "options包含label/value/selected/disabled/optgroup；禁用继承fieldset和optgroup",
+    "选项最多显示200并给optionCount/optionsTruncated；列表被截断时拒绝选择",
+    "拒绝未知value、标签代值、去空白近似值、禁用项、多选、非select、同值歧义",
+    "拒绝旧状态、未观察selector、目标不符、原型外壳",
+    "保留显式授权与敏感目标检查；未授权POST拦截、授权POST放行",
+    "已执行select的动态发现定位对应动作结果而不是后来只读状态"
+  ],
+  "原始换行": "三个产品文件保持仓库原CRLF；git -c core.whitespace=cr-at-eol diff --check通过",
+  "初轮夹具修正": "首轮19项测试中17通过，2个测试夹具需修正：本地原型类型按既有测试用model_construct；动态定位例子加入明确action_result claim。留存首轮XML。",
+  "独立参考SHA256": "f9497ff9660d8f66d556802d2870a06a183e9e3be3c488e73642c4074a21ccc3",
+  "参考保持不变": true,
+  "未操作": "未改session_service、样本、判据或参考；未提交GitHub。"
+}

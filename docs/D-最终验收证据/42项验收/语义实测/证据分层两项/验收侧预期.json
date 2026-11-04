@@ -1,0 +1,10 @@
+{
+  "QA13": {
+    "ref": "E01",
+    "expected": "insufficient_evidence"
+  },
+  "QA14": {
+    "ref": "E03",
+    "expected": "insufficient_evidence"
+  }
+}

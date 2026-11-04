@@ -1,0 +1,497 @@
+........................................................................ [ 21%]
+..................................................................... [ 42%]
+....................FFFFF.F............................................. [ 64%]
+........................................F..FF........................... [ 86%]
+............................................                             [100%]
+================================== FAILURES ===================================
+____________ test_mcp_sdk_error_response_is_not_treated_as_success ____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000214AFE31730>
+
+    def test_mcp_sdk_error_response_is_not_treated_as_success(monkeypatch):
+        from contextlib import asynccontextmanager
+>       from mcp.types import Tool, ListToolsResult, CallToolResult, TextContent
+
+tests\test_session_adapters.py:193: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\work\d_nov_mcp\mcp\__init__.py:64: in <module>
+    from .client._input_required import InputRequiredRoundsExceededError
+..\work\d_nov_mcp\mcp\client\__init__.py:13: in <module>
+    from mcp.client.client import Client
+..\work\d_nov_mcp\mcp\client\client.py:48: in <module>
+    from mcp.client._memory import InMemoryTransport
+..\work\d_nov_mcp\mcp\client\_memory.py:13: in <module>
+    from mcp.server import Server
+..\work\d_nov_mcp\mcp\server\__init__.py:4: in <module>
+    from .mcpserver import MCPServer
+..\work\d_nov_mcp\mcp\server\mcpserver\__init__.py:28: in <module>
+    from .server import MCPServer, require_client_extension
+..\work\d_nov_mcp\mcp\server\mcpserver\server.py:94: in <module>
+    from mcp.server.stdio import stdio_server
+..\work\d_nov_mcp\mcp\server\stdio.py:27: in <module>
+    from mcp.os.win32.utilities import rebind_std_handle_to_fd
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    """Windows-specific functionality for stdio transport operations."""
+    
+    import logging
+    import shutil
+    import subprocess
+    import sys
+    import weakref
+    from contextlib import suppress
+    from pathlib import Path
+    from typing import BinaryIO, TextIO, TypeAlias, cast
+    
+    import anyio
+    from anyio.abc import Process
+    from anyio.streams.file import FileReadStream, FileWriteStream
+    
+    logger = logging.getLogger(__name__)
+    
+    # Windows-specific imports for Job Objects
+    if sys.platform == "win32":
+        import msvcrt
+    
+>       import pywintypes
+E       ModuleNotFoundError: No module named 'pywintypes'
+
+..\work\d_nov_mcp\mcp\os\win32\utilities.py:22: ModuleNotFoundError
+____________ test_figma_tool_schema_and_page_overview[False-False] ____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000214B14EFFB0>
+file_targeted = False, page_overview = False
+
+    @pytest.mark.parametrize("file_targeted", [False, True])
+    @pytest.mark.parametrize("page_overview", [False, True])
+    def test_figma_tool_schema_and_page_overview(monkeypatch, file_targeted, page_overview):
+        from contextlib import asynccontextmanager
+        from mcp.types import Tool, ListToolsResult, CallToolResult, TextContent, ImageContent
+>       import mcp
+
+tests\test_session_adapters.py:232: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\work\d_nov_mcp\mcp\__init__.py:65: in <module>
+    from .client.client import Client
+..\work\d_nov_mcp\mcp\client\__init__.py:13: in <module>
+    from mcp.client.client import Client
+..\work\d_nov_mcp\mcp\client\client.py:48: in <module>
+    from mcp.client._memory import InMemoryTransport
+..\work\d_nov_mcp\mcp\client\_memory.py:13: in <module>
+    from mcp.server import Server
+..\work\d_nov_mcp\mcp\server\__init__.py:4: in <module>
+    from .mcpserver import MCPServer
+..\work\d_nov_mcp\mcp\server\mcpserver\__init__.py:28: in <module>
+    from .server import MCPServer, require_client_extension
+..\work\d_nov_mcp\mcp\server\mcpserver\server.py:94: in <module>
+    from mcp.server.stdio import stdio_server
+..\work\d_nov_mcp\mcp\server\stdio.py:27: in <module>
+    from mcp.os.win32.utilities import rebind_std_handle_to_fd
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    """Windows-specific functionality for stdio transport operations."""
+    
+    import logging
+    import shutil
+    import subprocess
+    import sys
+    import weakref
+    from contextlib import suppress
+    from pathlib import Path
+    from typing import BinaryIO, TextIO, TypeAlias, cast
+    
+    import anyio
+    from anyio.abc import Process
+    from anyio.streams.file import FileReadStream, FileWriteStream
+    
+    logger = logging.getLogger(__name__)
+    
+    # Windows-specific imports for Job Objects
+    if sys.platform == "win32":
+        import msvcrt
+    
+>       import pywintypes
+E       ModuleNotFoundError: No module named 'pywintypes'
+
+..\work\d_nov_mcp\mcp\os\win32\utilities.py:22: ModuleNotFoundError
+____________ test_figma_tool_schema_and_page_overview[False-True] _____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000214AFA24440>
+file_targeted = True, page_overview = False
+
+    @pytest.mark.parametrize("file_targeted", [False, True])
+    @pytest.mark.parametrize("page_overview", [False, True])
+    def test_figma_tool_schema_and_page_overview(monkeypatch, file_targeted, page_overview):
+        from contextlib import asynccontextmanager
+        from mcp.types import Tool, ListToolsResult, CallToolResult, TextContent, ImageContent
+>       import mcp
+
+tests\test_session_adapters.py:232: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\work\d_nov_mcp\mcp\__init__.py:65: in <module>
+    from .client.client import Client
+..\work\d_nov_mcp\mcp\client\__init__.py:13: in <module>
+    from mcp.client.client import Client
+..\work\d_nov_mcp\mcp\client\client.py:48: in <module>
+    from mcp.client._memory import InMemoryTransport
+..\work\d_nov_mcp\mcp\client\_memory.py:13: in <module>
+    from mcp.server import Server
+..\work\d_nov_mcp\mcp\server\__init__.py:4: in <module>
+    from .mcpserver import MCPServer
+..\work\d_nov_mcp\mcp\server\mcpserver\__init__.py:28: in <module>
+    from .server import MCPServer, require_client_extension
+..\work\d_nov_mcp\mcp\server\mcpserver\server.py:94: in <module>
+    from mcp.server.stdio import stdio_server
+..\work\d_nov_mcp\mcp\server\stdio.py:27: in <module>
+    from mcp.os.win32.utilities import rebind_std_handle_to_fd
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    """Windows-specific functionality for stdio transport operations."""
+    
+    import logging
+    import shutil
+    import subprocess
+    import sys
+    import weakref
+    from contextlib import suppress
+    from pathlib import Path
+    from typing import BinaryIO, TextIO, TypeAlias, cast
+    
+    import anyio
+    from anyio.abc import Process
+    from anyio.streams.file import FileReadStream, FileWriteStream
+    
+    logger = logging.getLogger(__name__)
+    
+    # Windows-specific imports for Job Objects
+    if sys.platform == "win32":
+        import msvcrt
+    
+>       import pywintypes
+E       ModuleNotFoundError: No module named 'pywintypes'
+
+..\work\d_nov_mcp\mcp\os\win32\utilities.py:22: ModuleNotFoundError
+____________ test_figma_tool_schema_and_page_overview[True-False] _____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000214B15DEC00>
+file_targeted = False, page_overview = True
+
+    @pytest.mark.parametrize("file_targeted", [False, True])
+    @pytest.mark.parametrize("page_overview", [False, True])
+    def test_figma_tool_schema_and_page_overview(monkeypatch, file_targeted, page_overview):
+        from contextlib import asynccontextmanager
+        from mcp.types import Tool, ListToolsResult, CallToolResult, TextContent, ImageContent
+>       import mcp
+
+tests\test_session_adapters.py:232: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\work\d_nov_mcp\mcp\__init__.py:65: in <module>
+    from .client.client import Client
+..\work\d_nov_mcp\mcp\client\__init__.py:13: in <module>
+    from mcp.client.client import Client
+..\work\d_nov_mcp\mcp\client\client.py:48: in <module>
+    from mcp.client._memory import InMemoryTransport
+..\work\d_nov_mcp\mcp\client\_memory.py:13: in <module>
+    from mcp.server import Server
+..\work\d_nov_mcp\mcp\server\__init__.py:4: in <module>
+    from .mcpserver import MCPServer
+..\work\d_nov_mcp\mcp\server\mcpserver\__init__.py:28: in <module>
+    from .server import MCPServer, require_client_extension
+..\work\d_nov_mcp\mcp\server\mcpserver\server.py:94: in <module>
+    from mcp.server.stdio import stdio_server
+..\work\d_nov_mcp\mcp\server\stdio.py:27: in <module>
+    from mcp.os.win32.utilities import rebind_std_handle_to_fd
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    """Windows-specific functionality for stdio transport operations."""
+    
+    import logging
+    import shutil
+    import subprocess
+    import sys
+    import weakref
+    from contextlib import suppress
+    from pathlib import Path
+    from typing import BinaryIO, TextIO, TypeAlias, cast
+    
+    import anyio
+    from anyio.abc import Process
+    from anyio.streams.file import FileReadStream, FileWriteStream
+    
+    logger = logging.getLogger(__name__)
+    
+    # Windows-specific imports for Job Objects
+    if sys.platform == "win32":
+        import msvcrt
+    
+>       import pywintypes
+E       ModuleNotFoundError: No module named 'pywintypes'
+
+..\work\d_nov_mcp\mcp\os\win32\utilities.py:22: ModuleNotFoundError
+_____________ test_figma_tool_schema_and_page_overview[True-True] _____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000214AE6B7EC0>
+file_targeted = True, page_overview = True
+
+    @pytest.mark.parametrize("file_targeted", [False, True])
+    @pytest.mark.parametrize("page_overview", [False, True])
+    def test_figma_tool_schema_and_page_overview(monkeypatch, file_targeted, page_overview):
+        from contextlib import asynccontextmanager
+        from mcp.types import Tool, ListToolsResult, CallToolResult, TextContent, ImageContent
+>       import mcp
+
+tests\test_session_adapters.py:232: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\work\d_nov_mcp\mcp\__init__.py:65: in <module>
+    from .client.client import Client
+..\work\d_nov_mcp\mcp\client\__init__.py:13: in <module>
+    from mcp.client.client import Client
+..\work\d_nov_mcp\mcp\client\client.py:48: in <module>
+    from mcp.client._memory import InMemoryTransport
+..\work\d_nov_mcp\mcp\client\_memory.py:13: in <module>
+    from mcp.server import Server
+..\work\d_nov_mcp\mcp\server\__init__.py:4: in <module>
+    from .mcpserver import MCPServer
+..\work\d_nov_mcp\mcp\server\mcpserver\__init__.py:28: in <module>
+    from .server import MCPServer, require_client_extension
+..\work\d_nov_mcp\mcp\server\mcpserver\server.py:94: in <module>
+    from mcp.server.stdio import stdio_server
+..\work\d_nov_mcp\mcp\server\stdio.py:27: in <module>
+    from mcp.os.win32.utilities import rebind_std_handle_to_fd
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    """Windows-specific functionality for stdio transport operations."""
+    
+    import logging
+    import shutil
+    import subprocess
+    import sys
+    import weakref
+    from contextlib import suppress
+    from pathlib import Path
+    from typing import BinaryIO, TextIO, TypeAlias, cast
+    
+    import anyio
+    from anyio.abc import Process
+    from anyio.streams.file import FileReadStream, FileWriteStream
+    
+    logger = logging.getLogger(__name__)
+    
+    # Windows-specific imports for Job Objects
+    if sys.platform == "win32":
+        import msvcrt
+    
+>       import pywintypes
+E       ModuleNotFoundError: No module named 'pywintypes'
+
+..\work\d_nov_mcp\mcp\os\win32\utilities.py:22: ModuleNotFoundError
+_ test_figma_inspection_keeps_observed_siblings_but_clears_scope_on_version_change _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000214AFC72F30>
+
+    def test_figma_inspection_keeps_observed_siblings_but_clears_scope_on_version_change(monkeypatch):
+        from contextlib import asynccontextmanager
+        from mcp.types import Tool, ListToolsResult, CallToolResult, TextContent
+>       import mcp
+
+tests\test_session_adapters.py:325: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\work\d_nov_mcp\mcp\__init__.py:65: in <module>
+    from .client.client import Client
+..\work\d_nov_mcp\mcp\client\__init__.py:13: in <module>
+    from mcp.client.client import Client
+..\work\d_nov_mcp\mcp\client\client.py:48: in <module>
+    from mcp.client._memory import InMemoryTransport
+..\work\d_nov_mcp\mcp\client\_memory.py:13: in <module>
+    from mcp.server import Server
+..\work\d_nov_mcp\mcp\server\__init__.py:4: in <module>
+    from .mcpserver import MCPServer
+..\work\d_nov_mcp\mcp\server\mcpserver\__init__.py:28: in <module>
+    from .server import MCPServer, require_client_extension
+..\work\d_nov_mcp\mcp\server\mcpserver\server.py:94: in <module>
+    from mcp.server.stdio import stdio_server
+..\work\d_nov_mcp\mcp\server\stdio.py:27: in <module>
+    from mcp.os.win32.utilities import rebind_std_handle_to_fd
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    """Windows-specific functionality for stdio transport operations."""
+    
+    import logging
+    import shutil
+    import subprocess
+    import sys
+    import weakref
+    from contextlib import suppress
+    from pathlib import Path
+    from typing import BinaryIO, TextIO, TypeAlias, cast
+    
+    import anyio
+    from anyio.abc import Process
+    from anyio.streams.file import FileReadStream, FileWriteStream
+    
+    logger = logging.getLogger(__name__)
+    
+    # Windows-specific imports for Job Objects
+    if sys.platform == "win32":
+        import msvcrt
+    
+>       import pywintypes
+E       ModuleNotFoundError: No module named 'pywintypes'
+
+..\work\d_nov_mcp\mcp\os\win32\utilities.py:22: ModuleNotFoundError
+________ test_oauth_storage_is_endpoint_bound_and_tokens_not_plaintext ________
+
+tmp_path = WindowsPath('C:/Users/nozomi222333/AppData/Local/Temp/pytest-of-nozomi222333/pytest-40/test_oauth_storage_is_endpoint0')
+
+    def test_oauth_storage_is_endpoint_bound_and_tokens_not_plaintext(tmp_path):
+        from mcp.shared.auth import OAuthToken
+        path = tmp_path / "oauth.dat"
+        storage = OAuthStorage("https://mcp.figma.com/mcp", path)
+        token = OAuthToken(access_token="fixture-token-not-real", token_type="Bearer", expires_in=3600)
+>       asyncio.run(storage.set_tokens(token))
+
+tests\test_session_models_auth.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\..\..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+engine\figma_auth.py:70: in set_tokens
+    self._save(data)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <engine.figma_auth.OAuthStorage object at 0x00000214B1767080>
+data = {'tokens': {'access_token': 'fixture-token-not-real', 'token_type': 'Bearer', 'expires_in': 3600, 'scope': None, ...}, 'token_issued_at': 1793788862.446909, 'endpoint': 'https://mcp.figma.com/mcp'}
+
+    def _save(self, data: dict) -> None:
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        data["endpoint"] = self.endpoint
+        raw = json.dumps(data).encode("utf-8")
+        if os.name == "nt":
+>           import win32crypt
+E           ModuleNotFoundError: No module named 'win32crypt'
+
+engine\figma_auth.py:50: ModuleNotFoundError
+___ test_registration_failure_is_detected_inside_transport_exception_group ____
+
+    def test_registration_failure_is_detected_inside_transport_exception_group():
+        from engine.figma_auth import _registration_failed
+>       from mcp.client.auth.exceptions import OAuthRegistrationError
+
+tests\test_session_models_auth.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\work\d_nov_mcp\mcp\__init__.py:65: in <module>
+    from .client.client import Client
+..\work\d_nov_mcp\mcp\client\__init__.py:13: in <module>
+    from mcp.client.client import Client
+..\work\d_nov_mcp\mcp\client\client.py:48: in <module>
+    from mcp.client._memory import InMemoryTransport
+..\work\d_nov_mcp\mcp\client\_memory.py:13: in <module>
+    from mcp.server import Server
+..\work\d_nov_mcp\mcp\server\__init__.py:4: in <module>
+    from .mcpserver import MCPServer
+..\work\d_nov_mcp\mcp\server\mcpserver\__init__.py:28: in <module>
+    from .server import MCPServer, require_client_extension
+..\work\d_nov_mcp\mcp\server\mcpserver\server.py:94: in <module>
+    from mcp.server.stdio import stdio_server
+..\work\d_nov_mcp\mcp\server\stdio.py:27: in <module>
+    from mcp.os.win32.utilities import rebind_std_handle_to_fd
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    """Windows-specific functionality for stdio transport operations."""
+    
+    import logging
+    import shutil
+    import subprocess
+    import sys
+    import weakref
+    from contextlib import suppress
+    from pathlib import Path
+    from typing import BinaryIO, TextIO, TypeAlias, cast
+    
+    import anyio
+    from anyio.abc import Process
+    from anyio.streams.file import FileReadStream, FileWriteStream
+    
+    logger = logging.getLogger(__name__)
+    
+    # Windows-specific imports for Job Objects
+    if sys.platform == "win32":
+        import msvcrt
+    
+>       import pywintypes
+E       ModuleNotFoundError: No module named 'pywintypes'
+
+..\work\d_nov_mcp\mcp\os\win32\utilities.py:22: ModuleNotFoundError
+______ test_figma_provider_uses_advertised_client_authentication_method _______
+
+tmp_path = WindowsPath('C:/Users/nozomi222333/AppData/Local/Temp/pytest-of-nozomi222333/pytest-40/test_figma_provider_uses_adver0')
+
+    def test_figma_provider_uses_advertised_client_authentication_method(tmp_path):
+        from engine.figma_auth import oauth_provider
+>       provider = oauth_provider("https://mcp.figma.com/mcp", OAuthStorage("https://mcp.figma.com/mcp", tmp_path / "token.dat"))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_session_models_auth.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+engine\figma_auth.py:84: in oauth_provider
+    from mcp.client.auth import OAuthClientProvider
+..\work\d_nov_mcp\mcp\__init__.py:65: in <module>
+    from .client.client import Client
+..\work\d_nov_mcp\mcp\client\__init__.py:13: in <module>
+    from mcp.client.client import Client
+..\work\d_nov_mcp\mcp\client\client.py:48: in <module>
+    from mcp.client._memory import InMemoryTransport
+..\work\d_nov_mcp\mcp\client\_memory.py:13: in <module>
+    from mcp.server import Server
+..\work\d_nov_mcp\mcp\server\__init__.py:4: in <module>
+    from .mcpserver import MCPServer
+..\work\d_nov_mcp\mcp\server\mcpserver\__init__.py:28: in <module>
+    from .server import MCPServer, require_client_extension
+..\work\d_nov_mcp\mcp\server\mcpserver\server.py:94: in <module>
+    from mcp.server.stdio import stdio_server
+..\work\d_nov_mcp\mcp\server\stdio.py:27: in <module>
+    from mcp.os.win32.utilities import rebind_std_handle_to_fd
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    """Windows-specific functionality for stdio transport operations."""
+    
+    import logging
+    import shutil
+    import subprocess
+    import sys
+    import weakref
+    from contextlib import suppress
+    from pathlib import Path
+    from typing import BinaryIO, TextIO, TypeAlias, cast
+    
+    import anyio
+    from anyio.abc import Process
+    from anyio.streams.file import FileReadStream, FileWriteStream
+    
+    logger = logging.getLogger(__name__)
+    
+    # Windows-specific imports for Job Objects
+    if sys.platform == "win32":
+        import msvcrt
+    
+>       import pywintypes
+E       ModuleNotFoundError: No module named 'pywintypes'
+
+..\work\d_nov_mcp\mcp\os\win32\utilities.py:22: ModuleNotFoundError
+=========================== short test summary info ===========================
+FAILED tests/test_session_adapters.py::test_mcp_sdk_error_response_is_not_treated_as_success
+FAILED tests/test_session_adapters.py::test_figma_tool_schema_and_page_overview[False-False]
+FAILED tests/test_session_adapters.py::test_figma_tool_schema_and_page_overview[False-True]
+FAILED tests/test_session_adapters.py::test_figma_tool_schema_and_page_overview[True-False]
+FAILED tests/test_session_adapters.py::test_figma_tool_schema_and_page_overview[True-True]
+FAILED tests/test_session_adapters.py::test_figma_inspection_keeps_observed_siblings_but_clears_scope_on_version_change
+FAILED tests/test_session_models_auth.py::test_oauth_storage_is_endpoint_bound_and_tokens_not_plaintext
+FAILED tests/test_session_models_auth.py::test_registration_failure_is_detected_inside_transport_exception_group
+FAILED tests/test_session_models_auth.py::test_figma_provider_uses_advertised_client_authentication_method
+9 failed, 320 passed, 3 subtests passed in 109.43s (0:01:49)

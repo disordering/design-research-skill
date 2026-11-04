@@ -1,0 +1,11 @@
+{
+  "UTC": "2026-11-04T10:35:06.958184+00:00",
+  "模型": "gpt-6-astra",
+  "真实调用上限": 4,
+  "git": "66a0f0919ada6d334565c3451e9f16ea95000bc9",
+  "源文件SHA256": {
+    "engine\\session_service.py": "790f8f53014851ac718e79a33e83bf8c93d641fdd5e9fe691e4924d3a788945d",
+    "engine\\session_verification.py": "809ccc248f5039b3081b41d070505ebe3faa296b6eec620eaf0f104d2ade832a"
+  },
+  "预期隔离": "验收侧预期文件未传入Codex；CLI仅收到产品组装的场景、规则与结构契约"
+}

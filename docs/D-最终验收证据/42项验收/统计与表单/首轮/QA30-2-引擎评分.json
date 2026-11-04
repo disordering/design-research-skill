@@ -1,0 +1,43 @@
+{
+  "schema_version": "session-evaluation-1.1",
+  "dataset": "QA30",
+  "session_id": "session-251cd1ab079b49ed8da480f1f675b2a8",
+  "run_id": "run-75c3bcb22dfa427a9e28d9390402f5cc",
+  "report_version": 1,
+  "report_completeness": "partial",
+  "finding_metrics": {
+    "expected": 0,
+    "actual": 0,
+    "matched": 0,
+    "matched_predictions": 0,
+    "missed": 0,
+    "extra": 0,
+    "duplicates": 0,
+    "suggestions": 0,
+    "conflicts": 0,
+    "overlap_pending": 0,
+    "precision": null,
+    "recall": null,
+    "duplicate_rate": null,
+    "f1": null
+  },
+  "claim_metrics": {
+    "total": 0,
+    "supported": 0,
+    "derived": 0,
+    "support_rate": null
+  },
+  "coverage_metrics": {
+    "required": 0,
+    "covered": 0,
+    "missing": 0,
+    "missing_by_class": {}
+  },
+  "verifier": {},
+  "matches": [],
+  "missed": [],
+  "extra": [],
+  "duplicates": [],
+  "separate": [],
+  "overlap_pending": []
+}

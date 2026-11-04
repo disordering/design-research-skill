@@ -187,7 +187,7 @@ def finding_location_evidence(
             evidence for evidence in claim_candidates
             if (action := _action_for_evidence(session, evidence)) is not None
             and action.status == "executed"
-            and action.kind in {"click", "fill", "scroll", "back", "navigate"}
+            and action.kind in {"click", "fill", "select", "scroll", "back", "navigate"}
         ]
         if action_results:
             return action_results[-1]

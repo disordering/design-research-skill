@@ -1,0 +1,298 @@
+{
+  "提交基线": "66a0f0919ada6d334565c3451e9f16ea95000bc9",
+  "冻结时间UTC": "2026-11-04T10:46:08.427396+00:00",
+  "说明": "提交基线加本轮已通过统一回归的生产修复，逐字节复制Python引擎与方法库。正式九会话统一从此包导入。无配置、密钥、数据库。",
+  "回归": "根代理已验后端329主项+3子场景，前端29",
+  "文件": [
+    {
+      "路径": "engine/__init__.py",
+      "字节": 235,
+      "SHA256": "73d73ad0a29999523e3ffcff4c75605c7efabece18c8afa2e4708b2db9b41a3a"
+    },
+    {
+      "路径": "engine/__main__.py",
+      "字节": 33,
+      "SHA256": "c13eb66970ae37b8b044f428b309e67868814b90a8bb408806f3316ce4dfbc5b"
+    },
+    {
+      "路径": "engine/advanced.py",
+      "字节": 35368,
+      "SHA256": "4a4d8f125881b8708da4b79bb6aa8927642c63c1708d7ea5941c7e0e6b0d5b36"
+    },
+    {
+      "路径": "engine/advanced_contracts.py",
+      "字节": 6074,
+      "SHA256": "96c046c255643f1b536ef5e5ea0fcb8b862f489d59159b534a7bac151f6d9582"
+    },
+    {
+      "路径": "engine/api.py",
+      "字节": 7089,
+      "SHA256": "4b2d8bcf91f392f66f0b401bf5988afe95658726aa5ace663768acd6ce4e7632"
+    },
+    {
+      "路径": "engine/cli.py",
+      "字节": 11089,
+      "SHA256": "1d246e6868ceefda530591d440b83455b97980659d8a3944c3a037e952294893"
+    },
+    {
+      "路径": "engine/config.py",
+      "字节": 5422,
+      "SHA256": "f0b25d6fe78b2ab91035db39064630697480925da5cfe9393c499d4c94e678a5"
+    },
+    {
+      "路径": "engine/contracts.py",
+      "字节": 7250,
+      "SHA256": "9bf6aefafc96a34ec6e98d85fa66a420d99389a9cbaa7447a62e6f541a4dd81e"
+    },
+    {
+      "路径": "engine/criteria.py",
+      "字节": 2821,
+      "SHA256": "91ca19f6e0597bd9c834cd487dd90acfdbeb709355d0a454793f3753a47b1236"
+    },
+    {
+      "路径": "engine/cv_metrics.py",
+      "字节": 16545,
+      "SHA256": "e2ac4bf89d5ae1a4dddda32532e58bf8c1b3afd51e746068376d6d3c66c9a820"
+    },
+    {
+      "路径": "engine/errors.py",
+      "字节": 649,
+      "SHA256": "f0c184fe3f72e7bb87d2b9319c528c7ffcebfa76dd5518c6eb868a4815237a93"
+    },
+    {
+      "路径": "engine/figma_auth.py",
+      "字节": 7637,
+      "SHA256": "2c6cd23f57e3b7829bbcbafd2ac5e05e3b10b8ef773e88b3c6b309057cc2d5fe"
+    },
+    {
+      "路径": "engine/figma_report.py",
+      "字节": 31176,
+      "SHA256": "ac12fb271423ac4c2b8978d01a19412776ea2dcfae1c5dc9a584a8f8d7cfc36e"
+    },
+    {
+      "路径": "engine/imaging.py",
+      "字节": 4640,
+      "SHA256": "eaaeafd9dd7dd33a8767347c730f16dd7a827488794f7b5c647ef9ffff88b7db"
+    },
+    {
+      "路径": "engine/local_model.py",
+      "字节": 12527,
+      "SHA256": "89f858e31b3272c714f09e8c0d57238b0c9149fc6b66ed38fbaad482cd6c6cb8"
+    },
+    {
+      "路径": "engine/methods.py",
+      "字节": 4731,
+      "SHA256": "84496890db540c3e109fc670fa8f2e3d2581759822678102bac756227e3786db"
+    },
+    {
+      "路径": "engine/model.py",
+      "字节": 11794,
+      "SHA256": "934e5ff4f74e38e694e189247f7439174e414262b14d161ff808dbc95992f0a3"
+    },
+    {
+      "路径": "engine/parsing.py",
+      "字节": 2388,
+      "SHA256": "4f6445b64851896f79ede4079a306ff1a0139930c6016a2e7e62f0f177cf4968"
+    },
+    {
+      "路径": "engine/prompting.py",
+      "字节": 7269,
+      "SHA256": "e8dc76dc8e41f213af59d24c8c55af4dac41ea494581a65987e56d55bf8fee0b"
+    },
+    {
+      "路径": "engine/runtime.py",
+      "字节": 2271,
+      "SHA256": "91e3a4ad4086d2e046521aea891ffad67c93c8d72fd9406c4d5f644e3f4355ce"
+    },
+    {
+      "路径": "engine/service.py",
+      "字节": 15925,
+      "SHA256": "0ec108792b13f605e3cffd58fcd3ae78ff0043ac09570757923177d4db7958d2"
+    },
+    {
+      "路径": "engine/session_adapters.py",
+      "字节": 75641,
+      "SHA256": "1c96354883b5c6b97cfca6e87813d351fa457948b3bf27a8accdf977857e5e27"
+    },
+    {
+      "路径": "engine/session_api.py",
+      "字节": 6843,
+      "SHA256": "f8f2101249bd145c678c3ee953c4ea25f1f7053dbe54106fc959cbe9aa3ab12e"
+    },
+    {
+      "路径": "engine/session_branches.py",
+      "字节": 3259,
+      "SHA256": "1005f2cf7fbf6203d8ddf4c42a9267b991516305d319c4e2f2b2894d9fcce40d"
+    },
+    {
+      "路径": "engine/session_cli.py",
+      "字节": 7025,
+      "SHA256": "e83c30b2540435218da5900ae11c9f8f0c5c0166d3bdd00535e9d612fe55f03c"
+    },
+    {
+      "路径": "engine/session_context.py",
+      "字节": 20265,
+      "SHA256": "44f325f2a321553488595d0889339bbe6ace92cd7e4ad0285925c58d5a8898a5"
+    },
+    {
+      "路径": "engine/session_contracts.py",
+      "字节": 26925,
+      "SHA256": "efd364d33f28de0342c622292513d35207cfbceec462b83eded746120c575152"
+    },
+    {
+      "路径": "engine/session_coverage.py",
+      "字节": 9960,
+      "SHA256": "bbba1941a7d8f5091817382e8c92ca77f074a1de39c664c25f8ccbf3e8362b5a"
+    },
+    {
+      "路径": "engine/session_evaluation.py",
+      "字节": 16229,
+      "SHA256": "524dd0c03fb537ca8f0806a10ee7b4e8bb88f76c7029faa43ca7da6246e1327e"
+    },
+    {
+      "路径": "engine/session_exploration.py",
+      "字节": 4100,
+      "SHA256": "62c96ac229464cd90ed57e58983a29d2fd666b7a4d98aded9836c19aa5c0a200"
+    },
+    {
+      "路径": "engine/session_flow.py",
+      "字节": 4316,
+      "SHA256": "e124851ec4247297e1877f9224bcc94b43e198f2021b6361e74346bc72909d42"
+    },
+    {
+      "路径": "engine/session_invariants.py",
+      "字节": 7055,
+      "SHA256": "898be255cead789340108e350588cf5e6abdb17adfd903ab059317c036e79b8a"
+    },
+    {
+      "路径": "engine/session_materials.py",
+      "字节": 8950,
+      "SHA256": "628720933a7c8f11b28cddab14c07606792a9244814885bcc3937b1e277123d0"
+    },
+    {
+      "路径": "engine/session_models.py",
+      "字节": 3196,
+      "SHA256": "40f2f7ca591efb55e799b7e49544b44427280241642c3dede39908bdc37b57ec"
+    },
+    {
+      "路径": "engine/session_objects.py",
+      "字节": 12245,
+      "SHA256": "1ea51902bfc5839da71b2e0005bc056fa7498038790731c0f441b4fa22f3e0e3"
+    },
+    {
+      "路径": "engine/session_perception.py",
+      "字节": 20881,
+      "SHA256": "e128a48a61bae2c65ffb820e2d4b0bbed0946bd1515cef1946553c56234038ca"
+    },
+    {
+      "路径": "engine/session_report.py",
+      "字节": 121371,
+      "SHA256": "0cb05de87b31a8ac0baabd5ab36ee5d5a920557699dae7894e9b450bfe997fb4"
+    },
+    {
+      "路径": "engine/session_screen_review.py",
+      "字节": 29634,
+      "SHA256": "3ceca92cde41a8e789c70b1bd7bfddf9a2f077701faba791c65023816c682ba1"
+    },
+    {
+      "路径": "engine/session_service.py",
+      "字节": 180745,
+      "SHA256": "790f8f53014851ac718e79a33e83bf8c93d641fdd5e9fe691e4924d3a788945d"
+    },
+    {
+      "路径": "engine/session_store.py",
+      "字节": 7147,
+      "SHA256": "0423ba8b0279ebac88228517d125e64928baae3aa391ecdaf04ec19b88855dea"
+    },
+    {
+      "路径": "engine/session_targets.py",
+      "字节": 1656,
+      "SHA256": "e38483b5b04c5f38bf062d6697f480295481a1916b7c964c3f72458ef9318ce5"
+    },
+    {
+      "路径": "engine/session_verification.py",
+      "字节": 19436,
+      "SHA256": "809ccc248f5039b3081b41d070505ebe3faa296b6eec620eaf0f104d2ade832a"
+    },
+    {
+      "路径": "engine/staged.py",
+      "字节": 43794,
+      "SHA256": "8d45911c2dfbb46d3400f751d1c5427900cd214d96e9bbd3ac0eb64b5fce3c7c"
+    },
+    {
+      "路径": "engine/stub.py",
+      "字节": 3924,
+      "SHA256": "e028b3af6452f31ff183e66a14d0e829e872473cd820f720ecaa10f8087d85bc"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/00先看这个！！！！-阅读与开发交接.md",
+      "字节": 4438,
+      "SHA256": "6dca7b14918a08d65e40362bfec2fc40a1f8f1d0492e4f356b2ac9b8f00d051e"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/01-04-场景输入流程与技术路径.md",
+      "字节": 31598,
+      "SHA256": "fe432cf3851ad10528e53d6fecc14e9ffaba0a4fafd96a1b6ee61c4007c28347"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/05-24条判据修订与变更对照.md",
+      "字节": 47402,
+      "SHA256": "bd2f82f8d8e539d2011b0b684d77de775b0149ec0e14736717944f2057847c99"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/05-判据库-v0.2.json",
+      "字节": 19366,
+      "SHA256": "b785eb9c6b64b5d9ceb87ca76430af4a2658c944c9aff99a97ce9298bdf54af7"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/05-判据执行补充-v0.2.json",
+      "字节": 28760,
+      "SHA256": "8e502b943023c7e39a8da6a479c1cc09f621c9474520e4f116cae0553bc9c24d"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/05-逐字段变更对照.csv",
+      "字节": 42317,
+      "SHA256": "d0b1d25442662ecf10150e923b98b8049ad7291e2bf56653690a138392d8307d"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/06-新场景方法-v0.2.json",
+      "字节": 18672,
+      "SHA256": "1702aa0350c41ced0363a41d73c46aeb547d60d7299616964875b51ce8fd689c"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/06-新场景方法与正反例.md",
+      "字节": 17983,
+      "SHA256": "e21e0996cc25bc218f5e24e2c3a7aa66649001eb58ad00e84fcb5fc88b48ca26"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/07-会话变更重查与复审规则.md",
+      "字节": 9473,
+      "SHA256": "c9a5f573648a20094f4b0c4602043979b33ea3cb935a6976b641cf57b539f025"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/08-问题表达严重度与评价验收.md",
+      "字节": 13282,
+      "SHA256": "4d92cfcfdb8417a20678995528ea0180f6182eb52b0b2becbb3a7fc44886eead"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/09-开发验收用例.json",
+      "字节": 13105,
+      "SHA256": "fc85e0bd301b081d393ab4764f0f0b59003e2462d842ebee91bc990eb9f41f60"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/09-开发验收用例.md",
+      "字节": 4920,
+      "SHA256": "e2ca3487871026558697e1283734849af2ef94de25b984ade9ae8334a73a2fd3"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/10-来源索引.json",
+      "字节": 1853,
+      "SHA256": "e6147e42231bb4602cb506caa7a2d6ff69812b2d7d1289731a33220db667017a"
+    },
+    {
+      "路径": "方法专家开发交付-v0.2/11-交付校验结果.json",
+      "字节": 8316,
+      "SHA256": "3ec123147dae0c46a6bd2a473a0c5f0bbe5f1d311f42bc2568e41b63b5694cad"
+    }
+  ]
+}

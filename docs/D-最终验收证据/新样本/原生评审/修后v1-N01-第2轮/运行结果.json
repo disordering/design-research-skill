@@ -1,0 +1,140 @@
+{
+  "会话": "session-d52bfcc6dfc641bc98aeedbcfa8ae1ea",
+  "上下文版本": 1,
+  "报告版本": 1,
+  "状态": "completed",
+  "完整度": "partial",
+  "模型调用": 6,
+  "已记录调用状态": {
+    "validated": 6
+  },
+  "本轮已记录调用": 6,
+  "本轮有效范围检查": {
+    "总数": 46,
+    "执行状态": {
+      "not_executed": 46
+    }
+  },
+  "本轮judge实际输入": {
+    "唯一检查数": 0,
+    "检查ID": []
+  },
+  "本轮judge输入与当前范围交集": {
+    "唯一检查数": 0,
+    "检查ID": []
+  },
+  "当前executed但本轮未进judge": {
+    "唯一检查数": 0,
+    "检查ID": []
+  },
+  "本轮judge有效输出": {
+    "唯一检查数": 0,
+    "检查ID": []
+  },
+  "全部历史检查": {
+    "总数": 46,
+    "执行状态": {
+      "not_executed": 46
+    }
+  },
+  "发现": [],
+  "复审": [],
+  "动作": [],
+  "问题": [],
+  "警告": [],
+  "运行说明": [],
+  "契约问题": [
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-8feebfcf352e8f36 尚未覆盖。",
+      "coverage_id": "coverage-8feebfcf352e8f36",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-c7e6550b1db32aa6 尚未覆盖。",
+      "coverage_id": "coverage-c7e6550b1db32aa6",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-73ad4f0bbd4edd0f 尚未覆盖。",
+      "coverage_id": "coverage-73ad4f0bbd4edd0f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-28561631ef5c1943 尚未覆盖。",
+      "coverage_id": "coverage-28561631ef5c1943",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-49e1191f85849c7e 尚未覆盖。",
+      "coverage_id": "coverage-49e1191f85849c7e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-01e61b924e816181 尚未覆盖。",
+      "coverage_id": "coverage-01e61b924e816181",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-17aa00f5052f7bd3 尚未覆盖。",
+      "coverage_id": "coverage-17aa00f5052f7bd3",
+      "gap_class": "task_not_planned"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-c969c3aabdc2c39e 尚未覆盖。",
+      "coverage_id": "coverage-c969c3aabdc2c39e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-35d643f1d1e726c8 尚未覆盖。",
+      "coverage_id": "coverage-35d643f1d1e726c8",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-815d8fd735d23a2f 尚未覆盖。",
+      "coverage_id": "coverage-815d8fd735d23a2f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-a2d15a3fbad574f7 尚未覆盖。",
+      "coverage_id": "coverage-a2d15a3fbad574f7",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-b1e90fc023928f17 尚未覆盖。",
+      "coverage_id": "coverage-b1e90fc023928f17",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-1330b3666dd938a0 尚未覆盖。",
+      "coverage_id": "coverage-1330b3666dd938a0",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-b8612a8630caf22a 尚未覆盖。",
+      "coverage_id": "coverage-b8612a8630caf22a",
+      "gap_class": "task_not_planned"
+    }
+  ],
+  "结束": "2026-11-04T12:12:16.311714+00:00",
+  "墙钟秒": 534.047,
+  "执行来源": "AI 真实模型验收",
+  "主任务CLI调用": 6,
+  "逐屏CLI调用": 3,
+  "全部CLI调用": 9,
+  "逐屏审查": [],
+  "事件": []
+}

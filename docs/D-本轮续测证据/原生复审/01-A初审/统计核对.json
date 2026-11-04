@@ -1,0 +1,278 @@
+{
+  "会话": "session-6f9704cb7dea45bdb79b7a6ab5389713",
+  "上下文版本": 1,
+  "报告版本": 1,
+  "状态": "completed",
+  "完整度": "partial",
+  "模型调用": 8,
+  "已记录调用状态": {
+    "validated": 8
+  },
+  "本轮已记录调用": 8,
+  "本轮有效范围检查": {
+    "总数": 53,
+    "执行状态": {
+      "executed": 16,
+      "not_executed": 37
+    }
+  },
+  "全部历史检查": {
+    "总数": 53,
+    "执行状态": {
+      "executed": 16,
+      "not_executed": 37
+    }
+  },
+  "发现": [],
+  "复审": [],
+  "动作": [
+    {
+      "action_id": "action-af5ec213a91341dcbeb69ae6aa9f5f70",
+      "source_id": "src-6a906de7fe0c40158f5877fd3b43d70e",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"1\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "2d7a58bb42e684a5f467b15e",
+      "reason": "当前截图同时显示上午一层与下午二层服务台，上午已选、下午未选。先选择下午选项，取得更换选择后的证据，检查TASK01、REQ01及E03、R17，并为后续返回保留与完成结果检查建立基准；尚不认定更换成功。",
+      "target_label": "周五14:00–14:30 二层服务台",
+      "observed_target": "slot / on",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "blocked",
+      "context_version": 1,
+      "run_id": "run-273a5d6bb6d547db9d0bf8b4ce35384d",
+      "evidence_ids": [
+        "ev-e57f71fbe2114b2598a77b2508683b5e",
+        "ev-c609eb48befe403ebb2eeebeaf0a9644"
+      ],
+      "error": "action_target_mismatch: 模型目标为 '周五14:00–14:30 二层服务台'，selector 实际指向 'slot / on'。",
+      "outcome": null
+    }
+  ],
+  "问题": [],
+  "警告": [
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml."
+  ],
+  "运行说明": [
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml."
+  ],
+  "契约问题": [
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-a99f205e861f1a4d 尚未覆盖。",
+      "coverage_id": "coverage-a99f205e861f1a4d",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-72d9e7be966e227c 尚未覆盖。",
+      "coverage_id": "coverage-72d9e7be966e227c",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-e3bb5e72fc24d238 尚未覆盖。",
+      "coverage_id": "coverage-e3bb5e72fc24d238",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-76c64d811f03ffdd 尚未覆盖。",
+      "coverage_id": "coverage-76c64d811f03ffdd",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-6adb44ba8cdba3b6 尚未覆盖。",
+      "coverage_id": "coverage-6adb44ba8cdba3b6",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-ebe0b067cca7f5ba 尚未覆盖。",
+      "coverage_id": "coverage-ebe0b067cca7f5ba",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-059a9f196ddf8696 尚未覆盖。",
+      "coverage_id": "coverage-059a9f196ddf8696",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-977e8133136fbf9f 尚未覆盖。",
+      "coverage_id": "coverage-977e8133136fbf9f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-ed287ed6ebf0b7a9 尚未覆盖。",
+      "coverage_id": "coverage-ed287ed6ebf0b7a9",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-0ea01b12800ce307 尚未覆盖。",
+      "coverage_id": "coverage-0ea01b12800ce307",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-8b14bddc022a216d 尚未覆盖。",
+      "coverage_id": "coverage-8b14bddc022a216d",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-e9e58684158829c3 尚未覆盖。",
+      "coverage_id": "coverage-e9e58684158829c3",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-d07d92440f150027 尚未覆盖。",
+      "coverage_id": "coverage-d07d92440f150027",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-c7a8ca8d0b9ec5d6 尚未覆盖。",
+      "coverage_id": "coverage-c7a8ca8d0b9ec5d6",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-afec992fd4cc5a8e 尚未覆盖。",
+      "coverage_id": "coverage-afec992fd4cc5a8e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-28e1c251bba78325 尚未覆盖。",
+      "coverage_id": "coverage-28e1c251bba78325",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-3a8f140ed8a64918 尚未覆盖。",
+      "coverage_id": "coverage-3a8f140ed8a64918",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-00985e7c4fe62894 尚未覆盖。",
+      "coverage_id": "coverage-00985e7c4fe62894",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-bc783a5757beff12 尚未覆盖。",
+      "coverage_id": "coverage-bc783a5757beff12",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-f8498926b6239df9 尚未覆盖。",
+      "coverage_id": "coverage-f8498926b6239df9",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-9530577c18521c87 尚未覆盖。",
+      "coverage_id": "coverage-9530577c18521c87",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-3872508db3f2f89a 尚未覆盖。",
+      "coverage_id": "coverage-3872508db3f2f89a",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-539d1822505dbf50 尚未覆盖。",
+      "coverage_id": "coverage-539d1822505dbf50",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-2a945c1d3094c9ca 尚未覆盖。",
+      "coverage_id": "coverage-2a945c1d3094c9ca",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-c2faf61a0ddfb4cf 尚未覆盖。",
+      "coverage_id": "coverage-c2faf61a0ddfb4cf",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-00c26f30fe3be1c5 尚未覆盖。",
+      "coverage_id": "coverage-00c26f30fe3be1c5",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-69570b8a3c19099f 尚未覆盖。",
+      "coverage_id": "coverage-69570b8a3c19099f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-253e61bdbac548cd 尚未覆盖。",
+      "coverage_id": "coverage-253e61bdbac548cd",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-d7ef0227f86259c6 尚未覆盖。",
+      "coverage_id": "coverage-d7ef0227f86259c6",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-4743c91ece835dd5 尚未覆盖。",
+      "coverage_id": "coverage-4743c91ece835dd5",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-6aed3feecf32b728 尚未覆盖。",
+      "coverage_id": "coverage-6aed3feecf32b728",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-a26d61fd4701f01d 尚未覆盖。",
+      "coverage_id": "coverage-a26d61fd4701f01d",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-0abbd952b058a1bf 尚未覆盖。",
+      "coverage_id": "coverage-0abbd952b058a1bf",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-073796ca804519b2 尚未覆盖。",
+      "coverage_id": "coverage-073796ca804519b2",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-c50205d6c706490c 尚未覆盖。",
+      "coverage_id": "coverage-c50205d6c706490c",
+      "gap_class": "unobserved_branch"
+    }
+  ]
+}

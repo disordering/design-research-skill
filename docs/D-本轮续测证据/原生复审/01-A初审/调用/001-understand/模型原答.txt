@@ -1,0 +1,134 @@
+{
+  "task_summary": "评审本机演示的修书咨询登记流程：核对两个时段，选择下午二层服务台，在核对页返回选择后再次核对并提交，查看登记结果；后续按三条设计要求分别记录观察及证据。本阶段仅整理材料。",
+  "target_user_summary": "",
+  "review_tasks": [
+    {
+      "task_id": "TASK01",
+      "text": "核对两个时段及其服务台，并更换为下午的二层服务台。",
+      "success_criteria": "可同时核对时段和服务台，并选中下午选项。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"],
+      "branches": []
+    },
+    {
+      "task_id": "TASK02",
+      "text": "进入核对页，使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+      "success_criteria": "返回后保留上一次选择的时段和服务台。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"],
+      "branches": [
+        {
+          "branch_id": "BR01",
+          "trigger": "在核对页返回选择",
+          "expected_outcome": "保留上一次选择的时段和服务台。",
+          "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"],
+          "basis": "explicit"
+        }
+      ]
+    },
+    {
+      "task_id": "TASK03",
+      "text": "为下午的二层服务台完成登记，并查看完成页的登记结果。",
+      "success_criteria": "完成页显示用户最终确认的时段和服务台。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"],
+      "branches": [
+        {
+          "branch_id": "BR02",
+          "trigger": "提交登记",
+          "expected_outcome": "完成页显示用户最终确认的时段和服务台。",
+          "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"],
+          "basis": "explicit"
+        }
+      ]
+    },
+    {
+      "task_id": "TASK04",
+      "text": "需要重新开始时，刷新页面或在完成页按“重新开始”复位。",
+      "success_criteria": "回到选择时段页开始新一轮。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"],
+      "branches": [
+        {
+          "branch_id": "BR03",
+          "trigger": "刷新页面或在完成页按“重新开始”",
+          "expected_outcome": "复位，从选择时段页开始。",
+          "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"],
+          "basis": "explicit"
+        }
+      ]
+    }
+  ],
+  "goals": [],
+  "requirements": [
+    {
+      "id": "REQ01",
+      "text": "选择时同时看得见时段和服务台，用户可以更换选择。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"],
+      "is_assumption": false,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-c609eb48befe403ebb2eeebeaf0a9644",
+          "quote": "1. 选择时同时看得见时段和服务台，用户可以更换选择。"
+        }
+      ]
+    },
+    {
+      "id": "REQ02",
+      "text": "在核对页返回选择时，保留上一次选择的时段和服务台。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"],
+      "is_assumption": false,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-c609eb48befe403ebb2eeebeaf0a9644",
+          "quote": "2. 在核对页返回选择时，保留上一次选择的时段和服务台。"
+        }
+      ]
+    },
+    {
+      "id": "REQ03",
+      "text": "提交后，完成页显示用户最终确认的时段和服务台。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"],
+      "is_assumption": false,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-c609eb48befe403ebb2eeebeaf0a9644",
+          "quote": "3. 提交后，完成页显示用户最终确认的时段和服务台。"
+        }
+      ]
+    },
+    {
+      "id": "REQ04",
+      "text": "刷新页面或在完成页按“重新开始”可复位，每轮从选择时段页开始。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"],
+      "is_assumption": false,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-c609eb48befe403ebb2eeebeaf0a9644",
+          "quote": "每轮从选择时段页开始，刷新页面或在完成页按“重新开始”即可复位。"
+        }
+      ]
+    }
+  ],
+  "opinions": [],
+  "conflicts": [],
+  "relationships": [
+    {
+      "from_evidence_id": "ev-c609eb48befe403ebb2eeebeaf0a9644",
+      "to_evidence_id": "ev-9cbb6f536cfc408cba5de5c0f797d55c",
+      "relation": "same_object",
+      "reason": "冻结任务卡与初始评审委托文字一致，涉及同一登记流程；正式要求以product_spec来源提取。",
+      "basis": "described"
+    },
+    {
+      "from_evidence_id": "ev-c609eb48befe403ebb2eeebeaf0a9644",
+      "to_evidence_id": "ev-e57f71fbe2114b2598a77b2508683b5e",
+      "relation": "same_object",
+      "reason": "任务卡描述修书咨询登记的选择时段页；截图显示该页及周五09:00–09:30一层服务台、周五14:00–14:30二层服务台，当前上午选项被选中。截图仅代表初始画面，不证明后续跳转或登记结果。",
+      "basis": "described"
+    }
+  ],
+  "unknowns": [
+    "未明确目标用户及其熟悉度；未提供独立的产品原始业务目标，评审委托不作为业务目标。",
+    "当前仅有选择时段页的截图和控件记录；更换选择、核对页返回后的保留情况及提交结果尚无动作前后证据。",
+    "刷新和“重新开始”的复位方式已有文字说明，但尚无本轮实际复位观察。",
+    "未提供实现代码或专家意见。材料声明登记仅在本机当前页面生效，不能据此推定生产系统行为。"
+  ],
+  "assumptions": []
+}

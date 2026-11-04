@@ -1,0 +1,48 @@
+{
+  "模型": "gpt-6-astra",
+  "推理设置": "low",
+  "任务卡原文件SHA256": "032be9e7ccd6d2bbb64d8a7dbae120c415418957f2d79708e814fdad002c81f0",
+  "任务卡输入SHA256": "032be9e7ccd6d2bbb64d8a7dbae120c415418957f2d79708e814fdad002c81f0",
+  "完整提示词SHA256": "638f575bcb517e3cd7220aec67d18166284bdc6799f506b80187f187dca64ebd",
+  "图组": [
+    {
+      "图组": "图组01",
+      "图": [
+        {
+          "图号": 1,
+          "输入文件": "输入/图组01/frame-01.png",
+          "原图": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_1104_latest_audit\\H05复审对照\\实测\\A-下午-01核对.png",
+          "原图SHA256": "a07f752a311856f1ec3cf78ff3845814659ff8e3fe814fff96a0b32c6164bb05",
+          "输入图SHA256": "a07f752a311856f1ec3cf78ff3845814659ff8e3fe814fff96a0b32c6164bb05"
+        },
+        {
+          "图号": 2,
+          "输入文件": "输入/图组01/frame-02.png",
+          "原图": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_1104_latest_audit\\H05复审对照\\实测\\A-下午-02回执.png",
+          "原图SHA256": "695da937512c61c9a95f18884ce6491afe2a1df7635e3765bcdce51692f0923a",
+          "输入图SHA256": "695da937512c61c9a95f18884ce6491afe2a1df7635e3765bcdce51692f0923a"
+        }
+      ]
+    },
+    {
+      "图组": "图组02",
+      "图": [
+        {
+          "图号": 1,
+          "输入文件": "输入/图组02/frame-01.png",
+          "原图": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_1104_latest_audit\\H05复审对照\\实测\\B-下午-01核对.png",
+          "原图SHA256": "a07f752a311856f1ec3cf78ff3845814659ff8e3fe814fff96a0b32c6164bb05",
+          "输入图SHA256": "a07f752a311856f1ec3cf78ff3845814659ff8e3fe814fff96a0b32c6164bb05"
+        },
+        {
+          "图号": 2,
+          "输入文件": "输入/图组02/frame-02.png",
+          "原图": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_1104_latest_audit\\H05复审对照\\实测\\B-下午-02回执.png",
+          "原图SHA256": "d68a4e60c22de7b35e17b4ed91c0f3c913136989f212933a33d956195386c709",
+          "输入图SHA256": "d68a4e60c22de7b35e17b4ed91c0f3c913136989f212933a33d956195386c709"
+        }
+      ]
+    }
+  ],
+  "提供给模型的材料": "仅附件两图、完整提示词与输出结构；未提供图组映射、预期、代码或说明"
+}

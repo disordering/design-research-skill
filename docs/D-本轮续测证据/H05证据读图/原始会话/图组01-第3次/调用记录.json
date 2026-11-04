@@ -1,0 +1,48 @@
+{
+  "会话位置": "图组01-第3次",
+  "图组": "图组01",
+  "重复": 3,
+  "模型": "gpt-6-astra",
+  "推理设置": "low",
+  "开始UTC": "2026-11-04T00:29:41.584228+00:00",
+  "输入文本SHA256": "2df1b873622f0e82ade255f4bcc3d0914caf5a8770dd9e3e840200b1c0012fe0",
+  "输入图片": [
+    {
+      "图号": 1,
+      "SHA256": "a07f752a311856f1ec3cf78ff3845814659ff8e3fe814fff96a0b32c6164bb05"
+    },
+    {
+      "图号": 2,
+      "SHA256": "695da937512c61c9a95f18884ce6491afe2a1df7635e3765bcdce51692f0923a"
+    }
+  ],
+  "禁用功能": [
+    "shell_tool",
+    "unified_exec",
+    "view_image",
+    "browser_use",
+    "browser_use_external",
+    "computer_use",
+    "apps",
+    "plugins",
+    "multi_agent",
+    "code_mode_host",
+    "hooks",
+    "skill_search"
+  ],
+  "线程ID": "01a1a3f6-2c42-7a61-a33d-78aa817724c5",
+  "工具项": [
+    {
+      "id": "item_0",
+      "type": "error",
+      "message": "Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`."
+    }
+  ],
+  "退出码": 0,
+  "结束事件": [
+    "turn.completed"
+  ],
+  "状态": "失败",
+  "原因": "会话使用了额外工具，排除",
+  "耗时秒": 14.19
+}

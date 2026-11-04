@@ -1,0 +1,152 @@
+test_identical_existing_coverage_preserves_judgment (test_d_coverage_judgments.CoverageRegression.test_identical_existing_coverage_preserves_judgment) ... ok
+test_new_conflict_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_conflict_has_own_judgment) ... FAIL
+test_new_coverage_does_not_inherit_reevaluation_bypass (test_d_coverage_judgments.CoverageRegression.test_new_coverage_does_not_inherit_reevaluation_bypass) ... FAIL
+test_new_goal_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_goal_has_own_judgment) ... FAIL
+test_new_method_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_method_has_own_judgment) ... FAIL
+test_new_rule_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_rule_has_own_judgment) ... FAIL
+test_no_inherited_budget_consumption (test_d_coverage_judgments.CoverageRegression.test_no_inherited_budget_consumption) ... FAIL
+test_repeated_same_plan_does_not_duplicate_coverage (test_d_coverage_judgments.CoverageRegression.test_repeated_same_plan_does_not_duplicate_coverage) ... FAIL
+test_template_nonexecuted_status_does_not_block_new_coverage (test_d_coverage_judgments.CoverageRegression.test_template_nonexecuted_status_does_not_block_new_coverage) ... 
+  test_template_nonexecuted_status_does_not_block_new_coverage (test_d_coverage_judgments.CoverageRegression.test_template_nonexecuted_status_does_not_block_new_coverage) (status='failed') ... FAIL
+  test_template_nonexecuted_status_does_not_block_new_coverage (test_d_coverage_judgments.CoverageRegression.test_template_nonexecuted_status_does_not_block_new_coverage) (status='not_executed') ... FAIL
+  test_template_nonexecuted_status_does_not_block_new_coverage (test_d_coverage_judgments.CoverageRegression.test_template_nonexecuted_status_does_not_block_new_coverage) (status='blocked') ... FAIL
+test_unscoped_base_gets_new_identity_without_judgment (test_d_coverage_judgments.CoverageRegression.test_unscoped_base_gets_new_identity_without_judgment) ... FAIL
+
+======================================================================
+FAIL: test_new_conflict_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_conflict_has_own_judgment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 89, in test_new_conflict_has_own_judgment
+    self.assert_new("conflict")
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 67, in assert_new
+    self.assertEqual(fresh.execution_status, "planned")
+AssertionError: 'executed' != 'planned'
+- executed
++ planned
+
+
+======================================================================
+FAIL: test_new_coverage_does_not_inherit_reevaluation_bypass (test_d_coverage_judgments.CoverageRegression.test_new_coverage_does_not_inherit_reevaluation_bypass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 135, in test_new_coverage_does_not_inherit_reevaluation_bypass
+    self.assertFalse(new_check.reevaluation_requested)
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_new_goal_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_goal_has_own_judgment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 86, in test_new_goal_has_own_judgment
+    self.assert_new("goal")
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 67, in assert_new
+    self.assertEqual(fresh.execution_status, "planned")
+AssertionError: 'executed' != 'planned'
+- executed
++ planned
+
+
+======================================================================
+FAIL: test_new_method_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_method_has_own_judgment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 83, in test_new_method_has_own_judgment
+    self.assert_new("method")
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 67, in assert_new
+    self.assertEqual(fresh.execution_status, "planned")
+AssertionError: 'executed' != 'planned'
+- executed
++ planned
+
+
+======================================================================
+FAIL: test_new_rule_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_rule_has_own_judgment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 80, in test_new_rule_has_own_judgment
+    self.assert_new("rule")
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 67, in assert_new
+    self.assertEqual(fresh.execution_status, "planned")
+AssertionError: 'executed' != 'planned'
+- executed
++ planned
+
+
+======================================================================
+FAIL: test_no_inherited_budget_consumption (test_d_coverage_judgments.CoverageRegression.test_no_inherited_budget_consumption)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 126, in test_no_inherited_budget_consumption
+    self.assertEqual(self.selected(session), [new_check.check_id])
+AssertionError: Lists differ: [] != ['check-826645c6c7258a8d']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'check-826645c6c7258a8d'
+
+- []
++ ['check-826645c6c7258a8d']
+
+======================================================================
+FAIL: test_repeated_same_plan_does_not_duplicate_coverage (test_d_coverage_judgments.CoverageRegression.test_repeated_same_plan_does_not_duplicate_coverage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 116, in test_repeated_same_plan_does_not_duplicate_coverage
+    self.assertEqual(self.selected(session), [new_check.check_id])
+AssertionError: Lists differ: [] != ['check-826645c6c7258a8d']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'check-826645c6c7258a8d'
+
+- []
++ ['check-826645c6c7258a8d']
+
+======================================================================
+FAIL: test_template_nonexecuted_status_does_not_block_new_coverage (test_d_coverage_judgments.CoverageRegression.test_template_nonexecuted_status_does_not_block_new_coverage) (status='failed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 157, in test_template_nonexecuted_status_does_not_block_new_coverage
+    self.assertEqual(session.checks[1].execution_status, "planned")
+AssertionError: 'failed' != 'planned'
+- failed
++ planned
+
+
+======================================================================
+FAIL: test_template_nonexecuted_status_does_not_block_new_coverage (test_d_coverage_judgments.CoverageRegression.test_template_nonexecuted_status_does_not_block_new_coverage) (status='not_executed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 157, in test_template_nonexecuted_status_does_not_block_new_coverage
+    self.assertEqual(session.checks[1].execution_status, "planned")
+AssertionError: 'not_executed' != 'planned'
+- not_executed
++ planned
+
+
+======================================================================
+FAIL: test_template_nonexecuted_status_does_not_block_new_coverage (test_d_coverage_judgments.CoverageRegression.test_template_nonexecuted_status_does_not_block_new_coverage) (status='blocked')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 157, in test_template_nonexecuted_status_does_not_block_new_coverage
+    self.assertEqual(session.checks[1].execution_status, "planned")
+AssertionError: 'blocked' != 'planned'
+- blocked
++ planned
+
+
+======================================================================
+FAIL: test_unscoped_base_gets_new_identity_without_judgment (test_d_coverage_judgments.CoverageRegression.test_unscoped_base_gets_new_identity_without_judgment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\nozomi222333\Documents\Codex\2026-10-02\wo\work\test_d_coverage_judgments.py", line 146, in test_unscoped_base_gets_new_identity_without_judgment
+    self.assertEqual(old_check.execution_status, "planned")
+AssertionError: 'executed' != 'planned'
+- executed
++ planned
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.004s
+
+FAILED (failures=11)

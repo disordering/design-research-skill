@@ -1,0 +1,45 @@
+{
+  "来源": "05-修后续查",
+  "会话": "session-8e92a333d79d4678bac0b330efcd3e94",
+  "操作员": "AI模型验收-D",
+  "操作者类型": "ai",
+  "操作": "原 Node 前端 → 原 FastAPI → 实际会话数据库；只读恢复、版本切换与导出",
+  "浏览器异常": [],
+  "HTTP": [
+    {
+      "方法": "GET",
+      "URL": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94",
+      "HTTP": 200
+    },
+    {
+      "方法": "GET",
+      "URL": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/updates?after_sequence=186",
+      "HTTP": 200
+    },
+    {
+      "方法": "GET",
+      "URL": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/updates?after_sequence=186",
+      "HTTP": 200
+    },
+    {
+      "方法": "GET",
+      "URL": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/reports/3",
+      "HTTP": 200
+    }
+  ],
+  "运行归档版本": 3,
+  "当前会话版本": 4,
+  "当前会话": "本轮结束 · 阶段 T08 · 上下文 v1 · 报告 v4 · runtime · 部分报告",
+  "发现文字": "发现与人工审核",
+  "复审文字": "逐问题复审",
+  "ZIP": {
+    "SHA256": "ad35c8801bc19c9e815decb3716084f2c0e38f0764508f6b35af88a671af94ab",
+    "成员": 150,
+    "报告版本": 4,
+    "会话": "session-8e92a333d79d4678bac0b330efcd3e94",
+    "模型调用": 55,
+    "复审": []
+  },
+  "历史读回": "本轮结束 · 阶段 T09 · 上下文 v1 · 报告 v3 · runtime · 部分报告 · 历史只读",
+  "历史反馈隐藏": true
+}

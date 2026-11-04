@@ -1,0 +1,452 @@
+{
+  "本轮有效范围检查": {
+    "总数": 109,
+    "执行状态": {
+      "not_executed": 41,
+      "executed": 68
+    }
+  },
+  "本轮judge实际输入": {
+    "唯一检查数": 80,
+    "检查ID": [
+      "check-0a00a5d9772b3122",
+      "check-0b4f5c2c6bb76343",
+      "check-0b70a25c292c2f40",
+      "check-0c1636fdf681c97a",
+      "check-0d693a791eea8fc8",
+      "check-0da148777aab9789",
+      "check-0e4528b2b5a1d179",
+      "check-0f798341ae63b459",
+      "check-16d3f7a18664b398",
+      "check-1c493db4b09ef0dc",
+      "check-1e6448d9ae07af84",
+      "check-271cb715d2106b8e",
+      "check-2a8102adaabd3490",
+      "check-2e62fd8a565cfd39",
+      "check-35a35465464f91a5",
+      "check-36e93bbdbd189e88",
+      "check-3cc962519a611c2b",
+      "check-41b55fff3a399fee",
+      "check-444543cdd8ea9943",
+      "check-490447a227934a79",
+      "check-4b778ea0df21f765",
+      "check-4e428142e4d536dc",
+      "check-528121cb8a53d3d0",
+      "check-52f4f39ef5c766e3",
+      "check-537ec861f23c1c30",
+      "check-541e90f37b5db93b",
+      "check-564d16821ce06320",
+      "check-5844adea57303957",
+      "check-5e50986e00b0346d",
+      "check-6519fd1f41df0b6a",
+      "check-6591fe4f442976cf",
+      "check-70f434322fc37979",
+      "check-73a033f0621a8c51",
+      "check-747ffda4245514a9",
+      "check-7ba93c4d5e819b3c",
+      "check-7d0323bd3d54f378",
+      "check-7fcabc2c2ea7cdab",
+      "check-80667017fb6f6ee8",
+      "check-8477a6f9c4866392",
+      "check-86a839e3bc2b6b54",
+      "check-895f82207cd4bbce",
+      "check-8970ae875175fb57",
+      "check-8b31c5632e1957c7",
+      "check-90387cf79c325cce",
+      "check-90f55f2d9b07aa80",
+      "check-95ad4db6a49fd990",
+      "check-96775d5f642470de",
+      "check-9a7aac2a993adcb1",
+      "check-9ec1de81509bc15a",
+      "check-a0cab4251e9f3a16",
+      "check-a7cf6be682eac5cd",
+      "check-b2b86957b0e73987",
+      "check-b3e4ea04af0eda7c",
+      "check-b7df6d5982b93e5e",
+      "check-b8b7ab3be44243f1",
+      "check-be4ca6626ab49986",
+      "check-c1e608c5aeb77808",
+      "check-c70349e346554b2e",
+      "check-c8ca250602adc5c1",
+      "check-cb0edf5811c3a3f7",
+      "check-cf4fed2edb9eb120",
+      "check-cf7f6550d3c8f4b6",
+      "check-d14211599d99ce9c",
+      "check-d1bae9d9cf6d4ed4",
+      "check-d2920cd0c5d02ed3",
+      "check-da516b728ebecac0",
+      "check-da656379c1a8c398",
+      "check-dcb5b2b95ba9ebdf",
+      "check-de8f98fa82e81ca4",
+      "check-e0605836de75b91d",
+      "check-e0ddef9311091640",
+      "check-e62fecc8fc419c80",
+      "check-e6c1c339e525e622",
+      "check-e968c8970a5892b5",
+      "check-ea7694488eb3c3fd",
+      "check-ebf983bbfd4e93df",
+      "check-ed09706ede715eb7",
+      "check-f1800a6fe1ad465a",
+      "check-f5231da55060a399",
+      "check-f8414ef52912ec95"
+    ]
+  },
+  "本轮judge输入与当前范围交集": {
+    "唯一检查数": 80,
+    "检查ID": [
+      "check-0a00a5d9772b3122",
+      "check-0b4f5c2c6bb76343",
+      "check-0b70a25c292c2f40",
+      "check-0c1636fdf681c97a",
+      "check-0d693a791eea8fc8",
+      "check-0da148777aab9789",
+      "check-0e4528b2b5a1d179",
+      "check-0f798341ae63b459",
+      "check-16d3f7a18664b398",
+      "check-1c493db4b09ef0dc",
+      "check-1e6448d9ae07af84",
+      "check-271cb715d2106b8e",
+      "check-2a8102adaabd3490",
+      "check-2e62fd8a565cfd39",
+      "check-35a35465464f91a5",
+      "check-36e93bbdbd189e88",
+      "check-3cc962519a611c2b",
+      "check-41b55fff3a399fee",
+      "check-444543cdd8ea9943",
+      "check-490447a227934a79",
+      "check-4b778ea0df21f765",
+      "check-4e428142e4d536dc",
+      "check-528121cb8a53d3d0",
+      "check-52f4f39ef5c766e3",
+      "check-537ec861f23c1c30",
+      "check-541e90f37b5db93b",
+      "check-564d16821ce06320",
+      "check-5844adea57303957",
+      "check-5e50986e00b0346d",
+      "check-6519fd1f41df0b6a",
+      "check-6591fe4f442976cf",
+      "check-70f434322fc37979",
+      "check-73a033f0621a8c51",
+      "check-747ffda4245514a9",
+      "check-7ba93c4d5e819b3c",
+      "check-7d0323bd3d54f378",
+      "check-7fcabc2c2ea7cdab",
+      "check-80667017fb6f6ee8",
+      "check-8477a6f9c4866392",
+      "check-86a839e3bc2b6b54",
+      "check-895f82207cd4bbce",
+      "check-8970ae875175fb57",
+      "check-8b31c5632e1957c7",
+      "check-90387cf79c325cce",
+      "check-90f55f2d9b07aa80",
+      "check-95ad4db6a49fd990",
+      "check-96775d5f642470de",
+      "check-9a7aac2a993adcb1",
+      "check-9ec1de81509bc15a",
+      "check-a0cab4251e9f3a16",
+      "check-a7cf6be682eac5cd",
+      "check-b2b86957b0e73987",
+      "check-b3e4ea04af0eda7c",
+      "check-b7df6d5982b93e5e",
+      "check-b8b7ab3be44243f1",
+      "check-be4ca6626ab49986",
+      "check-c1e608c5aeb77808",
+      "check-c70349e346554b2e",
+      "check-c8ca250602adc5c1",
+      "check-cb0edf5811c3a3f7",
+      "check-cf4fed2edb9eb120",
+      "check-cf7f6550d3c8f4b6",
+      "check-d14211599d99ce9c",
+      "check-d1bae9d9cf6d4ed4",
+      "check-d2920cd0c5d02ed3",
+      "check-da516b728ebecac0",
+      "check-da656379c1a8c398",
+      "check-dcb5b2b95ba9ebdf",
+      "check-de8f98fa82e81ca4",
+      "check-e0605836de75b91d",
+      "check-e0ddef9311091640",
+      "check-e62fecc8fc419c80",
+      "check-e6c1c339e525e622",
+      "check-e968c8970a5892b5",
+      "check-ea7694488eb3c3fd",
+      "check-ebf983bbfd4e93df",
+      "check-ed09706ede715eb7",
+      "check-f1800a6fe1ad465a",
+      "check-f5231da55060a399",
+      "check-f8414ef52912ec95"
+    ]
+  },
+  "当前executed但本轮未进judge": {
+    "唯一检查数": 0,
+    "检查ID": []
+  },
+  "CLI原答记录": [
+    {
+      "目录": "001-plan_checks",
+      "操作": "plan_checks",
+      "状态": "已返回",
+      "线程": "01a1a5a8-84f8-7650-a6a8-0b774781a071",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "002-plan_checks",
+      "操作": "plan_checks",
+      "状态": "已返回",
+      "线程": "01a1a5aa-8ac0-76f2-a9e4-4b9ba2364871",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "003-plan_checks",
+      "操作": "plan_checks",
+      "状态": "已返回",
+      "线程": "01a1a5ab-f8e1-7280-9667-d44b57c38637",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "004-plan_checks",
+      "操作": "plan_checks",
+      "状态": "已返回",
+      "线程": "01a1a5ad-b876-7171-b577-1c82595f4ed3",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "005-plan_checks",
+      "操作": "plan_checks",
+      "状态": "已返回",
+      "线程": "01a1a5af-9d4b-7772-8f74-b60d8e9a164a",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "006-plan",
+      "操作": "plan",
+      "状态": "已返回",
+      "线程": "01a1a5b0-e11c-78b3-8e4b-6b12e24f924b",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "007-judge",
+      "操作": "judge",
+      "状态": "已返回",
+      "线程": "01a1a5b1-810c-7123-8f17-abc10df8a884",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "008-judge",
+      "操作": "judge",
+      "状态": "已返回",
+      "线程": "01a1a5b2-fc3b-75d3-bd22-63d1d1cef793",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "009-judge",
+      "操作": "judge",
+      "状态": "已返回",
+      "线程": "01a1a5b4-ba71-7ae2-8fc0-281bfa02d214",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "010-judge",
+      "操作": "judge",
+      "状态": "已返回",
+      "线程": "01a1a5b6-6319-7d23-bb78-aa8e0785c1af",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "011-plan_checks",
+      "操作": "plan_checks",
+      "状态": "已返回",
+      "线程": "01a1a5b8-0a07-74a3-8d53-20d68b4b8c3b",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "012-plan_checks",
+      "操作": "plan_checks",
+      "状态": "已返回",
+      "线程": "01a1a5b9-422a-7c22-8b1b-f94eaec1a3ab",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "013-plan_checks",
+      "操作": "plan_checks",
+      "状态": "已返回",
+      "线程": "01a1a5ba-9253-74b1-ae5b-23a5c228114a",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "014-plan_checks",
+      "操作": "plan_checks",
+      "状态": "已返回",
+      "线程": "01a1a5bc-2abf-7c63-8428-3436ca79c6d1",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "015-plan_checks",
+      "操作": "plan_checks",
+      "状态": "已返回",
+      "线程": "01a1a5bd-44ab-79f1-a6c1-b2ce8a8b5373",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "016-plan_checks",
+      "操作": "plan_checks",
+      "状态": "已返回",
+      "线程": "01a1a5be-440a-7903-83a1-7865e617a505",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "017-plan_checks",
+      "操作": "plan_checks",
+      "状态": "已返回",
+      "线程": "01a1a5bf-d30d-7802-a27d-734697573ead",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "018-plan_checks",
+      "操作": "plan_checks",
+      "状态": "已返回",
+      "线程": "01a1a5c1-028d-7d91-9e5c-8a6ffc98a624",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "019-judge",
+      "操作": "judge",
+      "状态": "已返回",
+      "线程": "01a1a5c2-6a1d-7351-8f95-78a7759df335",
+      "产品采纳": true,
+      "原答完整": true
+    },
+    {
+      "目录": "020-judge",
+      "操作": "judge",
+      "状态": "已返回",
+      "线程": "01a1a5c3-d324-7e82-8096-aa21d9e94071",
+      "产品采纳": false,
+      "原答完整": true
+    }
+  ],
+  "CLI按操作统计": {
+    "plan_checks": 13,
+    "plan": 1,
+    "judge": 6
+  },
+  "产品按操作统计": {
+    "plan_checks": 13,
+    "plan": 1,
+    "judge": 5
+  },
+  "历史送判但结束时待重判": [
+    {
+      "检查": "check-e0605836de75b91d",
+      "最终状态": "not_executed",
+      "理由": "当前运行未执行/未完成此检查；继续时可重新安排。"
+    },
+    {
+      "检查": "check-e0ddef9311091640",
+      "最终状态": "not_executed",
+      "理由": "当前运行未执行/未完成此检查；继续时可重新安排。"
+    },
+    {
+      "检查": "check-41b55fff3a399fee",
+      "最终状态": "not_executed",
+      "理由": "当前运行未执行/未完成此检查；继续时可重新安排。"
+    },
+    {
+      "检查": "check-7fcabc2c2ea7cdab",
+      "最终状态": "not_executed",
+      "理由": "当前运行未执行/未完成此检查；继续时可重新安排。"
+    },
+    {
+      "检查": "check-b7df6d5982b93e5e",
+      "最终状态": "not_executed",
+      "理由": "当前运行未执行/未完成此检查；继续时可重新安排。"
+    },
+    {
+      "检查": "check-da656379c1a8c398",
+      "最终状态": "not_executed",
+      "理由": "当前运行未执行/未完成此检查；继续时可重新安排。"
+    },
+    {
+      "检查": "check-f5231da55060a399",
+      "最终状态": "not_executed",
+      "理由": "当前运行未执行/未完成此检查；继续时可重新安排。"
+    },
+    {
+      "检查": "check-4b778ea0df21f765",
+      "最终状态": "not_executed",
+      "理由": "当前运行未执行/未完成此检查；继续时可重新安排。"
+    },
+    {
+      "检查": "check-f8414ef52912ec95",
+      "最终状态": "not_executed",
+      "理由": "当前运行未执行/未完成此检查；继续时可重新安排。"
+    },
+    {
+      "检查": "check-0c1636fdf681c97a",
+      "最终状态": "not_executed",
+      "理由": "当前运行未执行/未完成此检查；继续时可重新安排。"
+    },
+    {
+      "检查": "check-0f798341ae63b459",
+      "最终状态": "not_executed",
+      "理由": "当前运行未执行/未完成此检查；继续时可重新安排。"
+    },
+    {
+      "检查": "check-de8f98fa82e81ca4",
+      "最终状态": "not_executed",
+      "理由": "当前运行未执行/未完成此检查；继续时可重新安排。"
+    }
+  ],
+  "说明": "judge唯一ID是本run历史实际输入；终态execution_status表示该检查最后一次状态。二者分别保存。",
+  "本run实际动作": [
+    {
+      "action_id": "action-f42b6f0f80144dad8ac1086a76b46382",
+      "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"1\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "3c57d1bfeec301a5061a3aac",
+      "reason": "程序按覆盖缺口选择已观察控件：周五 14:00–14:30\n二层服务台",
+      "target_label": "周五 14:00–14:30\n二层服务台",
+      "observed_target": "周五 14:00–14:30\n二层服务台 / slot / on",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-83292c4aeac345ff99114e0c551e8a6a",
+      "evidence_ids": [
+        "ev-ed5981943d36420abcbcfb932f3a6a84",
+        "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8",
+        "ev-092921bb105c4f6dbc9ad0a2a0c8154a",
+        "ev-f2b8cf6068144208ba1615ee69cd2745"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    }
+  ],
+  "阶段总结": "原预算1800秒自动完成v3；额外AI结束事件保存v4。020在途原答完整返回，未被已结束产品报告采纳。"
+}

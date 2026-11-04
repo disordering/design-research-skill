@@ -1,0 +1,28 @@
+{
+  "开始": "2026-11-04T00:31:41.573045+00:00",
+  "执行": "真实 Codex CLI + 原生 SessionService + BrowserAdapter",
+  "AI操作者": "AI模型验收-D",
+  "AI来源": "ai",
+  "固定响应": false,
+  "固定答案注入": false,
+  "样本文件SHA256": "c4777991726ae655f5a1582c0fca360d4517f96302503122544b58d1e157e2e2",
+  "任务卡SHA256": "032be9e7ccd6d2bbb64d8a7dbae120c415418957f2d79708e814fdad002c81f0",
+  "git提交": "2157483fb33f4248d2548772840dbaea498d58aa",
+  "引擎文件SHA256": {
+    "engine/session_service.py": "6c4f8288403549e1a7b69ddf9a6b58471ed5ae5af17f320178e0076041f61dfb",
+    "engine/session_adapters.py": "0e335d65241964f249923185cc3543f145a93aa9b0586088bcce9acb608e4fb5",
+    "engine/session_contracts.py": "662057e04d2b92a8255068f1c94292567aa0d6b219a56bf31ffc6a794886560c"
+  },
+  "本机服务": "http://127.0.0.1:49850",
+  "会话目录": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_1104_native_recheck\\03-A初审",
+  "限额": {
+    "max_actions": 16,
+    "max_checks": 80,
+    "max_model_calls": 60,
+    "max_review_rounds": 1,
+    "max_seconds": 1800,
+    "max_images_per_call": 10,
+    "max_material_chunks": 24,
+    "max_parallel_screens": 2
+  }
+}

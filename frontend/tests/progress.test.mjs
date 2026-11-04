@@ -8,3 +8,13 @@ import {isRunning,phaseWaitSeconds} from '../dist/session-progress.js';
 test('running guard and wait indicator do not invent percent; timeout is error',()=>{assert.equal(isRunning({status:'planning'}),true);assert.equal(isRunning({status:'completed'}),false);assert.equal(phaseWaitSeconds({updated_at:'2026-11-03T00:00:00Z'},Date.parse('2026-11-03T00:01:00Z')),60);assert.match(progressData({status:'completed',run_limitations:['本轮达到时间限制，保留已完成记录。']}).title,/异常/);});
 
 test('invalid evidence quotes stay visibly failed after model returns',()=>{const p=progressData({status:'completed',warnings:['understand 校验失败：正式目标/要求必须保留每个来源的原文摘录。','understand 输出结构无效，未补造结果。'],checks:[]});assert.equal(p.errors.length,2);assert.match(p.title,/异常/);});
+
+import {progressNotice} from '../dist/session-progress.js';
+test('创建、等待补充、取消和结束分别显示真实状态',()=>{
+ for(const status of ['created','awaiting_input'])assert.doesNotMatch(progressNotice({status}),/已结束/);
+ assert.match(progressNotice({status:'created'}),/点击开始/);
+ assert.match(progressNotice({status:'awaiting_input'}),/等待补充/);
+ assert.match(progressNotice({status:'cancelled'}),/已取消/);
+ assert.match(progressNotice({status:'completed'}),/已结束/);
+ assert.match(progressNotice({status:'planning',updated_at:'2026-11-04T00:00:00Z'},Date.parse('2026-11-04T00:01:00Z')),/60 秒/);
+});

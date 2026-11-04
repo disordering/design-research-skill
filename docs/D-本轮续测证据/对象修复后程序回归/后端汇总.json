@@ -1,0 +1,13 @@
+{
+  "套件": "后端",
+  "退出码": 0,
+  "计数": {
+    "tests": 282,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "passed": 282
+  },
+  "逐项文件": "后端逐项.xml",
+  "逐项文件SHA256": "c8afae997d8b762f8edd3bc98d72312039aaeff10d660fe6a439a7579945f23c"
+}

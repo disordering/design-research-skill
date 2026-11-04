@@ -1,0 +1,14 @@
+{
+  "事件": {
+    "event_id": "d-native-01-target-stop",
+    "expected_context_version": 1,
+    "type": "finish",
+    "payload": {
+      "reason": "首个网页操作被 action_target_mismatch 阻断，保留原始输入与停点，停止本轮后修正控件语义解析再新建会话。"
+    },
+    "actor": "AI模型验收-D",
+    "actor_type": "ai"
+  },
+  "应继续运行": false,
+  "报告版本": 1
+}

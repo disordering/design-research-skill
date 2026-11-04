@@ -1,0 +1,115 @@
+{
+  "原图SHA256": "490a35029c5a2cd09ff5863502d82a2f9c10a169039442ac97ea1654586d71a7",
+  "代码SHA256": {
+    "session_adapters.py": "50da52081c0686e1a3716e48e19a487987700847acecbd4eee313469b936baac",
+    "session_service.py": "1959d7f7ec3b40b70c2ba4bf04d6dcbd4229abb9a1953b6a990bb9e1ef4e8c05",
+    "session_contracts.py": "c85d3289169d53424da744f15a32b7cb76969f7b8769a13986f4ee3beb77c802"
+  },
+  "首次执行后": {
+    "action_id": "action-abb3bfad64ec49a39efb041e61ec02f3",
+    "source_id": "src-9c055def37214ff69db18a9f57bda4d8",
+    "kind": "observe",
+    "node_id": "",
+    "chunk_index": 0,
+    "selector": "",
+    "value": "",
+    "url": "",
+    "x": null,
+    "y": null,
+    "scroll_x": 0,
+    "scroll_y": 0,
+    "expected_state_id": "490a35029c5a2cd09ff58635",
+    "reason": "再次核对同一张通知设置图的当前可见内容",
+    "target_label": "",
+    "observed_target": "",
+    "target_marker_artifact_id": null,
+    "requires_explicit_authorization": true,
+    "status": "pending",
+    "context_version": 1,
+    "run_id": "run-2952fae1f27e48458c3a0b40a194fc97",
+    "evidence_ids": [],
+    "error": "",
+    "outcome": null
+  },
+  "最终动作": {
+    "action_id": "action-abb3bfad64ec49a39efb041e61ec02f3",
+    "source_id": "src-9c055def37214ff69db18a9f57bda4d8",
+    "kind": "observe",
+    "node_id": "",
+    "chunk_index": 0,
+    "selector": "",
+    "value": "",
+    "url": "",
+    "x": null,
+    "y": null,
+    "scroll_x": 0,
+    "scroll_y": 0,
+    "expected_state_id": "490a35029c5a2cd09ff58635",
+    "reason": "再次核对同一张通知设置图的当前可见内容",
+    "target_label": "",
+    "observed_target": "",
+    "target_marker_artifact_id": null,
+    "requires_explicit_authorization": true,
+    "status": "failed",
+    "context_version": 1,
+    "run_id": "run-2952fae1f27e48458c3a0b40a194fc97",
+    "evidence_ids": [],
+    "error": "source_not_interactive: 该材料不能执行交互动作。",
+    "outcome": null
+  },
+  "来源字段能力": false,
+  "提交事件": [
+    {
+      "event_id": "approve",
+      "expected_context_version": 1,
+      "type": "authorize_action",
+      "payload": {
+        "action_id": "action-abb3bfad64ec49a39efb041e61ec02f3",
+        "approved": true
+      },
+      "actor": "AI模拟操作员-D"
+    },
+    {
+      "event_id": "reply",
+      "expected_context_version": 1,
+      "type": "reply",
+      "payload": {
+        "question_id": "question-72046e62ab7d40109246b23313ce50cb",
+        "text": "只核对原图可见选项和当前状态。"
+      },
+      "actor": "AI模拟操作员-D"
+    }
+  ],
+  "答复来源": "human",
+  "操作消息": [
+    {
+      "at": "2026-11-04T00:24:03.339243+00:00",
+      "actor_type": "human",
+      "actor": "AI模拟操作员-D",
+      "type": "authorize_action",
+      "event_id": "approve",
+      "context_version": 1,
+      "content": {
+        "action_id": "action-abb3bfad64ec49a39efb041e61ec02f3",
+        "approved": true
+      }
+    },
+    {
+      "at": "2026-11-04T00:24:03.565159+00:00",
+      "actor_type": "human",
+      "actor": "AI模拟操作员-D",
+      "type": "reply",
+      "event_id": "reply",
+      "context_version": 2,
+      "content": {
+        "question_id": "question-72046e62ab7d40109246b23313ce50cb",
+        "text": "只核对原图可见选项和当前状态。"
+      }
+    }
+  ],
+  "交互转移数": 0,
+  "证据状态": [
+    "490a35029c5a2cd09ff58635",
+    "490a35029c5a2cd09ff58635"
+  ]
+}

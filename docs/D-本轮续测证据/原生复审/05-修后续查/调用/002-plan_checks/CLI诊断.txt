@@ -1,0 +1,5 @@
+Reading prompt from stdin...
+2026-11-04T08:26:19.716300Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-11-04T08:26:24.693857Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-11-04T08:26:29.175130Z ERROR codex_api::endpoint::responses_websocket: failed to connect to Responses WebSocket stage=Unknown
+2026-11-04T08:26:29.176073Z  WARN codex_core::session::startup_prewarm: startup websocket prewarm setup failed: stream disconnected before completion: tls handshake eof

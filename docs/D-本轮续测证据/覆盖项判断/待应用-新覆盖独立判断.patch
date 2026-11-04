@@ -1,0 +1,16 @@
+--- a/engine/session_service.py
++++ b/engine/session_service.py
+@@ -1672,6 +1672,13 @@
+                 })
+                 session.checks.append(check)
+                 current.append(check)
++            if matching is None:
++                # 新覆盖单元只复用编号与规划元数据，判断必须独立执行。
++                check.execution_status = "planned"
++                check.decision = None
++                check.reason = ""
++                check.evidence_ids = []
++                check.reevaluation_requested = False
+             check.check_id = self._check_id(item.ref, item.coverage_id)
+             check.coverage_id = item.coverage_id
+             check.coverage_title = item.coverage_title

@@ -1,0 +1,102 @@
+{
+  "judgments": [
+    {
+      "check_id": "check-e83283e7c7890799",
+      "decision": "no_visible_issue",
+      "reason": "R14适用于已列明有效值的时段单选组。选择前同时显示周五09:00–09:30、一层服务台及周五14:00–14:30、二层服务台，无需猜测可选值。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62"]
+    },
+    {
+      "check_id": "check-153cce6d02fc6b55",
+      "decision": "not_applicable",
+      "reason": "R15要求已确认的高后果操作。任务卡明确登记仅在当前本机页面生效且可复位，本对象不满足高后果适用条件；提交尚未执行不改变此适用性判断。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20"]
+    },
+    {
+      "check_id": "check-215f38a90524dcfa",
+      "decision": "not_applicable",
+      "reason": "R16检查重要图标操作。完整选择页使用带文字的单选项及“核对信息”文字按钮，没有需要解释的重要图标操作。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62"]
+    },
+    {
+      "check_id": "check-62951316d93a615d",
+      "decision": "no_visible_issue",
+      "reason": "R17适用于已确认选中的单选项。初始上午项checked=true，画面以实心单选标记、紫色边框和浅紫底显示；下午项为空心标记，与记录一致。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62"]
+    },
+    {
+      "check_id": "check-b7b1fe44f3c87661",
+      "decision": "no_visible_issue",
+      "reason": "R17适用于BR1返回后的选择状态。已有返回动作及结果，补足旧计划缺项：下午项checked=true，并显示实心标记、紫色边框和浅紫底；上午项未选中。",
+      "evidence_ids": ["ev-28ea4802a4da474aab003c94497c5b61", "ev-1b92d13208824e079e766fb72b4db903"]
+    },
+    {
+      "check_id": "check-35db30383acb2603",
+      "decision": "no_visible_issue",
+      "reason": "R18适用于两个name=slot的radio选项，服务台文字为各选项的说明。两项同属“选择时段”，各自边界内配对展示时段和服务台，未见归属歧义。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-91397b03af5640368d2dfc61172bae20"]
+    },
+    {
+      "check_id": "check-546e311a34054da6",
+      "decision": "no_visible_issue",
+      "reason": "R19适用于TASK1的选项及核对入口。1440×900完整画面中，下午选项位于选择区，“核对信息”紧邻选项下方且无遮挡，文字和按钮层级可辨；不据此推断真人识别表现。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-5ed1c04f55834474af9ef1bcbbec3613"]
+    },
+    {
+      "check_id": "check-614c03af25ca290b",
+      "decision": "no_visible_issue",
+      "reason": "R19适用于TASK2的返回入口。现已提供完整核对页，补足旧计划缺项：“返回选择”位于核对信息下方，文字清楚、无遮挡，与紫色“提交登记”按钮可区分。",
+      "evidence_ids": ["ev-28ea4802a4da474aab003c94497c5b61", "ev-91397b03af5640368d2dfc61172bae20"]
+    },
+    {
+      "check_id": "check-068bd034fb43eb99",
+      "decision": "no_visible_issue",
+      "reason": "R19适用于TASK3的提交入口。最新核对页完整显示紫色“提交登记”按钮，位于信息区下方、返回按钮右侧且无遮挡。这里只判断入口定位，不能证明提交成功或REQ3满足。",
+      "evidence_ids": ["ev-28f43ffd619a44358a2f982ecf59aa3c", "ev-91397b03af5640368d2dfc61172bae20"]
+    },
+    {
+      "check_id": "check-055426dfa4e0a032",
+      "decision": "no_visible_issue",
+      "reason": "R20适用于选择任务与品牌、页脚等辅助内容的比较。品牌位于页头、页脚位于卡片外，未遮挡或挤占两个选项及核对入口；未见具体干扰。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-91397b03af5640368d2dfc61172bae20"]
+    },
+    {
+      "check_id": "check-a8b9d0e585473122",
+      "decision": "insufficient_evidence",
+      "reason": "R21须取得明确错误状态。BR2提交动作仍为pending，最新画面仅为提交前核对页，无法确认提交后是否出现错误及其定位提示；不能判无问题或不适用。",
+      "evidence_ids": ["ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-f334eec1ae5c4bba",
+      "decision": "insufficient_evidence",
+      "reason": "R22须确认错误及用户可执行的处理。BR2尚无提交结果、错误原文或可修正性依据，不能判断修正说明是否充分。",
+      "evidence_ids": ["ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-9a8567f4c9334e7f",
+      "decision": "insufficient_evidence",
+      "reason": "R23须有错误提示及相关用户背景。BR2尚未执行，未取得错误提示，目标用户背景亦未知，无法判断语言是否适合。",
+      "evidence_ids": ["ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-946e51c1426378d2",
+      "decision": "insufficient_evidence",
+      "reason": "R24须确认目标用户需要解释才能完成关键步骤。当前可见时段与服务台，但缺少用户知识及解释需要依据，不能仅凭页面简单判不适用，也不能因无帮助入口报问题。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-91397b03af5640368d2dfc61172bae20"]
+    },
+    {
+      "check_id": "check-58febf9794bead2c",
+      "decision": "no_visible_issue",
+      "reason": "E04适用于REQ2明确要求的BR1保留分支。action-6f56e0e799d5429dad297472485e9eaf执行返回后，仍选中周五14:00–14:30、二层服务台；再次核对也保持相同信息。本轮路径未见选择丢失，覆盖表的未观察标记不能覆盖已有动作及前后证据。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28ea4802a4da474aab003c94497c5b61", "ev-1b92d13208824e079e766fb72b4db903", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-53c4a0e78f0e8bbf",
+      "decision": "insufficient_evidence",
+      "reason": "E04适用于BR3已说明的复位行为。材料说明刷新或“重新开始”可回到选择页，但未提供复位动作及前后结果，不能确认实际复位，也不补设默认选项要求。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20"]
+    }
+  ],
+  "findings": [],
+  "questions": []
+}

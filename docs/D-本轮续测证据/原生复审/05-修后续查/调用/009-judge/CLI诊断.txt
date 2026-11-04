@@ -1,0 +1,7 @@
+Reading prompt from stdin...
+2026-11-04T08:37:27.286100Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-11-04T08:37:32.258088Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-11-04T08:37:32.258103Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL: error sending request for url (https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL)
+2026-11-04T08:37:42.399306Z  WARN codex_core::session::startup_prewarm: startup websocket prewarm setup failed: workspace routing discovery timed out
+2026-11-04T08:37:47.413202Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL: error sending request for url (https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL)
+2026-11-04T08:37:57.613695Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL: error sending request for url (https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL)

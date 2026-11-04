@@ -1,0 +1,5 @@
+{"type":"thread.started","thread_id":"01a1a5c6-6e35-7b00-8d4e-eb0836c730b6"}
+{"type":"turn.started"}
+{"type":"error","message":"Reconnecting... 2/5 (workspace routing discovery failed)"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"supported_finding_ids\":[\"finding-149e805558484b9d850775c841603fda\"],\"rejected\":{}}"}}
+{"type":"turn.completed","usage":{"input_tokens":94560,"cached_input_tokens":12416,"cache_write_input_tokens":0,"output_tokens":34,"reasoning_output_tokens":0}}

@@ -1,0 +1,107 @@
+{
+  "原图SHA256": "490a35029c5a2cd09ff5863502d82a2f9c10a169039442ac97ea1654586d71a7",
+  "代码SHA256": {
+    "session_adapters.py": "5b49d8df889d9fec084f178e608752ff51f8ad25b14c127626f1ecfec292e8e7",
+    "session_service.py": "5a08fd5994b5c61468c4940fbf3df336357317aacbeb2eeffdea9e5f204f89bb",
+    "session_contracts.py": "662057e04d2b92a8255068f1c94292567aa0d6b219a56bf31ffc6a794886560c"
+  },
+  "首次执行后": {
+    "action_id": "action-5bb32c58035c43c59f9893d220e75709",
+    "source_id": "src-89727860f7f94b3ebb0e289952b21438",
+    "kind": "observe",
+    "node_id": "",
+    "chunk_index": 0,
+    "selector": "",
+    "value": "",
+    "url": "",
+    "x": null,
+    "y": null,
+    "scroll_x": 0,
+    "scroll_y": 0,
+    "expected_state_id": "490a35029c5a2cd09ff58635",
+    "reason": "再次核对同一张通知设置图的当前可见内容",
+    "target_label": "",
+    "observed_target": "",
+    "target_marker_artifact_id": null,
+    "requires_explicit_authorization": true,
+    "status": "executed",
+    "context_version": 1,
+    "run_id": "run-7f0f2c44569c4c1ca564db0b5283d6e8",
+    "evidence_ids": [
+      "ev-c7750cde8d634e088cacefa5fee037d1",
+      "ev-3cecf72a7fbe46be859c217ccb6f04f3"
+    ],
+    "error": "",
+    "outcome": "read"
+  },
+  "最终动作": {
+    "action_id": "action-5bb32c58035c43c59f9893d220e75709",
+    "source_id": "src-89727860f7f94b3ebb0e289952b21438",
+    "kind": "observe",
+    "node_id": "",
+    "chunk_index": 0,
+    "selector": "",
+    "value": "",
+    "url": "",
+    "x": null,
+    "y": null,
+    "scroll_x": 0,
+    "scroll_y": 0,
+    "expected_state_id": "490a35029c5a2cd09ff58635",
+    "reason": "再次核对同一张通知设置图的当前可见内容",
+    "target_label": "",
+    "observed_target": "",
+    "target_marker_artifact_id": null,
+    "requires_explicit_authorization": true,
+    "status": "executed",
+    "context_version": 1,
+    "run_id": "run-7f0f2c44569c4c1ca564db0b5283d6e8",
+    "evidence_ids": [
+      "ev-c7750cde8d634e088cacefa5fee037d1",
+      "ev-3cecf72a7fbe46be859c217ccb6f04f3"
+    ],
+    "error": "",
+    "outcome": "read"
+  },
+  "来源字段能力": true,
+  "提交事件": [
+    {
+      "event_id": "reply",
+      "expected_context_version": 1,
+      "type": "reply",
+      "payload": {
+        "question_id": "question-81851cb587f24034a420150d9a20b6de",
+        "text": "只核对原图可见选项和当前状态。"
+      },
+      "actor": "AI模拟操作员-D",
+      "actor_type": "ai"
+    }
+  ],
+  "答复来源": "ai",
+  "操作消息": [
+    {
+      "at": "2026-11-04T00:24:02.809610+00:00",
+      "actor_type": "ai",
+      "actor": "AI模拟操作员-D",
+      "type": "purpose",
+      "content": "从这张设置页判断如何查看与调整通知偏好，检查选项、操作和当前状态的表达。"
+    },
+    {
+      "at": "2026-11-04T00:24:03.233290+00:00",
+      "actor_type": "ai",
+      "actor": "AI模拟操作员-D",
+      "type": "reply",
+      "event_id": "reply",
+      "context_version": 2,
+      "content": {
+        "question_id": "question-81851cb587f24034a420150d9a20b6de",
+        "text": "只核对原图可见选项和当前状态。"
+      }
+    }
+  ],
+  "交互转移数": 0,
+  "证据状态": [
+    "490a35029c5a2cd09ff58635",
+    "490a35029c5a2cd09ff58635"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "来源": "01-A初审",
+  "会话": "session-6f9704cb7dea45bdb79b7a6ab5389713",
+  "操作员": "AI模型验收-D",
+  "操作者类型": "ai",
+  "操作": "原 Node 前端 → 原 FastAPI → 实际会话数据库；只读恢复、版本切换与导出",
+  "浏览器异常": [],
+  "HTTP": [
+    {
+      "方法": "GET",
+      "URL": "/engine/api/review-sessions/session-6f9704cb7dea45bdb79b7a6ab5389713",
+      "HTTP": 200
+    },
+    {
+      "方法": "GET",
+      "URL": "/engine/api/review-sessions/session-6f9704cb7dea45bdb79b7a6ab5389713/reports/1",
+      "HTTP": 200
+    }
+  ],
+  "当前会话": "本轮结束 · 阶段 T08 · 上下文 v1 · 报告 v1 · design · 部分报告",
+  "发现文字": "发现与人工审核",
+  "复审文字": "逐问题复审",
+  "ZIP": {
+    "SHA256": "72e342de9a0c25c546b842ee7559ba92c1c13339bbee4917c7134dd59dee3994",
+    "成员": 58,
+    "报告版本": 1,
+    "会话": "session-6f9704cb7dea45bdb79b7a6ab5389713",
+    "模型调用": 8,
+    "复审": []
+  },
+  "历史读回": "本轮结束 · 阶段 T08 · 上下文 v1 · 报告 v1 · design · 部分报告 · 历史只读",
+  "历史反馈隐藏": true
+}

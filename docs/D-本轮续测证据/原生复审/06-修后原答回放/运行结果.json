@@ -1,0 +1,1676 @@
+{
+  "会话": "session-8e92a333d79d4678bac0b330efcd3e94",
+  "上下文版本": 1,
+  "报告版本": 5,
+  "状态": "completed",
+  "完整度": "partial",
+  "模型调用": 59,
+  "已记录调用状态": {
+    "validated": 59
+  },
+  "本轮已记录调用": 23,
+  "本轮有效范围检查": {
+    "总数": 109,
+    "执行状态": {
+      "executed": 80,
+      "not_executed": 29
+    }
+  },
+  "本轮judge实际输入": {
+    "唯一检查数": 80,
+    "检查ID": [
+      "check-0a00a5d9772b3122",
+      "check-0b4f5c2c6bb76343",
+      "check-0b70a25c292c2f40",
+      "check-0c1636fdf681c97a",
+      "check-0d693a791eea8fc8",
+      "check-0da148777aab9789",
+      "check-0e4528b2b5a1d179",
+      "check-0f798341ae63b459",
+      "check-16d3f7a18664b398",
+      "check-1c493db4b09ef0dc",
+      "check-1e6448d9ae07af84",
+      "check-271cb715d2106b8e",
+      "check-2a8102adaabd3490",
+      "check-2e62fd8a565cfd39",
+      "check-35a35465464f91a5",
+      "check-36e93bbdbd189e88",
+      "check-3cc962519a611c2b",
+      "check-41b55fff3a399fee",
+      "check-444543cdd8ea9943",
+      "check-490447a227934a79",
+      "check-4b778ea0df21f765",
+      "check-4e428142e4d536dc",
+      "check-528121cb8a53d3d0",
+      "check-52f4f39ef5c766e3",
+      "check-537ec861f23c1c30",
+      "check-541e90f37b5db93b",
+      "check-564d16821ce06320",
+      "check-5844adea57303957",
+      "check-5e50986e00b0346d",
+      "check-6519fd1f41df0b6a",
+      "check-6591fe4f442976cf",
+      "check-70f434322fc37979",
+      "check-73a033f0621a8c51",
+      "check-747ffda4245514a9",
+      "check-7ba93c4d5e819b3c",
+      "check-7d0323bd3d54f378",
+      "check-7fcabc2c2ea7cdab",
+      "check-80667017fb6f6ee8",
+      "check-8477a6f9c4866392",
+      "check-86a839e3bc2b6b54",
+      "check-895f82207cd4bbce",
+      "check-8970ae875175fb57",
+      "check-8b31c5632e1957c7",
+      "check-90387cf79c325cce",
+      "check-90f55f2d9b07aa80",
+      "check-95ad4db6a49fd990",
+      "check-96775d5f642470de",
+      "check-9a7aac2a993adcb1",
+      "check-9ec1de81509bc15a",
+      "check-a0cab4251e9f3a16",
+      "check-a7cf6be682eac5cd",
+      "check-b2b86957b0e73987",
+      "check-b3e4ea04af0eda7c",
+      "check-b7df6d5982b93e5e",
+      "check-b8b7ab3be44243f1",
+      "check-be4ca6626ab49986",
+      "check-c1e608c5aeb77808",
+      "check-c70349e346554b2e",
+      "check-c8ca250602adc5c1",
+      "check-cb0edf5811c3a3f7",
+      "check-cf4fed2edb9eb120",
+      "check-cf7f6550d3c8f4b6",
+      "check-d14211599d99ce9c",
+      "check-d1bae9d9cf6d4ed4",
+      "check-d2920cd0c5d02ed3",
+      "check-da516b728ebecac0",
+      "check-da656379c1a8c398",
+      "check-dcb5b2b95ba9ebdf",
+      "check-de8f98fa82e81ca4",
+      "check-e0605836de75b91d",
+      "check-e0ddef9311091640",
+      "check-e62fecc8fc419c80",
+      "check-e6c1c339e525e622",
+      "check-e968c8970a5892b5",
+      "check-ea7694488eb3c3fd",
+      "check-ebf983bbfd4e93df",
+      "check-ed09706ede715eb7",
+      "check-f1800a6fe1ad465a",
+      "check-f5231da55060a399",
+      "check-f8414ef52912ec95"
+    ]
+  },
+  "本轮judge输入与当前范围交集": {
+    "唯一检查数": 80,
+    "检查ID": [
+      "check-0a00a5d9772b3122",
+      "check-0b4f5c2c6bb76343",
+      "check-0b70a25c292c2f40",
+      "check-0c1636fdf681c97a",
+      "check-0d693a791eea8fc8",
+      "check-0da148777aab9789",
+      "check-0e4528b2b5a1d179",
+      "check-0f798341ae63b459",
+      "check-16d3f7a18664b398",
+      "check-1c493db4b09ef0dc",
+      "check-1e6448d9ae07af84",
+      "check-271cb715d2106b8e",
+      "check-2a8102adaabd3490",
+      "check-2e62fd8a565cfd39",
+      "check-35a35465464f91a5",
+      "check-36e93bbdbd189e88",
+      "check-3cc962519a611c2b",
+      "check-41b55fff3a399fee",
+      "check-444543cdd8ea9943",
+      "check-490447a227934a79",
+      "check-4b778ea0df21f765",
+      "check-4e428142e4d536dc",
+      "check-528121cb8a53d3d0",
+      "check-52f4f39ef5c766e3",
+      "check-537ec861f23c1c30",
+      "check-541e90f37b5db93b",
+      "check-564d16821ce06320",
+      "check-5844adea57303957",
+      "check-5e50986e00b0346d",
+      "check-6519fd1f41df0b6a",
+      "check-6591fe4f442976cf",
+      "check-70f434322fc37979",
+      "check-73a033f0621a8c51",
+      "check-747ffda4245514a9",
+      "check-7ba93c4d5e819b3c",
+      "check-7d0323bd3d54f378",
+      "check-7fcabc2c2ea7cdab",
+      "check-80667017fb6f6ee8",
+      "check-8477a6f9c4866392",
+      "check-86a839e3bc2b6b54",
+      "check-895f82207cd4bbce",
+      "check-8970ae875175fb57",
+      "check-8b31c5632e1957c7",
+      "check-90387cf79c325cce",
+      "check-90f55f2d9b07aa80",
+      "check-95ad4db6a49fd990",
+      "check-96775d5f642470de",
+      "check-9a7aac2a993adcb1",
+      "check-9ec1de81509bc15a",
+      "check-a0cab4251e9f3a16",
+      "check-a7cf6be682eac5cd",
+      "check-b2b86957b0e73987",
+      "check-b3e4ea04af0eda7c",
+      "check-b7df6d5982b93e5e",
+      "check-b8b7ab3be44243f1",
+      "check-be4ca6626ab49986",
+      "check-c1e608c5aeb77808",
+      "check-c70349e346554b2e",
+      "check-c8ca250602adc5c1",
+      "check-cb0edf5811c3a3f7",
+      "check-cf4fed2edb9eb120",
+      "check-cf7f6550d3c8f4b6",
+      "check-d14211599d99ce9c",
+      "check-d1bae9d9cf6d4ed4",
+      "check-d2920cd0c5d02ed3",
+      "check-da516b728ebecac0",
+      "check-da656379c1a8c398",
+      "check-dcb5b2b95ba9ebdf",
+      "check-de8f98fa82e81ca4",
+      "check-e0605836de75b91d",
+      "check-e0ddef9311091640",
+      "check-e62fecc8fc419c80",
+      "check-e6c1c339e525e622",
+      "check-e968c8970a5892b5",
+      "check-ea7694488eb3c3fd",
+      "check-ebf983bbfd4e93df",
+      "check-ed09706ede715eb7",
+      "check-f1800a6fe1ad465a",
+      "check-f5231da55060a399",
+      "check-f8414ef52912ec95"
+    ]
+  },
+  "当前executed但本轮未进judge": {
+    "唯一检查数": 0,
+    "检查ID": []
+  },
+  "本轮judge有效输出": {
+    "唯一检查数": 80,
+    "检查ID": [
+      "check-0a00a5d9772b3122",
+      "check-0b4f5c2c6bb76343",
+      "check-0b70a25c292c2f40",
+      "check-0c1636fdf681c97a",
+      "check-0d693a791eea8fc8",
+      "check-0da148777aab9789",
+      "check-0e4528b2b5a1d179",
+      "check-0f798341ae63b459",
+      "check-16d3f7a18664b398",
+      "check-1c493db4b09ef0dc",
+      "check-1e6448d9ae07af84",
+      "check-271cb715d2106b8e",
+      "check-2a8102adaabd3490",
+      "check-2e62fd8a565cfd39",
+      "check-35a35465464f91a5",
+      "check-36e93bbdbd189e88",
+      "check-3cc962519a611c2b",
+      "check-41b55fff3a399fee",
+      "check-444543cdd8ea9943",
+      "check-490447a227934a79",
+      "check-4b778ea0df21f765",
+      "check-4e428142e4d536dc",
+      "check-528121cb8a53d3d0",
+      "check-52f4f39ef5c766e3",
+      "check-537ec861f23c1c30",
+      "check-541e90f37b5db93b",
+      "check-564d16821ce06320",
+      "check-5844adea57303957",
+      "check-5e50986e00b0346d",
+      "check-6519fd1f41df0b6a",
+      "check-6591fe4f442976cf",
+      "check-70f434322fc37979",
+      "check-73a033f0621a8c51",
+      "check-747ffda4245514a9",
+      "check-7ba93c4d5e819b3c",
+      "check-7d0323bd3d54f378",
+      "check-7fcabc2c2ea7cdab",
+      "check-80667017fb6f6ee8",
+      "check-8477a6f9c4866392",
+      "check-86a839e3bc2b6b54",
+      "check-895f82207cd4bbce",
+      "check-8970ae875175fb57",
+      "check-8b31c5632e1957c7",
+      "check-90387cf79c325cce",
+      "check-90f55f2d9b07aa80",
+      "check-95ad4db6a49fd990",
+      "check-96775d5f642470de",
+      "check-9a7aac2a993adcb1",
+      "check-9ec1de81509bc15a",
+      "check-a0cab4251e9f3a16",
+      "check-a7cf6be682eac5cd",
+      "check-b2b86957b0e73987",
+      "check-b3e4ea04af0eda7c",
+      "check-b7df6d5982b93e5e",
+      "check-b8b7ab3be44243f1",
+      "check-be4ca6626ab49986",
+      "check-c1e608c5aeb77808",
+      "check-c70349e346554b2e",
+      "check-c8ca250602adc5c1",
+      "check-cb0edf5811c3a3f7",
+      "check-cf4fed2edb9eb120",
+      "check-cf7f6550d3c8f4b6",
+      "check-d14211599d99ce9c",
+      "check-d1bae9d9cf6d4ed4",
+      "check-d2920cd0c5d02ed3",
+      "check-da516b728ebecac0",
+      "check-da656379c1a8c398",
+      "check-dcb5b2b95ba9ebdf",
+      "check-de8f98fa82e81ca4",
+      "check-e0605836de75b91d",
+      "check-e0ddef9311091640",
+      "check-e62fecc8fc419c80",
+      "check-e6c1c339e525e622",
+      "check-e968c8970a5892b5",
+      "check-ea7694488eb3c3fd",
+      "check-ebf983bbfd4e93df",
+      "check-ed09706ede715eb7",
+      "check-f1800a6fe1ad465a",
+      "check-f5231da55060a399",
+      "check-f8414ef52912ec95"
+    ]
+  },
+  "全部历史检查": {
+    "总数": 207,
+    "执行状态": {
+      "executed": 178,
+      "not_executed": 29
+    }
+  },
+  "发现": [
+    {
+      "finding_id": "finding-2b889800c51c43d7a60c72987671624d",
+      "kind": "nonconformity",
+      "title": "REQ3：下午二层服务台提交后，完成页显示上午一层服务台",
+      "check_ids": [
+        "check-41b55fff3a399fee",
+        "check-f5231da55060a399",
+        "check-0c1636fdf681c97a",
+        "check-36e93bbdbd189e88"
+      ],
+      "evidence_ids": [
+        "ev-2f97d5fc719c439b842ad62d0c01670a",
+        "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+        "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+      ],
+      "principle": "REQ3要求完成页显示最终确认的时段及服务台；E07核对要求落实，E01核对结果对象，E02核对跨状态字段一致性。",
+      "detection": "选择下午项→核对→返回选择→再次核对→提交登记。action-6a0cb99a000d4b1fb341f4c859bfd25a关联的提交前画面为14:00–14:30、二层服务台，提交后完成页为09:00–09:30、一层服务台。",
+      "description": "本轮稿件1的完成结果与最终确认信息不一致，无法据完成页确认所请求的下午登记。仅确认可见结果偏差，不推断内部原因、持久化数据或真实预约后果。最新选择页观察不能证明该问题已修复。",
+      "suggestion": "使完成页呈现本次最终确认的时段及服务台；修改后按同一返回再提交路径逐字段复核，并保留提交前后证据。",
+      "severity": "high",
+      "severity_reason": "核心任务的结果确认失败，两个关键字段均错误。已有重新开始返回选择页的恢复入口，但未证明重试能正确完成。影响限于本机页面演示，无真实登记损失证据。",
+      "confidence": 0.99,
+      "context_version": 1,
+      "run_id": "run-83292c4aeac345ff99114e0c551e8a6a",
+      "screen_review_id": "",
+      "review_status": "unreviewed",
+      "human_severity": null,
+      "review_reason": "",
+      "reviewer": "unknown",
+      "reviewed_at": null,
+      "disposition": null,
+      "stale": false,
+      "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+      "object_ref": "BR2：核对页提交至登记完成页",
+      "claims": [
+        {
+          "claim_id": "claim-56455ebf6bb34642859a906e2f4cee02",
+          "claim_type": "action_result",
+          "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+          "expected": "提交后显示最终确认的周五14:00–14:30、二层服务台。",
+          "observed": "提交前为周五14:00–14:30、二层服务台；提交后显示周五09:00–09:30、一层服务台。",
+          "evidence_ids": [
+            "ev-2f97d5fc719c439b842ad62d0c01670a",
+            "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+            "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+          ],
+          "derived": false,
+          "verification_status": "supported",
+          "verification_reason": "证据对象、类型和观察结果通过程序核验。"
+        }
+      ],
+      "mechanism": "同次提交前后结果字段不一致；内部实现原因未知。",
+      "change_action": "修正完成页与最终确认信息的对应关系并复核同一路径。",
+      "location": {
+        "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+        "state_id": "cae2b537eea57be43e8207a7",
+        "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+        "url": "http://127.0.0.1:61886/v1/"
+      }
+    },
+    {
+      "finding_id": "finding-149e805558484b9d850775c841603fda",
+      "kind": "issue",
+      "title": "REQ3：下午二层服务台提交后显示上午一层服务台",
+      "check_ids": [
+        "check-0d693a791eea8fc8",
+        "check-5e50986e00b0346d"
+      ],
+      "evidence_ids": [
+        "ev-2f97d5fc719c439b842ad62d0c01670a",
+        "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+        "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+      ],
+      "principle": "REQ3要求完成页显示最终确认的时段和服务台；E03与R04要求反馈对应本次操作及对象。",
+      "detection": "选择下午项→核对→返回选择→再次核对→提交登记。action-6a0cb99a000d4b1fb341f4c859bfd25a前为14:00–14:30、二层服务台，后为09:00–09:30、一层服务台。",
+      "description": "本轮稿件1的完成页两个关键字段与最终确认信息不一致，REQ3在该次路径中observed_violation。仅确认可见结果偏差，内部原因及真实登记后果未知。最新ev-092921bb105c4f6dbc9ad0a2a0c8154a仅显示选择页，不能证明已修复；此前程序拒绝记录不等于人工否定该观察。",
+      "suggestion": "使完成页显示本次最终确认的时段及服务台；修改后复核同一返回再提交路径并保存提交前后证据。",
+      "severity": "high",
+      "severity_reason": "核心登记结果确认失败，两个必要字段均不符。已有重新开始复位证据，但未证明重试能正确完成；影响限定为本机演示，无真实损失证据。",
+      "confidence": 0.99,
+      "context_version": 1,
+      "run_id": "run-83292c4aeac345ff99114e0c551e8a6a",
+      "screen_review_id": "",
+      "review_status": "unreviewed",
+      "human_severity": null,
+      "review_reason": "",
+      "reviewer": "unknown",
+      "reviewed_at": null,
+      "disposition": null,
+      "stale": false,
+      "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+      "object_ref": "BR2：提交后的登记完成页",
+      "claims": [
+        {
+          "claim_id": "claim-adf8b37574154efba153751a2e7b3fbe",
+          "claim_type": "action_result",
+          "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+          "expected": "完成页显示最终确认的周五14:00–14:30、二层服务台。",
+          "observed": "提交前为周五14:00–14:30、二层服务台，提交后完成页显示周五09:00–09:30、一层服务台。",
+          "evidence_ids": [
+            "ev-2f97d5fc719c439b842ad62d0c01670a",
+            "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+            "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+          ],
+          "derived": false,
+          "verification_status": "supported",
+          "verification_reason": "证据对象、类型和观察结果通过程序核验。"
+        }
+      ],
+      "mechanism": "同次提交前后结果字段不一致，内部机制未知。",
+      "change_action": "修正完成页与最终确认信息的对应关系。",
+      "location": {
+        "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+        "state_id": "cae2b537eea57be43e8207a7",
+        "object_id": "obj-91d36b9f4dbc6cbcf6c0"
+      }
+    }
+  ],
+  "复审": [],
+  "动作": [
+    {
+      "action_id": "action-abcad6412bc24b14818c537743280eda",
+      "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"1\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "3c57d1bfeec301a5061a3aac",
+      "reason": "TASK1要求登记下午的二层服务台。当前证据显示上午项选中、下午项未选中且可用；先切换下午项，取得REQ1及E03、R17所需的选中状态变化证据，再继续核对与返回路径。此动作尚未执行。",
+      "target_label": "周五 14:00–14:30 二层服务台",
+      "observed_target": "周五 14:00–14:30\n二层服务台 / slot / on",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-563e5636979549029e54786e942b1416",
+      "evidence_ids": [
+        "ev-ed5981943d36420abcbcfb932f3a6a84",
+        "ev-7a09dc68a4fd47958ab10ea4889fb401"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    },
+    {
+      "action_id": "action-8945bb421ec74e47bdc91403afbe0e4f",
+      "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"2\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "cb2c03e46e454322f59c5ca9",
+      "reason": "ev-7a09dc68a4fd47958ab10ea4889fb401的画面及checked记录显示周五14:00–14:30、二层服务台已选中，“核对信息”按钮可用。点击取得核对页证据，继续TASK1及E01—E04检查，为REQ2返回保留和REQ3结果一致性建立前置观察；尚不宣称后续路径通过。",
+      "target_label": "核对信息",
+      "observed_target": "核对信息",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-563e5636979549029e54786e942b1416",
+      "evidence_ids": [
+        "ev-7a09dc68a4fd47958ab10ea4889fb401",
+        "ev-54c27ab204c6479384eced085b8c3114"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    },
+    {
+      "action_id": "action-a56ac1f20a424c7eab29d05465d80848",
+      "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"0\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "d26ef33e7cf79b4071dfdc34",
+      "reason": "ev-54c27ab204c6479384eced085b8c3114显示核对信息为周五14:00–14:30、二层服务台，且“返回选择”可用。点击后对照ev-7a09dc68a4fd47958ab10ea4889fb401的下午选中状态，检查TASK1/BR1、REQ2及E02—E04；返回结果尚未观察。",
+      "target_label": "返回选择",
+      "observed_target": "返回选择",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-563e5636979549029e54786e942b1416",
+      "evidence_ids": [
+        "ev-54c27ab204c6479384eced085b8c3114",
+        "ev-4a119973f66c4bb5823812d82b6658dd"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    },
+    {
+      "action_id": "action-40ff433955dd4936bce073fd09145a66",
+      "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"2\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "cb2c03e46e454322f59c5ca9",
+      "reason": "ev-4a119973f66c4bb5823812d82b6658dd的画面与checked记录表明，返回后下午时段及二层服务台仍被选中；结合返回动作及ev-54c27ab204c6479384eced085b8c3114，支持REQ2在本次BR1路径满足。点击“核对信息”取得再次核对的实际内容，为TASK1、BR2、REQ3及E01—E04提供连续证据；尚未观察提交结果。",
+      "target_label": "核对信息",
+      "observed_target": "核对信息",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-563e5636979549029e54786e942b1416",
+      "evidence_ids": [
+        "ev-7a09dc68a4fd47958ab10ea4889fb401",
+        "ev-4a119973f66c4bb5823812d82b6658dd",
+        "ev-5bb645c490a9466e9d64fd29d0c2d8ab"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    },
+    {
+      "action_id": "action-6a0cb99a000d4b1fb341f4c859bfd25a",
+      "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"1\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "d26ef33e7cf79b4071dfdc34",
+      "reason": "ev-5bb645c490a9466e9d64fd29d0c2d8ab显示返回后再次核对的信息为周五14:00–14:30、二层服务台，“提交登记”可用。点击后取得完成页，与该最终核对信息对照，检查TASK1/BR2、REQ3及E01—E03、R04；尚未判定提交成功。任务卡明确登记仅在当前页面生效，且已授权完成一次登记。",
+      "target_label": "提交登记",
+      "observed_target": "提交登记",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-563e5636979549029e54786e942b1416",
+      "evidence_ids": [
+        "ev-54c27ab204c6479384eced085b8c3114",
+        "ev-5bb645c490a9466e9d64fd29d0c2d8ab",
+        "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+        "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    },
+    {
+      "action_id": "action-9f91e0cebb1f476b8720b23b0e84e66b",
+      "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"0\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "cae2b537eea57be43e8207a7",
+      "reason": "完成页ev-b7d8f0b7918f4c29a8995ef0f82f0e9c已保留结果不一致证据，并显示可用的“重新开始”。点击取得复位前后证据，检查TASK2、BR3及REQ4是否回到选择时段页；复位结果尚未观察，不预判通过。任务卡明确允许重新开始且登记仅在当前页面生效。",
+      "target_label": "重新开始",
+      "observed_target": "重新开始",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-563e5636979549029e54786e942b1416",
+      "evidence_ids": [
+        "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+        "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    },
+    {
+      "action_id": "action-f42b6f0f80144dad8ac1086a76b46382",
+      "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"1\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "3c57d1bfeec301a5061a3aac",
+      "reason": "程序按覆盖缺口选择已观察控件：周五 14:00–14:30\n二层服务台",
+      "target_label": "周五 14:00–14:30\n二层服务台",
+      "observed_target": "周五 14:00–14:30\n二层服务台 / slot / on",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-83292c4aeac345ff99114e0c551e8a6a",
+      "evidence_ids": [
+        "ev-ed5981943d36420abcbcfb932f3a6a84",
+        "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8",
+        "ev-092921bb105c4f6dbc9ad0a2a0c8154a",
+        "ev-f2b8cf6068144208ba1615ee69cd2745"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    }
+  ],
+  "问题": [
+    {
+      "question_id": "question-32e3250c031c457bbf24c8eaf0328a10",
+      "text": "是否授权动作：ev-5bb645c490a9466e9d64fd29d0c2d8ab显示返回后再次核对的信息为周五14:00–14:30、二层服务台，“提交登记”可用。点击后取得完成页，与该最终核对信息对照，检查TASK1/BR2、REQ3及E01—E03、R04；尚未判定提交成功。任务卡明确登记仅在当前页面生效，且已授权完成一次登记。",
+      "reason": "来源 src-d26f1061d5dc4b26971c209b4af54287，动作 click；尚未执行。",
+      "check_ids": [],
+      "blocking": true,
+      "answered": true,
+      "answer": "已授权",
+      "kind": "authorization",
+      "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+      "action_id": "action-6a0cb99a000d4b1fb341f4c859bfd25a",
+      "answer_actor": "ai"
+    },
+    {
+      "question_id": "question-e9cebd4bd2224d1cb6976fac09f30fec",
+      "text": "时段是否明确要求必选，且默认选中的时段是否已满足该要求？",
+      "reason": "缺少必填规则来源，影响R13适用性及填写前提示是否充分的判断，不阻断其他已有证据的评审。",
+      "check_ids": [
+        "check-192149952c38e32a"
+      ],
+      "blocking": false,
+      "answered": false,
+      "answer": "",
+      "kind": "context",
+      "source_id": null,
+      "action_id": null,
+      "answer_actor": "unknown"
+    },
+    {
+      "question_id": "question-dc5e255b9e1147bcb99814f41d3144f8",
+      "text": "目标用户对登记流程的熟悉程度如何，是否有已知必须解释才能完成的字段或步骤？",
+      "reason": "缺少用户知识与解释需要依据，影响R24适用性；不阻断已有画面的判断。",
+      "check_ids": [
+        "check-c3129602a59b75ee"
+      ],
+      "blocking": false,
+      "answered": false,
+      "answer": "",
+      "kind": "context",
+      "source_id": null,
+      "action_id": null,
+      "answer_actor": "unknown"
+    },
+    {
+      "question_id": "question-0373816164244a2680fad4c89d8b5e43",
+      "text": "除已有三条设计要求外，提交登记是否存在明确的资格或拦截条件？如有，请提供规则。",
+      "reason": "缺少正式前置条件，无法对照当前按钮开放状态判断E06；不重复询问已有的时段必选问题。",
+      "check_ids": [
+        "check-0b70a25c292c2f40"
+      ],
+      "blocking": false,
+      "answered": false,
+      "answer": "",
+      "kind": "context",
+      "source_id": null,
+      "action_id": null,
+      "answer_actor": "unknown"
+    }
+  ],
+  "警告": [
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "存在待授权动作；只判断现有证据，不把待执行路径算通过。",
+    "必需覆盖单元 coverage-ab1b067aed64b930 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-23c64aec5c8661f5 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-7c11b3dadfdced94 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-3a52ce192ad36376 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-4991a6842f916530 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-bd3a1e190e6a3f4d 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-264502c2eb871d9d 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-7e9094b0bad3a35f 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-f7ec3bc3a68942b7 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-8a8b44aee0151b05 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-174d74576132ebc4 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-f42dcd61b62bb6cd 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-c1a2c0b96e137d1a 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-d75a6265c371cbee 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-6b762300372bf4e2 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-313111fc7b0d7d7e 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-4fa579d4301adb9c 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-181d227822a48464 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-d71f382369033fe1 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "会话不变量：必需覆盖单元 coverage-ab1b067aed64b930 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-23c64aec5c8661f5 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-7c11b3dadfdced94 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-3a52ce192ad36376 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-4991a6842f916530 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-bd3a1e190e6a3f4d 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-264502c2eb871d9d 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-7e9094b0bad3a35f 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-f7ec3bc3a68942b7 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-8a8b44aee0151b05 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-174d74576132ebc4 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-f42dcd61b62bb6cd 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-c1a2c0b96e137d1a 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-d75a6265c371cbee 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-6b762300372bf4e2 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-313111fc7b0d7d7e 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-4fa579d4301adb9c 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-181d227822a48464 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-d71f382369033fe1 尚未覆盖。",
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "Codex CLI 没有返回完整响应，原始事件已保存。",
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "发现退回补证：REQ3：下午二层服务台提交后，完成页显示上午一层服务台；对象标识未出现在任一方案、实现或观察证据的节点、控件、文本或状态中。",
+    "发现退回补证：REQ3：下午二层服务台提交后显示上午一层服务台；对象标识未出现在任一方案、实现或观察证据的节点、控件、文本或状态中。",
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "发现退回补证：R04／REQ3：下午二层服务台提交后的完成反馈显示上午一层服务台；对象标识未出现在任一方案、实现或观察证据的节点、控件、文本或状态中。",
+    "本轮达到时间限制，保留已完成记录。"
+  ],
+  "运行说明": [
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "本轮达到时间限制，保留已完成记录。",
+    "本报告在原会话副本中完成程序修复验证；两份judge为真实录制原答回放，新增模型调用仅为语义核验。"
+  ],
+  "契约问题": [
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-ab1b067aed64b930 尚未覆盖。",
+      "coverage_id": "coverage-ab1b067aed64b930",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-23c64aec5c8661f5 尚未覆盖。",
+      "coverage_id": "coverage-23c64aec5c8661f5",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-7c11b3dadfdced94 尚未覆盖。",
+      "coverage_id": "coverage-7c11b3dadfdced94",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-3a52ce192ad36376 尚未覆盖。",
+      "coverage_id": "coverage-3a52ce192ad36376",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-4991a6842f916530 尚未覆盖。",
+      "coverage_id": "coverage-4991a6842f916530",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-bd3a1e190e6a3f4d 尚未覆盖。",
+      "coverage_id": "coverage-bd3a1e190e6a3f4d",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-264502c2eb871d9d 尚未覆盖。",
+      "coverage_id": "coverage-264502c2eb871d9d",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-7e9094b0bad3a35f 尚未覆盖。",
+      "coverage_id": "coverage-7e9094b0bad3a35f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-f7ec3bc3a68942b7 尚未覆盖。",
+      "coverage_id": "coverage-f7ec3bc3a68942b7",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-8a8b44aee0151b05 尚未覆盖。",
+      "coverage_id": "coverage-8a8b44aee0151b05",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-174d74576132ebc4 尚未覆盖。",
+      "coverage_id": "coverage-174d74576132ebc4",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-f42dcd61b62bb6cd 尚未覆盖。",
+      "coverage_id": "coverage-f42dcd61b62bb6cd",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-c1a2c0b96e137d1a 尚未覆盖。",
+      "coverage_id": "coverage-c1a2c0b96e137d1a",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-d75a6265c371cbee 尚未覆盖。",
+      "coverage_id": "coverage-d75a6265c371cbee",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-6b762300372bf4e2 尚未覆盖。",
+      "coverage_id": "coverage-6b762300372bf4e2",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-313111fc7b0d7d7e 尚未覆盖。",
+      "coverage_id": "coverage-313111fc7b0d7d7e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-4fa579d4301adb9c 尚未覆盖。",
+      "coverage_id": "coverage-4fa579d4301adb9c",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-181d227822a48464 尚未覆盖。",
+      "coverage_id": "coverage-181d227822a48464",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-d71f382369033fe1 尚未覆盖。",
+      "coverage_id": "coverage-d71f382369033fe1",
+      "gap_class": "unobserved_branch"
+    }
+  ],
+  "结束": "2026-11-04T08:57:59.260673+00:00",
+  "运行性质": "真实录制原答的程序回放",
+  "原答回放数": 2,
+  "原答来源": [
+    {
+      "序号": 1,
+      "性质": "真实原答录制回放，不是新增模型判断",
+      "来源": "05-修后续查\\调用\\007-judge",
+      "原答SHA256": "df16b63f84a0380f1539470a074bf2aac7bc0c14b2885222018167a816045620",
+      "原CLI线程": "01a1a5b1-810c-7123-8f17-abc10df8a884",
+      "原模型": "gpt-6-astra",
+      "原调用开始UTC": "2026-11-04T08:33:55.818178+00:00",
+      "回放UTC": "2026-11-04T08:55:49.574354+00:00",
+      "检查ID": [
+        "check-e0605836de75b91d",
+        "check-e0ddef9311091640",
+        "check-41b55fff3a399fee",
+        "check-7fcabc2c2ea7cdab",
+        "check-b7df6d5982b93e5e",
+        "check-da656379c1a8c398",
+        "check-f5231da55060a399",
+        "check-4b778ea0df21f765",
+        "check-0b4f5c2c6bb76343",
+        "check-f8414ef52912ec95",
+        "check-0c1636fdf681c97a",
+        "check-0f798341ae63b459",
+        "check-de8f98fa82e81ca4",
+        "check-36e93bbdbd189e88",
+        "check-c8ca250602adc5c1",
+        "check-b3e4ea04af0eda7c"
+      ],
+      "原答字节未改": true
+    },
+    {
+      "序号": 2,
+      "性质": "真实原答录制回放，不是新增模型判断",
+      "来源": "05-修后续查\\调用\\008-judge",
+      "原答SHA256": "f216641a042a034d9b0ecfdaad56a9ab2cdea00b328b25c655634207985b9f37",
+      "原CLI线程": "01a1a5b2-fc3b-75d3-bd22-63d1d1cef793",
+      "原模型": "gpt-6-astra",
+      "原调用开始UTC": "2026-11-04T08:35:32.894870+00:00",
+      "回放UTC": "2026-11-04T08:56:47.122538+00:00",
+      "检查ID": [
+        "check-0d693a791eea8fc8",
+        "check-ed09706ede715eb7",
+        "check-9a7aac2a993adcb1",
+        "check-70f434322fc37979",
+        "check-73a033f0621a8c51",
+        "check-0b70a25c292c2f40",
+        "check-5e50986e00b0346d",
+        "check-b2b86957b0e73987",
+        "check-0e4528b2b5a1d179",
+        "check-d1bae9d9cf6d4ed4",
+        "check-cf7f6550d3c8f4b6",
+        "check-be4ca6626ab49986",
+        "check-e6c1c339e525e622",
+        "check-2e62fd8a565cfd39",
+        "check-90f55f2d9b07aa80",
+        "check-3cc962519a611c2b"
+      ],
+      "原答字节未改": true
+    }
+  ],
+  "真实新增CLI核验调用": 2,
+  "本阶段新增产品记录": [
+    {
+      "call_id": "call-420be9d06c96404bb3ead0f1fb8ff73a",
+      "run_id": "run-83292c4aeac345ff99114e0c551e8a6a",
+      "operation": "judge",
+      "attempt": 1,
+      "provider": "recorded_codex",
+      "model": "真实Codex原答回放",
+      "usage": {},
+      "request_id": "replay:01a1a5b1-810c-7123-8f17-abc10df8a884",
+      "latency_ms": 0,
+      "raw_artifact_id": "artifact-b58c3ec6a07843ad97b386cbe3735161",
+      "is_stub": true,
+      "parameters": {},
+      "stage": "T06",
+      "status": "validated",
+      "schema": "JudgmentBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-d26f1061d5dc4b26971c209b4af54287",
+          "src-1c9ca6d9af5f4f799be4a24b882ebb31",
+          "src-3c08f39b8597428786e1f2f77258cd0c"
+        ],
+        "evidence_ids": [
+          "ev-092921bb105c4f6dbc9ad0a2a0c8154a",
+          "ev-2f97d5fc719c439b842ad62d0c01670a",
+          "ev-4a119973f66c4bb5823812d82b6658dd",
+          "ev-54c27ab204c6479384eced085b8c3114",
+          "ev-5bb645c490a9466e9d64fd29d0c2d8ab",
+          "ev-7a09dc68a4fd47958ab10ea4889fb401",
+          "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+          "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+          "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8",
+          "ev-ed5981943d36420abcbcfb932f3a6a84",
+          "ev-f2b8cf6068144208ba1615ee69cd2745",
+          "ev-f7f6e5ee40964f97a4b230b24964d6f0"
+        ],
+        "image_evidence_ids": [
+          "ev-ed5981943d36420abcbcfb932f3a6a84",
+          "ev-7a09dc68a4fd47958ab10ea4889fb401",
+          "ev-54c27ab204c6479384eced085b8c3114",
+          "ev-4a119973f66c4bb5823812d82b6658dd",
+          "ev-5bb645c490a9466e9d64fd29d0c2d8ab",
+          "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+          "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+          "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8",
+          "ev-092921bb105c4f6dbc9ad0a2a0c8154a",
+          "ev-f2b8cf6068144208ba1615ee69cd2745"
+        ],
+        "check_refs": [
+          "REQ1",
+          "REQ2",
+          "REQ3",
+          "REQ4",
+          "E07",
+          "E07",
+          "E07",
+          "E07",
+          "E08",
+          "E01",
+          "E01",
+          "E01",
+          "E02",
+          "E02",
+          "E03",
+          "E03"
+        ],
+        "check_ids": [
+          "check-e0605836de75b91d",
+          "check-e0ddef9311091640",
+          "check-41b55fff3a399fee",
+          "check-7fcabc2c2ea7cdab",
+          "check-b7df6d5982b93e5e",
+          "check-da656379c1a8c398",
+          "check-f5231da55060a399",
+          "check-4b778ea0df21f765",
+          "check-0b4f5c2c6bb76343",
+          "check-f8414ef52912ec95",
+          "check-0c1636fdf681c97a",
+          "check-0f798341ae63b459",
+          "check-de8f98fa82e81ca4",
+          "check-36e93bbdbd189e88",
+          "check-c8ca250602adc5c1",
+          "check-b3e4ea04af0eda7c"
+        ],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "judgments": [
+          {
+            "check_id": "check-e0605836de75b91d",
+            "decision": "met",
+            "reason": "适用于选择页。两个时段及对应服务台同时可见；切换动作后下午项选中，本次路径满足REQ1。",
+            "evidence_ids": [
+              "ev-ed5981943d36420abcbcfb932f3a6a84",
+              "ev-7a09dc68a4fd47958ab10ea4889fb401"
+            ]
+          },
+          {
+            "check_id": "check-e0ddef9311091640",
+            "decision": "met",
+            "reason": "适用于BR1。返回后仍选中14:00–14:30、二层服务台，再次核对保持一致，满足REQ2。",
+            "evidence_ids": [
+              "ev-54c27ab204c6479384eced085b8c3114",
+              "ev-4a119973f66c4bb5823812d82b6658dd",
+              "ev-5bb645c490a9466e9d64fd29d0c2d8ab"
+            ]
+          },
+          {
+            "check_id": "check-41b55fff3a399fee",
+            "decision": "observed_violation",
+            "reason": "适用于BR2。最终核对为下午二层服务台，提交后却显示上午一层服务台，违反REQ3；最新选择页不能证明已修复。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+            ]
+          },
+          {
+            "check_id": "check-7fcabc2c2ea7cdab",
+            "decision": "insufficient_evidence",
+            "reason": "REQ4适用。重新开始返回选择页这一子项已满足；刷新复位未观察，仅页面生效属于材料声明而非实现验证，因此复合要求整体证据不足。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+              "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8"
+            ]
+          },
+          {
+            "check_id": "check-b7df6d5982b93e5e",
+            "decision": "met",
+            "reason": "E07适用于有明确来源的REQ1。画面同时呈现两组时段和服务台，实际切换后下午项选中，两项约束均满足。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-ed5981943d36420abcbcfb932f3a6a84",
+              "ev-7a09dc68a4fd47958ab10ea4889fb401"
+            ]
+          },
+          {
+            "check_id": "check-da656379c1a8c398",
+            "decision": "met",
+            "reason": "E07适用于REQ2的返回保留要求。BR1返回前后及再次核对均为下午二层服务台，本次观察满足。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-54c27ab204c6479384eced085b8c3114",
+              "ev-4a119973f66c4bb5823812d82b6658dd",
+              "ev-5bb645c490a9466e9d64fd29d0c2d8ab"
+            ]
+          },
+          {
+            "check_id": "check-f5231da55060a399",
+            "decision": "observed_violation",
+            "reason": "E07适用于REQ3。提交后的时段及服务台均与最终核对不一致，两个字段约束均违反；不推断真实登记后果。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+            ]
+          },
+          {
+            "check_id": "check-4b778ea0df21f765",
+            "decision": "insufficient_evidence",
+            "reason": "E07适用于复合REQ4。初始选择页及重新开始复位已有观察支持；刷新和仅页面生效的实现验证缺失，不能整体判met，也不能沿用旧摘要称重新开始未观察。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-ed5981943d36420abcbcfb932f3a6a84",
+              "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8"
+            ]
+          },
+          {
+            "check_id": "check-0b4f5c2c6bb76343",
+            "decision": "no_conflict",
+            "reason": "适用于同范围任务卡与委托的约束比较。两份材料的三条要求及复位说明兼容；完成页偏差属于观察与要求不符，不是要求冲突。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-f7f6e5ee40964f97a4b230b24964d6f0"
+            ]
+          },
+          {
+            "check_id": "check-f8414ef52912ec95",
+            "decision": "no_visible_issue",
+            "reason": "适用于BR1跨状态路径。返回选择及再次核对均实际抵达预期页面，下午选择保持；本路径未见衔接问题。",
+            "evidence_ids": [
+              "ev-54c27ab204c6479384eced085b8c3114",
+              "ev-4a119973f66c4bb5823812d82b6658dd",
+              "ev-5bb645c490a9466e9d64fd29d0c2d8ab"
+            ]
+          },
+          {
+            "check_id": "check-0c1636fdf681c97a",
+            "decision": "candidate_issue",
+            "reason": "适用于BR2终点及对象身份。提交虽抵达完成页，但结果对应上午一层服务台而非最终确认的下午二层服务台；与结果不一致合并记录，不认定为独立坏链接。",
+            "evidence_ids": [
+              "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+            ]
+          },
+          {
+            "check_id": "check-0f798341ae63b459",
+            "decision": "no_visible_issue",
+            "reason": "适用于BR3按钮复位路径。action-9f91e0cebb1f476b8720b23b0e84e66b后实际返回选择时段页；此结论不涵盖刷新。",
+            "evidence_ids": [
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+              "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8"
+            ]
+          },
+          {
+            "check_id": "check-de8f98fa82e81ca4",
+            "decision": "no_visible_issue",
+            "reason": "适用于同次BR1的字段传递。返回前、返回后及再次核对均保持14:00–14:30、二层服务台，未见信息矛盾。",
+            "evidence_ids": [
+              "ev-54c27ab204c6479384eced085b8c3114",
+              "ev-4a119973f66c4bb5823812d82b6658dd",
+              "ev-5bb645c490a9466e9d64fd29d0c2d8ab"
+            ]
+          },
+          {
+            "check_id": "check-36e93bbdbd189e88",
+            "decision": "candidate_issue",
+            "reason": "适用于同版同次提交的跨状态比较。REQ3明确要求一致，提交后两个字段从下午二层变为上午一层，无允许此变化的依据。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+            ]
+          },
+          {
+            "check_id": "check-c8ca250602adc5c1",
+            "decision": "no_visible_issue",
+            "reason": "适用于切换选择的反馈。动作后上午单选取消、下午单选选中，紫色底及边框同步转至下午项，反馈对应本次选择。",
+            "evidence_ids": [
+              "ev-ed5981943d36420abcbcfb932f3a6a84",
+              "ev-7a09dc68a4fd47958ab10ea4889fb401"
+            ]
+          },
+          {
+            "check_id": "check-b3e4ea04af0eda7c",
+            "decision": "no_visible_issue",
+            "reason": "适用于BR1返回与再次核对反馈。返回呈现下午选中态，再次核对显示相同字段及第2步，状态与动作对应。",
+            "evidence_ids": [
+              "ev-54c27ab204c6479384eced085b8c3114",
+              "ev-4a119973f66c4bb5823812d82b6658dd",
+              "ev-5bb645c490a9466e9d64fd29d0c2d8ab"
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "finding_id": "finding-28d7df24203f47aabcea16e401537912",
+            "kind": "nonconformity",
+            "title": "REQ3：下午二层服务台提交后，完成页显示上午一层服务台",
+            "check_ids": [
+              "check-41b55fff3a399fee",
+              "check-f5231da55060a399",
+              "check-0c1636fdf681c97a",
+              "check-36e93bbdbd189e88"
+            ],
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+            ],
+            "principle": "REQ3要求完成页显示最终确认的时段及服务台；E07核对要求落实，E01核对结果对象，E02核对跨状态字段一致性。",
+            "detection": "选择下午项→核对→返回选择→再次核对→提交登记。action-6a0cb99a000d4b1fb341f4c859bfd25a关联的提交前画面为14:00–14:30、二层服务台，提交后完成页为09:00–09:30、一层服务台。",
+            "description": "本轮稿件1的完成结果与最终确认信息不一致，无法据完成页确认所请求的下午登记。仅确认可见结果偏差，不推断内部原因、持久化数据或真实预约后果。最新选择页观察不能证明该问题已修复。",
+            "suggestion": "使完成页呈现本次最终确认的时段及服务台；修改后按同一返回再提交路径逐字段复核，并保留提交前后证据。",
+            "severity": "high",
+            "severity_reason": "核心任务的结果确认失败，两个关键字段均错误。已有重新开始返回选择页的恢复入口，但未证明重试能正确完成。影响限于本机页面演示，无真实登记损失证据。",
+            "confidence": 0.99,
+            "context_version": 1,
+            "run_id": "",
+            "screen_review_id": "",
+            "review_status": "unreviewed",
+            "human_severity": null,
+            "review_reason": "",
+            "reviewer": "unknown",
+            "reviewed_at": null,
+            "disposition": null,
+            "stale": false,
+            "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+            "object_ref": "BR2：核对页提交至登记完成页",
+            "claims": [
+              {
+                "claim_id": "claim-56455ebf6bb34642859a906e2f4cee02",
+                "claim_type": "action_result",
+                "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+                "expected": "提交后显示最终确认的周五14:00–14:30、二层服务台。",
+                "observed": "提交前为周五14:00–14:30、二层服务台；提交后显示周五09:00–09:30、一层服务台。",
+                "evidence_ids": [
+                  "ev-2f97d5fc719c439b842ad62d0c01670a",
+                  "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+                  "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+                ],
+                "derived": false,
+                "verification_status": "unverified",
+                "verification_reason": ""
+              }
+            ],
+            "mechanism": "同次提交前后结果字段不一致；内部实现原因未知。",
+            "change_action": "修正完成页与最终确认信息的对应关系并复核同一路径。",
+            "location": {}
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "call_id": "call-5875679fd9a844d7b68c88d2c2733fb0",
+      "run_id": "run-83292c4aeac345ff99114e0c551e8a6a",
+      "operation": "verify",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6-astra",
+      "usage": {
+        "input_tokens": 94161,
+        "cached_input_tokens": 12544,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 37,
+        "reasoning_output_tokens": 0
+      },
+      "request_id": "01a1a5c5-8d5f-7e20-a515-6e46aab6b87d",
+      "latency_ms": 57266,
+      "raw_artifact_id": "artifact-6349860a406c402cae259e644178f4c8",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T07",
+      "status": "validated",
+      "schema": "Verification",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-d26f1061d5dc4b26971c209b4af54287",
+          "src-1c9ca6d9af5f4f799be4a24b882ebb31",
+          "src-3c08f39b8597428786e1f2f77258cd0c"
+        ],
+        "evidence_ids": [
+          "ev-092921bb105c4f6dbc9ad0a2a0c8154a",
+          "ev-2f97d5fc719c439b842ad62d0c01670a",
+          "ev-4a119973f66c4bb5823812d82b6658dd",
+          "ev-54c27ab204c6479384eced085b8c3114",
+          "ev-5bb645c490a9466e9d64fd29d0c2d8ab",
+          "ev-7a09dc68a4fd47958ab10ea4889fb401",
+          "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+          "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+          "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8",
+          "ev-ed5981943d36420abcbcfb932f3a6a84",
+          "ev-f2b8cf6068144208ba1615ee69cd2745",
+          "ev-f7f6e5ee40964f97a4b230b24964d6f0"
+        ],
+        "image_evidence_ids": [
+          "ev-ed5981943d36420abcbcfb932f3a6a84",
+          "ev-7a09dc68a4fd47958ab10ea4889fb401",
+          "ev-54c27ab204c6479384eced085b8c3114",
+          "ev-4a119973f66c4bb5823812d82b6658dd",
+          "ev-5bb645c490a9466e9d64fd29d0c2d8ab",
+          "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+          "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+          "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8",
+          "ev-092921bb105c4f6dbc9ad0a2a0c8154a",
+          "ev-f2b8cf6068144208ba1615ee69cd2745"
+        ],
+        "check_refs": [],
+        "check_ids": [],
+        "finding_ids": [
+          "finding-2b889800c51c43d7a60c72987671624d"
+        ],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "supported_finding_ids": [
+          "finding-2b889800c51c43d7a60c72987671624d"
+        ],
+        "rejected": {}
+      }
+    },
+    {
+      "call_id": "call-7d16ff9f341a4a368e16d51dfeb5fe72",
+      "run_id": "run-83292c4aeac345ff99114e0c551e8a6a",
+      "operation": "judge",
+      "attempt": 1,
+      "provider": "recorded_codex",
+      "model": "真实Codex原答回放",
+      "usage": {},
+      "request_id": "replay:01a1a5b2-fc3b-75d3-bd22-63d1d1cef793",
+      "latency_ms": 0,
+      "raw_artifact_id": "artifact-732a5245940544638ee9a50eef403801",
+      "is_stub": true,
+      "parameters": {},
+      "stage": "T06",
+      "status": "validated",
+      "schema": "JudgmentBatch",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-d26f1061d5dc4b26971c209b4af54287",
+          "src-1c9ca6d9af5f4f799be4a24b882ebb31",
+          "src-3c08f39b8597428786e1f2f77258cd0c"
+        ],
+        "evidence_ids": [
+          "ev-092921bb105c4f6dbc9ad0a2a0c8154a",
+          "ev-2f97d5fc719c439b842ad62d0c01670a",
+          "ev-4a119973f66c4bb5823812d82b6658dd",
+          "ev-54c27ab204c6479384eced085b8c3114",
+          "ev-5bb645c490a9466e9d64fd29d0c2d8ab",
+          "ev-7a09dc68a4fd47958ab10ea4889fb401",
+          "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+          "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+          "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8",
+          "ev-ed5981943d36420abcbcfb932f3a6a84",
+          "ev-f2b8cf6068144208ba1615ee69cd2745",
+          "ev-f7f6e5ee40964f97a4b230b24964d6f0"
+        ],
+        "image_evidence_ids": [
+          "ev-ed5981943d36420abcbcfb932f3a6a84",
+          "ev-7a09dc68a4fd47958ab10ea4889fb401",
+          "ev-54c27ab204c6479384eced085b8c3114",
+          "ev-4a119973f66c4bb5823812d82b6658dd",
+          "ev-5bb645c490a9466e9d64fd29d0c2d8ab",
+          "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+          "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+          "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8",
+          "ev-092921bb105c4f6dbc9ad0a2a0c8154a",
+          "ev-f2b8cf6068144208ba1615ee69cd2745"
+        ],
+        "check_refs": [
+          "E03",
+          "E03",
+          "E04",
+          "E04",
+          "E05",
+          "E06",
+          "R04",
+          "R01",
+          "R02",
+          "R02",
+          "R02",
+          "R02",
+          "R03",
+          "R03",
+          "R03",
+          "R05"
+        ],
+        "check_ids": [
+          "check-0d693a791eea8fc8",
+          "check-ed09706ede715eb7",
+          "check-9a7aac2a993adcb1",
+          "check-70f434322fc37979",
+          "check-73a033f0621a8c51",
+          "check-0b70a25c292c2f40",
+          "check-5e50986e00b0346d",
+          "check-b2b86957b0e73987",
+          "check-0e4528b2b5a1d179",
+          "check-d1bae9d9cf6d4ed4",
+          "check-cf7f6550d3c8f4b6",
+          "check-be4ca6626ab49986",
+          "check-e6c1c339e525e622",
+          "check-2e62fd8a565cfd39",
+          "check-90f55f2d9b07aa80",
+          "check-3cc962519a611c2b"
+        ],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "judgments": [
+          {
+            "check_id": "check-0d693a791eea8fc8",
+            "decision": "candidate_issue",
+            "reason": "E03适用：BR2有明确提交预期及前后观察。完成反馈已出现，但14:00–14:30、二层服务台变成09:00–09:30、一层服务台，违反REQ3；不推断内部登记数据。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+            ]
+          },
+          {
+            "check_id": "check-ed09706ede715eb7",
+            "decision": "no_visible_issue",
+            "reason": "E03适用：BR3重新开始已有动作及结果，完成页返回第1步选择页，符合REQ4的重新开始子项；不外推刷新或页面外持久化。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+              "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8"
+            ]
+          },
+          {
+            "check_id": "check-9a7aac2a993adcb1",
+            "decision": "no_visible_issue",
+            "reason": "E04适用：REQ2明确返回保留规则。BR1返回后下午项仍选中，再次核对仍为14:00–14:30、二层服务台，REQ2在本路径满足。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-54c27ab204c6479384eced085b8c3114",
+              "ev-4a119973f66c4bb5823812d82b6658dd",
+              "ev-5bb645c490a9466e9d64fd29d0c2d8ab"
+            ]
+          },
+          {
+            "check_id": "check-70f434322fc37979",
+            "decision": "no_visible_issue",
+            "reason": "E04适用：BR3明确要求复位。重新开始后回到选择页，符合已观察子项；复位选中上午项不能套用REQ2的返回保留规则。刷新路径尚无观察。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+              "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8"
+            ]
+          },
+          {
+            "check_id": "check-73a033f0621a8c51",
+            "decision": "insufficient_evidence",
+            "reason": "E05已有结果不一致对象，但缺少该异常应交付的恢复规则及恢复后正确登记的观察。重新开始仅证明复位，不能证明异常恢复成功或形成无解循环。",
+            "evidence_ids": [
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+              "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8"
+            ]
+          },
+          {
+            "check_id": "check-0b70a25c292c2f40",
+            "decision": "insufficient_evidence",
+            "reason": "E06的正式前置条件未知；按钮可用且已触发不证明资格或拦截规则满足。沿用未答业务问题，不影响REQ3判断。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-8d4c111e8c2b4c5e92e09db4172c0e24"
+            ]
+          },
+          {
+            "check_id": "check-5e50986e00b0346d",
+            "decision": "candidate_issue",
+            "reason": "R04适用：已取得本次完成状态及对象上下文。虽列出具体结果，时段及服务台却与最终核对信息不符，无法据此正确确认本次登记；与E03合并为同一发现。",
+            "evidence_ids": [
+              "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+            ]
+          },
+          {
+            "check_id": "check-b2b86957b0e73987",
+            "decision": "insufficient_evidence",
+            "reason": "R01要求存在页面级导航；现有页眉路径文字的导航角色未明确。步骤提示及页面内单选不能替代页面级导航依据。",
+            "evidence_ids": [
+              "ev-ed5981943d36420abcbcfb932f3a6a84",
+              "ev-54c27ab204c6479384eced085b8c3114"
+            ]
+          },
+          {
+            "check_id": "check-0e4528b2b5a1d179",
+            "decision": "no_visible_issue",
+            "reason": "R02适用：实际路径确认三步流程。选择页显示“第1步，共3步”和“选择时段”，当前位置清楚。该页两组时段和服务台同时可见且已切换下午项，亦支持REQ1在本路径满足。",
+            "evidence_ids": [
+              "ev-ed5981943d36420abcbcfb932f3a6a84",
+              "ev-7a09dc68a4fd47958ab10ea4889fb401"
+            ]
+          },
+          {
+            "check_id": "check-d1bae9d9cf6d4ed4",
+            "decision": "no_visible_issue",
+            "reason": "R02适用：BR1核对页标第2步，返回选择页标第1步，再次核对标第2步，各自标题与环节一致。",
+            "evidence_ids": [
+              "ev-54c27ab204c6479384eced085b8c3114",
+              "ev-4a119973f66c4bb5823812d82b6658dd",
+              "ev-5bb645c490a9466e9d64fd29d0c2d8ab"
+            ]
+          },
+          {
+            "check_id": "check-cf7f6550d3c8f4b6",
+            "decision": "no_visible_issue",
+            "reason": "R02适用：BR2由第2步核对信息进入第3步登记完成，环节标识清楚；此判断不表示完成结果正确。",
+            "evidence_ids": [
+              "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+            ]
+          },
+          {
+            "check_id": "check-be4ca6626ab49986",
+            "decision": "no_visible_issue",
+            "reason": "R02适用：BR3重新开始后显示第1步及选择时段标题，明确已回到流程起点；不代表刷新已验证。",
+            "evidence_ids": [
+              "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8"
+            ]
+          },
+          {
+            "check_id": "check-e6c1c339e525e622",
+            "decision": "not_applicable",
+            "reason": "R03仅检查已呈现的等待状态；本次选择页完整显示选项及操作，明确为普通非等待状态。",
+            "evidence_ids": [
+              "ev-ed5981943d36420abcbcfb932f3a6a84",
+              "ev-7a09dc68a4fd47958ab10ea4889fb401"
+            ]
+          },
+          {
+            "check_id": "check-2e62fd8a565cfd39",
+            "decision": "not_applicable",
+            "reason": "R03仅检查等待状态；核对及再次核对画面均完整呈现信息和按钮，属于非等待状态。",
+            "evidence_ids": [
+              "ev-54c27ab204c6479384eced085b8c3114",
+              "ev-5bb645c490a9466e9d64fd29d0c2d8ab"
+            ]
+          },
+          {
+            "check_id": "check-90f55f2d9b07aa80",
+            "decision": "not_applicable",
+            "reason": "R03仅检查等待状态；已取得画面明确为登记完成及结果展示，不是处理中状态。",
+            "evidence_ids": [
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+            ]
+          },
+          {
+            "check_id": "check-3cc962519a611c2b",
+            "decision": "insufficient_evidence",
+            "reason": "R05的目标用户专业程度、熟悉度及内部术语依据未提供。时段和服务台虽为任务必要信息，仍不能据此认定用户存在术语理解障碍。",
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-ed5981943d36420abcbcfb932f3a6a84"
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "finding_id": "finding-edcf4f8461084c92b18806373d5009ac",
+            "kind": "issue",
+            "title": "REQ3：下午二层服务台提交后显示上午一层服务台",
+            "check_ids": [
+              "check-0d693a791eea8fc8",
+              "check-5e50986e00b0346d"
+            ],
+            "evidence_ids": [
+              "ev-2f97d5fc719c439b842ad62d0c01670a",
+              "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+              "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+            ],
+            "principle": "REQ3要求完成页显示最终确认的时段和服务台；E03与R04要求反馈对应本次操作及对象。",
+            "detection": "选择下午项→核对→返回选择→再次核对→提交登记。action-6a0cb99a000d4b1fb341f4c859bfd25a前为14:00–14:30、二层服务台，后为09:00–09:30、一层服务台。",
+            "description": "本轮稿件1的完成页两个关键字段与最终确认信息不一致，REQ3在该次路径中observed_violation。仅确认可见结果偏差，内部原因及真实登记后果未知。最新ev-092921bb105c4f6dbc9ad0a2a0c8154a仅显示选择页，不能证明已修复；此前程序拒绝记录不等于人工否定该观察。",
+            "suggestion": "使完成页显示本次最终确认的时段及服务台；修改后复核同一返回再提交路径并保存提交前后证据。",
+            "severity": "high",
+            "severity_reason": "核心登记结果确认失败，两个必要字段均不符。已有重新开始复位证据，但未证明重试能正确完成；影响限定为本机演示，无真实损失证据。",
+            "confidence": 0.99,
+            "context_version": 1,
+            "run_id": "",
+            "screen_review_id": "",
+            "review_status": "unreviewed",
+            "human_severity": null,
+            "review_reason": "",
+            "reviewer": "unknown",
+            "reviewed_at": null,
+            "disposition": null,
+            "stale": false,
+            "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+            "object_ref": "BR2：提交后的登记完成页",
+            "claims": [
+              {
+                "claim_id": "claim-adf8b37574154efba153751a2e7b3fbe",
+                "claim_type": "action_result",
+                "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+                "expected": "完成页显示最终确认的周五14:00–14:30、二层服务台。",
+                "observed": "提交前为周五14:00–14:30、二层服务台，提交后完成页显示周五09:00–09:30、一层服务台。",
+                "evidence_ids": [
+                  "ev-2f97d5fc719c439b842ad62d0c01670a",
+                  "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+                  "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+                ],
+                "derived": false,
+                "verification_status": "unverified",
+                "verification_reason": ""
+              }
+            ],
+            "mechanism": "同次提交前后结果字段不一致，内部机制未知。",
+            "change_action": "修正完成页与最终确认信息的对应关系。",
+            "location": {
+              "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+              "state_id": "cae2b537eea57be43e8207a7",
+              "object_id": "obj-91d36b9f4dbc6cbcf6c0"
+            }
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "call_id": "call-681d8e098f234c81bc159274cde893d9",
+      "run_id": "run-83292c4aeac345ff99114e0c551e8a6a",
+      "operation": "verify",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6-astra",
+      "usage": {
+        "input_tokens": 94560,
+        "cached_input_tokens": 12416,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 34,
+        "reasoning_output_tokens": 0
+      },
+      "request_id": "01a1a5c6-6e35-7b00-8d4e-eb0836c730b6",
+      "latency_ms": 71000,
+      "raw_artifact_id": "artifact-e2b3e0dae1fb49969229424bef616c28",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T07",
+      "status": "validated",
+      "schema": "Verification",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-d26f1061d5dc4b26971c209b4af54287",
+          "src-1c9ca6d9af5f4f799be4a24b882ebb31",
+          "src-3c08f39b8597428786e1f2f77258cd0c"
+        ],
+        "evidence_ids": [
+          "ev-092921bb105c4f6dbc9ad0a2a0c8154a",
+          "ev-2f97d5fc719c439b842ad62d0c01670a",
+          "ev-4a119973f66c4bb5823812d82b6658dd",
+          "ev-54c27ab204c6479384eced085b8c3114",
+          "ev-5bb645c490a9466e9d64fd29d0c2d8ab",
+          "ev-7a09dc68a4fd47958ab10ea4889fb401",
+          "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+          "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+          "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8",
+          "ev-ed5981943d36420abcbcfb932f3a6a84",
+          "ev-f2b8cf6068144208ba1615ee69cd2745",
+          "ev-f7f6e5ee40964f97a4b230b24964d6f0"
+        ],
+        "image_evidence_ids": [
+          "ev-ed5981943d36420abcbcfb932f3a6a84",
+          "ev-7a09dc68a4fd47958ab10ea4889fb401",
+          "ev-54c27ab204c6479384eced085b8c3114",
+          "ev-4a119973f66c4bb5823812d82b6658dd",
+          "ev-5bb645c490a9466e9d64fd29d0c2d8ab",
+          "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+          "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+          "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8",
+          "ev-092921bb105c4f6dbc9ad0a2a0c8154a",
+          "ev-f2b8cf6068144208ba1615ee69cd2745"
+        ],
+        "check_refs": [],
+        "check_ids": [],
+        "finding_ids": [
+          "finding-149e805558484b9d850775c841603fda"
+        ],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "supported_finding_ids": [
+          "finding-149e805558484b9d850775c841603fda"
+        ],
+        "rejected": {}
+      }
+    }
+  ],
+  "停点": null
+}

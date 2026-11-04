@@ -1,0 +1,1081 @@
+{
+  "metric_version": "cv-metrics-v1",
+  "image": {
+    "width": 1440,
+    "height": 900,
+    "megapixels": 1.296
+  },
+  "global": {
+    "mean_luminance": 0.9676,
+    "luminance_p05": 0.9451,
+    "luminance_p50": 0.9686,
+    "luminance_p95": 1.0,
+    "luminance_contrast": 0.0831,
+    "bright_pixel_fraction": 0.9714,
+    "dark_pixel_fraction": 0.0005,
+    "mean_saturation": 0.0238,
+    "high_saturation_fraction": 0.0089,
+    "edge_density": 0.0373,
+    "high_frequency_mean": 0.0066,
+    "palette_entropy_bits": 1.8322,
+    "negative_space_proxy": 0.9627
+  },
+  "focus": {
+    "metric_type": "visual_focus_proxy",
+    "notice": "This is a deterministic saliency proxy, not measured human attention.",
+    "elements": [
+      {
+        "element_id": "E06",
+        "label": "通知偏好",
+        "role": "title",
+        "bbox": [
+          0.182,
+          0.263,
+          0.075,
+          0.033
+        ],
+        "area_ratio": 0.0025,
+        "center_distance": 0.5046,
+        "model_visual_importance": 0.8,
+        "region": {
+          "luminance_p10": 0.1294,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.8706,
+          "mean_saturation": 0.2357,
+          "edge_density": 0.4163,
+          "bright_fraction": 0.4176
+        },
+        "focus_proxy_raw": 0.637,
+        "focus_share": 0.0524,
+        "rank": 1
+      },
+      {
+        "element_id": "E05",
+        "label": "通知偏好设置面板",
+        "role": "panel",
+        "bbox": [
+          0.153,
+          0.234,
+          0.693,
+          0.65
+        ],
+        "area_ratio": 0.4504,
+        "center_distance": 0.0834,
+        "model_visual_importance": 0.9,
+        "region": {
+          "luminance_p10": 0.9804,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.0196,
+          "mean_saturation": 0.0199,
+          "edge_density": 0.0695,
+          "bright_fraction": 0.9453
+        },
+        "focus_proxy_raw": 0.6064,
+        "focus_share": 0.0499,
+        "rank": 2
+      },
+      {
+        "element_id": "E04",
+        "label": "个人设置",
+        "role": "title",
+        "bbox": [
+          0.033,
+          0.12,
+          0.08,
+          0.038
+        ],
+        "area_ratio": 0.003,
+        "center_distance": 0.7908,
+        "model_visual_importance": 0.85,
+        "region": {
+          "luminance_p10": 0.1294,
+          "luminance_p90": 0.9608,
+          "luminance_contrast": 0.8314,
+          "mean_saturation": 0.1848,
+          "edge_density": 0.3279,
+          "bright_fraction": 0.5862
+        },
+        "focus_proxy_raw": 0.6035,
+        "focus_share": 0.0496,
+        "rank": 3
+      },
+      {
+        "element_id": "E11",
+        "label": "界面主题",
+        "role": "text",
+        "bbox": [
+          0.182,
+          0.462,
+          0.057,
+          0.027
+        ],
+        "area_ratio": 0.0015,
+        "center_distance": 0.4109,
+        "model_visual_importance": 0.5,
+        "region": {
+          "luminance_p10": 0.2118,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.7882,
+          "mean_saturation": 0.095,
+          "edge_density": 0.5132,
+          "bright_fraction": 0.6184
+        },
+        "focus_proxy_raw": 0.5579,
+        "focus_share": 0.0459,
+        "rank": 4
+      },
+      {
+        "element_id": "E14",
+        "label": "作业到期",
+        "role": "text",
+        "bbox": [
+          0.182,
+          0.551,
+          0.057,
+          0.027
+        ],
+        "area_ratio": 0.0015,
+        "center_distance": 0.4195,
+        "model_visual_importance": 0.5,
+        "region": {
+          "luminance_p10": 0.2275,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.7725,
+          "mean_saturation": 0.0884,
+          "edge_density": 0.5127,
+          "bright_fraction": 0.6341
+        },
+        "focus_proxy_raw": 0.556,
+        "focus_share": 0.0457,
+        "rank": 5
+      },
+      {
+        "element_id": "E07",
+        "label": "设置课程消息与学习空间的显示方式。",
+        "role": "text",
+        "bbox": [
+          0.182,
+          0.313,
+          0.21,
+          0.026
+        ],
+        "area_ratio": 0.0055,
+        "center_distance": 0.389,
+        "model_visual_importance": 0.45,
+        "region": {
+          "luminance_p10": 0.5569,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.4431,
+          "mean_saturation": 0.054,
+          "edge_density": 0.5498,
+          "bright_fraction": 0.5809
+        },
+        "focus_proxy_raw": 0.5552,
+        "focus_share": 0.0456,
+        "rank": 6
+      },
+      {
+        "element_id": "E08",
+        "label": "课程提醒",
+        "role": "text",
+        "bbox": [
+          0.182,
+          0.373,
+          0.057,
+          0.027
+        ],
+        "area_ratio": 0.0015,
+        "center_distance": 0.4398,
+        "model_visual_importance": 0.5,
+        "region": {
+          "luminance_p10": 0.2,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.8,
+          "mean_saturation": 0.1049,
+          "edge_density": 0.5239,
+          "bright_fraction": 0.5503
+        },
+        "focus_proxy_raw": 0.5546,
+        "focus_share": 0.0456,
+        "rank": 7
+      },
+      {
+        "element_id": "E01",
+        "label": "北辰校园",
+        "role": "nav",
+        "bbox": [
+          0.023,
+          0.024,
+          0.099,
+          0.04
+        ],
+        "area_ratio": 0.004,
+        "center_distance": 0.884,
+        "model_visual_importance": 0.65,
+        "region": {
+          "luminance_p10": 0.1294,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.8706,
+          "mean_saturation": 0.2293,
+          "edge_density": 0.2964,
+          "bright_fraction": 0.5567
+        },
+        "focus_proxy_raw": 0.547,
+        "focus_share": 0.045,
+        "rank": 8
+      },
+      {
+        "element_id": "E18",
+        "label": "文字大小",
+        "role": "text",
+        "bbox": [
+          0.182,
+          0.64,
+          0.057,
+          0.027
+        ],
+        "area_ratio": 0.0015,
+        "center_distance": 0.4634,
+        "model_visual_importance": 0.5,
+        "region": {
+          "luminance_p10": 0.302,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.698,
+          "mean_saturation": 0.0649,
+          "edge_density": 0.4223,
+          "bright_fraction": 0.7419
+        },
+        "focus_proxy_raw": 0.547,
+        "focus_share": 0.045,
+        "rank": 9
+      },
+      {
+        "element_id": "E21",
+        "label": "消息工具",
+        "role": "text",
+        "bbox": [
+          0.182,
+          0.729,
+          0.057,
+          0.027
+        ],
+        "area_ratio": 0.0015,
+        "center_distance": 0.5341,
+        "model_visual_importance": 0.5,
+        "region": {
+          "luminance_p10": 0.1294,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.8706,
+          "mean_saturation": 0.0965,
+          "edge_density": 0.5371,
+          "bright_fraction": 0.6245
+        },
+        "focus_proxy_raw": 0.5396,
+        "focus_share": 0.0444,
+        "rank": 10
+      },
+      {
+        "element_id": "E09",
+        "label": "课程提醒：开启",
+        "role": "button",
+        "bbox": [
+          0.642,
+          0.362,
+          0.071,
+          0.052
+        ],
+        "area_ratio": 0.0037,
+        "center_distance": 0.2968,
+        "model_visual_importance": 0.8,
+        "region": {
+          "luminance_p10": 0.3451,
+          "luminance_p90": 0.4745,
+          "luminance_contrast": 0.1294,
+          "mean_saturation": 0.7438,
+          "edge_density": 0.1045,
+          "bright_fraction": 0.0611
+        },
+        "focus_proxy_raw": 0.5362,
+        "focus_share": 0.0441,
+        "rank": 11
+      },
+      {
+        "element_id": "E25",
+        "label": "保存设置",
+        "role": "primary_button",
+        "bbox": [
+          0.702,
+          0.802,
+          0.116,
+          0.051
+        ],
+        "area_ratio": 0.0059,
+        "center_distance": 0.5914,
+        "model_visual_importance": 0.9,
+        "region": {
+          "luminance_p10": 0.3451,
+          "luminance_p90": 0.4667,
+          "luminance_contrast": 0.1216,
+          "mean_saturation": 0.7527,
+          "edge_density": 0.1161,
+          "bright_fraction": 0.0349
+        },
+        "focus_proxy_raw": 0.53,
+        "focus_share": 0.0436,
+        "rank": 12
+      },
+      {
+        "element_id": "E02",
+        "label": "帮助中心",
+        "role": "nav",
+        "bbox": [
+          0.835,
+          0.033,
+          0.047,
+          0.024
+        ],
+        "area_ratio": 0.0011,
+        "center_distance": 0.8192,
+        "model_visual_importance": 0.3,
+        "region": {
+          "luminance_p10": 0.5843,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.4157,
+          "mean_saturation": 0.0457,
+          "edge_density": 0.4874,
+          "bright_fraction": 0.6849
+        },
+        "focus_proxy_raw": 0.4259,
+        "focus_share": 0.035,
+        "rank": 13
+      },
+      {
+        "element_id": "E12",
+        "label": "界面主题：浅色",
+        "role": "button",
+        "bbox": [
+          0.578,
+          0.451,
+          0.111,
+          0.052
+        ],
+        "area_ratio": 0.0058,
+        "center_distance": 0.1916,
+        "model_visual_importance": 0.45,
+        "region": {
+          "luminance_p10": 0.9529,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.0471,
+          "mean_saturation": 0.0124,
+          "edge_density": 0.1556,
+          "bright_fraction": 0.9559
+        },
+        "focus_proxy_raw": 0.404,
+        "focus_share": 0.0332,
+        "rank": 14
+      },
+      {
+        "element_id": "E19",
+        "label": "文字大小：标准",
+        "role": "button",
+        "bbox": [
+          0.642,
+          0.629,
+          0.071,
+          0.052
+        ],
+        "area_ratio": 0.0037,
+        "center_distance": 0.3333,
+        "model_visual_importance": 0.45,
+        "region": {
+          "luminance_p10": 0.9451,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.0549,
+          "mean_saturation": 0.0192,
+          "edge_density": 0.2,
+          "bright_fraction": 0.9269
+        },
+        "focus_proxy_raw": 0.3997,
+        "focus_share": 0.0329,
+        "rank": 15
+      },
+      {
+        "element_id": "E23",
+        "label": "消息工具：矩形图标",
+        "role": "button",
+        "bbox": [
+          0.716,
+          0.717,
+          0.044,
+          0.052
+        ],
+        "area_ratio": 0.0023,
+        "center_distance": 0.481,
+        "model_visual_importance": 0.35,
+        "region": {
+          "luminance_p10": 0.8588,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.1412,
+          "mean_saturation": 0.0226,
+          "edge_density": 0.2577,
+          "bright_fraction": 0.8798
+        },
+        "focus_proxy_raw": 0.3824,
+        "focus_share": 0.0314,
+        "rank": 16
+      },
+      {
+        "element_id": "E10",
+        "label": "课程提醒：关闭",
+        "role": "button",
+        "bbox": [
+          0.724,
+          0.362,
+          0.094,
+          0.052
+        ],
+        "area_ratio": 0.0049,
+        "center_distance": 0.4147,
+        "model_visual_importance": 0.45,
+        "region": {
+          "luminance_p10": 0.949,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.051,
+          "mean_saturation": 0.0144,
+          "edge_density": 0.1697,
+          "bright_fraction": 0.9475
+        },
+        "focus_proxy_raw": 0.381,
+        "focus_share": 0.0313,
+        "rank": 17
+      },
+      {
+        "element_id": "E13",
+        "label": "界面主题：深色",
+        "role": "button",
+        "bbox": [
+          0.701,
+          0.451,
+          0.117,
+          0.052
+        ],
+        "area_ratio": 0.0061,
+        "center_distance": 0.3684,
+        "model_visual_importance": 0.45,
+        "region": {
+          "luminance_p10": 0.949,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.051,
+          "mean_saturation": 0.0123,
+          "edge_density": 0.1541,
+          "bright_fraction": 0.9557
+        },
+        "focus_proxy_raw": 0.3787,
+        "focus_share": 0.0311,
+        "rank": 18
+      },
+      {
+        "element_id": "E20",
+        "label": "文字大小：较大",
+        "role": "button",
+        "bbox": [
+          0.724,
+          0.629,
+          0.094,
+          0.052
+        ],
+        "area_ratio": 0.0049,
+        "center_distance": 0.4415,
+        "model_visual_importance": 0.45,
+        "region": {
+          "luminance_p10": 0.949,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.051,
+          "mean_saturation": 0.0136,
+          "edge_density": 0.1696,
+          "bright_fraction": 0.9526
+        },
+        "focus_proxy_raw": 0.3768,
+        "focus_share": 0.031,
+        "rank": 19
+      },
+      {
+        "element_id": "E22",
+        "label": "消息工具：折线图标",
+        "role": "button",
+        "bbox": [
+          0.662,
+          0.717,
+          0.044,
+          0.052
+        ],
+        "area_ratio": 0.0023,
+        "center_distance": 0.4311,
+        "model_visual_importance": 0.35,
+        "region": {
+          "luminance_p10": 0.949,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.051,
+          "mean_saturation": 0.0132,
+          "edge_density": 0.1882,
+          "bright_fraction": 0.9478
+        },
+        "focus_proxy_raw": 0.3529,
+        "focus_share": 0.029,
+        "rank": 20
+      },
+      {
+        "element_id": "E27",
+        "label": "北辰校园 · 演示界面",
+        "role": "text",
+        "bbox": [
+          0.901,
+          0.974,
+          0.083,
+          0.018
+        ],
+        "area_ratio": 0.0015,
+        "center_distance": 0.9264,
+        "model_visual_importance": 0.15,
+        "region": {
+          "luminance_p10": 0.6118,
+          "luminance_p90": 0.9451,
+          "luminance_contrast": 0.3333,
+          "mean_saturation": 0.0667,
+          "edge_density": 0.5807,
+          "bright_fraction": 0.5703
+        },
+        "focus_proxy_raw": 0.3434,
+        "focus_share": 0.0282,
+        "rank": 21
+      },
+      {
+        "element_id": "E15",
+        "label": "作业到期开关",
+        "role": "panel",
+        "bbox": [
+          0.684,
+          0.544,
+          0.134,
+          0.042
+        ],
+        "area_ratio": 0.0056,
+        "center_distance": 0.3667,
+        "model_visual_importance": 0.4,
+        "region": {
+          "luminance_p10": 0.9294,
+          "luminance_p90": 0.9569,
+          "luminance_contrast": 0.0275,
+          "mean_saturation": 0.0404,
+          "edge_density": 0.13,
+          "bright_fraction": 0.9322
+        },
+        "focus_proxy_raw": 0.3399,
+        "focus_share": 0.0279,
+        "rank": 22
+      },
+      {
+        "element_id": "E24",
+        "label": "消息工具：叉号图标",
+        "role": "button",
+        "bbox": [
+          0.77,
+          0.717,
+          0.044,
+          0.052
+        ],
+        "area_ratio": 0.0023,
+        "center_distance": 0.5372,
+        "model_visual_importance": 0.35,
+        "region": {
+          "luminance_p10": 0.9451,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.0549,
+          "mean_saturation": 0.015,
+          "edge_density": 0.2158,
+          "bright_fraction": 0.9335
+        },
+        "focus_proxy_raw": 0.3387,
+        "focus_share": 0.0278,
+        "rank": 23
+      },
+      {
+        "element_id": "E26",
+        "label": "合成测试素材 S07",
+        "role": "text",
+        "bbox": [
+          0.019,
+          0.974,
+          0.076,
+          0.018
+        ],
+        "area_ratio": 0.0014,
+        "center_distance": 0.9269,
+        "model_visual_importance": 0.15,
+        "region": {
+          "luminance_p10": 0.6314,
+          "luminance_p90": 0.9451,
+          "luminance_contrast": 0.3137,
+          "mean_saturation": 0.0662,
+          "edge_density": 0.5483,
+          "bright_fraction": 0.5597
+        },
+        "focus_proxy_raw": 0.3348,
+        "focus_share": 0.0275,
+        "rank": 24
+      },
+      {
+        "element_id": "E16",
+        "label": "作业到期：ON",
+        "role": "button",
+        "bbox": [
+          0.684,
+          0.544,
+          0.067,
+          0.042
+        ],
+        "area_ratio": 0.0028,
+        "center_distance": 0.321,
+        "model_visual_importance": 0.35,
+        "region": {
+          "luminance_p10": 0.9294,
+          "luminance_p90": 0.9569,
+          "luminance_contrast": 0.0275,
+          "mean_saturation": 0.0401,
+          "edge_density": 0.1388,
+          "bright_fraction": 0.9344
+        },
+        "focus_proxy_raw": 0.3327,
+        "focus_share": 0.0274,
+        "rank": 25
+      },
+      {
+        "element_id": "E17",
+        "label": "作业到期：OFF",
+        "role": "button",
+        "bbox": [
+          0.751,
+          0.544,
+          0.067,
+          0.042
+        ],
+        "area_ratio": 0.0028,
+        "center_distance": 0.4127,
+        "model_visual_importance": 0.35,
+        "region": {
+          "luminance_p10": 0.9294,
+          "luminance_p90": 0.9569,
+          "luminance_contrast": 0.0275,
+          "mean_saturation": 0.0406,
+          "edge_density": 0.1407,
+          "bright_fraction": 0.9301
+        },
+        "focus_proxy_raw": 0.3204,
+        "focus_share": 0.0263,
+        "rank": 26
+      },
+      {
+        "element_id": "E03",
+        "label": "用户头像：林",
+        "role": "button",
+        "bbox": [
+          0.933,
+          0.021,
+          0.027,
+          0.043
+        ],
+        "area_ratio": 0.0012,
+        "center_distance": 0.9041,
+        "model_visual_importance": 0.3,
+        "region": {
+          "luminance_p10": 0.9255,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.0745,
+          "mean_saturation": 0.0883,
+          "edge_density": 0.2112,
+          "bright_fraction": 0.9076
+        },
+        "focus_proxy_raw": 0.2811,
+        "focus_share": 0.0231,
+        "rank": 27
+      }
+    ]
+  },
+  "readability": {
+    "text_block_count": 23,
+    "low_contrast_count": 0,
+    "small_text_candidate_count": 4,
+    "estimated_height_p10": 17.0,
+    "estimated_height_p50": 22.0,
+    "local_contrast_p10": 0.4431,
+    "blocks": [
+      {
+        "block": 1,
+        "text": "北",
+        "bbox": [
+          0.0285,
+          0.0344,
+          0.0132,
+          0.0244
+        ],
+        "estimated_height_px": 22.0,
+        "local_luminance_contrast": 0.6549,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 2,
+        "text": "北辰校园",
+        "bbox": [
+          0.0569,
+          0.03,
+          0.0646,
+          0.03
+        ],
+        "estimated_height_px": 27.0,
+        "local_luminance_contrast": 0.8706,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 3,
+        "text": "帮助中心",
+        "bbox": [
+          0.8361,
+          0.0356,
+          0.0451,
+          0.02
+        ],
+        "estimated_height_px": 18.0,
+        "local_luminance_contrast": 0.4431,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 4,
+        "text": "林",
+        "bbox": [
+          0.9403,
+          0.0322,
+          0.0132,
+          0.0222
+        ],
+        "estimated_height_px": 20.0,
+        "local_luminance_contrast": 0.549,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 5,
+        "text": "个人设置",
+        "bbox": [
+          0.0333,
+          0.1222,
+          0.0792,
+          0.0344
+        ],
+        "estimated_height_px": 31.0,
+        "local_luminance_contrast": 0.8314,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 6,
+        "text": "通知偏好",
+        "bbox": [
+          0.1826,
+          0.2644,
+          0.0736,
+          0.0311
+        ],
+        "estimated_height_px": 28.0,
+        "local_luminance_contrast": 0.8706,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 7,
+        "text": "设置课程消息与学习空间的显示方式。",
+        "bbox": [
+          0.1826,
+          0.3133,
+          0.2056,
+          0.0233
+        ],
+        "estimated_height_px": 21.0,
+        "local_luminance_contrast": 0.451,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 8,
+        "text": "课程提醒",
+        "bbox": [
+          0.1826,
+          0.3744,
+          0.0542,
+          0.0244
+        ],
+        "estimated_height_px": 22.0,
+        "local_luminance_contrast": 0.8157,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 9,
+        "text": "开启",
+        "bbox": [
+          0.6639,
+          0.3767,
+          0.0271,
+          0.0244
+        ],
+        "estimated_height_px": 22.0,
+        "local_luminance_contrast": 0.6118,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 10,
+        "text": "关闭",
+        "bbox": [
+          0.7576,
+          0.3767,
+          0.0271,
+          0.0244
+        ],
+        "estimated_height_px": 22.0,
+        "local_luminance_contrast": 0.7882,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 11,
+        "text": "界面主题",
+        "bbox": [
+          0.1826,
+          0.4633,
+          0.0542,
+          0.0244
+        ],
+        "estimated_height_px": 22.0,
+        "local_luminance_contrast": 0.8118,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 12,
+        "text": "浅色",
+        "bbox": [
+          0.6208,
+          0.4656,
+          0.0271,
+          0.0244
+        ],
+        "estimated_height_px": 22.0,
+        "local_luminance_contrast": 0.7294,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 13,
+        "text": "深色",
+        "bbox": [
+          0.7458,
+          0.4656,
+          0.0271,
+          0.0244
+        ],
+        "estimated_height_px": 22.0,
+        "local_luminance_contrast": 0.7569,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 14,
+        "text": "作业到期",
+        "bbox": [
+          0.1826,
+          0.5522,
+          0.0542,
+          0.0244
+        ],
+        "estimated_height_px": 22.0,
+        "local_luminance_contrast": 0.7765,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 15,
+        "text": "ON",
+        "bbox": [
+          0.709,
+          0.5567,
+          0.0181,
+          0.0189
+        ],
+        "estimated_height_px": 17.0,
+        "local_luminance_contrast": 0.5098,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 16,
+        "text": "OFF",
+        "bbox": [
+          0.7736,
+          0.5567,
+          0.0215,
+          0.0189
+        ],
+        "estimated_height_px": 17.0,
+        "local_luminance_contrast": 0.5098,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 17,
+        "text": "文字大小",
+        "bbox": [
+          0.1826,
+          0.6411,
+          0.0542,
+          0.0244
+        ],
+        "estimated_height_px": 22.0,
+        "local_luminance_contrast": 0.698,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 18,
+        "text": "标准",
+        "bbox": [
+          0.6639,
+          0.6433,
+          0.0271,
+          0.0244
+        ],
+        "estimated_height_px": 22.0,
+        "local_luminance_contrast": 0.8,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 19,
+        "text": "较大",
+        "bbox": [
+          0.7576,
+          0.6433,
+          0.0271,
+          0.0244
+        ],
+        "estimated_height_px": 22.0,
+        "local_luminance_contrast": 0.7804,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 20,
+        "text": "消息工具",
+        "bbox": [
+          0.1826,
+          0.73,
+          0.0542,
+          0.0244
+        ],
+        "estimated_height_px": 22.0,
+        "local_luminance_contrast": 0.8706,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 21,
+        "text": "保存设置",
+        "bbox": [
+          0.734,
+          0.8167,
+          0.0542,
+          0.0244
+        ],
+        "estimated_height_px": 22.0,
+        "local_luminance_contrast": 0.5843,
+        "low_contrast": false,
+        "small_text_candidate": false,
+        "ocr_confidence": 0.99
+      },
+      {
+        "block": 22,
+        "text": "合成测试素材 S07",
+        "bbox": [
+          0.0194,
+          0.9744,
+          0.0729,
+          0.0167
+        ],
+        "estimated_height_px": 15.0,
+        "local_luminance_contrast": 0.3294,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.97
+      },
+      {
+        "block": 23,
+        "text": "北辰校园 · 演示界面",
+        "bbox": [
+          0.9021,
+          0.9744,
+          0.0806,
+          0.0167
+        ],
+        "estimated_height_px": 15.0,
+        "local_luminance_contrast": 0.3451,
+        "low_contrast": false,
+        "small_text_candidate": true,
+        "ocr_confidence": 0.97
+      }
+    ]
+  },
+  "density": {
+    "element_count": 27,
+    "interactive_element_count": 14,
+    "ocr_text_block_count": 23,
+    "elements_per_megapixel": 20.83,
+    "interactive_coverage": 0.0497,
+    "text_coverage": 0.0285,
+    "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+  },
+  "style": {
+    "control_count": 15,
+    "control_saturation_dispersion": 0.2488,
+    "control_contrast_dispersion": 0.1766,
+    "control_mean_saturation": 0.1347,
+    "control_mean_contrast": 0.1522,
+    "note": "Dispersion measures same-role visual consistency only when roles are correctly labeled."
+  },
+  "prototype_alignment": {
+    "available": false,
+    "matches": [],
+    "mean_iou": null
+  }
+}

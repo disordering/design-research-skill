@@ -589,6 +589,8 @@ python -m engine session-batch-evaluate <manifest.json>
 
 ## 当前成果
 
+- [D 新版工作台续测与修复记录](docs/D-新版工作台续测.md)
+- [D 迭代日志](docs/D-迭代日志.md)
 - [六人识别与数据收尾](docs/D-数据收尾结果.md)
 - [体验数据与模拟测试](docs/D-体验数据与模拟测试.md)
 - [阶段性报告](docs/D-阶段性报告.md)

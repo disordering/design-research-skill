@@ -1,0 +1,79 @@
+{
+  "来源": "06-修后原答回放",
+  "会话": "session-8e92a333d79d4678bac0b330efcd3e94",
+  "操作员": "AI模型验收-D",
+  "操作者类型": "ai",
+  "操作": "原 Node 前端 → 原 FastAPI → 实际会话数据库；只读恢复、版本切换与导出",
+  "浏览器异常": [],
+  "HTTP": [
+    {
+      "方法": "GET",
+      "URL": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94",
+      "HTTP": 200
+    },
+    {
+      "方法": "GET",
+      "URL": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/updates?after_sequence=199",
+      "HTTP": 200
+    },
+    {
+      "方法": "GET",
+      "URL": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/updates?after_sequence=199",
+      "HTTP": 200
+    },
+    {
+      "方法": "GET",
+      "URL": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/updates?after_sequence=199",
+      "HTTP": 200
+    },
+    {
+      "方法": "GET",
+      "URL": "/engine/api/review-sessions/session-8e92a333d79d4678bac0b330efcd3e94/reports/5",
+      "HTTP": 200
+    }
+  ],
+  "运行归档版本": 5,
+  "当前会话版本": 5,
+  "当前会话": "本轮结束 · 阶段 T08 · 上下文 v1 · 报告 v5 · runtime · 部分报告",
+  "发现文字": "发现与人工审核\nREQ3：下午二层服务台提交后，完成页显示上午一层服务台\n\nnonconformity · 模型等级 high · 人工等级 high · 已确认\n\n原则：REQ3要求完成页显示最终确认的时段及服务台；E07核对要求落实，E01核对结果对象，E02核对跨状态字段一致性。\n\n检测：选择下午项→核对→返回选择→再次核对→提交登记。action-6a0cb99a000d4b1fb341f4c859bfd25a关联的提交前画面为14:00–14:30、二层服务台，提交后完成页为09:00–09:30、一层服务台。\n\n描述：本轮稿件1的完成结果与最终确认信息不一致，无法据完成页确认所请求的下午登记。仅确认可见结果偏差，不推断内部原因、持久化数据或真实预约后果。最新选择页观察不能证明该问题已修复。\n\n建议：使完成页呈现本次最终确认的时段及服务台；修改后按同一返回再提交路径逐字段复核，并保留提交前后证据。\n\n分级理由：核心任务的结果确认失败，两个关键字段均错误。已有重新开始返回选择页的恢复入口，但未证明重试能正确完成。影响限于本机页面演示，无真实登记损失证据。\n\nev-2f97d5fc719c439b842ad62d0c01670a、ev-8d4c111e8c2b4c5e92e09db4172c0e24、ev-b7d8f0b7918f4c29a8995ef0f82f0e9c\n\n人工状态\n待审核\n已确认\n已驳回\n待验证\n人工等级\n保留模型等级\ncritical\nhigh\nmedium\nlow\n处理决定\n未决定\n修改\n接受风险\n暂缓\n理由\n保存审核（驳回 / 待验证会触发重查）\nREQ3：下午二层服务台提交后显示上午一层服务台\n\nissue · 模型等级 high · 人工等级 high · 已确认\n\n原则：REQ3要求完成页显示最终确认的时段和服务台；E03与R04要求反馈对应本次操作及对象。\n\n检测：选择下午项→核对→返回选择→再次核对→提交登记。action-6a0cb99a000d4b1fb341f4c859bfd25a前为14:00–14:30、二层服务台，后为09:00–09:30、一层服务台。\n\n描述：本轮稿件1的完成页两个关键字段与最终确认信息不一致，REQ3在该次路径中observed_violation。仅确认可见结果偏差，内部原因及真实登记后果未知。最新ev-092921bb105c4f6dbc9ad0a2a0c8154a仅显示选择页，不能证明已修复；此前程序拒绝记录不等于人工否定该观察。\n\n建议：使完成页显示本次最终确认的时段及服务台；修改后复核同一返回再提交路径并保存提交前后证据。\n\n分级理由：核心登记结果确认失败，两个必要字段均不符。已有重新开始复位证据，但未证明重试能正确完成；影响限定为本机演示，无真实损失证据。\n\nev-2f97d5fc719c439b842ad62d0c01670a、ev-8d4c111e8c2b4c5e92e09db4172c0e24、ev-b7d8f0b7918f4c29a8995ef0f82f0e9c\n\n人工状态\n待审核\n已确认\n已驳回\n待验证\n人工等级\n保留模型等级\ncritical\nhigh\nmedium\nlow\n处理决定\n未决定\n修改\n接受风险\n暂缓\n理由\n保存审核（驳回 / 待验证会触发重查）",
+  "复审文字": "逐问题复审",
+  "ZIP": {
+    "SHA256": "ccdecd62e978f184c275ed2d6c21a40d5016beecb152af41885826ab6efe09e0",
+    "成员": 154,
+    "报告版本": 5,
+    "会话": "session-8e92a333d79d4678bac0b330efcd3e94",
+    "模型调用": 59,
+    "复审": []
+  },
+  "ZIP发现状态": [
+    {
+      "finding_id": "finding-2b889800c51c43d7a60c72987671624d",
+      "kind": "nonconformity",
+      "severity": "high",
+      "review_status": "confirmed",
+      "reviewer": "AI模型验收-D",
+      "human_severity": "high",
+      "location": {
+        "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+        "state_id": "cae2b537eea57be43e8207a7",
+        "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+        "url": "http://127.0.0.1:61886/v1/"
+      }
+    },
+    {
+      "finding_id": "finding-149e805558484b9d850775c841603fda",
+      "kind": "issue",
+      "severity": "high",
+      "review_status": "confirmed",
+      "reviewer": "AI模型验收-D",
+      "human_severity": "high",
+      "location": {
+        "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+        "state_id": "cae2b537eea57be43e8207a7",
+        "object_id": "obj-91d36b9f4dbc6cbcf6c0"
+      }
+    }
+  ],
+  "历史读回": "本轮结束 · 阶段 T09 · 上下文 v1 · 报告 v5 · runtime · 部分报告 · 历史只读",
+  "历史反馈隐藏": true
+}

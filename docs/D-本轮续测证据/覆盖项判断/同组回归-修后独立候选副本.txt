@@ -1,0 +1,15 @@
+test_identical_existing_coverage_preserves_judgment (test_d_coverage_judgments.CoverageRegression.test_identical_existing_coverage_preserves_judgment) ... ok
+test_new_conflict_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_conflict_has_own_judgment) ... ok
+test_new_coverage_does_not_inherit_reevaluation_bypass (test_d_coverage_judgments.CoverageRegression.test_new_coverage_does_not_inherit_reevaluation_bypass) ... ok
+test_new_goal_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_goal_has_own_judgment) ... ok
+test_new_method_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_method_has_own_judgment) ... ok
+test_new_rule_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_rule_has_own_judgment) ... ok
+test_no_inherited_budget_consumption (test_d_coverage_judgments.CoverageRegression.test_no_inherited_budget_consumption) ... ok
+test_repeated_same_plan_does_not_duplicate_coverage (test_d_coverage_judgments.CoverageRegression.test_repeated_same_plan_does_not_duplicate_coverage) ... ok
+test_template_nonexecuted_status_does_not_block_new_coverage (test_d_coverage_judgments.CoverageRegression.test_template_nonexecuted_status_does_not_block_new_coverage) ... ok
+test_unscoped_base_gets_new_identity_without_judgment (test_d_coverage_judgments.CoverageRegression.test_unscoped_base_gets_new_identity_without_judgment) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.005s
+
+OK

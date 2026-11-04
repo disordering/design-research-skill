@@ -1,0 +1,45 @@
+{
+  "schema": "D-human-v2.1",
+  "role": "participant",
+  "packageKind": "final",
+  "exportedAt": "2026-11-04T00:21:39.041Z",
+  "participant": "U01",
+  "round": "2",
+  "version": "AI-计时工具验收材料",
+  "device": "AI 自动操作 / Microsoft Edge",
+  "build": "本地计时验收",
+  "timing": "live",
+  "interruption": "草稿恢复期间按外部中断记录，恢复操作后继续计时。",
+  "outcome": "completed",
+  "product": "计时工具程序验收记录",
+  "understand": "na",
+  "evidence": "na",
+  "saved": "na",
+  "quote": "AI 自动检查计时与草稿恢复",
+  "consent": "yes",
+  "task": "B",
+  "method": "tool",
+  "events": [
+    {
+      "type": "active",
+      "at": "2026-11-04T00:21:36.959Z"
+    },
+    {
+      "type": "break",
+      "at": "2026-11-04T00:21:37.148Z",
+      "source": "draft_snapshot"
+    },
+    {
+      "type": "ended",
+      "at": "2026-11-04T00:21:38.848Z"
+    }
+  ],
+  "timingValid": true,
+  "seconds": {
+    "操作秒": 0.189,
+    "工具等待秒": 0,
+    "外部中断秒": 1.7,
+    "起止总秒": 1.889,
+    "扣中断后秒": 0.189
+  }
+}

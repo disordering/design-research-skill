@@ -1,0 +1,184 @@
+TAP version 13
+# Subtest: preserves report, multiple rules, critical severity and separate rule results
+ok 1 - preserves report, multiple rules, critical severity and separate rule results
+  ---
+  duration_ms: 1.5626
+  type: 'test'
+  ...
+# Subtest: stub never presented as real analysis and new round never inherits confirmations
+ok 2 - stub never presented as real analysis and new round never inherits confirmations
+  ---
+  duration_ms: 0.1099
+  type: 'test'
+  ...
+# Subtest: invalid bounds and unknown severity rejected
+ok 3 - invalid bounds and unknown severity rejected
+  ---
+  duration_ms: 0.2584
+  type: 'test'
+  ...
+# Subtest: followup contains original finding and human feedback; oversized input fails before request
+ok 4 - followup contains original finding and human feedback; oversized input fails before request
+  ---
+  duration_ms: 0.3756
+  type: 'test'
+  ...
+# Subtest: coverage excludes stale and other runs, never equates completed with passed
+ok 5 - coverage excludes stale and other runs, never equates completed with passed
+  ---
+  duration_ms: 0.1666
+  type: 'test'
+  ...
+# Subtest: error overrides backend completed and historical warnings do not mark recovered run failed
+ok 6 - error overrides backend completed and historical warnings do not mark recovered run failed
+  ---
+  duration_ms: 0.1609
+  type: 'test'
+  ...
+# Subtest: provider connectivity failure is visibly abnormal even when backend completed
+ok 7 - provider connectivity failure is visibly abnormal even when backend completed
+  ---
+  duration_ms: 0.0997
+  type: 'test'
+  ...
+# Subtest: running guard and wait indicator do not invent percent; timeout is error
+ok 8 - running guard and wait indicator do not invent percent; timeout is error
+  ---
+  duration_ms: 0.1097
+  type: 'test'
+  ...
+# Subtest: invalid evidence quotes stay visibly failed after model returns
+ok 9 - invalid evidence quotes stay visibly failed after model returns
+  ---
+  duration_ms: 0.0647
+  type: 'test'
+  ...
+# Subtest: 创建、等待补充、取消和结束分别显示真实状态
+ok 10 - 创建、等待补充、取消和结束分别显示真实状态
+  ---
+  duration_ms: 0.1561
+  type: 'test'
+  ...
+# Subtest: one result per old issue; rule overlap is only a candidate and disappearance never means resolved
+ok 11 - one result per old issue; rule overlap is only a candidate and disappearance never means resolved
+  ---
+  duration_ms: 0.6083
+  type: 'test'
+  ...
+# Subtest: confirmed solved state requires reason and visible evidence; preserves pending source
+ok 12 - confirmed solved state requires reason and visible evidence; preserves pending source
+  ---
+  duration_ms: 0.232
+  type: 'test'
+  ...
+# Subtest: foreign new IDs rejected, human exclusion distinguished from solved
+ok 13 - foreign new IDs rejected, human exclusion distinguished from solved
+  ---
+  duration_ms: 0.0982
+  type: 'test'
+  ...
+# Subtest: 问题补记要求明确来源、步骤、证据与等级；同题人工和 AI 的来源分别保留
+ok 14 - 问题补记要求明确来源、步骤、证据与等级；同题人工和 AI 的来源分别保留
+  ---
+  duration_ms: 0.4241
+  type: 'test'
+  ...
+# Subtest: 真实引擎适配器保留同图补记；换图时仅在原版及待核对结果中引用旧证据
+ok 15 - 真实引擎适配器保留同图补记；换图时仅在原版及待核对结果中引用旧证据
+  ---
+  duration_ms: 6.5666
+  type: 'test'
+  ...
+# Subtest: 补记经过会话快照后保留审核；模拟修改稿归档旧证据且不冒充新发现
+ok 16 - 补记经过会话快照后保留审核；模拟修改稿归档旧证据且不冒充新发现
+  ---
+  duration_ms: 1380.0096
+  type: 'test'
+  ...
+# Subtest: feedback keeps stable IDs, audit snapshot and user changes without mutating prior version
+ok 17 - feedback keeps stable IDs, audit snapshot and user changes without mutating prior version
+  ---
+  duration_ms: 919.6134
+  type: 'test'
+  ...
+# Subtest: recheck retains original image and excludes rejected finding
+ok 18 - recheck retains original image and excludes rejected finding
+  ---
+  duration_ms: 921.6847
+  type: 'test'
+  ...
+# Subtest: 修改目标后问题描述同步更新，并保留人工审核与旧版本
+ok 19 - 修改目标后问题描述同步更新，并保留人工审核与旧版本
+  ---
+  duration_ms: 920.8277
+  type: 'test'
+  ...
+# Subtest: native events use current context, actor and stable retry ID
+ok 20 - native events use current context, actor and stable retry ID
+  ---
+  duration_ms: 0.1607
+  type: 'test'
+  ...
+# Subtest: source checks reject unsafe credentials and incorrect Figma hosts
+ok 21 - source checks reject unsafe credentials and incorrect Figma hosts
+  ---
+  duration_ms: 0.1624
+  type: 'test'
+  ...
+# Subtest: download pins selected version and snapshot rejects legacy report
+ok 22 - download pins selected version and snapshot rejects legacy report
+  ---
+  duration_ms: 0.2328
+  type: 'test'
+  ...
+# Subtest: proxy allowlist rejects unrelated and unsafe mutation routes
+ok 23 - proxy allowlist rejects unrelated and unsafe mutation routes
+  ---
+  duration_ms: 0.1373
+  type: 'test'
+  ...
+# Subtest: HTTP proxy preserves queries, binary artifacts and error status
+ok 24 - HTTP proxy preserves queries, binary artifacts and error status
+  ---
+  duration_ms: 34.3441
+  type: 'test'
+  ...
+# Subtest: PDF and image files infer material type and invalid link explains recovery
+ok 25 - PDF and image files infer material type and invalid link explains recovery
+  ---
+  duration_ms: 0.2562
+  type: 'test'
+  ...
+# Subtest: 事件显式保留操作者类型，未指定时记录未知
+ok 26 - 事件显式保留操作者类型，未指定时记录未知
+  ---
+  duration_ms: 0.0609
+  type: 'test'
+  ...
+# Subtest: links remain unexecuted and unsafe schemes are rejected
+ok 27 - links remain unexecuted and unsafe schemes are rejected
+  ---
+  duration_ms: 0.1098
+  type: 'test'
+  ...
+# Subtest: human decisions require reasons and retain version and actor
+ok 28 - human decisions require reasons and retain version and actor
+  ---
+  duration_ms: 0.0541
+  type: 'test'
+  ...
+# Subtest: recheck preserves independent historical snapshots and pending notes
+ok 29 - recheck preserves independent historical snapshots and pending notes
+  ---
+  duration_ms: 0.1563
+  type: 'test'
+  ...
+1..29
+# tests 29
+# suites 0
+# pass 29
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4223.5587

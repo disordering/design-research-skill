@@ -1,0 +1,40 @@
+{
+  "task_summary": "核对两个时段及服务台，选择下午二层服务台，进入核对页后使用“返回选择”核对选择是否保留，再提交并检查完成页；分别记录REQ1–REQ3的观察与证据。",
+  "scope": "本轮稿件1的本机演示登记流程：选择、核对、返回选择、提交及完成结果，必要时检查重新开始。",
+  "goals": [],
+  "requirements": [],
+  "assumptions": [],
+  "questions": [],
+  "action": {
+    "source_id": "src-d643f19b03384ce2a036f12ba71161a2",
+    "kind": "click",
+    "selector": "[data-review-control=\"1\"]",
+    "expected_state_id": "f5b71d5561f98baf58bbba74",
+    "reason": "TASK1及REQ1要求可更换选择。当前截图同时显示两个时段及对应服务台，上午已选、下午未选；先选择下午项，取得动作后证据以检查E03、R17，并为BR1返回保留和BR2提交结果核对建立前置状态。尚不能据此认定更换成功。",
+    "target_label": "周五 14:00–14:30 二层服务台",
+    "requires_explicit_authorization": false,
+    "status": "pending",
+    "context_version": 1,
+    "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+    "evidence_ids": [
+      "ev-3288eb39e0534307aab6e3698122ae62",
+      "ev-91397b03af5640368d2dfc61172bae20"
+    ]
+  },
+  "ready_for_review": true,
+  "priority_refs": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "REQ1",
+    "REQ2",
+    "REQ3",
+    "R17"
+  ],
+  "question_resolutions": []
+}

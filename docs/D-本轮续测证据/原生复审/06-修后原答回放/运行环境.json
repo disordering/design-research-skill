@@ -1,0 +1,18 @@
+{
+  "开始": "2026-11-04T08:55:49.432868+00:00",
+  "执行": "原生_judge → 程序校验 → 真实Codex语义核验 → 原生去重 → 原生报告",
+  "运行性质": "录制原答修后程序回放，不是新增独立模型初审",
+  "AI操作者": "AI模型验收-D",
+  "AI来源": "ai",
+  "旧会话和报告保持原样": true,
+  "真实新模型调用上限": 2,
+  "引擎文件SHA256": {
+    "engine/session_service.py": "c905328d60fe48426d33aa8c682519a57cdc660cbb8015791a691d154a6885cf",
+    "engine/session_verification.py": "2e4d69bd5a1486e88de40d46e702a4938815ab21c506e5e5e1ad3cd474ff0d53",
+    "engine/session_contracts.py": "662057e04d2b92a8255068f1c94292567aa0d6b219a56bf31ffc6a794886560c"
+  },
+  "引擎快照": {
+    "session_service.py": "冻结引擎/session_service-c905328d60fe4842.py",
+    "session_verification.py": "冻结引擎/session_verification-2e4d69bd5a1486e8.py"
+  }
+}

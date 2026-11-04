@@ -1,0 +1,102 @@
+{
+  "judgments": [
+    {
+      "check_id": "check-f23f8dd98d715b76",
+      "decision": "met",
+      "reason": "REQ1适用于选择页。画面同时显示周五09:00–09:30／一层服务台和14:00–14:30／二层服务台；已执行的切换动作及前后画面、checked状态证明选择由上午改为下午。本轮观察满足两个子项。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-3288eb39e0534307aab6e3698122ae62", "ev-13f449179bd84e8197d0f8a2c5d1479f"]
+    },
+    {
+      "check_id": "check-4e1c25f5062817db",
+      "decision": "met",
+      "reason": "REQ2适用于BR1返回路径。核对页返回选择后，下午14:00–14:30／二层服务台仍选中；再次进入核对页，两项信息均保持一致。本轮返回保留要求满足。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28ea4802a4da474aab003c94497c5b61", "ev-1b92d13208824e079e766fb72b4db903", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-0a779f0d0fdd99bd",
+      "decision": "insufficient_evidence",
+      "reason": "REQ3适用于提交后的完成页。提交动作action-d11b1435c3764e7a981cf780fa4ff820仍为pending；最新画面仅为核对页，缺少提交结果及完成页，不能认定登记完成或要求违反。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-0b115fa13d823ac5",
+      "decision": "met",
+      "reason": "E07在本覆盖单元检查REQ1。两个时段及对应服务台同时可见，且动作前后的选中状态证明已成功更换为下午二层服务台；两个明确子项均有本轮观察支持。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-3288eb39e0534307aab6e3698122ae62", "ev-13f449179bd84e8197d0f8a2c5d1479f"]
+    },
+    {
+      "check_id": "check-3263307c477051ac",
+      "decision": "met",
+      "reason": "E07在BR1检查REQ2。返回前核对信息、返回后选中项及再次核对信息均为周五14:00–14:30／二层服务台，连续动作记录支持本轮保留要求满足。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28ea4802a4da474aab003c94497c5b61", "ev-1b92d13208824e079e766fb72b4db903", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-0e505a6a69cb94a1",
+      "decision": "insufficient_evidence",
+      "reason": "E07在BR2检查REQ3。正式要求明确，但尚无提交执行及完成页观察，无法比较完成结果与最终核对值；不以核对页替代完成证据。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-579a1ce5be1079a0",
+      "decision": "no_conflict",
+      "reason": "对同一流程的任务卡与委托进行要求兼容性核对：两份正文一致，REQ1–REQ3可同时满足，未发现相互排斥的要求。提交尚未执行属于观察缺口，不是产品要求冲突。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-5ed1c04f55834474af9ef1bcbbec3613"]
+    },
+    {
+      "check_id": "check-a125f9260806868b",
+      "decision": "no_visible_issue",
+      "reason": "E01适用于更换选择并进入核对页的路径。已执行选择下午及点击“核对信息”，后续画面确为第2步核对页，显示周五14:00–14:30／二层服务台；本路径未见衔接问题。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-13f449179bd84e8197d0f8a2c5d1479f", "ev-28ea4802a4da474aab003c94497c5b61"]
+    },
+    {
+      "check_id": "check-0754e021b0dc7d76",
+      "decision": "no_visible_issue",
+      "reason": "E01适用于TASK2返回及再次核对路径。“返回选择”实际抵达第1步，随后“核对信息”实际抵达第2步；前后画面与动作记录对应，所选下午二层信息保持，本覆盖路径未见问题。",
+      "evidence_ids": ["ev-28ea4802a4da474aab003c94497c5b61", "ev-1b92d13208824e079e766fb72b4db903", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-be3102bcb310d402",
+      "decision": "insufficient_evidence",
+      "reason": "E01适用于BR2提交至完成页路径。当前有可用的提交入口，但提交动作仍待执行，无目标页面证据；不能判断该路径畅通或失败。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-44a0276a189eeebc",
+      "decision": "insufficient_evidence",
+      "reason": "BR3有明确的刷新或“重新开始”复位路径说明，因此存在检查对象；本轮未提供复位动作及返回选择页的结果，无法判定路径行为。可选执行不等于已验证通过。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20"]
+    },
+    {
+      "check_id": "check-5c63aacdbf3de524",
+      "decision": "no_visible_issue",
+      "reason": "E02适用于同版本同次登记返回前后的字段比较。核对页、返回后的选中项及再次核对页均为周五14:00–14:30／二层服务台，连续动作建立同一性，未见信息传递矛盾。",
+      "evidence_ids": ["ev-28ea4802a4da474aab003c94497c5b61", "ev-1b92d13208824e079e766fb72b4db903", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-fca16dc83dd67c3f",
+      "decision": "insufficient_evidence",
+      "reason": "REQ3明确要求比较同次登记的最终核对值与完成页值，E02具有适用对象。现有核对值为周五14:00–14:30／二层服务台，但完成页尚未取得，无法判断一致性。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-61d610f57d37c300",
+      "decision": "no_visible_issue",
+      "reason": "E03适用于下午选项切换反馈。点击后下午单选圆点及卡片高亮呈选中态，上午取消选中，checked状态与画面一致；反馈对应本次操作及对象，未见问题。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-13f449179bd84e8197d0f8a2c5d1479f"]
+    },
+    {
+      "check_id": "check-96e382db4eec336f",
+      "decision": "insufficient_evidence",
+      "reason": "E03适用于提交登记后的反馈。提交动作仍为pending，仅有动作前核对页，缺少触发及反馈观察，不能认定反馈缺失、错误或成功。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-9c6c7fcc49938167",
+      "decision": "insufficient_evidence",
+      "reason": "R04需取得本次登记的完成状态后检查结果表达。本覆盖对象是预期完成页，现有证据只有提交前核对页，尚无法确认完成状态及内容；不能据此判为不适用或结果表达有缺陷。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    }
+  ],
+  "findings": [],
+  "questions": []
+}

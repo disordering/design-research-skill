@@ -1,0 +1,19 @@
+[
+  {
+    "事件": {
+      "event_id": "d-native-03-A初审-approve-action-d11b1435c3764e7a981cf780fa4ff820",
+      "expected_context_version": 1,
+      "type": "authorize_action",
+      "payload": {
+        "action_id": "action-d11b1435c3764e7a981cf780fa4ff820",
+        "approved": true,
+        "reason": "AI操作员按已授权的本机原型测试继续；此样本登记只在当前页面中生效。"
+      },
+      "actor": "AI模型验收-D",
+      "actor_type": "ai"
+    },
+    "应运行": true,
+    "来源": "本脚本限定路由的本机样本",
+    "当前浏览器": "同一进程、同一适配器"
+  }
+]

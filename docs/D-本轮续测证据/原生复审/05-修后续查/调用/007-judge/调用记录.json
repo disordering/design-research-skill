@@ -1,0 +1,66 @@
+{
+  "开始": "2026-11-04T08:33:55.818178+00:00",
+  "操作": "judge",
+  "模型": "gpt-6-astra",
+  "推理设置": "low",
+  "非固定响应": true,
+  "输入SHA256": "15da305f05cfa1b695ef4876541aff832a0c884f8484baa2a40a80b2c379a8b2",
+  "图片": [
+    {
+      "次序": 1,
+      "SHA256": "a219351685de3830a3b0fd468433b12690ee1032e1462902a047c4b3e44d8624",
+      "文件": "输入图片\\a219351685de3830a3b0fd468433b12690ee1032e1462902a047c4b3e44d8624.jpeg"
+    },
+    {
+      "次序": 2,
+      "SHA256": "93933fa9cbf0835952554e2b61ed2f8e6e2cb809c946cbdc8f54029d170147ba",
+      "文件": "输入图片\\93933fa9cbf0835952554e2b61ed2f8e6e2cb809c946cbdc8f54029d170147ba.jpeg"
+    },
+    {
+      "次序": 3,
+      "SHA256": "a21c4efcdc52dfea8d6706eb76e1d5f2fcf1648deaa97aa0628ae9387c9699bc",
+      "文件": "输入图片\\a21c4efcdc52dfea8d6706eb76e1d5f2fcf1648deaa97aa0628ae9387c9699bc.jpeg"
+    },
+    {
+      "次序": 4,
+      "SHA256": "93933fa9cbf0835952554e2b61ed2f8e6e2cb809c946cbdc8f54029d170147ba",
+      "文件": "输入图片\\93933fa9cbf0835952554e2b61ed2f8e6e2cb809c946cbdc8f54029d170147ba.jpeg"
+    },
+    {
+      "次序": 5,
+      "SHA256": "a21c4efcdc52dfea8d6706eb76e1d5f2fcf1648deaa97aa0628ae9387c9699bc",
+      "文件": "输入图片\\a21c4efcdc52dfea8d6706eb76e1d5f2fcf1648deaa97aa0628ae9387c9699bc.jpeg"
+    },
+    {
+      "次序": 6,
+      "SHA256": "a21c4efcdc52dfea8d6706eb76e1d5f2fcf1648deaa97aa0628ae9387c9699bc",
+      "文件": "输入图片\\a21c4efcdc52dfea8d6706eb76e1d5f2fcf1648deaa97aa0628ae9387c9699bc.jpeg"
+    },
+    {
+      "次序": 7,
+      "SHA256": "855a918167727dbba35b40d28567515db9a977a95dbe2bf6cc43aa10849a101c",
+      "文件": "输入图片\\855a918167727dbba35b40d28567515db9a977a95dbe2bf6cc43aa10849a101c.jpeg"
+    },
+    {
+      "次序": 8,
+      "SHA256": "a219351685de3830a3b0fd468433b12690ee1032e1462902a047c4b3e44d8624",
+      "文件": "输入图片\\a219351685de3830a3b0fd468433b12690ee1032e1462902a047c4b3e44d8624.jpeg"
+    },
+    {
+      "次序": 9,
+      "SHA256": "a219351685de3830a3b0fd468433b12690ee1032e1462902a047c4b3e44d8624",
+      "文件": "输入图片\\a219351685de3830a3b0fd468433b12690ee1032e1462902a047c4b3e44d8624.jpeg"
+    }
+  ],
+  "结束": "2026-11-04T08:35:32.740741+00:00",
+  "状态": "已返回",
+  "Codex会话": "01a1a5b1-810c-7123-8f17-abc10df8a884",
+  "耗时毫秒": 96922,
+  "用量": {
+    "input_tokens": 96368,
+    "cached_input_tokens": 12416,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3157,
+    "reasoning_output_tokens": 0
+  }
+}

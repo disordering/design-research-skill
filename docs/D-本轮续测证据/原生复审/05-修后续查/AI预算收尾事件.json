@@ -1,0 +1,16 @@
+{
+  "UTC": "2026-11-04T08:54:26.188412+00:00",
+  "事件": {
+    "event_id": "d-native-05-budget-finish",
+    "expected_context_version": 1,
+    "type": "finish",
+    "payload": {
+      "reason": "本轮1800秒预算已到；已获得正式judge原答并定位确定性对象校验缺陷，转入修后原答程序验证。保持当前原始观察及判断，不继续扩展规划。"
+    },
+    "actor": "AI模型验收-D",
+    "actor_type": "ai"
+  },
+  "应再运行": false,
+  "报告版本": 4,
+  "状态": "completed"
+}

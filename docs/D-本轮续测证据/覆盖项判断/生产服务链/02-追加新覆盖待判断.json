@@ -1,0 +1,78 @@
+[
+  {
+    "check_id": "check-21f6190f5a187412",
+    "ref": "R02",
+    "coverage_id": "coverage-select",
+    "coverage_title": "选择页步骤提示",
+    "task_id": "TASK-FIXTURE",
+    "kind": "rule",
+    "run_id": "run-d301bd9ee7aa4cae99ae20bd641a18b8",
+    "context_version": 1,
+    "criteria_version": "0.2-method-draft",
+    "execution_status": "executed",
+    "decision": "no_visible_issue",
+    "reason": "固定响应：选择页第1步提示齐全。",
+    "evidence_ids": [
+      "ev-e33d57e050ac455582c77fb4db82c553"
+    ],
+    "source_ids": [
+      "src-a468fbdfd403469d8ae715a0c5369b7d"
+    ],
+    "depends_on": [],
+    "scope_status": "included",
+    "stale": false,
+    "applicability": "applicable",
+    "reevaluation_requested": false,
+    "plan_reason": "固定响应回归：各页面作为独立覆盖单元。",
+    "evidence_needed": [],
+    "object_refs": [
+      "选择页步骤提示"
+    ],
+    "object_ids": [],
+    "constraint_refs": [],
+    "plan_evidence_ids": [
+      "ev-e33d57e050ac455582c77fb4db82c553"
+    ],
+    "required_evidence_kinds": [
+      "design"
+    ]
+  },
+  {
+    "check_id": "check-3cf2969d9e50d012",
+    "ref": "R02",
+    "coverage_id": "coverage-confirm",
+    "coverage_title": "核对页步骤提示",
+    "task_id": "TASK-FIXTURE",
+    "kind": "rule",
+    "run_id": "run-d301bd9ee7aa4cae99ae20bd641a18b8",
+    "context_version": 1,
+    "criteria_version": "0.2-method-draft",
+    "execution_status": "planned",
+    "decision": null,
+    "reason": "",
+    "evidence_ids": [],
+    "source_ids": [
+      "src-a468fbdfd403469d8ae715a0c5369b7d"
+    ],
+    "depends_on": [],
+    "scope_status": "included",
+    "stale": false,
+    "applicability": "needs_context",
+    "reevaluation_requested": false,
+    "plan_reason": "固定响应回归：各页面作为独立覆盖单元。",
+    "evidence_needed": [
+      "核对页完整步骤提示"
+    ],
+    "object_refs": [
+      "核对页步骤提示"
+    ],
+    "object_ids": [],
+    "constraint_refs": [],
+    "plan_evidence_ids": [
+      "ev-ea89c14c0dd84c958893392f01cf6526"
+    ],
+    "required_evidence_kinds": [
+      "design"
+    ]
+  }
+]

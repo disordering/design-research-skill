@@ -1,0 +1,40 @@
+{
+  "基线提交": "2157483fb33f4248d2548772840dbaea498d58aa",
+  "本轮本地修改源文件": {
+    "frontend/dist/app.js": "f0cce59e702759ed476b5171de5318bdf6ecb31bda028eb02a6c17499c12f31f",
+    "frontend/dist/index.html": "1acda507541edc430ecc5bd1624a0b4bc69961c458f33b5c9625d890a294ea9f",
+    "frontend/dist/style.css": "4f72c01e93afa76d06c73e89bc7de01d908960413b5185cfcaf2e61d44bcfa3e",
+    "frontend/dist/engine-adapter.js": "ac9e2967aae37e4f1242cb539509f69841ac99428b44d60b1d99ac80d55c210a",
+    "frontend/dist/recheck-supplement.js": "a46d49599d7bf55a19adf9d6fecc43493f7dc08ed9dc520b35394b2507264b6a",
+    "frontend/dist/review-service.js": "99f7ac1479d340abed29be489d8838687e93dbde47a31f0f58ca54b57fe1fe04",
+    "frontend/dist/session-flow.js": "b57ae1dcbff1aaa23b39474ef3d8f9c795f6db474ed4f2dd1664fc3b32204449",
+    "frontend/tests/reviewer-finding.test.mjs": "d35c850cd2fa4ce8ef05a80ca660c9aa2c4837f53dfa69a1cd8a1df278790b4a",
+    "scripts/d_verify_workbench_supplement.py": "47fa1f91d23e7c18fbe018589edfe6fcd5bf3cfacc05628699a1e61b3b89230d"
+  },
+  "证据文件": {
+    "H04/01-原题核对.png": "d36bcbf7d807567efb5ef0cc8dd4075bf597e2d192a367c35dd0067e17868bce",
+    "H04/02-原题返回.png": "bef68a17617549fe063377cf012832b0ca5710c7862d98cc7119e08ed9919773",
+    "H04/03-原题结果.png": "4313d742a1dc8ea1aa14e3ee61ed3b9db206818f1ff87a43fee99ad66ac09394",
+    "H04/04-同图补记.png": "25218cb193b988c7773ed877d90d73c0ed6727702664e3f2b85783696a2d73f0",
+    "H04/05-换图待核对.png": "fb9ccef362223b997b7347727f120c6909ce15b6ede29c7d83f7b2aeb3a2d59d",
+    "H04/v2-同图重评.md": "c519ca119279d3967ae0d90ff959a0c6cfdb31ff981d963a1fb57acbabdbe784",
+    "H04/v3-修改稿待核对.md": "bec932dad917f91b181264525a985f0f30485ddf72d83bdf67f6aca6243c282c",
+    "H04/接口-1.json": "8ae924c71942519c612db46dceed128de9a764ab7ad243bc6223cbac8d06ad93",
+    "H04/接口-2.json": "0f8e11273c21f14cc5bff157b98ce2e22bf5263a636e34af69b89864e35bb7f6",
+    "H04/接口-3.json": "ee25c47496966536d52dc0338aa152da5f57c1b2b098363cc6534a1fa39afc55",
+    "H05/01-原题核对.png": "2ea8aaee9c3e86eb0423a0fe854f75940a92185a157f69655dfabda36c2f31e9",
+    "H05/03-原题结果.png": "0a41168254ff87c1e92426f2c638ca298eee164c69837e032bde7afadd71eaf8",
+    "H05/04-同图补记.png": "711c275aaab66899c9f00c36b971cfbad42b3d34fc179e959c4a1a5c74e75bc3",
+    "H05/05-换图待核对.png": "dcb6821353ad451208cca0bed403658906d162a14b9784595df30f18e1801931",
+    "H05/v2-普通反馈.md": "ada5f9dcca462a9b8576f6a2e236c5630a3e7b81ee99787bf5b987aef3823660",
+    "H05/v3-同图重评.md": "85dfdda005eb88af0450759ea78e18fb7e2b05f5f1c4d3f6594b184b809be7c1",
+    "H05/v4-修改稿待核对.md": "28c22bff41fd4118013fd4bee5cb201bdc53cc754cdb46116706c9ad70359de4",
+    "H05/接口-1.json": "75315c99eea9720c99bbd38ed6fa9acde382ab5601b5fde757020f0da6a9b82b",
+    "H05/接口-2.json": "e3381360b8ae0d149a092afe57c8b9894dcf89798a3bb7b66475f5437cb7e67c",
+    "H05/接口-3.json": "97b6835501d691c80508c8e7bdee984b5ee29f724147ec06f8e991a50cdac3dd",
+    "H05/接口-4.json": "dc3b5a7c5ce8f0c451a32dbc2b0b5645527a7652b6214cf751bb378b74d5d9bb",
+    "前端测试.txt": "f66c218293ebd918b5b85c242ce1417aff0bbcb7ceefacba921c71848b907fc4",
+    "核对结果.json": "f640d9eea06d0e1f5a5c38647175bb7af06a74586352d3377335a84f05819a7b",
+    "说明.md": "b42077a1d4efdf2af0ebf10e912791608a36bb14b140cc5a96972db712a34217"
+  }
+}

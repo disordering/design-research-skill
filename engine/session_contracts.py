@@ -24,6 +24,7 @@ class Contract(BaseModel):
 
 
 SourceKind = Literal["website", "figma_board", "figma_prototype", "document", "image"]
+ActorType = Literal["unknown", "human", "ai", "program"]
 EvidenceKind = Literal["requirement", "design", "implementation", "observation", "statement"]
 SourceRole = Literal["unspecified", "design_brief", "product_spec", "design", "implementation",
                      "expert_opinion", "user_statement", "review_instruction"]
@@ -84,6 +85,8 @@ class Limits(Contract):
 
 class SessionCreate(Contract):
     purpose: str = Field(min_length=1, max_length=12000)
+    actor: str = Field(default="unknown", max_length=200)
+    actor_type: ActorType = "unknown"
     design_purpose: str = Field(default="", max_length=12000)
     target_user: str = Field(default="", max_length=2000)
     sources: list[SourceInput] = Field(min_length=1, max_length=30)
@@ -285,7 +288,7 @@ class Question(Contract):
     kind: Literal["context", "access", "authorization", "tool_recovery"] = "context"
     source_id: str | None = None
     action_id: str | None = None
-    answer_actor: Literal["unknown", "human", "program"] = "unknown"
+    answer_actor: ActorType = "unknown"
 
 
 class Action(Contract):
@@ -450,6 +453,7 @@ class EventInput(Contract):
     ]
     payload: dict[str, Any] = Field(default_factory=dict)
     actor: str = Field(default="unknown", max_length=200)
+    actor_type: ActorType = "unknown"
 
 
 class SessionSnapshot(Contract):

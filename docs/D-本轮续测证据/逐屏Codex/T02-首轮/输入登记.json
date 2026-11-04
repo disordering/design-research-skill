@@ -1,0 +1,31 @@
+{
+  "来源": "AI 使用真实 Codex CLI 调用原生产逐屏审查链",
+  "开始": "2026-11-04T00:35:48.275437+00:00",
+  "原图": "fixtures/d-v02-static/T02.png",
+  "原图SHA256": "490a35029c5a2cd09ff5863502d82a2f9c10a169039442ac97ea1654586d71a7",
+  "任务卡": "fixtures/d-v02-batch/tasks.json",
+  "任务": {
+    "id": "T02",
+    "title": "通知设置",
+    "kind": "image",
+    "purpose": "从这张设置页判断如何查看与调整通知偏好，检查选项、操作和当前状态的表达。",
+    "file": "T02.png"
+  },
+  "输入上下文": {
+    "design_goal": "从这张设置页判断如何查看与调整通知偏好，检查选项、操作和当前状态的表达。",
+    "scenario": "从这张设置页判断如何查看与调整通知偏好，检查选项、操作和当前状态的表达。",
+    "platform": "unknown",
+    "target_user": null
+  },
+  "模型": "gpt-6-astra",
+  "最大模型调用": 4,
+  "判据版本": "0.2-method-draft",
+  "产品源码SHA256": {
+    "engine\\session_screen_review.py": "3ceca92cde41a8e789c70b1bd7bfddf9a2f077701faba791c65023816c682ba1",
+    "engine\\advanced.py": "4a4d8f125881b8708da4b79bb6aa8927642c63c1708d7ea5941c7e0e6b0d5b36",
+    "engine\\cv_metrics.py": "e2ac4bf89d5ae1a4dddda32532e58bf8c1b3afd51e746068376d6d3c66c9a820",
+    "engine\\session_service.py": "6c4f8288403549e1a7b69ddf9a6b58471ed5ae5af17f320178e0076041f61dfb"
+  },
+  "测试脚本SHA256": "bc3403be1a487c7fcd0c27505e17bb8b1d53765da9d1f660628f4877ff348ddf",
+  "接入方式": "测试子类仅装配三个客户端，继承 QwenScreenTechnicalReviewer.review；未写配置或密钥"
+}

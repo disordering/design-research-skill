@@ -1,0 +1,1166 @@
+{
+  "review_id": "screen-review-35450b95ea1247c186936111b9ed3ed1",
+  "run_id": "",
+  "evidence_id": "ev-a3749b36359a4e98a60ba6e2b1f5e5af",
+  "source_id": "T02-original",
+  "node_id": "",
+  "page_type": "个人设置页",
+  "status": "completed",
+  "summary": "UI 元素 27，OCR 文本块 23，候选技术问题 1。",
+  "dimensions": {
+    "width": 1440,
+    "height": 900
+  },
+  "rule_results": [
+    {
+      "rule_id": "R01",
+      "decision": "not_applicable",
+      "confidence": 0.93,
+      "reason": "可见“个人设置”标题，但没有包含当前页的页面级导航菜单；帮助入口不构成当前导航项对照。"
+    },
+    {
+      "rule_id": "R02",
+      "decision": "insufficient_evidence",
+      "confidence": 0.98,
+      "reason": "仅有设置页截图，未确认多步骤关系。"
+    },
+    {
+      "rule_id": "R03",
+      "decision": "not_applicable",
+      "confidence": 0.98,
+      "reason": "当前未呈现等待状态。"
+    },
+    {
+      "rule_id": "R04",
+      "decision": "insufficient_evidence",
+      "confidence": 0.99,
+      "reason": "没有取得保存完成画面，不能从保存按钮旁无提示推断缺少成功反馈。"
+    },
+    {
+      "rule_id": "R05",
+      "decision": "insufficient_evidence",
+      "confidence": 0.94,
+      "reason": "目标用户背景未知；ON／OFF不是已证实造成理解障碍的内部术语。"
+    },
+    {
+      "rule_id": "R06",
+      "decision": "no_visible_issue",
+      "confidence": 0.97,
+      "reason": "主要操作“保存设置”与当前设置面板相对应，预期动作明确。"
+    },
+    {
+      "rule_id": "R07",
+      "decision": "not_applicable",
+      "confidence": 0.96,
+      "reason": "没有需要填写的重要文本字段；选项分组另按R18判断。"
+    },
+    {
+      "rule_id": "R08",
+      "decision": "not_applicable",
+      "confidence": 0.99,
+      "reason": "中央区域是页面设置面板，没有可见弹窗。"
+    },
+    {
+      "rule_id": "R09",
+      "decision": "insufficient_evidence",
+      "confidence": 0.98,
+      "reason": "未确认当前属于多步骤任务的非首步，也未取得系统导航范围。"
+    },
+    {
+      "rule_id": "R10",
+      "decision": "not_applicable",
+      "confidence": 0.99,
+      "reason": "不是高风险操作确认界面。"
+    },
+    {
+      "rule_id": "R11",
+      "decision": "not_applicable",
+      "confidence": 0.94,
+      "reason": "没有两个已确认指向同一动作的入口；课程提醒和作业到期属于不同对象。"
+    },
+    {
+      "rule_id": "R12",
+      "decision": "insufficient_evidence",
+      "confidence": 0.96,
+      "reason": "各组选项的状态尚未确认，不能把蓝色开启按钮与状态未知的白色选项当作同状态控件比较。"
+    },
+    {
+      "rule_id": "R13",
+      "decision": "insufficient_evidence",
+      "confidence": 0.96,
+      "reason": "没有已知必选或必填要求，不能据此要求必填标记。"
+    },
+    {
+      "rule_id": "R14",
+      "decision": "not_applicable",
+      "confidence": 0.98,
+      "reason": "没有可见的受格式或长度限制的填写字段。"
+    },
+    {
+      "rule_id": "R15",
+      "decision": "not_applicable",
+      "confidence": 0.99,
+      "reason": "不是高后果操作确认页。"
+    },
+    {
+      "rule_id": "R16",
+      "decision": "candidate_issue",
+      "confidence": 0.88,
+      "reason": "E22—E24仅展示折线、矩形和叉号，“消息工具”无法说明各按钮对消息的作用；当前可见状态不足以支持按含义选择。"
+    },
+    {
+      "rule_id": "R17",
+      "decision": "insufficient_evidence",
+      "confidence": 0.98,
+      "reason": "E09已知选择清楚可辨。E12—E20的selection_unclear探针经视觉核对成立，但不证明这些组已有选中值；依本条前提不能直接判违规。"
+    },
+    {
+      "rule_id": "R18",
+      "decision": "no_visible_issue",
+      "confidence": 0.97,
+      "reason": "每行标签、对应选项和横向分隔线清楚表达选项归属，没有混排。"
+    },
+    {
+      "rule_id": "R19",
+      "decision": "no_visible_issue",
+      "confidence": 0.98,
+      "reason": "E25“保存设置”位于面板右下方，蓝色填充且无遮挡；显著性代理排名不能推翻该可见证据。"
+    },
+    {
+      "rule_id": "R20",
+      "decision": "no_visible_issue",
+      "confidence": 0.96,
+      "reason": "品牌、帮助入口和页脚没有遮挡或挤占设置内容；面板留白和行间距充足。"
+    },
+    {
+      "rule_id": "R21",
+      "decision": "not_applicable",
+      "confidence": 0.99,
+      "reason": "当前没有明确错误状态。"
+    },
+    {
+      "rule_id": "R22",
+      "decision": "not_applicable",
+      "confidence": 0.99,
+      "reason": "当前没有错误提示或需要恢复的可见状态。"
+    },
+    {
+      "rule_id": "R23",
+      "decision": "not_applicable",
+      "confidence": 0.99,
+      "reason": "页面没有错误文案。"
+    },
+    {
+      "rule_id": "R24",
+      "decision": "insufficient_evidence",
+      "confidence": 0.94,
+      "reason": "可见“帮助中心”，但没有已确认的复杂任务解释需求，也未取得帮助内容；图标含义问题合并到R16。"
+    }
+  ],
+  "issues": [
+    {
+      "issue_id": "screen-issue-23736a3320f54dc29860a1a5cc28691a",
+      "rule_ids": [
+        "R16"
+      ],
+      "heuristic_ids": [
+        "H06"
+      ],
+      "title": "消息工具图标无法说明操作含义",
+      "severity": "medium",
+      "confidence": 0.88,
+      "principle": "H06 识别而非回忆；H02 系统与现实世界的匹配",
+      "user_impact": "这些图形与通知偏好的对应关系不明确，尤其叉号无法说明关闭的对象或作用范围。用户在当前画面中无法按预期结果选择工具，只能猜测或试点。此结论限于可见表达，不断言不存在悬停说明或操作会造成破坏。",
+      "detection": "视觉核对E21—E24：三个按钮只有折线、矩形、叉号，没有可见动作名称；组标签仅为“消息工具”。",
+      "description": "这些图形与通知偏好的对应关系不明确，尤其叉号无法说明关闭的对象或作用范围。用户在当前画面中无法按预期结果选择工具，只能猜测或试点。此结论限于可见表达，不断言不存在悬停说明或操作会造成破坏。",
+      "suggestion": "为三个按钮补充与实际功能一致的简短文字标签，说明动作及作用对象；图标作为辅助保留。",
+      "evidence_bbox": {
+        "x": 0.66,
+        "y": 0.715,
+        "width": 0.158,
+        "height": 0.055,
+        "description": "消息工具行右侧三个无文字按钮，依次为折线、矩形和叉号。",
+        "visible_text": "消息工具"
+      },
+      "visible_text": "消息工具"
+    }
+  ],
+  "technical_metrics": {
+    "image": {
+      "width": 1440,
+      "height": 900,
+      "megapixels": 1.296
+    },
+    "ui_element_count": 27,
+    "interactive_element_count": 14,
+    "ocr_block_count": 23,
+    "readability": {
+      "text_block_count": 23,
+      "low_contrast_count": 0,
+      "small_text_candidate_count": 4,
+      "estimated_height_p10": 17.0,
+      "estimated_height_p50": 22.0,
+      "local_contrast_p10": 0.4431,
+      "blocks": [
+        {
+          "block": 1,
+          "text": "北",
+          "bbox": [
+            0.0285,
+            0.0344,
+            0.0132,
+            0.0244
+          ],
+          "estimated_height_px": 22.0,
+          "local_luminance_contrast": 0.6549,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 2,
+          "text": "北辰校园",
+          "bbox": [
+            0.0569,
+            0.03,
+            0.0646,
+            0.03
+          ],
+          "estimated_height_px": 27.0,
+          "local_luminance_contrast": 0.8706,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 3,
+          "text": "帮助中心",
+          "bbox": [
+            0.8361,
+            0.0356,
+            0.0451,
+            0.02
+          ],
+          "estimated_height_px": 18.0,
+          "local_luminance_contrast": 0.4431,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 4,
+          "text": "林",
+          "bbox": [
+            0.9403,
+            0.0322,
+            0.0132,
+            0.0222
+          ],
+          "estimated_height_px": 20.0,
+          "local_luminance_contrast": 0.549,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 5,
+          "text": "个人设置",
+          "bbox": [
+            0.0333,
+            0.1222,
+            0.0792,
+            0.0344
+          ],
+          "estimated_height_px": 31.0,
+          "local_luminance_contrast": 0.8314,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 6,
+          "text": "通知偏好",
+          "bbox": [
+            0.1826,
+            0.2644,
+            0.0736,
+            0.0311
+          ],
+          "estimated_height_px": 28.0,
+          "local_luminance_contrast": 0.8706,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 7,
+          "text": "设置课程消息与学习空间的显示方式。",
+          "bbox": [
+            0.1826,
+            0.3133,
+            0.2056,
+            0.0233
+          ],
+          "estimated_height_px": 21.0,
+          "local_luminance_contrast": 0.451,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 8,
+          "text": "课程提醒",
+          "bbox": [
+            0.1826,
+            0.3744,
+            0.0542,
+            0.0244
+          ],
+          "estimated_height_px": 22.0,
+          "local_luminance_contrast": 0.8157,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 9,
+          "text": "开启",
+          "bbox": [
+            0.6639,
+            0.3767,
+            0.0271,
+            0.0244
+          ],
+          "estimated_height_px": 22.0,
+          "local_luminance_contrast": 0.6118,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 10,
+          "text": "关闭",
+          "bbox": [
+            0.7576,
+            0.3767,
+            0.0271,
+            0.0244
+          ],
+          "estimated_height_px": 22.0,
+          "local_luminance_contrast": 0.7882,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 11,
+          "text": "界面主题",
+          "bbox": [
+            0.1826,
+            0.4633,
+            0.0542,
+            0.0244
+          ],
+          "estimated_height_px": 22.0,
+          "local_luminance_contrast": 0.8118,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 12,
+          "text": "浅色",
+          "bbox": [
+            0.6208,
+            0.4656,
+            0.0271,
+            0.0244
+          ],
+          "estimated_height_px": 22.0,
+          "local_luminance_contrast": 0.7294,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 13,
+          "text": "深色",
+          "bbox": [
+            0.7458,
+            0.4656,
+            0.0271,
+            0.0244
+          ],
+          "estimated_height_px": 22.0,
+          "local_luminance_contrast": 0.7569,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 14,
+          "text": "作业到期",
+          "bbox": [
+            0.1826,
+            0.5522,
+            0.0542,
+            0.0244
+          ],
+          "estimated_height_px": 22.0,
+          "local_luminance_contrast": 0.7765,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 15,
+          "text": "ON",
+          "bbox": [
+            0.709,
+            0.5567,
+            0.0181,
+            0.0189
+          ],
+          "estimated_height_px": 17.0,
+          "local_luminance_contrast": 0.5098,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 16,
+          "text": "OFF",
+          "bbox": [
+            0.7736,
+            0.5567,
+            0.0215,
+            0.0189
+          ],
+          "estimated_height_px": 17.0,
+          "local_luminance_contrast": 0.5098,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 17,
+          "text": "文字大小",
+          "bbox": [
+            0.1826,
+            0.6411,
+            0.0542,
+            0.0244
+          ],
+          "estimated_height_px": 22.0,
+          "local_luminance_contrast": 0.698,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 18,
+          "text": "标准",
+          "bbox": [
+            0.6639,
+            0.6433,
+            0.0271,
+            0.0244
+          ],
+          "estimated_height_px": 22.0,
+          "local_luminance_contrast": 0.8,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 19,
+          "text": "较大",
+          "bbox": [
+            0.7576,
+            0.6433,
+            0.0271,
+            0.0244
+          ],
+          "estimated_height_px": 22.0,
+          "local_luminance_contrast": 0.7804,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 20,
+          "text": "消息工具",
+          "bbox": [
+            0.1826,
+            0.73,
+            0.0542,
+            0.0244
+          ],
+          "estimated_height_px": 22.0,
+          "local_luminance_contrast": 0.8706,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 21,
+          "text": "保存设置",
+          "bbox": [
+            0.734,
+            0.8167,
+            0.0542,
+            0.0244
+          ],
+          "estimated_height_px": 22.0,
+          "local_luminance_contrast": 0.5843,
+          "low_contrast": false,
+          "small_text_candidate": false,
+          "ocr_confidence": 0.99
+        },
+        {
+          "block": 22,
+          "text": "合成测试素材 S07",
+          "bbox": [
+            0.0194,
+            0.9744,
+            0.0729,
+            0.0167
+          ],
+          "estimated_height_px": 15.0,
+          "local_luminance_contrast": 0.3294,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.97
+        },
+        {
+          "block": 23,
+          "text": "北辰校园 · 演示界面",
+          "bbox": [
+            0.9021,
+            0.9744,
+            0.0806,
+            0.0167
+          ],
+          "estimated_height_px": 15.0,
+          "local_luminance_contrast": 0.3451,
+          "low_contrast": false,
+          "small_text_candidate": true,
+          "ocr_confidence": 0.97
+        }
+      ]
+    },
+    "density": {
+      "element_count": 27,
+      "interactive_element_count": 14,
+      "ocr_text_block_count": 23,
+      "elements_per_megapixel": 20.83,
+      "interactive_coverage": 0.0497,
+      "text_coverage": 0.0285,
+      "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+    },
+    "style": {
+      "control_count": 15,
+      "control_saturation_dispersion": 0.2488,
+      "control_contrast_dispersion": 0.1766,
+      "control_mean_saturation": 0.1347,
+      "control_mean_contrast": 0.1522,
+      "note": "Dispersion measures same-role visual consistency only when roles are correctly labeled."
+    },
+    "global": {
+      "mean_luminance": 0.9676,
+      "luminance_p05": 0.9451,
+      "luminance_p50": 0.9686,
+      "luminance_p95": 1.0,
+      "luminance_contrast": 0.0831,
+      "bright_pixel_fraction": 0.9714,
+      "dark_pixel_fraction": 0.0005,
+      "mean_saturation": 0.0238,
+      "high_saturation_fraction": 0.0089,
+      "edge_density": 0.0373,
+      "high_frequency_mean": 0.0066,
+      "palette_entropy_bits": 1.8322,
+      "negative_space_proxy": 0.9627
+    },
+    "focus_top": [
+      {
+        "element_id": "E06",
+        "label": "通知偏好",
+        "role": "title",
+        "bbox": [
+          0.182,
+          0.263,
+          0.075,
+          0.033
+        ],
+        "area_ratio": 0.0025,
+        "center_distance": 0.5046,
+        "model_visual_importance": 0.8,
+        "region": {
+          "luminance_p10": 0.1294,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.8706,
+          "mean_saturation": 0.2357,
+          "edge_density": 0.4163,
+          "bright_fraction": 0.4176
+        },
+        "focus_proxy_raw": 0.637,
+        "focus_share": 0.0524,
+        "rank": 1
+      },
+      {
+        "element_id": "E05",
+        "label": "通知偏好设置面板",
+        "role": "panel",
+        "bbox": [
+          0.153,
+          0.234,
+          0.693,
+          0.65
+        ],
+        "area_ratio": 0.4504,
+        "center_distance": 0.0834,
+        "model_visual_importance": 0.9,
+        "region": {
+          "luminance_p10": 0.9804,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.0196,
+          "mean_saturation": 0.0199,
+          "edge_density": 0.0695,
+          "bright_fraction": 0.9453
+        },
+        "focus_proxy_raw": 0.6064,
+        "focus_share": 0.0499,
+        "rank": 2
+      },
+      {
+        "element_id": "E04",
+        "label": "个人设置",
+        "role": "title",
+        "bbox": [
+          0.033,
+          0.12,
+          0.08,
+          0.038
+        ],
+        "area_ratio": 0.003,
+        "center_distance": 0.7908,
+        "model_visual_importance": 0.85,
+        "region": {
+          "luminance_p10": 0.1294,
+          "luminance_p90": 0.9608,
+          "luminance_contrast": 0.8314,
+          "mean_saturation": 0.1848,
+          "edge_density": 0.3279,
+          "bright_fraction": 0.5862
+        },
+        "focus_proxy_raw": 0.6035,
+        "focus_share": 0.0496,
+        "rank": 3
+      },
+      {
+        "element_id": "E11",
+        "label": "界面主题",
+        "role": "text",
+        "bbox": [
+          0.182,
+          0.462,
+          0.057,
+          0.027
+        ],
+        "area_ratio": 0.0015,
+        "center_distance": 0.4109,
+        "model_visual_importance": 0.5,
+        "region": {
+          "luminance_p10": 0.2118,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.7882,
+          "mean_saturation": 0.095,
+          "edge_density": 0.5132,
+          "bright_fraction": 0.6184
+        },
+        "focus_proxy_raw": 0.5579,
+        "focus_share": 0.0459,
+        "rank": 4
+      },
+      {
+        "element_id": "E14",
+        "label": "作业到期",
+        "role": "text",
+        "bbox": [
+          0.182,
+          0.551,
+          0.057,
+          0.027
+        ],
+        "area_ratio": 0.0015,
+        "center_distance": 0.4195,
+        "model_visual_importance": 0.5,
+        "region": {
+          "luminance_p10": 0.2275,
+          "luminance_p90": 1.0,
+          "luminance_contrast": 0.7725,
+          "mean_saturation": 0.0884,
+          "edge_density": 0.5127,
+          "bright_fraction": 0.6341
+        },
+        "focus_proxy_raw": 0.556,
+        "focus_share": 0.0457,
+        "rank": 5
+      }
+    ],
+    "heuristic_probes": {
+      "numeric_adaptation": {
+        "max_visible_digits": 0,
+        "max_placeholder_digits": 0,
+        "digit_length_groups": {},
+        "length_mismatch": false,
+        "longest_values": []
+      },
+      "state": {
+        "selected_or_explicit_state_elements": [
+          {
+            "element_id": "E09",
+            "label": "课程提醒：开启",
+            "role": "button",
+            "state": "selected",
+            "bbox": [
+              0.642,
+              0.362,
+              0.071,
+              0.052
+            ]
+          },
+          {
+            "element_id": "E12",
+            "label": "界面主题：浅色",
+            "role": "button",
+            "state": "selection_unclear",
+            "bbox": [
+              0.578,
+              0.451,
+              0.111,
+              0.052
+            ]
+          },
+          {
+            "element_id": "E13",
+            "label": "界面主题：深色",
+            "role": "button",
+            "state": "selection_unclear",
+            "bbox": [
+              0.701,
+              0.451,
+              0.117,
+              0.052
+            ]
+          },
+          {
+            "element_id": "E15",
+            "label": "作业到期开关",
+            "role": "panel",
+            "state": "selection_unclear",
+            "bbox": [
+              0.684,
+              0.544,
+              0.134,
+              0.042
+            ]
+          },
+          {
+            "element_id": "E16",
+            "label": "作业到期：ON",
+            "role": "button",
+            "state": "selection_unclear",
+            "bbox": [
+              0.684,
+              0.544,
+              0.067,
+              0.042
+            ]
+          },
+          {
+            "element_id": "E17",
+            "label": "作业到期：OFF",
+            "role": "button",
+            "state": "selection_unclear",
+            "bbox": [
+              0.751,
+              0.544,
+              0.067,
+              0.042
+            ]
+          },
+          {
+            "element_id": "E19",
+            "label": "文字大小：标准",
+            "role": "button",
+            "state": "selection_unclear",
+            "bbox": [
+              0.642,
+              0.629,
+              0.071,
+              0.052
+            ]
+          },
+          {
+            "element_id": "E20",
+            "label": "文字大小：较大",
+            "role": "button",
+            "state": "selection_unclear",
+            "bbox": [
+              0.724,
+              0.629,
+              0.094,
+              0.052
+            ]
+          }
+        ],
+        "interactive_element_count": 14
+      },
+      "affordance": {
+        "primary_actions": [
+          {
+            "element_id": "E03",
+            "label": "用户头像：林",
+            "role": "button",
+            "bbox": [
+              0.933,
+              0.021,
+              0.027,
+              0.043
+            ]
+          },
+          {
+            "element_id": "E09",
+            "label": "课程提醒：开启",
+            "role": "button",
+            "bbox": [
+              0.642,
+              0.362,
+              0.071,
+              0.052
+            ]
+          },
+          {
+            "element_id": "E10",
+            "label": "课程提醒：关闭",
+            "role": "button",
+            "bbox": [
+              0.724,
+              0.362,
+              0.094,
+              0.052
+            ]
+          },
+          {
+            "element_id": "E12",
+            "label": "界面主题：浅色",
+            "role": "button",
+            "bbox": [
+              0.578,
+              0.451,
+              0.111,
+              0.052
+            ]
+          },
+          {
+            "element_id": "E13",
+            "label": "界面主题：深色",
+            "role": "button",
+            "bbox": [
+              0.701,
+              0.451,
+              0.117,
+              0.052
+            ]
+          },
+          {
+            "element_id": "E16",
+            "label": "作业到期：ON",
+            "role": "button",
+            "bbox": [
+              0.684,
+              0.544,
+              0.067,
+              0.042
+            ]
+          },
+          {
+            "element_id": "E17",
+            "label": "作业到期：OFF",
+            "role": "button",
+            "bbox": [
+              0.751,
+              0.544,
+              0.067,
+              0.042
+            ]
+          },
+          {
+            "element_id": "E19",
+            "label": "文字大小：标准",
+            "role": "button",
+            "bbox": [
+              0.642,
+              0.629,
+              0.071,
+              0.052
+            ]
+          },
+          {
+            "element_id": "E20",
+            "label": "文字大小：较大",
+            "role": "button",
+            "bbox": [
+              0.724,
+              0.629,
+              0.094,
+              0.052
+            ]
+          },
+          {
+            "element_id": "E22",
+            "label": "消息工具：折线图标",
+            "role": "button",
+            "bbox": [
+              0.662,
+              0.717,
+              0.044,
+              0.052
+            ]
+          },
+          {
+            "element_id": "E23",
+            "label": "消息工具：矩形图标",
+            "role": "button",
+            "bbox": [
+              0.716,
+              0.717,
+              0.044,
+              0.052
+            ]
+          },
+          {
+            "element_id": "E24",
+            "label": "消息工具：叉号图标",
+            "role": "button",
+            "bbox": [
+              0.77,
+              0.717,
+              0.044,
+              0.052
+            ]
+          },
+          {
+            "element_id": "E25",
+            "label": "保存设置",
+            "role": "primary_button",
+            "bbox": [
+              0.702,
+              0.802,
+              0.116,
+              0.051
+            ]
+          }
+        ],
+        "small_target_candidates": [
+          {
+            "element_id": "E02",
+            "label": "帮助中心",
+            "role": "nav",
+            "width_px": 67.7,
+            "height_px": 21.6,
+            "bbox": [
+              0.835,
+              0.033,
+              0.047,
+              0.024
+            ]
+          }
+        ]
+      },
+      "legibility": {
+        "low_contrast_candidates": [],
+        "small_text_candidate_count": 4,
+        "estimated_height_p10": 17.0,
+        "text_edge_candidates": [
+          {
+            "block": 22,
+            "text": "合成测试素材 S07",
+            "bbox": [
+              0.0194,
+              0.9744,
+              0.0729,
+              0.0167
+            ],
+            "estimated_height_px": 15.0,
+            "local_luminance_contrast": 0.3294,
+            "low_contrast": false,
+            "small_text_candidate": true,
+            "ocr_confidence": 0.97
+          },
+          {
+            "block": 23,
+            "text": "北辰校园 · 演示界面",
+            "bbox": [
+              0.9021,
+              0.9744,
+              0.0806,
+              0.0167
+            ],
+            "estimated_height_px": 15.0,
+            "local_luminance_contrast": 0.3451,
+            "low_contrast": false,
+            "small_text_candidate": true,
+            "ocr_confidence": 0.97
+          }
+        ]
+      },
+      "layout": {
+        "element_density": {
+          "element_count": 27,
+          "interactive_element_count": 14,
+          "ocr_text_block_count": 23,
+          "elements_per_megapixel": 20.83,
+          "interactive_coverage": 0.0497,
+          "text_coverage": 0.0285,
+          "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+        },
+        "focus_top": [
+          {
+            "element_id": "E06",
+            "label": "通知偏好",
+            "role": "title",
+            "bbox": [
+              0.182,
+              0.263,
+              0.075,
+              0.033
+            ],
+            "area_ratio": 0.0025,
+            "center_distance": 0.5046,
+            "model_visual_importance": 0.8,
+            "region": {
+              "luminance_p10": 0.1294,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.8706,
+              "mean_saturation": 0.2357,
+              "edge_density": 0.4163,
+              "bright_fraction": 0.4176
+            },
+            "focus_proxy_raw": 0.637,
+            "focus_share": 0.0524,
+            "rank": 1
+          },
+          {
+            "element_id": "E05",
+            "label": "通知偏好设置面板",
+            "role": "panel",
+            "bbox": [
+              0.153,
+              0.234,
+              0.693,
+              0.65
+            ],
+            "area_ratio": 0.4504,
+            "center_distance": 0.0834,
+            "model_visual_importance": 0.9,
+            "region": {
+              "luminance_p10": 0.9804,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.0196,
+              "mean_saturation": 0.0199,
+              "edge_density": 0.0695,
+              "bright_fraction": 0.9453
+            },
+            "focus_proxy_raw": 0.6064,
+            "focus_share": 0.0499,
+            "rank": 2
+          },
+          {
+            "element_id": "E04",
+            "label": "个人设置",
+            "role": "title",
+            "bbox": [
+              0.033,
+              0.12,
+              0.08,
+              0.038
+            ],
+            "area_ratio": 0.003,
+            "center_distance": 0.7908,
+            "model_visual_importance": 0.85,
+            "region": {
+              "luminance_p10": 0.1294,
+              "luminance_p90": 0.9608,
+              "luminance_contrast": 0.8314,
+              "mean_saturation": 0.1848,
+              "edge_density": 0.3279,
+              "bright_fraction": 0.5862
+            },
+            "focus_proxy_raw": 0.6035,
+            "focus_share": 0.0496,
+            "rank": 3
+          },
+          {
+            "element_id": "E11",
+            "label": "界面主题",
+            "role": "text",
+            "bbox": [
+              0.182,
+              0.462,
+              0.057,
+              0.027
+            ],
+            "area_ratio": 0.0015,
+            "center_distance": 0.4109,
+            "model_visual_importance": 0.5,
+            "region": {
+              "luminance_p10": 0.2118,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.7882,
+              "mean_saturation": 0.095,
+              "edge_density": 0.5132,
+              "bright_fraction": 0.6184
+            },
+            "focus_proxy_raw": 0.5579,
+            "focus_share": 0.0459,
+            "rank": 4
+          },
+          {
+            "element_id": "E14",
+            "label": "作业到期",
+            "role": "text",
+            "bbox": [
+              0.182,
+              0.551,
+              0.057,
+              0.027
+            ],
+            "area_ratio": 0.0015,
+            "center_distance": 0.4195,
+            "model_visual_importance": 0.5,
+            "region": {
+              "luminance_p10": 0.2275,
+              "luminance_p90": 1.0,
+              "luminance_contrast": 0.7725,
+              "mean_saturation": 0.0884,
+              "edge_density": 0.5127,
+              "bright_fraction": 0.6341
+            },
+            "focus_proxy_raw": 0.556,
+            "focus_share": 0.0457,
+            "rank": 5
+          }
+        ]
+      },
+      "instructions": "These probes are diagnostic, not standalone defects. Verify against the image. Evaluate whether the longest visible values fit, whether selection agrees with details/actions, and whether controls and text remain legible and distinct."
+    }
+  },
+  "ocr_artifact_id": null,
+  "elements_artifact_id": null,
+  "metrics_artifact_id": null,
+  "overlay_artifact_ids": {},
+  "model_call_ids": [],
+  "warnings": []
+}

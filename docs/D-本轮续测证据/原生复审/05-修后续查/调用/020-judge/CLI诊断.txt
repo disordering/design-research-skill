@@ -1,0 +1,15 @@
+Reading prompt from stdin...
+2026-11-04T08:53:56.648654Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-11-04T08:54:01.624561Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL: error sending request for url (https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL)
+2026-11-04T08:54:01.624604Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-11-04T08:54:06.734241Z  WARN codex_analytics::client: failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)
+2026-11-04T08:54:09.855054Z ERROR codex_api::endpoint::responses_websocket: failed to connect to Responses WebSocket stage=Unknown
+2026-11-04T08:54:09.855876Z  WARN codex_core::session::startup_prewarm: startup websocket prewarm setup failed: stream disconnected before completion: tls handshake eof
+2026-11-04T08:54:14.872919Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL: error sending request for url (https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL)
+2026-11-04T08:54:21.739638Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL: error sending request for url (https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL)
+2026-11-04T08:54:27.998015Z ERROR codex_api::endpoint::responses_websocket: failed to connect to Responses WebSocket stage=Unknown
+2026-11-04T08:54:27.998549Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 199ms)... turn_id=01a1a5c3-f250-7582-93ca-0f8251d8bf0c retries=1 max_retries=5 sampling_error=stream disconnected before completion: tls handshake eof
+2026-11-04T08:54:31.896795Z ERROR codex_api::endpoint::responses_websocket: failed to connect to Responses WebSocket stage=Unknown
+2026-11-04T08:54:31.896924Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (2/5 in 415ms)... turn_id=01a1a5c3-f250-7582-93ca-0f8251d8bf0c retries=2 max_retries=5 sampling_error=stream disconnected before completion: tls handshake eof
+2026-11-04T08:54:37.521681Z ERROR codex_api::endpoint::responses_websocket: failed to connect to Responses WebSocket stage=Unknown
+2026-11-04T08:54:37.521807Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (3/5 in 791ms)... turn_id=01a1a5c3-f250-7582-93ca-0f8251d8bf0c retries=3 max_retries=5 sampling_error=stream disconnected before completion: tls handshake eof

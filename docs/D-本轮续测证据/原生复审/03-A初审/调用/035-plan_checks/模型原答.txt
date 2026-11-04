@@ -1,0 +1,132 @@
+{
+  "items": [
+    {
+      "ref": "R17",
+      "coverage_id": "coverage-2fabf7bc641eedee",
+      "coverage_title": "选择页：上午一层服务台选中状态",
+      "task_id": "TASK1",
+      "applicability": "applicable",
+      "reason": "两个控件明确为单选项，上午项checked为true；计划对照单选标记、卡片样式与未选项。",
+      "source_ids": ["src-d643f19b03384ce2a036f12ba71161a2"],
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62"],
+      "evidence_needed": [],
+      "object_refs": ["选择时段页／上午及下午单选项"],
+      "object_ids": ["obj-26d0e779915a9ce03c9d"],
+      "constraint_refs": ["REQ1"],
+      "required_evidence_kinds": ["design", "observation"]
+    },
+    {
+      "ref": "R17",
+      "coverage_id": "coverage-cacbc29d13023ca4",
+      "coverage_title": "选择页：改选下午及返回后的下午选中状态",
+      "task_id": "TASK2",
+      "applicability": "applicable",
+      "reason": "改选与返回后的记录均确认下午项选中；计划比较可见标记与checked状态，并关联返回动作。",
+      "source_ids": ["src-d643f19b03384ce2a036f12ba71161a2"],
+      "evidence_ids": [
+        "ev-13f449179bd84e8197d0f8a2c5d1479f",
+        "ev-28ea4802a4da474aab003c94497c5b61",
+        "ev-1b92d13208824e079e766fb72b4db903"
+      ],
+      "evidence_needed": [],
+      "object_refs": ["选择时段页／下午二层服务台单选项", "action-6f56e0e799d5429dad297472485e9eaf"],
+      "object_ids": [],
+      "constraint_refs": ["REQ1", "REQ2"],
+      "required_evidence_kinds": ["design", "observation", "requirement"]
+    },
+    {
+      "ref": "R17",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对页：最终确认信息与操作区",
+      "task_id": "TASK3",
+      "applicability": "not_applicable",
+      "reason": "完整核对页仅展示日期、时段、服务台及返回和提交按钮，没有页面内选择控件；展示值不属于本条选中状态。",
+      "source_ids": ["src-d643f19b03384ce2a036f12ba71161a2"],
+      "evidence_ids": ["ev-0b46768007964dbd910ff782c9ba9e7c"],
+      "evidence_needed": [],
+      "object_refs": ["核对信息页／信息展示区"],
+      "object_ids": ["obj-f729e47050118a39e54b"],
+      "constraint_refs": [],
+      "required_evidence_kinds": ["design"]
+    },
+    {
+      "ref": "R18",
+      "coverage_id": "coverage-2fabf7bc641eedee",
+      "coverage_title": "选择页：上午一层服务台选中状态",
+      "task_id": "TASK1",
+      "applicability": "applicable",
+      "reason": "两个时段均为name为slot的radio，任务要求从中选择；计划检查标题、卡片边界及各时段与服务台的归属。",
+      "source_ids": ["src-d643f19b03384ce2a036f12ba71161a2", "src-5f735d74eaf1428987f7af4dc1257cbd"],
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-91397b03af5640368d2dfc61172bae20"],
+      "evidence_needed": [],
+      "object_refs": ["选择时段页／两个时段组成的单选组"],
+      "object_ids": ["obj-26d0e779915a9ce03c9d"],
+      "constraint_refs": ["REQ1"],
+      "required_evidence_kinds": ["design", "requirement"]
+    },
+    {
+      "ref": "R18",
+      "coverage_id": "coverage-cacbc29d13023ca4",
+      "coverage_title": "选择页：改选下午及返回后的下午选中状态",
+      "task_id": "TASK2",
+      "applicability": "applicable",
+      "reason": "改选及返回画面保留两个相关单选项；计划检查选中样式变化后，时段与对应服务台的分组边界。",
+      "source_ids": ["src-d643f19b03384ce2a036f12ba71161a2", "src-5f735d74eaf1428987f7af4dc1257cbd"],
+      "evidence_ids": [
+        "ev-13f449179bd84e8197d0f8a2c5d1479f",
+        "ev-1b92d13208824e079e766fb72b4db903",
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "evidence_needed": [],
+      "object_refs": ["选择时段页／两个时段组成的单选组"],
+      "object_ids": ["obj-26d0e779915a9ce03c9d"],
+      "constraint_refs": ["REQ1"],
+      "required_evidence_kinds": ["design", "requirement"]
+    },
+    {
+      "ref": "R18",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对页：最终确认信息与操作区",
+      "task_id": "TASK3",
+      "applicability": "not_applicable",
+      "reason": "核对区的日期、时段和服务台是纯展示内容，返回和提交是动作按钮，不构成相关输入或成组选项。",
+      "source_ids": ["src-d643f19b03384ce2a036f12ba71161a2"],
+      "evidence_ids": ["ev-0b46768007964dbd910ff782c9ba9e7c"],
+      "evidence_needed": [],
+      "object_refs": ["核对信息页／信息展示区及操作区"],
+      "object_ids": ["obj-f729e47050118a39e54b"],
+      "constraint_refs": [],
+      "required_evidence_kinds": ["design"]
+    },
+    {
+      "ref": "R19",
+      "coverage_id": "coverage-2fabf7bc641eedee",
+      "coverage_title": "选择页：上午一层服务台选中状态",
+      "task_id": "TASK1",
+      "applicability": "applicable",
+      "reason": "TASK1明确要求更换选择并进入核对；计划检查下午选项和核对入口与任务内容的位置关系及遮挡。",
+      "source_ids": ["src-d643f19b03384ce2a036f12ba71161a2", "src-2ac07259052c468b8308c09718c76257"],
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-5ed1c04f55834474af9ef1bcbbec3613"],
+      "evidence_needed": [],
+      "object_refs": ["选择时段页／下午选项", "选择时段页／核对信息按钮"],
+      "object_ids": ["obj-19e79bdc189741edbd92"],
+      "constraint_refs": ["REQ1"],
+      "required_evidence_kinds": ["design", "statement"]
+    },
+    {
+      "ref": "R19",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对页：最终确认信息与操作区",
+      "task_id": "TASK3",
+      "applicability": "applicable",
+      "reason": "最终提交任务及按钮明确；计划检查提交与返回的层级、遮挡及内容关联。入口可见不代表提交成功或用户实测可定位。",
+      "source_ids": ["src-d643f19b03384ce2a036f12ba71161a2", "src-2ac07259052c468b8308c09718c76257"],
+      "evidence_ids": ["ev-0b46768007964dbd910ff782c9ba9e7c", "ev-5ed1c04f55834474af9ef1bcbbec3613"],
+      "evidence_needed": [],
+      "object_refs": ["核对信息页／提交登记按钮", "核对信息页／返回选择按钮"],
+      "object_ids": ["obj-d3ce4fd1711dc9270b9e", "obj-888b4bf5c3438e05ff97"],
+      "constraint_refs": [],
+      "required_evidence_kinds": ["design", "statement"]
+    }
+  ]
+}

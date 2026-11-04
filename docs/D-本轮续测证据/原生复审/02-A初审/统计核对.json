@@ -1,0 +1,212 @@
+{
+  "会话": "session-3a47d17004774f758f624d4075014700",
+  "上下文版本": 1,
+  "报告版本": 1,
+  "状态": "completed",
+  "完整度": "partial",
+  "模型调用": 1,
+  "已记录调用状态": {
+    "validated": 1
+  },
+  "本轮已记录调用": 1,
+  "本轮有效范围检查": {
+    "总数": 35,
+    "执行状态": {
+      "not_executed": 35
+    }
+  },
+  "全部历史检查": {
+    "总数": 35,
+    "执行状态": {
+      "not_executed": 35
+    }
+  },
+  "发现": [],
+  "复审": [],
+  "动作": [],
+  "问题": [],
+  "警告": [],
+  "运行说明": [],
+  "契约问题": [
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-ab1b067aed64b930 尚未覆盖。",
+      "coverage_id": "coverage-ab1b067aed64b930",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-7c11b3dadfdced94 尚未覆盖。",
+      "coverage_id": "coverage-7c11b3dadfdced94",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-3a52ce192ad36376 尚未覆盖。",
+      "coverage_id": "coverage-3a52ce192ad36376",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-4991a6842f916530 尚未覆盖。",
+      "coverage_id": "coverage-4991a6842f916530",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-bd3a1e190e6a3f4d 尚未覆盖。",
+      "coverage_id": "coverage-bd3a1e190e6a3f4d",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-264502c2eb871d9d 尚未覆盖。",
+      "coverage_id": "coverage-264502c2eb871d9d",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-7e9094b0bad3a35f 尚未覆盖。",
+      "coverage_id": "coverage-7e9094b0bad3a35f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-f7ec3bc3a68942b7 尚未覆盖。",
+      "coverage_id": "coverage-f7ec3bc3a68942b7",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-8a8b44aee0151b05 尚未覆盖。",
+      "coverage_id": "coverage-8a8b44aee0151b05",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-237f678a4a1bd310 尚未覆盖。",
+      "coverage_id": "coverage-237f678a4a1bd310",
+      "gap_class": "task_not_planned"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-20dee442203ac06f 尚未覆盖。",
+      "coverage_id": "coverage-20dee442203ac06f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-f42dcd61b62bb6cd 尚未覆盖。",
+      "coverage_id": "coverage-f42dcd61b62bb6cd",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-c1a2c0b96e137d1a 尚未覆盖。",
+      "coverage_id": "coverage-c1a2c0b96e137d1a",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-d75a6265c371cbee 尚未覆盖。",
+      "coverage_id": "coverage-d75a6265c371cbee",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-6b762300372bf4e2 尚未覆盖。",
+      "coverage_id": "coverage-6b762300372bf4e2",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-313111fc7b0d7d7e 尚未覆盖。",
+      "coverage_id": "coverage-313111fc7b0d7d7e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-4fa579d4301adb9c 尚未覆盖。",
+      "coverage_id": "coverage-4fa579d4301adb9c",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-181d227822a48464 尚未覆盖。",
+      "coverage_id": "coverage-181d227822a48464",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-d71f382369033fe1 尚未覆盖。",
+      "coverage_id": "coverage-d71f382369033fe1",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-52121601bdbea9d2 尚未覆盖。",
+      "coverage_id": "coverage-52121601bdbea9d2",
+      "gap_class": "task_not_planned"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-7686ff9c10b2feb6 尚未覆盖。",
+      "coverage_id": "coverage-7686ff9c10b2feb6",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-06151bd5ac25ff22 尚未覆盖。",
+      "coverage_id": "coverage-06151bd5ac25ff22",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-cd9cb876d18ffe52 尚未覆盖。",
+      "coverage_id": "coverage-cd9cb876d18ffe52",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-5b1601372b8381c5 尚未覆盖。",
+      "coverage_id": "coverage-5b1601372b8381c5",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-9629444fc0e092c1 尚未覆盖。",
+      "coverage_id": "coverage-9629444fc0e092c1",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-603f28468a693511 尚未覆盖。",
+      "coverage_id": "coverage-603f28468a693511",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-5f10b54b2edd846e 尚未覆盖。",
+      "coverage_id": "coverage-5f10b54b2edd846e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-8af4621aa5eac80e 尚未覆盖。",
+      "coverage_id": "coverage-8af4621aa5eac80e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-b5def474121a4fee 尚未覆盖。",
+      "coverage_id": "coverage-b5def474121a4fee",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-ed0ef278a47a40dd 尚未覆盖。",
+      "coverage_id": "coverage-ed0ef278a47a40dd",
+      "gap_class": "task_not_planned"
+    }
+  ]
+}

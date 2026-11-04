@@ -1,0 +1,36 @@
+{
+  "task_summary": "TASK1已观察到从上午一层服务台切换为下午二层服务台；下一步进入核对页，随后检查BR1返回保留与BR2提交结果，按REQ1—REQ3记录证据。TASK2复位路径按需检查。",
+  "scope": "本轮稿件1的本机演示登记流程：选择、核对、返回选择、提交结果及复位；登记仅在当前页面生效。",
+  "goals": [],
+  "requirements": [],
+  "assumptions": [],
+  "questions": [],
+  "action": {
+    "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+    "kind": "click",
+    "selector": "[data-review-control=\"2\"]",
+    "expected_state_id": "cb2c03e46e454322f59c5ca9",
+    "reason": "ev-7a09dc68a4fd47958ab10ea4889fb401的画面及checked记录显示周五14:00–14:30、二层服务台已选中，“核对信息”按钮可用。点击取得核对页证据，继续TASK1及E01—E04检查，为REQ2返回保留和REQ3结果一致性建立前置观察；尚不宣称后续路径通过。",
+    "target_label": "核对信息",
+    "requires_explicit_authorization": false,
+    "status": "pending",
+    "context_version": 1,
+    "run_id": "run-563e5636979549029e54786e942b1416",
+    "evidence_ids": [
+      "ev-7a09dc68a4fd47958ab10ea4889fb401",
+      "ev-2f97d5fc719c439b842ad62d0c01670a"
+    ]
+  },
+  "ready_for_review": true,
+  "priority_refs": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E07",
+    "REQ1",
+    "REQ2",
+    "REQ3"
+  ],
+  "question_resolutions": []
+}

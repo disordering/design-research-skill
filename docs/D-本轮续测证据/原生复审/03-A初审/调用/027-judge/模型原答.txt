@@ -1,0 +1,102 @@
+{
+  "judgments": [
+    {
+      "check_id": "check-cf5e44452a33a254",
+      "decision": "no_visible_issue",
+      "reason": "R06适用于当前主要按钮。“提交登记”明确表达动作，邻近核对信息列出周五14:00–14:30、二层服务台，未见名称歧义。本项仅判断名称；提交尚未执行，不能据此认定REQ3满足。",
+      "evidence_ids": ["ev-28f43ffd619a44358a2f982ecf59aa3c", "ev-91397b03af5640368d2dfc61172bae20"]
+    },
+    {
+      "check_id": "check-5945031e299939bb",
+      "decision": "not_applicable",
+      "reason": "R08要求存在普通弹窗。完整画面为第2步常规核对页面，卡片不是占据焦点的弹窗，无本条适用对象。",
+      "evidence_ids": ["ev-28ea4802a4da474aab003c94497c5b61"]
+    },
+    {
+      "check_id": "check-eaf2ecf309fa85b5",
+      "decision": "no_visible_issue",
+      "reason": "R09适用于非首步页面。画面标明第2步，共3步，并清楚显示“返回选择”。浏览器导航未纳入画面，但页面已有返回入口；保留选择的行为不由此项推定。",
+      "evidence_ids": ["ev-28ea4802a4da474aab003c94497c5b61"]
+    },
+    {
+      "check_id": "check-c8a18240f1ddd2f6",
+      "decision": "not_applicable",
+      "reason": "R10仅适用于高风险操作确认。任务卡明确本机演示登记仅在当前页面生效且可复位，此处不是高风险确认；未提交不改变本项适用性。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-e49b6dff2c0ea1c8",
+      "decision": "not_applicable",
+      "reason": "R11要求至少两个入口指向同一动作。核对页的“返回选择”和“提交登记”分别承担不同动作；重复截图中的同一入口不构成多个入口。",
+      "evidence_ids": ["ev-28ea4802a4da474aab003c94497c5b61", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-f10dc59b1cfdf1eb",
+      "decision": "no_visible_issue",
+      "reason": "R14也涵盖有效值限制，因此固定单选项仍可适用。两个可选值直接显示时段及服务台，radio控件限定择一，无需猜测有效输入；不能仅因没有自由文本输入就判不适用。",
+      "evidence_ids": ["ev-13f449179bd84e8197d0f8a2c5d1479f"]
+    },
+    {
+      "check_id": "check-59353cb25d3b7685",
+      "decision": "not_applicable",
+      "reason": "R15要求已确认高后果操作。任务卡明确登记只在本机当前页面生效且可复位，不属于高后果确认，无对象损失或不可逆后果依据；不因缺完成页改判证据不足。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-2186518845cf0412",
+      "decision": "not_applicable",
+      "reason": "R16要求重要图标操作。选择页为带文字的radio选项及“核对信息”文字按钮，没有承担主任务的图标操作。",
+      "evidence_ids": ["ev-13f449179bd84e8197d0f8a2c5d1479f"]
+    },
+    {
+      "check_id": "check-76c630e8deec7aeb",
+      "decision": "not_applicable",
+      "reason": "R16要求重要图标操作。再次核对页仅有“返回选择”“提交登记”文字按钮，未出现本条适用对象。",
+      "evidence_ids": ["ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-151404c1d36339ef",
+      "decision": "no_visible_issue",
+      "reason": "R17适用于已确认选中的单选项。更换后下午项checked=true，画面同时呈现实心单选标记、紫色边框和浅紫底；上午项未选，视觉状态与记录一致。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-13f449179bd84e8197d0f8a2c5d1479f"]
+    },
+    {
+      "check_id": "check-60f1fb6d6509f3b6",
+      "decision": "no_visible_issue",
+      "reason": "R17适用于返回后仍选中的选项。“返回选择”动作后的画面中，下午二层服务台仍有实心单选标记、紫色边框和浅紫底，且checked=true；上午未选，当前选择清楚可辨。",
+      "evidence_ids": ["ev-28ea4802a4da474aab003c94497c5b61", "ev-1b92d13208824e079e766fb72b4db903"]
+    },
+    {
+      "check_id": "check-1a448e4d15a9a541",
+      "decision": "no_visible_issue",
+      "reason": "R18适用于此处两个name=slot的radio选项。它们同属“选择时段”，各自边界内将上午与一层服务台、下午与二层服务台对应展示，未见选项归属歧义。",
+      "evidence_ids": ["ev-13f449179bd84e8197d0f8a2c5d1479f", "ev-91397b03af5640368d2dfc61172bae20"]
+    },
+    {
+      "check_id": "check-ae5b28296351d3ed",
+      "decision": "not_applicable",
+      "reason": "R18排除纯展示内容。再次核对页的日期、时段和服务台为展示字段，实际控件为返回与提交按钮，不构成输入字段或成组选项。",
+      "evidence_ids": ["ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-a3249b6acba67d20",
+      "decision": "no_visible_issue",
+      "reason": "R19适用于已明确的下午选择与核对任务。在1440×900画面中，下午选项完整可见，“核对信息”紧接选项组下方，无遮挡或无关元素混淆；此结论不代表真人识别已验证。",
+      "evidence_ids": ["ev-13f449179bd84e8197d0f8a2c5d1479f", "ev-91397b03af5640368d2dfc61172bae20"]
+    },
+    {
+      "check_id": "check-3b9ec04018a13da2",
+      "decision": "no_visible_issue",
+      "reason": "R19适用于明确要求的返回操作。“返回选择”位于核对内容下方，与“提交登记”并列且文字、边界清楚，无遮挡；提交按钮的填色强调不妨碍定位返回入口。",
+      "evidence_ids": ["ev-28ea4802a4da474aab003c94497c5b61", "ev-91397b03af5640368d2dfc61172bae20"]
+    },
+    {
+      "check_id": "check-4f9c99e80698358a",
+      "decision": "no_visible_issue",
+      "reason": "R19适用于当前提交任务。“提交登记”位于最终核对信息下方，以紫色填充区别于返回按钮，文字完整且未被遮挡。此项仅判断入口定位，尚无提交结果或完成页证据。",
+      "evidence_ids": ["ev-28f43ffd619a44358a2f982ecf59aa3c", "ev-91397b03af5640368d2dfc61172bae20"]
+    }
+  ],
+  "findings": [],
+  "questions": []
+}

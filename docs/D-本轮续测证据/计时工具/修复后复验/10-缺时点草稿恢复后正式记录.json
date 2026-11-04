@@ -1,0 +1,39 @@
+{
+  "schema": "D-human-v2.1",
+  "role": "participant",
+  "packageKind": "final",
+  "exportedAt": "2026-11-04T00:23:25.598Z",
+  "participant": "U01",
+  "round": "2",
+  "version": "AI-计时工具验收材料",
+  "device": "AI 自动操作 / Microsoft Edge",
+  "build": "本地计时验收",
+  "timing": "invalid",
+  "interruption": "旧草稿未记录有效导出时间，已保留原时点，本轮按计时不完整登记。\n草稿恢复期间按外部中断记录，恢复操作后继续计时。",
+  "outcome": "completed",
+  "product": "计时工具程序验收记录",
+  "understand": "na",
+  "evidence": "na",
+  "saved": "na",
+  "quote": "AI 自动检查计时与草稿恢复",
+  "consent": "yes",
+  "task": "B",
+  "method": "tool",
+  "events": [
+    {
+      "type": "active",
+      "at": "2026-11-04T00:23:17.386Z"
+    },
+    {
+      "type": "break",
+      "at": "2026-11-04T00:23:17.386Z",
+      "source": "draft_restore"
+    },
+    {
+      "type": "ended",
+      "at": "2026-11-04T00:23:25.408Z"
+    }
+  ],
+  "timingValid": false,
+  "seconds": null
+}

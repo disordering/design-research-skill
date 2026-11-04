@@ -45,6 +45,7 @@ from .session_verification import (
     claim_type_for_text,
     ensure_finding_claims,
     finding_requires_action_evidence,
+    finding_location_evidence,
     missing_task_state_coverage,
     resolve_finding_object,
     verify_finding_claims,
@@ -164,12 +165,13 @@ class SessionService:
             request=request, sources=[SourceRecord(input=s) for s in request.sources],
             capability_status=self.capabilities(),
         )
-        self._add_statement(session, request.purpose, "initial_purpose")
+        self._add_statement(session, request.purpose, "initial_purpose", actor=request.actor)
         if request.design_purpose:
-            self._add_statement(session, request.design_purpose, "design_purpose")
+            self._add_statement(session, request.design_purpose, "design_purpose", actor=request.actor)
         if request.target_user:
-            self._add_statement(session, request.target_user, "target_user")
-        session.messages.append({"at": now(), "actor_type": "human", "type": "purpose", "content": request.purpose})
+            self._add_statement(session, request.target_user, "target_user", actor=request.actor)
+        session.messages.append({"at": now(), "actor_type": request.actor_type, "actor": request.actor,
+                                 "type": "purpose", "content": request.purpose})
         self._prepare_checks(session)
         self.store.create(session)
         return session
@@ -1671,6 +1673,13 @@ class SessionService:
                 })
                 session.checks.append(check)
                 current.append(check)
+            if matching is None:
+                # 新覆盖单元只复用编号与规划元数据，判断必须独立执行。
+                check.execution_status = "planned"
+                check.decision = None
+                check.reason = ""
+                check.evidence_ids = []
+                check.reevaluation_requested = False
             check.check_id = self._check_id(item.ref, item.coverage_id)
             check.coverage_id = item.coverage_id
             check.coverage_title = item.coverage_title
@@ -2223,23 +2232,22 @@ class SessionService:
                         finding.object_ref = (
                             resolved_object.label or resolved_object.object_id
                         )
-                    object_evidence = next(
-                        (
-                            evidence for evidence in valid.values()
-                            if resolved_object.object_id in {
-                                item.object_id for item in evidence.objects
-                            }
-                        ),
-                        valid[finding.evidence_ids[0]],
-                    )
                     if not finding.location:
+                        object_evidence = finding_location_evidence(session, finding, valid)
+                        if object_evidence is None:
+                            session.warnings.append(f"发现退回补证：{finding.title}；引用证据无法定位目标对象。")
+                            continue
+                        located_object = next(
+                            item for item in object_evidence.objects
+                            if item.object_id == resolved_object.object_id
+                        )
                         finding.location = {
                             key: value
                             for key, value in {
                                 "source_id": object_evidence.source_id,
                                 "state_id": object_evidence.state_id,
                                 "object_id": resolved_object.object_id,
-                                "node_id": resolved_object.locator.get("node_id"),
+                                "node_id": located_object.locator.get("node_id"),
                                 "url": object_evidence.locator.get("url"),
                             }.items()
                             if value
@@ -2869,7 +2877,7 @@ class SessionService:
                     raise EngineError("question_not_found", "待回答问题不存在。", status_code=422)
                 question.answered = True
                 question.answer = text
-                question.answer_actor = "human"
+                question.answer_actor = event.actor_type
                 affected = set(question.check_ids) or None
         elif event.type == "change_goal":
             text = str(payload.get("purpose", "")).strip()
@@ -2937,7 +2945,7 @@ class SessionService:
                 ):
                     q.answered = True
                     q.answer = "已授权" if approved else "未授权"
-                    q.answer_actor = "human"
+                    q.answer_actor = event.actor_type
             requires_run = approved
         elif event.type == "review_finding":
             finding = next((f for f in session.findings if f.finding_id == payload.get("finding_id") and not f.stale), None)
@@ -3070,7 +3078,7 @@ class SessionService:
         session.flow_graph = build_state_graph(session)
         session.required_coverage = build_required_coverage(session)
         session.messages.append({
-            "at": now(), "actor_type": "human", "actor": event.actor, "type": event.type,
+            "at": now(), "actor_type": event.actor_type, "actor": event.actor, "type": event.type,
             "event_id": event.event_id, "context_version": session.context_version, "content": payload,
         })
         if len(json.dumps(payload, ensure_ascii=False)) > 30_000_000:

@@ -1,0 +1,312 @@
+{
+  "来源": "真实页面读数，AI 操作",
+  "时间UTC": "2026-11-04T13:35:02.072899+00:00",
+  "事实": {
+    "title": "图书编目录入",
+    "text": "图书编目录入\n\n填写图书信息。出版年份范围为 1900–2026。\n\n图书信息\n书名\n\n作者\n\n出版年份\n\n保存图书\n清空表单\n\n图书记录已保存\n\n保存结果\n\n书名：城市植物图鉴；作者：林叶；出版年份：2021\n\n本地演示 · N03-v1 · 操作仅在当前页面生效",
+    "controls": [
+      {
+        "id": "book",
+        "type": "text",
+        "tag": "INPUT",
+        "value": "城市植物图鉴",
+        "checked": false,
+        "disabled": false,
+        "invalid": null,
+        "text": ""
+      },
+      {
+        "id": "author",
+        "type": "text",
+        "tag": "INPUT",
+        "value": "林叶",
+        "checked": false,
+        "disabled": false,
+        "invalid": null,
+        "text": ""
+      },
+      {
+        "id": "year",
+        "type": "number",
+        "tag": "INPUT",
+        "value": "2021",
+        "checked": false,
+        "disabled": false,
+        "invalid": null,
+        "text": ""
+      },
+      {
+        "id": "",
+        "type": "submit",
+        "tag": "BUTTON",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null,
+        "text": "保存图书"
+      },
+      {
+        "id": "reset",
+        "type": "button",
+        "tag": "BUTTON",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null,
+        "text": "清空表单"
+      }
+    ],
+    "status": "图书记录已保存",
+    "applied": null,
+    "record": "书名：城市植物图鉴；作者：林叶；出版年份：2021",
+    "errors": [
+      {
+        "id": "bookError",
+        "text": ""
+      },
+      {
+        "id": "authorError",
+        "text": ""
+      },
+      {
+        "id": "yearError",
+        "text": ""
+      }
+    ],
+    "preview": null
+  },
+  "生产观察": {
+    "state_id": "ad4e2fa5e30649d1f2ae5ac3",
+    "content": "图书编目录入\n\n填写图书信息。出版年份范围为 1900–2026。\n\n图书信息\n书名\n\n作者\n\n出版年份\n\n保存图书\n清空表单\n\n图书记录已保存\n\n保存结果\n\n书名：城市植物图鉴；作者：林叶；出版年份：2021\n\n本地演示 · N03-v1 · 操作仅在当前页面生效",
+    "controls": [
+      {
+        "selector": "[data-review-control=\"0\"]",
+        "label": "书名",
+        "tag": "input",
+        "type": "text",
+        "disabled": false,
+        "role": "input",
+        "ariaLabel": "",
+        "domId": "book",
+        "name": "",
+        "testId": "",
+        "ancestorPath": "form#form>section>div>main>body",
+        "value": "城市植物图鉴",
+        "checked": false,
+        "ariaSelected": null,
+        "ariaPressed": null,
+        "ariaExpanded": null,
+        "title": "",
+        "fontSizePx": 18,
+        "fontWeight": "400",
+        "color": "rgb(23, 32, 51)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "contrastRatio": 16.27,
+        "opacity": 1,
+        "textDecoration": "none",
+        "visibility": "visible",
+        "x": 259,
+        "y": 273.78125,
+        "width": 420,
+        "height": 48.796875
+      },
+      {
+        "selector": "[data-review-control=\"1\"]",
+        "label": "作者",
+        "tag": "input",
+        "type": "text",
+        "disabled": false,
+        "role": "input",
+        "ariaLabel": "",
+        "domId": "author",
+        "name": "",
+        "testId": "",
+        "ancestorPath": "form#form>section>div>main>body",
+        "value": "林叶",
+        "checked": false,
+        "ariaSelected": null,
+        "ariaPressed": null,
+        "ariaExpanded": null,
+        "title": "",
+        "fontSizePx": 18,
+        "fontWeight": "400",
+        "color": "rgb(23, 32, 51)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "contrastRatio": 16.27,
+        "opacity": 1,
+        "textDecoration": "none",
+        "visibility": "visible",
+        "x": 259,
+        "y": 397.375,
+        "width": 420,
+        "height": 48.796875
+      },
+      {
+        "selector": "[data-review-control=\"2\"]",
+        "label": "出版年份",
+        "tag": "input",
+        "type": "number",
+        "disabled": false,
+        "role": "input",
+        "ariaLabel": "",
+        "domId": "year",
+        "name": "",
+        "testId": "",
+        "ancestorPath": "form#form>section>div>main>body",
+        "value": "2021",
+        "checked": false,
+        "ariaSelected": null,
+        "ariaPressed": null,
+        "ariaExpanded": null,
+        "title": "",
+        "fontSizePx": 18,
+        "fontWeight": "400",
+        "color": "rgb(23, 32, 51)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "contrastRatio": 16.27,
+        "opacity": 1,
+        "textDecoration": "none",
+        "visibility": "visible",
+        "x": 259,
+        "y": 520.96875,
+        "width": 420,
+        "height": 48.796875
+      },
+      {
+        "selector": "[data-review-control=\"3\"]",
+        "label": "保存图书",
+        "tag": "button",
+        "type": "submit",
+        "disabled": false,
+        "role": "button",
+        "ariaLabel": "",
+        "domId": "",
+        "name": "",
+        "testId": "",
+        "ancestorPath": "div>form#form>section>div>main",
+        "value": "",
+        "checked": false,
+        "ariaSelected": null,
+        "ariaPressed": null,
+        "ariaExpanded": null,
+        "title": "",
+        "fontSizePx": 18,
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(36, 92, 218)",
+        "contrastRatio": 5.8,
+        "opacity": 1,
+        "textDecoration": "none",
+        "visibility": "visible",
+        "x": 259,
+        "y": 617.765625,
+        "width": 110,
+        "height": 50.796875
+      },
+      {
+        "selector": "[data-review-control=\"4\"]",
+        "label": "清空表单",
+        "tag": "button",
+        "type": "button",
+        "disabled": false,
+        "role": "button",
+        "ariaLabel": "",
+        "domId": "reset",
+        "name": "",
+        "testId": "",
+        "ancestorPath": "div>form#form>section>div>main",
+        "value": "",
+        "checked": false,
+        "ariaSelected": null,
+        "ariaPressed": null,
+        "ariaExpanded": null,
+        "title": "",
+        "fontSizePx": 18,
+        "fontWeight": "400",
+        "color": "rgb(23, 32, 51)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "contrastRatio": 16.27,
+        "opacity": 1,
+        "textDecoration": "none",
+        "visibility": "visible",
+        "x": 381,
+        "y": 617.765625,
+        "width": 110,
+        "height": 50.796875
+      }
+    ],
+    "locator": {
+      "url": "http://127.0.0.1:64615/N03-%E5%9B%BE%E4%B9%A6%E7%BC%96%E7%9B%AE%E5%BD%95%E5%85%A5/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+      "title": "图书编目录入",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "image_geometry": {
+        "width": 1440,
+        "height": 900,
+        "region": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        }
+      },
+      "prototype_canvas": null,
+      "accessibility": {
+        "role": "document",
+        "name": "图书编目录入",
+        "source": "dom_control_fallback",
+        "children": [
+          {
+            "role": "input",
+            "name": "书名",
+            "pressed": null,
+            "expanded": null,
+            "checked": false
+          },
+          {
+            "role": "input",
+            "name": "作者",
+            "pressed": null,
+            "expanded": null,
+            "checked": false
+          },
+          {
+            "role": "input",
+            "name": "出版年份",
+            "pressed": null,
+            "expanded": null,
+            "checked": false
+          },
+          {
+            "role": "button",
+            "name": "保存图书",
+            "pressed": null,
+            "expanded": null,
+            "checked": false
+          },
+          {
+            "role": "button",
+            "name": "清空表单",
+            "pressed": null,
+            "expanded": null,
+            "checked": false
+          }
+        ]
+      },
+      "environment_session": "quick-N03",
+      "provided_version": "N03-v1",
+      "render_state": "captured",
+      "blocked_requests": [],
+      "action_outcome": "state_changed",
+      "operation_verified": true,
+      "change_signals": {
+        "url": false,
+        "image": true,
+        "controls": true
+      }
+    },
+    "partial": false
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "来源": "真实页面读数，AI 操作",
+  "时间UTC": "2026-11-04T13:34:56.467152+00:00",
+  "事实": {
+    "title": "阅读设置",
+    "text": "阅读设置\n设置阅读版面\n文字大小\n标准字号\n大字号\n段落行距\n紧凑行距\n舒适行距\n使用暖色背景\n正在应用…\n恢复初始\n\n正在应用阅读设置，请稍候\n\n阅读预览\n城市中的绿意\n\n清晨沿着街角向前，树叶的影子落在长椅上。留一点时间观察身边的植物，熟悉的街道也会带来新的发现。\n\n已应用：标准字号 · 紧凑行距 · 白色背景\n\n本地演示 · N01-v1 · 操作仅在当前页面生效",
+    "controls": [
+      {
+        "id": "fontSize",
+        "type": "select-one",
+        "tag": "SELECT",
+        "value": "big",
+        "checked": false,
+        "disabled": false,
+        "invalid": null,
+        "text": "标准字号\n大字号"
+      },
+      {
+        "id": "spacing",
+        "type": "select-one",
+        "tag": "SELECT",
+        "value": "comfort",
+        "checked": false,
+        "disabled": false,
+        "invalid": null,
+        "text": "紧凑行距\n舒适行距"
+      },
+      {
+        "id": "warm",
+        "type": "checkbox",
+        "tag": "INPUT",
+        "value": "on",
+        "checked": true,
+        "disabled": false,
+        "invalid": null,
+        "text": ""
+      },
+      {
+        "id": "save",
+        "type": "submit",
+        "tag": "BUTTON",
+        "value": "",
+        "checked": false,
+        "disabled": true,
+        "invalid": null,
+        "text": "正在应用…"
+      },
+      {
+        "id": "reset",
+        "type": "submit",
+        "tag": "BUTTON",
+        "value": "",
+        "checked": false,
+        "disabled": true,
+        "invalid": null,
+        "text": "恢复初始"
+      }
+    ],
+    "status": "正在应用阅读设置，请稍候",
+    "applied": "已应用：标准字号 · 紧凑行距 · 白色背景",
+    "record": null,
+    "errors": [],
+    "preview": {
+      "fontSize": "18px",
+      "lineHeight": "27.9px",
+      "background": "rgb(255, 255, 255)"
+    }
+  }
+}

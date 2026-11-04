@@ -1,0 +1,334 @@
+{
+  "来源": "真实页面读数，AI 操作",
+  "时间UTC": "2026-11-04T13:34:57.176133+00:00",
+  "事实": {
+    "title": "阅读设置",
+    "text": "阅读设置\n设置阅读版面\n文字大小\n标准字号\n大字号\n段落行距\n紧凑行距\n舒适行距\n使用暖色背景\n应用设置\n恢复初始\n\n设置已应用\n\n阅读预览\n城市中的绿意\n\n清晨沿着街角向前，树叶的影子落在长椅上。留一点时间观察身边的植物，熟悉的街道也会带来新的发现。\n\n已应用：大字号 · 舒适行距 · 暖色背景\n\n本地演示 · N01-v1 · 操作仅在当前页面生效",
+    "controls": [
+      {
+        "id": "fontSize",
+        "type": "select-one",
+        "tag": "SELECT",
+        "value": "big",
+        "checked": false,
+        "disabled": false,
+        "invalid": null,
+        "text": "标准字号\n大字号"
+      },
+      {
+        "id": "spacing",
+        "type": "select-one",
+        "tag": "SELECT",
+        "value": "comfort",
+        "checked": false,
+        "disabled": false,
+        "invalid": null,
+        "text": "紧凑行距\n舒适行距"
+      },
+      {
+        "id": "warm",
+        "type": "checkbox",
+        "tag": "INPUT",
+        "value": "on",
+        "checked": true,
+        "disabled": false,
+        "invalid": null,
+        "text": ""
+      },
+      {
+        "id": "save",
+        "type": "submit",
+        "tag": "BUTTON",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null,
+        "text": "应用设置"
+      },
+      {
+        "id": "reset",
+        "type": "submit",
+        "tag": "BUTTON",
+        "value": "",
+        "checked": false,
+        "disabled": false,
+        "invalid": null,
+        "text": "恢复初始"
+      }
+    ],
+    "status": "设置已应用",
+    "applied": "已应用：大字号 · 舒适行距 · 暖色背景",
+    "record": null,
+    "errors": [],
+    "preview": {
+      "fontSize": "24px",
+      "lineHeight": "48px",
+      "background": "rgb(255, 241, 214)"
+    }
+  },
+  "生产观察": {
+    "state_id": "33919a0147301cad6573a20f",
+    "content": "阅读设置\n设置阅读版面\n文字大小\n标准字号\n大字号\n段落行距\n紧凑行距\n舒适行距\n使用暖色背景\n应用设置\n恢复初始\n\n设置已应用\n\n阅读预览\n城市中的绿意\n\n清晨沿着街角向前，树叶的影子落在长椅上。留一点时间观察身边的植物，熟悉的街道也会带来新的发现。\n\n已应用：大字号 · 舒适行距 · 暖色背景\n\n本地演示 · N01-v1 · 操作仅在当前页面生效",
+    "controls": [
+      {
+        "selector": "[data-review-control=\"0\"]",
+        "label": "文字大小",
+        "tag": "select",
+        "type": "select-one",
+        "disabled": false,
+        "role": "select",
+        "ariaLabel": "",
+        "domId": "fontSize",
+        "name": "",
+        "testId": "",
+        "ancestorPath": "section>div>main>body>html",
+        "value": "big",
+        "multiple": false,
+        "optionCount": 2,
+        "optionsTruncated": false,
+        "options": [
+          {
+            "label": "标准字号",
+            "value": "normal",
+            "selected": false,
+            "disabled": false,
+            "optgroup": ""
+          },
+          {
+            "label": "大字号",
+            "value": "big",
+            "selected": true,
+            "disabled": false,
+            "optgroup": ""
+          }
+        ],
+        "checked": false,
+        "ariaSelected": null,
+        "ariaPressed": null,
+        "ariaExpanded": null,
+        "title": "",
+        "fontSizePx": 18,
+        "fontWeight": "400",
+        "color": "rgb(23, 32, 51)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "contrastRatio": 16.27,
+        "opacity": 1,
+        "textDecoration": "none",
+        "visibility": "visible",
+        "x": 259,
+        "y": 236.984375,
+        "width": 420,
+        "height": 46
+      },
+      {
+        "selector": "[data-review-control=\"1\"]",
+        "label": "段落行距",
+        "tag": "select",
+        "type": "select-one",
+        "disabled": false,
+        "role": "select",
+        "ariaLabel": "",
+        "domId": "spacing",
+        "name": "",
+        "testId": "",
+        "ancestorPath": "section>div>main>body>html",
+        "value": "comfort",
+        "multiple": false,
+        "optionCount": 2,
+        "optionsTruncated": false,
+        "options": [
+          {
+            "label": "紧凑行距",
+            "value": "compact",
+            "selected": false,
+            "disabled": false,
+            "optgroup": ""
+          },
+          {
+            "label": "舒适行距",
+            "value": "comfort",
+            "selected": true,
+            "disabled": false,
+            "optgroup": ""
+          }
+        ],
+        "checked": false,
+        "ariaSelected": null,
+        "ariaPressed": null,
+        "ariaExpanded": null,
+        "title": "",
+        "fontSizePx": 18,
+        "fontWeight": "400",
+        "color": "rgb(23, 32, 51)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "contrastRatio": 16.27,
+        "opacity": 1,
+        "textDecoration": "none",
+        "visibility": "visible",
+        "x": 259,
+        "y": 331.78125,
+        "width": 420,
+        "height": 46
+      },
+      {
+        "selector": "[data-review-control=\"2\"]",
+        "label": "使用暖色背景",
+        "tag": "input",
+        "type": "checkbox",
+        "disabled": false,
+        "role": "input",
+        "ariaLabel": "",
+        "domId": "warm",
+        "name": "",
+        "testId": "",
+        "ancestorPath": "label>section>div>main>body",
+        "value": "on",
+        "checked": true,
+        "ariaSelected": null,
+        "ariaPressed": null,
+        "ariaExpanded": null,
+        "title": "",
+        "fontSizePx": 18,
+        "fontWeight": "600",
+        "color": "rgb(0, 0, 0)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "contrastRatio": 21,
+        "opacity": 1,
+        "textDecoration": "none",
+        "visibility": "visible",
+        "x": 263,
+        "y": 396.171875,
+        "width": 20,
+        "height": 20
+      },
+      {
+        "selector": "[data-review-control=\"3\"]",
+        "label": "应用设置",
+        "tag": "button",
+        "type": "submit",
+        "disabled": false,
+        "role": "button",
+        "ariaLabel": "",
+        "domId": "save",
+        "name": "",
+        "testId": "",
+        "ancestorPath": "div>section>div>main>body",
+        "value": "",
+        "checked": false,
+        "ariaSelected": null,
+        "ariaPressed": null,
+        "ariaExpanded": null,
+        "title": "",
+        "fontSizePx": 18,
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(36, 92, 218)",
+        "contrastRatio": 5.8,
+        "opacity": 1,
+        "textDecoration": "none",
+        "visibility": "visible",
+        "x": 259,
+        "y": 442.578125,
+        "width": 110,
+        "height": 50.796875
+      },
+      {
+        "selector": "[data-review-control=\"4\"]",
+        "label": "恢复初始",
+        "tag": "button",
+        "type": "submit",
+        "disabled": false,
+        "role": "button",
+        "ariaLabel": "",
+        "domId": "reset",
+        "name": "",
+        "testId": "",
+        "ancestorPath": "div>section>div>main>body",
+        "value": "",
+        "checked": false,
+        "ariaSelected": null,
+        "ariaPressed": null,
+        "ariaExpanded": null,
+        "title": "",
+        "fontSizePx": 18,
+        "fontWeight": "400",
+        "color": "rgb(23, 32, 51)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "contrastRatio": 16.27,
+        "opacity": 1,
+        "textDecoration": "none",
+        "visibility": "visible",
+        "x": 381,
+        "y": 442.578125,
+        "width": 110,
+        "height": 50.796875
+      }
+    ],
+    "locator": {
+      "url": "http://127.0.0.1:64615/N01-%E9%98%85%E8%AF%BB%E8%AE%BE%E7%BD%AE/%E6%89%93%E5%BC%80%E7%95%8C%E9%9D%A2.html",
+      "title": "阅读设置",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "image_geometry": {
+        "width": 1440,
+        "height": 900,
+        "region": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        }
+      },
+      "prototype_canvas": null,
+      "accessibility": {
+        "role": "document",
+        "name": "阅读设置",
+        "source": "dom_control_fallback",
+        "children": [
+          {
+            "role": "select",
+            "name": "文字大小",
+            "pressed": null,
+            "expanded": null,
+            "checked": false
+          },
+          {
+            "role": "select",
+            "name": "段落行距",
+            "pressed": null,
+            "expanded": null,
+            "checked": false
+          },
+          {
+            "role": "input",
+            "name": "使用暖色背景",
+            "pressed": null,
+            "expanded": null,
+            "checked": true
+          },
+          {
+            "role": "button",
+            "name": "应用设置",
+            "pressed": null,
+            "expanded": null,
+            "checked": false
+          },
+          {
+            "role": "button",
+            "name": "恢复初始",
+            "pressed": null,
+            "expanded": null,
+            "checked": false
+          }
+        ]
+      },
+      "environment_session": "quick-N01",
+      "provided_version": "N01-v1",
+      "render_state": "captured",
+      "blocked_requests": []
+    },
+    "partial": false
+  }
+}

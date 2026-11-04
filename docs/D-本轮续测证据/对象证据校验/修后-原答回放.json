@@ -1,0 +1,95 @@
+{
+  "执行者": "Codex（AI，原答程序回放）",
+  "真实模型调用": 0,
+  "阶段": "修后",
+  "初始快照SHA256": "d8144f25a351af814ac62149550a392b06fa55fd88f7adfffa456db6136b19d5",
+  "修前原字节": [
+    {
+      "路径": "docs\\D-本轮续测证据\\原生复审\\冻结引擎\\session_service-b2452a0232cbdbee.py",
+      "SHA256": "b2452a0232cbdbee341f22b536e7e2acfe49bcbb331ebacea598159b57480b44"
+    },
+    {
+      "路径": "docs\\D-本轮续测证据\\原生复审\\冻结引擎\\session_verification-9f5d740fe515413f.py",
+      "SHA256": "9f5d740fe515413f0c63202517a11bb3f86e14f8305d477166c2d4172a636890"
+    }
+  ],
+  "当前实现": {
+    "session_service.py": "c905328d60fe48426d33aa8c682519a57cdc660cbb8015791a691d154a6885cf",
+    "session_verification.py": "c651747c07aba3df10165b0bdad7fbd69dc1d94cebfcc76a331b71d617506f86"
+  },
+  "结果": [
+    {
+      "原调用": "007-judge",
+      "原答SHA256": "df16b63f84a0380f1539470a074bf2aac7bc0c14b2885222018167a816045620",
+      "规范对象": "obj-91d36b9f4dbc6cbcf6c0",
+      "自由文本对象说明": "BR2：核对页提交至登记完成页",
+      "claim校验": [
+        true,
+        ""
+      ],
+      "发现支持校验": [
+        true,
+        ""
+      ],
+      "自动定位证据": "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+      "自动定位状态": "cae2b537eea57be43e8207a7",
+      "定位证据在引用内": true,
+      "原候选严重度": "high",
+      "原模型置信度": 0.99,
+      "结构化claims": [
+        {
+          "claim_id": "claim-28709818e55b4d4c9bdcaafd32f10eb5",
+          "claim_type": "action_result",
+          "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+          "expected": "提交后显示最终确认的周五14:00–14:30、二层服务台。",
+          "observed": "提交前为周五14:00–14:30、二层服务台；提交后显示周五09:00–09:30、一层服务台。",
+          "evidence_ids": [
+            "ev-2f97d5fc719c439b842ad62d0c01670a",
+            "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+            "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+          ],
+          "derived": false,
+          "verification_status": "supported",
+          "verification_reason": "证据对象、类型和观察结果通过程序核验。"
+        }
+      ]
+    },
+    {
+      "原调用": "008-judge",
+      "原答SHA256": "f216641a042a034d9b0ecfdaad56a9ab2cdea00b328b25c655634207985b9f37",
+      "规范对象": "obj-91d36b9f4dbc6cbcf6c0",
+      "自由文本对象说明": "BR2：提交后的登记完成页",
+      "claim校验": [
+        true,
+        ""
+      ],
+      "发现支持校验": [
+        true,
+        ""
+      ],
+      "自动定位证据": "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+      "自动定位状态": "cae2b537eea57be43e8207a7",
+      "定位证据在引用内": true,
+      "原候选严重度": "high",
+      "原模型置信度": 0.99,
+      "结构化claims": [
+        {
+          "claim_id": "claim-0b9ebfdc82314d4883b6073a663891e5",
+          "claim_type": "action_result",
+          "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+          "expected": "完成页显示最终确认的周五14:00–14:30、二层服务台。",
+          "observed": "提交前为周五14:00–14:30、二层服务台，提交后完成页显示周五09:00–09:30、一层服务台。",
+          "evidence_ids": [
+            "ev-2f97d5fc719c439b842ad62d0c01670a",
+            "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+            "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+          ],
+          "derived": false,
+          "verification_status": "supported",
+          "verification_reason": "证据对象、类型和观察结果通过程序核验。"
+        }
+      ]
+    }
+  ],
+  "范围": "原模型候选经过对象、claim、动作支持及定位的确定性校验；未启动新的语义模型核验。"
+}

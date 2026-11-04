@@ -31,6 +31,16 @@ from .session_targets import (
 )
 
 
+# 读取控件关联的标签，单选框等没有 innerText 的元素也使用页面命名。
+CONTROL_LABEL_JS = r"""node => {
+    const ids=(node.getAttribute('aria-labelledby')||'').trim().split(/\s+/).filter(Boolean);
+    const referenced=ids.map(id=>document.getElementById(id)?.textContent||'').join(' ').trim();
+    const associated=Array.from(node.labels||[]).map(label=>label.innerText||label.textContent||'').join(' ').trim();
+    return (referenced||node.getAttribute('aria-label')||associated||node.innerText||
+            node.getAttribute('placeholder')||node.name||'').trim().slice(0,200);
+}"""
+
+
 @dataclass
 class Capture:
     content: str
@@ -266,6 +276,7 @@ class BrowserAdapter:
         try:
             text = (await page.locator("body").inner_text(timeout=10000))[:30000]
             controls = await page.evaluate("""() => {
+                const controlLabel = __CONTROL_LABEL__;
                 const parseColor = value => {
                     const m=String(value||'').match(/rgba?\\(([^)]+)\\)/);
                     if(!m) return null;
@@ -313,7 +324,7 @@ class BrowserAdapter:
                     const s=getComputedStyle(n);
                     const foreground=parseColor(s.color), back=background(n);
                     return {selector:'[data-review-control="'+i+'"]',
-                        label:(n.innerText||n.getAttribute('aria-label')||n.getAttribute('placeholder')||n.name||'').slice(0,200),
+                        label:controlLabel(n),
                         tag:n.tagName.toLowerCase(),type:n.type||'',disabled:!!n.disabled,
                         role:n.getAttribute('role')||n.tagName.toLowerCase(),
                         ariaLabel:n.getAttribute('aria-label')||'',
@@ -336,7 +347,7 @@ class BrowserAdapter:
                         visibility:s.visibility,
                         x:r.x,y:r.y,width:r.width,height:r.height};
                 });
-            }""")
+            }""".replace("__CONTROL_LABEL__", CONTROL_LABEL_JS))
             viewport = page.viewport_size
             region = {"x": 0, "y": 0, **viewport}
             prototype = source.input.kind == "figma_prototype"
@@ -431,6 +442,7 @@ class BrowserAdapter:
                 if await target.count() == 0:
                     return True
                 label_parts = [
+                    await target.evaluate(CONTROL_LABEL_JS),
                     await target.inner_text(timeout=5000),
                     await target.get_attribute("aria-label"),
                     await target.get_attribute("title"),
@@ -1272,6 +1284,8 @@ class AdapterHub:
         )
 
     async def needs_authorization(self, session_id: str, source: SourceRecord, action: Action) -> bool:
+        if source.input.kind == "image" and action.kind == "observe":
+            return False
         if source.input.kind == "figma_board":
             return False
         if source.input.kind == "document" and action.kind == "inspect_document":
@@ -1281,7 +1295,10 @@ class AdapterHub:
         return True
 
     async def act(self, session_id: str, source: SourceRecord, action: Action, *, authorized: bool) -> Capture:
-        if source.input.kind in {"website", "figma_prototype"}:
+        if source.input.kind == "image" and action.kind == "observe":
+            # 静态图可重复读取，证据保留相同图像指纹，不生成交互结果。
+            capture = await self.read(session_id, source)
+        elif source.input.kind in {"website", "figma_prototype"}:
             capture = await self.browser.act(session_id, source, action, authorized=authorized)
             if (
                 not capture.partial

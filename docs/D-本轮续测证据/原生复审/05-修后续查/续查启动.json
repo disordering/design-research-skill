@@ -1,0 +1,30 @@
+{
+  "来源": "04-运行初审",
+  "性质": "修后既有会话续查，不是新独立试验",
+  "旧run": "run-563e5636979549029e54786e942b1416",
+  "新run": "run-83292c4aeac345ff99114e0c551e8a6a",
+  "新run初始检查": 36,
+  "新run全部planned且无沿用判断": true,
+  "使用当前修后Service": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\engine\\session_service.py",
+  "ServiceSHA256": "b2452a0232cbdbee341f22b536e7e2acfe49bcbb331ebacea598159b57480b44",
+  "旧报告原字节SHA256": {
+    "1": "406088810d3d6eaf51717283c83e5295bf8d35323d07730bd559783fe93e622f",
+    "2": "8232846bd86d2bfbc0338706d91a175c44cc6970e8485beed04ea8a4c46acfe6"
+  },
+  "事件": {
+    "event_id": "d-native-05-修后续查-resume",
+    "expected_context_version": 1,
+    "type": "resume",
+    "payload": {
+      "reason": "额度恢复后，以当前修后服务继续检查已有原始观察；保持原材料与网址。优先使用会话已取得的观察完成逐项正式判断与报告；仅在关键证据缺失时提出新操作，已观察的路径不重复执行。"
+    },
+    "actor": "AI模型验收-D",
+    "actor_type": "ai"
+  },
+  "外部中断": {
+    "开始UTC": "2026-11-04T01:30:17.502064+00:00",
+    "恢复UTC": "2026-11-04T08:24:05.739127+00:00",
+    "间隔秒": 24828.237,
+    "性质": "额度等待及用户返回间隔，排除于模型耗时和操作耗时"
+  }
+}

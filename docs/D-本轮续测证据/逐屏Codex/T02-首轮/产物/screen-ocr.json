@@ -1,0 +1,260 @@
+{
+  "blocks": [
+    {
+      "text": "北",
+      "bbox": {
+        "x": 0.0285,
+        "y": 0.0344,
+        "width": 0.0132,
+        "height": 0.0244
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 22.0
+    },
+    {
+      "text": "北辰校园",
+      "bbox": {
+        "x": 0.0569,
+        "y": 0.03,
+        "width": 0.0646,
+        "height": 0.03
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 27.0
+    },
+    {
+      "text": "帮助中心",
+      "bbox": {
+        "x": 0.8361,
+        "y": 0.0356,
+        "width": 0.0451,
+        "height": 0.02
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 18.0
+    },
+    {
+      "text": "林",
+      "bbox": {
+        "x": 0.9403,
+        "y": 0.0322,
+        "width": 0.0132,
+        "height": 0.0222
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 20.0
+    },
+    {
+      "text": "个人设置",
+      "bbox": {
+        "x": 0.0333,
+        "y": 0.1222,
+        "width": 0.0792,
+        "height": 0.0344
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 31.0
+    },
+    {
+      "text": "通知偏好",
+      "bbox": {
+        "x": 0.1826,
+        "y": 0.2644,
+        "width": 0.0736,
+        "height": 0.0311
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 28.0
+    },
+    {
+      "text": "设置课程消息与学习空间的显示方式。",
+      "bbox": {
+        "x": 0.1826,
+        "y": 0.3133,
+        "width": 0.2056,
+        "height": 0.0233
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 21.0
+    },
+    {
+      "text": "课程提醒",
+      "bbox": {
+        "x": 0.1826,
+        "y": 0.3744,
+        "width": 0.0542,
+        "height": 0.0244
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 22.0
+    },
+    {
+      "text": "开启",
+      "bbox": {
+        "x": 0.6639,
+        "y": 0.3767,
+        "width": 0.0271,
+        "height": 0.0244
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 22.0
+    },
+    {
+      "text": "关闭",
+      "bbox": {
+        "x": 0.7576,
+        "y": 0.3767,
+        "width": 0.0271,
+        "height": 0.0244
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 22.0
+    },
+    {
+      "text": "界面主题",
+      "bbox": {
+        "x": 0.1826,
+        "y": 0.4633,
+        "width": 0.0542,
+        "height": 0.0244
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 22.0
+    },
+    {
+      "text": "浅色",
+      "bbox": {
+        "x": 0.6208,
+        "y": 0.4656,
+        "width": 0.0271,
+        "height": 0.0244
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 22.0
+    },
+    {
+      "text": "深色",
+      "bbox": {
+        "x": 0.7458,
+        "y": 0.4656,
+        "width": 0.0271,
+        "height": 0.0244
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 22.0
+    },
+    {
+      "text": "作业到期",
+      "bbox": {
+        "x": 0.1826,
+        "y": 0.5522,
+        "width": 0.0542,
+        "height": 0.0244
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 22.0
+    },
+    {
+      "text": "ON",
+      "bbox": {
+        "x": 0.709,
+        "y": 0.5567,
+        "width": 0.0181,
+        "height": 0.0189
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 17.0
+    },
+    {
+      "text": "OFF",
+      "bbox": {
+        "x": 0.7736,
+        "y": 0.5567,
+        "width": 0.0215,
+        "height": 0.0189
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 17.0
+    },
+    {
+      "text": "文字大小",
+      "bbox": {
+        "x": 0.1826,
+        "y": 0.6411,
+        "width": 0.0542,
+        "height": 0.0244
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 22.0
+    },
+    {
+      "text": "标准",
+      "bbox": {
+        "x": 0.6639,
+        "y": 0.6433,
+        "width": 0.0271,
+        "height": 0.0244
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 22.0
+    },
+    {
+      "text": "较大",
+      "bbox": {
+        "x": 0.7576,
+        "y": 0.6433,
+        "width": 0.0271,
+        "height": 0.0244
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 22.0
+    },
+    {
+      "text": "消息工具",
+      "bbox": {
+        "x": 0.1826,
+        "y": 0.73,
+        "width": 0.0542,
+        "height": 0.0244
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 22.0
+    },
+    {
+      "text": "保存设置",
+      "bbox": {
+        "x": 0.734,
+        "y": 0.8167,
+        "width": 0.0542,
+        "height": 0.0244
+      },
+      "confidence": 0.99,
+      "estimated_height_px": 22.0
+    },
+    {
+      "text": "合成测试素材 S07",
+      "bbox": {
+        "x": 0.0194,
+        "y": 0.9744,
+        "width": 0.0729,
+        "height": 0.0167
+      },
+      "confidence": 0.97,
+      "estimated_height_px": 15.0
+    },
+    {
+      "text": "北辰校园 · 演示界面",
+      "bbox": {
+        "x": 0.9021,
+        "y": 0.9744,
+        "width": 0.0806,
+        "height": 0.0167
+      },
+      "confidence": 0.97,
+      "estimated_height_px": 15.0
+    }
+  ],
+  "notes": [
+    "截图尺寸为1440×900像素；边界框为估计文字范围。消息工具行中的三个图形按图标处理，未作为文字提取。"
+  ]
+}

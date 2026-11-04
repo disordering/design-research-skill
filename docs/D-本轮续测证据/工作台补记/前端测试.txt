@@ -1,0 +1,37 @@
+✔ preserves report, multiple rules, critical severity and separate rule results (1.9254ms)
+✔ stub never presented as real analysis and new round never inherits confirmations (0.1277ms)
+✔ invalid bounds and unknown severity rejected (0.285ms)
+✔ followup contains original finding and human feedback; oversized input fails before request (0.6344ms)
+✔ coverage excludes stale and other runs, never equates completed with passed (0.174ms)
+✔ error overrides backend completed and historical warnings do not mark recovered run failed (0.1495ms)
+✔ provider connectivity failure is visibly abnormal even when backend completed (0.0938ms)
+✔ running guard and wait indicator do not invent percent; timeout is error (0.1075ms)
+✔ invalid evidence quotes stay visibly failed after model returns (0.0598ms)
+✔ 创建、等待补充、取消和结束分别显示真实状态 (0.1396ms)
+✔ one result per old issue; rule overlap is only a candidate and disappearance never means resolved (0.4938ms)
+✔ confirmed solved state requires reason and visible evidence; preserves pending source (0.1938ms)
+✔ foreign new IDs rejected, human exclusion distinguished from solved (0.0804ms)
+✔ 问题补记要求明确来源、步骤、证据与等级；同题人工和 AI 的来源分别保留 (0.4035ms)
+✔ 真实引擎适配器保留同图补记；换图时仅在原版及待核对结果中引用旧证据 (4.7287ms)
+✔ 补记经过会话快照后保留审核；模拟修改稿归档旧证据且不冒充新发现 (1379.4228ms)
+✔ feedback keeps stable IDs, audit snapshot and user changes without mutating prior version (927.2275ms)
+✔ recheck retains original image and excludes rejected finding (925.1712ms)
+✔ 修改目标后问题描述同步更新，并保留人工审核与旧版本 (924.3208ms)
+✔ native events use current context, actor and stable retry ID (0.1672ms)
+✔ source checks reject unsafe credentials and incorrect Figma hosts (0.2058ms)
+✔ download pins selected version and snapshot rejects legacy report (0.2938ms)
+✔ proxy allowlist rejects unrelated and unsafe mutation routes (0.156ms)
+✔ HTTP proxy preserves queries, binary artifacts and error status (34.7923ms)
+✔ PDF and image files infer material type and invalid link explains recovery (0.2517ms)
+✔ 事件显式保留操作者类型，未指定时记录未知 (0.0657ms)
+✔ links remain unexecuted and unsafe schemes are rejected (0.1239ms)
+✔ human decisions require reasons and retain version and actor (0.0704ms)
+✔ recheck preserves independent historical snapshots and pending notes (0.1558ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4232.3143

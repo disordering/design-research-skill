@@ -3,6 +3,7 @@ deliverables/** text eol=lf
 
 # D 的冻结材料、原答及运行证据按原始字节核对 SHA-256。
 docs/D-三项修复证据/** -text
+docs/D-本轮续测证据/** -text
 docs/D-续测证据/** -text
 docs/D-程序回归证据/** -text
 docs/D-复审实测/** -text
@@ -13,3 +14,9 @@ docs/D-AI操作证据/** -text
 fixtures/d-v02-*/** -text
 engine/session_adapters.py -text
 engine/session_evaluation.py text eol=lf
+
+# 会话修复源码与本轮验收指纹保持原始字节一致。
+engine/session_contracts.py -text
+engine/session_service.py -text
+engine/session_store.py -text
+engine/session_verification.py -text

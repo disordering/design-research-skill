@@ -1,0 +1,419 @@
+{
+  "page_type": "个人设置页",
+  "summary": "北辰校园个人设置页，通知偏好面板包含课程提醒、界面主题、作业到期、文字大小和消息工具，底部提供保存设置按钮。课程提醒的开启按钮呈蓝色选中样式，其余选项的当前状态表达不明确。",
+  "elements": [
+    {
+      "id": "E01",
+      "label": "北辰校园",
+      "role": "nav",
+      "bbox": {
+        "x": 0.023,
+        "y": 0.024,
+        "width": 0.099,
+        "height": 0.04
+      },
+      "interactable": false,
+      "visual_importance": 0.65,
+      "state": "default",
+      "confidence": 0.97
+    },
+    {
+      "id": "E02",
+      "label": "帮助中心",
+      "role": "nav",
+      "bbox": {
+        "x": 0.835,
+        "y": 0.033,
+        "width": 0.047,
+        "height": 0.024
+      },
+      "interactable": true,
+      "visual_importance": 0.3,
+      "state": "default",
+      "confidence": 0.95
+    },
+    {
+      "id": "E03",
+      "label": "用户头像：林",
+      "role": "button",
+      "bbox": {
+        "x": 0.933,
+        "y": 0.021,
+        "width": 0.027,
+        "height": 0.043
+      },
+      "interactable": true,
+      "visual_importance": 0.3,
+      "state": "default",
+      "confidence": 0.86
+    },
+    {
+      "id": "E04",
+      "label": "个人设置",
+      "role": "title",
+      "bbox": {
+        "x": 0.033,
+        "y": 0.12,
+        "width": 0.08,
+        "height": 0.038
+      },
+      "interactable": false,
+      "visual_importance": 0.85,
+      "state": "default",
+      "confidence": 1.0
+    },
+    {
+      "id": "E05",
+      "label": "通知偏好设置面板",
+      "role": "panel",
+      "bbox": {
+        "x": 0.153,
+        "y": 0.234,
+        "width": 0.693,
+        "height": 0.65
+      },
+      "interactable": false,
+      "visual_importance": 0.9,
+      "state": "default",
+      "confidence": 1.0
+    },
+    {
+      "id": "E06",
+      "label": "通知偏好",
+      "role": "title",
+      "bbox": {
+        "x": 0.182,
+        "y": 0.263,
+        "width": 0.075,
+        "height": 0.033
+      },
+      "interactable": false,
+      "visual_importance": 0.8,
+      "state": "default",
+      "confidence": 1.0
+    },
+    {
+      "id": "E07",
+      "label": "设置课程消息与学习空间的显示方式。",
+      "role": "text",
+      "bbox": {
+        "x": 0.182,
+        "y": 0.313,
+        "width": 0.21,
+        "height": 0.026
+      },
+      "interactable": false,
+      "visual_importance": 0.45,
+      "state": "default",
+      "confidence": 1.0
+    },
+    {
+      "id": "E08",
+      "label": "课程提醒",
+      "role": "text",
+      "bbox": {
+        "x": 0.182,
+        "y": 0.373,
+        "width": 0.057,
+        "height": 0.027
+      },
+      "interactable": false,
+      "visual_importance": 0.5,
+      "state": "default",
+      "confidence": 1.0
+    },
+    {
+      "id": "E09",
+      "label": "课程提醒：开启",
+      "role": "button",
+      "bbox": {
+        "x": 0.642,
+        "y": 0.362,
+        "width": 0.071,
+        "height": 0.052
+      },
+      "interactable": true,
+      "visual_importance": 0.8,
+      "state": "selected",
+      "confidence": 0.96
+    },
+    {
+      "id": "E10",
+      "label": "课程提醒：关闭",
+      "role": "button",
+      "bbox": {
+        "x": 0.724,
+        "y": 0.362,
+        "width": 0.094,
+        "height": 0.052
+      },
+      "interactable": true,
+      "visual_importance": 0.45,
+      "state": "unselected",
+      "confidence": 0.95
+    },
+    {
+      "id": "E11",
+      "label": "界面主题",
+      "role": "text",
+      "bbox": {
+        "x": 0.182,
+        "y": 0.462,
+        "width": 0.057,
+        "height": 0.027
+      },
+      "interactable": false,
+      "visual_importance": 0.5,
+      "state": "default",
+      "confidence": 1.0
+    },
+    {
+      "id": "E12",
+      "label": "界面主题：浅色",
+      "role": "button",
+      "bbox": {
+        "x": 0.578,
+        "y": 0.451,
+        "width": 0.111,
+        "height": 0.052
+      },
+      "interactable": true,
+      "visual_importance": 0.45,
+      "state": "selection_unclear",
+      "confidence": 0.99
+    },
+    {
+      "id": "E13",
+      "label": "界面主题：深色",
+      "role": "button",
+      "bbox": {
+        "x": 0.701,
+        "y": 0.451,
+        "width": 0.117,
+        "height": 0.052
+      },
+      "interactable": true,
+      "visual_importance": 0.45,
+      "state": "selection_unclear",
+      "confidence": 0.99
+    },
+    {
+      "id": "E14",
+      "label": "作业到期",
+      "role": "text",
+      "bbox": {
+        "x": 0.182,
+        "y": 0.551,
+        "width": 0.057,
+        "height": 0.027
+      },
+      "interactable": false,
+      "visual_importance": 0.5,
+      "state": "default",
+      "confidence": 1.0
+    },
+    {
+      "id": "E15",
+      "label": "作业到期开关",
+      "role": "panel",
+      "bbox": {
+        "x": 0.684,
+        "y": 0.544,
+        "width": 0.134,
+        "height": 0.042
+      },
+      "interactable": false,
+      "visual_importance": 0.4,
+      "state": "selection_unclear",
+      "confidence": 0.96
+    },
+    {
+      "id": "E16",
+      "label": "作业到期：ON",
+      "role": "button",
+      "bbox": {
+        "x": 0.684,
+        "y": 0.544,
+        "width": 0.067,
+        "height": 0.042
+      },
+      "interactable": true,
+      "visual_importance": 0.35,
+      "state": "selection_unclear",
+      "confidence": 0.88
+    },
+    {
+      "id": "E17",
+      "label": "作业到期：OFF",
+      "role": "button",
+      "bbox": {
+        "x": 0.751,
+        "y": 0.544,
+        "width": 0.067,
+        "height": 0.042
+      },
+      "interactable": true,
+      "visual_importance": 0.35,
+      "state": "selection_unclear",
+      "confidence": 0.88
+    },
+    {
+      "id": "E18",
+      "label": "文字大小",
+      "role": "text",
+      "bbox": {
+        "x": 0.182,
+        "y": 0.64,
+        "width": 0.057,
+        "height": 0.027
+      },
+      "interactable": false,
+      "visual_importance": 0.5,
+      "state": "default",
+      "confidence": 1.0
+    },
+    {
+      "id": "E19",
+      "label": "文字大小：标准",
+      "role": "button",
+      "bbox": {
+        "x": 0.642,
+        "y": 0.629,
+        "width": 0.071,
+        "height": 0.052
+      },
+      "interactable": true,
+      "visual_importance": 0.45,
+      "state": "selection_unclear",
+      "confidence": 0.99
+    },
+    {
+      "id": "E20",
+      "label": "文字大小：较大",
+      "role": "button",
+      "bbox": {
+        "x": 0.724,
+        "y": 0.629,
+        "width": 0.094,
+        "height": 0.052
+      },
+      "interactable": true,
+      "visual_importance": 0.45,
+      "state": "selection_unclear",
+      "confidence": 0.99
+    },
+    {
+      "id": "E21",
+      "label": "消息工具",
+      "role": "text",
+      "bbox": {
+        "x": 0.182,
+        "y": 0.729,
+        "width": 0.057,
+        "height": 0.027
+      },
+      "interactable": false,
+      "visual_importance": 0.5,
+      "state": "default",
+      "confidence": 1.0
+    },
+    {
+      "id": "E22",
+      "label": "消息工具：折线图标",
+      "role": "button",
+      "bbox": {
+        "x": 0.662,
+        "y": 0.717,
+        "width": 0.044,
+        "height": 0.052
+      },
+      "interactable": true,
+      "visual_importance": 0.35,
+      "state": "default",
+      "confidence": 0.93
+    },
+    {
+      "id": "E23",
+      "label": "消息工具：矩形图标",
+      "role": "button",
+      "bbox": {
+        "x": 0.716,
+        "y": 0.717,
+        "width": 0.044,
+        "height": 0.052
+      },
+      "interactable": true,
+      "visual_importance": 0.35,
+      "state": "default",
+      "confidence": 0.96
+    },
+    {
+      "id": "E24",
+      "label": "消息工具：叉号图标",
+      "role": "button",
+      "bbox": {
+        "x": 0.77,
+        "y": 0.717,
+        "width": 0.044,
+        "height": 0.052
+      },
+      "interactable": true,
+      "visual_importance": 0.35,
+      "state": "default",
+      "confidence": 0.96
+    },
+    {
+      "id": "E25",
+      "label": "保存设置",
+      "role": "primary_button",
+      "bbox": {
+        "x": 0.702,
+        "y": 0.802,
+        "width": 0.116,
+        "height": 0.051
+      },
+      "interactable": true,
+      "visual_importance": 0.9,
+      "state": "default",
+      "confidence": 1.0
+    },
+    {
+      "id": "E26",
+      "label": "合成测试素材 S07",
+      "role": "text",
+      "bbox": {
+        "x": 0.019,
+        "y": 0.974,
+        "width": 0.076,
+        "height": 0.018
+      },
+      "interactable": false,
+      "visual_importance": 0.15,
+      "state": "default",
+      "confidence": 0.98
+    },
+    {
+      "id": "E27",
+      "label": "北辰校园 · 演示界面",
+      "role": "text",
+      "bbox": {
+        "x": 0.901,
+        "y": 0.974,
+        "width": 0.083,
+        "height": 0.018
+      },
+      "interactable": false,
+      "visual_importance": 0.15,
+      "state": "default",
+      "confidence": 0.98
+    }
+  ],
+  "uncertainties": [
+    "课程提醒的开启按钮具有蓝色选中样式，但截图无法确认该状态是否已经保存。",
+    "浅色与深色按钮没有明显选中差异；页面当前呈浅色外观，但无法据此确认设置值。",
+    "作业到期的 ON 与 OFF 共用浅灰色底，缺少清晰的选中标记或滑块位置，无法判断当前开关状态及是否禁用。",
+    "标准与较大文字按钮没有明显选中差异，无法判断当前文字大小设置。",
+    "消息工具的三个图标没有文字说明，无法确定各自功能。",
+    "头像和帮助中心看似可交互，但截图无法确认具体跳转或展开行为。"
+  ]
+}

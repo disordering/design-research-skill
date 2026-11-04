@@ -1,0 +1,102 @@
+{
+  "judgments": [
+    {
+      "check_id": "check-dab2daa9269fe0ba",
+      "decision": "insufficient_evidence",
+      "reason": "E06需有明确操作前置条件。材料未规定资格、容量等条件，不能据按钮可用推定违规开放，也不能确认不存在条件。",
+      "evidence_ids": ["ev-2f97d5fc719c439b842ad62d0c01670a", "ev-5bb645c490a9466e9d64fd29d0c2d8ab"]
+    },
+    {
+      "check_id": "check-f8414ef52912ec95",
+      "decision": "no_visible_issue",
+      "reason": "E01适用于BR1往返路径。action-a56ac1f20a424c7eab29d05465d80848返回选择页后，下午项仍选中；action-40ff433955dd4936bce073fd09145a66再次进入核对页，仍显示周五14:00–14:30、二层服务台。该路径衔接未见问题，支持REQ2在本次路径满足。",
+      "evidence_ids": ["ev-54c27ab204c6479384eced085b8c3114", "ev-4a119973f66c4bb5823812d82b6658dd", "ev-5bb645c490a9466e9d64fd29d0c2d8ab", "ev-2f97d5fc719c439b842ad62d0c01670a"]
+    },
+    {
+      "check_id": "check-0c1636fdf681c97a",
+      "decision": "insufficient_evidence",
+      "reason": "E01适用于BR2提交至完成页。当前仅观察到最终核对页，action-6a0cb99a000d4b1fb341f4c859bfd25a仍为pending，没有提交结果或完成页证据，不能确认路径及REQ3通过；现有授权问题不由本判断解除。",
+      "evidence_ids": ["ev-5bb645c490a9466e9d64fd29d0c2d8ab", "ev-2f97d5fc719c439b842ad62d0c01670a"]
+    },
+    {
+      "check_id": "check-0f798341ae63b459",
+      "decision": "insufficient_evidence",
+      "reason": "E01适用于BR3复位路径。任务卡说明刷新或重新开始可复位，但没有任一复位动作及前后观察；初始选择页不能证明复位成功。",
+      "evidence_ids": ["ev-2f97d5fc719c439b842ad62d0c01670a", "ev-ed5981943d36420abcbcfb932f3a6a84"]
+    },
+    {
+      "check_id": "check-c61fe6c8170e14f0",
+      "decision": "insufficient_evidence",
+      "reason": "R01以存在页面级导航为条件。初始选择页身份明确，但页头“服务登记 / 修书咨询登记”是否承担导航尚无角色依据，不能判定导航当前项缺失或不适用。",
+      "evidence_ids": ["ev-ed5981943d36420abcbcfb932f3a6a84"]
+    },
+    {
+      "check_id": "check-67ef7123cdd40bf8",
+      "decision": "insufficient_evidence",
+      "reason": "R01以存在页面级导航为条件。核对页身份明确，但页头导航角色未知；步骤标签与返回按钮不足以确认页面级导航对象。",
+      "evidence_ids": ["ev-5bb645c490a9466e9d64fd29d0c2d8ab"]
+    },
+    {
+      "check_id": "check-49162134ac900160",
+      "decision": "no_visible_issue",
+      "reason": "R02适用于已确认的多步骤登记任务。初始页同时显示“第1步，共3步”和“选择时段”，当前环节可辨。",
+      "evidence_ids": ["ev-ed5981943d36420abcbcfb932f3a6a84", "ev-2f97d5fc719c439b842ad62d0c01670a"]
+    },
+    {
+      "check_id": "check-628f4b21e93bd04f",
+      "decision": "no_visible_issue",
+      "reason": "R02适用于多步骤任务的核对页。首次及再次核对均显示“第2步，共3步”和“核对信息”，与观察到的路径一致。",
+      "evidence_ids": ["ev-54c27ab204c6479384eced085b8c3114", "ev-5bb645c490a9466e9d64fd29d0c2d8ab"]
+    },
+    {
+      "check_id": "check-eed67d2316b2641a",
+      "decision": "not_applicable",
+      "reason": "R03仅适用于已经呈现的等待状态。当前是信息及操作按钮完整可见的提交前核对页，没有等待对象；此结论不涉及提交后的反馈。",
+      "evidence_ids": ["ev-5bb645c490a9466e9d64fd29d0c2d8ab"]
+    },
+    {
+      "check_id": "check-5af62e1b8a54da65",
+      "decision": "insufficient_evidence",
+      "reason": "R05需确认非专家用户、任务必需术语及熟悉度。当前虽有核对与登记文案，但目标用户、专业程度和熟悉度依据缺失，不能推定理解障碍。",
+      "evidence_ids": ["ev-2f97d5fc719c439b842ad62d0c01670a", "ev-5bb645c490a9466e9d64fd29d0c2d8ab"]
+    },
+    {
+      "check_id": "check-611eaa8cb16b2591",
+      "decision": "no_visible_issue",
+      "reason": "R06适用于任务目的明确的主要按钮。“返回选择”和“提交登记”结合核对信息说明了预期操作；返回行为亦与名称一致。这里只判断名称，不认定提交成功。",
+      "evidence_ids": ["ev-5bb645c490a9466e9d64fd29d0c2d8ab", "ev-54c27ab204c6479384eced085b8c3114", "ev-4a119973f66c4bb5823812d82b6658dd"]
+    },
+    {
+      "check_id": "check-99b3701ec33e2a90",
+      "decision": "no_visible_issue",
+      "reason": "R07适用于承担登记输入的时段单选项。切换前后均可见周五09:00–09:30／一层服务台和周五14:00–14:30／二层服务台，名称及邻近说明持续明确；动作记录与选中状态变化也支持REQ1在本次路径满足。",
+      "evidence_ids": ["ev-ed5981943d36420abcbcfb932f3a6a84", "ev-7a09dc68a4fd47958ab10ea4889fb401"]
+    },
+    {
+      "check_id": "check-9caac7cc82a3ab4d",
+      "decision": "not_applicable",
+      "reason": "R07要求存在待填写字段。完整核对页的日期、时段和服务台为只读展示，操作控件仅为返回与提交按钮，无该条输入对象。",
+      "evidence_ids": ["ev-5bb645c490a9466e9d64fd29d0c2d8ab"]
+    },
+    {
+      "check_id": "check-959f6002f998b4b6",
+      "decision": "not_applicable",
+      "reason": "R08适用于普通弹窗。下午选中状态的完整画面及页面结构显示中央卡片是第一步页面主内容，没有普通弹窗对象。",
+      "evidence_ids": ["ev-7a09dc68a4fd47958ab10ea4889fb401"]
+    },
+    {
+      "check_id": "check-3e2d188061d65e5e",
+      "decision": "not_applicable",
+      "reason": "R08适用于普通弹窗。核对画面及选择至核对的实际转换表明这是第二步流程页面，主内容卡片不是普通弹窗。",
+      "evidence_ids": ["ev-7a09dc68a4fd47958ab10ea4889fb401", "ev-54c27ab204c6479384eced085b8c3114"]
+    },
+    {
+      "check_id": "check-918d0ff71081437a",
+      "decision": "not_applicable",
+      "reason": "R09仅适用于多步骤任务非首步。下午选中状态仍明确显示“第1步，共3步”，属于首步，符合排除条件。",
+      "evidence_ids": ["ev-7a09dc68a4fd47958ab10ea4889fb401"]
+    }
+  ],
+  "findings": [],
+  "questions": []
+}

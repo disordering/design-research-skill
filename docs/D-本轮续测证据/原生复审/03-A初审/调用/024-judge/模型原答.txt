@@ -1,0 +1,102 @@
+{
+  "judgments": [
+    {
+      "check_id": "check-21e9130988ac6612",
+      "decision": "insufficient_evidence",
+      "reason": "R01：选择页身份明确，但页头“服务登记 / 修书咨询登记”是否承担页面级导航尚未确认，不能判断当前导航项标识是否充分。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62"]
+    },
+    {
+      "check_id": "check-59e3419558511dcf",
+      "decision": "no_visible_issue",
+      "reason": "R02：适用于已确认的多步骤登记流程。初始页清楚显示“第1步，共3步”和“选择时段”，当前环节可辨。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-3288eb39e0534307aab6e3698122ae62"]
+    },
+    {
+      "check_id": "check-b427dff851690c8f",
+      "decision": "no_visible_issue",
+      "reason": "R02：核对页属于多步骤流程，首次及再次进入均显示“第2步，共3步”和“核对信息”，当前环节清楚。",
+      "evidence_ids": ["ev-28ea4802a4da474aab003c94497c5b61", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-751721424b71ae3a",
+      "decision": "insufficient_evidence",
+      "reason": "R02：适用于流程完成环节，但提交动作仍为pending，现有画面仅到再次核对页；缺少完成页，无法判断完成环节是否可辨。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-402bff68ac2dabd7",
+      "decision": "not_applicable",
+      "reason": "R03：本检查仅覆盖初始选择页。完整画面呈现时段选项和操作按钮，属于普通选择状态，没有等待状态这一适用对象。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62"]
+    },
+    {
+      "check_id": "check-8582d6eaa0d8042f",
+      "decision": "insufficient_evidence",
+      "reason": "R03：仅在提交后出现等待状态时适用。提交尚未执行，缺少动作后观察，无法确定是否存在等待状态及其说明，不能推断无反馈。",
+      "evidence_ids": ["ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-034f00e30664cf8f",
+      "decision": "insufficient_evidence",
+      "reason": "R05：时段与服务台文案承担选择任务，但未提供目标用户专业程度、术语熟悉度及内部术语依据，不能据此认定理解障碍或已满足本条。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-3288eb39e0534307aab6e3698122ae62"]
+    },
+    {
+      "check_id": "check-020c650108a40826",
+      "decision": "no_visible_issue",
+      "reason": "R06：主操作及任务目的明确。“核对信息”结合时段选择内容，清楚表达进入核对环节的预期结果；所提供动作后核对页与该名称一致。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-28ea4802a4da474aab003c94497c5b61"]
+    },
+    {
+      "check_id": "check-0b207d11f40b6398",
+      "decision": "no_visible_issue",
+      "reason": "R07：单选组承担时段输入任务。“选择时段”标题及两项标签明确显示周五09:00–09:30、一层服务台和周五14:00–14:30、二层服务台；更换选择后名称仍可见。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-13f449179bd84e8197d0f8a2c5d1479f"]
+    },
+    {
+      "check_id": "check-42392394c20bc0de",
+      "decision": "not_applicable",
+      "reason": "R08：初始完整画面为普通页面中的表单卡片，没有占据焦点的普通弹窗，因此无弹窗退出对象。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62"]
+    },
+    {
+      "check_id": "check-8021df4bd2021fc4",
+      "decision": "not_applicable",
+      "reason": "R09：本检查覆盖选择首步，画面明确标注“第1步，共3步”，符合首步排除条件。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62"]
+    },
+    {
+      "check_id": "check-1aff758fe3807e96",
+      "decision": "no_visible_issue",
+      "reason": "R09：核对页为非首步的普通确认环节，页面内清楚显示“返回选择”。本条仅判断入口可见性，浏览器返回不在画面范围内，也不影响已有页面返回入口的判断。",
+      "evidence_ids": ["ev-28ea4802a4da474aab003c94497c5b61", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-3721d7787deacf8c",
+      "decision": "not_applicable",
+      "reason": "R10：任务卡明确登记仅在本机当前页面生效，并可刷新或重新开始复位；该演示提交不是已确认的高风险操作，不适用高风险确认取消判据。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20"]
+    },
+    {
+      "check_id": "check-9b7c4f1964492715",
+      "decision": "not_applicable",
+      "reason": "R11：本检查限定当前选择页，只有一个“核对信息”入口；上午和下午为不同选择对象，不构成同一动作的多个入口。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62"]
+    },
+    {
+      "check_id": "check-fdb1b6b4c03703af",
+      "decision": "no_visible_issue",
+      "reason": "R12：两个时段项功能、层级和设计语境可比。前后画面中选中项均使用紫色边框、浅紫底及实心单选标识，未选中项均为白底和空心标识；外观差异由选择状态解释，规则一致。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-13f449179bd84e8197d0f8a2c5d1479f"]
+    },
+    {
+      "check_id": "check-8674c2d5d93a89e6",
+      "decision": "insufficient_evidence",
+      "reason": "R13：存在时段输入对象，但材料未明确其必填规则或是否允许无选择提交。默认选中及评审任务指定下午不能代替正式必填依据，因此不能认定缺少必填标记。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-3288eb39e0534307aab6e3698122ae62"]
+    }
+  ],
+  "findings": [],
+  "questions": []
+}

@@ -93,6 +93,15 @@ def _evidence_candidates(evidence: Evidence) -> list[str]:
 
 
 def object_is_present(finding: Finding, evidence: Evidence) -> bool:
+    if (
+        evidence.stale
+        or evidence.evidence_id not in finding.evidence_ids
+        or evidence.kind not in {"design", "observation", "implementation"}
+    ):
+        return False
+    # 已给规范编号时只做精确匹配，自由描述不再否决或替换该编号。
+    if finding.object_id:
+        return any(item.object_id == finding.object_id for item in evidence.objects)
     tokens = _object_tokens(finding.object_ref)
     if not tokens:
         return False
@@ -118,6 +127,8 @@ def resolve_finding_object(
         valid[evidence_id]
         for evidence_id in finding.evidence_ids
         if evidence_id in valid
+        and not valid[evidence_id].stale
+        and valid[evidence_id].kind in {"design", "observation", "implementation"}
     ]
     support_evidence.sort(
         key=lambda item: 0 if item.kind in {"design", "observation", "implementation"} else 1
@@ -127,8 +138,8 @@ def resolve_finding_object(
         for item in _evidence_objects(evidence)
     ]
     by_id = {item.object_id: item for item in objects}
-    if finding.object_id and finding.object_id in by_id:
-        return by_id[finding.object_id]
+    if finding.object_id:
+        return by_id.get(finding.object_id)
     for object_id in preferred_object_ids or []:
         if object_id in by_id:
             return by_id[object_id]
@@ -155,6 +166,33 @@ def resolve_finding_object(
         )
     ]
     return matches[0] if matches else None
+
+
+def finding_location_evidence(
+    session: SessionSnapshot, finding: Finding, valid: dict[str, Evidence],
+) -> Evidence | None:
+    # valid 保持会话取证顺序；只从该发现明确引用且含目标对象的证据定位。
+    candidates = [evidence for evidence in valid.values() if object_is_present(finding, evidence)]
+    if finding_requires_action_evidence(finding):
+        claim_ids = {
+            evidence_id
+            for claim in finding.claims
+            if claim.object_id == finding.object_id
+            and claim.claim_type in {"state_change", "no_state_change", "action_result"}
+            for evidence_id in claim.evidence_ids
+        }
+        # 后续点击可作为背景被引用；自动定位优先对应动态断言自身的结果。
+        claim_candidates = [e for e in candidates if e.evidence_id in claim_ids] if claim_ids else candidates
+        action_results = [
+            evidence for evidence in claim_candidates
+            if (action := _action_for_evidence(session, evidence)) is not None
+            and action.status == "executed"
+            and action.kind in {"click", "fill", "scroll", "back", "navigate"}
+        ]
+        if action_results:
+            return action_results[-1]
+    observations = [evidence for evidence in candidates if evidence.kind == "observation"]
+    return (observations or candidates)[-1] if candidates else None
 
 
 def claim_type_for_text(text: str) -> str:

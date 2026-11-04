@@ -1,0 +1,13 @@
+{
+  "事件": {
+    "event_id": "d-native-02-runner-stop",
+    "expected_context_version": 1,
+    "type": "finish",
+    "payload": {
+      "reason": "驱动需在同一进程支持本机原型授权续跑；本次仅完成启动检查，主动保存后用支持授权循环的新驱动重新初审。此项不计产品缺陷。"
+    },
+    "actor": "AI模型验收-D",
+    "actor_type": "ai"
+  },
+  "应继续运行": false
+}

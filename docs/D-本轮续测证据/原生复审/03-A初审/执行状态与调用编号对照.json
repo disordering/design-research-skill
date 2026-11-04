@@ -1,0 +1,1343 @@
+{
+  "已记录judge输入检查ID数": 80,
+  "当前executed数": 110,
+  "executed但未见judge输入ID": [
+    {
+      "check_id": "check-a824f03f595c5b62",
+      "ref": "E08",
+      "coverage_id": "coverage-52121601bdbea9d2",
+      "coverage_title": "TASK2：要求来源与返回分支覆盖记录核对",
+      "task_id": "TASK2",
+      "kind": "conflict",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_conflict",
+      "reason": "对同一流程的任务卡与委托进行要求兼容性核对：两份正文一致，REQ1–REQ3可同时满足，未发现相互排斥的要求。提交尚未执行属于观察缺口，不是产品要求冲突。",
+      "evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20",
+        "ev-5ed1c04f55834474af9ef1bcbbec3613"
+      ],
+      "source_ids": [
+        "src-5f735d74eaf1428987f7af4dc1257cbd",
+        "src-2ac07259052c468b8308c09718c76257",
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "任务卡与委托可对照；BR1覆盖标记与返回动作记录存在描述差异，需区分记录差异与正式要求冲突。",
+      "evidence_needed": [],
+      "object_refs": [
+        "BR1",
+        "coverage-a46b9cb50cb7b416",
+        "transition-5ce7940d0a8c4f6fa43d27ed28d8bd8f"
+      ],
+      "object_ids": [
+        "obj-fe7fbedecb5d6a1be4e9",
+        "obj-226007bc48c1c467f54a"
+      ],
+      "constraint_refs": [
+        "REQ2"
+      ],
+      "plan_evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20",
+        "ev-5ed1c04f55834474af9ef1bcbbec3613",
+        "ev-28ea4802a4da474aab003c94497c5b61",
+        "ev-1b92d13208824e079e766fb72b4db903"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "statement",
+        "design",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-61ff4f79027d2512",
+      "ref": "R01",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "TASK2：核对信息页的页面级导航适用性",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "insufficient_evidence",
+      "reason": "R01：选择页身份明确，但页头“服务登记 / 修书咨询登记”是否承担页面级导航尚未确认，不能判断当前导航项标识是否充分。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "needs_context",
+      "reevaluation_requested": false,
+      "plan_reason": "核对页身份明确，但页头是否承担页面级导航仍未知；“返回选择”是流程动作，不能据此认定导航当前项。",
+      "evidence_needed": [
+        "核对页所属页面级导航及当前项定义。"
+      ],
+      "object_refs": [
+        "page-24a2212bbbe85a1e",
+        "dfff680431538fcadaeb3b5d",
+        "页头路径文字"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-28ea4802a4da474aab003c94497c5b61"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "statement"
+      ]
+    },
+    {
+      "check_id": "check-2c30027ea398b956",
+      "ref": "R02",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "TASK2：核对信息页的当前步骤表达",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "R02：适用于已确认的多步骤登记流程。初始页清楚显示“第1步，共3步”和“选择时段”，当前环节可辨。",
+      "evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20",
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "已有进入核对及再次核对的路径记录；检查核对页步骤提示与标题是否对应第二环节。",
+      "evidence_needed": [],
+      "object_refs": [
+        "page-24a2212bbbe85a1e",
+        "dfff680431538fcadaeb3b5d",
+        "核对信息页步骤提示与标题"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-28ea4802a4da474aab003c94497c5b61",
+        "ev-28f43ffd619a44358a2f982ecf59aa3c"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-36b97a471ab14197",
+      "ref": "R02",
+      "coverage_id": "coverage-a46b9cb50cb7b416",
+      "coverage_title": "TASK2：返回选择后当前步骤表达",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "R02：适用于已确认的多步骤登记流程。初始页清楚显示“第1步，共3步”和“选择时段”，当前环节可辨。",
+      "evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20",
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "已提供返回选择的动作及画面，可检查返回后步骤提示是否对应选择环节；不以覆盖表的未观察标记替代证据。",
+      "evidence_needed": [],
+      "object_refs": [
+        "BR1",
+        "f9a3ded7e0792d84c6943a92",
+        "action-6f56e0e799d5429dad297472485e9eaf"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-28ea4802a4da474aab003c94497c5b61",
+        "ev-1b92d13208824e079e766fb72b4db903"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-39fa17fc359534fe",
+      "ref": "R02",
+      "coverage_id": "plan-task2-review-state",
+      "coverage_title": "核对信息页：当前步骤与任务标题",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "insufficient_evidence",
+      "reason": "R02适用于返回后再次进入的核对环节。action-995088424838490e865db7a09e04bd7d后的画面显示“第2步，共3步”和“核对信息”，步骤线索与当前环节一致。；计划中的适用条件或必要证据尚未满足，不能据此通过或判违规。",
+      "evidence_ids": [
+        "ev-1b92d13208824e079e766fb72b4db903",
+        "ev-28f43ffd619a44358a2f982ecf59aa3c"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "已提供进入核对页及再次核对的动作证据；可检查第二步提示、标题与流程位置是否对应。",
+      "evidence_needed": [],
+      "object_refs": [
+        "page-24a2212bbbe85a1e / dfff680431538fcadaeb3b5d / 步骤提示与标题"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-28ea4802a4da474aab003c94497c5b61",
+        "ev-28f43ffd619a44358a2f982ecf59aa3c"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-0392557552721ee4",
+      "ref": "R03",
+      "coverage_id": "plan-task2-review-state",
+      "coverage_title": "核对信息页：当前步骤与任务标题",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "not_applicable",
+      "reason": "R03：本检查仅覆盖初始选择页。完整画面呈现时段选项和操作按钮，属于普通选择状态，没有等待状态这一适用对象。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "核对页呈现待用户返回或提交的普通状态，非等待状态；此排除不延伸至尚未观察的提交过程。",
+      "evidence_needed": [],
+      "object_refs": [
+        "page-24a2212bbbe85a1e / dfff680431538fcadaeb3b5d"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-28ea4802a4da474aab003c94497c5b61",
+        "ev-28f43ffd619a44358a2f982ecf59aa3c"
+      ],
+      "required_evidence_kinds": [
+        "design"
+      ]
+    },
+    {
+      "check_id": "check-4efe7b47d597758c",
+      "ref": "R03",
+      "coverage_id": "plan-task3-submit-process",
+      "coverage_title": "提交登记后的处理过程",
+      "task_id": "TASK3",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "not_applicable",
+      "reason": "R03：本检查仅覆盖初始选择页。完整画面呈现时段选项和操作按钮，属于普通选择状态，没有等待状态这一适用对象。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "needs_context",
+      "reevaluation_requested": false,
+      "plan_reason": "提交动作仅获授权，尚不能确认是否出现等待状态；需取得动作后观察再判断适用性，不设统一等待阈值。",
+      "evidence_needed": [
+        "action-d11b1435c3764e7a981cf780fa4ff820的执行结果及动作后画面",
+        "若出现等待，记录等待区域、文案和观察时长"
+      ],
+      "object_refs": [
+        "action-d11b1435c3764e7a981cf780fa4ff820 / 提交登记后的状态"
+      ],
+      "object_ids": [
+        "obj-d3ce4fd1711dc9270b9e"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-0b46768007964dbd910ff782c9ba9e7c"
+      ],
+      "required_evidence_kinds": [
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-d8d3ae9269b161d9",
+      "ref": "R05",
+      "coverage_id": "plan-task2-review-state",
+      "coverage_title": "核对信息页：当前步骤与任务标题",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "insufficient_evidence",
+      "reason": "R05：时段与服务台文案承担选择任务，但未提供目标用户专业程度、术语熟悉度及内部术语依据，不能据此认定理解障碍或已满足本条。",
+      "evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20",
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2",
+        "src-5f735d74eaf1428987f7af4dc1257cbd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "needs_context",
+      "reevaluation_requested": false,
+      "plan_reason": "核对页有字段和操作文案；用户背景未知，需先确认非专家适用条件及任务必需词语的理解依据。",
+      "evidence_needed": [
+        "目标用户及专业程度依据",
+        "如识别疑似内部术语，补充含义、任务必要性与用户熟悉度依据"
+      ],
+      "object_refs": [
+        "page-24a2212bbbe85a1e / dfff680431538fcadaeb3b5d / 核对字段、返回选择与提交登记文案"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b",
+        "obj-888b4bf5c3438e05ff97",
+        "obj-d3ce4fd1711dc9270b9e"
+      ],
+      "constraint_refs": [
+        "REQ2"
+      ],
+      "plan_evidence_ids": [
+        "ev-28f43ffd619a44358a2f982ecf59aa3c",
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "statement",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-07041d9f07ab3b9f",
+      "ref": "R05",
+      "coverage_id": "coverage-cacbc29d13023ca4",
+      "coverage_title": "选择页：时段与服务台文案",
+      "task_id": "TASK1",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "insufficient_evidence",
+      "reason": "R05需确认非专家用户、任务必需术语及其熟悉度。当前只提供核对文案，没有目标用户专业程度、疑似内部术语含义及熟悉度依据，不能据措辞直觉认定理解障碍或通过。",
+      "evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20",
+        "ev-28f43ffd619a44358a2f982ecf59aa3c"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "needs_context",
+      "reevaluation_requested": false,
+      "plan_reason": "任务需要理解时段及服务台，但目标用户、专业程度与熟悉度未知，不能凭文案推定理解障碍。",
+      "evidence_needed": [
+        "目标用户及专业程度",
+        "任务必要词语的含义与用户熟悉度依据"
+      ],
+      "object_refs": [
+        "选择时段页的时段及服务台文字"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b"
+      ],
+      "constraint_refs": [
+        "REQ1"
+      ],
+      "plan_evidence_ids": [
+        "ev-13f449179bd84e8197d0f8a2c5d1479f"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "statement"
+      ]
+    },
+    {
+      "check_id": "check-abc779bfe9374a1f",
+      "ref": "R05",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对页：日期、时段与服务台文案",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "insufficient_evidence",
+      "reason": "R05需确认非专家用户、任务必需术语及其熟悉度。当前只提供核对文案，没有目标用户专业程度、疑似内部术语含义及熟悉度依据，不能据措辞直觉认定理解障碍或通过。",
+      "evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20",
+        "ev-28f43ffd619a44358a2f982ecf59aa3c"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "needs_context",
+      "reevaluation_requested": false,
+      "plan_reason": "核对信息属于关键任务文案；需先确认非专家用户及其熟悉度，不能仅因未附解释而报问题。",
+      "evidence_needed": [
+        "目标用户及专业程度",
+        "关键文案的熟悉度依据"
+      ],
+      "object_refs": [
+        "核对信息页的字段名称与值"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b"
+      ],
+      "constraint_refs": [
+        "REQ2"
+      ],
+      "plan_evidence_ids": [
+        "ev-28f43ffd619a44358a2f982ecf59aa3c"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "statement"
+      ]
+    },
+    {
+      "check_id": "check-43736622eb3667ca",
+      "ref": "R06",
+      "coverage_id": "coverage-cacbc29d13023ca4",
+      "coverage_title": "选择页：“核对信息”入口",
+      "task_id": "TASK1",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "insufficient_evidence",
+      "reason": "R06：主操作及任务目的明确。“核对信息”结合时段选择内容，清楚表达进入核对环节的预期结果；所提供动作后核对页与该名称一致。；计划中的适用条件或必要证据尚未满足，不能据此通过或判违规。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62",
+        "ev-28ea4802a4da474aab003c94497c5b61"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2",
+        "src-2ac07259052c468b8308c09718c76257"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "选择页存在主要按钮且任务目的明确，计划结合选项内容检查名称是否说明进入核对步骤。",
+      "evidence_needed": [],
+      "object_refs": [
+        "选择页按钮：核对信息"
+      ],
+      "object_ids": [
+        "obj-19e79bdc189741edbd92"
+      ],
+      "constraint_refs": [
+        "REQ1"
+      ],
+      "plan_evidence_ids": [
+        "ev-13f449179bd84e8197d0f8a2c5d1479f",
+        "ev-5ed1c04f55834474af9ef1bcbbec3613"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "statement"
+      ]
+    },
+    {
+      "check_id": "check-51c1d930680d4ce4",
+      "ref": "R06",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对页：“返回选择”与“提交登记”",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "insufficient_evidence",
+      "reason": "R06：主操作及任务目的明确。“核对信息”结合时段选择内容，清楚表达进入核对环节的预期结果；所提供动作后核对页与该名称一致。；计划中的适用条件或必要证据尚未满足，不能据此通过或判违规。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62",
+        "ev-28ea4802a4da474aab003c94497c5b61"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2",
+        "src-5f735d74eaf1428987f7af4dc1257cbd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "核对页两个操作的任务目的已知，计划逐一核对名称及邻近信息；提交结果另需动作后证据。",
+      "evidence_needed": [],
+      "object_refs": [
+        "核对页按钮：返回选择",
+        "核对页按钮：提交登记"
+      ],
+      "object_ids": [
+        "obj-888b4bf5c3438e05ff97",
+        "obj-d3ce4fd1711dc9270b9e"
+      ],
+      "constraint_refs": [
+        "REQ2",
+        "REQ3"
+      ],
+      "plan_evidence_ids": [
+        "ev-0b46768007964dbd910ff782c9ba9e7c",
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "requirement"
+      ]
+    },
+    {
+      "check_id": "check-63f200ea6da610d9",
+      "ref": "R06",
+      "coverage_id": "coverage-7686ff9c10b2feb6",
+      "coverage_title": "完成页：“重新开始”入口",
+      "task_id": "TASK3",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "insufficient_evidence",
+      "reason": "R06：主操作及任务目的明确。“核对信息”结合时段选择内容，清楚表达进入核对环节的预期结果；所提供动作后核对页与该名称一致。；计划中的适用条件或必要证据尚未满足，不能据此通过或判违规。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62",
+        "ev-28ea4802a4da474aab003c94497c5b61"
+      ],
+      "source_ids": [
+        "src-5f735d74eaf1428987f7af4dc1257cbd",
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "needs_context",
+      "reevaluation_requested": false,
+      "plan_reason": "任务卡说明完成页可重新开始，但未提供该页，需取得按钮及邻近内容才能检查实际文案。",
+      "evidence_needed": [
+        "完成页完整画面及操作入口"
+      ],
+      "object_refs": [
+        "BR3所述完成页重新开始入口"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "statement"
+      ]
+    },
+    {
+      "check_id": "check-b252b0c0b4591919",
+      "ref": "R07",
+      "coverage_id": "coverage-cacbc29d13023ca4",
+      "coverage_title": "选择页：两个时段单选输入的名称",
+      "task_id": "TASK1",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "R07：单选组承担时段输入任务。“选择时段”标题及两项标签明确显示周五09:00–09:30、一层服务台和周五14:00–14:30、二层服务台；更换选择后名称仍可见。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62",
+        "ev-13f449179bd84e8197d0f8a2c5d1479f"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2",
+        "src-5f735d74eaf1428987f7af4dc1257cbd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "时段单选属于任务必要输入；计划检查两个选项名称是否说明所选信息，以及更换后标签是否仍可获取。",
+      "evidence_needed": [],
+      "object_refs": [
+        "周五09:00–09:30、一层服务台单选项",
+        "周五14:00–14:30、二层服务台单选项；无独立规范对象编号"
+      ],
+      "object_ids": [
+        "obj-26d0e779915a9ce03c9d"
+      ],
+      "constraint_refs": [
+        "REQ1"
+      ],
+      "plan_evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62",
+        "ev-13f449179bd84e8197d0f8a2c5d1479f",
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "observation",
+        "requirement"
+      ]
+    },
+    {
+      "check_id": "check-6c0bbb129a5eb3eb",
+      "ref": "R07",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对页：信息展示区域",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "R07：单选组承担时段输入任务。“选择时段”标题及两项标签明确显示周五09:00–09:30、一层服务台和周五14:00–14:30、二层服务台；更换选择后名称仍可见。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62",
+        "ev-13f449179bd84e8197d0f8a2c5d1479f"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "完整核对页显示只读信息和两个按钮，没有需要填写的字段；本项仅限定该已呈现页面。",
+      "evidence_needed": [],
+      "object_refs": [
+        "核对页只读日期、时段与服务台"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-0b46768007964dbd910ff782c9ba9e7c"
+      ],
+      "required_evidence_kinds": [
+        "design"
+      ]
+    },
+    {
+      "check_id": "check-d6f09ba654b99385",
+      "ref": "R08",
+      "coverage_id": "coverage-cacbc29d13023ca4",
+      "coverage_title": "选择页：页面容器性质",
+      "task_id": "TASK1",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "not_applicable",
+      "reason": "R08：初始完整画面为普通页面中的表单卡片，没有占据焦点的普通弹窗，因此无弹窗退出对象。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "完整画面及页面结构表明选择区域是主页面内的步骤卡片，不是占据焦点的普通弹窗。",
+      "evidence_needed": [],
+      "object_refs": [
+        "选择时段页主内容卡片"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-13f449179bd84e8197d0f8a2c5d1479f"
+      ],
+      "required_evidence_kinds": [
+        "design"
+      ]
+    },
+    {
+      "check_id": "check-1f23c428f7b030f2",
+      "ref": "R08",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对页：页面容器性质",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "not_applicable",
+      "reason": "R08：初始完整画面为普通页面中的表单卡片，没有占据焦点的普通弹窗，因此无弹窗退出对象。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "已呈现的是主页面中的第二步核对卡片，非普通信息或输入弹窗；不外推提交后的界面性质。",
+      "evidence_needed": [],
+      "object_refs": [
+        "核对信息页主内容卡片"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-0b46768007964dbd910ff782c9ba9e7c"
+      ],
+      "required_evidence_kinds": [
+        "design"
+      ]
+    },
+    {
+      "check_id": "check-50666044496235c9",
+      "ref": "R09",
+      "coverage_id": "coverage-cacbc29d13023ca4",
+      "coverage_title": "选择页：第一步",
+      "task_id": "TASK1",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "not_applicable",
+      "reason": "R09：本检查覆盖选择首步，画面明确标注“第1步，共3步”，符合首步排除条件。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "页面明确标注“第1步，共3步”，符合本条首步排除条件；返回后进入该页也不改变步骤属性。",
+      "evidence_needed": [],
+      "object_refs": [
+        "选择时段页步骤标记"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-13f449179bd84e8197d0f8a2c5d1479f",
+        "ev-1b92d13208824e079e766fb72b4db903"
+      ],
+      "required_evidence_kinds": [
+        "design"
+      ]
+    },
+    {
+      "check_id": "check-317bd1f74d708125",
+      "ref": "R09",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对信息页：可见返回入口",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "not_applicable",
+      "reason": "R09：本检查覆盖选择首步，画面明确标注“第1步，共3步”，符合首步排除条件。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2",
+        "src-5f735d74eaf1428987f7af4dc1257cbd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "核对页明确为第2步，且是本机演示登记；检查页面返回入口。浏览器导航不在截图范围，返回保留另按REQ2检查。",
+      "evidence_needed": [],
+      "object_refs": [
+        "dfff680431538fcadaeb3b5d / 返回选择"
+      ],
+      "object_ids": [
+        "obj-888b4bf5c3438e05ff97"
+      ],
+      "constraint_refs": [
+        "REQ2"
+      ],
+      "plan_evidence_ids": [
+        "ev-28ea4802a4da474aab003c94497c5b61",
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "statement"
+      ]
+    },
+    {
+      "check_id": "check-48695a0ea26c88c8",
+      "ref": "R09",
+      "coverage_id": "coverage-b39afc42ea3b3008",
+      "coverage_title": "提交后：完成页导航",
+      "task_id": "TASK3",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "not_applicable",
+      "reason": "R09：本检查覆盖选择首步，画面明确标注“第1步，共3步”，符合首步排除条件。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2",
+        "src-5f735d74eaf1428987f7af4dc1257cbd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "needs_context",
+      "reevaluation_requested": false,
+      "plan_reason": "提交仅获授权，完成页尚未呈现；需确认它是任务中的非首步还是独立结果页，再判断返回规则是否适用。",
+      "evidence_needed": [
+        "提交后的完整页面、步骤标记及导航入口"
+      ],
+      "object_refs": [
+        "BR2所述完成页"
+      ],
+      "object_ids": [],
+      "constraint_refs": [
+        "REQ3"
+      ],
+      "plan_evidence_ids": [
+        "ev-0b46768007964dbd910ff782c9ba9e7c",
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "observation",
+        "requirement"
+      ]
+    },
+    {
+      "check_id": "check-4dda2d98a8cb047c",
+      "ref": "R10",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对信息页：高风险确认适用性",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "not_applicable",
+      "reason": "R10：任务卡明确登记仅在本机当前页面生效，并可刷新或重新开始复位；该演示提交不是已确认的高风险操作，不适用高风险确认取消判据。",
+      "evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2",
+        "src-5f735d74eaf1428987f7af4dc1257cbd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "任务卡明确登记仅在当前本机页面生效且可复位；当前为咨询登记核对，不属于本条高风险操作确认。",
+      "evidence_needed": [],
+      "object_refs": [
+        "dfff680431538fcadaeb3b5d / 提交登记"
+      ],
+      "object_ids": [
+        "obj-d3ce4fd1711dc9270b9e"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-28ea4802a4da474aab003c94497c5b61",
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "statement"
+      ]
+    },
+    {
+      "check_id": "check-1cfcb4d2ac603e30",
+      "ref": "R11",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对信息页：动作入口命名适用性",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "not_applicable",
+      "reason": "R11：本检查限定当前选择页，只有一个“核对信息”入口；上午和下午为不同选择对象，不构成同一动作的多个入口。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "已提供界面中核对、返回、提交各只有一个入口，分别承担不同动作；同一入口的重复截图不构成两个入口。",
+      "evidence_needed": [],
+      "object_refs": [
+        "选择页 / 核对信息",
+        "核对页 / 返回选择",
+        "核对页 / 提交登记"
+      ],
+      "object_ids": [
+        "obj-19e79bdc189741edbd92",
+        "obj-888b4bf5c3438e05ff97",
+        "obj-d3ce4fd1711dc9270b9e"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-13f449179bd84e8197d0f8a2c5d1479f",
+        "ev-28ea4802a4da474aab003c94497c5b61",
+        "ev-28f43ffd619a44358a2f982ecf59aa3c"
+      ],
+      "required_evidence_kinds": [
+        "design"
+      ]
+    },
+    {
+      "check_id": "check-9923e21f017e615f",
+      "ref": "R12",
+      "coverage_id": "coverage-cacbc29d13023ca4",
+      "coverage_title": "选择时段页：更换前后两项单选控件的状态表达",
+      "task_id": "TASK1",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "R12：两个时段项功能、层级和设计语境可比。前后画面中选中项均使用紫色边框、浅紫底及实心单选标识，未选中项均为白底和空心标识；外观差异由选择状态解释，规则一致。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62",
+        "ev-13f449179bd84e8197d0f8a2c5d1479f"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "两项属于同层级时段选择，可跨更换前后比较相同选中或未选中状态；不把状态不同造成的外观差异作为问题。",
+      "evidence_needed": [],
+      "object_refs": [
+        "上午一层选项 / [data-review-control=\"0\"]",
+        "下午二层选项 / [data-review-control=\"1\"]"
+      ],
+      "object_ids": [
+        "obj-26d0e779915a9ce03c9d"
+      ],
+      "constraint_refs": [
+        "REQ1"
+      ],
+      "plan_evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62",
+        "ev-13f449179bd84e8197d0f8a2c5d1479f"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-baabd47a5774db76",
+      "ref": "R12",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对信息页：操作按钮的层级与视觉表达",
+      "task_id": "TASK2",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "R12：两个时段项功能、层级和设计语境可比。前后画面中选中项均使用紫色边框、浅紫底及实心单选标识，未选中项均为白底和空心标识；外观差异由选择状态解释，规则一致。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62",
+        "ev-13f449179bd84e8197d0f8a2c5d1479f"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "返回与提交均为可见按钮，需结合各自动作和推进层级检查视觉规则；功能与层级差异应作为解释，不直接判不一致。",
+      "evidence_needed": [],
+      "object_refs": [
+        "dfff680431538fcadaeb3b5d / 返回选择、提交登记"
+      ],
+      "object_ids": [
+        "obj-888b4bf5c3438e05ff97",
+        "obj-d3ce4fd1711dc9270b9e"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-28ea4802a4da474aab003c94497c5b61",
+        "ev-28f43ffd619a44358a2f982ecf59aa3c"
+      ],
+      "required_evidence_kinds": [
+        "design"
+      ]
+    },
+    {
+      "check_id": "check-757f534333062b56",
+      "ref": "R15",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对页：本机演示提交的后果范围",
+      "task_id": "TASK3",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "not_applicable",
+      "reason": "R15要求已确认的高后果操作。任务卡明确登记仅在当前本机页面生效且可复位，本对象不满足高后果适用条件；提交尚未执行不改变此适用性判断。",
+      "evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "source_ids": [
+        "src-5f735d74eaf1428987f7af4dc1257cbd",
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "任务卡明确登记只在当前页面生效且可复位，本轮提交不属于高后果操作；未取得完成页不改变此适用性。",
+      "evidence_needed": [],
+      "object_refs": [
+        "dfff680431538fcadaeb3b5d：核对信息及提交登记"
+      ],
+      "object_ids": [
+        "obj-d3ce4fd1711dc9270b9e"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20",
+        "ev-0b46768007964dbd910ff782c9ba9e7c"
+      ],
+      "required_evidence_kinds": [
+        "requirement",
+        "design"
+      ]
+    },
+    {
+      "check_id": "check-4feb349b86a3f7ae",
+      "ref": "R16",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对页：返回与提交入口",
+      "task_id": "TASK3",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "not_applicable",
+      "reason": "R16检查重要图标操作。完整选择页使用带文字的单选项及“核对信息”文字按钮，没有需要解释的重要图标操作。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "完整核对页的返回选择和提交登记均为文字按钮，没有重要图标操作对象；不外推完成页。",
+      "evidence_needed": [],
+      "object_refs": [
+        "dfff680431538fcadaeb3b5d：返回选择、提交登记"
+      ],
+      "object_ids": [
+        "obj-888b4bf5c3438e05ff97",
+        "obj-d3ce4fd1711dc9270b9e"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-0b46768007964dbd910ff782c9ba9e7c"
+      ],
+      "required_evidence_kinds": [
+        "design"
+      ]
+    },
+    {
+      "check_id": "check-e76afbf6edff4fc6",
+      "ref": "R16",
+      "coverage_id": "coverage-b39afc42ea3b3008",
+      "coverage_title": "完成页：后续操作入口的呈现方式",
+      "task_id": "TASK3",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "not_applicable",
+      "reason": "R16检查重要图标操作。完整选择页使用带文字的单选项及“核对信息”文字按钮，没有需要解释的重要图标操作。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2",
+        "src-5f735d74eaf1428987f7af4dc1257cbd"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "needs_context",
+      "reevaluation_requested": false,
+      "plan_reason": "完成页尚无画面，无法确定是否存在重要图标操作；不能用核对页的文字按钮推定完成页也无图标。",
+      "evidence_needed": [
+        "提交执行后的完整完成页及控件信息",
+        "若存在重要图标，补充其任务必要性、用户熟悉度及辅助说明"
+      ],
+      "object_refs": [
+        "TASK3、BR2：待取得的完成页及后续入口"
+      ],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20",
+        "ev-0b46768007964dbd910ff782c9ba9e7c"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "observation"
+      ]
+    },
+    {
+      "check_id": "check-360d6e5501d4950d",
+      "ref": "R17",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对页：最终确认信息与操作区",
+      "task_id": "TASK3",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "insufficient_evidence",
+      "reason": "R17适用于BR1返回后的选择状态。已有返回动作及结果，补足旧计划缺项：下午项checked=true，并显示实心标记、紫色边框和浅紫底；上午项未选中。；计划中的适用条件或必要证据尚未满足，不能据此通过或判违规。",
+      "evidence_ids": [
+        "ev-28ea4802a4da474aab003c94497c5b61",
+        "ev-1b92d13208824e079e766fb72b4db903"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "完整核对页仅展示日期、时段、服务台及返回和提交按钮，没有页面内选择控件；展示值不属于本条选中状态。",
+      "evidence_needed": [],
+      "object_refs": [
+        "核对信息页／信息展示区"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-0b46768007964dbd910ff782c9ba9e7c"
+      ],
+      "required_evidence_kinds": [
+        "design"
+      ]
+    },
+    {
+      "check_id": "check-9b2f8415ad6d8bd2",
+      "ref": "R18",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对页：最终确认信息与操作区",
+      "task_id": "TASK3",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "R18适用于两个name=slot的radio选项，服务台文字为各选项的说明。两项同属“选择时段”，各自边界内配对展示时段和服务台，未见归属歧义。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62",
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "核对区的日期、时段和服务台是纯展示内容，返回和提交是动作按钮，不构成相关输入或成组选项。",
+      "evidence_needed": [],
+      "object_refs": [
+        "核对信息页／信息展示区及操作区"
+      ],
+      "object_ids": [
+        "obj-f729e47050118a39e54b"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-0b46768007964dbd910ff782c9ba9e7c"
+      ],
+      "required_evidence_kinds": [
+        "design"
+      ]
+    },
+    {
+      "check_id": "check-95ebc7bd28d19296",
+      "ref": "R19",
+      "coverage_id": "coverage-96f5731b9b05c6fc",
+      "coverage_title": "核对页：最终确认信息与操作区",
+      "task_id": "TASK3",
+      "kind": "rule",
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "executed",
+      "decision": "no_visible_issue",
+      "reason": "R19适用于TASK1的选项及核对入口。1440×900完整画面中，下午选项位于选择区，“核对信息”紧邻选项下方且无遮挡，文字和按钮层级可辨；不据此推断真人识别表现。",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62",
+        "ev-5ed1c04f55834474af9ef1bcbbec3613"
+      ],
+      "source_ids": [
+        "src-d643f19b03384ce2a036f12ba71161a2",
+        "src-2ac07259052c468b8308c09718c76257"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "applicable",
+      "reevaluation_requested": false,
+      "plan_reason": "最终提交任务及按钮明确；计划检查提交与返回的层级、遮挡及内容关联。入口可见不代表提交成功或用户实测可定位。",
+      "evidence_needed": [],
+      "object_refs": [
+        "核对信息页／提交登记按钮",
+        "核对信息页／返回选择按钮"
+      ],
+      "object_ids": [
+        "obj-d3ce4fd1711dc9270b9e",
+        "obj-888b4bf5c3438e05ff97"
+      ],
+      "constraint_refs": [],
+      "plan_evidence_ids": [
+        "ev-0b46768007964dbd910ff782c9ba9e7c",
+        "ev-5ed1c04f55834474af9ef1bcbbec3613"
+      ],
+      "required_evidence_kinds": [
+        "design",
+        "statement"
+      ]
+    }
+  ],
+  "说明": "仅对照原生调用输入编号与最终检查状态；未据此修改产品或判断内容。"
+}

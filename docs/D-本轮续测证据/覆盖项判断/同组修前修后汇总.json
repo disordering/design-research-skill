@@ -1,0 +1,41 @@
+{
+  "执行者": "Codex（AI，离线程序回归）",
+  "模型调用": 0,
+  "生产文件未改": true,
+  "测试文件": "待合入-test_d_coverage_judgments.py",
+  "测试文件SHA256": "58241ddb76ab281c1975f3c3e50f5fa7233d00e89274c9b947c0a5a9ab07ea3e",
+  "原生产文件SHA256": "6c4f8288403549e1a7b69ddf9a6b58471ed5ae5af17f320178e0076041f61dfb",
+  "修后副本SHA256": "b2452a0232cbdbee341f22b536e7e2acfe49bcbb331ebacea598159b57480b44",
+  "同组对照": [
+    {
+      "版本": "修前原版",
+      "用例数": 10,
+      "失败断言记录数": 11,
+      "错误数": 0,
+      "通过": false,
+      "失败测试": [
+        "test_new_conflict_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_conflict_has_own_judgment)",
+        "test_new_coverage_does_not_inherit_reevaluation_bypass (test_d_coverage_judgments.CoverageRegression.test_new_coverage_does_not_inherit_reevaluation_bypass)",
+        "test_new_goal_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_goal_has_own_judgment)",
+        "test_new_method_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_method_has_own_judgment)",
+        "test_new_rule_has_own_judgment (test_d_coverage_judgments.CoverageRegression.test_new_rule_has_own_judgment)",
+        "test_no_inherited_budget_consumption (test_d_coverage_judgments.CoverageRegression.test_no_inherited_budget_consumption)",
+        "test_repeated_same_plan_does_not_duplicate_coverage (test_d_coverage_judgments.CoverageRegression.test_repeated_same_plan_does_not_duplicate_coverage)",
+        "test_template_nonexecuted_status_does_not_block_new_coverage (test_d_coverage_judgments.CoverageRegression.test_template_nonexecuted_status_does_not_block_new_coverage) (status='failed')",
+        "test_template_nonexecuted_status_does_not_block_new_coverage (test_d_coverage_judgments.CoverageRegression.test_template_nonexecuted_status_does_not_block_new_coverage) (status='not_executed')",
+        "test_template_nonexecuted_status_does_not_block_new_coverage (test_d_coverage_judgments.CoverageRegression.test_template_nonexecuted_status_does_not_block_new_coverage) (status='blocked')",
+        "test_unscoped_base_gets_new_identity_without_judgment (test_d_coverage_judgments.CoverageRegression.test_unscoped_base_gets_new_identity_without_judgment)"
+      ],
+      "日志": "同组回归-修前原版.txt"
+    },
+    {
+      "版本": "修后独立候选副本",
+      "用例数": 10,
+      "失败断言记录数": 0,
+      "错误数": 0,
+      "通过": true,
+      "失败测试": [],
+      "日志": "同组回归-修后独立候选副本.txt"
+    }
+  ]
+}

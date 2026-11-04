@@ -1,0 +1,38 @@
+{
+  "执行者": "Codex（AI程序回归）",
+  "实现": "实际生产SessionService、SessionStore与报告导出",
+  "真实模型调用": 0,
+  "固定响应调用数": 4,
+  "固定响应操作顺序": [
+    "plan_checks",
+    "judge",
+    "plan_checks",
+    "judge"
+  ],
+  "judge实际输入": [
+    [
+      "check-21f6190f5a187412"
+    ],
+    [
+      "check-3cf2969d9e50d012"
+    ]
+  ],
+  "旧覆盖": {
+    "check_id": "check-21f6190f5a187412",
+    "decision": "no_visible_issue",
+    "evidence_ids": [
+      "ev-e33d57e050ac455582c77fb4db82c553"
+    ]
+  },
+  "新覆盖": {
+    "check_id": "check-3cf2969d9e50d012",
+    "decision": "insufficient_evidence",
+    "evidence_ids": [
+      "ev-ea89c14c0dd84c958893392f01cf6526"
+    ]
+  },
+  "导出ZIP文件数": 45,
+  "断言": "全部通过",
+  "生产实现SHA256": "b2452a0232cbdbee341f22b536e7e2acfe49bcbb331ebacea598159b57480b44",
+  "说明": "固定响应验证程序生命周期；不计作真实模型质量或真人体验结果。"
+}

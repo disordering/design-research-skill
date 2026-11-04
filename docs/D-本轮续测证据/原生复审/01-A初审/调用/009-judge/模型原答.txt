@@ -1,0 +1,102 @@
+{
+  "judgments": [
+    {
+      "check_id": "check-57a670fdaacab054",
+      "decision": "insufficient_evidence",
+      "reason": "E03适用于BR02提交反馈与REQ03的对应检查。仅有初始选择页，缺最终确认值、提交动作及完成页，不能判断登记结果是否一致。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644", "ev-e57f71fbe2114b2598a77b2508683b5e"]
+    },
+    {
+      "check_id": "check-8d4c2e98b90ebd4f",
+      "decision": "insufficient_evidence",
+      "reason": "E04适用于BR01，REQ02明确返回时保留选择。尚无下午选中、进入核对页及返回后的可比状态，不能确认保留或丢失。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"]
+    },
+    {
+      "check_id": "check-997bccb95187426c",
+      "decision": "insufficient_evidence",
+      "reason": "E04适用于BR03，REQ04明确刷新和重新开始可复位。缺两条路径的动作及前后状态；初始选择页不能证明复位成功，也不能额外要求复位后的默认选项。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644", "ev-e57f71fbe2114b2598a77b2508683b5e"]
+    },
+    {
+      "check_id": "check-ffda6bd8f3f5c6c3",
+      "decision": "no_visible_issue",
+      "reason": "R17适用于当前单选组。控件记录确认上午已选；截图以实心单选标识、紫色边框及底色区分上午与下午，当前选择可辨。本判断仅限初始状态；action-af5ec213a91341dcbeb69ae6aa9f5f70被定位校验阻止，不证明更换成功或产品故障。",
+      "evidence_ids": ["ev-e57f71fbe2114b2598a77b2508683b5e"]
+    },
+    {
+      "check_id": "check-997011fbd3ab4331",
+      "decision": "insufficient_evidence",
+      "reason": "R17需取得BR01返回后的选中事实及画面。现有材料只有初始状态，无法检查返回后的选择表达；不能沿用初始页判断。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644", "ev-e57f71fbe2114b2598a77b2508683b5e"]
+    },
+    {
+      "check_id": "check-92cc44b89904174a",
+      "decision": "insufficient_evidence",
+      "reason": "R01要求存在页面级导航。当前页面身份明确，但页头“服务登记 / 修书咨询登记”的导航角色未确认；时段单选不能作为页面导航判断。",
+      "evidence_ids": ["ev-e57f71fbe2114b2598a77b2508683b5e"]
+    },
+    {
+      "check_id": "check-9d3c409296d076ed",
+      "decision": "no_visible_issue",
+      "reason": "R02适用于任务卡确认的多步骤登记流程。当前页显示“第1步，共3步”及“选择时段”，可辨当前环节；结论仅限选择页。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644", "ev-e57f71fbe2114b2598a77b2508683b5e"]
+    },
+    {
+      "check_id": "check-4edd4686272efa2b",
+      "decision": "not_applicable",
+      "reason": "R03仅检查已呈现的等待状态。当前完整画面为普通时段选择页，选项与核对按钮均已呈现，没有等待对象；后续操作不在此覆盖单元内。",
+      "evidence_ids": ["ev-e57f71fbe2114b2598a77b2508683b5e"]
+    },
+    {
+      "check_id": "check-e726841c31d96710",
+      "decision": "insufficient_evidence",
+      "reason": "R03在BR02提交出现等待状态时适用。当前没有提交过程观察，无法确认是否存在等待，也不能推断缺少等待说明。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"]
+    },
+    {
+      "check_id": "check-641b4caec3abc8ef",
+      "decision": "insufficient_evidence",
+      "reason": "R04需取得BR02的完成状态及对象。REQ03已明确结果显示要求，但缺提交记录和完成页，无法检查结果表达。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"]
+    },
+    {
+      "check_id": "check-baf700c88aca57ac",
+      "decision": "insufficient_evidence",
+      "reason": "R05要求用户专业程度、任务必要性及术语熟悉度依据。当前关键选择文案可见，但目标用户和熟悉度未知，不能据日常经验认定理解无碍或存在障碍；内部控件名称slot也不能等同于可见术语。",
+      "evidence_ids": ["ev-e57f71fbe2114b2598a77b2508683b5e", "ev-c609eb48befe403ebb2eeebeaf0a9644"]
+    },
+    {
+      "check_id": "check-ba6cb06af4b509ad",
+      "decision": "no_visible_issue",
+      "reason": "R06适用于选择页主操作。按钮“核对信息”结合两组时段与服务台信息，清楚表达进入核对环节的预期，与任务说明一致；不代表已验证跳转。",
+      "evidence_ids": ["ev-e57f71fbe2114b2598a77b2508683b5e", "ev-c609eb48befe403ebb2eeebeaf0a9644"]
+    },
+    {
+      "check_id": "check-879bb34ad711016d",
+      "decision": "insufficient_evidence",
+      "reason": "R06需检查BR01实际返回入口及邻近内容。任务卡提到“返回选择”，但未提供核对页画面，不能用要求文字代替实际入口观察。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"]
+    },
+    {
+      "check_id": "check-7746f2d65632065c",
+      "decision": "insufficient_evidence",
+      "reason": "R06需检查BR02实际提交按钮及上下文。提交目的已知，但入口文案和核对页未取得，无法判断名称是否说明预期结果。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"]
+    },
+    {
+      "check_id": "check-c6eca45992066002",
+      "decision": "insufficient_evidence",
+      "reason": "R06需检查BR03完成页的实际复位入口。材料说明“重新开始”的用途，但缺完成页及邻近说明，不能确认实际命名表现。",
+      "evidence_ids": ["ev-c609eb48befe403ebb2eeebeaf0a9644"]
+    },
+    {
+      "check_id": "check-88b46f71f6f1b0a0",
+      "decision": "insufficient_evidence",
+      "reason": "R07适用于时段选择输入。初始画面同时显示“周五09:00–09:30／一层服务台”和“周五14:00–14:30／二层服务台”，名称与对应关系未见问题。但本项计划还要求更换后的观察，点击被定位校验阻止，缺名称持续可见的证据；REQ01不能整体判为达成。",
+      "evidence_ids": ["ev-e57f71fbe2114b2598a77b2508683b5e", "ev-c609eb48befe403ebb2eeebeaf0a9644"]
+    }
+  ],
+  "findings": [],
+  "questions": []
+}

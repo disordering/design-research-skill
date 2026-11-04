@@ -1,0 +1,3526 @@
+{
+  "review_mode": "design",
+  "schema_version": "session-1.0",
+  "session_id": "session-3a47d17004774f758f624d4075014700",
+  "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+  "status": "completed",
+  "revision": 9,
+  "sequence": 9,
+  "context_version": 1,
+  "created_at": "2026-11-04T00:29:55.595696+00:00",
+  "updated_at": "2026-11-04T00:31:31.269598+00:00",
+  "request": {
+    "purpose": "你负责评审这个登记流程。请核对两个时段的信息，尝试为下午的「二层服务台」完成一次登记。使用页面里的“返回选择”回到上一步再核对一次，最后查看登记结果。你可以重新开始，并自行决定还需检查什么。\n\n这项服务的设计要求\n1. 选择时同时看得见时段和服务台，用户可以更换选择。\n2. 在核对页返回选择时，保留上一次选择的时段和服务台。\n3. 提交后，完成页显示用户最终确认的时段和服务台。\n\n完成后请写下三条要求各自的观察结果。能定位的问题逐条给出画面或操作路径和理由；没有发现问题的部分也请写明，证据不足可以单独记录。把判断和证据保存为本轮记录。\n\n打开方式。双击“打开界面.html”。每轮从选择时段页开始，刷新页面或在完成页按“重新开始”即可复位。页面仅在本机演示，登记只在当前页面中生效。",
+    "actor": "AI模型验收-D",
+    "actor_type": "ai",
+    "design_purpose": "",
+    "target_user": "",
+    "sources": [
+      {
+        "kind": "website",
+        "reference": "http://127.0.0.1:63705/v1/",
+        "title": "修书咨询登记",
+        "content": "",
+        "image_base64": "",
+        "version": "本轮稿件1",
+        "evidence_kind": null,
+        "role": "design",
+        "declared_by": "AI模型验收-D",
+        "document_base64": "",
+        "filename": "",
+        "figma_snapshot_id": ""
+      },
+      {
+        "kind": "document",
+        "reference": "",
+        "title": "修书咨询登记任务要求",
+        "content": "你负责评审这个登记流程。请核对两个时段的信息，尝试为下午的「二层服务台」完成一次登记。使用页面里的“返回选择”回到上一步再核对一次，最后查看登记结果。你可以重新开始，并自行决定还需检查什么。\n\n这项服务的设计要求\n1. 选择时同时看得见时段和服务台，用户可以更换选择。\n2. 在核对页返回选择时，保留上一次选择的时段和服务台。\n3. 提交后，完成页显示用户最终确认的时段和服务台。\n\n完成后请写下三条要求各自的观察结果。能定位的问题逐条给出画面或操作路径和理由；没有发现问题的部分也请写明，证据不足可以单独记录。把判断和证据保存为本轮记录。\n\n打开方式。双击“打开界面.html”。每轮从选择时段页开始，刷新页面或在完成页按“重新开始”即可复位。页面仅在本机演示，登记只在当前页面中生效。",
+        "image_base64": "",
+        "version": "冻结任务卡",
+        "evidence_kind": null,
+        "role": "product_spec",
+        "declared_by": "AI模型验收-D",
+        "document_base64": "",
+        "filename": "",
+        "figma_snapshot_id": ""
+      }
+    ],
+    "limits": {
+      "max_actions": 16,
+      "max_checks": 80,
+      "max_model_calls": 60,
+      "max_review_rounds": 1,
+      "max_seconds": 1800,
+      "max_images_per_call": 10,
+      "max_material_chunks": 24,
+      "max_parallel_screens": 2
+    },
+    "allow_interaction": true,
+    "auto_run": false,
+    "provider": "generic",
+    "model_name": "gpt-6-astra",
+    "verifier_provider": null,
+    "verifier_model_name": null,
+    "require_structured_claims": true
+  },
+  "task_summary": "为下午的二层服务台完成登记，途中从核对页返回选择并再次核对，最后查看登记结果；后续按三条设计要求分别记录观察和证据。本阶段仅整理材料，不执行操作或作优劣判断。",
+  "scope": "",
+  "review_tasks": [
+    {
+      "task_id": "TASK1",
+      "text": "核对两个时段及服务台，选择下午的二层服务台并完成一次登记，最后查看登记结果。",
+      "success_criteria": "完成页显示最终确认的下午时段及二层服务台。",
+      "evidence_ids": [
+        "ev-a38139b243034e81bde2f7f75738d609"
+      ],
+      "source_ids": [
+        "src-f711010f8b654de4aba6056be50ceb87"
+      ],
+      "page_ids": [],
+      "state_ids": [],
+      "branches": [
+        {
+          "branch_id": "BR1",
+          "trigger": "提交后",
+          "expected_outcome": "完成页显示用户最终确认的时段和服务台。",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "explicit"
+        },
+        {
+          "branch_id": "BR-INF-642407c53040",
+          "trigger": "请核对两个时",
+          "expected_outcome": "段的信息，尝试为下午的「二层服务台」完成一次登记",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-c0dce47e6f88",
+          "trigger": "使用页面里的“返回选择”回到上一步再核对一次，最后",
+          "expected_outcome": "查看登记结果",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-30936baac2e9",
+          "trigger": "1. 选择时",
+          "expected_outcome": "同时看得见时段和服务台，用户可以更换选择",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-e3faf55206ed",
+          "trigger": "2. 在核对页返回选择时",
+          "expected_outcome": "保留上一次选择的时段和服务台",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-30c2f9a5efa9",
+          "trigger": "3. 提交后",
+          "expected_outcome": "完成页显示用户最终确认的时段和服务台",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-89f96e62677e",
+          "trigger": "完成后",
+          "expected_outcome": "请写下三条要求各自的观察结果",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-8e92313984c4",
+          "trigger": "每轮从选择时",
+          "expected_outcome": "段页开始，刷新页面或在完成页按“重新开始”即可复位",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-b3f572622e80",
+          "trigger": "页面仅在本机演示，登记只在当前页面中生效",
+          "expected_outcome": "完成该条件分支并按材料反馈",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "task_id": "TASK2",
+      "text": "在核对页使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+      "success_criteria": "返回后保留上一次选择的时段和服务台。",
+      "evidence_ids": [
+        "ev-a38139b243034e81bde2f7f75738d609"
+      ],
+      "source_ids": [
+        "src-f711010f8b654de4aba6056be50ceb87"
+      ],
+      "page_ids": [],
+      "state_ids": [],
+      "branches": [
+        {
+          "branch_id": "BR2",
+          "trigger": "在核对页返回选择时",
+          "expected_outcome": "保留上一次选择的时段和服务台。",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "explicit"
+        },
+        {
+          "branch_id": "BR-INF-cb77b3fe65da",
+          "trigger": "请核对两个时",
+          "expected_outcome": "段的信息，尝试为下午的「二层服务台」完成一次登记",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-ef2c4b1449fb",
+          "trigger": "使用页面里的“返回选择”回到上一步再核对一次，最后",
+          "expected_outcome": "查看登记结果",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-7b8aa43d02c4",
+          "trigger": "1. 选择时",
+          "expected_outcome": "同时看得见时段和服务台，用户可以更换选择",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-47e4ba39775b",
+          "trigger": "2. 在核对页返回选择时",
+          "expected_outcome": "保留上一次选择的时段和服务台",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-2386d89cff82",
+          "trigger": "3. 提交后",
+          "expected_outcome": "完成页显示用户最终确认的时段和服务台",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-74e8ccf67671",
+          "trigger": "完成后",
+          "expected_outcome": "请写下三条要求各自的观察结果",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-60fc75a13560",
+          "trigger": "每轮从选择时",
+          "expected_outcome": "段页开始，刷新页面或在完成页按“重新开始”即可复位",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-f42b288a7739",
+          "trigger": "页面仅在本机演示，登记只在当前页面中生效",
+          "expected_outcome": "完成该条件分支并按材料反馈",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "task_id": "TASK3",
+      "text": "按需刷新页面或在完成页按“重新开始”，重新开始一轮登记。",
+      "success_criteria": "复位至选择时段页。",
+      "evidence_ids": [
+        "ev-a38139b243034e81bde2f7f75738d609"
+      ],
+      "source_ids": [
+        "src-f711010f8b654de4aba6056be50ceb87"
+      ],
+      "page_ids": [],
+      "state_ids": [],
+      "branches": [
+        {
+          "branch_id": "BR3",
+          "trigger": "刷新页面或在完成页按“重新开始”",
+          "expected_outcome": "每轮从选择时段页开始",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "explicit"
+        },
+        {
+          "branch_id": "BR-INF-24fe413cafcd",
+          "trigger": "请核对两个时",
+          "expected_outcome": "段的信息，尝试为下午的「二层服务台」完成一次登记",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-3a8e5868a612",
+          "trigger": "使用页面里的“返回选择”回到上一步再核对一次，最后",
+          "expected_outcome": "查看登记结果",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-f0c13e251f01",
+          "trigger": "1. 选择时",
+          "expected_outcome": "同时看得见时段和服务台，用户可以更换选择",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-fee980e771eb",
+          "trigger": "2. 在核对页返回选择时",
+          "expected_outcome": "保留上一次选择的时段和服务台",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-b457ba653a01",
+          "trigger": "3. 提交后",
+          "expected_outcome": "完成页显示用户最终确认的时段和服务台",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-b2d8fc64d46a",
+          "trigger": "完成后",
+          "expected_outcome": "请写下三条要求各自的观察结果",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-c5f65c6428ee",
+          "trigger": "每轮从选择时",
+          "expected_outcome": "段页开始，刷新页面或在完成页按“重新开始”即可复位",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        },
+        {
+          "branch_id": "BR-INF-eb6ea472ed59",
+          "trigger": "页面仅在本机演示，登记只在当前页面中生效",
+          "expected_outcome": "完成该条件分支并按材料反馈",
+          "evidence_ids": [
+            "ev-a38139b243034e81bde2f7f75738d609"
+          ],
+          "basis": "inferred"
+        }
+      ]
+    }
+  ],
+  "goals": [],
+  "requirements": [
+    {
+      "id": "REQ1",
+      "text": "选择时同时看得见时段和服务台，用户可以更换选择。",
+      "evidence_ids": [
+        "ev-a38139b243034e81bde2f7f75738d609"
+      ],
+      "is_assumption": false,
+      "parent_id": null,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+          "quote": "1. 选择时同时看得见时段和服务台，用户可以更换选择。"
+        }
+      ]
+    },
+    {
+      "id": "REQ2",
+      "text": "在核对页返回选择时，保留上一次选择的时段和服务台。",
+      "evidence_ids": [
+        "ev-a38139b243034e81bde2f7f75738d609"
+      ],
+      "is_assumption": false,
+      "parent_id": null,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+          "quote": "2. 在核对页返回选择时，保留上一次选择的时段和服务台。"
+        }
+      ]
+    },
+    {
+      "id": "REQ3",
+      "text": "提交后，完成页显示用户最终确认的时段和服务台。",
+      "evidence_ids": [
+        "ev-a38139b243034e81bde2f7f75738d609"
+      ],
+      "is_assumption": false,
+      "parent_id": null,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+          "quote": "3. 提交后，完成页显示用户最终确认的时段和服务台。"
+        }
+      ]
+    }
+  ],
+  "assumptions": [],
+  "sources": [
+    {
+      "source_id": "src-024b24438e9246b4bb124911f48e5dcf",
+      "input": {
+        "kind": "website",
+        "reference": "http://127.0.0.1:63705/v1/",
+        "title": "修书咨询登记",
+        "content": "",
+        "image_base64": "",
+        "version": "本轮稿件1",
+        "evidence_kind": null,
+        "role": "design",
+        "declared_by": "AI模型验收-D",
+        "document_base64": "",
+        "filename": "",
+        "figma_snapshot_id": ""
+      },
+      "acquisition_status": "success",
+      "error": "",
+      "captured_at": "2026-11-04T00:29:56.239155+00:00",
+      "observed_version": "本轮稿件1",
+      "active": true
+    },
+    {
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "input": {
+        "kind": "document",
+        "reference": "",
+        "title": "修书咨询登记任务要求",
+        "content": "你负责评审这个登记流程。请核对两个时段的信息，尝试为下午的「二层服务台」完成一次登记。使用页面里的“返回选择”回到上一步再核对一次，最后查看登记结果。你可以重新开始，并自行决定还需检查什么。\n\n这项服务的设计要求\n1. 选择时同时看得见时段和服务台，用户可以更换选择。\n2. 在核对页返回选择时，保留上一次选择的时段和服务台。\n3. 提交后，完成页显示用户最终确认的时段和服务台。\n\n完成后请写下三条要求各自的观察结果。能定位的问题逐条给出画面或操作路径和理由；没有发现问题的部分也请写明，证据不足可以单独记录。把判断和证据保存为本轮记录。\n\n打开方式。双击“打开界面.html”。每轮从选择时段页开始，刷新页面或在完成页按“重新开始”即可复位。页面仅在本机演示，登记只在当前页面中生效。",
+        "image_base64": "",
+        "version": "冻结任务卡",
+        "evidence_kind": null,
+        "role": "product_spec",
+        "declared_by": "AI模型验收-D",
+        "document_base64": "",
+        "filename": "",
+        "figma_snapshot_id": ""
+      },
+      "acquisition_status": "success",
+      "error": "",
+      "captured_at": "2026-11-04T00:29:56.294031+00:00",
+      "observed_version": "冻结任务卡",
+      "active": true
+    },
+    {
+      "source_id": "src-8f4dded709ff4543aa58e0dde193d726",
+      "input": {
+        "kind": "document",
+        "reference": "user://initial_purpose",
+        "title": "initial_purpose",
+        "content": "你负责评审这个登记流程。请核对两个时段的信息，尝试为下午的「二层服务台」完成一次登记。使用页面里的“返回选择”回到上一步再核对一次，最后查看登记结果。你可以重新开始，并自行决定还需检查什么。\n\n这项服务的设计要求\n1. 选择时同时看得见时段和服务台，用户可以更换选择。\n2. 在核对页返回选择时，保留上一次选择的时段和服务台。\n3. 提交后，完成页显示用户最终确认的时段和服务台。\n\n完成后请写下三条要求各自的观察结果。能定位的问题逐条给出画面或操作路径和理由；没有发现问题的部分也请写明，证据不足可以单独记录。把判断和证据保存为本轮记录。\n\n打开方式。双击“打开界面.html”。每轮从选择时段页开始，刷新页面或在完成页按“重新开始”即可复位。页面仅在本机演示，登记只在当前页面中生效。",
+        "image_base64": "",
+        "version": "context-1",
+        "evidence_kind": "statement",
+        "role": "review_instruction",
+        "declared_by": "AI模型验收-D",
+        "document_base64": "",
+        "filename": "",
+        "figma_snapshot_id": ""
+      },
+      "acquisition_status": "success",
+      "error": "",
+      "captured_at": "2026-11-04T00:29:56.336502+00:00",
+      "observed_version": "context-1",
+      "active": true
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "ev-8e7c53fbe57642b99aec3fd7d1a1621b",
+      "source_id": "src-024b24438e9246b4bb124911f48e5dcf",
+      "kind": "design",
+      "source_version": "本轮稿件1",
+      "context_version": 1,
+      "captured_at": "2026-11-04T00:29:56.239155+00:00",
+      "locator": {
+        "url": "http://127.0.0.1:63705/v1/",
+        "title": "禾页书屋 · 修书咨询登记",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "image_geometry": {
+          "width": 1440,
+          "height": 900,
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          }
+        },
+        "prototype_canvas": null,
+        "accessibility": {
+          "role": "document",
+          "name": "禾页书屋 · 修书咨询登记",
+          "source": "dom_control_fallback",
+          "children": [
+            {
+              "role": "input",
+              "name": "周五 09:00–09:30\n一层服务台",
+              "pressed": null,
+              "expanded": null,
+              "checked": true
+            },
+            {
+              "role": "input",
+              "name": "周五 14:00–14:30\n二层服务台",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            },
+            {
+              "role": "button",
+              "name": "核对信息",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            }
+          ]
+        },
+        "environment_session": "session-3a47d17004774f758f624d4075014700",
+        "provided_version": "本轮稿件1",
+        "render_state": "captured",
+        "blocked_requests": [],
+        "controls": [
+          {
+            "selector": "[data-review-control=\"0\"]",
+            "label": "周五 09:00–09:30\n一层服务台",
+            "tag": "input",
+            "type": "radio",
+            "disabled": false,
+            "role": "input",
+            "ariaLabel": "",
+            "domId": "",
+            "name": "slot",
+            "testId": "",
+            "ancestorPath": "label>div>div#content>article>main",
+            "value": "on",
+            "checked": true,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "title": "",
+            "fontSizePx": 13.3333,
+            "fontWeight": "400",
+            "color": "rgb(0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "contrastRatio": 18.55,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "x": 429,
+            "y": 281.375,
+            "width": 18,
+            "height": 18
+          },
+          {
+            "selector": "[data-review-control=\"1\"]",
+            "label": "周五 14:00–14:30\n二层服务台",
+            "tag": "input",
+            "type": "radio",
+            "disabled": false,
+            "role": "input",
+            "ariaLabel": "",
+            "domId": "",
+            "name": "slot",
+            "testId": "",
+            "ancestorPath": "label>div>div#content>article>main",
+            "value": "on",
+            "checked": false,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "title": "",
+            "fontSizePx": 13.3333,
+            "fontWeight": "400",
+            "color": "rgb(0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "contrastRatio": 21,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "x": 429,
+            "y": 364.515625,
+            "width": 18,
+            "height": 18
+          },
+          {
+            "selector": "[data-review-control=\"2\"]",
+            "label": "核对信息",
+            "tag": "button",
+            "type": "button",
+            "disabled": false,
+            "role": "button",
+            "ariaLabel": "",
+            "domId": "",
+            "name": "",
+            "testId": "",
+            "ancestorPath": "div#actions>article>main>body>html",
+            "value": "",
+            "checked": false,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "title": "",
+            "fontSizePx": 16,
+            "fontWeight": "400",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgb(89, 69, 118)",
+            "contrastRatio": 8.28,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "x": 409,
+            "y": 430.59375,
+            "width": 102,
+            "height": 44.390625
+          }
+        ],
+        "partial": false
+      },
+      "content": "禾页书屋\n服务登记 / 修书咨询登记\n第 1 步，共 3 步\n选择时段\n\n为手头的书选择合适的咨询时段。\n\n周五 09:00–09:30\n一层服务台\n周五 14:00–14:30\n二层服务台\n核对信息\n禾页书屋　|　修书咨询登记",
+      "artifact_id": "artifact-11e76c4eab9f4b2db4c8f005d19f0707",
+      "raw_artifact_id": null,
+      "original_artifact_id": null,
+      "analysis_artifact_id": "artifact-78006cbcbbda467c88e08fc9ff369eeb",
+      "overlay_artifact_ids": {
+        "overlay-elements.png": "artifact-ac611e15ca7941d8814bdde6ceeb5a04",
+        "overlay-focus.png": "artifact-a26daa2c60ce4190aa0abbc19d837d3e",
+        "overlay-flow.png": "artifact-0231d97da282465691dcde81951fb94f"
+      },
+      "analysis": {
+        "metric_version": "cv-metrics-v1",
+        "geometry_available": true,
+        "geometry_note": "",
+        "element_count": 3,
+        "connector_element_count": 0,
+        "ocr_block_count": 0,
+        "visible_text_node_count": 0,
+        "screen_crop": false,
+        "crop_kind": "source_capture",
+        "model_image_eligible": true,
+        "arrow_count": 0,
+        "arrow_annotations": [],
+        "arrow_interpretation_note": "箭头几何只确定画布位置、轴向和邻接画板；具体语义必须结合画面与说明核对，不能仅凭节点名断言跳转或因果关系。",
+        "source_modalities": [
+          "figma_screen_image",
+          "screenshot_pixels",
+          "browser_accessibility_tree"
+        ],
+        "accessibility_node_count": 4,
+        "measurement_scale_limited": false,
+        "measurement_scale_note": "",
+        "focus_top": [
+          {
+            "rank": 1,
+            "element_id": "E01",
+            "label": "周五 09:00–09:30\n一层服务台",
+            "role": "button",
+            "bbox": [
+              0.29791666666666666,
+              0.3126388888888889,
+              0.0125,
+              0.02
+            ],
+            "focus_share": 0.3501
+          },
+          {
+            "rank": 2,
+            "element_id": "E03",
+            "label": "核对信息",
+            "role": "button",
+            "bbox": [
+              0.28402777777777777,
+              0.4784375,
+              0.07083333333333333,
+              0.04932291666666667
+            ],
+            "focus_share": 0.3377
+          },
+          {
+            "rank": 3,
+            "element_id": "E02",
+            "label": "周五 14:00–14:30\n二层服务台",
+            "role": "button",
+            "bbox": [
+              0.29791666666666666,
+              0.4050173611111111,
+              0.0125,
+              0.02
+            ],
+            "focus_share": 0.3122
+          }
+        ],
+        "readability": {
+          "text_block_count": 0,
+          "low_contrast_count": 0,
+          "small_text_candidate_count": 0,
+          "estimated_height_p10": 0.0,
+          "local_contrast_p10": 0.0
+        },
+        "global": {
+          "mean_luminance": 0.9665,
+          "luminance_p05": 0.949,
+          "luminance_p50": 0.9686,
+          "luminance_p95": 1.0,
+          "luminance_contrast": 0.0633,
+          "bright_pixel_fraction": 0.9767,
+          "dark_pixel_fraction": 0.0001,
+          "mean_saturation": 0.0138,
+          "high_saturation_fraction": 0.0001,
+          "edge_density": 0.0391,
+          "high_frequency_mean": 0.0064,
+          "palette_entropy_bits": 1.4199,
+          "negative_space_proxy": 0.9609
+        },
+        "density": {
+          "element_count": 3,
+          "interactive_element_count": 3,
+          "ocr_text_block_count": 0,
+          "elements_per_megapixel": 2.31,
+          "interactive_coverage": 0.004,
+          "text_coverage": 0.0,
+          "crowding_note": "Coverage metrics are proxies; overlapping elements can double-count area."
+        },
+        "style": {
+          "control_count": 3,
+          "control_saturation_dispersion": 0.1409,
+          "control_contrast_dispersion": 0.1561,
+          "control_mean_saturation": 0.1648,
+          "control_mean_contrast": 0.3516,
+          "note": "Dispersion measures same-role visual consistency only when roles are correctly labeled."
+        },
+        "analysis_source": "capture",
+        "analysis_artifact_id": "artifact-78006cbcbbda467c88e08fc9ff369eeb",
+        "overlay_artifact_ids": {
+          "overlay-elements.png": "artifact-ac611e15ca7941d8814bdde6ceeb5a04",
+          "overlay-focus.png": "artifact-a26daa2c60ce4190aa0abbc19d837d3e",
+          "overlay-flow.png": "artifact-0231d97da282465691dcde81951fb94f"
+        }
+      },
+      "action_id": null,
+      "state_id": "70b6cc50718a22b427aaccc5",
+      "objects": [
+        {
+          "object_id": "obj-7cf8f4f163c1b37244f7",
+          "identity_key": "http://127.0.0.1:63705/v1/",
+          "kind": "page",
+          "source_id": "src-024b24438e9246b4bb124911f48e5dcf",
+          "state_id": "70b6cc50718a22b427aaccc5",
+          "label": "禾页书屋 · 修书咨询登记",
+          "role": "website",
+          "bbox": {},
+          "locator": {
+            "url": "http://127.0.0.1:63705/v1/",
+            "title": "禾页书屋 · 修书咨询登记"
+          },
+          "interactable": false,
+          "attributes": {}
+        },
+        {
+          "object_id": "obj-4aa8e38f849870af075d",
+          "identity_key": "name:input:slot:radio",
+          "kind": "control",
+          "source_id": "src-024b24438e9246b4bb124911f48e5dcf",
+          "state_id": "70b6cc50718a22b427aaccc5",
+          "label": "周五 09:00–09:30 一层服务台",
+          "role": "input",
+          "bbox": {},
+          "locator": {
+            "selector": "[data-review-control=\"0\"]",
+            "label": "周五 09:00–09:30\n一层服务台",
+            "name": "slot",
+            "tag": "input",
+            "type": "radio",
+            "domId": "",
+            "testId": "",
+            "ancestorPath": "label>div>div#content>article>main",
+            "x": 429,
+            "y": 281.375,
+            "width": 18,
+            "height": 18
+          },
+          "interactable": true,
+          "attributes": {
+            "checked": true,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "ariaLabel": "",
+            "title": "",
+            "domId": "",
+            "name": "slot",
+            "testId": "",
+            "ancestorPath": "label>div>div#content>article>main",
+            "fontSizePx": 13.3333,
+            "fontWeight": "400",
+            "color": "rgb(0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "contrastRatio": 18.55,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "role": "input",
+            "value": "on"
+          }
+        },
+        {
+          "object_id": "obj-7a7770fc552788d87e55",
+          "identity_key": "control:button|核对信息|div#actions>article>main>body>html|0",
+          "kind": "control",
+          "source_id": "src-024b24438e9246b4bb124911f48e5dcf",
+          "state_id": "70b6cc50718a22b427aaccc5",
+          "label": "核对信息",
+          "role": "button",
+          "bbox": {},
+          "locator": {
+            "selector": "[data-review-control=\"2\"]",
+            "label": "核对信息",
+            "name": "",
+            "tag": "button",
+            "type": "button",
+            "domId": "",
+            "testId": "",
+            "ancestorPath": "div#actions>article>main>body>html",
+            "x": 409,
+            "y": 430.59375,
+            "width": 102,
+            "height": 44.390625
+          },
+          "interactable": true,
+          "attributes": {
+            "checked": false,
+            "ariaSelected": null,
+            "ariaPressed": null,
+            "ariaExpanded": null,
+            "ariaLabel": "",
+            "title": "",
+            "domId": "",
+            "name": "",
+            "testId": "",
+            "ancestorPath": "div#actions>article>main>body>html",
+            "fontSizePx": 16,
+            "fontWeight": "400",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgb(89, 69, 118)",
+            "contrastRatio": 8.28,
+            "opacity": 1,
+            "textDecoration": "none",
+            "visibility": "visible",
+            "role": "button",
+            "value": ""
+          }
+        }
+      ],
+      "stale": false
+    },
+    {
+      "evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "kind": "requirement",
+      "source_version": "冻结任务卡",
+      "context_version": 1,
+      "captured_at": "2026-11-04T00:29:56.294031+00:00",
+      "locator": {
+        "reference": "",
+        "resolved_reference": "",
+        "title": "修书咨询登记任务要求",
+        "chunk_index": 0,
+        "chunk_count": 1,
+        "start_character": 0,
+        "end_character": 344,
+        "start_line": 1,
+        "end_line": 10,
+        "text_truncated": false,
+        "original_sha256": "4467349ebcc1b02b1b0555bcc6f9c49de23237308ae6386978aa1d2789082e2d",
+        "controls": [],
+        "partial": false
+      },
+      "content": "你负责评审这个登记流程。请核对两个时段的信息，尝试为下午的「二层服务台」完成一次登记。使用页面里的“返回选择”回到上一步再核对一次，最后查看登记结果。你可以重新开始，并自行决定还需检查什么。\n\n这项服务的设计要求\n1. 选择时同时看得见时段和服务台，用户可以更换选择。\n2. 在核对页返回选择时，保留上一次选择的时段和服务台。\n3. 提交后，完成页显示用户最终确认的时段和服务台。\n\n完成后请写下三条要求各自的观察结果。能定位的问题逐条给出画面或操作路径和理由；没有发现问题的部分也请写明，证据不足可以单独记录。把判断和证据保存为本轮记录。\n\n打开方式。双击“打开界面.html”。每轮从选择时段页开始，刷新页面或在完成页按“重新开始”即可复位。页面仅在本机演示，登记只在当前页面中生效。",
+      "artifact_id": null,
+      "raw_artifact_id": "artifact-0d9955132a2e4c8a9e133d8bcf40260c",
+      "original_artifact_id": "artifact-8d0f0a5b44ce485a86e145001b255dc8",
+      "analysis_artifact_id": null,
+      "overlay_artifact_ids": {},
+      "analysis": {},
+      "action_id": null,
+      "state_id": "707a945745cd30a22f05e59e",
+      "objects": [
+        {
+          "object_id": "obj-2f121853894a1af80000",
+          "identity_key": "src-f711010f8b654de4aba6056be50ceb87",
+          "kind": "page",
+          "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+          "state_id": "707a945745cd30a22f05e59e",
+          "label": "修书咨询登记任务要求",
+          "role": "document",
+          "bbox": {},
+          "locator": {
+            "title": "修书咨询登记任务要求",
+            "reference": "",
+            "chunk_index": 0
+          },
+          "interactable": false,
+          "attributes": {}
+        },
+        {
+          "object_id": "obj-2df3947772ba2f66a724",
+          "identity_key": "chunk-0",
+          "kind": "document_section",
+          "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+          "state_id": "707a945745cd30a22f05e59e",
+          "label": "修书咨询登记任务要求",
+          "role": "document",
+          "bbox": {},
+          "locator": {
+            "reference": "",
+            "resolved_reference": "",
+            "chunk_index": 0,
+            "chunk_count": 1,
+            "start_line": 1,
+            "end_line": 10
+          },
+          "interactable": false,
+          "attributes": {
+            "excerpt": "你负责评审这个登记流程。请核对两个时段的信息，尝试为下午的「二层服务台」完成一次登记。使用页面里的“返回选择”回到上一步再核对一次，最后查看登记结果。你可以重新开始，并自行决定还需检查什么。 这项服务的设计要求 1. 选择时同时看得见时段和服务台，用户可以更换选择。 2. 在核对页返回选择时，保留上一次选择的时段和服务台。 3. 提交后，完成页显示用户最终确认的时段和服务台。 完成后请写下三条要求各自的观察结果。能定位的问题逐条给出画面或操作路径和理由；没有发现问题的部分也请写明，证据不足可以单独记录。把判断和证据保存为本轮记录。 打开方式。双击“打开界面.html”。每轮从选择时段页开始，刷新页面或在完成页按“重新开始”即可复位。页面仅在本机演示，登记只在当前页面中生效。"
+          }
+        }
+      ],
+      "stale": false
+    },
+    {
+      "evidence_id": "ev-d4c4b5931ae94fc5ba9565757ee0a42c",
+      "source_id": "src-8f4dded709ff4543aa58e0dde193d726",
+      "kind": "statement",
+      "source_version": "context-1",
+      "context_version": 1,
+      "captured_at": "2026-11-04T00:29:56.336502+00:00",
+      "locator": {
+        "reference": "user://initial_purpose",
+        "resolved_reference": "user://initial_purpose",
+        "title": "initial_purpose",
+        "chunk_index": 0,
+        "chunk_count": 1,
+        "start_character": 0,
+        "end_character": 344,
+        "start_line": 1,
+        "end_line": 10,
+        "text_truncated": false,
+        "original_sha256": "4467349ebcc1b02b1b0555bcc6f9c49de23237308ae6386978aa1d2789082e2d",
+        "controls": [],
+        "partial": false
+      },
+      "content": "你负责评审这个登记流程。请核对两个时段的信息，尝试为下午的「二层服务台」完成一次登记。使用页面里的“返回选择”回到上一步再核对一次，最后查看登记结果。你可以重新开始，并自行决定还需检查什么。\n\n这项服务的设计要求\n1. 选择时同时看得见时段和服务台，用户可以更换选择。\n2. 在核对页返回选择时，保留上一次选择的时段和服务台。\n3. 提交后，完成页显示用户最终确认的时段和服务台。\n\n完成后请写下三条要求各自的观察结果。能定位的问题逐条给出画面或操作路径和理由；没有发现问题的部分也请写明，证据不足可以单独记录。把判断和证据保存为本轮记录。\n\n打开方式。双击“打开界面.html”。每轮从选择时段页开始，刷新页面或在完成页按“重新开始”即可复位。页面仅在本机演示，登记只在当前页面中生效。",
+      "artifact_id": null,
+      "raw_artifact_id": "artifact-b5f70b4781794412ab1504f6b4cdce00",
+      "original_artifact_id": "artifact-9ef35e27d85d45e3b94e0695641c8a79",
+      "analysis_artifact_id": null,
+      "overlay_artifact_ids": {},
+      "analysis": {},
+      "action_id": null,
+      "state_id": "707a945745cd30a22f05e59e",
+      "objects": [
+        {
+          "object_id": "obj-188a934630b8fa29ec09",
+          "identity_key": "user://initial_purpose",
+          "kind": "page",
+          "source_id": "src-8f4dded709ff4543aa58e0dde193d726",
+          "state_id": "707a945745cd30a22f05e59e",
+          "label": "initial_purpose",
+          "role": "document",
+          "bbox": {},
+          "locator": {
+            "title": "initial_purpose",
+            "reference": "user://initial_purpose",
+            "chunk_index": 0
+          },
+          "interactable": false,
+          "attributes": {}
+        },
+        {
+          "object_id": "obj-1d007ecd7e7a3cdd9284",
+          "identity_key": "chunk-0",
+          "kind": "document_section",
+          "source_id": "src-8f4dded709ff4543aa58e0dde193d726",
+          "state_id": "707a945745cd30a22f05e59e",
+          "label": "initial_purpose",
+          "role": "document",
+          "bbox": {},
+          "locator": {
+            "reference": "user://initial_purpose",
+            "resolved_reference": "user://initial_purpose",
+            "chunk_index": 0,
+            "chunk_count": 1,
+            "start_line": 1,
+            "end_line": 10
+          },
+          "interactable": false,
+          "attributes": {
+            "excerpt": "你负责评审这个登记流程。请核对两个时段的信息，尝试为下午的「二层服务台」完成一次登记。使用页面里的“返回选择”回到上一步再核对一次，最后查看登记结果。你可以重新开始，并自行决定还需检查什么。 这项服务的设计要求 1. 选择时同时看得见时段和服务台，用户可以更换选择。 2. 在核对页返回选择时，保留上一次选择的时段和服务台。 3. 提交后，完成页显示用户最终确认的时段和服务台。 完成后请写下三条要求各自的观察结果。能定位的问题逐条给出画面或操作路径和理由；没有发现问题的部分也请写明，证据不足可以单独记录。把判断和证据保存为本轮记录。 打开方式。双击“打开界面.html”。每轮从选择时段页开始，刷新页面或在完成页按“重新开始”即可复位。页面仅在本机演示，登记只在当前页面中生效。"
+          }
+        }
+      ],
+      "stale": false
+    }
+  ],
+  "page_states": [
+    {
+      "page_id": "page-27c04c1d2bdcea6b",
+      "state_id": "70b6cc50718a22b427aaccc5",
+      "source_id": "src-024b24438e9246b4bb124911f48e5dcf",
+      "context_version": 1,
+      "locator": {
+        "url": "http://127.0.0.1:63705/v1/",
+        "title": "禾页书屋 · 修书咨询登记",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "image_geometry": {
+          "width": 1440,
+          "height": 900,
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          }
+        },
+        "prototype_canvas": null,
+        "accessibility": {
+          "role": "document",
+          "name": "禾页书屋 · 修书咨询登记",
+          "source": "dom_control_fallback",
+          "children": [
+            {
+              "role": "input",
+              "name": "周五 09:00–09:30\n一层服务台",
+              "pressed": null,
+              "expanded": null,
+              "checked": true
+            },
+            {
+              "role": "input",
+              "name": "周五 14:00–14:30\n二层服务台",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            },
+            {
+              "role": "button",
+              "name": "核对信息",
+              "pressed": null,
+              "expanded": null,
+              "checked": false
+            }
+          ]
+        },
+        "environment_session": "session-3a47d17004774f758f624d4075014700",
+        "provided_version": "本轮稿件1",
+        "render_state": "captured",
+        "blocked_requests": []
+      },
+      "evidence_ids": [
+        "ev-8e7c53fbe57642b99aec3fd7d1a1621b"
+      ],
+      "mode": "design"
+    }
+  ],
+  "transitions": [],
+  "flow_graph": {
+    "schema_version": "session-flow-1.0",
+    "context_version": 1,
+    "nodes": [
+      {
+        "state_id": "70b6cc50718a22b427aaccc5",
+        "page_id": "page-27c04c1d2bdcea6b",
+        "source_id": "src-024b24438e9246b4bb124911f48e5dcf",
+        "context_version": 1,
+        "mode": "design",
+        "locator": {
+          "url": "http://127.0.0.1:63705/v1/",
+          "title": "禾页书屋 · 修书咨询登记",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "image_geometry": {
+            "width": 1440,
+            "height": 900,
+            "region": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "prototype_canvas": null,
+          "accessibility": {
+            "role": "document",
+            "name": "禾页书屋 · 修书咨询登记",
+            "source": "dom_control_fallback",
+            "children": [
+              {
+                "role": "input",
+                "name": "周五 09:00–09:30\n一层服务台",
+                "pressed": null,
+                "expanded": null,
+                "checked": true
+              },
+              {
+                "role": "input",
+                "name": "周五 14:00–14:30\n二层服务台",
+                "pressed": null,
+                "expanded": null,
+                "checked": false
+              },
+              {
+                "role": "button",
+                "name": "核对信息",
+                "pressed": null,
+                "expanded": null,
+                "checked": false
+              }
+            ]
+          },
+          "environment_session": "session-3a47d17004774f758f624d4075014700",
+          "provided_version": "本轮稿件1",
+          "render_state": "captured",
+          "blocked_requests": []
+        },
+        "evidence_ids": [
+          "ev-8e7c53fbe57642b99aec3fd7d1a1621b"
+        ],
+        "check_ids": [],
+        "covered": false,
+        "reviewed": false,
+        "incoming": 0,
+        "outgoing": 0
+      }
+    ],
+    "edges": [],
+    "uncovered_task_states": [],
+    "summary": {
+      "state_count": 1,
+      "transition_count": 0,
+      "covered_state_count": 0,
+      "uncovered_task_state_count": 0
+    }
+  },
+  "required_coverage": [
+    {
+      "coverage_id": "coverage-ab1b067aed64b930",
+      "task_id": "TASK1",
+      "task_text": "核对两个时段及服务台，选择下午的二层服务台并完成一次登记，最后查看登记结果。",
+      "branch_id": "BR1",
+      "trigger": "提交后",
+      "expected_outcome": "完成页显示用户最终确认的时段和服务台。",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-7c11b3dadfdced94",
+      "task_id": "TASK1",
+      "task_text": "核对两个时段及服务台，选择下午的二层服务台并完成一次登记，最后查看登记结果。",
+      "branch_id": "BR-INF-642407c53040",
+      "trigger": "请核对两个时",
+      "expected_outcome": "段的信息，尝试为下午的「二层服务台」完成一次登记",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-3a52ce192ad36376",
+      "task_id": "TASK1",
+      "task_text": "核对两个时段及服务台，选择下午的二层服务台并完成一次登记，最后查看登记结果。",
+      "branch_id": "BR-INF-c0dce47e6f88",
+      "trigger": "使用页面里的“返回选择”回到上一步再核对一次，最后",
+      "expected_outcome": "查看登记结果",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-4991a6842f916530",
+      "task_id": "TASK1",
+      "task_text": "核对两个时段及服务台，选择下午的二层服务台并完成一次登记，最后查看登记结果。",
+      "branch_id": "BR-INF-30936baac2e9",
+      "trigger": "1. 选择时",
+      "expected_outcome": "同时看得见时段和服务台，用户可以更换选择",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-bd3a1e190e6a3f4d",
+      "task_id": "TASK1",
+      "task_text": "核对两个时段及服务台，选择下午的二层服务台并完成一次登记，最后查看登记结果。",
+      "branch_id": "BR-INF-e3faf55206ed",
+      "trigger": "2. 在核对页返回选择时",
+      "expected_outcome": "保留上一次选择的时段和服务台",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-264502c2eb871d9d",
+      "task_id": "TASK1",
+      "task_text": "核对两个时段及服务台，选择下午的二层服务台并完成一次登记，最后查看登记结果。",
+      "branch_id": "BR-INF-30c2f9a5efa9",
+      "trigger": "3. 提交后",
+      "expected_outcome": "完成页显示用户最终确认的时段和服务台",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-7e9094b0bad3a35f",
+      "task_id": "TASK1",
+      "task_text": "核对两个时段及服务台，选择下午的二层服务台并完成一次登记，最后查看登记结果。",
+      "branch_id": "BR-INF-89f96e62677e",
+      "trigger": "完成后",
+      "expected_outcome": "请写下三条要求各自的观察结果",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-f7ec3bc3a68942b7",
+      "task_id": "TASK1",
+      "task_text": "核对两个时段及服务台，选择下午的二层服务台并完成一次登记，最后查看登记结果。",
+      "branch_id": "BR-INF-8e92313984c4",
+      "trigger": "每轮从选择时",
+      "expected_outcome": "段页开始，刷新页面或在完成页按“重新开始”即可复位",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-8a8b44aee0151b05",
+      "task_id": "TASK1",
+      "task_text": "核对两个时段及服务台，选择下午的二层服务台并完成一次登记，最后查看登记结果。",
+      "branch_id": "BR-INF-b3f572622e80",
+      "trigger": "页面仅在本机演示，登记只在当前页面中生效",
+      "expected_outcome": "完成该条件分支并按材料反馈",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-237f678a4a1bd310",
+      "task_id": "TASK1",
+      "task_text": "核对两个时段及服务台，选择下午的二层服务台并完成一次登记，最后查看登记结果。",
+      "page_id": "",
+      "state_id": "",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "task",
+      "gap_class": "task_not_planned"
+    },
+    {
+      "coverage_id": "coverage-20dee442203ac06f",
+      "task_id": "TASK2",
+      "task_text": "在核对页使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+      "branch_id": "BR2",
+      "trigger": "在核对页返回选择时",
+      "expected_outcome": "保留上一次选择的时段和服务台。",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-f42dcd61b62bb6cd",
+      "task_id": "TASK2",
+      "task_text": "在核对页使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+      "branch_id": "BR-INF-cb77b3fe65da",
+      "trigger": "请核对两个时",
+      "expected_outcome": "段的信息，尝试为下午的「二层服务台」完成一次登记",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-c1a2c0b96e137d1a",
+      "task_id": "TASK2",
+      "task_text": "在核对页使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+      "branch_id": "BR-INF-ef2c4b1449fb",
+      "trigger": "使用页面里的“返回选择”回到上一步再核对一次，最后",
+      "expected_outcome": "查看登记结果",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-d75a6265c371cbee",
+      "task_id": "TASK2",
+      "task_text": "在核对页使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+      "branch_id": "BR-INF-7b8aa43d02c4",
+      "trigger": "1. 选择时",
+      "expected_outcome": "同时看得见时段和服务台，用户可以更换选择",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-6b762300372bf4e2",
+      "task_id": "TASK2",
+      "task_text": "在核对页使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+      "branch_id": "BR-INF-47e4ba39775b",
+      "trigger": "2. 在核对页返回选择时",
+      "expected_outcome": "保留上一次选择的时段和服务台",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-313111fc7b0d7d7e",
+      "task_id": "TASK2",
+      "task_text": "在核对页使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+      "branch_id": "BR-INF-2386d89cff82",
+      "trigger": "3. 提交后",
+      "expected_outcome": "完成页显示用户最终确认的时段和服务台",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-4fa579d4301adb9c",
+      "task_id": "TASK2",
+      "task_text": "在核对页使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+      "branch_id": "BR-INF-74e8ccf67671",
+      "trigger": "完成后",
+      "expected_outcome": "请写下三条要求各自的观察结果",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-181d227822a48464",
+      "task_id": "TASK2",
+      "task_text": "在核对页使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+      "branch_id": "BR-INF-60fc75a13560",
+      "trigger": "每轮从选择时",
+      "expected_outcome": "段页开始，刷新页面或在完成页按“重新开始”即可复位",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-d71f382369033fe1",
+      "task_id": "TASK2",
+      "task_text": "在核对页使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+      "branch_id": "BR-INF-f42b288a7739",
+      "trigger": "页面仅在本机演示，登记只在当前页面中生效",
+      "expected_outcome": "完成该条件分支并按材料反馈",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-52121601bdbea9d2",
+      "task_id": "TASK2",
+      "task_text": "在核对页使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+      "page_id": "",
+      "state_id": "",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "task",
+      "gap_class": "task_not_planned"
+    },
+    {
+      "coverage_id": "coverage-7686ff9c10b2feb6",
+      "task_id": "TASK3",
+      "task_text": "按需刷新页面或在完成页按“重新开始”，重新开始一轮登记。",
+      "branch_id": "BR3",
+      "trigger": "刷新页面或在完成页按“重新开始”",
+      "expected_outcome": "每轮从选择时段页开始",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-06151bd5ac25ff22",
+      "task_id": "TASK3",
+      "task_text": "按需刷新页面或在完成页按“重新开始”，重新开始一轮登记。",
+      "branch_id": "BR-INF-24fe413cafcd",
+      "trigger": "请核对两个时",
+      "expected_outcome": "段的信息，尝试为下午的「二层服务台」完成一次登记",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-cd9cb876d18ffe52",
+      "task_id": "TASK3",
+      "task_text": "按需刷新页面或在完成页按“重新开始”，重新开始一轮登记。",
+      "branch_id": "BR-INF-3a8e5868a612",
+      "trigger": "使用页面里的“返回选择”回到上一步再核对一次，最后",
+      "expected_outcome": "查看登记结果",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-5b1601372b8381c5",
+      "task_id": "TASK3",
+      "task_text": "按需刷新页面或在完成页按“重新开始”，重新开始一轮登记。",
+      "branch_id": "BR-INF-f0c13e251f01",
+      "trigger": "1. 选择时",
+      "expected_outcome": "同时看得见时段和服务台，用户可以更换选择",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-9629444fc0e092c1",
+      "task_id": "TASK3",
+      "task_text": "按需刷新页面或在完成页按“重新开始”，重新开始一轮登记。",
+      "branch_id": "BR-INF-fee980e771eb",
+      "trigger": "2. 在核对页返回选择时",
+      "expected_outcome": "保留上一次选择的时段和服务台",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-603f28468a693511",
+      "task_id": "TASK3",
+      "task_text": "按需刷新页面或在完成页按“重新开始”，重新开始一轮登记。",
+      "branch_id": "BR-INF-b457ba653a01",
+      "trigger": "3. 提交后",
+      "expected_outcome": "完成页显示用户最终确认的时段和服务台",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-5f10b54b2edd846e",
+      "task_id": "TASK3",
+      "task_text": "按需刷新页面或在完成页按“重新开始”，重新开始一轮登记。",
+      "branch_id": "BR-INF-b2d8fc64d46a",
+      "trigger": "完成后",
+      "expected_outcome": "请写下三条要求各自的观察结果",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-8af4621aa5eac80e",
+      "task_id": "TASK3",
+      "task_text": "按需刷新页面或在完成页按“重新开始”，重新开始一轮登记。",
+      "branch_id": "BR-INF-c5f65c6428ee",
+      "trigger": "每轮从选择时",
+      "expected_outcome": "段页开始，刷新页面或在完成页按“重新开始”即可复位",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-b5def474121a4fee",
+      "task_id": "TASK3",
+      "task_text": "按需刷新页面或在完成页按“重新开始”，重新开始一轮登记。",
+      "branch_id": "BR-INF-eb6ea472ed59",
+      "trigger": "页面仅在本机演示，登记只在当前页面中生效",
+      "expected_outcome": "完成该条件分支并按材料反馈",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "branch",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "coverage_id": "coverage-ed0ef278a47a40dd",
+      "task_id": "TASK3",
+      "task_text": "按需刷新页面或在完成页按“重新开始”，重新开始一轮登记。",
+      "page_id": "",
+      "state_id": "",
+      "source_id": "src-f711010f8b654de4aba6056be50ceb87",
+      "covered": false,
+      "coverage_kind": "task",
+      "gap_class": "task_not_planned"
+    }
+  ],
+  "questions": [],
+  "actions": [],
+  "checks": [
+    {
+      "check_id": "check-232267d2c7b6cbe6",
+      "ref": "REQ1",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "goal",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-4ff3c204e27ff1a1",
+      "ref": "REQ2",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "goal",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-83885cbb9b73038e",
+      "ref": "REQ3",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "goal",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-99e3940e063f5ff2",
+      "ref": "E07",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "goal",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-d6f62ec0a4c3dd6e",
+      "ref": "E08",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "conflict",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-e0a64b0b6d837fa4",
+      "ref": "R01",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-c719df3d28484a1a",
+      "ref": "R02",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-721ba03d5fe40ec7",
+      "ref": "R03",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-9d1987f13d2f450d",
+      "ref": "R04",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-1444962ff685397f",
+      "ref": "R05",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-e7a271ee676b0303",
+      "ref": "R06",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-3ce42add5ce7a870",
+      "ref": "R07",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-bda7ec4bbac58dc5",
+      "ref": "R08",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-022ba278a0b38716",
+      "ref": "R09",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-38fea159d1d76d6f",
+      "ref": "R10",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-46165daa97b98f17",
+      "ref": "R11",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-f0a6cd0884bfee98",
+      "ref": "R12",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-7a2eca4de16fc0df",
+      "ref": "R13",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-f01df5b35044865c",
+      "ref": "R14",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-71ef1a102315afd0",
+      "ref": "R15",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-32c71e5b9e5d9535",
+      "ref": "R16",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-b8c94a38f7c8b47e",
+      "ref": "R17",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-4bcfa70baaca9ae4",
+      "ref": "R18",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-9d8856d8c6227455",
+      "ref": "R19",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-0e9b91ae8134692d",
+      "ref": "R20",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-0670f8ea51020513",
+      "ref": "R21",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-cff9109491762457",
+      "ref": "R22",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-c88159d3136f3ab2",
+      "ref": "R23",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-5befc57a956b7ca3",
+      "ref": "R24",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "rule",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-e7e7dd241b31082d",
+      "ref": "E01",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-d134709e21f92151",
+      "ref": "E02",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-1454eab04012fd46",
+      "ref": "E03",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-bf3d2191e215de96",
+      "ref": "E04",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-26e2b663c8399b7c",
+      "ref": "E05",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    },
+    {
+      "check_id": "check-51afa6f61e345ec3",
+      "ref": "E06",
+      "coverage_id": "",
+      "coverage_title": "",
+      "task_id": "",
+      "kind": "method",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "context_version": 1,
+      "criteria_version": "0.2-method-draft",
+      "execution_status": "not_executed",
+      "decision": null,
+      "reason": "用户结束/终止，未完成检查。",
+      "evidence_ids": [],
+      "source_ids": [
+        "src-024b24438e9246b4bb124911f48e5dcf",
+        "src-f711010f8b654de4aba6056be50ceb87",
+        "src-8f4dded709ff4543aa58e0dde193d726"
+      ],
+      "depends_on": [],
+      "scope_status": "included",
+      "stale": false,
+      "applicability": "not_assessed",
+      "reevaluation_requested": false,
+      "plan_reason": "",
+      "evidence_needed": [],
+      "object_refs": [],
+      "object_ids": [],
+      "constraint_refs": [],
+      "plan_evidence_ids": [],
+      "required_evidence_kinds": []
+    }
+  ],
+  "findings": [],
+  "screen_reviews": [],
+  "rechecks": [],
+  "messages": [
+    {
+      "at": "2026-11-04T00:29:55.595696+00:00",
+      "actor_type": "ai",
+      "actor": "AI模型验收-D",
+      "type": "purpose",
+      "content": "你负责评审这个登记流程。请核对两个时段的信息，尝试为下午的「二层服务台」完成一次登记。使用页面里的“返回选择”回到上一步再核对一次，最后查看登记结果。你可以重新开始，并自行决定还需检查什么。\n\n这项服务的设计要求\n1. 选择时同时看得见时段和服务台，用户可以更换选择。\n2. 在核对页返回选择时，保留上一次选择的时段和服务台。\n3. 提交后，完成页显示用户最终确认的时段和服务台。\n\n完成后请写下三条要求各自的观察结果。能定位的问题逐条给出画面或操作路径和理由；没有发现问题的部分也请写明，证据不足可以单独记录。把判断和证据保存为本轮记录。\n\n打开方式。双击“打开界面.html”。每轮从选择时段页开始，刷新页面或在完成页按“重新开始”即可复位。页面仅在本机演示，登记只在当前页面中生效。"
+    },
+    {
+      "at": "2026-11-04T00:29:55.637773+00:00",
+      "actor_type": "program",
+      "type": "run_started",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "warning_count": 0
+    },
+    {
+      "at": "2026-11-04T00:31:31.269598+00:00",
+      "actor_type": "ai",
+      "actor": "AI模型验收-D",
+      "type": "finish",
+      "event_id": "d-native-02-runner-stop",
+      "context_version": 1,
+      "content": {
+        "reason": "驱动需在同一进程支持本机原型授权续跑；本次仅完成启动检查，主动保存后用支持授权循环的新驱动重新初审。此项不计产品缺陷。"
+      }
+    }
+  ],
+  "warnings": [],
+  "run_limitations": [],
+  "model_calls": [
+    {
+      "call_id": "call-c5db26e8f8cb4b1fb4552291f6ee23d9",
+      "run_id": "run-3c88ef991a3c4626a69900be929bbb70",
+      "operation": "understand",
+      "attempt": 1,
+      "provider": "codex_cli",
+      "model": "gpt-6-astra",
+      "usage": {
+        "input_tokens": 29656,
+        "cached_input_tokens": 12416,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1427,
+        "reasoning_output_tokens": 0
+      },
+      "request_id": "01a1a3f6-65bb-7640-8bd5-c7bf9c6033b5",
+      "latency_ms": 37219,
+      "raw_artifact_id": "artifact-3f8ae19a72934ccd8712b9de3ee54993",
+      "is_stub": false,
+      "parameters": {},
+      "stage": "T03",
+      "status": "validated",
+      "schema": "MaterialUnderstanding",
+      "input": {
+        "context_version": 1,
+        "operation_mode": "",
+        "source_ids": [
+          "src-024b24438e9246b4bb124911f48e5dcf",
+          "src-f711010f8b654de4aba6056be50ceb87",
+          "src-8f4dded709ff4543aa58e0dde193d726"
+        ],
+        "evidence_ids": [
+          "ev-8e7c53fbe57642b99aec3fd7d1a1621b",
+          "ev-a38139b243034e81bde2f7f75738d609",
+          "ev-d4c4b5931ae94fc5ba9565757ee0a42c"
+        ],
+        "image_evidence_ids": [
+          "ev-8e7c53fbe57642b99aec3fd7d1a1621b"
+        ],
+        "check_refs": [],
+        "check_ids": [],
+        "finding_ids": [],
+        "previous_finding_ids": [],
+        "evidence_gap_count": 0,
+        "evidence_gap_refs": []
+      },
+      "output": {
+        "task_summary": "为下午的二层服务台完成登记，途中从核对页返回选择并再次核对，最后查看登记结果；后续按三条设计要求分别记录观察和证据。本阶段仅整理材料，不执行操作或作优劣判断。",
+        "target_user_summary": "",
+        "review_tasks": [
+          {
+            "task_id": "TASK1",
+            "text": "核对两个时段及服务台，选择下午的二层服务台并完成一次登记，最后查看登记结果。",
+            "success_criteria": "完成页显示最终确认的下午时段及二层服务台。",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "source_ids": [
+              "src-f711010f8b654de4aba6056be50ceb87"
+            ],
+            "page_ids": [],
+            "state_ids": [],
+            "branches": [
+              {
+                "branch_id": "BR1",
+                "trigger": "提交后",
+                "expected_outcome": "完成页显示用户最终确认的时段和服务台。",
+                "evidence_ids": [
+                  "ev-a38139b243034e81bde2f7f75738d609"
+                ],
+                "basis": "explicit"
+              }
+            ]
+          },
+          {
+            "task_id": "TASK2",
+            "text": "在核对页使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+            "success_criteria": "返回后保留上一次选择的时段和服务台。",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "source_ids": [
+              "src-f711010f8b654de4aba6056be50ceb87"
+            ],
+            "page_ids": [],
+            "state_ids": [],
+            "branches": [
+              {
+                "branch_id": "BR2",
+                "trigger": "在核对页返回选择时",
+                "expected_outcome": "保留上一次选择的时段和服务台。",
+                "evidence_ids": [
+                  "ev-a38139b243034e81bde2f7f75738d609"
+                ],
+                "basis": "explicit"
+              }
+            ]
+          },
+          {
+            "task_id": "TASK3",
+            "text": "按需刷新页面或在完成页按“重新开始”，重新开始一轮登记。",
+            "success_criteria": "复位至选择时段页。",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "source_ids": [
+              "src-f711010f8b654de4aba6056be50ceb87"
+            ],
+            "page_ids": [],
+            "state_ids": [],
+            "branches": [
+              {
+                "branch_id": "BR3",
+                "trigger": "刷新页面或在完成页按“重新开始”",
+                "expected_outcome": "每轮从选择时段页开始",
+                "evidence_ids": [
+                  "ev-a38139b243034e81bde2f7f75738d609"
+                ],
+                "basis": "explicit"
+              }
+            ]
+          }
+        ],
+        "goals": [],
+        "requirements": [
+          {
+            "id": "REQ1",
+            "text": "选择时同时看得见时段和服务台，用户可以更换选择。",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "is_assumption": false,
+            "parent_id": null,
+            "source_quotes": [
+              {
+                "evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+                "quote": "1. 选择时同时看得见时段和服务台，用户可以更换选择。"
+              }
+            ]
+          },
+          {
+            "id": "REQ2",
+            "text": "在核对页返回选择时，保留上一次选择的时段和服务台。",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "is_assumption": false,
+            "parent_id": null,
+            "source_quotes": [
+              {
+                "evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+                "quote": "2. 在核对页返回选择时，保留上一次选择的时段和服务台。"
+              }
+            ]
+          },
+          {
+            "id": "REQ3",
+            "text": "提交后，完成页显示用户最终确认的时段和服务台。",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "is_assumption": false,
+            "parent_id": null,
+            "source_quotes": [
+              {
+                "evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+                "quote": "3. 提交后，完成页显示用户最终确认的时段和服务台。"
+              }
+            ]
+          }
+        ],
+        "opinions": [],
+        "conflicts": [],
+        "relationships": [
+          {
+            "from_evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+            "to_evidence_id": "ev-d4c4b5931ae94fc5ba9565757ee0a42c",
+            "relation": "same_object",
+            "reason": "冻结任务卡与初始评审委托文本相同；正式要求引用产品规范来源，评审委托不另增产品要求。",
+            "basis": "described"
+          },
+          {
+            "from_evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+            "to_evidence_id": "ev-8e7c53fbe57642b99aec3fd7d1a1621b",
+            "relation": "same_object",
+            "reason": "任务卡描述修书咨询登记流程；当前截图呈现其选择时段页，包含周五09:00–09:30的一层服务台、周五14:00–14:30的二层服务台及“核对信息”按钮。截图与控件记录显示上午选项当前选中，仅证明初始状态。",
+            "basis": "described"
+          }
+        ],
+        "unknowns": [
+          "未明确目标用户及其使用熟悉度，也未提供独立于三条设计要求的产品原始业务目标。",
+          "仅提供选择时段页的初始观察；更换选择、进入核对页、返回保留选择及提交后的结果尚无操作前后证据。",
+          "重新开始和刷新复位由任务卡说明，尚无本轮实际观察；未规定复位后应默认选择哪个时段。"
+        ],
+        "assumptions": []
+      }
+    }
+  ],
+  "report_version": 1,
+  "report_completeness": "partial",
+  "contract_violations": [
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-ab1b067aed64b930 尚未覆盖。",
+      "coverage_id": "coverage-ab1b067aed64b930",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-7c11b3dadfdced94 尚未覆盖。",
+      "coverage_id": "coverage-7c11b3dadfdced94",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-3a52ce192ad36376 尚未覆盖。",
+      "coverage_id": "coverage-3a52ce192ad36376",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-4991a6842f916530 尚未覆盖。",
+      "coverage_id": "coverage-4991a6842f916530",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-bd3a1e190e6a3f4d 尚未覆盖。",
+      "coverage_id": "coverage-bd3a1e190e6a3f4d",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-264502c2eb871d9d 尚未覆盖。",
+      "coverage_id": "coverage-264502c2eb871d9d",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-7e9094b0bad3a35f 尚未覆盖。",
+      "coverage_id": "coverage-7e9094b0bad3a35f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-f7ec3bc3a68942b7 尚未覆盖。",
+      "coverage_id": "coverage-f7ec3bc3a68942b7",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-8a8b44aee0151b05 尚未覆盖。",
+      "coverage_id": "coverage-8a8b44aee0151b05",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-237f678a4a1bd310 尚未覆盖。",
+      "coverage_id": "coverage-237f678a4a1bd310",
+      "gap_class": "task_not_planned"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-20dee442203ac06f 尚未覆盖。",
+      "coverage_id": "coverage-20dee442203ac06f",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-f42dcd61b62bb6cd 尚未覆盖。",
+      "coverage_id": "coverage-f42dcd61b62bb6cd",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-c1a2c0b96e137d1a 尚未覆盖。",
+      "coverage_id": "coverage-c1a2c0b96e137d1a",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-d75a6265c371cbee 尚未覆盖。",
+      "coverage_id": "coverage-d75a6265c371cbee",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-6b762300372bf4e2 尚未覆盖。",
+      "coverage_id": "coverage-6b762300372bf4e2",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-313111fc7b0d7d7e 尚未覆盖。",
+      "coverage_id": "coverage-313111fc7b0d7d7e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-4fa579d4301adb9c 尚未覆盖。",
+      "coverage_id": "coverage-4fa579d4301adb9c",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-181d227822a48464 尚未覆盖。",
+      "coverage_id": "coverage-181d227822a48464",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-d71f382369033fe1 尚未覆盖。",
+      "coverage_id": "coverage-d71f382369033fe1",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-52121601bdbea9d2 尚未覆盖。",
+      "coverage_id": "coverage-52121601bdbea9d2",
+      "gap_class": "task_not_planned"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-7686ff9c10b2feb6 尚未覆盖。",
+      "coverage_id": "coverage-7686ff9c10b2feb6",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-06151bd5ac25ff22 尚未覆盖。",
+      "coverage_id": "coverage-06151bd5ac25ff22",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-cd9cb876d18ffe52 尚未覆盖。",
+      "coverage_id": "coverage-cd9cb876d18ffe52",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-5b1601372b8381c5 尚未覆盖。",
+      "coverage_id": "coverage-5b1601372b8381c5",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-9629444fc0e092c1 尚未覆盖。",
+      "coverage_id": "coverage-9629444fc0e092c1",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-603f28468a693511 尚未覆盖。",
+      "coverage_id": "coverage-603f28468a693511",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-5f10b54b2edd846e 尚未覆盖。",
+      "coverage_id": "coverage-5f10b54b2edd846e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-8af4621aa5eac80e 尚未覆盖。",
+      "coverage_id": "coverage-8af4621aa5eac80e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-b5def474121a4fee 尚未覆盖。",
+      "coverage_id": "coverage-b5def474121a4fee",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-ed0ef278a47a40dd 尚未覆盖。",
+      "coverage_id": "coverage-ed0ef278a47a40dd",
+      "gap_class": "task_not_planned"
+    }
+  ],
+  "capability_status": {
+    "schema_version": "session-1.0",
+    "methods_version": "0.2-method-draft",
+    "technical_path_version": "A-0.2/T01-T10",
+    "method_root": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\方法专家开发交付-v0.2",
+    "method_validation": {
+      "delivery_version": "0.2-method-draft",
+      "checked_files": 12,
+      "mismatches": 0
+    },
+    "rules": 24,
+    "methods": 8,
+    "method_fingerprints": {
+      "00先看这个！！！！-阅读与开发交接.md": "6dca7b14918a08d65e40362bfec2fc40a1f8f1d0492e4f356b2ac9b8f00d051e",
+      "01-04-场景输入流程与技术路径.md": "fe432cf3851ad10528e53d6fecc14e9ffaba0a4fafd96a1b6ee61c4007c28347",
+      "05-24条判据修订与变更对照.md": "bd2f82f8d8e539d2011b0b684d77de775b0149ec0e14736717944f2057847c99",
+      "05-判据库-v0.2.json": "b785eb9c6b64b5d9ceb87ca76430af4a2658c944c9aff99a97ce9298bdf54af7",
+      "05-判据执行补充-v0.2.json": "8e502b943023c7e39a8da6a479c1cc09f621c9474520e4f116cae0553bc9c24d",
+      "05-逐字段变更对照.csv": "d0b1d25442662ecf10150e923b98b8049ad7291e2bf56653690a138392d8307d",
+      "06-新场景方法-v0.2.json": "1702aa0350c41ced0363a41d73c46aeb547d60d7299616964875b51ce8fd689c",
+      "06-新场景方法与正反例.md": "e21e0996cc25bc218f5e24e2c3a7aa66649001eb58ad00e84fcb5fc88b48ca26",
+      "07-会话变更重查与复审规则.md": "c9a5f573648a20094f4b0c4602043979b33ea3cb935a6976b641cf57b539f025",
+      "08-问题表达严重度与评价验收.md": "4d92cfcfdb8417a20678995528ea0180f6182eb52b0b2becbb3a7fc44886eead",
+      "09-开发验收用例.json": "fc85e0bd301b081d393ab4764f0f0b59003e2462d842ebee91bc990eb9f41f60",
+      "09-开发验收用例.md": "e2ca3487871026558697e1283734849af2ef94de25b984ade9ae8334a73a2fd3",
+      "10-来源索引.json": "e6147e42231bb4602cb506caa7a2d6ff69812b2d7d1289731a33220db667017a",
+      "11-交付校验结果.json": "3ec123147dae0c46a6bd2a473a0c5f0bbe5f1d311f42bc2568e41b63b5694cad"
+    },
+    "perception": {
+      "deterministic_metrics": true,
+      "metric_version": "cv-metrics-v1",
+      "structure_sources": [
+        "browser_dom",
+        "figma_metadata"
+      ],
+      "semantic_review_model": true,
+      "specialized_ocr_model": true,
+      "screen_technical_review": true,
+      "screen_review_operations": [
+        "screen_ocr",
+        "screen_ui",
+        "screen_audit"
+      ]
+    },
+    "inputs": {
+      "website": {
+        "installed": true,
+        "read_verified": true,
+        "operation_verified": false
+      },
+      "figma_prototype": {
+        "installed": true,
+        "read_verified": false,
+        "operation_verified": false
+      },
+      "figma_board": {
+        "installed": true,
+        "configured": false,
+        "verified": false,
+        "snapshot_root_configured": true,
+        "authorization": "backend_oauth",
+        "read_verified": false
+      },
+      "document": {
+        "configured": true
+      },
+      "image": {
+        "configured": true
+      }
+    },
+    "models": {
+      "qwen": {
+        "enabled": false,
+        "model": null,
+        "vision": true,
+        "verified": false
+      },
+      "deepseek": {
+        "enabled": false,
+        "model": null,
+        "vision": false,
+        "verified": false
+      },
+      "local": {
+        "enabled": false,
+        "model": null,
+        "vision": true,
+        "verified": false
+      }
+    },
+    "storage": "sqlite",
+    "report_versions": "immutable",
+    "event_idempotency": true
+  },
+  "verifier_model_status": {},
+  "material_understanding": {
+    "task_summary": "为下午的二层服务台完成登记，途中从核对页返回选择并再次核对，最后查看登记结果；后续按三条设计要求分别记录观察和证据。本阶段仅整理材料，不执行操作或作优劣判断。",
+    "target_user_summary": "",
+    "review_tasks": [
+      {
+        "task_id": "TASK1",
+        "text": "核对两个时段及服务台，选择下午的二层服务台并完成一次登记，最后查看登记结果。",
+        "success_criteria": "完成页显示最终确认的下午时段及二层服务台。",
+        "evidence_ids": [
+          "ev-a38139b243034e81bde2f7f75738d609"
+        ],
+        "source_ids": [
+          "src-f711010f8b654de4aba6056be50ceb87"
+        ],
+        "page_ids": [],
+        "state_ids": [],
+        "branches": [
+          {
+            "branch_id": "BR1",
+            "trigger": "提交后",
+            "expected_outcome": "完成页显示用户最终确认的时段和服务台。",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "explicit"
+          },
+          {
+            "branch_id": "BR-INF-642407c53040",
+            "trigger": "请核对两个时",
+            "expected_outcome": "段的信息，尝试为下午的「二层服务台」完成一次登记",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-c0dce47e6f88",
+            "trigger": "使用页面里的“返回选择”回到上一步再核对一次，最后",
+            "expected_outcome": "查看登记结果",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-30936baac2e9",
+            "trigger": "1. 选择时",
+            "expected_outcome": "同时看得见时段和服务台，用户可以更换选择",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-e3faf55206ed",
+            "trigger": "2. 在核对页返回选择时",
+            "expected_outcome": "保留上一次选择的时段和服务台",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-30c2f9a5efa9",
+            "trigger": "3. 提交后",
+            "expected_outcome": "完成页显示用户最终确认的时段和服务台",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-89f96e62677e",
+            "trigger": "完成后",
+            "expected_outcome": "请写下三条要求各自的观察结果",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-8e92313984c4",
+            "trigger": "每轮从选择时",
+            "expected_outcome": "段页开始，刷新页面或在完成页按“重新开始”即可复位",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-b3f572622e80",
+            "trigger": "页面仅在本机演示，登记只在当前页面中生效",
+            "expected_outcome": "完成该条件分支并按材料反馈",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          }
+        ]
+      },
+      {
+        "task_id": "TASK2",
+        "text": "在核对页使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+        "success_criteria": "返回后保留上一次选择的时段和服务台。",
+        "evidence_ids": [
+          "ev-a38139b243034e81bde2f7f75738d609"
+        ],
+        "source_ids": [
+          "src-f711010f8b654de4aba6056be50ceb87"
+        ],
+        "page_ids": [],
+        "state_ids": [],
+        "branches": [
+          {
+            "branch_id": "BR2",
+            "trigger": "在核对页返回选择时",
+            "expected_outcome": "保留上一次选择的时段和服务台。",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "explicit"
+          },
+          {
+            "branch_id": "BR-INF-cb77b3fe65da",
+            "trigger": "请核对两个时",
+            "expected_outcome": "段的信息，尝试为下午的「二层服务台」完成一次登记",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-ef2c4b1449fb",
+            "trigger": "使用页面里的“返回选择”回到上一步再核对一次，最后",
+            "expected_outcome": "查看登记结果",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-7b8aa43d02c4",
+            "trigger": "1. 选择时",
+            "expected_outcome": "同时看得见时段和服务台，用户可以更换选择",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-47e4ba39775b",
+            "trigger": "2. 在核对页返回选择时",
+            "expected_outcome": "保留上一次选择的时段和服务台",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-2386d89cff82",
+            "trigger": "3. 提交后",
+            "expected_outcome": "完成页显示用户最终确认的时段和服务台",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-74e8ccf67671",
+            "trigger": "完成后",
+            "expected_outcome": "请写下三条要求各自的观察结果",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-60fc75a13560",
+            "trigger": "每轮从选择时",
+            "expected_outcome": "段页开始，刷新页面或在完成页按“重新开始”即可复位",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-f42b288a7739",
+            "trigger": "页面仅在本机演示，登记只在当前页面中生效",
+            "expected_outcome": "完成该条件分支并按材料反馈",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          }
+        ]
+      },
+      {
+        "task_id": "TASK3",
+        "text": "按需刷新页面或在完成页按“重新开始”，重新开始一轮登记。",
+        "success_criteria": "复位至选择时段页。",
+        "evidence_ids": [
+          "ev-a38139b243034e81bde2f7f75738d609"
+        ],
+        "source_ids": [
+          "src-f711010f8b654de4aba6056be50ceb87"
+        ],
+        "page_ids": [],
+        "state_ids": [],
+        "branches": [
+          {
+            "branch_id": "BR3",
+            "trigger": "刷新页面或在完成页按“重新开始”",
+            "expected_outcome": "每轮从选择时段页开始",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "explicit"
+          },
+          {
+            "branch_id": "BR-INF-24fe413cafcd",
+            "trigger": "请核对两个时",
+            "expected_outcome": "段的信息，尝试为下午的「二层服务台」完成一次登记",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-3a8e5868a612",
+            "trigger": "使用页面里的“返回选择”回到上一步再核对一次，最后",
+            "expected_outcome": "查看登记结果",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-f0c13e251f01",
+            "trigger": "1. 选择时",
+            "expected_outcome": "同时看得见时段和服务台，用户可以更换选择",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-fee980e771eb",
+            "trigger": "2. 在核对页返回选择时",
+            "expected_outcome": "保留上一次选择的时段和服务台",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-b457ba653a01",
+            "trigger": "3. 提交后",
+            "expected_outcome": "完成页显示用户最终确认的时段和服务台",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-b2d8fc64d46a",
+            "trigger": "完成后",
+            "expected_outcome": "请写下三条要求各自的观察结果",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-c5f65c6428ee",
+            "trigger": "每轮从选择时",
+            "expected_outcome": "段页开始，刷新页面或在完成页按“重新开始”即可复位",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          },
+          {
+            "branch_id": "BR-INF-eb6ea472ed59",
+            "trigger": "页面仅在本机演示，登记只在当前页面中生效",
+            "expected_outcome": "完成该条件分支并按材料反馈",
+            "evidence_ids": [
+              "ev-a38139b243034e81bde2f7f75738d609"
+            ],
+            "basis": "inferred"
+          }
+        ]
+      }
+    ],
+    "goals": [],
+    "requirements": [
+      {
+        "id": "REQ1",
+        "text": "选择时同时看得见时段和服务台，用户可以更换选择。",
+        "evidence_ids": [
+          "ev-a38139b243034e81bde2f7f75738d609"
+        ],
+        "is_assumption": false,
+        "parent_id": null,
+        "source_quotes": [
+          {
+            "evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+            "quote": "1. 选择时同时看得见时段和服务台，用户可以更换选择。"
+          }
+        ]
+      },
+      {
+        "id": "REQ2",
+        "text": "在核对页返回选择时，保留上一次选择的时段和服务台。",
+        "evidence_ids": [
+          "ev-a38139b243034e81bde2f7f75738d609"
+        ],
+        "is_assumption": false,
+        "parent_id": null,
+        "source_quotes": [
+          {
+            "evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+            "quote": "2. 在核对页返回选择时，保留上一次选择的时段和服务台。"
+          }
+        ]
+      },
+      {
+        "id": "REQ3",
+        "text": "提交后，完成页显示用户最终确认的时段和服务台。",
+        "evidence_ids": [
+          "ev-a38139b243034e81bde2f7f75738d609"
+        ],
+        "is_assumption": false,
+        "parent_id": null,
+        "source_quotes": [
+          {
+            "evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+            "quote": "3. 提交后，完成页显示用户最终确认的时段和服务台。"
+          }
+        ]
+      }
+    ],
+    "opinions": [],
+    "conflicts": [],
+    "relationships": [
+      {
+        "from_evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+        "to_evidence_id": "ev-d4c4b5931ae94fc5ba9565757ee0a42c",
+        "relation": "same_object",
+        "reason": "冻结任务卡与初始评审委托文本相同；正式要求引用产品规范来源，评审委托不另增产品要求。",
+        "basis": "described"
+      },
+      {
+        "from_evidence_id": "ev-a38139b243034e81bde2f7f75738d609",
+        "to_evidence_id": "ev-8e7c53fbe57642b99aec3fd7d1a1621b",
+        "relation": "same_object",
+        "reason": "任务卡描述修书咨询登记流程；当前截图呈现其选择时段页，包含周五09:00–09:30的一层服务台、周五14:00–14:30的二层服务台及“核对信息”按钮。截图与控件记录显示上午选项当前选中，仅证明初始状态。",
+        "basis": "described"
+      }
+    ],
+    "unknowns": [
+      "未明确目标用户及其使用熟悉度，也未提供独立于三条设计要求的产品原始业务目标。",
+      "仅提供选择时段页的初始观察；更换选择、进入核对页、返回保留选择及提交后的结果尚无操作前后证据。",
+      "重新开始和刷新复位由任务卡说明，尚无本轮实际观察；未规定复位后应默认选择哪个时段。"
+    ],
+    "assumptions": []
+  },
+  "understanding_context_version": 1,
+  "understanding_evidence_ids": [
+    "ev-8e7c53fbe57642b99aec3fd7d1a1621b",
+    "ev-a38139b243034e81bde2f7f75738d609",
+    "ev-d4c4b5931ae94fc5ba9565757ee0a42c"
+  ],
+  "check_plan_fingerprint": "",
+  "conflict_dispositions": [],
+  "active_phase": "T08"
+}

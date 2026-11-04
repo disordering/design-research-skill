@@ -1,0 +1,256 @@
+{
+  "首次判断调用": "007-judge",
+  "对象来源": [
+    {
+      "evidence_id": "ev-ed5981943d36420abcbcfb932f3a6a84",
+      "kind": "observation",
+      "object": {
+        "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+        "identity_key": "http://127.0.0.1:61886/v1/",
+        "kind": "page",
+        "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+        "state_id": "3c57d1bfeec301a5061a3aac",
+        "label": "禾页书屋 · 修书咨询登记",
+        "role": "website",
+        "bbox": {},
+        "locator": {
+          "url": "http://127.0.0.1:61886/v1/",
+          "title": "禾页书屋 · 修书咨询登记"
+        },
+        "interactable": false,
+        "attributes": {}
+      }
+    },
+    {
+      "evidence_id": "ev-7a09dc68a4fd47958ab10ea4889fb401",
+      "kind": "observation",
+      "object": {
+        "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+        "identity_key": "http://127.0.0.1:61886/v1/",
+        "kind": "page",
+        "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+        "state_id": "cb2c03e46e454322f59c5ca9",
+        "label": "禾页书屋 · 修书咨询登记",
+        "role": "website",
+        "bbox": {},
+        "locator": {
+          "url": "http://127.0.0.1:61886/v1/",
+          "title": "禾页书屋 · 修书咨询登记"
+        },
+        "interactable": false,
+        "attributes": {}
+      }
+    },
+    {
+      "evidence_id": "ev-54c27ab204c6479384eced085b8c3114",
+      "kind": "observation",
+      "object": {
+        "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+        "identity_key": "http://127.0.0.1:61886/v1/",
+        "kind": "page",
+        "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+        "state_id": "d26ef33e7cf79b4071dfdc34",
+        "label": "禾页书屋 · 修书咨询登记",
+        "role": "website",
+        "bbox": {},
+        "locator": {
+          "url": "http://127.0.0.1:61886/v1/",
+          "title": "禾页书屋 · 修书咨询登记"
+        },
+        "interactable": false,
+        "attributes": {}
+      }
+    },
+    {
+      "evidence_id": "ev-4a119973f66c4bb5823812d82b6658dd",
+      "kind": "observation",
+      "object": {
+        "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+        "identity_key": "http://127.0.0.1:61886/v1/",
+        "kind": "page",
+        "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+        "state_id": "cb2c03e46e454322f59c5ca9",
+        "label": "禾页书屋 · 修书咨询登记",
+        "role": "website",
+        "bbox": {},
+        "locator": {
+          "url": "http://127.0.0.1:61886/v1/",
+          "title": "禾页书屋 · 修书咨询登记"
+        },
+        "interactable": false,
+        "attributes": {}
+      }
+    },
+    {
+      "evidence_id": "ev-5bb645c490a9466e9d64fd29d0c2d8ab",
+      "kind": "observation",
+      "object": {
+        "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+        "identity_key": "http://127.0.0.1:61886/v1/",
+        "kind": "page",
+        "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+        "state_id": "d26ef33e7cf79b4071dfdc34",
+        "label": "禾页书屋 · 修书咨询登记",
+        "role": "website",
+        "bbox": {},
+        "locator": {
+          "url": "http://127.0.0.1:61886/v1/",
+          "title": "禾页书屋 · 修书咨询登记"
+        },
+        "interactable": false,
+        "attributes": {}
+      }
+    },
+    {
+      "evidence_id": "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+      "kind": "observation",
+      "object": {
+        "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+        "identity_key": "http://127.0.0.1:61886/v1/",
+        "kind": "page",
+        "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+        "state_id": "d26ef33e7cf79b4071dfdc34",
+        "label": "禾页书屋 · 修书咨询登记",
+        "role": "website",
+        "bbox": {},
+        "locator": {
+          "url": "http://127.0.0.1:61886/v1/",
+          "title": "禾页书屋 · 修书咨询登记"
+        },
+        "interactable": false,
+        "attributes": {}
+      }
+    },
+    {
+      "evidence_id": "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c",
+      "kind": "observation",
+      "object": {
+        "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+        "identity_key": "http://127.0.0.1:61886/v1/",
+        "kind": "page",
+        "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+        "state_id": "cae2b537eea57be43e8207a7",
+        "label": "禾页书屋 · 修书咨询登记",
+        "role": "website",
+        "bbox": {},
+        "locator": {
+          "url": "http://127.0.0.1:61886/v1/",
+          "title": "禾页书屋 · 修书咨询登记"
+        },
+        "interactable": false,
+        "attributes": {}
+      }
+    },
+    {
+      "evidence_id": "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8",
+      "kind": "observation",
+      "object": {
+        "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+        "identity_key": "http://127.0.0.1:61886/v1/",
+        "kind": "page",
+        "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+        "state_id": "3c57d1bfeec301a5061a3aac",
+        "label": "禾页书屋 · 修书咨询登记",
+        "role": "website",
+        "bbox": {},
+        "locator": {
+          "url": "http://127.0.0.1:61886/v1/",
+          "title": "禾页书屋 · 修书咨询登记"
+        },
+        "interactable": false,
+        "attributes": {}
+      }
+    },
+    {
+      "evidence_id": "ev-092921bb105c4f6dbc9ad0a2a0c8154a",
+      "kind": "observation",
+      "object": {
+        "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+        "identity_key": "http://127.0.0.1:61886/v1/",
+        "kind": "page",
+        "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+        "state_id": "3c57d1bfeec301a5061a3aac",
+        "label": "禾页书屋 · 修书咨询登记",
+        "role": "website",
+        "bbox": {},
+        "locator": {
+          "url": "http://127.0.0.1:61886/v1/",
+          "title": "禾页书屋 · 修书咨询登记"
+        },
+        "interactable": false,
+        "attributes": {}
+      }
+    }
+  ],
+  "原生退回事件": [
+    {
+      "at": "2026-11-04T08:35:32.779972+00:00",
+      "actor_type": "program",
+      "type": "finding_assertion_rejected",
+      "run_id": "run-83292c4aeac345ff99114e0c551e8a6a",
+      "content": {
+        "finding": {
+          "finding_id": "finding-c53443cc930547099c7d274f6045fb8e",
+          "kind": "nonconformity",
+          "title": "REQ3：下午二层服务台提交后，完成页显示上午一层服务台",
+          "check_ids": [
+            "check-41b55fff3a399fee",
+            "check-f5231da55060a399",
+            "check-0c1636fdf681c97a",
+            "check-36e93bbdbd189e88"
+          ],
+          "evidence_ids": [
+            "ev-2f97d5fc719c439b842ad62d0c01670a",
+            "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+            "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+          ],
+          "principle": "REQ3要求完成页显示最终确认的时段及服务台；E07核对要求落实，E01核对结果对象，E02核对跨状态字段一致性。",
+          "detection": "选择下午项→核对→返回选择→再次核对→提交登记。action-6a0cb99a000d4b1fb341f4c859bfd25a关联的提交前画面为14:00–14:30、二层服务台，提交后完成页为09:00–09:30、一层服务台。",
+          "description": "本轮稿件1的完成结果与最终确认信息不一致，无法据完成页确认所请求的下午登记。仅确认可见结果偏差，不推断内部原因、持久化数据或真实预约后果。最新选择页观察不能证明该问题已修复。",
+          "suggestion": "使完成页呈现本次最终确认的时段及服务台；修改后按同一返回再提交路径逐字段复核，并保留提交前后证据。",
+          "severity": "high",
+          "severity_reason": "核心任务的结果确认失败，两个关键字段均错误。已有重新开始返回选择页的恢复入口，但未证明重试能正确完成。影响限于本机页面演示，无真实登记损失证据。",
+          "confidence": 0.99,
+          "context_version": 1,
+          "run_id": "",
+          "screen_review_id": "",
+          "review_status": "unreviewed",
+          "human_severity": null,
+          "review_reason": "",
+          "reviewer": "unknown",
+          "reviewed_at": null,
+          "disposition": null,
+          "stale": false,
+          "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+          "object_ref": "BR2：核对页提交至登记完成页",
+          "claims": [
+            {
+              "claim_id": "claim-9281a061eaea466cb5a3797b85be11ad",
+              "claim_type": "action_result",
+              "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+              "expected": "提交后显示最终确认的周五14:00–14:30、二层服务台。",
+              "observed": "提交前为周五14:00–14:30、二层服务台；提交后显示周五09:00–09:30、一层服务台。",
+              "evidence_ids": [
+                "ev-2f97d5fc719c439b842ad62d0c01670a",
+                "ev-8d4c111e8c2b4c5e92e09db4172c0e24",
+                "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"
+              ],
+              "derived": false,
+              "verification_status": "supported",
+              "verification_reason": "证据对象、类型和观察结果通过程序核验。"
+            }
+          ],
+          "mechanism": "同次提交前后结果字段不一致；内部实现原因未知。",
+          "change_action": "修正完成页与最终确认信息的对应关系并复核同一路径。",
+          "location": {
+            "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+            "state_id": "3c57d1bfeec301a5061a3aac",
+            "object_id": "obj-91d36b9f4dbc6cbcf6c0",
+            "url": "http://127.0.0.1:61886/v1/"
+          }
+        },
+        "reason": "对象标识未出现在任一方案、实现或观察证据的节点、控件、文本或状态中。"
+      }
+    }
+  ]
+}

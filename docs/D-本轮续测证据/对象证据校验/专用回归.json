@@ -1,0 +1,12 @@
+{
+  "执行者": "Codex（AI程序回归）",
+  "用例数": 14,
+  "失败": 0,
+  "错误": 0,
+  "通过": true,
+  "真实模型调用": 0,
+  "实现SHA256": {
+    "engine\\session_service.py": "c905328d60fe48426d33aa8c682519a57cdc660cbb8015791a691d154a6885cf",
+    "engine\\session_verification.py": "c651747c07aba3df10165b0bdad7fbd69dc1d94cebfcc76a331b71d617506f86"
+  }
+}

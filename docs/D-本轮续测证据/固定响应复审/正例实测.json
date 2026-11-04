@@ -1,0 +1,172 @@
+{
+  "commit": "2157483",
+  "运行方式": "原版 Node 前端代理 → 产品 FastAPI 与 SessionService → 产品材料适配器，沿用仓库护法 ScriptedResponses，并按 D 测试用改字副本给出固定的已解决结果，不调用线上模型",
+  "材料": [
+    "护法原稿EV07摘录",
+    "策划§3.2.2.3",
+    "D构造的仅改主按钮文字文本副本"
+  ],
+  "结果": {
+    "初审": {
+      "context_version": 1,
+      "report_version": 1,
+      "status": "completed",
+      "report_completeness": "complete",
+      "rechecks": [],
+      "发现": [
+        {
+          "id": "finding-cd2e2516e599487eb671caf2e1b71c5d",
+          "标题": "节点升级按钮显示升星（受控响应）",
+          "状态": "unreviewed",
+          "过期": false
+        }
+      ],
+      "模型调用": 11
+    },
+    "确认问题": {
+      "HTTP": 202,
+      "快照": {
+        "context_version": 1,
+        "report_version": 1,
+        "status": "completed",
+        "report_completeness": "complete",
+        "rechecks": [],
+        "发现": [
+          {
+            "id": "finding-cd2e2516e599487eb671caf2e1b71c5d",
+            "标题": "节点升级按钮显示升星（受控响应）",
+            "状态": "confirmed",
+            "过期": false
+          }
+        ],
+        "模型调用": 11
+      }
+    },
+    "受控新稿复审": {
+      "context_version": 2,
+      "report_version": 2,
+      "status": "completed",
+      "report_completeness": "complete",
+      "rechecks": [
+        {
+          "recheck_id": "recheck-61fc02e5b89b45999abd56d58119bf38",
+          "previous_finding_id": "finding-cd2e2516e599487eb671caf2e1b71c5d",
+          "current_finding_ids": [],
+          "resolution": "resolved",
+          "reason": "受控新版的主按钮文字已由升星改为升级节点。",
+          "evidence_ids": [
+            "ev-5d4fe703cbd54e12a43a157ae0027682"
+          ],
+          "human_confirmation": "unreviewed",
+          "reviewer": "unknown",
+          "reviewed_at": null
+        }
+      ],
+      "发现": [
+        {
+          "id": "finding-cd2e2516e599487eb671caf2e1b71c5d",
+          "标题": "节点升级按钮显示升星（受控响应）",
+          "状态": "confirmed",
+          "过期": true
+        }
+      ],
+      "模型调用": 22
+    },
+    "确认已解决": {
+      "HTTP": 202,
+      "快照": {
+        "context_version": 2,
+        "report_version": 2,
+        "status": "completed",
+        "report_completeness": "complete",
+        "rechecks": [
+          {
+            "recheck_id": "recheck-61fc02e5b89b45999abd56d58119bf38",
+            "previous_finding_id": "finding-cd2e2516e599487eb671caf2e1b71c5d",
+            "current_finding_ids": [],
+            "resolution": "resolved",
+            "reason": "AI测试员按新版摘录核对，按钮文字是升级节点；此改字副本只供程序回归。",
+            "evidence_ids": [
+              "ev-5d4fe703cbd54e12a43a157ae0027682"
+            ],
+            "human_confirmation": "confirmed",
+            "reviewer": "AI受控复审-D",
+            "reviewed_at": "2026-11-03T23:58:47.086326+00:00"
+          }
+        ],
+        "发现": [
+          {
+            "id": "finding-cd2e2516e599487eb671caf2e1b71c5d",
+            "标题": "节点升级按钮显示升星（受控响应）",
+            "状态": "confirmed",
+            "过期": true
+          }
+        ],
+        "模型调用": 22
+      },
+      "所用证据": {
+        "id": "ev-5d4fe703cbd54e12a43a157ae0027682",
+        "内容": "升阶页签有白色菱形。法元节点显示 +13 → +14。右下金色主按钮文字为“升级节点”。",
+        "版本": 2
+      }
+    },
+    "导出核验": {
+      "HTTP": 200,
+      "zip成员": 69,
+      "复审": [
+        {
+          "recheck_id": "recheck-61fc02e5b89b45999abd56d58119bf38",
+          "previous_finding_id": "finding-cd2e2516e599487eb671caf2e1b71c5d",
+          "current_finding_ids": [],
+          "resolution": "resolved",
+          "reason": "AI测试员按新版摘录核对，按钮文字是升级节点；此改字副本只供程序回归。",
+          "evidence_ids": [
+            "ev-5d4fe703cbd54e12a43a157ae0027682"
+          ],
+          "human_confirmation": "confirmed",
+          "reviewer": "AI受控复审-D",
+          "reviewed_at": "2026-11-03T23:58:47.086326+00:00"
+        }
+      ]
+    }
+  },
+  "HTTP": [
+    [
+      "POST",
+      "/engine/api/review-sessions",
+      201
+    ],
+    [
+      "POST",
+      "/engine/api/review-sessions/session-3218847e924446fc9843ebfd2b786880/events",
+      202
+    ],
+    [
+      "GET",
+      "/engine/api/review-sessions/session-3218847e924446fc9843ebfd2b786880/updates?after_sequence=1",
+      200
+    ],
+    [
+      "POST",
+      "/engine/api/review-sessions/session-3218847e924446fc9843ebfd2b786880/events",
+      202
+    ],
+    [
+      "POST",
+      "/engine/api/review-sessions/session-3218847e924446fc9843ebfd2b786880/events",
+      202
+    ],
+    [
+      "GET",
+      "/engine/api/review-sessions/session-3218847e924446fc9843ebfd2b786880",
+      200
+    ],
+    [
+      "POST",
+      "/engine/api/review-sessions/session-3218847e924446fc9843ebfd2b786880/events",
+      202
+    ]
+  ],
+  "浏览器异常": [],
+  "会话": "session-3218847e924446fc9843ebfd2b786880"
+}

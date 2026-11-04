@@ -1,0 +1,27 @@
+[system]
+You parse UI screenshots into structured elements. Return JSON only.
+[user]
+Parse 单项界面截图 into meaningful UI elements.
+Identify navigation, character/hero imagery, titles, primary action, rewards, resources,
+panels, and other visible functional regions. Use normalized bbox coordinates.
+visual_importance means visual prominence, not user importance.
+Platform: unknown; scenario: 从这张设置页判断如何查看与调整通知偏好，检查选项、操作和当前状态的表达。.
+Return exactly:
+{
+  "page_type": "string",
+  "summary": "string",
+  "elements": [
+    {
+      "id": "E01",
+      "label": "string",
+      "role": "primary_button|secondary_button|button|nav|character|reward_card|resource|title|text|panel|other",
+      "bbox": {"x": 0.0, "y": 0.0, "width": 0.1, "height": 0.1},
+      "interactable": true,
+      "visual_importance": 0.0,
+      "state": "default",
+      "confidence": 0.0
+    }
+  ],
+  "uncertainties": ["string"]
+}
+[原消息图片 1，见随附图片]

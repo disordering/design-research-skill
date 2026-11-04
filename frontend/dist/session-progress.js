@@ -3,3 +3,13 @@ export function progressData(s){const checks=(s.checks||[]).filter(c=>!c.stale&&
 
 export function isRunning(s){return !!s&&['reading','planning','checking','rechecking'].includes(s.status);}
 export function phaseWaitSeconds(s,now=Date.now()){const at=Date.parse(s.updated_at||'');return Number.isFinite(at)?Math.max(0,Math.floor((now-at)/1000)):null;}
+
+// 状态提示随会话状态变化，创建和等待补充时保留各自说明。
+export function progressNotice(s,now=Date.now()){
+  if(isRunning(s))return `本阶段最近更新距今 ${phaseWaitSeconds(s,now)??0} 秒。正在等待后端处理或模型响应；无需再次点击开始。`;
+  if(s.status==='created')return '会话已创建，点击开始运行后生成评审结果。';
+  if(s.status==='awaiting_input')return '本轮等待补充材料、回答或授权，提交后可继续。';
+  if(s.status==='cancelled')return '本轮已取消；下方时间是最后保存时间。';
+  if(s.status==='completed')return '本轮已结束；下方时间是最后保存时间。';
+  return '下方显示会话最后保存时间。';
+}

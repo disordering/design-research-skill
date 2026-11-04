@@ -1,0 +1,19 @@
+[system]
+You extract UI text and normalized bounding boxes. Return JSON only.
+[user]
+Extract every meaningful visible text line from this UI screenshot.
+For every line, return its normalized bbox (0-1 relative to width/height), OCR confidence,
+and estimated rendered text height in source pixels. Ignore decorative gibberish unless readable.
+Return exactly this JSON shape:
+{
+  "blocks": [
+    {
+      "text": "string",
+      "bbox": {"x": 0.0, "y": 0.0, "width": 0.1, "height": 0.1},
+      "confidence": 0.0,
+      "estimated_height_px": 0
+    }
+  ],
+  "notes": ["string"]
+}
+[原消息图片 1，见随附图片]

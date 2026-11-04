@@ -1,0 +1,54 @@
+{
+  "purpose": "你负责评审这个登记流程。请核对两个时段的信息，尝试为下午的「二层服务台」完成一次登记。使用页面里的“返回选择”回到上一步再核对一次，最后查看登记结果。你可以重新开始，并自行决定还需检查什么。\n\n这项服务的设计要求\n1. 选择时同时看得见时段和服务台，用户可以更换选择。\n2. 在核对页返回选择时，保留上一次选择的时段和服务台。\n3. 提交后，完成页显示用户最终确认的时段和服务台。\n\n完成后请写下三条要求各自的观察结果。能定位的问题逐条给出画面或操作路径和理由；没有发现问题的部分也请写明，证据不足可以单独记录。把判断和证据保存为本轮记录。\n\n打开方式。双击“打开界面.html”。每轮从选择时段页开始，刷新页面或在完成页按“重新开始”即可复位。页面仅在本机演示，登记只在当前页面中生效。",
+  "actor": "AI模型验收-D",
+  "actor_type": "ai",
+  "design_purpose": "",
+  "target_user": "",
+  "sources": [
+    {
+      "kind": "website",
+      "reference": "http://127.0.0.1:64937/v1/",
+      "title": "修书咨询登记",
+      "content": "",
+      "image_base64": "",
+      "version": "本轮稿件1",
+      "evidence_kind": null,
+      "role": "design",
+      "declared_by": "AI模型验收-D",
+      "document_base64": "",
+      "filename": "",
+      "figma_snapshot_id": ""
+    },
+    {
+      "kind": "document",
+      "reference": "",
+      "title": "修书咨询登记任务要求",
+      "content": "你负责评审这个登记流程。请核对两个时段的信息，尝试为下午的「二层服务台」完成一次登记。使用页面里的“返回选择”回到上一步再核对一次，最后查看登记结果。你可以重新开始，并自行决定还需检查什么。\n\n这项服务的设计要求\n1. 选择时同时看得见时段和服务台，用户可以更换选择。\n2. 在核对页返回选择时，保留上一次选择的时段和服务台。\n3. 提交后，完成页显示用户最终确认的时段和服务台。\n\n完成后请写下三条要求各自的观察结果。能定位的问题逐条给出画面或操作路径和理由；没有发现问题的部分也请写明，证据不足可以单独记录。把判断和证据保存为本轮记录。\n\n打开方式。双击“打开界面.html”。每轮从选择时段页开始，刷新页面或在完成页按“重新开始”即可复位。页面仅在本机演示，登记只在当前页面中生效。",
+      "image_base64": "",
+      "version": "冻结任务卡",
+      "evidence_kind": null,
+      "role": "product_spec",
+      "declared_by": "AI模型验收-D",
+      "document_base64": "",
+      "filename": "",
+      "figma_snapshot_id": ""
+    }
+  ],
+  "limits": {
+    "max_actions": 16,
+    "max_checks": 80,
+    "max_model_calls": 60,
+    "max_review_rounds": 1,
+    "max_seconds": 1800,
+    "max_images_per_call": 10,
+    "max_material_chunks": 24,
+    "max_parallel_screens": 2
+  },
+  "allow_interaction": true,
+  "auto_run": false,
+  "provider": "generic",
+  "model_name": "gpt-6-astra",
+  "verifier_provider": null,
+  "verifier_model_name": null,
+  "require_structured_claims": true
+}

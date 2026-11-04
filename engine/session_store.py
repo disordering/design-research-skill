@@ -111,7 +111,11 @@ class SessionStore:
 
     @staticmethod
     def _event_body(event: EventInput) -> str:
-        return json.dumps(event.model_dump(mode="json"), sort_keys=True, ensure_ascii=False)
+        body = event.model_dump(mode="json")
+        # 旧事件未带来源字段。省略默认值使原请求重试仍保持幂等。
+        if body["actor_type"] == "unknown":
+            body.pop("actor_type")
+        return json.dumps(body, sort_keys=True, ensure_ascii=False)
 
     def report(self, session_id: str, version: int) -> SessionSnapshot:
         with self.connection() as db:

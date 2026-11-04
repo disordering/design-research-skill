@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "ref": "R11",
+      "coverage_id": "TASK1-review-actions",
+      "coverage_title": "选择与核对页的动作入口",
+      "task_id": "TASK1",
+      "applicability": "not_applicable",
+      "reason": "已呈现的核对信息、返回选择、提交登记分别承担不同动作；重复截图是同一入口再次呈现，不构成同一动作的两个入口。",
+      "source_ids": ["src-d26f1061d5dc4b26971c209b4af54287"],
+      "evidence_ids": ["ev-4a119973f66c4bb5823812d82b6658dd", "ev-8d4c111e8c2b4c5e92e09db4172c0e24"],
+      "evidence_needed": [],
+      "object_refs": ["选择页：核对信息", "核对页：返回选择、提交登记"],
+      "object_ids": ["obj-d18c45035f1cf481864b", "obj-2ba5c91c54257c9ca213", "obj-96d6f72e97ca58664da8"],
+      "constraint_refs": [],
+      "required_evidence_kinds": ["observation"]
+    },
+    {
+      "ref": "R12",
+      "coverage_id": "TASK1-slot-selection",
+      "coverage_title": "选择页两个时段的选中与未选中呈现",
+      "task_id": "TASK1",
+      "applicability": "applicable",
+      "reason": "两个时段属于同组单选控件，已有切换前后画面；计划按相同状态比较视觉规则，区分选择状态造成的合理差异。",
+      "source_ids": ["src-d26f1061d5dc4b26971c209b4af54287"],
+      "evidence_ids": ["ev-ed5981943d36420abcbcfb932f3a6a84", "ev-7a09dc68a4fd47958ab10ea4889fb401"],
+      "evidence_needed": [],
+      "object_refs": ["选择页：周五09:00–09:30、一层服务台", "选择页：周五14:00–14:30、二层服务台"],
+      "object_ids": ["obj-92075c3425890f97081d"],
+      "constraint_refs": ["REQ1"],
+      "required_evidence_kinds": ["observation"]
+    },
+    {
+      "ref": "R12",
+      "coverage_id": "TASK1-review-actions",
+      "coverage_title": "选择与核对页的动作入口",
+      "task_id": "TASK1",
+      "applicability": "applicable",
+      "reason": "核对信息与提交登记均为所在步骤的主要推进按钮，可比较同层级呈现；返回选择承担回退功能，须单独考虑其层级差异。",
+      "source_ids": ["src-d26f1061d5dc4b26971c209b4af54287"],
+      "evidence_ids": ["ev-4a119973f66c4bb5823812d82b6658dd", "ev-8d4c111e8c2b4c5e92e09db4172c0e24"],
+      "evidence_needed": [],
+      "object_refs": ["选择页：核对信息", "核对页：返回选择、提交登记"],
+      "object_ids": ["obj-d18c45035f1cf481864b", "obj-2ba5c91c54257c9ca213", "obj-96d6f72e97ca58664da8"],
+      "constraint_refs": [],
+      "required_evidence_kinds": ["observation"]
+    },
+    {
+      "ref": "R13",
+      "coverage_id": "TASK1-slot-selection",
+      "coverage_title": "选择页两个时段的选中与未选中呈现",
+      "task_id": "TASK1",
+      "applicability": "needs_context",
+      "reason": "任务卡规定可选择和更换时段，但未明确必填规则；默认选中不能替代规则来源，沿用现有必选问题，不重复提问。",
+      "source_ids": ["src-d26f1061d5dc4b26971c209b4af54287", "src-1c9ca6d9af5f4f799be4a24b882ebb31"],
+      "evidence_ids": ["ev-ed5981943d36420abcbcfb932f3a6a84", "ev-2f97d5fc719c439b842ad62d0c01670a"],
+      "evidence_needed": ["时段是否必选及默认选择是否满足要求的明确规则"],
+      "object_refs": ["选择页：时段单选组"],
+      "object_ids": ["obj-92075c3425890f97081d"],
+      "constraint_refs": ["REQ1"],
+      "required_evidence_kinds": ["requirement", "observation"]
+    },
+    {
+      "ref": "R14",
+      "coverage_id": "TASK1-slot-selection",
+      "coverage_title": "选择页两个时段的选中与未选中呈现",
+      "task_id": "TASK1",
+      "applicability": "applicable",
+      "reason": "当前单选组通过预置选项限定可选值，属于有效值限制；计划核对选项是否在选择前清楚表达时段和服务台，无需推定文本格式要求。",
+      "source_ids": ["src-d26f1061d5dc4b26971c209b4af54287", "src-1c9ca6d9af5f4f799be4a24b882ebb31"],
+      "evidence_ids": ["ev-ed5981943d36420abcbcfb932f3a6a84", "ev-7a09dc68a4fd47958ab10ea4889fb401", "ev-2f97d5fc719c439b842ad62d0c01670a"],
+      "evidence_needed": [],
+      "object_refs": ["选择页：两个预置时段及对应服务台"],
+      "object_ids": ["obj-92075c3425890f97081d"],
+      "constraint_refs": ["REQ1"],
+      "required_evidence_kinds": ["observation", "requirement"]
+    }
+  ]
+}

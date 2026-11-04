@@ -16,10 +16,14 @@ OUT = ROOT / 'docs/D-三项修复证据/程序回归'
 
 
 def main():
+    global OUT
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('suite', choices=['backend', 'frontend'])
     parser.add_argument('--extra-site', action='append', default=[], help='本地已安装的附加依赖目录')
+    parser.add_argument('--out', type=Path, help='本次回归存档目录，按批次指定以保留历史结果')
     args = parser.parse_args()
+    if args.out:
+        OUT = args.out.resolve()
     OUT.mkdir(parents=True, exist_ok=True)
     env = {**os.environ, 'PYTHONIOENCODING':'utf-8', 'PYTHONDONTWRITEBYTECODE':'1', 'NO_COLOR':'1'}
     if args.suite == 'backend':

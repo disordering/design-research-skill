@@ -1,0 +1,139 @@
+{
+  "task_summary": "核对两个时段及服务台，选择下午的二层服务台，经核对页返回选择后再次核对并提交，查看登记结果；后续按三条设计要求记录观察与证据。本阶段仅整理材料，不执行操作或作优劣判断。",
+  "target_user_summary": "",
+  "review_tasks": [
+    {
+      "task_id": "TASK1",
+      "text": "核对两个时段及对应服务台，更换为下午的二层服务台并完成登记；过程中使用“返回选择”再核对一次，最后查看登记结果。",
+      "success_criteria": "选择时可同时看到时段和服务台并更换选择；返回选择后保留上一次选择；完成页显示最终确认的时段和服务台。",
+      "evidence_ids": [
+        "ev-2f97d5fc719c439b842ad62d0c01670a"
+      ],
+      "source_ids": [
+        "src-1c9ca6d9af5f4f799be4a24b882ebb31"
+      ],
+      "branches": [
+        {
+          "branch_id": "BR1",
+          "trigger": "在核对页返回选择",
+          "expected_outcome": "保留上一次选择的时段和服务台。",
+          "evidence_ids": [
+            "ev-2f97d5fc719c439b842ad62d0c01670a"
+          ],
+          "basis": "explicit"
+        },
+        {
+          "branch_id": "BR2",
+          "trigger": "提交后",
+          "expected_outcome": "完成页显示用户最终确认的时段和服务台。",
+          "evidence_ids": [
+            "ev-2f97d5fc719c439b842ad62d0c01670a"
+          ],
+          "basis": "explicit"
+        }
+      ]
+    },
+    {
+      "task_id": "TASK2",
+      "text": "按需刷新页面或在完成页按“重新开始”，复位后重新进行登记。",
+      "success_criteria": "复位后从选择时段页开始。",
+      "evidence_ids": [
+        "ev-2f97d5fc719c439b842ad62d0c01670a"
+      ],
+      "branches": [
+        {
+          "branch_id": "BR3",
+          "trigger": "刷新页面或在完成页按“重新开始”",
+          "expected_outcome": "复位至选择时段页。",
+          "evidence_ids": [
+            "ev-2f97d5fc719c439b842ad62d0c01670a"
+          ],
+          "basis": "explicit"
+        }
+      ]
+    }
+  ],
+  "goals": [],
+  "requirements": [
+    {
+      "id": "REQ1",
+      "text": "选择时同时看得见时段和服务台，用户可以更换选择。",
+      "evidence_ids": [
+        "ev-2f97d5fc719c439b842ad62d0c01670a"
+      ],
+      "is_assumption": false,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-2f97d5fc719c439b842ad62d0c01670a",
+          "quote": "1. 选择时同时看得见时段和服务台，用户可以更换选择。"
+        }
+      ]
+    },
+    {
+      "id": "REQ2",
+      "text": "在核对页返回选择时，保留上一次选择的时段和服务台。",
+      "evidence_ids": [
+        "ev-2f97d5fc719c439b842ad62d0c01670a"
+      ],
+      "is_assumption": false,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-2f97d5fc719c439b842ad62d0c01670a",
+          "quote": "2. 在核对页返回选择时，保留上一次选择的时段和服务台。"
+        }
+      ]
+    },
+    {
+      "id": "REQ3",
+      "text": "提交后，完成页显示用户最终确认的时段和服务台。",
+      "evidence_ids": [
+        "ev-2f97d5fc719c439b842ad62d0c01670a"
+      ],
+      "is_assumption": false,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-2f97d5fc719c439b842ad62d0c01670a",
+          "quote": "3. 提交后，完成页显示用户最终确认的时段和服务台。"
+        }
+      ]
+    },
+    {
+      "id": "REQ4",
+      "text": "每轮从选择时段页开始；刷新页面或在完成页按“重新开始”可复位。登记仅在本机演示的当前页面生效。",
+      "evidence_ids": [
+        "ev-2f97d5fc719c439b842ad62d0c01670a"
+      ],
+      "is_assumption": false,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-2f97d5fc719c439b842ad62d0c01670a",
+          "quote": "每轮从选择时段页开始，刷新页面或在完成页按“重新开始”即可复位。页面仅在本机演示，登记只在当前页面中生效。"
+        }
+      ]
+    }
+  ],
+  "opinions": [],
+  "conflicts": [],
+  "relationships": [
+    {
+      "from_evidence_id": "ev-2f97d5fc719c439b842ad62d0c01670a",
+      "to_evidence_id": "ev-f7f6e5ee40964f97a4b230b24964d6f0",
+      "relation": "same_object",
+      "reason": "冻结任务卡与评审委托描述同一登记流程，重复列出三条设计要求及复位方式；正式要求取自product_spec。",
+      "basis": "described"
+    },
+    {
+      "from_evidence_id": "ev-2f97d5fc719c439b842ad62d0c01670a",
+      "to_evidence_id": "ev-ed5981943d36420abcbcfb932f3a6a84",
+      "relation": "same_object",
+      "reason": "截图呈现任务所述登记流程的选择时段页：周五09:00–09:30对应一层服务台，周五14:00–14:30对应二层服务台；当前上午项选中。该观察不证明后续跳转或登记成功。",
+      "basis": "described"
+    }
+  ],
+  "unknowns": [
+    "未提供目标用户及其熟悉度，也未单独说明产品原始业务目标；评审委托不能替代业务目标。",
+    "当前仅有选择时段页的观察证据ev-ed5981943d36420abcbcfb932f3a6a84；缺少更换选择、进入核对页、返回选择、提交及复位的动作前后证据。",
+    "尚无核对页和完成页的实际观察，无法据此确认选择保留及最终登记信息。"
+  ],
+  "assumptions": []
+}

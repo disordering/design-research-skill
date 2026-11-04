@@ -1,0 +1,377 @@
+{
+  "会话": "session-a880977844eb4c859f6a60293fa9a6a2",
+  "上下文版本": 1,
+  "报告版本": 2,
+  "状态": "completed",
+  "完整度": "partial",
+  "模型调用": 35,
+  "已记录调用状态": {
+    "validated": 35
+  },
+  "本轮已记录调用": 35,
+  "本轮有效范围检查": {
+    "总数": 115,
+    "执行状态": {
+      "executed": 110,
+      "not_executed": 5
+    }
+  },
+  "全部历史检查": {
+    "总数": 115,
+    "执行状态": {
+      "executed": 110,
+      "not_executed": 5
+    }
+  },
+  "发现": [],
+  "复审": [],
+  "动作": [
+    {
+      "action_id": "action-b8f547f8617d42b4bddd5856f4fe2912",
+      "source_id": "src-d643f19b03384ce2a036f12ba71161a2",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"1\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "f5b71d5561f98baf58bbba74",
+      "reason": "TASK1及REQ1要求可更换选择。当前截图同时显示两个时段及对应服务台，上午已选、下午未选；先选择下午项，取得动作后证据以检查E03、R17，并为BR1返回保留和BR2提交结果核对建立前置状态。尚不能据此认定更换成功。",
+      "target_label": "周五 14:00–14:30 二层服务台",
+      "observed_target": "周五 14:00–14:30\n二层服务台 / slot / on",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "evidence_ids": [
+        "ev-3288eb39e0534307aab6e3698122ae62",
+        "ev-13f449179bd84e8197d0f8a2c5d1479f"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    },
+    {
+      "action_id": "action-96e2cb645b094d499589327d152629ed",
+      "source_id": "src-d643f19b03384ce2a036f12ba71161a2",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"2\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "f9a3ded7e0792d84c6943a92",
+      "reason": "ev-13f449179bd84e8197d0f8a2c5d1479f显示周五14:00–14:30、二层服务台已选中，“核对信息”按钮可用。点击进入核对页，检查E01路径衔接、E02信息一致性，并为BR1、REQ2的返回保留检查取得前置证据；尚不认定返回或提交成功。",
+      "target_label": "核对信息",
+      "observed_target": "核对信息",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "evidence_ids": [
+        "ev-13f449179bd84e8197d0f8a2c5d1479f",
+        "ev-28ea4802a4da474aab003c94497c5b61"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    },
+    {
+      "action_id": "action-6f56e0e799d5429dad297472485e9eaf",
+      "source_id": "src-d643f19b03384ce2a036f12ba71161a2",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"0\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "dfff680431538fcadaeb3b5d",
+      "reason": "ev-28ea4802a4da474aab003c94497c5b61显示核对页为周五14:00–14:30、二层服务台，且有“返回选择”按钮。按TASK2、BR1及REQ2点击返回，取得返回后画面和选中状态，检查E01、E02、E04及R17。现有证据尚不能证明返回后保留选择。",
+      "target_label": "返回选择",
+      "observed_target": "返回选择",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "evidence_ids": [
+        "ev-28ea4802a4da474aab003c94497c5b61",
+        "ev-1b92d13208824e079e766fb72b4db903"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    },
+    {
+      "action_id": "action-995088424838490e865db7a09e04bd7d",
+      "source_id": "src-d643f19b03384ce2a036f12ba71161a2",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"2\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "f9a3ded7e0792d84c6943a92",
+      "reason": "ev-1b92d13208824e079e766fb72b4db903显示返回后仍选中周五14:00–14:30、二层服务台，“核对信息”可用。为完成TASK3并检查REQ3、E01、E02、E03，再次进入核对页取得最终提交前的信息证据；此前核对页不能替代此次返回后的核对结果。",
+      "target_label": "核对信息",
+      "observed_target": "核对信息",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "executed",
+      "context_version": 1,
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "evidence_ids": [
+        "ev-13f449179bd84e8197d0f8a2c5d1479f",
+        "ev-1b92d13208824e079e766fb72b4db903",
+        "ev-28f43ffd619a44358a2f982ecf59aa3c"
+      ],
+      "error": "",
+      "outcome": "state_changed"
+    },
+    {
+      "action_id": "action-d11b1435c3764e7a981cf780fa4ff820",
+      "source_id": "src-d643f19b03384ce2a036f12ba71161a2",
+      "kind": "click",
+      "node_id": "",
+      "chunk_index": 0,
+      "selector": "[data-review-control=\"1\"]",
+      "value": "",
+      "url": "",
+      "x": null,
+      "y": null,
+      "scroll_x": 0,
+      "scroll_y": 0,
+      "expected_state_id": "dfff680431538fcadaeb3b5d",
+      "reason": "ev-28f43ffd619a44358a2f982ecf59aa3c显示返回后再次核对的信息为周五14:00–14:30、二层服务台，“提交登记”可用。为完成TASK3、检查BR2及REQ3，点击后需将完成页时段和服务台与此次核对信息比较，并检查E01、E02、E03、R04。任务卡明确登记仅在当前本机页面生效，且委托已要求提交；本动作尚未执行，不预判结果。",
+      "target_label": "提交登记",
+      "observed_target": "提交登记",
+      "target_marker_artifact_id": null,
+      "requires_explicit_authorization": false,
+      "status": "authorized",
+      "context_version": 1,
+      "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+      "evidence_ids": [
+        "ev-28f43ffd619a44358a2f982ecf59aa3c"
+      ],
+      "error": "",
+      "outcome": null
+    }
+  ],
+  "问题": [
+    {
+      "question_id": "question-733f932d210748f58741f7bf0be57648",
+      "text": "是否授权动作：ev-28f43ffd619a44358a2f982ecf59aa3c显示返回后再次核对的信息为周五14:00–14:30、二层服务台，“提交登记”可用。为完成TASK3、检查BR2及REQ3，点击后需将完成页时段和服务台与此次核对信息比较，并检查E01、E02、E03、R04。任务卡明确登记仅在当前本机页面生效，且委托已要求提交；本动作尚未执行，不预判结果。",
+      "reason": "来源 src-d643f19b03384ce2a036f12ba71161a2，动作 click；尚未执行。",
+      "check_ids": [],
+      "blocking": true,
+      "answered": true,
+      "answer": "已授权",
+      "kind": "authorization",
+      "source_id": "src-d643f19b03384ce2a036f12ba71161a2",
+      "action_id": "action-d11b1435c3764e7a981cf780fa4ff820",
+      "answer_actor": "ai"
+    }
+  ],
+  "警告": [
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "存在待授权动作；只判断现有证据，不把待执行路径算通过。",
+    "必需覆盖单元 coverage-a46b9cb50cb7b416 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-f42dcd61b62bb6cd 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-c1a2c0b96e137d1a 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-d75a6265c371cbee 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-6b762300372bf4e2 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-313111fc7b0d7d7e 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-4fa579d4301adb9c 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-181d227822a48464 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-d71f382369033fe1 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-b39afc42ea3b3008 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-7686ff9c10b2feb6 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-06151bd5ac25ff22 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-cd9cb876d18ffe52 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-5b1601372b8381c5 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-9629444fc0e092c1 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-603f28468a693511 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-5f10b54b2edd846e 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-8af4621aa5eac80e 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-b5def474121a4fee 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-b102472990f5ce6d 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "会话不变量：必需覆盖单元 coverage-a46b9cb50cb7b416 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-f42dcd61b62bb6cd 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-c1a2c0b96e137d1a 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-d75a6265c371cbee 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-6b762300372bf4e2 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-313111fc7b0d7d7e 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-4fa579d4301adb9c 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-181d227822a48464 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-d71f382369033fe1 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-b39afc42ea3b3008 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-7686ff9c10b2feb6 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-06151bd5ac25ff22 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-cd9cb876d18ffe52 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-5b1601372b8381c5 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-9629444fc0e092c1 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-603f28468a693511 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-5f10b54b2edd846e 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-8af4621aa5eac80e 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-b5def474121a4fee 尚未覆盖。",
+    "会话不变量：必需覆盖单元 coverage-b102472990f5ce6d 尚未覆盖。"
+  ],
+  "运行说明": [
+    "逐屏技术审查未启用：Reviewer config was not found at C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\design-research-skill\\config\\reviewer.toml.",
+    "必需覆盖单元 coverage-a46b9cb50cb7b416 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-f42dcd61b62bb6cd 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-c1a2c0b96e137d1a 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-d75a6265c371cbee 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-6b762300372bf4e2 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-313111fc7b0d7d7e 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-4fa579d4301adb9c 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-181d227822a48464 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-d71f382369033fe1 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-b39afc42ea3b3008 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-7686ff9c10b2feb6 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-06151bd5ac25ff22 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-cd9cb876d18ffe52 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-5b1601372b8381c5 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-9629444fc0e092c1 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-603f28468a693511 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-5f10b54b2edd846e 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-8af4621aa5eac80e 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-b5def474121a4fee 尚未由检查或逐屏审查覆盖；报告不能视为完整。",
+    "必需覆盖单元 coverage-b102472990f5ce6d 尚未由检查或逐屏审查覆盖；报告不能视为完整。"
+  ],
+  "契约问题": [
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-a46b9cb50cb7b416 尚未覆盖。",
+      "coverage_id": "coverage-a46b9cb50cb7b416",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-f42dcd61b62bb6cd 尚未覆盖。",
+      "coverage_id": "coverage-f42dcd61b62bb6cd",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-c1a2c0b96e137d1a 尚未覆盖。",
+      "coverage_id": "coverage-c1a2c0b96e137d1a",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-d75a6265c371cbee 尚未覆盖。",
+      "coverage_id": "coverage-d75a6265c371cbee",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-6b762300372bf4e2 尚未覆盖。",
+      "coverage_id": "coverage-6b762300372bf4e2",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-313111fc7b0d7d7e 尚未覆盖。",
+      "coverage_id": "coverage-313111fc7b0d7d7e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-4fa579d4301adb9c 尚未覆盖。",
+      "coverage_id": "coverage-4fa579d4301adb9c",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-181d227822a48464 尚未覆盖。",
+      "coverage_id": "coverage-181d227822a48464",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-d71f382369033fe1 尚未覆盖。",
+      "coverage_id": "coverage-d71f382369033fe1",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-b39afc42ea3b3008 尚未覆盖。",
+      "coverage_id": "coverage-b39afc42ea3b3008",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-7686ff9c10b2feb6 尚未覆盖。",
+      "coverage_id": "coverage-7686ff9c10b2feb6",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-06151bd5ac25ff22 尚未覆盖。",
+      "coverage_id": "coverage-06151bd5ac25ff22",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-cd9cb876d18ffe52 尚未覆盖。",
+      "coverage_id": "coverage-cd9cb876d18ffe52",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-5b1601372b8381c5 尚未覆盖。",
+      "coverage_id": "coverage-5b1601372b8381c5",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-9629444fc0e092c1 尚未覆盖。",
+      "coverage_id": "coverage-9629444fc0e092c1",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-603f28468a693511 尚未覆盖。",
+      "coverage_id": "coverage-603f28468a693511",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-5f10b54b2edd846e 尚未覆盖。",
+      "coverage_id": "coverage-5f10b54b2edd846e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-8af4621aa5eac80e 尚未覆盖。",
+      "coverage_id": "coverage-8af4621aa5eac80e",
+      "gap_class": "unobserved_branch"
+    },
+    {
+      "code": "required_coverage_missing",
+      "message": "必需覆盖单元 coverage-b5def474121a4fee 尚未覆盖。",
+      "coverage_id": "coverage-b5def474121a4fee",
+      "gap_class": "unobserved_branch"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "task_summary": "本轮整理本机演示登记流程的评审任务与材料：核对两个时段及服务台，选择下午二层服务台，进入核对页、返回选择并再次核对，最后提交并查看登记结果。已有动作及截图覆盖至再次核对；最新画面仍为周五14:00–14:30、二层服务台。提交动作仅获授权，尚无执行及完成页证据。本阶段不操作界面、不输出优劣结论。",
+  "target_user_summary": "",
+  "review_tasks": [
+    {
+      "task_id": "TASK1",
+      "text": "核对两个时段及对应服务台，将选择更换为下午的二层服务台。",
+      "success_criteria": "查看上午与下午的时段及服务台，选中周五14:00–14:30、二层服务台。",
+      "evidence_ids": [
+        "ev-5ed1c04f55834474af9ef1bcbbec3613",
+        "ev-3288eb39e0534307aab6e3698122ae62"
+      ],
+      "branches": []
+    },
+    {
+      "task_id": "TASK2",
+      "text": "进入核对页，使用“返回选择”回到上一步，再次核对所选时段和服务台。",
+      "success_criteria": "返回后保留下午时段及二层服务台，再次进入核对页核对信息。",
+      "evidence_ids": [
+        "ev-5ed1c04f55834474af9ef1bcbbec3613",
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "branches": [
+        {
+          "branch_id": "BR1",
+          "trigger": "在核对页返回选择时",
+          "expected_outcome": "保留上一次选择的时段和服务台。",
+          "evidence_ids": [
+            "ev-91397b03af5640368d2dfc61172bae20"
+          ],
+          "basis": "explicit"
+        }
+      ]
+    },
+    {
+      "task_id": "TASK3",
+      "text": "为下午的二层服务台提交登记，查看完成页结果；必要时重新开始。",
+      "success_criteria": "完成页显示最终确认的时段和服务台；若执行复位，则回到选择时段页。",
+      "evidence_ids": [
+        "ev-5ed1c04f55834474af9ef1bcbbec3613",
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "branches": [
+        {
+          "branch_id": "BR2",
+          "trigger": "提交后",
+          "expected_outcome": "完成页显示用户最终确认的时段和服务台。",
+          "evidence_ids": [
+            "ev-91397b03af5640368d2dfc61172bae20"
+          ],
+          "basis": "explicit"
+        },
+        {
+          "branch_id": "BR3",
+          "trigger": "刷新页面或在完成页按“重新开始”",
+          "expected_outcome": "复位到选择时段页。",
+          "evidence_ids": [
+            "ev-91397b03af5640368d2dfc61172bae20"
+          ],
+          "basis": "explicit"
+        }
+      ]
+    }
+  ],
+  "goals": [],
+  "requirements": [
+    {
+      "id": "REQ1",
+      "text": "选择时同时显示时段和服务台，并允许用户更换选择。",
+      "evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "is_assumption": false,
+      "parent_id": null,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-91397b03af5640368d2dfc61172bae20",
+          "quote": "1. 选择时同时看得见时段和服务台，用户可以更换选择。"
+        }
+      ]
+    },
+    {
+      "id": "REQ2",
+      "text": "从核对页返回选择页时，保留上一次选择的时段和服务台。",
+      "evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "is_assumption": false,
+      "parent_id": null,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-91397b03af5640368d2dfc61172bae20",
+          "quote": "2. 在核对页返回选择时，保留上一次选择的时段和服务台。"
+        }
+      ]
+    },
+    {
+      "id": "REQ3",
+      "text": "提交后，完成页显示用户最终确认的时段和服务台。",
+      "evidence_ids": [
+        "ev-91397b03af5640368d2dfc61172bae20"
+      ],
+      "is_assumption": false,
+      "parent_id": null,
+      "source_quotes": [
+        {
+          "evidence_id": "ev-91397b03af5640368d2dfc61172bae20",
+          "quote": "3. 提交后，完成页显示用户最终确认的时段和服务台。"
+        }
+      ]
+    }
+  ],
+  "opinions": [],
+  "conflicts": [],
+  "relationships": [
+    {
+      "from_evidence_id": "ev-91397b03af5640368d2dfc61172bae20",
+      "to_evidence_id": "ev-5ed1c04f55834474af9ef1bcbbec3613",
+      "relation": "same_object",
+      "reason": "冻结任务卡与评审委托正文一致，来源角色分别为产品规格与评审指令。",
+      "basis": "described"
+    },
+    {
+      "from_evidence_id": "ev-3288eb39e0534307aab6e3698122ae62",
+      "to_evidence_id": "ev-13f449179bd84e8197d0f8a2c5d1479f",
+      "relation": "described_transition",
+      "reason": "action-b8f547f8617d42b4bddd5856f4fe2912记录选择下午项；前后画面及checked状态由上午一层选中变为下午二层选中。",
+      "basis": "described"
+    },
+    {
+      "from_evidence_id": "ev-13f449179bd84e8197d0f8a2c5d1479f",
+      "to_evidence_id": "ev-28ea4802a4da474aab003c94497c5b61",
+      "relation": "described_transition",
+      "reason": "action-96e2cb645b094d499589327d152629ed记录点击“核对信息”；随后核对页显示周五14:00–14:30、二层服务台。",
+      "basis": "described"
+    },
+    {
+      "from_evidence_id": "ev-28ea4802a4da474aab003c94497c5b61",
+      "to_evidence_id": "ev-1b92d13208824e079e766fb72b4db903",
+      "relation": "described_transition",
+      "reason": "action-6f56e0e799d5429dad297472485e9eaf记录点击“返回选择”；返回画面中下午二层选项仍选中。",
+      "basis": "described"
+    },
+    {
+      "from_evidence_id": "ev-1b92d13208824e079e766fb72b4db903",
+      "to_evidence_id": "ev-28f43ffd619a44358a2f982ecf59aa3c",
+      "relation": "described_transition",
+      "reason": "action-995088424838490e865db7a09e04bd7d记录再次点击“核对信息”；随后显示周五14:00–14:30、二层服务台。",
+      "basis": "described"
+    },
+    {
+      "from_evidence_id": "ev-28f43ffd619a44358a2f982ecf59aa3c",
+      "to_evidence_id": "ev-0b46768007964dbd910ff782c9ba9e7c",
+      "relation": "same_object",
+      "reason": "两次截图均为同一核对状态dfff680431538fcadaeb3b5d，显示下午二层服务台；最新截图不构成提交后的结果证据。",
+      "basis": "described"
+    }
+  ],
+  "unknowns": [
+    "目标用户、使用经验及熟悉度未提供。",
+    "材料明确REQ1–REQ3，但未单独说明产品原始业务目标；评审委托不作为产品目标。",
+    "REQ3、BR2及TASK3尚缺提交执行及完成页证据。action-d11b1435c3764e7a981cf780fa4ff820状态为authorized，不能据此认定登记完成。",
+    "BR3的复位方式已有文字说明，但尚无刷新或“重新开始”的动作结果。",
+    "coverage-a46b9cb50cb7b416将BR1标为未观察，与已提供的返回动作及前后截图记录不一致；属于覆盖记录差异，不是业务声明冲突或产品缺陷。",
+    "“登记只在当前页面中生效”为任务卡声明；未提供实现代码，已有观察不能外推生产系统行为。"
+  ],
+  "assumptions": []
+}

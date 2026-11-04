@@ -1,0 +1,63 @@
+{
+  "type": "object",
+  "properties": {
+    "三条要求": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "properties": {
+          "要求编号": {
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "状态": {
+            "type": "string",
+            "enum": [
+              "达成",
+              "受阻",
+              "证据不足"
+            ]
+          },
+          "问题": {
+            "type": "string"
+          },
+          "严重度": {
+            "type": "string",
+            "enum": [
+              "高",
+              "中",
+              "低",
+              "无",
+              "待定"
+            ]
+          },
+          "图号与可见值": {
+            "type": "string"
+          },
+          "依据": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "要求编号",
+          "状态",
+          "问题",
+          "严重度",
+          "图号与可见值",
+          "依据"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "三条要求"
+  ],
+  "additionalProperties": false
+}

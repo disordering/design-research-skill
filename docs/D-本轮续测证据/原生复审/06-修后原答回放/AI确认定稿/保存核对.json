@@ -1,0 +1,65 @@
+{
+  "当前报告版本": 6,
+  "旧报告原字节SHA256": {
+    "1": "406088810d3d6eaf51717283c83e5295bf8d35323d07730bd559783fe93e622f",
+    "2": "8232846bd86d2bfbc0338706d91a175c44cc6970e8485beed04ea8a4c46acfe6",
+    "3": "43f41d9f3b6de4ff0bb121a142e2c0acfefd2d17253da0b33708c7d9cad9eeea",
+    "4": "0dd7b03f9d00506712d62dcf96611474e57832c9adeae0b25ba5ea92ef922402",
+    "5": "40ada1bd954e1763ce19a3f3b26acef6ddad3c79333409abbc21aa915d34c0e3"
+  },
+  "保存后旧版本SHA256": {
+    "1": "406088810d3d6eaf51717283c83e5295bf8d35323d07730bd559783fe93e622f",
+    "2": "8232846bd86d2bfbc0338706d91a175c44cc6970e8485beed04ea8a4c46acfe6",
+    "3": "43f41d9f3b6de4ff0bb121a142e2c0acfefd2d17253da0b33708c7d9cad9eeea",
+    "4": "0dd7b03f9d00506712d62dcf96611474e57832c9adeae0b25ba5ea92ef922402",
+    "5": "40ada1bd954e1763ce19a3f3b26acef6ddad3c79333409abbc21aa915d34c0e3"
+  },
+  "v6SHA256": "3e7ea14a44487a02cfa682c4c00f53366d5608a2a670e4dfb0edaff2fefebb29",
+  "v5与原生模型快照字节一致": true,
+  "v1至v5保持一致": true,
+  "新增模型调用": 0,
+  "AI复核事件": [
+    {
+      "at": "2026-11-04T08:59:00.662932+00:00",
+      "actor_type": "ai",
+      "actor": "AI模型验收-D",
+      "type": "review_finding",
+      "event_id": "50de1a70-0845-462f-8873-bc5bc25709d8",
+      "context_version": 1,
+      "content": {
+        "finding_id": "finding-2b889800c51c43d7a60c72987671624d",
+        "review_status": "confirmed",
+        "reason": "AI复核（D）：已逐项查看原始提交前后截图。提交前证据ev-8d4c111e8c2b4c5e92e09db4172c0e24显示周五14:00–14:30、二层服务台；同次提交后的ev-b7d8f0b7918f4c29a8995ef0f82f0e9c显示周五09:00–09:30、一层服务台。这违反REQ3对最终确认信息的要求，时间和地点两个核心结果字段均不一致，确认高严重度并安排修正。本条与另一条不同类别候选属于同一可见回执错配事件，D按1个问题事件汇总，保留两条模型记录及各自规则依据。",
+        "severity": "high",
+        "disposition": "fix"
+      }
+    },
+    {
+      "at": "2026-11-04T08:59:00.777113+00:00",
+      "actor_type": "ai",
+      "actor": "AI模型验收-D",
+      "type": "review_finding",
+      "event_id": "4ca570cf-2676-4263-9ce7-4804e8a38c8c",
+      "context_version": 1,
+      "content": {
+        "finding_id": "finding-149e805558484b9d850775c841603fda",
+        "review_status": "confirmed",
+        "reason": "AI复核（D）：已逐项查看原始提交前后截图。提交前证据ev-8d4c111e8c2b4c5e92e09db4172c0e24显示周五14:00–14:30、二层服务台；同次提交后的ev-b7d8f0b7918f4c29a8995ef0f82f0e9c显示周五09:00–09:30、一层服务台。这违反REQ3对最终确认信息的要求，时间和地点两个核心结果字段均不一致，确认高严重度并安排修正。本条与另一条不同类别候选属于同一可见回执错配事件，D按1个问题事件汇总，保留两条模型记录及各自规则依据。",
+        "severity": "high",
+        "disposition": "fix"
+      }
+    }
+  ],
+  "AI保存事件": {
+    "event_id": "d-native-06-save-ai-reviewed-report",
+    "expected_context_version": 1,
+    "type": "finish",
+    "payload": {
+      "reason": "保存D明确AI复核后的报告版本：两条原模型记录均确认high，归为同一个可见回执错配事件；保留v5模型原报告。"
+    },
+    "actor": "AI模型验收-D",
+    "actor_type": "ai"
+  },
+  "确认记录数": 2,
+  "D问题事件数": 1
+}

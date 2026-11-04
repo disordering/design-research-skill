@@ -1,0 +1,102 @@
+{
+  "judgments": [
+    {
+      "check_id": "check-49e30cfbd744d953",
+      "decision": "insufficient_evidence",
+      "reason": "E05适用于已观察或明确设计的异常及恢复路径。材料未提供异常对象、触发条件或恢复要求，也未明确排除异常范围，不能以正常路径未遇错误判定通过。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20"]
+    },
+    {
+      "check_id": "check-86cc0d79f077d5f6",
+      "decision": "insufficient_evidence",
+      "reason": "E06需有正式前置条件。REQ1–REQ3未规定提交资格或拦截规则；核对页按钮可用不能证明符合或绕过未知条件。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-ef4d9fc372ed7f8b",
+      "decision": "met",
+      "reason": "REQ1适用于选择页的同时展示与更换选择。两项分别显示周五09:00–09:30、一层服务台和周五14:00–14:30、二层服务台；action-b8f547f8617d42b4bddd5856f4fe2912执行后，截图与checked属性均显示选择从上午切换至下午。本轮本机演示观察满足两项要求。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-3288eb39e0534307aab6e3698122ae62", "ev-13f449179bd84e8197d0f8a2c5d1479f"]
+    },
+    {
+      "check_id": "check-48827f448f30dd9b",
+      "decision": "met",
+      "reason": "本项E07仅核对REQ1。选择前后画面均同时展示两个时段及服务台，已执行的更换动作及选中状态支持可更换选择；两部分均满足，不外推REQ2、REQ3或真实用户理解效果。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-3288eb39e0534307aab6e3698122ae62", "ev-13f449179bd84e8197d0f8a2c5d1479f"]
+    },
+    {
+      "check_id": "check-1d9f88159e9279bb",
+      "decision": "no_conflict",
+      "reason": "E08核对同一对象的要求是否无法同时满足。任务卡与委托正文一致，提交登记、显示最终结果和登记仅在本机页面生效可以并存；待授权记录不构成产品要求冲突，也不证明提交已执行。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-5ed1c04f55834474af9ef1bcbbec3613"]
+    },
+    {
+      "check_id": "check-24263c4473d1c5f8",
+      "decision": "no_visible_issue",
+      "reason": "E01适用于TASK1的选择状态切换。action-b8f547f8617d42b4bddd5856f4fe2912命中下午选项，前后画面及checked属性显示上午取消、下午二层服务台选中，抵达该覆盖单元的预期状态。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-13f449179bd84e8197d0f8a2c5d1479f"]
+    },
+    {
+      "check_id": "check-8633146521db9a99",
+      "decision": "no_visible_issue",
+      "reason": "E01适用于从下午选择进入核对页。action-96e2cb645b094d499589327d152629ed点击“核对信息”后，出现第2步核对页，内容为周五14:00–14:30、二层服务台，与起点选择一致；本条路径未见问题。",
+      "evidence_ids": ["ev-13f449179bd84e8197d0f8a2c5d1479f", "ev-28ea4802a4da474aab003c94497c5b61"]
+    },
+    {
+      "check_id": "check-de231c96fec58752",
+      "decision": "no_visible_issue",
+      "reason": "E03适用于更换选择的反馈。下午选项点击后，其单选圆点、紫色边框与底色呈现选中状态，上午恢复未选；checked属性与画面及动作对象一致，未见反馈错配。",
+      "evidence_ids": ["ev-3288eb39e0534307aab6e3698122ae62", "ev-13f449179bd84e8197d0f8a2c5d1479f"]
+    },
+    {
+      "check_id": "check-e70f281dffca65e7",
+      "decision": "insufficient_evidence",
+      "reason": "R01要求存在页面级导航。核对页身份明确，但页头“服务登记 / 修书咨询登记”是否承担页面级导航及其层级未确认，不能用步骤标记或返回按钮替代导航当前项判断。",
+      "evidence_ids": ["ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-f7970fbaae162183",
+      "decision": "no_visible_issue",
+      "reason": "R02适用于已确认的多步骤流程。返回动作后的选择页明确显示“第1步，共3步”和“选择时段”，与实际返回环节对应。",
+      "evidence_ids": ["ev-28ea4802a4da474aab003c94497c5b61", "ev-1b92d13208824e079e766fb72b4db903"]
+    },
+    {
+      "check_id": "check-6d08753298abed18",
+      "decision": "no_visible_issue",
+      "reason": "R02适用于返回后再次进入的核对环节。action-995088424838490e865db7a09e04bd7d后的画面显示“第2步，共3步”和“核对信息”，步骤线索与当前环节一致。",
+      "evidence_ids": ["ev-1b92d13208824e079e766fb72b4db903", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-9136926bf0291671",
+      "decision": "insufficient_evidence",
+      "reason": "R02适用于TASK3提交后的完成环节，但action-d11b1435c3764e7a981cf780fa4ff820仍为pending，最新截图仅为第2步核对页。缺少完成页，不能判断完成环节表达或认定登记完成、REQ3满足。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-9a1b0cc76ac335d5",
+      "decision": "not_applicable",
+      "reason": "R03仅检查已呈现的等待状态。本覆盖对象是返回后已展示选择项、选中状态及核对按钮的普通选择页，无等待状态对象；结论不覆盖未捕获的过渡过程。",
+      "evidence_ids": ["ev-1b92d13208824e079e766fb72b4db903"]
+    },
+    {
+      "check_id": "check-95593cfbd842320c",
+      "decision": "not_applicable",
+      "reason": "R03仅检查等待状态。再次核对页已完整呈现日期、时段、服务台及操作按钮，属于普通核对状态；不能将尚未执行的提交视为当前正在处理。",
+      "evidence_ids": ["ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-254c218919186a19",
+      "decision": "insufficient_evidence",
+      "reason": "R05需确认非专家用户、任务必需术语及其熟悉度。当前只提供核对文案，没有目标用户专业程度、疑似内部术语含义及熟悉度依据，不能据措辞直觉认定理解障碍或通过。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    },
+    {
+      "check_id": "check-834df8bd03dbf975",
+      "decision": "no_visible_issue",
+      "reason": "R06适用于目的明确的“返回选择”按钮。核对页上下文与按钮名称清楚说明回到选择环节，action-6f56e0e799d5429dad297472485e9eaf的结果也与名称一致。返回后仍选中下午二层服务台支持REQ2，但本项仅评价操作名称。",
+      "evidence_ids": ["ev-91397b03af5640368d2dfc61172bae20", "ev-28ea4802a4da474aab003c94497c5b61", "ev-1b92d13208824e079e766fb72b4db903", "ev-28f43ffd619a44358a2f982ecf59aa3c"]
+    }
+  ],
+  "findings": [],
+  "questions": []
+}

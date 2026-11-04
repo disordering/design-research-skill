@@ -1,0 +1,8 @@
+{
+  "说明": "04实际加载的SessionService原字节，供05/06在产品修复后仍执行同一版本；不是固定模型响应。",
+  "SHA256": "6c4f8288403549e1a7b69ddf9a6b58471ed5ae5af17f320178e0076041f61dfb",
+  "工作副本": "C:\\Users\\nozomi222333\\Documents\\Codex\\2026-10-02\\wo\\work\\d_1104_native_recheck\\frozen_service.py",
+  "仓库归档": "冻结引擎/session_service.py",
+  "基线": "04-运行初审",
+  "其他engine文件不在本轮期间修改": true
+}

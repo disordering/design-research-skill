@@ -1,0 +1,13 @@
+{
+  "执行者": "Codex（AI程序回归）",
+  "用例数": 15,
+  "失败": 0,
+  "错误": 0,
+  "通过": true,
+  "真实模型调用": 0,
+  "补强": "动态claim引用限定动作结果候选，后续其他点击仅作为背景不能改变定位",
+  "实现SHA256": {
+    "engine\\session_service.py": "c905328d60fe48426d33aa8c682519a57cdc660cbb8015791a691d154a6885cf",
+    "engine\\session_verification.py": "2e4d69bd5a1486e88de40d46e702a4938815ab21c506e5e5e1ad3cd474ff0d53"
+  }
+}

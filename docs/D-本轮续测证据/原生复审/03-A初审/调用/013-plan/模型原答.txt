@@ -1,0 +1,37 @@
+{
+  "task_summary": "已提供的画面、选中状态及动作记录支持REQ1的同时展示与更换选择，以及REQ2的返回保留；REQ3尚缺提交与完成页证据。下一步从返回后的下午已选状态再次进入核对页，核实最终提交信息。",
+  "scope": "本轮稿件1的本机演示登记流程：选择、核对、返回选择、提交及完成结果，必要时检查重新开始。",
+  "goals": [],
+  "requirements": [],
+  "assumptions": [],
+  "questions": [],
+  "action": {
+    "source_id": "src-d643f19b03384ce2a036f12ba71161a2",
+    "kind": "click",
+    "selector": "[data-review-control=\"2\"]",
+    "expected_state_id": "f9a3ded7e0792d84c6943a92",
+    "reason": "ev-1b92d13208824e079e766fb72b4db903显示返回后仍选中周五14:00–14:30、二层服务台，“核对信息”可用。为完成TASK3并检查REQ3、E01、E02、E03，再次进入核对页取得最终提交前的信息证据；此前核对页不能替代此次返回后的核对结果。",
+    "target_label": "核对信息",
+    "requires_explicit_authorization": false,
+    "status": "pending",
+    "context_version": 1,
+    "run_id": "run-69a9cc82301a414db3edd390b18ed02b",
+    "evidence_ids": [
+      "ev-1b92d13208824e079e766fb72b4db903"
+    ]
+  },
+  "ready_for_review": true,
+  "priority_refs": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E07",
+    "REQ1",
+    "REQ2",
+    "REQ3",
+    "R04",
+    "R17"
+  ],
+  "question_resolutions": []
+}

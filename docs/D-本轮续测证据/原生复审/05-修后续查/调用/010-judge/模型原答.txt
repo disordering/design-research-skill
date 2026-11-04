@@ -1,0 +1,102 @@
+{
+  "judgments": [
+    {
+      "check_id": "check-537ec861f23c1c30",
+      "decision": "not_applicable",
+      "reason": "R16适用于重要图标操作；完整核对页只有“返回选择”和“提交登记”文字按钮，无适用图标对象。",
+      "evidence_ids": ["ev-54c27ab204c6479384eced085b8c3114"]
+    },
+    {
+      "check_id": "check-0da148777aab9789",
+      "decision": "not_applicable",
+      "reason": "R16适用于重要图标操作；完成页入口为“重新开始”文字按钮，无适用图标对象。",
+      "evidence_ids": ["ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"]
+    },
+    {
+      "check_id": "check-52f4f39ef5c766e3",
+      "decision": "no_visible_issue",
+      "reason": "R17适用：两个时段为单选项且checked状态明确。切换前上午项选中，切换后及返回后下午项选中；圆点、紫色边框和底色与记录一致，当前选择可辨。",
+      "evidence_ids": ["ev-ed5981943d36420abcbcfb932f3a6a84", "ev-7a09dc68a4fd47958ab10ea4889fb401", "ev-4a119973f66c4bb5823812d82b6658dd"]
+    },
+    {
+      "check_id": "check-90387cf79c325cce",
+      "decision": "no_visible_issue",
+      "reason": "R18适用：两个name=slot的radio构成时段选择组。“选择时段”标题明确，每项时段与对应服务台位于同一边界内，未见归属歧义。",
+      "evidence_ids": ["ev-2f97d5fc719c439b842ad62d0c01670a", "ev-7a09dc68a4fd47958ab10ea4889fb401"]
+    },
+    {
+      "check_id": "check-0a00a5d9772b3122",
+      "decision": "not_applicable",
+      "reason": "R18排除纯展示摘要；核对页日期、时段和服务台均为展示信息，返回与提交按钮不构成输入字段或成组选项。",
+      "evidence_ids": ["ev-54c27ab204c6479384eced085b8c3114"]
+    },
+    {
+      "check_id": "check-a0cab4251e9f3a16",
+      "decision": "not_applicable",
+      "reason": "R18排除纯展示摘要；完成页登记信息仅供展示，另有单个重新开始按钮，无相关输入组或选项组。",
+      "evidence_ids": ["ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"]
+    },
+    {
+      "check_id": "check-cf4fed2edb9eb120",
+      "decision": "no_visible_issue",
+      "reason": "R19适用：TASK1的核对入口明确。在1440×900完整选择页中，“核对信息”位于选项下方，紫色实底、文字可见且无遮挡；未见定位障碍，不代表真人识别已验证。",
+      "evidence_ids": ["ev-2f97d5fc719c439b842ad62d0c01670a", "ev-7a09dc68a4fd47958ab10ea4889fb401"]
+    },
+    {
+      "check_id": "check-80667017fb6f6ee8",
+      "decision": "no_visible_issue",
+      "reason": "R19适用：核对页提交与返回均为任务操作。两按钮紧邻摘要下方，提交为紫色实底、返回为描边，文字明确且无遮挡。结果字段不一致不属于本项入口定位判断。",
+      "evidence_ids": ["ev-2f97d5fc719c439b842ad62d0c01670a", "ev-8d4c111e8c2b4c5e92e09db4172c0e24"]
+    },
+    {
+      "check_id": "check-cb0edf5811c3a3f7",
+      "decision": "no_visible_issue",
+      "reason": "R19适用：TASK2明确允许重新开始。完成页唯一操作按钮位于结果摘要下方，标签完整、边界清楚且无遮挡，未见具体定位障碍。",
+      "evidence_ids": ["ev-2f97d5fc719c439b842ad62d0c01670a", "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"]
+    },
+    {
+      "check_id": "check-271cb715d2106b8e",
+      "decision": "no_visible_issue",
+      "reason": "R20适用：可比较选择任务区与页头、页脚重复品牌信息。外围文字与中央选项分离，未遮挡或挤占时段、服务台及核对入口。",
+      "evidence_ids": ["ev-2f97d5fc719c439b842ad62d0c01670a", "ev-7a09dc68a4fd47958ab10ea4889fb401"]
+    },
+    {
+      "check_id": "check-1c493db4b09ef0dc",
+      "decision": "no_visible_issue",
+      "reason": "R20适用：核对任务内容及外围区域完整。品牌页头、页脚未压过日期、时段、服务台摘要或提交与返回入口，未见具体干扰。",
+      "evidence_ids": ["ev-2f97d5fc719c439b842ad62d0c01670a", "ev-8d4c111e8c2b4c5e92e09db4172c0e24"]
+    },
+    {
+      "check_id": "check-dcb5b2b95ba9ebdf",
+      "decision": "no_visible_issue",
+      "reason": "R20适用：完成页摘要、复位入口与外围内容可比较。页头页脚未遮挡或挤占结果及重新开始入口；此结论不表示结果内容正确。",
+      "evidence_ids": ["ev-2f97d5fc719c439b842ad62d0c01670a", "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"]
+    },
+    {
+      "check_id": "check-ea7694488eb3c3fd",
+      "decision": "insufficient_evidence",
+      "reason": "R21需明确错误提示状态及关联范围。本覆盖单元针对流程错误状态，但现有材料只有选择、核对及成功样式完成页；结果不一致不能代替错误提示证据，无法评估错误定位。",
+      "evidence_ids": ["ev-8d4c111e8c2b4c5e92e09db4172c0e24", "ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"]
+    },
+    {
+      "check_id": "check-86a839e3bc2b6b54",
+      "decision": "insufficient_evidence",
+      "reason": "R22需错误状态及用户可执行修正依据。已有重新开始返回选择页的观察，但未证明重试能纠正结果不一致，也无明确错误提示和修正方法，不能判通过或缺陷。",
+      "evidence_ids": ["ev-b7d8f0b7918f4c29a8995ef0f82f0e9c", "ev-d6344cdb6dfc4b4f8ea84bf1b47f84b8"]
+    },
+    {
+      "check_id": "check-ebf983bbfd4e93df",
+      "decision": "insufficient_evidence",
+      "reason": "R23需面向目标用户的错误提示原文。流程错误提示尚未取得，用户背景也未知；当前完成页呈现成功反馈，不能据此断言整个流程不存在错误提示。",
+      "evidence_ids": ["ev-b7d8f0b7918f4c29a8995ef0f82f0e9c"]
+    },
+    {
+      "check_id": "check-d2920cd0c5d02ed3",
+      "decision": "insufficient_evidence",
+      "reason": "R24需已确认的解释需要。材料未说明用户熟悉度或必须解释的字段、步骤；沿用未答问题question-dc5e255b9e1147bcb99814f41d3144f8，不因流程简短或无帮助入口判不适用或问题。",
+      "evidence_ids": ["ev-2f97d5fc719c439b842ad62d0c01670a", "ev-7a09dc68a4fd47958ab10ea4889fb401"]
+    }
+  ],
+  "findings": [],
+  "questions": []
+}

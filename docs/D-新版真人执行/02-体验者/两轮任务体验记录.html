@@ -25,7 +25,7 @@ async function loadDraft(file){
  try {
    const d=JSON.parse(await file.text());ensure(d.schema==='D-human-v2.1'&&d.role===role&&d.packageKind==='draft','请选择本角色的草稿 JSON。');
    if(!confirm('载入草稿会替换当前填写内容。继续载入？'))return;
-   restore(d);el('msg').textContent='草稿已载入。';
+   el('msg').textContent=restore(d);
  }catch(e){el('msg').textContent=e.message;}
  el('load').value='';
 }
@@ -63,7 +63,9 @@ function render(){
 }
 el('participant').onchange=el('round').onchange=render;render();
 function collect(final){
- const d=fields(ids),[task,method]=assignment();Object.assign(d,{task,method,events:[...events]});
+ const d=fields(ids),[task,method]=assignment();Object.assign(d,{task,method,events:events.map(e=>({...e}))});
+ // 草稿只保存到导出这一刻；当前页面的计时继续运行。
+ if(!final&&['active','wait'].includes(d.events.at(-1)?.type))d.events.push({type:'break',at:now(),source:'draft_snapshot'});
  if(final){
  for(const k of ['participant','round','version','device','timing','outcome','product','understand','evidence','saved','quote','consent'])ensure(d[k],'请完成任务登记、评分、原话与提交确认。');
  ensure(method!=='tool'||d.build,'请记录工具版本。');
@@ -72,5 +74,25 @@ function collect(final){
  }
  d.timingValid=d.timing==='live'&&events.at(-1)?.type==='ended';d.seconds=d.timingValid?totals():null;return d;
 }
-function restore(r){put(ids,r);events=Array.isArray(r.events)?r.events:[];render();}
+function restore(r){
+ put(ids,r);events=Array.isArray(r.events)?r.events.map(e=>({...e})):[];
+ const last=events.at(-1);let notice='草稿已载入。';
+ if(['active','wait'].includes(last?.type)){
+   // 兼容旧草稿：以导出时点结束原计时段，离开期间归入外部中断。
+   const savedAt=Date.parse(r.exportedAt),lastAt=Date.parse(last.at);
+   const valid=Number.isFinite(savedAt)&&savedAt>=lastAt&&savedAt<=Date.now();
+   events.push({type:'break',at:valid?r.exportedAt:last.at,source:'draft_restore'});
+   if(!valid){
+     el('timing').value='invalid';
+     const note='旧草稿未记录有效导出时间，已保留原时点，本轮按计时不完整登记。';
+     if(!val('interruption').includes(note))el('interruption').value=[val('interruption'),note].filter(Boolean).join('\n');
+   }
+ }
+ if(events.at(-1)?.type==='break'){
+   const note='草稿恢复期间按外部中断记录，恢复操作后继续计时。';
+   if(!val('interruption').includes(note))el('interruption').value=[val('interruption'),note].filter(Boolean).join('\n');
+   notice='草稿已载入，计时已暂停。继续任务请点“恢复操作”。';
+ }
+ render();return notice;
+}
 </script></html>

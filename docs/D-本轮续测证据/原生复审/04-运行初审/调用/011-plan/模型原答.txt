@@ -1,0 +1,34 @@
+{
+  "task_summary": "TASK1已完成下午选项切换、BR1返回选择及再次核对。REQ1、REQ2在本次已观察路径中满足；最新核对页仍显示周五14:00–14:30、二层服务台。下一步提交登记，检查BR2与REQ3；完成结果及BR3复位仍缺观察证据。",
+  "scope": "本轮稿件1的本机演示登记流程：选择、核对、返回选择、提交结果及复位；登记仅在当前页面生效。",
+  "goals": [],
+  "requirements": [],
+  "assumptions": [],
+  "questions": [],
+  "action": {
+    "source_id": "src-d26f1061d5dc4b26971c209b4af54287",
+    "kind": "click",
+    "selector": "[data-review-control=\"1\"]",
+    "expected_state_id": "d26ef33e7cf79b4071dfdc34",
+    "reason": "ev-5bb645c490a9466e9d64fd29d0c2d8ab显示返回后再次核对的信息为周五14:00–14:30、二层服务台，“提交登记”可用。点击后取得完成页，与该最终核对信息对照，检查TASK1/BR2、REQ3及E01—E03、R04；尚未判定提交成功。任务卡明确登记仅在当前页面生效，且已授权完成一次登记。",
+    "target_label": "提交登记",
+    "requires_explicit_authorization": false,
+    "status": "pending",
+    "context_version": 1,
+    "run_id": "run-563e5636979549029e54786e942b1416",
+    "evidence_ids": [
+      "ev-5bb645c490a9466e9d64fd29d0c2d8ab",
+      "ev-2f97d5fc719c439b842ad62d0c01670a"
+    ]
+  },
+  "ready_for_review": true,
+  "priority_refs": [
+    "E01",
+    "E02",
+    "E03",
+    "E07",
+    "REQ3",
+    "R04"
+  ],
+  "question_resolutions": []
+}

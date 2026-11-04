@@ -1,0 +1,33 @@
+{
+  "校验": {
+    "OCR生产消息原样": true,
+    "UI生产消息原样": true,
+    "审查生产消息原样": true,
+    "原图SHA吻合": true,
+    "测试脚本SHA吻合": true,
+    "产物ZIP校验通过": true,
+    "产物ZIP成员完整": true
+  },
+  "调用留档": [
+    {
+      "目录": "01-screen_ocr",
+      "真实CLI已返回": true,
+      "提交文本SHA吻合": true,
+      "磁盘文本SHA256": "e4f7f5d8a11279d492e188208d268932c0dbb7472d79c5d4fa703af8fe00f06e"
+    },
+    {
+      "目录": "02-screen_ui",
+      "真实CLI已返回": true,
+      "提交文本SHA吻合": true,
+      "磁盘文本SHA256": "8d971e196397b7f5ce7c6adb3efd2a971ac86f266918556dda0cba13b3b448ea"
+    },
+    {
+      "目录": "03-screen_reasoning",
+      "真实CLI已返回": true,
+      "提交文本SHA吻合": true,
+      "磁盘文本SHA256": "69603c51505ca12c3573e7a1711c9065eded99abc5786913abfdeffb8aa13056"
+    }
+  ],
+  "输入SHA说明": "调用记录的输入SHA256对应提交给CLI的UTF-8文本；磁盘文本使用Windows行尾，read_text规范化换行后核对。",
+  "全部通过": true
+}

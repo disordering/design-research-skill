@@ -1,0 +1,29 @@
+{
+  "序号": 2,
+  "性质": "真实原答录制回放，不是新增模型判断",
+  "来源": "05-修后续查\\调用\\008-judge",
+  "原答SHA256": "f216641a042a034d9b0ecfdaad56a9ab2cdea00b328b25c655634207985b9f37",
+  "原CLI线程": "01a1a5b2-fc3b-75d3-bd22-63d1d1cef793",
+  "原模型": "gpt-6-astra",
+  "原调用开始UTC": "2026-11-04T08:35:32.894870+00:00",
+  "回放UTC": "2026-11-04T08:56:47.122538+00:00",
+  "检查ID": [
+    "check-0d693a791eea8fc8",
+    "check-ed09706ede715eb7",
+    "check-9a7aac2a993adcb1",
+    "check-70f434322fc37979",
+    "check-73a033f0621a8c51",
+    "check-0b70a25c292c2f40",
+    "check-5e50986e00b0346d",
+    "check-b2b86957b0e73987",
+    "check-0e4528b2b5a1d179",
+    "check-d1bae9d9cf6d4ed4",
+    "check-cf7f6550d3c8f4b6",
+    "check-be4ca6626ab49986",
+    "check-e6c1c339e525e622",
+    "check-2e62fd8a565cfd39",
+    "check-90f55f2d9b07aa80",
+    "check-3cc962519a611c2b"
+  ],
+  "原答字节未改": true
+}

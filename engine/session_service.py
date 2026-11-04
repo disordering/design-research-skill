@@ -1266,7 +1266,7 @@ class SessionService:
                                     "required_evidence_kinds": c.required_evidence_kinds,
                                 } for c in session.checks if c.run_id == session.run_id and not c.stale
                                    and c.scope_status == "included"],
-                                "instruction": "以material_understanding中的目标/要求为准，动作规划的goals/requirements留空，不重新改写约束。scope保留context.scope，仅为空时补充，不反复改写范围措辞。只提出一个必要动作；click给selector或完整x/y，source_id真实存在，expected_state_id复制对应latest_state_id。只读/无副作用原型操作可requires_explicit_authorization=false。有条件可评审时ready_for_review=true；不要求用户预填或手工评审材料。",
+                                "instruction": "以material_understanding中的目标/要求为准，动作规划的goals/requirements留空，不重新改写约束。scope保留context.scope，仅为空时补充，不反复改写范围措辞。只提出一个必要动作；click给selector或完整x/y；原生下拉框用select，selector取已观察控件，value精确复制当前options中可用选项的value。source_id真实存在，expected_state_id复制对应latest_state_id。只读/无副作用原型操作可requires_explicit_authorization=false。有条件可评审时ready_for_review=true；不要求用户预填或手工评审材料。",
                             })
                         except EngineError as exc:
                             if exc.code != "session_model_contract_failed":
@@ -1791,7 +1791,7 @@ class SessionService:
                 for previous in session.actions
             ):
                 raise EngineError("plan_target_repeat", "该定位已经核对为其他控件；必须改变定位或明确不同目标。", status_code=502)
-            if source.input.kind == "figma_prototype" and action.kind in {"click", "fill", "scroll"}:
+            if source.input.kind == "figma_prototype" and action.kind in {"click", "fill", "select", "scroll"}:
                 if latest.locator.get("partial") or not latest.locator.get("prototype_canvas"):
                     raise EngineError("plan_prototype_not_ready", "原型尚未可靠呈现，先observe再规划点击。", status_code=502)
                 if action.selector and action.selector not in {
@@ -1836,7 +1836,7 @@ class SessionService:
 
     async def _ground_action(self, session: SessionSnapshot, model: ReviewModel, action: Action) -> bool:
         latest = next(e for e in reversed(session.evidence) if e.source_id == action.source_id and not e.stale)
-        if action.kind in {"click", "fill"} and action.selector:
+        if action.kind in {"click", "fill", "select"} and action.selector:
             controls = latest.locator.get("controls", [])
             control = observed_control(controls, action.selector)
             if control is None and controls:
@@ -1933,7 +1933,7 @@ class SessionService:
         need_explicit = await self.adapters.needs_authorization(session.session_id, source, action)
         if any(
             previous.status in {"failed", "interrupted"}
-            and previous.kind in {"click", "fill"}
+            and previous.kind in {"click", "fill", "select"}
             and previous.source_id == action.source_id and previous.kind == action.kind
             and previous.selector == action.selector and previous.x == action.x and previous.y == action.y
             for previous in session.actions
@@ -2655,6 +2655,35 @@ class SessionService:
                 return False
         return True
 
+    @staticmethod
+    def _recheck_scope_change_matches(
+        session: SessionSnapshot,
+        previous: Finding,
+        evidence_ids: list[str],
+        valid: dict[str, Evidence],
+    ) -> bool:
+        """正式材料取消原功能时，以关联需求证明范围变更，不要求旧控件继续存在。"""
+        related_sources = {
+            evidence.source_id for evidence in session.evidence
+            if evidence.evidence_id in previous.evidence_ids
+        }
+        related_sources.update(
+            source_id for check in session.checks
+            if check.check_id in previous.check_ids and check.run_id == previous.run_id
+            for source_id in check.source_ids
+        )
+        formal_sources = {
+            source.source_id for source in session.sources
+            if source.active and source.input.role in {"product_spec", "design_brief"}
+        }
+        return any(
+            evidence_id in valid
+            and valid[evidence_id].context_version == session.context_version
+            and valid[evidence_id].kind == "requirement"
+            and valid[evidence_id].source_id in related_sources & formal_sources
+            for evidence_id in evidence_ids
+        )
+
     async def _recheck(self, session: SessionSnapshot, model: ReviewModel) -> None:
         pending = [r for r in session.rechecks if r.human_confirmation == "unreviewed" and r.resolution == "cannot_determine"]
         if not pending:
@@ -2671,6 +2700,8 @@ class SessionService:
                 "不同条件或缺新版证据保留cannot_determine。必须引用当前证据，不能用旧快照。"
                 "若旧问题有object_id，新证据必须包含同一规范对象；current_finding_ids只能关联"
                 "相同object_id的新发现。"
+                "not_applicable用于正式新版需求取消原功能：引用与旧问题来源关联的当前product_spec或design_brief要求证据，"
+                "说明取消条款怎样改变原触发条件；无需要求被取消的控件仍存在，也不计为resolved。"
             ),
         })
         valid = self._valid_evidence(session)
@@ -2702,8 +2733,10 @@ class SessionService:
             if (
                 previous_finding is None
                 or proposed.resolution != "cannot_determine"
-                and not self._recheck_evidence_matches(
-                    session, previous_finding, fresh_ids, valid,
+                and not (
+                    self._recheck_scope_change_matches(session, previous_finding, fresh_ids, valid)
+                    if proposed.resolution == "not_applicable"
+                    else self._recheck_evidence_matches(session, previous_finding, fresh_ids, valid)
                 )
             ):
                 continue
@@ -3004,6 +3037,17 @@ class SessionService:
                 (finding for finding in session.findings if finding.finding_id == recheck.previous_finding_id),
                 None,
             )
+            if proposed.resolution == "not_applicable" and (
+                previous_finding is None
+                or not proposed.evidence_ids
+                or any(eid not in valid or valid[eid].context_version != session.context_version for eid in proposed.evidence_ids)
+                or not self._recheck_scope_change_matches(session, previous_finding, proposed.evidence_ids, valid)
+            ):
+                raise EngineError(
+                    "recheck_scope_evidence_required",
+                    "不再适用需要与原问题来源关联的新版正式需求；保留取消条款，不计为问题修复。",
+                    status_code=422,
+                )
             if (
                 proposed.resolution in {"resolved", "partially_resolved", "persists"}
                 and (

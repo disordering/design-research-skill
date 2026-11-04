@@ -3,12 +3,12 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
-from typing import Any, Literal
+from typing import Annotated, Any, Literal
 from uuid import uuid4
 from urllib.parse import urlparse
 import re
 
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_validator
 
 
 def now() -> str:
@@ -294,11 +294,12 @@ class Question(Contract):
 class Action(Contract):
     action_id: str = Field(default_factory=lambda: identifier("action"))
     source_id: str
-    kind: Literal["click", "fill", "back", "navigate", "observe", "scroll", "inspect_node", "inspect_document"]
+    kind: Literal["click", "fill", "select", "back", "navigate", "observe", "scroll", "inspect_node", "inspect_document"]
     node_id: str = Field(default="", max_length=100)
     chunk_index: int = Field(default=0, ge=0, le=100)
     selector: str = Field(default="", max_length=1000)
-    value: str = Field(default="", max_length=4000)
+    # 页面选项的 value 可能包含空白，动作值保留原文以便精确匹配。
+    value: Annotated[str, StringConstraints(strip_whitespace=False)] = Field(default="", max_length=4000)
     url: str = Field(default="", max_length=4000)
     x: float | None = Field(default=None, ge=0, le=1)
     y: float | None = Field(default=None, ge=0, le=1)
@@ -322,6 +323,8 @@ class Action(Contract):
             raise ValueError("A click requires a selector or both normalized x/y coordinates.")
         if self.kind == "fill" and not self.selector:
             raise ValueError("A fill requires an observed control selector.")
+        if self.kind == "select" and not self.selector:
+            raise ValueError("下拉选择需要已观察到的控件 selector。")
         if self.kind == "scroll" and not (self.scroll_x or self.scroll_y):
             raise ValueError("A scroll requires a non-zero bounded scroll_x/scroll_y.")
         if self.kind == "inspect_node" and not re.fullmatch(r"\d+:\d+", self.node_id):
